@@ -23,12 +23,6 @@
     </developer>
   </developers>
   
-  <modules>
-    <module>../siren-core</module>
-    <module>../siren-solr</module>
-    <module>../siren-qparser</module>
-  </modules>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	  <lucene.version>3.1.0</lucene.version>
@@ -39,6 +33,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -73,6 +68,15 @@
         </configuration>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+      <plugin>
+        <groupId>de.jflex</groupId>
+        <artifactId>maven-jflex-plugin</artifactId>
+        <version>1.4.3</version>
+      </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
   
   <dependencies>
@@ -86,7 +90,7 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>0.9.11</version>
+      <version>0.9.24</version>
     </dependency>
 		
   </dependencies>

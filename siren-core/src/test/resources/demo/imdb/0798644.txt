@@ -1,0 +1,15 @@
+title:Don Ameche: Hollywood's Class Act
+url:http://www.imdb.com/title/tt0798644/
+<title> ""Biography" Don Ameche: Hollywood's Class Act" .
+<director> "Steven Smith (VIII)" " " "" .
+<actor> "Don Ameche" "31 May 1908" "Kenosha, Wisconsin, USA" .
+<actor> "Don Ameche Jr." " " "" .
+<actor> "Rita Ameche" " " "" .
+<actor> "Alice Faye (I)" "5 May 1915" "New York City, New York, USA" .
+<actor> "Peter Graves (I)" "18 March 1926" "Minneapolis, Minnesota, USA" .
+<actor> "Ron Howard (I)" "1 March 1954" "Duncan, Oklahoma, USA" .
+<actor> "John Landis (I)" "3 August 1950" "Chicago, Illinois, USA" .
+<actor> "Frances Langford" "4 April 1913" "Lakeland, Florida, USA" .
+<actor> "Leonard Maltin" "18 December 1950" "New York City, New York, USA" .
+<actor> "Fayard Nicholas" "20 October 1914" "Mobile, Alabama, USA" .
+<actor> "Carol Ameche Nicholson" " " "" .

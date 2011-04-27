@@ -1,0 +1,26 @@
+title:One Punch Away
+url:http://www.imdb.com/title/tt0545747/
+<title> ""The Contender" One Punch Away" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sugar Ray Leonard" "17 May 1956" "Wilmington, North Carolina, USA" .
+<actor> "Jackie Kallen" "23 April 1946" "Detroit, Michigan, USA" .
+<actor> "Tommy Gallagher (II)" " " "" .
+<actor> "Dub Huntley" " " "" .
+<actor> "Jeremy Williams (V)" " " "" .
+<actor> "Jeff Connor (I)" " " "" .
+<actor> "Anthony Bonsante" "28 October 1970" "Shakopee, Minnesota, USA" .
+<actor> "Jesse Brinkley" "14 November 1976" "Yerington, Nevada, USA" .
+<actor> "Brent Cooper" "28 October 1973" "USA" .
+<actor> "Juan de la Rosa (II)" "7 August 1986" "Tamaulipas, Mexico" .
+<actor> "Miguel Espino" "16 February 1980" "USA" .
+<actor> "Jeff Fraza" "12 November 1977" "USA" .
+<actor> "Joey Gilbert" "5 June 1976" "Chicago, Illinois, USA" .
+<actor> "Alfonso Gomez Jr." "28 October 1980" "Guadalajara, Jalisco, Mexico" .
+<actor> "Ahmed Kaddour" "1 January 1982" "Lebanon" .
+<actor> "Jimmy Lange (II)" "25 August 1975" "USA" .
+<actor> "Peter Manfredo Jr." "26 November 1980" "Providence, Rhode Island, USA" .
+<actor> "Sergio Mora (II)" "4 December 1980" "East Los Angeles, California, USA" .
+<actor> "Jonathan Reid (I)" "24 October 1972" "USA" .
+<actor> "Tarick Salmaci" "28 February 1973" "Detroit, Michigan, USA" .
+<actor> "Ishe Smith" "22 July 1978" "Las Vegas, Nevada, USA" .
+<actor> "Najai Turpin" "19 December 1981" "Philadelphia, Pennsylvania, USA" .

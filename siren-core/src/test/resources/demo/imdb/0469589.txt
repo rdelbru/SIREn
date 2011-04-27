@@ -1,0 +1,44 @@
+title:Sir! No Sir!
+url:http://www.imdb.com/title/tt0469589/
+<title> "Sir! No Sir!" .
+<director> "David Zeiger" " " "" .
+<writer> "David Zeiger" " " "" .
+<actor> "Michael Alaimo (I)" " " "" .
+<actor> "Edward Asner" "15 November 1929" "Kansas City, Kansas, USA" .
+<actor> "Joe Bangert" " " "" .
+<actor> "Tom Bernard (III)" " " "" .
+<actor> "Dave Blalock" " " "" .
+<actor> "Verna Blossomgame" " " "" .
+<actor> "Richard Boyle (V)" " " "" .
+<actor> "David Cline (II)" " " "" .
+<actor> "Donald Duncan (IV)" " " "" .
+<actor> "Ed Eskelson" " " "" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Louis Font" " " "" .
+<actor> "Troy Garity" "7 July 1973" "Los Angeles, California, USA" .
+<actor> "Steve Goldsmith (III)" " " "" .
+<actor> "Halim Karim Gullahbemi" " " "" .
+<actor> "Oliver Hirsch" " 1946" "Versailles, France" .
+<actor> "John Huyler" " " "" .
+<actor> "Terry Iverson" " " "" .
+<actor> "John Lamboke" " " "" .
+<actor> "Jerry Lembcke" " " "" .
+<actor> "Howard Levy (II)" " " "" .
+<actor> "Essie Love" " " "" .
+<actor> "Rita Martinson" " " "" .
+<actor> "Keith Mather" " " "" .
+<actor> "Don L. May" " " "" .
+<actor> "Ron McMahan" " " "" .
+<actor> "Louise Monaco" " " "" .
+<actor> "Hal Muskat" " " "" .
+<actor> "Mildred Parker" " " "" .
+<actor> "Greg Payton" " " "" .
+<actor> "Randy Rowland" " " "" .
+<actor> "Susan Schnall (I)" " " "" .
+<actor> "Susan Schnall (II)" " " "" .
+<actor> "Bill Short (I)" " " "" .
+<actor> "Billy Dean Smith" " " "" .
+<actor> "Darnell Stephen Summers" " " "" .
+<actor> "Joseph Urgo" "29 June 1956" "Hartford, Connecticut, USA" .
+<actor> "Terry Whitmore" " " "" .
+<actor> "Michael Wong (IX)" " " "" .

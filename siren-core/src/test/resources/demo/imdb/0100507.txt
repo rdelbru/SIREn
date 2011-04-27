@@ -1,0 +1,20 @@
+title:Rocky V
+url:http://www.imdb.com/title/tt0100507/
+<title> "Rocky V" .
+<director> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Sage Stallone" "5 May 1976" "Los Angeles, California, USA" .
+<actor> "Burgess Meredith" "16 November 1907" "Cleveland, Ohio, USA" .
+<actor> "Tommy Morrison" "2 January 1969" "Jay, Oklahoma, USA" .
+<actor> "Richard Gant" "10 March 1944" "San Francisco, California, USA" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "Jimmy Gambina" "3 May 1943" "Hollywood, California, USA" .
+<actor> "Delia Sheppard" " 1961" "Copenhagen, Denmark" .
+<actor> "Mike Girard Sheehan" " " "" .
+<actor> "Michael Williams (III)" "16 June 1962" "Lafayette, Louisiana, USA" .
+<actor> "Kevin Connolly (I)" "5 March 1974" "New York City, New York, USA" .
+<actor> "Elisebeth Peters" " " "" .
+<actor> "Hayes Swope" " " "" .

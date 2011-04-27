@@ -1,0 +1,21 @@
+title:Cliffhanger
+url:http://www.imdb.com/title/tt0106582/
+<title> "Cliffhanger" .
+<director> "Renny Harlin" "15 March 1959" "Riihimäki, Finland" .
+<writer> "John Long (III)" " " "" .
+<writer> "Michael France" " 1962" "St. Petersburg, Florida, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "John Lithgow (I)" "19 October 1945" "Rochester, New York, USA" .
+<actor> "Michael Rooker" "6 April 1955" "Jasper, Alabama, USA" .
+<actor> "Janine Turner" "6 December 1962" "Lincoln, Nebraska, USA" .
+<actor> "Rex Linn" "13 November 1956" "Spearman, Texas, USA" .
+<actor> "Caroline Goodall" "13 November 1959" "London, England, UK" .
+<actor> "Leon (I)" "8 March 1962" "New York City, New York, USA" .
+<actor> "Craig Fairbrass" " 1964" "Stepney, London, England, UK" .
+<actor> "Gregory Scott Cummins" " 1956" "Orinda, California, USA" .
+<actor> "Denis Forest" "5 September 1960" "Ottawa, Ontario, Canada" .
+<actor> "Michelle Joyner" " " "" .
+<actor> "Max Perlich" "28 March 1968" "Cleveland, Ohio, USA" .
+<actor> "Paul Winfield" "22 May 1939" "Los Angeles, California, USA" .
+<actor> "Ralph Waite" "22 June 1928" "White Plains, New York, USA" .
+<actor> "Trey Brownell" " " "" .

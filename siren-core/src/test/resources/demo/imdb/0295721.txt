@@ -1,0 +1,19 @@
+title:Taxi 3
+url:http://www.imdb.com/title/tt0295721/
+<title> "Taxi 3" .
+<writer> "Luc Besson" "18 March 1959" "Paris, France" .
+<actor> "Samy Naceri" "2 July 1961" "Paris, France" .
+<actor> "Frédéric Diefenthal" "26 July 1968" "Saint-Mandé, Val-de-Marne, France" .
+<actor> "Bernard Farcy" " " "" .
+<actor> "Ling Bai" "10 October 1966" "Chengdu, China" .
+<actor> "Emma Wiklund" "13 September 1968" "Stockholm, Sweden" .
+<actor> "Marion Cotillard" "30 September 1975" "Paris, France" .
+<actor> "Edouard Montoute" "20 December 1970" "Cayenne, French-Guyana" .
+<actor> "Jean-Christophe Bouvet" "24 March 1947" "Paris, France" .
+<actor> "Léon-Pierre Mondini" " " "" .
+<actor> "Bernard Llopis" " " "" .
+<actor> "Jean-Louis Schlesser (I)" "12 September 1948" "Nancy, France" .
+<actor> "Jean-Pierre Mas" " " "" .
+<actor> "Michel Neugarten" " " "" .
+<actor> "Patrice Abbou" "15 April 1967" "Lyon, Rhône, Rhône-Alpes, France" .
+<actor> "Claude Sese" " " "" .

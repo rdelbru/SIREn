@@ -1,0 +1,4 @@
+title:Sylvester Stallone
+url:http://www.imdb.com/title/tt0538156/
+<title> ""Celebrity Profile" Sylvester Stallone" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

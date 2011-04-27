@@ -1,0 +1,20 @@
+title:Rocky II
+url:http://www.imdb.com/title/tt0079817/
+<title> "Rocky II" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Burgess Meredith" "16 November 1907" "Cleveland, Ohio, USA" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "Joe Spinell" "28 October 1936" "New York City, New York, USA" .
+<actor> "Leonard Gaines" "13 September 1922" "USA" .
+<actor> "Sylvia Meals" " " "" .
+<actor> "Frank McRae" "3 June 1942" "Memphis, Tennessee, USA" .
+<actor> "Al Silvani" "26 March 1910" "" .
+<actor> "John Pleshette" "27 July 1942" "New York City, New York, USA" .
+<actor> "Stu Nahan" "23 June 1926" "Los Angeles, California, USA" .
+<actor> "Bill Baldwin (II)" "26 November 1913" "Pueblo, Colorado, USA" .
+<actor> "Jerry Ziesmer" " 1939" "Milwaukee, Wisconsin, USA" .

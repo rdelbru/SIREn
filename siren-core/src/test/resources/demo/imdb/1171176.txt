@@ -1,0 +1,9 @@
+title:Episode dated 18 January 2008
+url:http://www.imdb.com/title/tt1171176/
+<title> ""The View" Episode dated 18 January 2008" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Joy Behar" "7 October 1942" "Brooklyn, New York, USA" .
+<actor> "Elisabeth Hasselbeck" "28 May 1977" "Cranston, Rhode Island, USA" .
+<actor> "Sherri Shepherd" "22 April 1967" "Chicago, Illinois, USA" .
+<actor> "Barbara Walters" "25 September 1929" "Boston, Massachusetts, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

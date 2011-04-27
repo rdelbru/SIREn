@@ -1,0 +1,21 @@
+title:Judge Dredd
+url:http://www.imdb.com/title/tt0113492/
+<title> "Judge Dredd" .
+<director> "Danny Cannon (I)" " 1968" "Luton, England, UK" .
+<writer> "John Wagner (III)" " 1949" "Pennsylvania, USA" .
+<writer> "Carlos Ezquerra" " 1947" "Zaragoza, Zaragoza, Spain" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Armand Assante" "4 October 1949" "New York City, New York, USA" .
+<actor> "Rob Schneider (I)" "31 October 1963" "San Francisco, California, USA" .
+<actor> "Jürgen Prochnow" "10 June 1941" "Berlin, Germany" .
+<actor> "Max von Sydow (I)" "10 April 1929" "Lund, Skåne län, Sweden" .
+<actor> "Diane Lane (I)" "22 January 1965" "New York City, New York, USA" .
+<actor> "Joanna Miles" "6 March 1940" "Nice, France" .
+<actor> "Joan Chen" "26 April 1961" "Shanghai, China" .
+<actor> "Balthazar Getty" "22 January 1975" "Los Angeles, California, USA" .
+<actor> "Maurice Roëves" "19 March 1937" "Sunderland, Tyne-and-Wear, England, UK" .
+<actor> "Ian Dury" "12 May 1942" "Harrow, Middlesex, England, UK" .
+<actor> "Christopher Adamson (I)" " " "" .
+<actor> "Ewen Bremner (I)" "23 January 1972" "Edinburgh, Scotland, UK" .
+<actor> "Peter Marinker" " " "" .
+<actor> "Angus MacInnes" "27 October 1947" "Windsor, Ontario, Canada" .

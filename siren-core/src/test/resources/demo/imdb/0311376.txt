@@ -1,0 +1,19 @@
+title:Junket Whore
+url:http://www.imdb.com/title/tt0311376/
+<title> "Junket Whore" .
+<director> "Debbie Melnyk" " " "" .
+<actor> "Lauren Hutton" "17 November 1943" "Charleston, South Carolina, USA" .
+<actor> "Mark Pogachefski" " " "" .
+<actor> "Hugh Grant (I)" "9 September 1960" "London, England, UK" .
+<actor> "Downtown Julie Brown" "27 August 1963" "Cardiff, Wales, UK" .
+<actor> "Martin Short (I)" "26 March 1950" "Hamilton, Ontario, Canada" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Rob Davidson (II)" " " "" .
+<actor> "Lucy Robinson (II)" " " "" .
+<actor> "Brooke Shields" "31 May 1965" "New York City, New York, USA" .
+<actor> "Bob Goen" "1 December 1954" "Long Beach, California, USA" .
+<actor> "Sam Rubin" "16 February 1960" "San Diego, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Gérard Depardieu" "27 December 1948" "Châteauroux, Indre, France" .
+<actor> "Lois Smith (II)" " " "" .
+<actor> "Paul Bloch (II)" " " "" .

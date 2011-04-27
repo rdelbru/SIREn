@@ -1,0 +1,169 @@
+title:Night of 100 Stars III
+url:http://www.imdb.com/title/tt0864350/
+<title> "Night of 100 Stars III" .
+<director> "Jeff Margolis (I)" " " "" .
+<writer> "Hildy Parks" "15 March 1926" "Washington, District of Columbia, USA" .
+<actor> "Hank Aaron" "5 February 1934" "Mobile, Alabama, USA" .
+<actor> "Danny Aiello" "20 June 1933" "New York City, New York, USA" .
+<actor> "Jane Alexander (I)" "28 October 1939" "Boston, Massachusetts, USA" .
+<actor> "Kim Alexis" "15 July 1960" "Lockport, New York, USA" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Eddie Arcaro" "19 February 1916" "Cincinnati, Ohio, USA" .
+<actor> "Bea Arthur" "13 May 1922" "New York City, New York, USA" .
+<actor> "Edward Asner" "15 November 1929" "Kansas City, Kansas, USA" .
+<actor> "Carl Banks (I)" " " "" .
+<actor> "Debby Boone" "22 September 1956" "Hackensack, New Jersey, USA" .
+<actor> "Barry Bostwick" "24 February 1945" "San Mateo, California, USA" .
+<actor> "Riddick Bowe" "10 August 1967" "Brooklyn, New York, USA" .
+<actor> "Beau Bridges (I)" "9 December 1941" "Hollywood, California, USA" .
+<actor> "Leslie Browne" "29 June 1957" "New York City, New York, USA" .
+<actor> "Don Budge (I)" "13 June 1915" "Oakland, California, USA" .
+<actor> "Raymond Burr" "21 May 1917" "New Westminster, British Columbia, Canada" .
+<actor> "Michael Caine (I)" "14 March 1933" "Rotherhithe, London, England, UK" .
+<actor> "Cab Calloway" "25 December 1907" "Rochester, New York, USA" .
+<actor> "Kitty Carlisle" "3 September 1910" "New Orleans, Louisiana, USA" .
+<actor> "Dick Cavett" "19 November 1936" "Gibbon, Nebraska, USA" .
+<actor> "Carol Channing" "31 January 1921" "Seattle, Washington, USA" .
+<actor> "Dick Clark (I)" "30 November 1929" "Mount Vernon, New York, USA" .
+<actor> "Natalie Cole (I)" "6 February 1950" "Los Angeles, California, USA" .
+<actor> "Joan Collins" "23 May 1933" "London, England, UK" .
+<actor> "Perry Como" "18 May 1912" "Canonsburg, Pennsylvania, USA" .
+<actor> "Howard Cosell" "25 March 1918" "Winston-Salem, North Carolina, USA" .
+<actor> "Bob Cousy" "9 August 1928" "New York City, New York, USA" .
+<actor> "Walter Cronkite" "4 November 1916" "St. Joseph, Missouri, USA" .
+<actor> "Hume Cronyn" "18 July 1911" "London, Ontario, Canada" .
+<actor> "Cathy Lee Crosby" "2 December 1944" "Los Angeles, California, USA" .
+<actor> "Randall Cunningham" "27 March 1963" "Santa Barbara, California, USA" .
+<actor> "Tyne Daly" "21 February 1946" "Madison, Wisconsin, USA" .
+<actor> "Clifton Davis (I)" "4 October 1945" "Chicago, Illinois, USA" .
+<actor> "Carmen De Lavallade" "6 March 1931" "Los Angeles, California, USA" .
+<actor> "Don Diamont" "31 December 1962" "New York City, New York, USA" .
+<actor> "Harrison Dillard" " " "" .
+<actor> "Joe DiMaggio (I)" "25 November 1914" "Martinez, California, USA" .
+<actor> "David Dinkins (I)" "10 July 1927" "Trenton, New Jersey, USA" .
+<actor> "James 'Buster' Douglas" "7 April 1960" "Columbus, Ohio, USA" .
+<actor> "Keir Dullea" "30 May 1936" "Cleveland, Ohio, USA" .
+<actor> "Greg Evigan" "14 October 1953" "South Amboy, New Jersey, USA" .
+<actor> "Douglas Fairbanks Jr." "9 December 1909" "New York City, New York, USA" .
+<actor> "Morgan Fairchild" "3 February 1950" "Dallas, Texas, USA" .
+<actor> "Michael Feinstein (I)" "7 September 1956" "Columbus, Ohio, USA" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Faith Ford" "14 September 1964" "Alexandria, Louisiana, USA" .
+<actor> "Aretha Franklin" "25 March 1942" "Memphis, Tennessee, USA" .
+<actor> "Joe Frazier" "12 January 1944" "Beaufort, South Carolina, USA" .
+<actor> "Morgan Freeman (I)" "1 June 1937" "Memphis, Tennessee, USA" .
+<actor> "Willie Gault" "5 September 1960" "Griffin, Georgia, USA" .
+<actor> "Crystal Gayle" "9 January 1951" "Paintsville, Kentucky, USA" .
+<actor> "Richard Gere" "31 August 1949" "Philadelphia, Pennsylvania, USA" .
+<actor> "Estelle Getty" "25 July 1923" "New York City, New York, USA" .
+<actor> "Mickey Gilley" "9 March 1936" "Natchitoches, Louisiana, USA" .
+<actor> "José Greco" "23 December 1918" "Abruzzi, Italy" .
+<actor> "Cynthia Gregory" "8 July 1946" "" .
+<actor> "Joel Grey" "11 April 1932" "Cleveland, Ohio, USA" .
+<actor> "Helen Hayes (I)" "10 October 1900" "Washington, District of Columbia, USA" .
+<actor> "Katharine Hepburn" "12 May 1907" "Hartford, Connecticut, USA" .
+<actor> "Edward Herrmann" "21 July 1943" "Washington, District of Columbia, USA" .
+<actor> "Geoffrey Holder" "1 August 1930" "Port-of-Spain, Trinidad, West Indies" .
+<actor> "Telma Hopkins" "28 October 1948" "Louisville, Kentucky, USA" .
+<actor> "Freddie Jackson (II)" "2 October 1956" "Harlem, New York, USA" .
+<actor> "Beverly Johnson (III)" "13 October 1952" "Buffalo, New York, USA" .
+<actor> "Florence Griffith Joyner" "21 December 1959" "Los Angeles, California, USA" .
+<actor> "Jackie Joyner (I)" "3 March 1962" "East St. Louis, Illinois, USA" .
+<actor> "Stacy Keach" "2 June 1941" "Savannah, Georgia, USA" .
+<actor> "Robert Klein (I)" "8 February 1942" "New York City, New York, USA" .
+<actor> "Gladys Knight" "28 May 1944" "Atlanta, Georgia, USA" .
+<actor> "Swoosie Kurtz" "6 September 1944" "Omaha, Nebraska, USA" .
+<actor> "Patti LaBelle" "24 May 1944" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sean Landeta" "6 January 1962" "Baltimore, Maryland, USA" .
+<actor> "John Larroquette" "25 November 1947" "New Orleans, Louisiana, USA" .
+<actor> "Linda Lavin" "15 October 1937" "Portland, Maine, USA" .
+<actor> "Jean LeClerc (I)" "7 July 1948" "Montréal, Québec, Canada" .
+<actor> "Peggy Lee (I)" "26 May 1920" "Jamestown, North Dakota, USA" .
+<actor> "Hal Linden" "20 March 1931" "New York City, New York, USA" .
+<actor> "Mark Linn-Baker" "17 June 1954" "St. Louis, Missouri, USA" .
+<actor> "John Lithgow (I)" "19 October 1945" "Rochester, New York, USA" .
+<actor> "Rich Little (I)" "26 November 1938" "Ottawa, Ontario, Canada" .
+<actor> "Robert Loggia" "3 January 1930" "New York City, New York, USA" .
+<actor> "Priscilla Lopez" "26 February 1948" "The Bronx, New York, USA" .
+<actor> "Greg Louganis" "29 January 1960" "El Cajon, California, USA" .
+<actor> "Chad Lowe (I)" "15 January 1968" "Dayton, Ohio, USA" .
+<actor> "Susan Lucci" "23 December 1946" "Scarsdale, New York, USA" .
+<actor> "Sidney Lumet" "25 June 1924" "Philadelphia, Pennsylvania, USA" .
+<actor> "Loretta Lynn" "14 April 1932" "Butcher Hollow, Kentucky, USA" .
+<actor> "Marty Lyons (I)" " " "" .
+<actor> "Galt MacDermot" "19 December 1928" "Montréal, Québec, Canada" .
+<actor> "Larkin Malloy" "24 September 1954" "New York City, New York, USA" .
+<actor> "Joseph L. Mankiewicz" "11 February 1909" "Wilkes-Barre, Pennsylvania, USA" .
+<actor> "Christopher Martin (I)" "10 July 1962" "Jamaica, Queens, New York City, New York, USA" .
+<actor> "Rue McClanahan" "21 February 1934" "Healdton, Oklahoma, USA" .
+<actor> "Marilyn McCoo" "30 September 1943" "Jersey City, New Jersey, USA" .
+<actor> "Donna McKechnie" "16 November 1940" "Detroit, Michigan, USA" .
+<actor> "Julianne McNamara" "10 November 1965" "Queens, New York, USA" .
+<actor> "Audrey Meadows" "8 February 1922" "Wu-ch'ang, China" .
+<actor> "Jayne Meadows" "27 September 1920" "Wu-ch'ang, China. [now Wuchang, China]" .
+<actor> "Dina Merrill" "29 October 1923" "New York City, New York, USA" .
+<actor> "George Mikan" "18 June 1924" "Joliet, Illinois, USA" .
+<actor> "Liliane Montevecchi" "13 October 1932" "Paris, France" .
+<actor> "Pat Morita" "28 June 1932" "Isleton, California, USA" .
+<actor> "Robert Morse (I)" "18 May 1931" "Newton, Massachusetts, USA" .
+<actor> "Joe Namath" "31 May 1943" "Beaver Falls, Pennsylvania, USA" .
+<actor> "Barry Newman (I)" "7 November 1938" "Boston, Massachusetts, USA" .
+<actor> "Olivia Newton-John" "26 September 1948" "Cambridge, Cambridgeshire, England, UK" .
+<actor> "Sandi Patty" "12 July 1956" "Oklahoma City, Oklahoma, USA" .
+<actor> "Minnie Pearl" "25 October 1912" "Centerville, Tennessee, USA" .
+<actor> "Joseph C. Phillips" "17 January 1962" "Denver, Colorado, USA" .
+<actor> "Stefanie Powers" "2 November 1942" "Hollywood, California, USA" .
+<actor> "Eddie Rabbitt" "27 November 1941" "Brooklyn, New York, USA" .
+<actor> "The Radio City Rockettes" " " "" .
+<actor> "Tony Randall (I)" "26 February 1920" "Tulsa, Oklahoma, USA" .
+<actor> "Raven-Symoné" "10 December 1985" "Atlanta, Georgia, USA" .
+<actor> "Rex Reed" "2 October 1938" "Fort Worth, Texas, USA" .
+<actor> "Christopher Reeve" "25 September 1952" "New York City, New York, USA" .
+<actor> "Christopher Reid (I)" "5 April 1964" "The Bronx, New York City, New York, USA" .
+<actor> "Ann Reinking" "10 November 1949" "Seattle, Washington, USA" .
+<actor> "Jerry Rice" "13 October 1962" "Starkville, Mississippi, USA" .
+<actor> "Chita Rivera" "23 January 1933" "Washington, District of Columbia, USA" .
+<actor> "Geraldo Rivera" "4 July 1943" "Brooklyn, New York, USA" .
+<actor> "Joan Rivers" "8 June 1933" "Brooklyn, New York, USA" .
+<actor> "Jason Robards" "26 July 1922" "Chicago, Illinois, USA" .
+<actor> "Eric Roberts (I)" "18 April 1956" "Biloxi, Mississippi, USA" .
+<actor> "Oscar Robertson" "24 November 1938" "Charlotte, Tennessee, USA" .
+<actor> "Jerry Seinfeld" "29 April 1954" "Brooklyn, New York, USA" .
+<actor> "Paul Shaffer" "28 November 1949" "Thunder Bay, Ontario, Canada" .
+<actor> "Brooke Shields" "31 May 1965" "New York City, New York, USA" .
+<actor> "Martin Short (I)" "26 March 1950" "Hamilton, Ontario, Canada" .
+<actor> "Sylvia Sidney (I)" "8 August 1910" "Bronx, New York, USA" .
+<actor> "Ron Silver (I)" "2 July 1946" "New York City, New York, USA" .
+<actor> "Liz Smith (II)" "2 February 1923" "Fort Worth, Texas, USA" .
+<actor> "Toukie Smith" " " "Philadelphia, Pennsylvania, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Paul Sorvino" "13 April 1939" "Brooklyn, New York, USA" .
+<actor> "Lesley Stahl" "16 December 1941" "Lynn, Massachusetts, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "James Stewart (I)" "20 May 1908" "Indiana, Pennsylvania, USA" .
+<actor> "Jessica Tandy" "7 June 1909" "London, England, UK" .
+<actor> "Judy Tenuta" "7 November 1956" "Chicago, Illinois, USA" .
+<actor> "Alan Thicke" "1 March 1947" "Kirkland Lake, Ontario, Canada" .
+<actor> "B.J. Thomas" "7 August 1942" "Hugo, Oklahoma, USA" .
+<actor> "Marlo Thomas" "21 November 1937" "Detroit, Michigan, USA" .
+<actor> "Mel Tormé" "13 September 1925" "Chicago, Illinois, USA" .
+<actor> "Jeffrey A. Townes" "22 January 1965" "Philadelphia, Pennsylvania, USA" .
+<actor> "Kathleen Turner (I)" "19 June 1954" "Springfield, Missouri, USA" .
+<actor> "Conway Twitty" "1 September 1933" "Friars Point, Mississippi, USA" .
+<actor> "Bonnie Tyler" "8 June 1951" "Skewen, South Wales, UK" .
+<actor> "Liv Ullmann" "16 December 1938" "Tokyo, Japan" .
+<actor> "Joan Van Ark" "16 June 1943" "New York City, New York, USA" .
+<actor> "Luther Vandross" "20 April 1951" "New York City, New York, USA" .
+<actor> "Dick Van Dyke" "13 December 1925" "West Plains, Missouri, USA" .
+<actor> "Ricky Van Shelton" "12 January 1952" "Danville, Virginia, USA" .
+<actor> "Abe Vigoda" "24 February 1921" "New York City, New York, USA" .
+<actor> "Christopher Walken" "31 March 1943" "Queens, New York, USA" .
+<actor> "Mike Wallace (I)" "9 May 1918" "Brookline, Massachusetts, USA" .
+<actor> "Barbara Walters" "25 September 1929" "Boston, Massachusetts, USA" .
+<actor> "Sam Waterston" "15 November 1940" "Cambridge, Massachusetts, USA" .
+<actor> "Raquel Welch" "5 September 1940" "Chicago, Illinois, USA" .
+<actor> "Betty White (I)" "17 January 1922" "Oak Park, Illinois, USA" .
+<actor> "Jesse White (I)" "3 January 1917" "Buffalo, New York, USA" .
+<actor> "Mary Wilson (I)" "6 March 1944" "Greenville, Mississippi, USA" .
+<actor> "Henny Youngman" "16 March 1906" "Whitechapel, London, England, UK" .
+<actor> "Pia Zadora" "4 May 1954" "Hoboken, New Jersey, USA" .

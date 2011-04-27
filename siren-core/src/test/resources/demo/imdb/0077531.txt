@@ -1,0 +1,20 @@
+title:F.I.S.T
+url:http://www.imdb.com/title/tt0077531/
+<title> "F.I.S.T" .
+<director> "Norman Jewison" "21 July 1926" "Toronto, Ontario, Canada" .
+<writer> "Joe Eszterhas" "23 November 1944" "Csakanydoroszlo, Hungary" .
+<writer> "Joe Eszterhas" "23 November 1944" "Csakanydoroszlo, Hungary" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Rod Steiger" "14 April 1925" "Westhampton, New York, USA" .
+<actor> "Peter Boyle (I)" "18 October 1935" "Norristown, Pennsylvania, USA" .
+<actor> "Melinda Dillon" "13 October 1939" "Hope, Arkansas, USA" .
+<actor> "David Huffman (I)" "10 May 1945" "Berwyn, Illinois, USA" .
+<actor> "Kevin Conway (I)" "29 May 1942" "New York City, New York, USA" .
+<actor> "Tony Lo Bianco" "19 October 1936" "Brooklyn, New York, USA" .
+<actor> "Cassie Yates" "2 March 1951" "Macon, Georgia, USA" .
+<actor> "Peter Donat" "20 January 1928" "Kentville, Nova Scotia, Canada" .
+<actor> "Henry Wilcoxon" "8 September 1905" "Dominica, British West Indies" .
+<actor> "Richard Herd (I)" "26 September 1932" "Boston, Massachusetts, USA" .
+<actor> "Tony Mockus Jr." " " "" .
+<actor> "Ken Kercheval" "15 July 1935" "Wolcottville, Indiana, USA" .
+<actor> "Elena Karam" "27 February 1909" "" .

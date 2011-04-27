@@ -1,0 +1,12 @@
+title:Exact Bus Fare
+url:http://www.imdb.com/title/tt1301142/
+<title> "Exact Bus Fare" .
+<director> "Chris Marazzo" "30 January 1973" "New York City, New York, USA" .
+<writer> "Chris Marazzo" "30 January 1973" "New York City, New York, USA" .
+<actor> "Kevin Gage" "26 May 1959" "Wisconsin, USA" .
+<actor> "Robert Miano" "25 September 1942" "" .
+<actor> "Rashawn Underdue" "7 April 1976" "South Bronx, New York City, New York, USA" .
+<actor> "Sam Ayers" "29 December 1957" "Youngstown, Ohio, USA" .
+<actor> "Silvia Spross" " " "" .
+<actor> "Lalo Reyes" " " "" .
+<actor> "Zues Benitez" " " "" .

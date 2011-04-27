@@ -1,0 +1,46 @@
+title:Diálogos de cine
+url:http://www.imdb.com/title/tt1229427/
+<title> "Diálogos de cine" .
+<director> "David Ulloa" " 1976" "Madrid, Madrid, Spain" .
+<writer> "Patxi Lorente" " " "" .
+<actor> "Vicente Aranda" "9 November 1926" "Barcelona, Catalonia, Spain" .
+<actor> "Marisa Berenson" "15 February 1947" "New York City, New York, USA" .
+<actor> "Luc Besson" "18 March 1959" "Paris, France" .
+<actor> "Betsy Blair" "11 December 1923" "Cliffside Park, New Jersey, USA" .
+<actor> "Icíar Bollaín" "12 June 1967" "Madrid, Madrid, Spain" .
+<actor> "Joe E. Brown" "28 July 1892" "Holgate, Ohio, USA" .
+<actor> "Edward Bunker" "31 December 1933" "Hollywood, California, USA" .
+<actor> "José María Caffarel" "10 November 1919" "Barcelona, Barcelona, Catalonia, Spain" .
+<actor> "Giorgio Cantarini" "5 December 1992" "Florence, Italy" .
+<actor> "José Coronado" "14 August 1957" "Madrid, Madrid, Spain" .
+<actor> "Alexandra Dahlström" "12 February 1984" "Gävle, Gävleborgs län, Sweden" .
+<actor> "Danielle Darrieux" "1 May 1917" "Bordeaux, Gironde, Aquitaine, France" .
+<actor> "Jean Desailly" "24 August 1920" "Paris, France" .
+<actor> "Tom DiCillo" "14 August 1953" "Camp LeJeune, North Carolina, USA" .
+<actor> "Eduard Fernández" "25 August 1964" "Barcelona, Barcelona, Catalonia, Spain" .
+<actor> "Fernando Fernán Gómez" "28 August 1921" "Lima, Perú" .
+<actor> "Montse Germán" " 1969" "Sabadell, Barcelona, Catalonia, Spain" .
+<actor> "Javier Gurruchaga" "12 February 1958" "Donostia-San Sebastián, Guipúzcoa, País Vasco, Spain" .
+<actor> "Philip Baker Hall" "10 September 1931" "Toledo, Ohio, USA" .
+<actor> "Antonio Hernández (I)" " 1953" "Peñaranda de Bracamonte, Salamanca, Castilla y León, Spain" .
+<actor> "Celeste Holm" "29 April 1917" "New York City, New York, USA" .
+<actor> "Leslie Howard (I)" "3 April 1893" "Forest Hill, London, England, UK" .
+<actor> "Ricky Jay" " 1948" "Brooklyn, New York, USA" .
+<actor> "Rebecka Liljeberg" "13 May 1981" "Södertälje, Stockholms län, Sweden" .
+<actor> "Federico Luppi" "23 February 1936" "Ramallo, Buenos Aires, Argentina" .
+<actor> "Carmen Maura" "15 September 1945" "Madrid, Madrid, Spain" .
+<actor> "Andrew McCarthy (I)" "29 November 1962" "New York City, New York, USA" .
+<actor> "Rossy de Palma" "16 September 1964" "Palma de Mallorca, Spain" .
+<actor> "Manuel Poirier" "17 November 1954" "" .
+<actor> "Gracia Querejeta" "13 August 1962" "Madrid, Spain" .
+<actor> "Rob Reiner" "6 March 1947" "The Bronx, New York, USA" .
+<actor> "Belén Rueda" "16 March 1965" "Madrid, Madrid, Spain" .
+<actor> "Tina Sáinz" "26 February 1945" "Madrid, Spain" .
+<actor> "George Sanders (I)" "3 July 1906" "St. Petersburg, Russia" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Barbara Stanwyck" "16 July 1907" "Brooklyn, New York, USA" .
+<actor> "Gloria Swanson" "27 March 1899" "Chicago, Illinois, USA" .
+<actor> "Félix Viscarret" " 1975" "Pamplona, Navarra, Spain" .
+<actor> "Max von Sydow (I)" "10 April 1929" "Lund, Skåne län, Sweden" .
+<actor> "Leonor Watling" "28 July 1975" "Madrid, Madrid, Spain" .
+<actor> "Frank Whaley" "20 July 1963" "Syracuse, New York, USA" .

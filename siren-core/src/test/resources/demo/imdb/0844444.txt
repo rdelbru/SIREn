@@ -1,0 +1,29 @@
+title:2005 Taurus World Stunt Awards
+url:http://www.imdb.com/title/tt0844444/
+<title> "2005 Taurus World Stunt Awards" .
+<director> "Hamish Hamilton (I)" "8 April 1966" "Blackpool, England, UK" .
+<writer> "Jeff Stilson" " " "" .
+<writer> "Lance Crouther" " 1962" "" .
+<actor> "Vic Armstrong" "5 October 1946" "Farnham Common, Buckinghamshire, England, UK" .
+<actor> "Nina Bergman" " " "" .
+<actor> "Rosario Dawson" "9 May 1979" "New York City, New York, USA" .
+<actor> "Gary Dourdan" "11 December 1966" "Philadelphia, Pennsylvania, USA" .
+<actor> "George Eads" "1 March 1967" "Fort Worth, Texas, USA" .
+<actor> "Daryl Hannah" "3 December 1960" "Chicago, Illinois, USA" .
+<actor> "Jennifer Love Hewitt" "21 February 1979" "Waco, Texas, USA" .
+<actor> "Dave Hoffman (V)" "29 October 1968" "Nashville, Tennessee, USA" .
+<actor> "Hulk Hogan" "11 August 1953" "Augusta, Georgia, USA" .
+<actor> "Dennis Hopper" "17 May 1936" "Dodge City, Kansas, USA" .
+<actor> "Dwayne Johnson (I)" "2 May 1972" "Hayward, California, USA" .
+<actor> "Lee Majors (I)" "23 April 1939" "Wyandotte, Michigan, USA" .
+<actor> "Tony Malanga" " " "" .
+<actor> "Mr. T" "21 May 1952" "Chicago, Illinois, USA" .
+<actor> "Jaime Pressly" "30 July 1977" "Kinston, North Carolina, USA" .
+<actor> "Michelle Rodriguez (I)" "12 July 1978" "Bexar County, Texas, USA" .
+<actor> "Robert Rodriguez (I)" "20 June 1968" "San Antonio, Texas, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kiefer Sutherland" "21 December 1966" "London, England, UK" .
+<actor> "Eric Szmanda" "24 July 1975" "Milwaukee, Wisconsin, USA" .
+<actor> "Quentin Tarantino" "27 March 1963" "Knoxville, Tennessee, USA" .
+<actor> "Paul Walker (I)" "12 September 1973" "Glendale, California, USA" .

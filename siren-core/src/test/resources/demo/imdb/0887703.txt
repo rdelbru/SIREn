@@ -1,0 +1,6 @@
+title:Episode dated 23 October 1991
+url:http://www.imdb.com/title/tt0887703/
+<title> ""Wogan" Episode dated 23 October 1991" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .

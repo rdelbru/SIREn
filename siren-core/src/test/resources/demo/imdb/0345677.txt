@@ -1,0 +1,28 @@
+title:Muhammad Ali's All-Star 60th Birthday Celebration!
+url:http://www.imdb.com/title/tt0345677/
+<title> "Muhammad Ali's All-Star 60th Birthday Celebration!" .
+<director> "Bruce Gowers" " " "" .
+<writer> "Jon Macks" " " "" .
+<writer> "George Schlatter" "31 December 1932" "Birmingham, Alabama, USA" .
+<actor> "Laila Ali" "30 December 1977" "Miami Beach, Florida, USA" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Angela Bassett" "16 August 1958" "New York City, New York, USA" .
+<actor> "Lance Bass" "4 May 1979" "Laurel, Mississippi, USA" .
+<actor> "Mariah Carey" "27 March 1969" "Huntington, New York, USA" .
+<actor> "J.C. Chasez" "8 August 1976" "Washington, District of Columbia, USA" .
+<actor> "Natalie Cole (I)" "6 February 1950" "Los Angeles, California, USA" .
+<actor> "Joey Fatone" "28 January 1977" "Brooklyn, New York, USA" .
+<actor> "Jamie Foxx" "13 December 1967" "Terrell, Texas, USA" .
+<actor> "Cuba Gooding Jr." "2 January 1968" "The Bronx, New York, USA" .
+<actor> "India.Arie (I)" "3 October 1975" "Denver, Colorado, USA" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "Larry King (I)" "19 November 1933" "Brooklyn, New York, USA" .
+<actor> "Chris Kirkpatrick (I)" "17 October 1971" "Clarion, Pennsylvania, USA" .
+<actor> "Sugar Ray Leonard" "17 May 1956" "Wilmington, North Carolina, USA" .
+<actor> "Sidney Poitier" "20 February 1927" "Miami, Florida, USA" .
+<actor> "Paul Simon (I)" "13 October 1941" "Newark, New Jersey, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Justin Timberlake" "31 January 1981" "Memphis, Tennessee, USA" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Jon Voight" "29 December 1938" "Yonkers, New York, USA" .

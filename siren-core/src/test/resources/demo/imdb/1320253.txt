@@ -1,0 +1,26 @@
+title:The Expendables
+url:http://www.imdb.com/title/tt1320253/
+<title> "The Expendables" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Jason Statham" "12 September 1972" "London, England, UK" .
+<actor> "Jet Li" "26 April 1963" "Beijing, China" .
+<actor> "Dolph Lundgren" "3 November 1957" "Stockholm, Stockholms län, Sweden" .
+<actor> "Eric Roberts (I)" "18 April 1956" "Biloxi, Mississippi, USA" .
+<actor> "Randy Couture" "22 June 1963" "Everett, Washington, USA" .
+<actor> "Steve Austin (IV)" "18 December 1964" "Austin, Texas, USA" .
+<actor> "David Zayas" " " "" .
+<actor> "Giselle Itié" "3 October 1982" "Mexico City, Distrito Federal, Mexico" .
+<actor> "Terry Crews (I)" "30 July 1968" "Flint, Michigan, USA" .
+<actor> "Mickey Rourke" "16 September 1952" "Schenectady, New York, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Brittany Murphy" "10 November 1977" "Atlanta, Georgia, USA" .
+<actor> "Charisma Carpenter" "23 July 1970" "Las Vegas, Nevada, USA" .
+<actor> "Liam Hemsworth" " " "" .
+<actor> "Gary Daniels (I)" "9 May 1963" "London, England, UK" .
+<actor> "James Hébert" "4 October 1984" "New Orleans, Louisiana, USA" .
+<actor> "David Joseph Martinez" " " "" .
+<actor> "Ross Francis" " " "" .
+<actor> "Aaron Aguilera" "28 February 1977" "Orange, California, USA" .
+<actor> "Lauren Jones (III)" "27 August 1982" "Jackson, Mississippi, USA" .

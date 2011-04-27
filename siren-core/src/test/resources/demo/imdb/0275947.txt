@@ -1,0 +1,21 @@
+title:Avenging Angelo
+url:http://www.imdb.com/title/tt0275947/
+<title> "Avenging Angelo" .
+<director> "Martyn Burke" "14 September 1952" "Canada" .
+<writer> "Will Aldis" " " "" .
+<writer> "Will Aldis" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Madeleine Stowe" "18 August 1958" "Los Angeles, California, USA" .
+<actor> "Anthony Quinn (I)" "21 April 1915" "Chihuahua, Mexico" .
+<actor> "Raoul Bova" "14 August 1971" "Rome, Italy" .
+<actor> "Harry Van Gorkum" " " "" .
+<actor> "Billy Gardell" "20 August 1969" "Pittsburgh, Pennsylvania, USA" .
+<actor> "George Touliatos" " " "" .
+<actor> "Angelo Celeste" " " "" .
+<actor> "Ezra Perlman" " " "" .
+<actor> "Carin Moffat" " " "" .
+<actor> "John Gilbert (II)" " " "" .
+<actor> "Dawn Greenhalgh" " " "Shanghai, China" .
+<actor> "Angelo Tsarouchas" " " "Montréal, Québec, Canada" .
+<actor> "Nancy Beatty" " " "" .
+<actor> "Lori Alter" " " "" .

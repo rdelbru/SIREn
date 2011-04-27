@@ -1,0 +1,72 @@
+title:Scandals & Sensations
+url:http://www.imdb.com/title/tt1298657/
+<title> ""20 to 1" Scandals & Sensations" .
+<actor> "Bert Newton" "23 July 1938" "Melbourne, Victoria, Australia" .
+<actor> "Imogen Bailey" "7 July 1977" "Australia" .
+<actor> "Joh Bailey" " " "" .
+<actor> "Alec Baldwin" "3 April 1958" "Massapequa, Long Island, New York, USA" .
+<actor> "Kim Basinger" "8 December 1953" "Athens, Georgia, USA" .
+<actor> "Layne Beachley" "24 May 1972" "Deewhy Beach, Australia" .
+<actor> "Rachael Beck" "9 February 1971" "Sydney, New South Wales, Australia" .
+<actor> "Peter Berner" " " "Singapore" .
+<actor> "Larry Birkhead" "22 January 1973" "Louisville, Kentucky, USA" .
+<actor> "Annalise Braakensiek" "9 December 1972" "Sydney, Australia" .
+<actor> "James Brayshaw" "10 March 1975" "Melbourne, Victoria, Australia" .
+<actor> "Dermott Brereton" "19 August 1964" "" .
+<actor> "Umbilical Brothers" " " "" .
+<actor> "Rhonda Burchmore" "15 May 1960" "Sydney, New South Wales, Australia" .
+<actor> "Scott Cam" " " "" .
+<actor> "Ricki-Lee Coulter" "10 October 1985" "Auckland, New Zealand" .
+<actor> "Ben Cousins" " " "" .
+<actor> "Shane Crawford" "9 September 1974" "Mount Barker, South Australia, Australia" .
+<actor> "Brigitte Duclos" " " "" .
+<actor> "Darrell Eastlake" " " "" .
+<actor> "Liz Ellis (I)" " " "" .
+<actor> "Frank Farina" " " "" .
+<actor> "Tim Ferguson (I)" "16 November 1963" "Canberra, Australia" .
+<actor> "Jane Flemming (II)" " " "" .
+<actor> "Peter Ford (VI)" " " "" .
+<actor> "Tracy Grimshaw" "3 June 1960" "Melbourne, Victoria, Australia" .
+<actor> "Paul Harragon" " " "" .
+<actor> "Peter Harvey (IX)" " " "" .
+<actor> "David Hasselhoff" "17 July 1952" "Baltimore, Maryland, USA" .
+<actor> "Paris Hilton" "17 February 1981" "New York City, New York, USA" .
+<actor> "Deni Hines" "4 September 1970" "Sydney, New South Wales, Australia" .
+<actor> "Peter Hitchener" " " "" .
+<actor> "John Michael Howson" " " "Melbourne, Victoria, Australia" .
+<actor> "Brendan Jones (II)" " " "" .
+<actor> "Amanda Keller" " 1962" "" .
+<actor> "Kerri-Anne Kennerley" "15 November 1949" "Brisbane, Queensland, Australia" .
+<actor> "Jean Kittson" " " "" .
+<actor> "Colin Lane (II)" " " "" .
+<actor> "Jude Law" "29 December 1972" "Lewisham, London, England, UK" .
+<actor> "Geoff Lawson (II)" "7 December 1957" "Wagga Wagga, New South Wales, Australia" .
+<actor> "Josh Lawson (II)" " 1981" "Queensland, Australia" .
+<actor> "Lindsay Lohan" "2 July 1986" "New York City, New York, USA" .
+<actor> "Sami Lukis" "8 April 1970" "Brisbane, Australia" .
+<actor> "Garry Lyon" "13 September 1967" "Kyabram, Victoria, Australia" .
+<actor> "Colette Mann" " 1950" "Melbourne, Victoria, Australia" .
+<actor> "Eddie McGuire (I)" "14 October 1964" "Broadmeadows, Melbourne, Victoria, Australia" .
+<actor> "Charlotte Miller (I)" "8 April 1966" "Auckland, New Zealand" .
+<actor> "Sienna Miller" "28 December 1981" "New York City, New York, USA" .
+<actor> "Pia Miranda" "15 June 1973" "" .
+<actor> "Julia Morris (I)" " " "" .
+<actor> "Mike Munro (II)" " " "" .
+<actor> "Robert Penfold" " " "" .
+<actor> "Kieren Perkins" "14 August 1973" "Brisbane, Australia" .
+<actor> "Hugh Riminton" " " "" .
+<actor> "Michael Slater (II)" "21 February 1970" "Wagga Wagga, New South Wales, Australia" .
+<actor> "Anna Nicole Smith" "28 November 1967" "Houston, Texas, USA" .
+<actor> "Tim Smith (IV)" " " "" .
+<actor> "Britney Spears" "2 December 1981" "Kentwood, Louisiana, USA" .
+<actor> "Tony Squires" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ken Sutcliffe" "15 November 1947" "Oberon, New South Wales, Australia" .
+<actor> "Keith Urban (II)" "26 October 1967" "Whangarei, North Island, New Zealand" .
+<actor> "Michael Usher (II)" " " "" .
+<actor> "Jason Van De Velde" " " "" .
+<actor> "Andrew Voss" " " "" .
+<actor> "Lisa Wilkinson (III)" "19 December 1959" "Australia" .
+<actor> "Richard Wilkins (II)" "19 June 1954" "Auckland, New Zealand" .
+<actor> "Robbie Williams (I)" "13 February 1974" "Stoke-on-Trent, Staffordshire, England, UK" .
+<actor> "Tania Zaetta" "17 November 1970" "Merbein, Victoria, Australia" .

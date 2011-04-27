@@ -1,0 +1,20 @@
+title:Rocky IV
+url:http://www.imdb.com/title/tt0089927/
+<title> "Rocky IV" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Brigitte Nielsen" "15 July 1963" "Rødovre, Denmark" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "Michael Pataki" "16 January 1938" "Youngstown, Ohio, USA" .
+<actor> "Dolph Lundgren" "3 November 1957" "Stockholm, Stockholms län, Sweden" .
+<actor> "Stu Nahan" "23 June 1926" "Los Angeles, California, USA" .
+<actor> "R.J. Adams" "20 September 1946" "St. Catherines, Ontario, Canada" .
+<actor> "Al Bandiero" " ????" "New York City, New York, USA" .
+<actor> "Dominic Barto" "20 December 1930" "Pennsylvania, USA" .
+<actor> "Danial Brown" " " "" .
+<actor> "James Brown (I)" "3 May 1933" "Barnwell, South Carolina, USA" .
+<actor> "Rose Mary Campos" " " "" .

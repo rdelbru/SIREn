@@ -1,0 +1,4 @@
+title:Episode dated 4 August 1989
+url:http://www.imdb.com/title/tt0674089/
+<title> ""The Phil Donahue Show" Episode dated 4 August 1989" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

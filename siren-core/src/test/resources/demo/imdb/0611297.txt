@@ -1,0 +1,5 @@
+title:Episode #6.3
+url:http://www.imdb.com/title/tt0611297/
+<title> ""Inside the Actors Studio" Episode #6.3" .
+<actor> "James Lipton" "19 September 1926" "Detroit, Michigan, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

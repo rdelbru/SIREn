@@ -1,0 +1,43 @@
+title:Flames 88-89
+url:http://www.imdb.com/title/tt0190396/
+<title> "Flames 88-89" .
+<writer> "Larry Day (II)" " " "" .
+<actor> "Larry Day (II)" " " "" .
+<actor> "Chris Chelios" "25 January 1962" "Chicago, Illinois, USA" .
+<actor> "Paul Baxter (III)" " " "" .
+<actor> "Terry Crisp (III)" "28 May 1943" "Parry Sound, Ontario, Canada" .
+<actor> "Cliff Fletcher" "16 August 1935" "Montréal, Québec, Canada" .
+<actor> "Theoren Fleury" "29 June 1968" "Oxbow, Saskatchewan, Canada" .
+<actor> "Doug Gilmour" "25 June 1963" "Kingston, Ontario, Canada" .
+<actor> "Brian Glynn (II)" "23 November 1967" "Iserlohn, West Germany" .
+<actor> "Wayne Gretzky" "26 January 1961" "Brantford, Ontario, Canada" .
+<actor> "Harley Hotchkiss" " " "" .
+<actor> "Jiri Hrdina" "5 January 1958" "Mlada Boleslav, Czechoslovakia" .
+<actor> "Kelly Hrudey" "13 January 1961" "Edmonton, Alberta, Canada" .
+<actor> "Mark Hunter (IV)" "12 November 1962" "Petrolia, Ontario, Canada" .
+<actor> "Tim Hunter (II)" "10 September 1960" "Calgary, Alberta, Canada" .
+<actor> "Håkan Loob" "3 July 1960" "Slite, Gotlands län, Sweden" .
+<actor> "Al MacInnis" "11 July 1963" "Inverness, Cape Breton Island, Nova Scotia, Canada" .
+<actor> "Brian MacLellan" "27 October 1958" "Guelph, Ontario, Canada" .
+<actor> "Jamie Macoun" "7 August 1961" "Newmarket, Ontario, Canada" .
+<actor> "Brad McCrimmon" "29 March 1959" "Dodsland, Saskatchewan, Canada" .
+<actor> "Lanny McDonald" "16 February 1953" "Hanna, Alberta, Canada" .
+<actor> "Joe Mullen" "26 February 1957" "New York City, New York, USA" .
+<actor> "Al Murray (II)" " " "" .
+<actor> "Bearcat Murray" " " "" .
+<actor> "Dana Murzyn" "9 December 1966" "Regina, Saskatchewan, Canada" .
+<actor> "Ric Natress" "25 May 1962" "Hamilton, Ontario, Canada" .
+<actor> "Joel Otto" "29 October 1961" "Elk River, Minnesota, USA" .
+<actor> "Colin Patterson" "11 May 1960" "Rexdale, Ontario, Canada" .
+<actor> "Jim Peplinski" "24 October 1960" "Renfrew, Ontario, Canada" .
+<actor> "Sergei Priakin" "7 December 1963" "Moscow, Russia" .
+<actor> "Rob Ramage" "11 January 1959" "Byron, Ontario, Canada" .
+<actor> "Paul Ranheim" "25 January 1966" "St. Louis, Missouri, USA" .
+<actor> "Doug Risebrough" " " "" .
+<actor> "Gary Roberts (III)" "23 May 1966" "North York, Ontario, Canada" .
+<actor> "Patrick Roy (I)" "5 October 1965" "Québec City, Québec, Canada" .
+<actor> "Ken Sabourin" "28 April 1966" "Scarborough, Ontario, Canada" .
+<actor> "Sonia Scurfield" " " "" .
+<actor> "Gary Suter" "24 June 1964" "Madison, Wisconsin, USA" .
+<actor> "Mike Vernon (I)" "24 February 1963" "Calgary, Alberta, Canada" .
+<actor> "Rick Wamsley" "25 May 1959" "Simcoe, Ontario, Canada" .

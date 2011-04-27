@@ -1,0 +1,95 @@
+title:"Bravo Profiles: The Entertainment Business"
+url:http://www.imdb.com/title/tt0773260/
+<title> ""Bravo Profiles: The Entertainment Business"" .
+<director> "Jeremy Newson" " " "" .
+<writer> "Jeremy Newson" " " "" .
+<actor> "Gillian Anderson (I)" "9 August 1968" "Chicago, Illinois, USA" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Drew Barrymore (I)" "22 February 1975" "Culver City, California, USA" .
+<actor> "Helena Bonham Carter" "26 May 1966" "Golders Green, London, England, UK" .
+<actor> "David Bowie (I)" "8 January 1947" "Brixton, London, England, UK" .
+<actor> "Mel Brooks" "28 June 1926" "Brooklyn, New York, USA" .
+<actor> "Pierce Brosnan" "16 May 1953" "Navan, Co. Meath, Ireland" .
+<actor> "Sandra Bullock" "26 July 1964" "Arlington, Virginia, USA" .
+<actor> "Nicolas Cage" "7 January 1964" "Long Beach, California, USA" .
+<actor> "Jim Carrey" "17 January 1962" "Newmarket, Ontario, Canada" .
+<actor> "George Clooney" "6 May 1961" "Lexington, Kentucky, USA" .
+<actor> "Kevin Costner" "18 January 1955" "Lynwood, California, USA" .
+<actor> "Courteney Cox" "15 June 1964" "Birmingham, Alabama, USA" .
+<actor> "Tom Cruise" "3 July 1962" "Syracuse, New York, USA" .
+<actor> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<actor> "Geena Davis" "21 January 1956" "Wareham, Massachusetts, USA" .
+<actor> "Catherine Deneuve" "22 October 1943" "Paris, France" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Cameron Diaz" "30 August 1972" "San Diego, California, USA" .
+<actor> "Leonardo DiCaprio" "11 November 1974" "Hollywood, California, USA" .
+<actor> "Matt Dillon (I)" "18 February 1964" "New Rochelle, New York, USA" .
+<actor> "Richard Dreyfuss" "29 October 1947" "Brooklyn, New York, USA" .
+<actor> "Minnie Driver" "31 January 1970" "London, England, UK" .
+<actor> "David Duchovny" "7 August 1960" "New York City, New York, USA" .
+<actor> "Faye Dunaway" "14 January 1941" "Bascom, Florida, USA" .
+<actor> "Rupert Everett" "29 May 1959" "Burnham Deepdale, Norfolk, England, UK" .
+<actor> "Carrie Fisher" "21 October 1956" "Beverly Hills, Los Angeles, California, USA" .
+<actor> "Harrison Ford (I)" "13 July 1942" "Chicago, Illinois, USA" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "Janeane Garofalo" "28 September 1964" "Newton, New Jersey, USA" .
+<actor> "Richard Gere" "31 August 1949" "Philadelphia, Pennsylvania, USA" .
+<actor> "Mel Gibson (I)" "3 January 1956" "Peekskill, New York, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Jeff Goldblum" "22 October 1952" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Cuba Gooding Jr." "2 January 1968" "The Bronx, New York, USA" .
+<actor> "Hugh Grant (I)" "9 September 1960" "London, England, UK" .
+<actor> "Melanie Griffith" "9 August 1957" "New York City, New York, USA" .
+<actor> "Goldie Hawn" "21 November 1945" "Washington, District of Columbia, USA" .
+<actor> "Dustin Hoffman" "8 August 1937" "Los Angeles, California, USA" .
+<actor> "Holly Hunter" "20 March 1958" "Conyers, Georgia, USA" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "Don Johnson (I)" "15 December 1949" "Flat Creek, Missouri, USA" .
+<actor> "Diane Keaton" "5 January 1946" "Los Angeles, California, USA" .
+<actor> "Nicole Kidman" "20 June 1967" "Honolulu, Hawaii, USA" .
+<actor> "Ricki Lake" "21 September 1968" "Hastings-on-Hudson, New York, USA" .
+<actor> "Denis Leary" "18 August 1957" "Worcester, Massachusetts, USA" .
+<actor> "Jay Leno" "28 April 1950" "New Rochelle, New York, USA" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "Ray Liotta" "18 December 1954" "Newark, New Jersey, USA" .
+<actor> "Andie MacDowell" "21 April 1958" "Gaffney, South Carolina, USA" .
+<actor> "Madonna (I)" "16 August 1958" "Bay City, Michigan, USA" .
+<actor> "Matthew McConaughey" "4 November 1969" "Uvalde, Texas, USA" .
+<actor> "Ed Metzger" " " "" .
+<actor> "Bette Midler" "1 December 1945" "Honolulu, Hawaii, USA" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Edward Norton (I)" "18 August 1969" "Boston, Massachusetts, USA" .
+<actor> "Conan O'Brien" "18 April 1963" "Boston, Massachusetts, USA" .
+<actor> "Chris O'Donnell (I)" "26 June 1970" "Winnetka, Illinois, USA" .
+<actor> "Rosie O'Donnell" "21 March 1962" "Commack, Long Island, New York, USA" .
+<actor> "Sarah Jessica Parker" "25 March 1965" "Nelsonville, Ohio, USA" .
+<actor> "Joe Pesci" "9 February 1943" "Newark, New Jersey, USA" .
+<actor> "Michelle Pfeiffer" "29 April 1958" "Santa Ana, California, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Bill Pullman" "17 December 1953" "Hornell, New York, USA" .
+<actor> "Keanu Reeves" "2 September 1964" "Beirut, Lebanon" .
+<actor> "Julia Roberts (I)" "28 October 1967" "Smyrna, Georgia, USA" .
+<actor> "Chris Rock (I)" "7 February 1965" "Andrews, South Carolina, USA" .
+<actor> "Rene Russo" "17 February 1954" "Burbank, California, USA" .
+<actor> "Meg Ryan (I)" "19 November 1961" "Fairfield, Connecticut, USA" .
+<actor> "Winona Ryder" "29 October 1971" "Winona, Minnesota, USA" .
+<actor> "Susan Sarandon" "4 October 1946" "New York City, New York, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Martin Scorsese" "17 November 1942" "Queens, New York, USA" .
+<actor> "Martin Sheen" "3 August 1940" "Dayton, Ohio, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Wesley Snipes" "31 July 1962" "Orlando, Florida, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Dorothy Stone (II)" " " "" .
+<actor> "Joseph Stone (II)" " " "" .
+<actor> "Kelly Stone (V)" " " "" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Quentin Tarantino" "27 March 1963" "Knoxville, Tennessee, USA" .
+<actor> "Emma Thompson (I)" "15 April 1959" "Paddington, London, England, UK" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Jean-Claude Van Damme" "18 October 1960" "Berchem-Sainte-Agathe, Brussels, Belgium" .
+<actor> "Sigourney Weaver" "8 October 1949" "New York City, New York, USA" .
+<actor> "Robin Williams (I)" "21 July 1951" "Chicago, Illinois, USA" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .
+<actor> "James Woods (I)" "18 April 1947" "Vernal, Utah, USA" .

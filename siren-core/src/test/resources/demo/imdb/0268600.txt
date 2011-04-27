@@ -1,0 +1,30 @@
+title:The American Film Institute Salute to Billy Wilder
+url:http://www.imdb.com/title/tt0268600/
+<title> "The American Film Institute Salute to Billy Wilder" .
+<director> "Don Mischer" " " "" .
+<writer> "Jeffrey Lane (I)" " " "" .
+<writer> "George Stevens Jr." "3 April 1932" "Los Angeles, California, USA" .
+<actor> "Don Ameche" "31 May 1908" "Kenosha, Wisconsin, USA" .
+<actor> "Lucille Ball" "6 August 1911" "Jamestown, New York, USA" .
+<actor> "Carol Burnett" "26 April 1933" "San Antonio, Texas, USA" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Richard Chamberlain (I)" "31 March 1934" "Beverly Hills, Los Angeles, California, USA" .
+<actor> "Tony Curtis (I)" "3 June 1925" "The Bronx, New York, USA" .
+<actor> "Ted Danson" "29 December 1947" "San Diego, California, USA" .
+<actor> "Angie Dickinson" "30 September 1931" "Kulm, North Dakota, USA" .
+<actor> "Charles Durning" "28 February 1923" "Highland Falls, New York, USA" .
+<actor> "Linda Evans (I)" "18 November 1942" "Hartford, Connecticut, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "John Forsythe (I)" "29 January 1918" "Penn's Grove, New Jersey, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Audrey Hepburn" "4 May 1929" "Ixelles, Belgium" .
+<actor> "Jessica Lange" "20 April 1949" "Cloquet, Minnesota, USA" .
+<actor> "Jack Lemmon (I)" "8 February 1925" "Newton, Massachusetts, USA" .
+<actor> "Shelley Long" "23 August 1949" "Fort Wayne, Indiana, USA" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Fred MacMurray" "30 August 1908" "Kankakee, Illinois, USA" .
+<actor> "Walter Matthau" "1 October 1920" "New York City, New York, USA" .
+<actor> "Gregory Peck" "5 April 1916" "La Jolla, California, USA" .
+<actor> "Ginger Rogers" "16 July 1911" "Independence, Missouri, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "James Stewart (I)" "20 May 1908" "Indiana, Pennsylvania, USA" .

@@ -1,0 +1,21 @@
+title:Stop! Or My Mom Will Shoot
+url:http://www.imdb.com/title/tt0105477/
+<title> "Stop! Or My Mom Will Shoot" .
+<director> "Roger Spottiswoode" "5 January 1945" "Ottawa, Ontario, Canada" .
+<writer> "Blake Snyder" " " "" .
+<writer> "William Osborne (I)" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Estelle Getty" "25 July 1923" "New York City, New York, USA" .
+<actor> "JoBeth Williams" "6 December 1948" "Houston, Texas, USA" .
+<actor> "Roger Rees" "5 May 1944" "Aberystwyth, Wales, UK" .
+<actor> "Martin Ferrero" "29 September 1947" "Brockport, New York, USA" .
+<actor> "Gailard Sartain" "18 September 1946" "Tulsa, Oklahoma, USA" .
+<actor> "John Wesley (I)" " " "" .
+<actor> "Al Fann" "21 February 1925" "Cleveland, Ohio, USA" .
+<actor> "Ella Joyce" "12 June 1954" "Chicago, Illinois, USA" .
+<actor> "J. Kenneth Campbell" " 1947" "Flushing, New York, USA" .
+<actor> "Nicholas Sadler" " " "" .
+<actor> "Dennis Burkley" "10 September 1945" "Van Nuys, California, USA" .
+<actor> "Ving Rhames" "12 May 1959" "New York City, New York, USA" .
+<actor> "Jana Arnold" "13 March 1952" "Belton, Texas, USA" .
+<actor> "Chris Latta" "30 August 1949" "Orange, New Jersey, USA" .

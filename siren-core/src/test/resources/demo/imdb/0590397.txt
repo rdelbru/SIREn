@@ -1,0 +1,5 @@
+title:Episode dated 7 October 1994
+url:http://www.imdb.com/title/tt0590397/
+<title> ""Good Morning America" Episode dated 7 October 1994" .
+<actor> "Jim Bailey (I)" "10 January 1948" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

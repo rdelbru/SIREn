@@ -1,0 +1,20 @@
+title:An Alan Smithee Film: Burn Hollywood Burn
+url:http://www.imdb.com/title/tt0118577/
+<title> "An Alan Smithee Film: Burn Hollywood Burn" .
+<director> "Arthur Hiller" "22 November 1923" "Edmonton, Alberta, Canada" .
+<writer> "Joe Eszterhas" "23 November 1944" "Csakanydoroszlo, Hungary" .
+<actor> "Ryan O'Neal" "20 April 1941" "Los Angeles, California, USA" .
+<actor> "Coolio" "1 August 1963" "Compton, California, USA" .
+<actor> "Chuck D. (I)" "1 August 1960" "Roosevelt, Long Island, New York, USA" .
+<actor> "Eric Idle" "29 March 1943" "South Shields, Tyne and Wear, England, UK" .
+<actor> "Richard Jeni" "14 April 1957" "Brooklyn, New York, USA" .
+<actor> "Leslie Stefanson" "10 May 1971" "Fargo, North Dakota, USA" .
+<actor> "Sandra Bernhard" "6 June 1955" "Flint, Michigan, USA" .
+<actor> "Cherie Lunghi" "4 April 1952" "London, England, UK" .
+<actor> "Harvey Weinstein" "19 March 1952" "Flushing, Queens, New York, USA" .
+<actor> "Gavin Polone" " " "" .
+<actor> "MC Lyte" "11 October 1971" "Queens, New York, USA" .
+<actor> "Marcello Thedford" " " "" .
+<actor> "Nicole Nagel (I)" " " "" .
+<actor> "Stephen Tobolowsky" "30 May 1951" "Dallas, Texas, USA" .
+<actor> "Erik King" " " "" .

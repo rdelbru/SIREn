@@ -1,0 +1,15 @@
+title:Episode #3.20
+url:http://www.imdb.com/title/tt0653186/
+<title> ""The Muppet Show" Episode #3.20" .
+<director> "Philip Casson" "20 December 1928" "" .
+<writer> "Jim Henson (I)" "24 September 1936" "Greenville, Mississippi, USA" .
+<writer> "Don Hinkley" " 1922" "Richmond, California, USA" .
+<actor> "Frank Oz" "25 May 1944" "Hereford, England, UK" .
+<actor> "Jerry Nelson (I)" "10 July 1934" "Tulsa, Oklahoma, USA" .
+<actor> "Richard Hunt (I)" "16 August 1951" "Bronx, New York, USA" .
+<actor> "Dave Goelz" "16 July 1946" "Los Angeles, California, USA" .
+<actor> "Louise Gold" " 1956" "London, England, UK" .
+<actor> "Steve Whitmire" "24 September 1959" "Atlanta, Georgia, USA" .
+<actor> "Kathryn Mullen" " " "" .
+<actor> "Jim Henson (I)" "24 September 1936" "Greenville, Mississippi, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

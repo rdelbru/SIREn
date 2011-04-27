@@ -1,0 +1,21 @@
+title:Lock Up
+url:http://www.imdb.com/title/tt0097770/
+<title> "Lock Up" .
+<director> "John Flynn (I)" "14 March 1932" "Chicago, Illinois, USA" .
+<writer> "Richard Smith (III)" " " "" .
+<writer> "Jeb Stuart (I)" "21 January 1956" "Little Rock, Arkansas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Donald Sutherland (I)" "17 July 1935" "Saint John, New Brunswick, Canada" .
+<actor> "John Amos (I)" "27 December 1939" "Newark, New Jersey, USA" .
+<actor> "Sonny Landham" "11 February 1941" "Canton, Georgia, USA" .
+<actor> "Tom Sizemore" "29 November 1961" "Detroit, Michigan, USA" .
+<actor> "Frank McRae" "3 June 1942" "Memphis, Tennessee, USA" .
+<actor> "Darlanne Fluegel" "25 November 1958" "Pasadena, California, USA" .
+<actor> "William Allen Young" " 1953" "Washington, District of Columbia, USA" .
+<actor> "Larry Romano" " 1975" "Staten Island, New York City, New York, USA" .
+<actor> "Jordan Lund" "7 May 1957" "Long Island, New York, USA" .
+<actor> "John Lilla" " " "" .
+<actor> "Dean Rader-Duval" " " "" .
+<actor> "Jerry Strivelli" "8 March 1932" "" .
+<actor> "David Anthony Marshall" " " "" .
+<actor> "Kurek Ashley (I)" " " "" .

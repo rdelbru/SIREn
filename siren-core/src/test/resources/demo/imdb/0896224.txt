@@ -1,0 +1,98 @@
+title:1 Cent Howard TV Preview
+url:http://www.imdb.com/title/tt0896224/
+<title> ""Howard Stern on Demand" 1 Cent Howard TV Preview" .
+<director> "Scott DePace" " " "" .
+<writer> "Benjy Bronk" "4 September 1967" "USA" .
+<writer> "Richard Christy" "1 April 1974" "Fort Scott, Kansas, USA" .
+<actor> "Pamela Anderson (I)" "1 July 1967" "Ladysmith, British Columbia, Canada" .
+<actor> "Buck Angel" " 1972" "Yucatan, Mexico" .
+<actor> "K.C. Armstrong" "17 July 1975" "Long Island, New York, USA" .
+<actor> "Alec Baldwin" "3 April 1958" "Massapequa, Long Island, New York, USA" .
+<actor> "Briana Banks" "21 March 1978" "Munich, Germany" .
+<actor> "Beetlejuice" "2 June 1968" "Browns Mills, New Jersey, USA" .
+<actor> "A.J. Benza" "2 June 1962" "Brooklyn, New York, USA" .
+<actor> "Joey Boots" " " "" .
+<actor> "Benjy Bronk" "4 September 1967" "USA" .
+<actor> "Crazy Cabbie" " " "" .
+<actor> "Mary Carey" "15 June 1980" "Cleveland, Ohio, USA" .
+<actor> "Timothy Champeaux (II)" " " "" .
+<actor> "Tommy Chong" "24 May 1938" "Edmonton, Alberta, Canada" .
+<actor> "Richard Christy" "1 April 1974" "Fort Scott, Kansas, USA" .
+<actor> "Chyna (III)" "27 December 1969" "Rochester, New York, USA" .
+<actor> "Ralph Cirella" "20 April 1965" "" .
+<actor> "Andrew Dice Clay" "29 September 1957" "Brooklyn, New York, USA" .
+<actor> "Yucko The Clown" " " "" .
+<actor> "Pat Cooper (I)" "31 July 1929" "Brooklyn, New York, USA" .
+<actor> "Annie Cruz (I)" "6 November 1984" "Sherman Oaks, California, USA" .
+<actor> "Dana DeArmond" "16 June 1979" "Fort Bragg, North Carolina, USA" .
+<actor> "Gary Dell'Abate" "14 March 1961" "Uniondale, Long Island, New York, USA" .
+<actor> "Nick DiPaolo" "31 January 1962" "Danvers, Massachusetts, USA" .
+<actor> "Jeff the Drunk" "2 May 1967" "USA" .
+<actor> "Robert Duvall" "5 January 1931" "San Diego, California, USA" .
+<actor> "Hank The Angry Drunken Dwarf" "20 April 1962" "Fall River, Massachusetts, USA" .
+<actor> "High Pitch Erik" "16 April 1971" "New York City, New York, USA" .
+<actor> "Heather Gables" "6 March 1983" "California, USA" .
+<actor> "Mike Gange (I)" " " "" .
+<actor> "Paul Giamatti" "6 June 1967" "New Haven, Connecticut, USA" .
+<actor> "Cuba Gooding Jr." "2 January 1968" "The Bronx, New York, USA" .
+<actor> "Doug Z. Goodstein" " " "" .
+<actor> "Gilbert Gottfried" "28 February 1955" "Brooklyn, New York, USA" .
+<actor> "J.D. Harmeyer" " 1979" "Fairborn, Ohio, USA" .
+<actor> "Quentin Heggs" " " "" .
+<actor> "Jon Hein" "24 November 1967" "Hempstead, New York, USA" .
+<actor> "Henry Hill (II)" "11 June 1943" "Brownsville, Brooklyn, New York, USA" .
+<actor> "Blue Iris" "21 January 1947" "USA" .
+<actor> "Kendra Jade" "19 April 1977" "Northampton, Massachusetts, USA" .
+<actor> "Jenna Jameson" "9 April 1974" "Las Vegas, Nevada, USA" .
+<actor> "Jessica Jaymes" "8 March 1981" "Anchorage, Alaska, USA" .
+<actor> "Irish John" " " "" .
+<actor> "Ginger Jolie" "15 January 1983" "Houston, Texas, USA" .
+<actor> "Gregg Karmel" " " "" .
+<actor> "Don King (I)" "6 December 1932" "Cleveland, Ohio, USA" .
+<actor> "Johnny Knoxville" "11 March 1971" "Knoxville, Tennessee, USA" .
+<actor> "Lisa Lampanelli" "19 July 1961" "Trumbull, Connecticut, USA" .
+<actor> "Artie Lange" "11 October 1967" "Union Township, New Jersey, USA" .
+<actor> "Rev. Bob Levy" " " "" .
+<actor> "Bubba the Love Sponge" "21 April 1966" "Warsaw, Indiana, USA" .
+<actor> "Carmen Luvana" "23 August 1981" "New York City, New York, USA" .
+<actor> "Jamie Lynn (II)" " " "" .
+<actor> "Cindy Margolis" "1 October 1965" "Los Angeles, California, USA" .
+<actor> "Isaac Mark" " " "" .
+<actor> "Scott Masterson (I)" " " "" .
+<actor> "Jenny McCarthy (I)" "1 November 1972" "Chicago, Illinois, USA" .
+<actor> "Paul McCartney" "18 June 1942" "Liverpool, Merseyside, England, UK" .
+<actor> "John Melendez (IV)" "4 October 1965" "Massapequa, Long Island, New York, USA" .
+<actor> "Jodie Moore (I)" "11 April 1976" "Woodridge, Queensland, Australia" .
+<actor> "Michael Morales (II)" " " "" .
+<actor> "Mr. T" "21 May 1952" "Chicago, Illinois, USA" .
+<actor> "Ronnie Mund" "7 October 1949" "USA" .
+<actor> "Will Murray (II)" " " "" .
+<actor> "Fred Norris (I)" "9 July 1955" "Willimantic, Connecticut, USA" .
+<actor> "Elegant Elliot Offen" " " "" .
+<actor> "Beth Ostrosky" "15 July 1972" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Andrea Ownbey" "28 February 1983" "Dalton, Georgia, USA" .
+<actor> "Colin Quinn (I)" "6 June 1959" "Brooklyn, New York, USA" .
+<actor> "Robin Quivers" "8 August 1952" "Baltimore, Maryland, USA" .
+<actor> "Gary the Retard" " 1952" "" .
+<actor> "Cassia Riley" "27 October 1980" "USA" .
+<actor> "Ashley Roberts (I)" "14 September 1981" "Phoenix, Arizona, USA" .
+<actor> "Sandra Romain" "26 March 1978" "Timisoara, Romania" .
+<actor> "Harmony Rose" "12 October 1983" "Miami, Florida, USA" .
+<actor> "Bob Saget" "17 May 1956" "Philadelphia, Pennsylvania, USA" .
+<actor> "Scott Salem" " " "" .
+<actor> "Savanna Samson" "14 October 1967" "Rochester, New York, USA" .
+<actor> "Nikki Schieler Ziering" "9 August 1971" "Norwalk, California, USA" .
+<actor> "M. Night Shyamalan" "6 August 1970" "Mahé, Pondicherry, India" .
+<actor> "Jason Sirotin" "19 July 1977" "Indianapolis, Indiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Howard Stern (I)" "12 January 1954" "Jackson Heights, Queens, New York City, New York, USA" .
+<actor> "Sal the Stockbroker" "24 October 1968" "New York City, New York, USA" .
+<actor> "John the Stutterer" " 1969" "Philadelphia, Pennsylvania, USA" .
+<actor> "George Takei" "20 April 1937" "Los Angeles, California, USA" .
+<actor> "Trent Tomlinson" " " "" .
+<actor> "Valentina Vaughn" "15 March 1983" "Los Angeles, California, USA" .
+<actor> "Taylor Wayne" "27 August 1968" "Newcastle, England, UK" .
+<actor> "Luke Wilson (I)" "21 September 1971" "Dallas, Texas, USA" .
+<actor> "Richard Wilson (XI)" " " "" .
+<actor> "Ariel X." "15 May 1980" "Grenada Hills, California, USA" .
+<actor> "Victoria Zdrok" "3 March 1973" "Kiev, Soviet Union (now Ukraine)" .

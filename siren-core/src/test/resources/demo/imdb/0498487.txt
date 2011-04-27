@@ -1,0 +1,10 @@
+title:Dolly Parton: In Country
+url:http://www.imdb.com/title/tt0498487/
+<title> "Dolly Parton: In Country" .
+<director> "Richard Discoll" " " "" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Emmylou Harris" "2 April 1947" "Birmingham, Alabama, USA" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Linda Ronstadt" "15 July 1946" "Tucson, Arizona, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Lily Tomlin" "1 September 1939" "Detroit, Michigan, USA" .

@@ -1,0 +1,16 @@
+title:We Get to Win This Time
+url:http://www.imdb.com/title/tt0318824/
+<title> "We Get to Win This Time" .
+<director> "Ian T. Haufrect" " " "" .
+<actor> "George P. Cosmatos" "4 January 1941" "Florence, Tuscany, Italy" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Buzz Feitshans" " " "" .
+<actor> "Mark Goldblatt" " " "" .
+<actor> "Mark Helfrich" " " "" .
+<actor> "Mario Kassar" "10 October 1951" "Beirut, Lebanon" .
+<actor> "David Morrell (II)" " " "" .
+<actor> "Charles Napier" "12 April 1936" "Scottsville, Kentucky, USA" .
+<actor> "Julia Nickson-Soul" "11 September 1958" "Singapore" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Andrew G. Vajna" "1 August 1944" "Budapest, Hungary" .
+<actor> "Ronald Reagan (I)" "6 February 1911" "Tampico, Illinois, USA" .

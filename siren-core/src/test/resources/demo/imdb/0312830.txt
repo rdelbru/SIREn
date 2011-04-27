@@ -1,0 +1,6 @@
+title:Janine Turner
+url:http://www.imdb.com/title/tt0312830/
+<title> ""Celebrity Profile" Janine Turner" .
+<actor> "Janine Turner" "6 December 1962" "Lincoln, Nebraska, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

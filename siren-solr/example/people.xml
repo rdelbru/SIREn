@@ -1,0 +1,53 @@
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<add>
+<doc>
+  <field name="url">http://example.org/person/jim</field>
+  <field name="content">
+  	&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
+		&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Student&gt; .
+  	&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/name&gt; "Jim Maple" .
+		&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/age&gt; "26" .
+		&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/workplace&gt; "DERI Galway" .
+	</field>
+</doc>
+
+<doc>
+  <field name="url">http://example.org/person/john</field>
+  <field name="content">    
+	  &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
+		&lt;http://example.org/person/john&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Student&gt; .
+    &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/name&gt; "John Gartner" .
+    &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/age&gt; "34" .
+    &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/workplace&gt; "DERI Galway" .
+  </field>
+</doc>
+
+<doc>
+  <field name="url">http://example.org/person/jack</field>
+  <field name="content">
+  	&lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
+		&lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Professor&gt; .
+    &lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/name&gt; "Jack Hollow" .
+    &lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/age&gt; "52" .
+    &lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/workplace&gt; "NUI Galway" .
+  </field>
+</doc>
+
+</add>
+

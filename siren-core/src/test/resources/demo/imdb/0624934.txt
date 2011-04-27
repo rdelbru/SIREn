@@ -1,0 +1,4 @@
+title:Episode dated 6 October 1995
+url:http://www.imdb.com/title/tt0624934/
+<title> ""Larry King Live" Episode dated 6 October 1995" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

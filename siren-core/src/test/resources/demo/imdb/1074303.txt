@@ -1,0 +1,6 @@
+title:Assassins
+url:http://www.imdb.com/title/tt1074303/
+<title> ""HBO First Look" Assassins" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Richard Donner" "24 April 1930" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

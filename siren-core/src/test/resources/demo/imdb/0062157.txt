@@ -1,0 +1,17 @@
+title:Professionisti per un massacro
+url:http://www.imdb.com/title/tt0062157/
+<title> "Professionisti per un massacro" .
+<director> "Nando Cicero" "22 January 1931" "Asmara, Eritrea, Ethiopia" .
+<writer> "Jaime Jesús Balcázar" "27 January 1934" "Barcelona, Cataluña, Spain" .
+<writer> "Jaime Jesús Balcázar" "27 January 1934" "Barcelona, Cataluña, Spain" .
+<actor> "George Hilton (I)" "16 July 1934" "Montevideo, Uruguay" .
+<actor> "Edd Byrnes" "30 July 1933" "New York City, New York, USA" .
+<actor> "George Martin (III)" " 1937" "Barcelona, Spain" .
+<actor> "Milo Quesada" "16 April 1930" "Buenos Aires, Argentina" .
+<actor> "Mónica Randall" "18 November 1942" "Barcelona, Barcelona, Catalonia, Spain" .
+<actor> "Gérard Herter" " " "" .
+<actor> "José Bódalo" "24 March 1916" "Córdoba, Argentina" .
+<actor> "Gisella Monaldi" " " "" .
+<actor> "Osiride Pevarello" " 1915" "Padova, Italy" .
+<actor> "Pietro Torrisi" "20 January 1940" "Catania, Italy" .
+<actor> "Bruno Ukmar" " " "" .

@@ -1,0 +1,6 @@
+title:"Howard Stern"
+url:http://www.imdb.com/title/tt0159879/
+<title> ""Howard Stern"" .
+<director> "Scott DePace" " " "" .
+<writer> "Benjy Bronk" "4 September 1967" "USA" .
+<writer> "Richard Christy" "1 April 1974" "Fort Scott, Kansas, USA" .

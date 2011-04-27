@@ -1,0 +1,2 @@
+_:anon <http://example.org/property> <http://example.org/resource2> .
+<http://example.org/resource2> <http://example.org/property> _:anon .

@@ -1,0 +1,18 @@
+title:Sylvester Stallone
+url:http://www.imdb.com/title/tt0451463/
+<title> ""Biography" Sylvester Stallone" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Frank Stallone (I)" "30 July 1950" "New York City, New York, USA" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Bill Clinton (I)" "19 August 1946" "Hope, Arkansas, USA" .
+<actor> "James Caan (I)" "26 March 1940" "The Bronx, New York, USA" .
+<actor> "Julianne Moore (I)" "3 December 1960" "Fayetteville, North Carolina, USA" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Jennifer Flavin" "14 August 1968" "Chicago, Illinois, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Sugar Ray Leonard" "17 May 1956" "Wilmington, North Carolina, USA" .
+<actor> "Mark Burnett (II)" "17 July 1960" "London, England, UK" .
+<actor> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .

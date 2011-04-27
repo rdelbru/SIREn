@@ -1,0 +1,5 @@
+title:Episode dated 18 December 2006
+url:http://www.imdb.com/title/tt0917453/
+<title> ""Live with Regis and Kathie Lee" Episode dated 18 December 2006" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bow Wow" "9 March 1987" "Columbus, Ohio, USA" .

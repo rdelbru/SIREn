@@ -1,0 +1,8 @@
+title:Planet Hollywood Sydney Grand Opening
+url:http://www.imdb.com/title/tt1340787/
+<title> "Planet Hollywood Sydney Grand Opening" .
+<writer> "Debra Darby" " " "" .
+<actor> "Danny Glover" "22 July 1946" "San Francisco, California, USA" .
+<actor> "Mike Hammond (I)" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .

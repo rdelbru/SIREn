@@ -1,0 +1,27 @@
+title:Kambakkht Ishq
+url:http://www.imdb.com/title/tt1144804/
+<title> "Kambakkht Ishq" .
+<director> "Sabir Khan (I)" " " "" .
+<writer> "Sabir Khan (I)" " " "" .
+<writer> "Ishita Moitra" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Brandon Routh" "9 October 1979" "Des Moines, Iowa, USA" .
+<actor> "Denise Richards" "17 February 1971" "Downers Grove, Illinois, USA" .
+<actor> "Carmen Electra" "20 April 1972" "Sharonville, Ohio, USA" .
+<actor> "Holly Valance" "11 May 1983" "Melbourne, Victoria, Australia" .
+<actor> "Akshay Kumar (I)" "9 September 1967" "Amritsar, Punjab, India" .
+<actor> "Kareena Kapoor" "21 September 1977" "Bombay, Maharashtra, India" .
+<actor> "Diane Sellers" " " "" .
+<actor> "Amrita Arora" "31 January 1981" "Bombay, Maharashtra, India" .
+<actor> "Raeann Giles" "19 February 1984" "Santa Barbara, California, USA" .
+<actor> "Aftab Shivdasani" "25 June 1978" "Bombay, Maharashtra, India" .
+<actor> "Bayli Johnston" "21 April 1997" "USA" .
+<actor> "Vindu Dara Singh" " " "" .
+<actor> "Ashwin Mushran" " " "" .
+<actor> "Boman Irani" "1 October 1962" "Mumbai, Maharashtra, India" .
+<actor> "Kiron Kher" " " "" .
+<actor> "Mikandrew Perdaris" " " "" .
+<actor> "Javed Jaffrey" " " "" .
+<actor> "Sheridan Crist" " " "" .
+<actor> "Tony Alameda" "22 October 1959" "Queens, New York City, New York, USA" .

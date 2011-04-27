@@ -1,0 +1,14 @@
+title:A Company of Players
+url:http://www.imdb.com/title/tt1363364/
+<title> "A Company of Players" .
+<actor> "Amy Van Gilder" " " "" .
+<actor> "Brian Henson" "30 November 1962" "New York City, New York, USA" .
+<actor> "Jane Gootnick" " " "" .
+<actor> "Dave Goelz" "16 July 1946" "Los Angeles, California, USA" .
+<actor> "Bill Barretta" " " "Yardley, Pennsylvania, USA" .
+<actor> "Steve Whitmire" "24 September 1959" "Atlanta, Georgia, USA" .
+<actor> "Michael K. Frith" " " "" .
+<actor> "Martin G. Baker" " " "" .
+<actor> "Kathryn Mullen" " " "" .
+<actor> "Kevin Clash" "17 September 1960" "Baltimore, Maryland, USA" .
+<actor> "Jerry Juhl" "27 July 1938" "St. Paul, Minnesota, USA" .

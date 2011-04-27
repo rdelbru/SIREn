@@ -1,0 +1,84 @@
+
+SIREn 0.2.1-SNAPSHOT Build Instructions
+
+--------------------------------------------------------------------------------
+
+Basic steps:
+  0) Install JDK 1.6 (or greater), Maven 2.0.9 (or greater)
+  1) Download SIREn 0.2.1-SNAPSHOT and unpack it
+  2) Connect to the parent module directory of your SIREn installation
+  3) Run maven
+
+Step 0) Set up your development environment (JDK 1.6 or greater,
+Maven 2.0.9 or greater)
+
+We'll assume that you know how to get and set up the JDK - if you
+don't, then we suggest starting at http://java.sun.com and learning
+more about Java, before returning to this BUILD document. SIREn runs with
+JDK 1.6 and later.
+
+Like many Open Source java projects, SIREn uses Apache Maven for build
+control.  Specifically, you MUST use Maven version 2.0.9 or greater.
+
+Step 1) Download SIREn
+
+We'll assume you already did this, or you wouldn't be reading this
+file.  However, you might have received this file by some alternate
+route, or you might have an incomplete copy of SIREn, so: SIREn
+releases are available for download from:
+
+  http://siren.sindice.com/
+
+Download the tarred/gzipped version of the archive, and
+uncompress it into a directory of your choice.
+
+Step 2) From the command line, change (cd) into the parent module directory, 
+i.e., siren-parent, of your SIREn installation
+
+SIREn's parent module directory contains the parent pom.xml file. By default,
+you do not need to change any of the settings in this file, but you do
+need to run maven from this location so it knows where to find pom.xml.
+
+Step 3) Run maven
+
+Assuming you have maven in your PATH, typing "mvn package" at the shell prompt
+and command prompt should run maven. Maven will by default look for the
+"pom.xml" files in the sub-modules (siren-core, siren-qparser and siren-solr), 
+compile them and run the tests.
+
+The SIREn jar file will be located at "./target/siren-#{version}.jar".
+
+You might want also to install them into your local maven repository by typing 
+"mvn install".
+
+To generate the javadoc, you should type "mvn javadoc:javadoc" at the shell 
+prompt. Maven will generate the javadoc API in the directory 
+"./target/site/apidocs/".
+
+--------------------------------------------------------------------------------
+
+For information on how to setup the Solr demo, refer to the file
+./siren-solr/example/INSTALL.txt
+
+--------------------------------------------------------------------------------
+
+For further information on SIREn, go to:
+  http://siren.sindice.com/
+
+Please join the SIREn-User mailing list by visiting this site:
+  http://lists.deri.org/mailman/listinfo/siren
+
+Please post suggestions, questions, corrections or additions to this
+document to the lucene-user mailing list.
+
+--------------------------------------------------------------------------------
+
+This file was originally written by Steven J. Owens <puff@darksleep.com> for
+Lucene, and has been modified by Renaud Delbru <renaud.delbru@deri.org> for 
+SIREn.
+
+Copyright (c) 2010, 2011
+Renaud Delbru,
+Digital Enterprise Research Institute,
+National University of Ireland, Galway.  
+All rights reserved.

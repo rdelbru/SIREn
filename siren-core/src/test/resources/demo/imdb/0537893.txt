@@ -1,0 +1,95 @@
+title:Episode #2.3
+url:http://www.imdb.com/title/tt0537893/
+<title> ""Celebrities Uncensored" Episode #2.3" .
+<actor> "Paula Abdul" "19 June 1962" "San Fernando, California, USA" .
+<actor> "Ben Affleck" "15 August 1972" "Berkeley, California, USA" .
+<actor> "James Belushi" "15 June 1954" "Chicago, Illinois, USA" .
+<actor> "Jack Black (I)" "28 August 1969" "Hermosa Beach, California, USA" .
+<actor> "Bobbie Brown (I)" "7 October 1969" "Baton Rouge, Louisiana, USA" .
+<actor> "Downtown Julie Brown" "27 August 1963" "Cardiff, Wales, UK" .
+<actor> "Sandra Bullock" "26 July 1964" "Arlington, Virginia, USA" .
+<actor> "George Clooney" "6 May 1961" "Lexington, Kentucky, USA" .
+<actor> "Dan Cortese" "14 September 1967" "Sewickley, Pennsylvania, USA" .
+<actor> "Ellen DeGeneres" "26 January 1958" "Metairie, Louisiana, USA" .
+<actor> "Cameron Diaz" "30 August 1972" "San Diego, California, USA" .
+<actor> "Leonardo DiCaprio" "11 November 1974" "Hollywood, California, USA" .
+<actor> "Andy Dick (I)" "21 December 1965" "Charleston, South Carolina, USA" .
+<actor> "Michael Douglas (I)" "25 September 1944" "New Brunswick, New Jersey, USA" .
+<actor> "Michael Clarke Duncan" "10 December 1957" "Chicago, Illinois, USA" .
+<actor> "Fred Durst" "20 August 1970" "Gastonia, North Carolina, USA" .
+<actor> "Chris Farley" "15 February 1964" "Madison, Wisconsin, USA" .
+<actor> "Colin Farrell (I)" "31 May 1976" "Castleknock, Dublin, Ireland" .
+<actor> "Max Gail" "5 April 1943" "Detroit, Michigan, USA" .
+<actor> "Estelle Getty" "25 July 1923" "New York City, New York, USA" .
+<actor> "Kelsey Grammer" "21 February 1955" "St. Thomas, U.S. Virgin Islands" .
+<actor> "Jake Gyllenhaal" "19 December 1980" "Los Angeles, California, USA" .
+<actor> "Woody Harrelson" "23 July 1961" "Midland, Texas, USA" .
+<actor> "Salma Hayek" "2 September 1966" "Coatzacoalcos, Veracruz, Mexico" .
+<actor> "Anne Heche" "25 May 1969" "Aurora, Ohio, USA" .
+<actor> "Howard Hesseman" "27 February 1940" "Lebanon, Oregon, USA" .
+<actor> "Nicky Hilton (I)" "5 October 1983" "New York City, New York, USA" .
+<actor> "Paris Hilton" "17 February 1981" "New York City, New York, USA" .
+<actor> "Katie Holmes" "18 December 1978" "Toledo, Ohio, USA" .
+<actor> "Anthony Hopkins" "31 December 1937" "Margam, Port Talbot, West Glamorgan, Wales, UK" .
+<actor> "Michael Jackson (I)" "29 August 1958" "Gary, Indiana, USA" .
+<actor> "Famke Janssen" "5 November 1964" "Amstelveen, Noord-Holland, Netherlands" .
+<actor> "Angelina Jolie" "4 June 1975" "Los Angeles, California, USA" .
+<actor> "Ashley Judd" "19 April 1968" "Granada Hills, California, USA" .
+<actor> "Cris Judd" "15 August 1969" "Abilene, Texas, USA" .
+<actor> "Jewel Kilcher" "23 May 1974" "Homer, Alaska, USA" .
+<actor> "Ben Kingsley" "31 December 1943" "Scarborough, Yorkshire, England, UK" .
+<actor> "Ashton Kutcher" "7 February 1978" "Cedar Rapids, Iowa, USA" .
+<actor> "Sharon Lawrence (I)" "29 June 1961" "Charlotte, North Carolina, USA" .
+<actor> "Matt LeBlanc" "25 July 1967" "Newton, Massachusetts, USA" .
+<actor> "Tommy Lee (VI)" "3 October 1962" "Athens, Greece" .
+<actor> "David Leisure" "16 November 1950" "San Diego, California, USA" .
+<actor> "Jared Leto" "26 December 1971" "Bossier City, Louisiana, USA" .
+<actor> "Jennifer Lopez (I)" "24 July 1969" "The Bronx, New York, USA" .
+<actor> "Rob Lowe (I)" "17 March 1964" "Charlottesville, Virginia, USA" .
+<actor> "Mary Fran Lyman" " " "" .
+<actor> "Madonna (I)" "16 August 1958" "Bay City, Michigan, USA" .
+<actor> "Taryn Manning" "6 November 1978" "Tucson, Arizona, USA" .
+<actor> "Edie McClurg" "23 July 1951" "Kansas City, Missouri, USA" .
+<actor> "Matthew McConaughey" "4 November 1969" "Uvalde, Texas, USA" .
+<actor> "Mark McGrath (I)" "15 March 1968" "Hartford, Connecticut, USA" .
+<actor> "Donna Mills" "11 December 1940" "Chicago, Illinois, USA" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Esai Morales" "1 October 1962" "Brooklyn, New York, USA" .
+<actor> "Shaquille O'Neal" "6 March 1972" "Newark, New Jersey, USA" .
+<actor> "Jack Osbourne" "8 November 1985" "London, England UK" .
+<actor> "Kelly Osbourne" "27 October 1984" "London, England, UK" .
+<actor> "Ozzy Osbourne" "3 December 1948" "Birmingham, England, UK" .
+<actor> "Sharon Osbourne" "9 October 1952" "London, England, UK" .
+<actor> "Gwyneth Paltrow" "27 September 1972" "Los Angeles, California, USA" .
+<actor> "Sean Penn (I)" "17 August 1960" "Santa Monica, California, USA" .
+<actor> "Jason Priestley" "28 August 1969" "Vancouver, British Columbia, Canada" .
+<actor> "Usher Raymond" "14 October 1978" "Dallas, Texas, USA" .
+<actor> "Norman Reedus" "6 January 1969" "Florida, USA" .
+<actor> "Keanu Reeves" "2 September 1964" "Beirut, Lebanon" .
+<actor> "Jason Renner" " " "" .
+<actor> "Nicole Richie" "21 September 1981" "Berkeley, California, USA" .
+<actor> "Lisa Rinna (I)" "11 July 1963" "Medford, Oregon, USA" .
+<actor> "Guy Ritchie" "10 September 1968" "Hatfield, Hertfordshire, England, UK" .
+<actor> "Marion Ross (I)" "25 October 1928" "Albert Lea, Minnesota, USA" .
+<actor> "Estella Rubenstein" " " "" .
+<actor> "Jeri Ryan" "22 February 1968" "Munich, Germany" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Steven Seagal" "10 April 1951" "Lansing, Michigan, USA" .
+<actor> "York Shackleton" "23 August 1974" "Palm Springs, California, USA" .
+<actor> "Pauly Shore" "1 February 1968" "Hollywood, California, USA" .
+<actor> "Bryan Singer" "17 September 1965" "New York City, New York, USA" .
+<actor> "Anna Nicole Smith" "28 November 1967" "Houston, Texas, USA" .
+<actor> "Ron Smith (XXX)" "30 March 1974" "Pompton Plains, New Jersey, USA" .
+<actor> "Taran Noah Smith" "8 April 1984" "San Francisco, California, USA" .
+<actor> "Mira Sorvino" "28 September 1967" "Tenafly, New Jersey, USA" .
+<actor> "Britney Spears" "2 December 1981" "Kentwood, Louisiana, USA" .
+<actor> "Jamie Lynn Spears" "4 April 1991" "McComb, Mississippi, USA" .
+<actor> "Lynne Spears" "4 May 1955" "McComb, Mississippi, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kristy Swanson" "19 December 1969" "Mission Viejo, California, USA" .
+<actor> "Billy Bob Thornton" "4 August 1955" "Hot Springs, Arkansas, USA" .
+<actor> "Justin Timberlake" "31 January 1981" "Memphis, Tennessee, USA" .
+<actor> "Henry Trappler" " " "" .
+<actor> "Kim Walther" " " "" .
+<actor> "Betty White (I)" "17 January 1922" "Oak Park, Illinois, USA" .
+<actor> "Scott Wolf (I)" "4 June 1968" "Boston, Massachusetts, USA" .

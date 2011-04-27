@@ -1,0 +1,9 @@
+title:Episode dated 5 October 1991
+url:http://www.imdb.com/title/tt0606329/
+<title> ""The Howard Stern Show" Episode dated 5 October 1991" .
+<actor> "Howard Stern (I)" "12 January 1954" "Jackson Heights, Queens, New York City, New York, USA" .
+<actor> "Tony Bennett (I)" "3 August 1926" "Astoria, New York, USA" .
+<actor> "Todd Bridges" "27 May 1965" "San Francisco, California, USA" .
+<actor> "Cher (I)" "20 May 1946" "El Centro, California, USA" .
+<actor> "Arsenio Hall" "12 February 1956" "Cleveland, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

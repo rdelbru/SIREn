@@ -1,0 +1,10 @@
+title:Episode dated 13 August 1997
+url:http://www.imdb.com/title/tt0627009/
+<title> ""Late Night with Conan O'Brien" Episode dated 13 August 1997" .
+<director> "Liz Plonka" " " "" .
+<writer> "Tom Agna" " " "" .
+<writer> "Chris Albers" " " "" .
+<actor> "Conan O'Brien" "18 April 1963" "Boston, Massachusetts, USA" .
+<actor> "Loretta Lynn" "14 April 1932" "Butcher Hollow, Kentucky, USA" .
+<actor> "Andy Richter (I)" "28 October 1966" "Grand Rapids, Michigan, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

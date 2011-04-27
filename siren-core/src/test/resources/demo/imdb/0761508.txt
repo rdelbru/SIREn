@@ -1,0 +1,48 @@
+title:Episode dated 22 May 1992
+url:http://www.imdb.com/title/tt0761508/
+<title> ""The Tonight Show Starring Johnny Carson" Episode dated 22 May 1992" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Tony DeSena" " " "" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Ed McMahon (I)" "6 March 1923" "Detroit, Michigan, USA" .
+<actor> "Doc Severinsen" "7 July 1927" "Arlington, Oregon, USA" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Loni Anderson" "5 August 1945" "St. Paul, Minnesota, USA" .
+<actor> "Lauren Bacall" "16 September 1924" "New York City, New York, USA" .
+<actor> "Lucille Ball" "6 August 1911" "Jamestown, New York, USA" .
+<actor> "Michael Barrie (I)" " " "" .
+<actor> "Jack Benny" "14 February 1894" "Chicago, Illinois, USA" .
+<actor> "Edgar Bergen" "16 February 1903" "Chicago, Illinois, USA" .
+<actor> "Milton Berle" "12 July 1908" "New York City, New York, USA" .
+<actor> "Sid Caesar" "8 September 1922" "Yonkers, New York, USA" .
+<actor> "Truman Capote" "30 September 1924" "New Orleans, Louisiana, USA" .
+<actor> "Tony Curtis (I)" "3 June 1925" "The Bronx, New York, USA" .
+<actor> "Bette Davis" "5 April 1908" "Lowell, Massachusetts, USA" .
+<actor> "Frederick De Cordova" "27 October 1910" "New York City, New York, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Peter Falk (I)" "16 September 1927" "New York City, New York, USA" .
+<actor> "Charlton Heston" "4 October 1923" "Evanston, Illinois, USA" .
+<actor> "Bob Hope (I)" "29 May 1903" "Eltham, London, England, UK" .
+<actor> "Peter Lassally" " " "" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "Groucho Marx" "2 October 1890" "New York City, New York, USA" .
+<actor> "Jim Mulholland" " " "" .
+<actor> "Tommy Newsom" "25 February 1929" "Portsmouth, Virginia, USA" .
+<actor> "Richard Pryor" "1 December 1940" "Peoria, Illinois, USA" .
+<actor> "Bobby Quinn" "3 October 1927" "New York City, New York, USA" .
+<actor> "Kevin R. Quinn" " " "" .
+<actor> "George Raft" "26 September 1895" "New York City, New York, USA" .
+<actor> "Ronald Reagan (I)" "6 February 1911" "Tampico, Illinois, USA" .
+<actor> "Red Skelton" "18 July 1913" "Vincennes, Indiana, USA" .
+<actor> "Jeff Sotzing" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "James Stewart (I)" "20 May 1908" "Indiana, Pennsylvania, USA" .
+<actor> "Elizabeth Taylor (I)" "27 February 1932" "Hampstead, London, England, UK" .
+<actor> "Danny Thomas (I)" "6 January 1914" "Deerfield, Michigan, USA" .
+<actor> "Tiny Tim" "12 April 1932" "New York City, New York, USA" .
+<actor> "John Wayne (I)" "26 May 1907" "Winterset, Iowa, USA" .
+<actor> "Raquel Welch" "5 September 1940" "Chicago, Illinois, USA" .
+<actor> "Robin Williams (I)" "21 July 1951" "Chicago, Illinois, USA" .
+<actor> "Stevie Wonder" "13 May 1950" "Saginaw, Michigan, USA" .
+<actor> "Natalie Wood (I)" "20 July 1938" "San Francisco, California, USA" .
+<actor> "Gig Young" "4 November 1913" "St. Cloud, Minnesota, USA" .

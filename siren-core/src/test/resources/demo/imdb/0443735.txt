@@ -1,0 +1,139 @@
+title:The Complete History of the Philadelphia Eagles
+url:http://www.imdb.com/title/tt0443735/
+<title> "The Complete History of the Philadelphia Eagles" .
+<writer> "Pete DeStefano" " " "" .
+<writer> "Ray Didinger" " " "" .
+<actor> "Troy Aikman" "21 November 1966" "West Covina, California, USA" .
+<actor> "David Akers" "9 December 1974" "Lexington, Kentucky, USA" .
+<actor> "David Alexander (XX)" "28 July 1964" "Silver Spring, Maryland, USA" .
+<actor> "Eric Allen (X)" "22 November 1965" "San Diego, California, USA" .
+<actor> "Johnny Bailey (I)" "17 March 1967" "Houston, Texas, USA" .
+<actor> "Brian Baldinger (I)" "7 January 1960" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Billy Barnes (IV)" "14 May 1935" "Landis, North Carolina, USA" .
+<actor> "Fred Barnett" "17 June 1966" "Shelby, Mississippi, USA" .
+<actor> "Chuck Bednarik" "1 May 1925" "Bethlehem, Pennsylvania, USA" .
+<actor> "Mary Bednarik" " " "" .
+<actor> "Bert Bell (II)" "25 February 1895" "Philadelphia, Pennsylvania, USA" .
+<actor> "Jane Bell (II)" " " "" .
+<actor> "Bert Bell Jr." " " "" .
+<actor> "Bill Bergey" "9 February 1945" "South Dayton, New York, USA" .
+<actor> "Chris Berman" "10 May 1955" "Greenwich, Connecticut, USA" .
+<actor> "Mark Bowden (II)" "17 July 1951" "St. Louis, Missouri, USA" .
+<actor> "Norman Braman" " " "" .
+<actor> "Tom Brookshier" "16 December 1931" "Roswell, New Mexico, USA" .
+<actor> "Jerome Brown (III)" "4 February 1965" "Brooksville, Florida, USA" .
+<actor> "Lomas Brown" "30 March 1963" "Miami, Florida, USA" .
+<actor> "Timothy Brown (I)" "24 May 1937" "Knightstown, Indiana, USA" .
+<actor> "Adrian Burk" "14 December 1927" "Mexia, Texas, USA" .
+<actor> "Keith Byars" "14 October 1963" "Dayton, Ohio, USA" .
+<actor> "Bill Campbell (IX)" "7 September 1923" "Atlantic City, New Jersey, USA" .
+<actor> "Marion Campbell" "25 May 1929" "Chester, South Carolina, USA" .
+<actor> "Billy Campfield" "20 August 1956" "Las Vegas, Nevada, USA" .
+<actor> "Harold Carmichael" "22 September 1949" "Jacksonville, Florida, USA" .
+<actor> "Bud Carson" "28 April 1931" "Brackenridge, Pennsylvania, USA" .
+<actor> "Angelo Cataldi" " " "" .
+<actor> "Guy Chamberlin" "16 January 1894" "Blue Springs, Nebraska, USA" .
+<actor> "Brad Childress" "27 June 1956" "Aurora, Illinois, USA" .
+<actor> "Dick Coury" " " "" .
+<actor> "Russ Craft" "15 October 1919" "McEwen, Tennessee, USA" .
+<actor> "Randall Cunningham" "27 March 1963" "Santa Barbara, California, USA" .
+<actor> "Brian Dawkins (II)" "13 October 1973" "Jacksonville, Florida, USA" .
+<actor> "Ted Dean (II)" "24 March 1938" "Radnor, Pennsylvania, USA" .
+<actor> "Koy Detmer" "5 July 1973" "San Antonio, Texas, USA" .
+<actor> "Ray Didinger" " " "" .
+<actor> "Hugh Douglas (III)" "23 August 1971" "Mansfield, Ohio, USA" .
+<actor> "Herman Edwards" "27 April 1954" "Fort Monmouth, New Jersey, USA" .
+<actor> "John Facenda" "8 August 1913" "Portsmouth, Virginia, USA" .
+<actor> "Brett Favre" "10 October 1969" "Gulfport, Mississippi, USA" .
+<actor> "A.J. Feeley" "16 May 1977" "Caldwell, Idaho, USA" .
+<actor> "Jack Ferrante" "9 March 1916" "Camden, New Jersey, USA" .
+<actor> "Tony Franklin (I)" "18 November 1956" "Big Spring, Texas, USA" .
+<actor> "Irving Fryar" "28 September 1962" "Mount Holly, New Jersey, USA" .
+<actor> "William Fuller (III)" "8 March 1962" "Norfolk, Virginia, USA" .
+<actor> "Roman Gabriel (I)" "5 August 1940" "Wilmington, North Carolina, USA" .
+<actor> "Frank Gifford" "16 August 1930" "Santa Monica, California, USA" .
+<actor> "Jimmie Giles" "8 November 1954" "Natchez, Mississippi, USA" .
+<actor> "Leroy Harris" "3 July 1954" "Savannah, Georgia, USA" .
+<actor> "Bobby Hebert" "19 August 1960" "Baton Rouge, Louisiana, USA" .
+<actor> "Stanley R. Hochman" " " "" .
+<actor> "Wes Hopkins" "26 September 1961" "Birmingham, Alabama, USA" .
+<actor> "Sam Huff" "4 October 1934" "Morgantown, West Virginia, USA" .
+<actor> "Keith Jackson (I)" "9 April 1965" "Little Rock, Arkansas, USA" .
+<actor> "Ron Jaworski" "23 March 1951" "Lackawanna, New York, USA" .
+<actor> "Jim Johnson (XI)" " " "" .
+<actor> "Seth Joyner (I)" "18 November 1964" "Spring Valley, New York, USA" .
+<actor> "Sonny Jurgensen" "23 August 1934" "Wilmington, North Carolina, USA" .
+<actor> "Harry Kalas" "26 March 1936" "Chicago, Illinois, USA" .
+<actor> "Ed Khayat" "14 September 1914" "Moss Point, Mississippi, USA" .
+<actor> "Frank Kilroy" "30 May 1921" "Philadelphia, Pennsylvania, USA" .
+<actor> "Richie Kotite" "13 October 1942" "Brooklyn, New York, USA" .
+<actor> "Joe Kuharich" "14 April 1917" "South Bend, Indiana, USA" .
+<actor> "Frank LeMaster" "12 March 1952" "Lexington, Kentucky, USA" .
+<actor> "Chad Lewis (II)" "5 October 1971" "Fort Dix, New Jersey, USA" .
+<actor> "Jeffrey Lurie" "8 September 1951" "Boston, Massachusetts, USA" .
+<actor> "Bill Lyon (II)" " " "" .
+<actor> "Mike McCormack (II)" "21 June 1930" "Chicago, Illinois, USA" .
+<actor> "Tommy McDonald" "26 July 1934" "Roy, New Mexico, USA" .
+<actor> "Donovan McNabb" "25 November 1976" "Chicago, Illinois, USA" .
+<actor> "Larry Merchant" "11 February 1931" "Brooklyn, New York, USA" .
+<actor> "Freddie Mitchell (II)" "28 November 1978" "Lakeland, Florida, USA" .
+<actor> "Wilbert Montgomery" "16 September 1954" "Greenville, Mississippi, USA" .
+<actor> "Jim Murray (XV)" " " "" .
+<actor> "Greasy Neale" "3 November 1891" "Parkersburg, West Virginia, USA" .
+<actor> "Davey O'Brien" "22 June 1917" "Dallas, Texas, USA" .
+<actor> "Vince Papale" "9 February 1946" "Chester, Pennsylvania, USA" .
+<actor> "Rodney Peete" "16 March 1966" "Mesa, Arizona, USA" .
+<actor> "Carl Peterson (II)" " " "" .
+<actor> "Pete Pihos" "22 October 1923" "Orlando, Florida, USA" .
+<actor> "Todd Pinkston" "23 April 1977" "Forest, Mississippi, USA" .
+<actor> "Joe Pisarcik" "2 July 1952" "Kingston, Pennsylvania, USA" .
+<actor> "Bosh Pritchard" "10 September 1919" "Windsor, North Carolina, USA" .
+<actor> "Mike Quick" "14 May 1959" "Hamlet, North Carolina, USA" .
+<actor> "Merrill Reese" "2 September 1942" "Philadelphia, Pennsylvania, USA" .
+<actor> "Andy Reid (IV)" "19 March 1958" "Los Angeles, California, USA" .
+<actor> "Edward Rendell" "5 January 1944" "New York City, New York, USA" .
+<actor> "Pete Retzlaff" "21 August 1931" "Ellendale, North Dakota, USA" .
+<actor> "Ray Rhodes" "20 October 1950" "Mexia, Texas, USA" .
+<actor> "Buddy Ryan" "17 February 1934" "Frederick, Oklahoma, USA" .
+<actor> "Byrum Saam" "11 September 1914" "Fort Worth, Texas, USA" .
+<actor> "John Sciarra" "2 March 1954" "Los Angeles, California, USA" .
+<actor> "Vic Sears (II)" "4 March 1918" "Ashwood, Oregon, USA" .
+<actor> "Buck Shaw (II)" "28 March 1899" "Mitchellville, Iowa, USA" .
+<actor> "Allie Sherman" "10 February 1923" "Brooklyn, New York, USA" .
+<actor> "Clyde Simmons" "4 August 1964" "Lanes, South Carolina, USA" .
+<actor> "Corey Simon (I)" "2 March 1977" "Boynton Beach, Florida, USA" .
+<actor> "Nick Skorich" "26 June 1921" "Bellaire, Ohio, USA" .
+<actor> "Bruce Smith (III)" "18 June 1963" "Norfolk, Virginia, USA" .
+<actor> "Emmitt Smith" "15 May 1969" "Pensacola, Florida, USA" .
+<actor> "John Spagnola (II)" " " "" .
+<actor> "Duce Staley" "27 February 1975" "Tampa, Florida, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bart Starr" "9 January 1934" "Montgomery, Alabama, USA" .
+<actor> "Ernie Stautner" "20 April 1925" "Prinzing-by-Cham, Bavaria, Germany" .
+<actor> "Pat Summerall" "10 May 1930" "Lake City, Florida, USA" .
+<actor> "Barry Switzer" "5 October 1937" "Crossett, Arkansas, USA" .
+<actor> "Paul Tagliabue" "24 November 1940" "Jersey City, New Jersey, USA" .
+<actor> "Bobby Taylor (IV)" "28 December 1973" "Houston, Texas, USA" .
+<actor> "Hollis Thomas" "10 January 1974" "Abilene, Texas, USA" .
+<actor> "William Thomas (II)" "13 August 1968" "Amarillo, Texas, USA" .
+<actor> "Tommy Thompson (XX)" "15 August 1916" "Hutchinson, Kansas, USA" .
+<actor> "James Thrash" "28 April 1975" "Denver, Colorado, USA" .
+<actor> "Leonard Tose" "6 March 1915" "Bridgeport, Pennsylvania, USA" .
+<actor> "Charles Trippi" "14 December 1922" "Pittston, Pennsylvania, USA" .
+<actor> "Jeremiah Trotter" "20 January 1977" "Hooks, Texas, USA" .
+<actor> "Norm Van Brocklin" "15 March 1926" "Eagle Butte, South Dakota, USA" .
+<actor> "Steve Van Buren" "28 December 1920" "La Ceiba, Honduras" .
+<actor> "Dick Vermeil" "30 October 1936" "Calistoga, California, USA" .
+<actor> "Michael Vick (I)" "26 June 1980" "Newport News, Virginia, USA" .
+<actor> "Troy Vincent (II)" "8 June 1971" "Trenton, New Jersey, USA" .
+<actor> "Bobby Walston" "17 October 1928" "Columbus, Ohio, USA" .
+<actor> "Stan Walters (I)" "27 May 1948" "Rutherford, New Jersey, USA" .
+<actor> "Ricky Watters (I)" "7 April 1969" "Harrisburg, Pennsylvania, USA" .
+<actor> "Brian Westbrook (I)" "2 September 1979" "Washington, District of Columbia, USA" .
+<actor> "Reggie White" "19 December 1961" "Chattanooga, Tennessee, USA" .
+<actor> "Barry Wilburn" "9 December 1963" "Memphis, Tennessee, USA" .
+<actor> "Ricky Williams (I)" "21 May 1977" "San Diego, California, USA" .
+<actor> "James Willis (III)" "2 September 1972" "Huntsville, Alabama, USA" .
+<actor> "Al Wistert" "28 December 1920" "Chicago, Illinois, USA" .
+<actor> "Lud Wray" "7 February 1894" "Philadelphia, Pennsylvania, USA" .
+<actor> "Charlie Young (II)" "5 February 1951" "Fresno, California, USA" .

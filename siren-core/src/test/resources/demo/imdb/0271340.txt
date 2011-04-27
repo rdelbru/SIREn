@@ -1,0 +1,87 @@
+title:The 50th Annual Academy Awards
+url:http://www.imdb.com/title/tt0271340/
+<title> "The 50th Annual Academy Awards" .
+<director> "Marty Pasetta" " " "" .
+<writer> "William Ludwig" "26 May 1912" "New York City, New York, USA" .
+<writer> "Leonard Spigelgass" "26 November 1908" "Brooklyn, New York, USA" .
+<actor> "Bob Hope (I)" "29 May 1903" "Eltham, London, England, UK" .
+<actor> "Fred Astaire" "10 May 1899" "Omaha, Nebraska, USA" .
+<actor> "Robert Blalack" "9 December 1948" "Canal Zone, Panama" .
+<actor> "Debby Boone" "22 September 1956" "Hackensack, New Jersey, USA" .
+<actor> "Margaret Booth" "14 January 1898" "Los Angeles, California, USA" .
+<actor> "Ernest Borgnine" "24 January 1917" "Hamden, Connecticut, USA" .
+<actor> "Marshall Brickman" "25 August 1941" "Rio de Janeiro, Brazil" .
+<actor> "Leslie Browne" "29 June 1957" "New York City, New York, USA" .
+<actor> "Garrett Brown (I)" " " "" .
+<actor> "Ben Burtt" "12 July 1948" "Jamesville, New York, USA" .
+<actor> "Michael Caine (I)" "14 March 1933" "Rotherhithe, London, England, UK" .
+<actor> "Paddy Chayefsky" "29 January 1923" "The Bronx, New York City, New York, USA" .
+<actor> "Richard Chew (I)" "28 June 1940" "Los Angeles, California, USA" .
+<actor> "Quinn Cummings" "13 August 1967" "Los Angeles, California, USA" .
+<actor> "Bette Davis" "5 April 1908" "Lowell, Massachusetts, USA" .
+<actor> "Sammy Davis Jr." "8 December 1925" "Harlem, New York, USA" .
+<actor> "Olivia de Havilland" "1 July 1916" "Tokyo, Japan" .
+<actor> "Melinda Dillon" "13 October 1939" "Hope, Arkansas, USA" .
+<actor> "Kirk Douglas (I)" "9 December 1916" "Amsterdam, New York, USA" .
+<actor> "Richard Dreyfuss" "29 October 1947" "Brooklyn, New York, USA" .
+<actor> "Richard Edlund" "6 December 1940" "Fargo, North Dakota, USA" .
+<actor> "Farrah Fawcett" "2 February 1947" "Corpus Christi, Texas, USA" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Joan Fontaine (I)" "22 October 1917" "Tokyo, Japan" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "Aretha Franklin" "25 March 1942" "Memphis, Tennessee, USA" .
+<actor> "Peggy Ann Garner" "3 February 1932" "Canton, Ohio, USA" .
+<actor> "Greer Garson" "29 September 1904" "London, England, UK" .
+<actor> "Janet Gaynor (I)" "6 October 1906" "Philadelphia, Pennsylvania, USA" .
+<actor> "Johnny Green (I)" "10 October 1908" "New York City, New York, USA" .
+<actor> "Mark Hamill (I)" "25 September 1951" "Concord, California, USA" .
+<actor> "Goldie Hawn" "21 November 1945" "Washington, District of Columbia, USA" .
+<actor> "Mary Ann Hay" " " "" .
+<actor> "Charlton Heston" "4 October 1923" "Evanston, Illinois, USA" .
+<actor> "Paul Hirsch (I)" "14 November 1945" "New York, USA" .
+<actor> "William Holden (I)" "17 April 1918" "O'Fallon, Illinois, USA" .
+<actor> "Burl Ives" "14 June 1909" "Hunt, Illinois, USA" .
+<actor> "Charles H. Joffe" "16 July 1929" "Brooklyn, New York, USA" .
+<actor> "John Jürgens" "20 February 1964" "Munich, Bavaria, Germany" .
+<actor> "Diane Keaton" "5 January 1946" "Los Angeles, California, USA" .
+<actor> "Stanley Kramer" "29 September 1913" "Brooklyn, New York City, New York, USA" .
+<actor> "Gloria Loring" "12 December 1946" "New York City, New York, USA" .
+<actor> "Marcia Lucas" " 1945" "" .
+<actor> "Don MacDougall" " " "" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Dorothy Malone" "30 January 1925" "Chicago, Illinois, USA" .
+<actor> "Henry Mancini" "16 April 1924" "Cleveland, Ohio, USA" .
+<actor> "Marsha Mason" "3 April 1942" "St. Louis, Missouri, USA" .
+<actor> "Marcello Mastroianni" "28 September 1924" "Fontana Liri, Latium, Italy" .
+<actor> "Walter Matthau" "1 October 1920" "New York City, New York, USA" .
+<actor> "Grant McCune" " " "" .
+<actor> "Bob Minkler" " " "" .
+<actor> "Walter Mirisch" "8 November 1921" "New York City, New York, USA" .
+<actor> "Olivia Newton-John" "26 September 1948" "Cambridge, Cambridgeshire, England, UK" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Margaret O'Brien (I)" "15 January 1937" "San Diego, California, USA" .
+<actor> "Jane Powell (I)" "1 April 1929" "Portland, Oregon, USA" .
+<actor> "Vanessa Redgrave" "30 January 1937" "London, England, UK" .
+<actor> "Debbie Reynolds (I)" "1 April 1932" "El Paso, Texas, USA" .
+<actor> "Eva Marie Saint" "4 July 1924" "Newark, New Jersey, USA" .
+<actor> "Alvin Sargent" "12 April 1927" "Philadelphia, Pennsylvania, USA" .
+<actor> "Maximilian Schell" "8 December 1930" "Vienna, Austria" .
+<actor> "Maggie Smith (I)" "28 December 1934" "Ilford, Essex, England, UK" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Barbara Stanwyck" "16 July 1907" "Brooklyn, New York, USA" .
+<actor> "John Stears" "25 August 1934" "Uxbridge, Hillingdon, Middlesex, England, UK" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Cicely Tyson" "19 December 1933" "New York City, New York, USA" .
+<actor> "Jack Valenti" "5 September 1921" "Houston, Texas, USA" .
+<actor> "King Vidor" "8 February 1894" "Galveston, Texas, USA" .
+<actor> "Jon Voight" "29 December 1938" "Yonkers, New York, USA" .
+<actor> "Robert Wagner (I)" "10 February 1930" "Detroit, Michigan, USA" .
+<actor> "Raquel Welch" "5 September 1940" "Chicago, Illinois, USA" .
+<actor> "Tuesday Weld" "27 August 1943" "New York City, New York, USA" .
+<actor> "Ray West (I)" " " "" .
+<actor> "Billy Dee Williams" "6 April 1937" "New York City, New York, USA" .
+<actor> "Paul Williams (III)" "19 September 1940" "Bennington, Nebraska, USA" .
+<actor> "Henry Winkler" "30 October 1945" "New York City, New York, USA" .
+<actor> "Natalie Wood (I)" "20 July 1938" "San Francisco, California, USA" .
+<actor> "Smith Wordes" " " "" .
+<actor> "Vilmos Zsigmond" "16 June 1930" "Szeged, Hungary" .

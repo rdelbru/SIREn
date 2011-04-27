@@ -1,0 +1,20 @@
+title:The Prisoner of Second Avenue
+url:http://www.imdb.com/title/tt0072034/
+<title> "The Prisoner of Second Avenue" .
+<director> "Melvin Frank" "13 August 1913" "Chicago, Illinois, USA" .
+<writer> "Neil Simon (I)" "4 July 1927" "The Bronx, New York, USA" .
+<writer> "Neil Simon (I)" "4 July 1927" "The Bronx, New York, USA" .
+<actor> "Anne Bancroft (I)" "17 September 1931" "The Bronx, New York, USA" .
+<actor> "Gene Saks" "8 November 1921" "New York City, New York, USA" .
+<actor> "Elizabeth Wilson (I)" "4 April 1921" "Grand Rapids, Michigan, USA" .
+<actor> "Florence Stanley" "1 July 1924" "Chicago, Illinois, USA" .
+<actor> "Maxine Stuart" "28 June 1918" "Deal, New Jersey, USA" .
+<actor> "Ed Peck" "26 March 1917" "New York, USA" .
+<actor> "Gene Blakely" "8 June 1922" "Osceola, Nebraska, USA" .
+<actor> "Ivor Francis" "26 October 1918" "Toronto, Ontario, Canada" .
+<actor> "Stack Pierce" " " "" .
+<actor> "Patricia Marshall (I)" " " "Minneapolis, Minnesota, USA" .
+<actor> "Dee Carroll" "2 December 1925" "Colorado, USA" .
+<actor> "Ketty Lester" "16 August 1938" "Hope, Arkansas, USA" .
+<actor> "M. Emmet Walsh" "22 March 1935" "Ogdensburg, New York, USA" .
+<actor> "F. Murray Abraham" "24 October 1939" "Pittsburgh, Pennsylvania, USA" .

@@ -1,0 +1,21 @@
+title:Rambo: First Blood Part II
+url:http://www.imdb.com/title/tt0089880/
+<title> "Rambo: First Blood Part II" .
+<director> "George P. Cosmatos" "4 January 1941" "Florence, Tuscany, Italy" .
+<writer> "David Morrell (I)" "24 April 1943" "Kitchener, Ontario, Canada" .
+<writer> "Kevin Jarre" " 1954" "Detroit, Michigan, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Charles Napier" "12 April 1936" "Scottsville, Kentucky, USA" .
+<actor> "Steven Berkoff" "3 August 1937" "London, England, UK" .
+<actor> "Julia Nickson-Soul" "11 September 1958" "Singapore" .
+<actor> "Martin Kove" "6 March 1946" "Brooklyn, New York, USA" .
+<actor> "George Cheung" " " "" .
+<actor> "Andy Wood (II)" " " "" .
+<actor> "William Ghent" " " "" .
+<actor> "Voyo Goric" " 1940" "Gacko, Bosnia & Herzegovina, Yugoslavia" .
+<actor> "Dana Lee (I)" " " "" .
+<actor> "Baoan Coleman" " " "" .
+<actor> "Steve Williams (XXII)" " " "" .
+<actor> "Don Collins (I)" " " "" .
+<actor> "Christopher Grant (I)" " " "" .

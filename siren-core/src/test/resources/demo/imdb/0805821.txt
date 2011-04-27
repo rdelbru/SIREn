@@ -1,0 +1,21 @@
+title:Episode dated 21 September 1994
+url:http://www.imdb.com/title/tt0805821/
+<title> ""Dateline NBC" Episode dated 21 September 1994" .
+<actor> "Jane Pauley" "31 October 1950" "Indianapolis, Indiana, USA" .
+<actor> "Stone Phillips" "2 December 1954" "Texas City, Texas, USA" .
+<actor> "Tom Brokaw" "6 February 1940" "Webster, South Dakota, USA" .
+<actor> "Mary Chapin Carpenter" "21 February 1958" "Princeton, New Jersey, USA" .
+<actor> "Bill Clinton (I)" "19 August 1946" "Hope, Arkansas, USA" .
+<actor> "Dabney Coleman" "3 January 1932" "Austin, Texas, USA" .
+<actor> "Billy Ray Cyrus" "25 August 1961" "Flatwoods, Kentucky, USA" .
+<actor> "Carl Dean" " " "" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Whitney Houston" "9 August 1963" "Newark, New Jersey, USA" .
+<actor> "Kathy Mattea" "21 June 1959" "South Charleston, West Virginia, USA" .
+<actor> "Judy Ogle" " " "" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Burt Reynolds (I)" "11 February 1936" "Waycross, Georgia, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Lily Tomlin" "1 September 1939" "Detroit, Michigan, USA" .
+<actor> "Tanya Tucker" "10 October 1958" "Seminole, Texas, USA" .
+<actor> "Porter Wagoner" "12 August 1927" "West Plains, Missouri, USA" .

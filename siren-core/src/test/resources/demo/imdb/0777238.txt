@@ -1,0 +1,12 @@
+title:Father Lefty
+url:http://www.imdb.com/title/tt0777238/
+<title> "Father Lefty" .
+<director> "Kevin Rodney Sullivan" "3 August 1958" "USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Danny Nucci" "15 September 1968" "Klagenfurt, Carinthia, Austria" .
+<actor> "Marina Benedict" " " "" .
+<actor> "Viola Davis (I)" "11 August 1965" "Saint Matthews, South Carolina, USA" .
+<actor> "Frank Gallegos" "3 August 1970" "Los Angeles, California, USA" .
+<actor> "Matt Gallini" "15 February 1966" "Miami, Florida, USA" .
+<actor> "David Hewlett" "18 April 1968" "Redhill, Surrey, England, UK" .
+<actor> "Shazia" "17 July ????" "New Delhi, India" .

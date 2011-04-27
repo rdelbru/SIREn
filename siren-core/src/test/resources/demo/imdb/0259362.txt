@@ -1,0 +1,24 @@
+title:In the Shadow of Hollywood
+url:http://www.imdb.com/title/tt0259362/
+<title> "In the Shadow of Hollywood" .
+<director> "Sylvie Groulx" " " "" .
+<writer> "Laurent Gagliardi" "18 October 1948" "Montréal, Québec, Canada" .
+<writer> "Sylvie Groulx" " " "" .
+<actor> "Élise Bertrand" " " "" .
+<actor> "Denys Arcand" "25 June 1941" "Deschambault, Québec, Canada" .
+<actor> "Anne-Marie Bidaud" " " "" .
+<actor> "Luciana Castellina" " " "" .
+<actor> "Milos Forman" "18 February 1932" "Cáslav, Czechoslovakia [now Czech Republic]" .
+<actor> "Claude Fournier (I)" "23 July 1931" "Waterloo, Quebec, Canada" .
+<actor> "Agnieszka Holland" "28 November 1948" "Warsaw, Poland" .
+<actor> "Marin Karmitz" "7 October 1938" "Bucharest, Romania" .
+<actor> "Todd McCarthy (I)" " " "" .
+<actor> "Jonathan Nossiter" "12 November 1961" "Washington, District of Columbia, USA" .
+<actor> "Arthur Penn (I)" "27 September 1922" "Philadelphia, Pennsylvania, USA" .
+<actor> "Jean Charles Tacchella" "23 September 1925" "Cherbourg, Manche, Haute-Normandie, France" .
+<actor> "Alain Tanner" "6 December 1929" "Geneva, Geneva, Switzerland" .
+<actor> "Bertrand Tavernier" "25 April 1941" "Lyon, Rhône, France" .
+<actor> "Daniel Toscan du Plantier" "7 April 1941" "Chambéry, Savoie, France" .
+<actor> "Margarethe von Trotta" "21 February 1942" "Berlin, Germany" .
+<actor> "Andrzej Wajda" "6 March 1926" "Suwalki, Poland" .
+<actor> "Irwin Winkler" "25 May 1931" "New York City, New York, USA" .

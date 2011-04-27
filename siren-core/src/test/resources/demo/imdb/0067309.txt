@@ -1,0 +1,21 @@
+title:Klute
+url:http://www.imdb.com/title/tt0067309/
+<title> "Klute" .
+<director> "Alan J. Pakula" "7 April 1928" "The Bronx, New York City, New York, USA" .
+<writer> "Andy Lewis (I)" " " "" .
+<writer> "David P. Lewis (III)" "12 March 1909" "Illinois, USA" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Donald Sutherland (I)" "17 July 1935" "Saint John, New Brunswick, Canada" .
+<actor> "Charles Cioffi" "31 October 1935" "New York City, New York, USA" .
+<actor> "Roy Scheider" "10 November 1932" "Orange, New Jersey, USA" .
+<actor> "Dorothy Tristan" "1 January 1942" "Yorkville Heights, New York City, New York, USA" .
+<actor> "Rita Gam" "2 April 1928" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Nathan George" " " "" .
+<actor> "Vivian Nathan" "26 October 1921" "Philadelphia, Pennsylvania, USA" .
+<actor> "Morris Strassberg (II)" " " "" .
+<actor> "Barry Snider" " " "Salinas, California, USA" .
+<actor> "Betty Murray" " " "" .
+<actor> "Jane White (I)" "30 October 1922" "New York City, New York, USA" .
+<actor> "Shirley Stoler" "30 March 1929" "Brooklyn, New York, USA" .
+<actor> "Robert Milli" "15 March 1933" "Brooklyn, New York, USA" .
+<actor> "Anthony Holland (I)" "3 March 1928" "Brooklyn, New York, USA" .

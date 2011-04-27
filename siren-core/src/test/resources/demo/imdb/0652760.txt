@@ -1,0 +1,17 @@
+title:Show nº 41
+url:http://www.imdb.com/title/tt0652760/
+<title> ""Mundo VIP" Show nº 41" .
+<director> "Manuel Tomás" " " "" .
+<writer> "Felipa Garnel" "11 November 1964" "Lisbon, Portugal" .
+<writer> "Miguel Monteiro" "17 May 1965" "Lisbon, Portugal" .
+<actor> "Pedro Abrunhosa" "20 December 1960" "Oporto, Portugal" .
+<actor> "Carlos Dias da Silva" "29 November 1965" "Lisbon, Portugal" .
+<actor> "Catarina Furtado" "25 August 1972" "Lisbon, Portugal" .
+<actor> "Felipa Garnel" "11 November 1964" "Lisbon, Portugal" .
+<actor> "Teresa Guilherme" "27 June 1955" "Lisbon, Portugal" .
+<actor> "Ron Howard (I)" "1 March 1954" "Duncan, Oklahoma, USA" .
+<actor> "Alexandra Lencastre" "26 September 1965" "Lisboa, Portugal" .
+<actor> "Margarida Pinto Correia" "30 April 1966" "Lisbon, Portugal" .
+<actor> "Gary Sinise" "17 March 1955" "Blue Island, Illinois, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Carlos Vereza" "4 March 1939" "Rio de Janeiro, Rio de Janeiro, Brazil" .

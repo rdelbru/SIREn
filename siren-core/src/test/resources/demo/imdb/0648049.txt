@@ -1,0 +1,5 @@
+title:Episode dated 1 September 1977
+url:http://www.imdb.com/title/tt0648049/
+<title> ""The Mike Douglas Show" Episode dated 1 September 1977" .
+<actor> "Frank Stallone (I)" "30 July 1950" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

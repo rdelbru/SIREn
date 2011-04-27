@@ -1,0 +1,4 @@
+title:"Celebrity Profile"
+url:http://www.imdb.com/title/tt0294064/
+<title> ""Celebrity Profile"" .
+<writer> "Curt Johnson (I)" <birthDate> "15 June 1968" <birthPlace> "" .

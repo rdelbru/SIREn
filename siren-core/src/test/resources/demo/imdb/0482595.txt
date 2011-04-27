@@ -1,0 +1,31 @@
+title:The Secret World of 'Antz'
+url:http://www.imdb.com/title/tt0482595/
+<title> "The Secret World of 'Antz'" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Woody Allen" "1 December 1935" "Brooklyn, New York, USA" .
+<actor> "Dan Aykroyd" "1 July 1952" "Ottawa, Ontario, Canada" .
+<actor> "Anne Bancroft (I)" "17 September 1931" "The Bronx, New York, USA" .
+<actor> "John Bell (I)" " " "" .
+<actor> "Randy Cartwright" "31 October 1951" "" .
+<actor> "Joseph Cossman" " " "" .
+<actor> "Kendal Cronkhite" " " "" .
+<actor> "Jean M. Cunningham" " " "" .
+<actor> "Jane Curtin" "6 September 1947" "Cambridge, Massachusetts, USA" .
+<actor> "Eric Darnell (I)" " " "" .
+<actor> "Danny Glover" "22 July 1946" "San Francisco, California, USA" .
+<actor> "Rex Grignon" "11 June 1962" "Ajax, Ontario, Canada" .
+<actor> "Gene Hackman" "30 January 1930" "San Bernardino, California, USA" .
+<actor> "Beth Hufer" " " "" .
+<actor> "Raman Hui" " " "" .
+<actor> "Tim Johnson (V)" " " "" .
+<actor> "Brad Lewis (I)" " " "" .
+<actor> "Jennifer Lopez (I)" "24 July 1969" "The Bronx, New York, USA" .
+<actor> "Raymond A. Mendez" " " "" .
+<actor> "Janet Rentel" " " "" .
+<actor> "Grant Shaud" "27 February 1961" "Evanston, Illinois, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Howard Topoff" " " "" .
+<actor> "Christopher Walken" "31 March 1943" "Queens, New York, USA" .
+<actor> "Paul Wang (I)" " " "" .
+<actor> "Aron Warner" " " "" .
+<actor> "Patty Wooton" " " "" .

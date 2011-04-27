@@ -1,0 +1,6 @@
+title:Episode dated 7 October 1994
+url:http://www.imdb.com/title/tt0633485/
+<title> ""Live with Regis and Kathie Lee" Episode dated 7 October 1994" .
+<actor> "Kathie Lee Gifford" "16 August 1953" "Paris, France" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bobby Waldron" " " "" .

@@ -1,0 +1,21 @@
+title:Nighthawks
+url:http://www.imdb.com/title/tt0082817/
+<title> "Nighthawks" .
+<director> "Bruce Malmuth" "4 February 1934" "Brooklyn, New York, USA" .
+<writer> "David Shaber" " " "Cleveland, Ohio, USA" .
+<writer> "Paul Sylbert" "16 April 1928" "Brooklyn, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Billy Dee Williams" "6 April 1937" "New York City, New York, USA" .
+<actor> "Lindsay Wagner (I)" "22 June 1949" "Los Angeles, California, USA" .
+<actor> "Persis Khambatta" "2 October 1950" "Bombay, Maharashtra, India" .
+<actor> "Nigel Davenport" "23 May 1928" "Shelford, Cambridge, Cambridgeshire, England, UK" .
+<actor> "Rutger Hauer" "23 January 1944" "Breukelen, Utrecht, Netherlands" .
+<actor> "Hilary Thompson" "2 March 1949" "Birmingham, Michigan, USA" .
+<actor> "Joe Spinell" "28 October 1936" "New York City, New York, USA" .
+<actor> "Walter Mathews" "10 October 1926" "New York City, New York, USA" .
+<actor> "E. Brian Dean" " " "" .
+<actor> "Caesar Cordova" "16 May 1936" "San Juan, Puerto Rico" .
+<actor> "Charles Duval" " " "" .
+<actor> "Tony Munafo" " " "" .
+<actor> "Howard Stein" " " "" .
+<actor> "Tawn Christian" " " "" .

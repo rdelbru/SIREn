@@ -1,0 +1,19 @@
+title:Sex at 24 Frames Per Second
+url:http://www.imdb.com/title/tt0383630/
+<title> "Sex at 24 Frames Per Second" .
+<writer> "Steven Smith (VIII)" " " "" .
+<actor> "Brandy Snow" " " "" .
+<actor> "Shannon Tweed" "10 March 1957" "St. John's, Newfoundland, Canada" .
+<actor> "Richard Roeper" "17 October 1959" "Chicago, Illinois, USA" .
+<actor> "Paul Verhoeven (I)" "18 July 1938" "Amsterdam, Noord-Holland, Netherlands" .
+<actor> "Virginia Campbell (VI)" " " "" .
+<actor> "Jerry Offsay" " " "" .
+<actor> "James Petersen (I)" " " "" .
+<actor> "Mark Vieira (I)" "28 October 1950" "Oakland, California, USA" .
+<actor> "Cecil B. DeMille" "12 August 1881" "Ashfield, Massachusetts, USA" .
+<actor> "Raquel Welch" "5 September 1940" "Chicago, Illinois, USA" .
+<actor> "Hugh M. Hefner" "9 April 1926" "Chicago, Illinois, USA" .
+<actor> "Rex Reed" "2 October 1938" "Fort Worth, Texas, USA" .
+<actor> "Gerald Gardner (II)" " " "" .
+<actor> "Will H. Hays" "5 November 1879" "Sullivan, Indiana, USA" .
+<actor> "Howard Hughes (I)" "24 September 1905" "Humble, Texas, USA" .

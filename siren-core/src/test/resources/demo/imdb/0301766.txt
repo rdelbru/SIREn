@@ -1,0 +1,7 @@
+title:Rambo III
+url:http://www.imdb.com/title/tt0301766/
+<title> "Rambo III" .
+<writer> "David Morrell (I)" "24 April 1943" "Kitchener, Ontario, Canada" .
+<actor> "Rutger Hauer" "23 January 1944" "Breukelen, Utrecht, Netherlands" .
+<actor> "Kurtwood Smith" "3 July 1943" "New Lisbon, Wisconsin, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

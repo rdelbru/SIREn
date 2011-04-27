@@ -1,0 +1,115 @@
+title:The 67th Annual Academy Awards
+url:http://www.imdb.com/title/tt0268875/
+<title> "The 67th Annual Academy Awards" .
+<director> "Jeff Margolis (I)" " " "" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Jon Beckerman" " " "" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "Tim Allen (I)" "13 June 1953" "Denver, Colorado, USA" .
+<actor> "Woody Allen" "1 December 1935" "Brooklyn, New York, USA" .
+<actor> "Michelangelo Antonioni" "29 September 1912" "Ferrara, Emilia-Romagna, Italy" .
+<actor> "Roger Avary" "23 August 1965" "Flin Flon, Manitoba, Canada" .
+<actor> "Ellen Barkin" "16 April 1954" "New York City, New York, USA" .
+<actor> "Angela Bassett" "16 August 1958" "New York City, New York, USA" .
+<actor> "Hinton Battle" "29 November 1956" "Neubrücke, Germany" .
+<actor> "Noah Beery Jr." "10 August 1913" "New York City, New York, USA" .
+<actor> "Annette Bening" "29 May 1958" "Topeka, Kansas, USA" .
+<actor> "Robert Bolt" "15 August 1924" "Sale, Cheshire, England, UK" .
+<actor> "Cab Calloway" "25 December 1907" "Rochester, New York, USA" .
+<actor> "Macdonald Carey" "15 March 1913" "Sioux City, Iowa, USA" .
+<actor> "Tim Chappel" " 1967" "New South Wales, Australia" .
+<actor> "Tim Curry (I)" "19 April 1946" "Grappenhall, Cheshire, England, UK" .
+<actor> "Jamie Lee Curtis" "22 November 1958" "Los Angeles, California, USA" .
+<actor> "Peter Cushing" "26 May 1913" "Kenley, Surrey, England, UK" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Matt Dillon (I)" "18 February 1964" "New Rochelle, New York, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Tom Ewell" "29 April 1909" "Owensboro, Kentucky, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "Wendy Finerman" "2 August 1961" "California, USA" .
+<actor> "George Fisher (VI)" " " "" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "Lizzy Gardiner" " 1966" "Australia" .
+<actor> "Hugh Grant (I)" "9 September 1960" "London, England, UK" .
+<actor> "David Alan Grier" "30 June 1955" "Detroit, Michigan, USA" .
+<actor> "Tom Hanks" "9 July 1956" "Concord, California, USA" .
+<actor> "Nigel Hawthorne" "5 April 1929" "Coventry, Warwickshire, England, UK" .
+<actor> "Arthur Hiller" "22 November 1923" "Edmonton, Alberta, Canada" .
+<actor> "Anthony Hopkins" "31 December 1937" "Margam, Port Talbot, West Glamorgan, Wales, UK" .
+<actor> "Tara Nicole Hughes" " " "" .
+<actor> "Holly Hunter" "20 March 1958" "Conyers, Georgia, USA" .
+<actor> "Jeremy Irons" "19 September 1948" "Cowes, Isle of Wight, England, UK" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "Elton John" "25 March 1947" "Pinner, Greater London, England, UK" .
+<actor> "Quincy Jones" "14 March 1933" "Chicago, Illinois, USA" .
+<actor> "Tommy Lee Jones" "15 September 1946" "San Saba, Texas, USA" .
+<actor> "Raul Julia (I)" "9 March 1940" "San Juan, Puerto Rico" .
+<actor> "Krzysztof Kieslowski" "27 June 1941" "Warsaw, Poland" .
+<actor> "Arthur Krim" "4 April 1910" "USA" .
+<actor> "Burt Lancaster" "2 November 1913" "New York City, New York, USA" .
+<actor> "Martin Landau" "20 June 1931" "Brooklyn, New York, USA" .
+<actor> "Jessica Lange" "20 April 1949" "Cloquet, Minnesota, USA" .
+<actor> "Henry Mancini" "16 April 1924" "Cleveland, Ohio, USA" .
+<actor> "Steve Martin (I)" "14 August 1945" "Waco, Texas, USA" .
+<actor> "Giulietta Masina" "22 February 1921" "San Giorgio di Piano, Bologna, Italy" .
+<actor> "Helen Mirren" "26 July 1945" "Chiswick, London, England, UK" .
+<actor> "Cameron Mitchell (I)" "4 November 1918" "Dallastown, Pennsylvania, USA" .
+<actor> "Freida Lee Mock" " " "" .
+<actor> "Kathy Najimy" "6 February 1957" "San Diego, California, USA" .
+<actor> "Mildred Natwick" "19 June 1905" "Baltimore, Maryland, USA" .
+<actor> "Paul Newman (I)" "26 January 1925" "Shaker Heights, Ohio, USA" .
+<actor> "Randy Newman (I)" "28 November 1943" "New Orleans, Louisiana, USA" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Julia Ormond" "4 January 1965" "Epsom, Surrey, England, UK" .
+<actor> "Al Pacino" "25 April 1940" "New York City, New York, USA" .
+<actor> "Anna Paquin" "24 July 1982" "Winnipeg, Manitoba, Canada" .
+<actor> "Sarah Jessica Parker" "25 March 1965" "Nelsonville, Ohio, USA" .
+<actor> "Gregory Peck" "5 April 1916" "La Jolla, California, USA" .
+<actor> "George Peppard" "1 October 1928" "Detroit, Michigan, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Donald Pleasence" "5 October 1919" "Worksop, Nottinghamshire, England, UK" .
+<actor> "Kelly Preston" "13 October 1962" "Honolulu, Hawaii, USA" .
+<actor> "Martha Raye" "27 August 1916" "Butte, Montana, USA" .
+<actor> "Robert Redford (I)" "18 August 1936" "Santa Monica, California, USA" .
+<actor> "Keanu Reeves" "2 September 1964" "Beirut, Lebanon" .
+<actor> "Fernando Rey (I)" "20 September 1917" "A Coruña, Galicia, Spain" .
+<actor> "Miranda Richardson (I)" "3 March 1958" "Southport, Lancashire, England, UK" .
+<actor> "Tim Robbins (I)" "16 October 1958" "West Covina, California, USA" .
+<actor> "Gilbert Roland (I)" "11 December 1905" "Juárez, Chihuahua, Mexico" .
+<actor> "Stephen Rosenbaum" "26 October 1965" "Tacoma, Washington, USA" .
+<actor> "Eric Roth (I)" "22 March 1945" "New York City, New York, USA" .
+<actor> "Rene Russo" "17 February 1954" "Burbank, California, USA" .
+<actor> "Winona Ryder" "29 October 1971" "Winona, Minnesota, USA" .
+<actor> "Ernie Sabella" "19 September 1949" "Westchester, New York, USA" .
+<actor> "Terry Sanders (I)" "20 December 1931" "New York City, New York, USA" .
+<actor> "Susan Sarandon" "4 October 1946" "New York City, New York, USA" .
+<actor> "Arthur Schmidt (I)" " " "" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Gary Sinise" "17 March 1955" "Blue Island, Illinois, USA" .
+<actor> "Patty Smyth" "26 June 1957" "New York City, New York, USA" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Steve Starkey" " " "" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Woody Strode" "25 July 1914" "Los Angeles, California, USA" .
+<actor> "Jule Styne" "31 December 1905" "London, England, UK" .
+<actor> "Barry Sullivan" "29 August 1912" "New York City, New York, USA" .
+<actor> "Jessica Tandy" "7 June 1909" "London, England, UK" .
+<actor> "Quentin Tarantino" "27 March 1963" "Knoxville, Tennessee, USA" .
+<actor> "Uma Thurman" "29 April 1970" "Boston, Massachusetts, USA" .
+<actor> "Jennifer Tilly" "16 September 1958" "Harbor City, California, USA" .
+<actor> "Steve Tisch" " 1949" "Lakewood, New Jersey, USA" .
+<actor> "John Toll" " " "Cleveland, Ohio, USA" .
+<actor> "Mary Ellen Trainor" "8 July 1950" "Chicago, Illinois, USA" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Paul Vlahos" " " "" .
+<actor> "Petro Vlahos" " " "" .
+<actor> "Denzel Washington" "28 December 1954" "Mount Vernon, New York, USA" .
+<actor> "David Wayne (I)" "30 January 1914" "Traverse City, Michigan, USA" .
+<actor> "Sigourney Weaver" "8 October 1949" "New York City, New York, USA" .
+<actor> "Dianne Wiest" "28 March 1948" "Kansas City, Missouri, USA" .
+<actor> "Mara Wilson" "24 July 1987" "Los Angeles, California, USA" .
+<actor> "Oprah Winfrey" "29 January 1954" "Kosciusko, Mississippi, USA" .
+<actor> "Terence Young" "20 June 1915" "Shanghai, China" .
+<actor> "Robert Zemeckis" "14 May 1951" "Chicago, Illinois, USA" .
+<actor> "Hans Zimmer" "12 September 1957" "Frankfurt/Main, Germany" .

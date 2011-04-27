@@ -1,0 +1,20 @@
+title:Shade
+url:http://www.imdb.com/title/tt0323939/
+<title> "Shade" .
+<director> "Damian Nieman" " " "Los Osos, California, USA" .
+<writer> "Damian Nieman" " " "Los Osos, California, USA" .
+<actor> "Joe Nicolo" "21 August 1955" "" .
+<actor> "Carl Mazzocone Sr." "1 January 1930" "Philadelphia, Pennsylvania, USA" .
+<actor> "George Tovar" " " "Culver City, California, USA" .
+<actor> "Frank Medrano" "9 April 1954" "Brooklyn, New York, USA" .
+<actor> "Jason Cerbone" "2 November 1977" "New York City, New York, USA" .
+<actor> "Mark De Alessandro" " " "" .
+<actor> "Doc Duhame" " " "" .
+<actor> "Shane T. Anderson" " " "" .
+<actor> "Thandie Newton" "6 November 1972" "London, England, UK" .
+<actor> "Glenn Plummer" "18 August 1961" "Richmond, California, USA" .
+<actor> "Gabriel Byrne" "12 May 1950" "Dublin, Ireland" .
+<actor> "Mick Rossi (I)" " " "" .
+<actor> "Sean Stanek" " " "" .
+<actor> "Holly Catarancuic" " " "" .
+<actor> "Carl Mazzocone" "20 October 1958" "Bryn Mawr, Pennsylvania, USA" .

@@ -1,0 +1,10 @@
+title:Rocky Legends
+url:http://www.imdb.com/title/tt0306021/
+<title> "Rocky Legends" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Jay Benedict (I)" " 1951" "Burbank, California, USA" .
+<actor> "John Chancer" " " "" .
+<actor> "Tom Clarke Hill" " " "" .
+<actor> "Eric Meyers (II)" " " "" .
+<actor> "Stuart Milligan" "10 September 1953" "Boston, Massachusetts, USA" .
+<actor> "William Roberts (V)" " " "" .

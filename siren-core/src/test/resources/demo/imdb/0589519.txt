@@ -1,0 +1,7 @@
+title:Episode dated 6 December 2003
+url:http://www.imdb.com/title/tt0589519/
+<title> ""God kveld Norge" Episode dated 6 December 2003" .
+<actor> "Dorthe Skappel" "18 December 1962" "Norway" .
+<actor> "Ingvar Ambjørnsen" "20 May 1956" "Larvik, Norway" .
+<actor> "Vegard Besstun Normann" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

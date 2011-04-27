@@ -1,0 +1,40 @@
+title:The Muppets: A Celebration of 30 Years
+url:http://www.imdb.com/title/tt0323321/
+<title> "The Muppets: A Celebration of 30 Years" .
+<director> "Peter Harris (I)" " " "" .
+<writer> "Jerry Juhl" "27 July 1938" "St. Paul, Minnesota, USA" .
+<actor> "Jim Henson (I)" "24 September 1936" "Greenville, Mississippi, USA" .
+<actor> "Frank Oz" "25 May 1944" "Hereford, England, UK" .
+<actor> "Dave Goelz" "16 July 1946" "Los Angeles, California, USA" .
+<actor> "Jerry Nelson (I)" "10 July 1934" "Tulsa, Oklahoma, USA" .
+<actor> "Richard Hunt (I)" "16 August 1951" "Bronx, New York, USA" .
+<actor> "Steve Whitmire" "24 September 1959" "Atlanta, Georgia, USA" .
+<actor> "Terry Angus" "5 July 1962" "" .
+<actor> "Caroll Spinney" "26 December 1933" "Waltham, Massachusetts, USA" .
+<actor> "Julie Andrews (I)" "1 October 1935" "Walton-on-Thames, Surrey, England, UK" .
+<actor> "Harry Belafonte" "1 March 1927" "New York City, New York, USA" .
+<actor> "Carol Burnett" "26 April 1933" "San Antonio, Texas, USA" .
+<actor> "George Burns" "20 January 1896" "New York City, New York, USA" .
+<actor> "Ray Charles (I)" "23 September 1930" "Albany, Georgia, USA" .
+<actor> "Cher (I)" "20 May 1946" "El Centro, California, USA" .
+<actor> "James Coburn (I)" "31 August 1928" "Laurel, Nebraska, USA" .
+<actor> "Jimmy Dean (I)" "10 August 1928" "Plainview, Texas, USA" .
+<actor> "John Denver" "31 December 1943" "Roswell, New Mexico, USA" .
+<actor> "Michael Earl (I)" "10 September 1959" "Oakland, California, USA" .
+<actor> "Louise Gold" " 1956" "London, England, UK" .
+<actor> "Elton John" "25 March 1947" "Pinner, Greater London, England, UK" .
+<actor> "Gene Kelly (I)" "23 August 1912" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Steve Martin (I)" "14 August 1945" "Waco, Texas, USA" .
+<actor> "Ed McMahon (I)" "6 March 1923" "Detroit, Michigan, USA" .
+<actor> "Ethel Merman" "16 January 1908" "Astoria, New York, USA" .
+<actor> "Rita Moreno (I)" "11 December 1931" "Humacao, Puerto Rico" .
+<actor> "Zero Mostel" "28 February 1915" "Brooklyn, New York, USA" .
+<actor> "Martin P. Robinson" "9 March 1954" "Dearborn, Michigan, USA" .
+<actor> "Linda Ronstadt" "15 July 1946" "Tucson, Arizona, USA" .
+<actor> "Diana Ross (I)" "26 March 1944" "Detroit, Michigan, USA" .
+<actor> "Brooke Shields" "31 May 1965" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ed Sullivan (I)" "28 September 1901" "New York City, New York, USA" .
+<actor> "Lily Tomlin" "1 September 1939" "Detroit, Michigan, USA" .
+<actor> "Ben Vereen" "10 October 1946" "Dade County, Florida, USA" .
+<actor> "Orson Welles" "6 May 1915" "Kenosha, Wisconsin, USA" .

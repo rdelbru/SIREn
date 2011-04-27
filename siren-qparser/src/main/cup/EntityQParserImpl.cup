@@ -1,0 +1,246 @@
+/**
+ * Copyright 2010, Renaud Delbru
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/**
+ * @project solr-plugins
+ * @author Renaud Delbru [ 7 Sep 2010 ]
+ * @link http://renaud.delbru.fr/
+ * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
+ */
+package org.sindice.siren.qparser.entity; 
+   
+/* ----------------------Preliminary Declarations Section--------------------*/
+   
+/* Import the class java_cup.runtime.*  */
+import java_cup.runtime.*;
+
+/* Import IOException, used when parser errors occur */
+import java.io.IOException;
+
+/* Import the AST classes */
+import org.sindice.siren.qparser.entity.query.model.*;
+
+/* Import Logback Logger */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+   
+/* Parser code to change the way the parser reports errors (include
+   line and column number of the error). */
+parser code {:
+
+		private static final
+		Logger logger = LoggerFactory.getLogger(EntityQParserImpl.class);
+    
+    /* Change the method report_error so it will display the line and
+       column of where the error occurred in the input as well as the
+       reason for the error which is passed into the method in the
+       String 'message'. */
+    public void report_error(String message, Object info) {
+      if (info instanceof Symbol) {
+      	 String[] params = {message, 
+      	                    Integer.toString(((Symbol) info).left+1),
+      	                    Integer.toString(((Symbol) info).right+1)};
+         logger.error("{} : Error in line {}, column {}", params);
+      } else
+         logger.error("{} : {}", message, cur_token);
+    }
+   
+    /* Change the method report_fatal_error so when it reports a fatal
+       error it will display the line and column number of where the
+       fatal error occurred in the input as well as the reason for the
+       fatal error which is passed into the method in the object
+       'message' and then exit.*/
+    public void report_fatal_error(String message, Object info) throws IOException {
+      done_parsing();
+      report_error(message, info);
+      throw new IOException(message);
+    }
+:};
+
+   
+/* ------------Declaration of Terminals and Non Terminals Section----------- */
+   
+/* Terminals (tokens returned by the scanner).  
+
+   Terminals that have no value are listed first and then terminals
+   that do have an value, in this case an String value, are listed on
+   the next line down. */
+   
+terminal           PLUS, MINUS, LPAR, RPAR, EQUAL, QUOTE, WILDCARD;
+terminal String    TERM;
+   
+/* Non terminals used in the grammar section.  
+
+   Non terminals that have an object value are listed first and then
+   non terminals that have an integer value are listed.  An object
+   value means that it can be any type, it isn't set to a specific
+   type.  So it could be an Integer or a String or whatever. */
+   
+non terminal Query      		Query, ClauseList;
+non terminal Clause      		Clause;
+non terminal EClauseList    EQuery, EClauseList;
+non terminal EClause        EClause;
+non terminal KClauseList    KQuery, KClauseList;
+non terminal KClause        KClause;
+
+/* ----------------------------Grammar Section-------------------- */
+   
+/* The grammar for our parser.
+   
+   Query          ::=   ClauseList
+                      |
+                      ;
+   
+   ClauseList     ::=   ClauseList Clause
+                      | Clause
+                      ;
+                      
+   Clause         ::=   TERM LPAR EQuery RPAR
+                      | TERM LPAR KQuery RPAR
+                      | PLUS TERM LPAR EQuery RPAR
+                      | PLUS TERM LPAR KQuery RPAR
+                      | MINUS TERM LPAR EQuery RPAR
+                      | MINUS TERM LPAR KQuery RPAR
+                      ;
+                      
+   EQuery         ::=   EClauseList
+                      |
+                      ;
+                      
+   EClauseList    ::=   EClauseList EClause
+                      | EClause
+                      ;
+                      
+   EClause        ::=   LPAR KQuery EQUAL KQuery RPAR
+                      | PLUS LPAR KQuery EQUAL KQuery RPAR
+                      | MINUS LPAR KQuery EQUAL KQuery RPAR
+                      | LPAR WILDCARD EQUAL KQuery RPAR
+                      | PLUS LPAR WILDCARD EQUAL KQuery RPAR
+                      | MINUS LPAR WILDCARD EQUAL KQuery RPAR
+                      | LPAR KQuery EQUAL WILDCARD RPAR
+                      | PLUS LPAR KQuery EQUAL WILDCARD RPAR
+                      | MINUS LPAR KQuery EQUAL WILDCARD RPAR
+
+   KQuery         ::=   KClauseList KClause
+                      | KClause
+                      ;
+                      
+   KClause        ::=   TERM
+                      | PLUS TERM
+                      | MINUS TERM
+                      ;
+                      
+*/
+   
+/* 'Query' is the start of our grammar.  It can lead to a 'Clause' 
+   or nothing. */
+   
+   Query          ::= ClauseList:l
+   										{: RESULT = l; :}
+                      |
+                      {: RESULT = new Query(); :}
+                      ;
+                      
+   ClauseList     ::= ClauseList:l Clause:c
+                      {: ((Query) l).append(c); RESULT = l; :}
+                      |
+                      Clause:c
+                      {: RESULT = new Query(c); :}
+                      ;
+                      
+   Clause         ::= TERM:field LPAR EQuery:eclauses RPAR
+                      {: RESULT = new EQuery(field, eclauses, Operator.NONE); :}
+                      |
+                      TERM:field LPAR KQuery:kclauses RPAR
+                      {: RESULT = new KQuery(field, kclauses, Operator.NONE); :}
+                      |
+                      PLUS TERM:field LPAR EQuery:eclauses RPAR
+                      {: RESULT = new EQuery(field, eclauses, Operator.PLUS); :}
+                      |
+                      PLUS TERM:field LPAR KQuery:kclauses RPAR
+                      {: RESULT = new KQuery(field, kclauses, Operator.PLUS); :}
+                      |
+                      MINUS TERM:field LPAR EQuery:eclauses RPAR
+                      {: RESULT = new EQuery(field, eclauses, Operator.MINUS); :}
+                      |
+                      MINUS TERM:field LPAR KQuery:kclauses RPAR
+                      {: RESULT = new KQuery(field, kclauses, Operator.MINUS); :}
+                      ;
+                      
+   EQuery         ::= EClauseList:l
+                      {: RESULT = l; :}
+                      |
+                      {: RESULT = new EClauseList(); :}
+                      ;
+                      
+   EClauseList    ::= EClauseList:l EClause:c
+                      {: ((EClauseList) l).append(c); RESULT = l; :}
+                      |
+                      EClause:c
+                      {: RESULT = new EClauseList(c); :}
+                      ;
+                      
+   EClause        ::= LPAR KQuery:a EQUAL KQuery:v RPAR
+                      {: RESULT = new AVClause(a, v, Operator.NONE); :}
+                      |
+                      PLUS LPAR KQuery:a EQUAL KQuery:v RPAR
+                      {: RESULT = new AVClause(a, v, Operator.PLUS); :}
+                      |
+                      MINUS LPAR KQuery:a EQUAL KQuery:v RPAR
+                      {: RESULT = new AVClause(a, v, Operator.MINUS); :}
+                      |
+                      LPAR WILDCARD EQUAL KQuery:v RPAR
+                      {: RESULT = new VClause(v, Operator.NONE); :}
+                      |
+                      PLUS LPAR WILDCARD EQUAL KQuery:v RPAR
+                      {: RESULT = new VClause(v, Operator.PLUS); :}
+                      |
+                      MINUS LPAR WILDCARD EQUAL KQuery:v RPAR
+                      {: RESULT = new VClause(v, Operator.MINUS); :}
+                      |
+                      LPAR KQuery:a EQUAL WILDCARD RPAR
+                      {: RESULT = new AClause(a, Operator.NONE); :}
+                      |
+                      PLUS LPAR KQuery:a EQUAL WILDCARD RPAR
+                      {: RESULT = new AClause(a, Operator.PLUS); :}
+                      |
+                      MINUS LPAR KQuery:a EQUAL WILDCARD RPAR
+                      {: RESULT = new AClause(a, Operator.MINUS); :}
+                      ;
+                      
+   KQuery         ::= KClauseList:l
+                      {: RESULT = l; :}
+                      |
+                      {: RESULT = new KClauseList(); :}
+                      ;
+   
+   KClauseList    ::= KClauseList:l KClause:c
+                      {: ((KClauseList) l).append(c); RESULT = l; :}
+                      |
+                      KClause:c
+                      {: RESULT = new KClauseList(c); :}
+                      ;
+                      
+   KClause        ::= TERM:t
+                      {: RESULT = new KClause(t, Operator.NONE); :}
+                      |
+                      PLUS TERM:t
+                      {: RESULT = new KClause(t, Operator.PLUS); :}
+                      |
+                      MINUS TERM:t
+                      {: RESULT = new KClause(t, Operator.MINUS); :}
+                      ;
+                      

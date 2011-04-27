@@ -1,0 +1,18 @@
+title:No Place to Hide
+url:http://www.imdb.com/title/tt0066156/
+<title> "No Place to Hide" .
+<director> "Robert Allen Schnitzer" " " "" .
+<writer> "Larry Beinhart (I)" " " "" .
+<writer> "Louis Pastore" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Tony Page (I)" "7 May 1939" "The Bronx, New York, USA" .
+<actor> "Vickie Lancaster" " " "" .
+<actor> "Roy White (I)" "27 December 1943" "Los Angeles, California, USA" .
+<actor> "Henry G. Sanders" "18 August 1942" "Houston, Texas, USA" .
+<actor> "Jed Mills" " " "Brooklyn, New York, USA" .
+<actor> "David Orange" " " "" .
+<actor> "Joe Kottler" " " "" .
+<actor> "Linda Adana" " " "" .
+<actor> "Laura Giammarco (I)" " " "" .
+<actor> "Lillian Baley" " " "" .
+<actor> "Susan Glassman" " " "" .

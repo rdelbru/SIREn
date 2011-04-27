@@ -1,0 +1,5 @@
+title:"Fame in the Twentieth Century"
+url:http://www.imdb.com/title/tt0128875/
+<title> ""Fame in the Twentieth Century"" .
+<writer> "Clive James" "7 October 1939" "Sydney, New South Wales, Australia" .
+<actor> "Clive James" "7 October 1939" "Sydney, New South Wales, Australia" .

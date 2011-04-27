@@ -1,0 +1,26 @@
+title:Wetten, dass..? aus Salzburg
+url:http://www.imdb.com/title/tt1177887/
+<title> ""Wetten, dass..?" Wetten, dass..? aus Salzburg" .
+<director> "Frank Hof" " " "" .
+<writer> "Frank Elstner" "19 April 1942" "Linz, Austria" .
+<writer> "Stefan Parrisius" " " "" .
+<actor> "Thomas Gottschalk (I)" "18 May 1950" "Bamberg, Germany" .
+<actor> "Mirjam Weichselbraun" "27 September 1981" "Innsbruck, Tyrol, Austria" .
+<actor> "Mario Adorf" "8 September 1930" "Zurich, Switzerland" .
+<actor> "Kim Baumann" "31 May 1998" "Rottweil, Germany" .
+<actor> "Ben Becker (I)" "19 December 1964" "Bremen, Germany" .
+<actor> "Roberto Blanco (I)" "7 June 1937" "Tunis, Tunisia" .
+<actor> "Drew Brown (VII)" " " "" .
+<actor> "Gérard Depardieu" "27 December 1948" "Châteauroux, Indre, France" .
+<actor> "Guangdong Acrobatic Troupe of China" " " "" .
+<actor> "Christiane Hörbiger" "13 October 1938" "Vienna, Austria" .
+<actor> "Brent Kutzle" " " "" .
+<actor> "Philipp Lahm" "11 November 1983" "Munich, Bavaria, Germany" .
+<actor> "OneRepublic" " " "" .
+<actor> "Stefan Raab" "20 October 1966" "Cologne, Germany" .
+<actor> "Til Schweiger" "19 December 1963" "Freiburg im Breisgau, Germany" .
+<actor> "Seal" "19 February 1963" "Paddington, London, England, UK" .
+<actor> "Peter Simonischek" "6 August 1946" "Graz, Austria" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Felix Sturm" "31 January 1979" "Leverkusen, Germany" .
+<actor> "Ryan Tedder" "7 January 1979" "Tulsa, Oklahoma, USA" .

@@ -1,0 +1,41 @@
+title:Premio Donostia a Antonio Banderas
+url:http://www.imdb.com/title/tt1296884/
+<title> "Premio Donostia a Antonio Banderas" .
+<director> "Manuel Palacios (IV)" " 1961" "Madrid, Spain" .
+<writer> "Edurne Ormazábal" " " "" .
+<actor> "Victoria Abril" "4 July 1959" "Madrid, Spain" .
+<actor> "Agustín Almodóvar" " " "" .
+<actor> "Pedro Almodóvar" "24 September 1949" "Calzada de Calatrava, Ciudad Real, Castilla-La Mancha, Spain" .
+<actor> "Alberto Amarilla" "20 October 1980" "Cáceres, Extremadura, Spain" .
+<actor> "Raúl Arévalo (I)" "22 November 1979" "Madrid, Madrid, Spain" .
+<actor> "Imanol Arias" "26 April 1956" "Riaño, León, Castilla y León, Spain" .
+<actor> "Armand Assante" "4 October 1949" "New York City, New York, USA" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Ana Belén" "27 May 1951" "Madrid, Madrid, Spain" .
+<actor> "Quique Camoiras" " 1928" "Madrid, Madrid, Spain" .
+<actor> "Eva Cobo" "26 April 1967" "Barcelona, Barcelona, Catalonia, Spain" .
+<actor> "Jennifer Connelly" "12 December 1970" "Catskill Mountains, New York, USA" .
+<actor> "Lolita Davidovich" "15 July 1961" "London, Ontario, Canada" .
+<actor> "Rebecca De Mornay" "29 August 1959" "Santa Rosa, California, USA" .
+<actor> "Kirsten Dunst" "30 April 1982" "Point Pleasant, New Jersey, USA" .
+<actor> "Mario Gas" "15 February 1947" "Montevideo, Uruguay" .
+<actor> "Ana Gracia (I)" "16 February 1959" "Madrid, Madrid, Spain" .
+<actor> "Tom Hanks" "9 July 1956" "Concord, California, USA" .
+<actor> "Woody Harrelson" "23 July 1961" "Midland, Texas, USA" .
+<actor> "Salma Hayek" "2 September 1966" "Coatzacoalcos, Veracruz, Mexico" .
+<actor> "Jeremy Irons" "19 September 1948" "Cowes, Isle of Wight, England, UK" .
+<actor> "Angelina Jolie" "4 June 1975" "Los Angeles, California, USA" .
+<actor> "Lucy Liu" "2 December 1968" "Queens, New York, USA" .
+<actor> "Jennifer Lopez (I)" "24 July 1969" "The Bronx, New York, USA" .
+<actor> "Madonna (I)" "16 August 1958" "Bay City, Michigan, USA" .
+<actor> "Edurne Ormazábal" " " "" .
+<actor> "Fran Perea" "20 November 1978" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Eusebio Poncela" "15 September 1947" "Madrid, Madrid, Spain" .
+<actor> "Mary Carmen Ramírez" "4 September 1932" "Granada, Andalucía, Spain" .
+<actor> "Winona Ryder" "29 October 1971" "Winona, Minnesota, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Emma Thompson (I)" "15 April 1959" "Paddington, London, England, UK" .
+<actor> "Danny Trejo" "16 May 1944" "Echo Park, Los Angeles, California, USA" .
+<actor> "John Wood (I)" " 1930" "Derbyshire, England, UK" .
+<actor> "Catherine Zeta-Jones" "25 September 1969" "Swansea, West Glamorgan, Wales, UK" .

@@ -1,0 +1,21 @@
+title:Rhinestone
+url:http://www.imdb.com/title/tt0088001/
+<title> "Rhinestone" .
+<director> "Bob Clark (III)" "5 August 1939" "New Orleans, Louisiana, USA" .
+<writer> "Phil Alden Robinson" "1 March 1950" "Long Beach, Long Island, New York, USA" .
+<writer> "Phil Alden Robinson" "1 March 1950" "Long Beach, Long Island, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Richard Farnsworth" "1 September 1920" "Los Angeles, California, USA" .
+<actor> "Ron Leibman" "11 October 1937" "New York City, New York, USA" .
+<actor> "Tim Thomerson" "8 April 1946" "Coronado, California, USA" .
+<actor> "Steve Peck" "2 January 1929" "New York City, New York, USA" .
+<actor> "Penny Santon" "2 September 1916" "New York City, New York, USA" .
+<actor> "Russell Buchanan" " " "" .
+<actor> "Ritch Brinkley" "18 March 1944" "Colorado City, Texas, USA" .
+<actor> "Jerry Potter (I)" " " "" .
+<actor> "Jesse Welles" " " "" .
+<actor> "Phil Rubenstein" "3 August 1940" "Bronx, New York, USA" .
+<actor> "Thomas Ikeda" " " "" .
+<actor> "Christal Kim" "25 September 1916" "Kalamazoo, Michigan, USA" .
+<actor> "Arline Miyazaki" " " "" .

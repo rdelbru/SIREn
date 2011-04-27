@@ -1,0 +1,7 @@
+title:Episode dated 18 March 2005
+url:http://www.imdb.com/title/tt0615811/
+<title> ""Jimmy Kimmel Live!" Episode dated 18 March 2005" .
+<director> "Bobcat Goldthwait" "26 May 1962" "Syracuse, New York, USA" .
+<actor> "Jimmy Kimmel" "13 November 1967" "Brooklyn, New York, USA" .
+<actor> "Christina Milian" "26 September 1981" "Jersey City, New Jersey, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

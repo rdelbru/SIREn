@@ -1,0 +1,10 @@
+title:The Making of 'First Blood'
+url:http://www.imdb.com/title/tt0267710/
+<title> "The Making of 'First Blood'" .
+<director> "William Riead" " " "Clinton, Missouri, USA" .
+<actor> "David Caruso (I)" "7 January 1956" "Forest Hills, New York, USA" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Brian Dennehy" "9 July 1938" "Bridgeport, Connecticut, USA" .
+<actor> "Ted Kotcheff" "7 April 1931" "Toronto, Ontario, Canada" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Jack Starrett" "2 November 1936" "Refugio, Texas, USA" .

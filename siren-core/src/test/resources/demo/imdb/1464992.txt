@@ -1,0 +1,29 @@
+title:Scandal & Gossip
+url:http://www.imdb.com/title/tt1464992/
+<title> ""Hollywood Lives" Scandal & Gossip" .
+<actor> "Jon Rand" " " "" .
+<actor> "Amanda Byram (I)" "16 June 1973" "Dublin, Ireland" .
+<actor> "Nick Di Brizzi Jr." " " "" .
+<actor> "Beth Ditto" " " "" .
+<actor> "Joely Fisher" "29 October 1967" "Burbank, California, USA" .
+<actor> "Bernadine Fried" " " "" .
+<actor> "Dr. Mark Gordon" " " "" .
+<actor> "Kathy Griffin" "4 November 1960" "Oak Park, Illinois, USA" .
+<actor> "Perez Hilton" "23 March 1978" "Miami, Florida, USA" .
+<actor> "Ron Jeremy" "12 March 1953" "Long Island, New York, USA" .
+<actor> "Michael Levine (XXXIV)" " " "" .
+<actor> "Sean Maguire (I)" "18 April 1976" "Ilford, Essex, England, UK" .
+<actor> "Debbie Matenopoulos" "13 December 1974" "Richmond, Virginia, USA" .
+<actor> "Dr. Shlomo Melmed" " " "" .
+<actor> "Shanna Moakler" "28 March 1975" "Providence, Rhode Island, USA" .
+<actor> "Joe Pecoraro" " " "" .
+<actor> "Chris Penn (I)" "10 October 1965" "Los Angeles, California, USA" .
+<actor> "Dr. Howard C. Samuels" " " "" .
+<actor> "Catya Sassoon" "3 September 1968" "Manhattan, New York City, New York, USA" .
+<actor> "Vidal Sassoon" "17 January 1928" "London, England, UK" .
+<actor> "Jane Seymour (I)" "15 February 1951" "Hayes, Hayes and Harlington, Middlesex, England, UK" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bruce Turner (VI)" " " "" .
+<actor> "Chris Wilson (XVI)" " " "" .
+<actor> "Don 'The Dragon' Wilson" "10 September 1954" "Illinois, USA" .
+<actor> "Jennifer Young (II)" "21 April 1964" "Los Angeles, California, USA" .

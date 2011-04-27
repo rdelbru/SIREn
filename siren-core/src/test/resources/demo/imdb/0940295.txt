@@ -1,0 +1,6 @@
+title:Episode #1.751
+url:http://www.imdb.com/title/tt0940295/
+<title> ""Stern TV" Episode #1.751" .
+<actor> "Günther Jauch" "13 July 1956" "Münster, Germany" .
+<actor> "Henry Maske" "6 January 1964" "Treubenbrietzen, German Democratic Republic [now Brandenburg, Federal Republic of Germany]" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,5 @@
+title:Sharon Stone - Una mujer de 100 caras
+url:http://www.imdb.com/title/tt1355595/
+<title> "Sharon Stone - Una mujer de 100 caras" .
+<writer> "G. Cabrera Infante" "22 April 1929" "Gibara, Cuba" .
+<actor> "G. Cabrera Infante" "22 April 1929" "Gibara, Cuba" .

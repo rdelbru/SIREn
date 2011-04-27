@@ -1,0 +1,15 @@
+title:Ten Empty
+url:http://www.imdb.com/title/tt0938339/
+<title> "Ten Empty" .
+<director> "Anthony Hayes (I)" "21 September 1977" "Brisbane, Australia" .
+<writer> "Brendan Cowell" "16 August 1976" "Cronulla, New South Wales, Australia" .
+<writer> "Anthony Hayes (I)" "21 September 1977" "Brisbane, Australia" .
+<actor> "Daniel Frederiksen" " " "" .
+<actor> "Geoff Morrell (I)" "10 October 1948" "Melbourne, Victoria, Australia" .
+<actor> "Lucy Bell (I)" "23 December 1968" "Stratford-upon-Avon, Warwickshire, England, UK" .
+<actor> "Tom Budge" "15 March 1982" "Melbourne, Victoria, Australia" .
+<actor> "Brendan Cowell" "16 August 1976" "Cronulla, New South Wales, Australia" .
+<actor> "Blazey Best" " " "" .
+<actor> "Jack Thompson (I)" "31 August 1940" "Sydney, New South Wales, Australia" .
+<actor> "Kaliopi Eleni" " " "" .
+<actor> "Adam Morgan" "17 April 1961" "Adelaide, South Australia, Australia" .

@@ -1,0 +1,11 @@
+title:Taste of Flesh
+url:http://www.imdb.com/title/tt1282092/
+<title> "Taste of Flesh" .
+<director> "Christopher D. Grace" " " "" .
+<writer> "Tom Whitus" " " "" .
+<actor> "Nathan Todaro" "19 February 1979" "Louisville, Kentucky, USA" .
+<actor> "Ashley Brightwell" " " "" .
+<actor> "Cory J. Grace" " " "" .
+<actor> "Ricky Scott Hall" " " "" .
+<actor> "George Maranville" " " "" .
+<actor> "Victoria Robbins" " " "" .

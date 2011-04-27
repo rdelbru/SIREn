@@ -1,0 +1,6 @@
+title:Episode dated 18 May 1990
+url:http://www.imdb.com/title/tt1431425/
+<title> ""Entertainment Tonight" Episode dated 18 May 1990" .
+<actor> "Lisa Canning" "7 November 1966" "St. Thomas, U.S. Virgin Islands" .
+<actor> "Leonard Maltin" "18 December 1950" "New York City, New York, USA" .
+<actor> "John Landis (I)" "3 August 1950" "Chicago, Illinois, USA" .

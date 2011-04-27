@@ -1,0 +1,4 @@
+title:Episode dated 5 March 2005
+url:http://www.imdb.com/title/tt0568568/
+<title> ""The Early Show" Episode dated 5 March 2005" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

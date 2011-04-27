@@ -1,0 +1,12 @@
+title:Episode dated 17 January 1997
+url:http://www.imdb.com/title/tt0606714/
+<title> ""Howard Stern" Episode dated 17 January 1997" .
+<actor> "Howard Stern (I)" "12 January 1954" "Jackson Heights, Queens, New York City, New York, USA" .
+<actor> "Tom Chiusano" " " "" .
+<actor> "Nina Gordon" "14 November 1967" "Washington, District of Columbia, USA" .
+<actor> "Captain Janks" " " "" .
+<actor> "Stacy Jones (II)" "19 December 1970" "Tulsa, Oklahoma, USA" .
+<actor> "Kenneth Keith Kallenbach" "20 March 1969" "Pennsylvania, USA" .
+<actor> "George Pataki" "24 June 1945" "Peekskill, New York, USA" .
+<actor> "Robin Quivers" "8 August 1952" "Baltimore, Maryland, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

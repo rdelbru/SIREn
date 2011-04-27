@@ -1,0 +1,17 @@
+ClauseQuery(
+  UnaryClause(
+    SimpleExpression(
+      TriplePattern(
+        URIPattern(
+          http://ns/#s
+        ) [URIPattern]
+        URIPattern(
+          http://ns/p
+        ) [URIPattern]
+        Literal(
+          A Literal ...
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+  ) [UnaryClause]
+) [ClauseQuery]

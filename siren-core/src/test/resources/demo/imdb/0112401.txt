@@ -1,0 +1,21 @@
+title:Assassins
+url:http://www.imdb.com/title/tt0112401/
+<title> "Assassins" .
+<director> "Richard Donner" "24 April 1930" "New York City, New York, USA" .
+<writer> "Andy Wachowski" "29 December 1967" "Chicago, Illinois, USA" .
+<writer> "Larry Wachowski" "21 June 1965" "Chicago, Illinois, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Julianne Moore (I)" "3 December 1960" "Fayetteville, North Carolina, USA" .
+<actor> "Anatoli Davydov" " " "" .
+<actor> "Muse Watson" "20 July 1948" "Alexandria, Louisiana, USA" .
+<actor> "Steve Kahan" " 1930" "" .
+<actor> "Kelly Rowan" "26 October 1965" "Ottawa, Ontario, Canada" .
+<actor> "Reed Diamond (I)" "20 July 1967" "New York City, New York, USA" .
+<actor> "Kai Wulff" " " "" .
+<actor> "Kerry Skalsky" " " "" .
+<actor> "James Douglas Haskins" " " "" .
+<actor> "Stephen Liska" " " "" .
+<actor> "John Harms (I)" " " "" .
+<actor> "Edward J. Rosen (I)" " " "" .
+<actor> "Christina Orchid" " " "" .

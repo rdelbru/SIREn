@@ -1,0 +1,4 @@
+title:Episode dated 25 May 1988
+url:http://www.imdb.com/title/tt0590380/
+<title> ""Good Morning America" Episode dated 25 May 1988" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,20 @@
+title:Rocky
+url:http://www.imdb.com/title/tt0075148/
+<title> "Rocky" .
+<director> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Burgess Meredith" "16 November 1907" "Cleveland, Ohio, USA" .
+<actor> "Thayer David" "4 March 1927" "Medford, Massachusetts, USA" .
+<actor> "Joe Spinell" "28 October 1936" "New York City, New York, USA" .
+<actor> "Jimmy Gambina" "3 May 1943" "Hollywood, California, USA" .
+<actor> "Bill Baldwin (II)" "26 November 1913" "Pueblo, Colorado, USA" .
+<actor> "Al Silvani" "26 March 1910" "" .
+<actor> "George Memmoli" "3 August 1938" "New York City, New York, USA" .
+<actor> "Jodi Letizia" " " "" .
+<actor> "Diana Lewis (II)" " " "" .
+<actor> "George O'Hanlon" "23 November 1912" "Brooklyn, New York, USA" .
+<actor> "Larry Carroll (I)" " " "" .

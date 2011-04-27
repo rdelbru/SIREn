@@ -1,0 +1,21 @@
+title:Staying Alive
+url:http://www.imdb.com/title/tt0086361/
+<title> "Staying Alive" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Nik Cohn" " 1946" "London, England, UK" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Cynthia Rhodes" "21 November 1956" "Nashville, Tennessee, USA" .
+<actor> "Finola Hughes" "29 October 1959" "Kensington, London, England, UK" .
+<actor> "Steve Inwood" "3 January 1947" "" .
+<actor> "Julie Bovasso" "1 August 1930" "Brooklyn, New York, USA" .
+<actor> "Charles Ward (II)" "24 August 1952" "Los Angeles, California, USA" .
+<actor> "Steve Bickford" " " "" .
+<actor> "Patrick Brady (I)" "13 December 1960" "Ohio, USA" .
+<actor> "Norma Donaldson" "8 July 1928" "New York City, New York, USA" .
+<actor> "Jesse Doran" " " "" .
+<actor> "Joyce Hyser" "20 December 1957" "New York City, New York, USA" .
+<actor> "Deborah Jenssen" "15 November 1955" "Rochester, New York, USA" .
+<actor> "Robert Martini (I)" " " "" .
+<actor> "Sarah M. Miles" " " "" .
+<actor> "Tony Munafo" " " "" .

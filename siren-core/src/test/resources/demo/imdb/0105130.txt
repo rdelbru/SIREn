@@ -1,0 +1,20 @@
+title:Peter's Friends
+url:http://www.imdb.com/title/tt0105130/
+<title> "Peter's Friends" .
+<director> "Kenneth Branagh" "10 December 1960" "Belfast, Northern Ireland, UK" .
+<writer> "Rita Rudner" "17 September 1953" "Miami, Florida, USA" .
+<writer> "Martin Bergmann" " " "" .
+<actor> "Hugh Laurie" "11 June 1959" "Oxford, Oxfordshire, England, UK" .
+<actor> "Kenneth Branagh" "10 December 1960" "Belfast, Northern Ireland, UK" .
+<actor> "Stephen Fry (I)" "24 August 1957" "Hampstead, London, England, UK" .
+<actor> "Alphonsia Emmanuel" " 1961" "Dominica, British West Indies" .
+<actor> "Emma Thompson (I)" "15 April 1959" "Paddington, London, England, UK" .
+<actor> "Richard Briers" "14 January 1934" "Merton, Surrey, England, UK" .
+<actor> "Phyllida Law" "8 May 1932" "Glasgow, Scotland, UK" .
+<actor> "Alex Scott (III)" " " "" .
+<actor> "Edward Jewesbury" "6 August 1917" "London, England, UK" .
+<actor> "Hetta Charnley" " " "" .
+<actor> "Rita Rudner" "17 September 1953" "Miami, Florida, USA" .
+<actor> "Bill Parfitt" " " "" .
+<actor> "Ruby May Musto" " " "" .
+<actor> "Ann Davies (I)" "25 November 1934" "London, England, UK" .

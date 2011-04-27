@@ -1,0 +1,9 @@
+title:Cicci Renström/Rambo 4/Iscariot
+url:http://www.imdb.com/title/tt1197886/
+<title> ""Nyhetsmorgon" Cicci Renström/Rambo 4/Iscariot" .
+<actor> "Ulrika Andersson" " " "" .
+<actor> "Jacob Ericksson" "7 January 1967" "Sala, Västmanlands län, Sweden" .
+<actor> "Elisabeth Hultén" " " "" .
+<actor> "Cicci Renström" " " "" .
+<actor> "Gustaf Skarsgård" "12 November 1980" "Stockholm, Stockholms län, Sweden" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

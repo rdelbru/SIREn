@@ -1,0 +1,6 @@
+title:"Late Show with David Letterman"
+url:http://www.imdb.com/title/tt0106053/
+<title> ""Late Show with David Letterman"" .
+<director> "Randi Grossack" " " "" .
+<writer> "Gabe Abelson" " " "" .
+<writer> "Ross Abrash" " " "" .

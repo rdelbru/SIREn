@@ -1,0 +1,7 @@
+title:Shirtless: Hollywood's Sexiest Men
+url:http://www.imdb.com/title/tt0326145/
+<title> "Shirtless: Hollywood's Sexiest Men" .
+<director> "Elizabeth Meeker" " " "" .
+<writer> "Elizabeth Meeker" " " "" .
+<actor> "Sela Ward" "11 July 1956" "Meridian, Mississippi, USA" .
+<actor> "Casper Van Dien" "18 December 1968" "Milton, Florida, USA" .

@@ -1,0 +1,4 @@
+title:Episode dated 16 November 1990
+url:http://www.imdb.com/title/tt0590388/
+<title> ""Good Morning America" Episode dated 16 November 1990" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,10 @@
+title:The Weaponry of Rambo
+url:http://www.imdb.com/title/tt1394384/
+<title> "The Weaponry of Rambo" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kent H. Johnson" " " "" .
+<actor> "Graham McTavish" " 1961" "Glasgow, Scotland, UK" .
+<actor> "Matthew Marsden" "3 March 1973" "Walsall, West Midlands, England, UK" .
+<actor> "Tim Kang" "16 March 1973" "San Francisco, California, USA" .
+<actor> "Reynaldo Gallegos" " " "" .
+<actor> "Jake La Botz" " " "" .

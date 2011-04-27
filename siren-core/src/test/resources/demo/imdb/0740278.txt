@@ -1,0 +1,6 @@
+title:Episode dated 15 August 1997
+url:http://www.imdb.com/title/tt0740278/
+<title> ""The View" Episode dated 15 August 1997" .
+<actor> "Meredith Vieira" "30 December 1953" "Providence, Rhode Island, USA" .
+<actor> "Debbie Matenopoulos" "13 December 1974" "Richmond, Virginia, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

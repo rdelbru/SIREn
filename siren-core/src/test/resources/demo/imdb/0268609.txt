@@ -1,0 +1,15 @@
+title:The American Film Institute Salute to Kirk Douglas
+url:http://www.imdb.com/title/tt0268609/
+<title> "The American Film Institute Salute to Kirk Douglas" .
+<actor> "Lauren Bacall" "16 September 1924" "New York City, New York, USA" .
+<actor> "Dana Carvey" "2 June 1955" "Missoula, Montana, USA" .
+<actor> "Tom Cruise" "3 July 1962" "Syracuse, New York, USA" .
+<actor> "Danny DeVito" "17 November 1944" "Asbury Park, New Jersey, USA" .
+<actor> "Angie Dickinson" "30 September 1931" "Kulm, North Dakota, USA" .
+<actor> "Kirk Douglas (I)" "9 December 1916" "Amsterdam, New York, USA" .
+<actor> "Michael Douglas (I)" "25 September 1944" "New Brunswick, New Jersey, USA" .
+<actor> "Richard Harris (I)" "1 October 1930" "Limerick, Ireland" .
+<actor> "Karl Malden" "22 March 1912" "Chicago, Illinois, USA" .
+<actor> "Patricia Neal" "20 January 1926" "Packard, Kentucky, USA" .
+<actor> "Jean Simmons (I)" "31 January 1929" "Crouch Hill, London, England, UK" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

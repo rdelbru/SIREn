@@ -1,0 +1,7 @@
+title:Episode dated 21 May 1985
+url:http://www.imdb.com/title/tt0727893/
+<title> ""The Tonight Show Starring Johnny Carson" Episode dated 21 May 1985" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Jim Mulholland" " " "" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

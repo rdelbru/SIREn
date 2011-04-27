@@ -1,0 +1,20 @@
+title:Episode dated 8 May 2008
+url:http://www.imdb.com/title/tt1230781/
+<title> ""Entertainment Tonight" Episode dated 8 May 2008" .
+<actor> "Paula Abdul" "19 June 1962" "San Fernando, California, USA" .
+<actor> "Ben Barnes (I)" "20 August 1981" "London, England, UK" .
+<actor> "Jason Castro (II)" "25 March 1987" "Dallas, Texas, USA" .
+<actor> "Cher (I)" "20 May 1946" "El Centro, California, USA" .
+<actor> "Steven Cojocaru" "5 January 1965" "Montreal, Quebec, Canada" .
+<actor> "Harrison Ford (I)" "13 July 1942" "Chicago, Illinois, USA" .
+<actor> "Mary Hart (I)" "8 November 1950" "Sioux Falls, South Dakota, USA" .
+<actor> "Georgie Henley" "9 July 1995" "Ilkley, Yorkshire, England, UK" .
+<actor> "Skandar Keynes" "5 September 1991" "London, England, UK" .
+<actor> "William Moseley (I)" "27 April 1987" "Sheepscombe, Gloucestershire, England, UK" .
+<actor> "Chris Noth" "13 November 1954" "Madison, Wisconsin, USA" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Mark Steines" "7 June 1964" "Dubuque, Iowa, USA" .
+<actor> "Tina Turner" "26 November 1939" "Nutbush, Tennessee, USA" .
+<actor> "Barbara Walters" "25 September 1929" "Boston, Massachusetts, USA" .
+<actor> "Oprah Winfrey" "29 January 1954" "Kosciusko, Mississippi, USA" .

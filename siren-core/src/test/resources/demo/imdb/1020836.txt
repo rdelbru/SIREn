@@ -1,0 +1,16 @@
+title:Skill vs. Will: The Making of 'Rocky Balboa'
+url:http://www.imdb.com/title/tt1020836/
+<title> "Skill vs. Will: The Making of 'Rocky Balboa'" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kevin King (II)" " " "" .
+<actor> "Antonio Tarver" "21 November 1968" "Orlando, Florida, USA" .
+<actor> "Charles Winkler" " " "" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "David Winkler (I)" " " "" .
+<actor> "Milo Ventimiglia" "8 July 1977" "Anaheim, California, USA" .
+<actor> "Guy Riedel" " " "" .
+<actor> "Geraldine Hughes" " 1970" "Belfast, Northern Ireland, UK" .
+<actor> "William Chartoff" "15 March 1963" "New York City, New York, USA" .
+<actor> "John F. Street" "4 December 1945" "Norristown, Pennsylvania, USA" .
+<actor> "Franco-Giacomo Carbone" " " "" .
+<actor> "Kevin King Templeton" " " "" .

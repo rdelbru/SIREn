@@ -1,0 +1,54 @@
+title:George Foreman
+url:http://www.imdb.com/title/tt0568272/
+<title> ""ESPN SportsCentury" George Foreman" .
+<actor> "Bob Allen (IX)" " " "" .
+<actor> "Dave Anderson (II)" "6 May 1929" "Troy, New York, USA" .
+<actor> "Bob Arum" "8 December 1931" "Brooklyn, New York City, New York, USA" .
+<actor> "Teddy Atlas" "29 July 1956" "Staten Island, New York, USA" .
+<actor> "Al Bernstein (I)" "15 September 1950" "" .
+<actor> "Peter Bonventre" " " "" .
+<actor> "Ron Borges" " " "" .
+<actor> "Charles Broadus" " " "" .
+<actor> "Jim Brown (I)" "17 February 1936" "St. Simons Island, Georgia, USA" .
+<actor> "Bill Caplan" " " "" .
+<actor> "Stephen Castor" " " "" .
+<actor> "George Chuvalo" "12 September 1937" "Toronto, Ontario, Canada" .
+<actor> "Bud Collins (I)" "17 June 1929" "Lima, Ohio, USA" .
+<actor> "Ralph Cooper (IV)" " " "" .
+<actor> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<actor> "Angelo Dundee" "30 August 1921" "Philadelphia, Pennsylvania, USA" .
+<actor> "Harold Dutton" " " "" .
+<actor> "Joel Engel (III)" " " "" .
+<actor> "George Foreman" "10 January 1949" "Marshall, Texas, USA" .
+<actor> "Roy Foreman" " " "" .
+<actor> "Joe Frazier" "12 January 1944" "Beaufort, South Carolina, USA" .
+<actor> "Leon Gast" " " "" .
+<actor> "Naseem Hamed" "12 February 1974" "Sheffield, England, UK" .
+<actor> "Thomas Hauser (III)" " " "" .
+<actor> "Henry Holmes (I)" " " "" .
+<actor> "Evander Holyfield" "19 October 1962" "Atmore, Alabama, USA" .
+<actor> "Kevin Iole" "4 October 1959" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Jerry Izenberg" " " "" .
+<actor> "Gene Kilroy" " " "" .
+<actor> "Jim Lampley" "8 April 1949" "Hendersonville, North Carolina, USA" .
+<actor> "Robert Lipsyte" "16 January 1938" "New York City, New York, USA" .
+<actor> "Ray 'Boom Boom' Mancini" "4 March 1961" "Youngstown, Ohio, USA" .
+<actor> "Steve Mark" " " "" .
+<actor> "Wallace Matthews" " " "" .
+<actor> "Arthur Mercante" "27 January 1920" "" .
+<actor> "Larry Merchant" "11 February 1931" "Brooklyn, New York, USA" .
+<actor> "Michael Moorer" "12 November 1967" "Monessen, Pennsylvania, USA" .
+<actor> "William Nack" "10 February 1941" "Chicago, Illinois, USA" .
+<actor> "Barney Oldfield (III)" " " "" .
+<actor> "Darren Rovell" " 1978" "USA" .
+<actor> "Jon Saraceno" " " "" .
+<actor> "Jeremy Schaap" "23 August 1969" "New York City, New York, USA" .
+<actor> "John Schulian" " " "" .
+<actor> "Morton Sharnik" " " "" .
+<actor> "Charlie Shipes" " " "" .
+<actor> "Gary Smith (XX)" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Charley Steiner" "17 July 1949" "" .
+<actor> "David Wallechinsky" "5 February 1948" "Los Angeles, California, USA" .
+<actor> "Chuck Wepner" "26 February 1939" "New York City, New York, USA" .
+<actor> "Henry Winston" " " "" .

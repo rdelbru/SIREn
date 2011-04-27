@@ -1,0 +1,9 @@
+title:Making 'Avenging Angelo'
+url:http://www.imdb.com/title/tt0418849/
+<title> "Making 'Avenging Angelo'" .
+<director> "Martyn Burke" "14 September 1952" "Canada" .
+<actor> "Martyn Burke" "14 September 1952" "Canada" .
+<actor> "Raoul Bova" "14 August 1971" "Rome, Italy" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Anthony Quinn (I)" "21 April 1915" "Chihuahua, Mexico" .
+<actor> "Ousama Rawi" "3 March 1939" "Baghdad, Iraq" .

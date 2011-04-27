@@ -1,0 +1,27 @@
+title:Two Rooms: A Tribute to Elton John & Bernie Taupin
+url:http://www.imdb.com/title/tt0287062/
+<title> "Two Rooms: A Tribute to Elton John & Bernie Taupin" .
+<director> "Jonathan K. Bendis" " " "" .
+<director> "Bill Richmond (V)" " " "" .
+<writer> "Jonathan K. Bendis" " " "" .
+<writer> "David P. Levin" "5 August 1958" "Framingham, Massachusetts, USA" .
+<actor> "Elton John" "25 March 1947" "Pinner, Greater London, England, UK" .
+<actor> "Bernie Taupin" "22 May 1950" "Lincolnshire, England, UK" .
+<actor> "Oleta Adams" "4 May 1953" "Seattle, Washington, USA" .
+<actor> "The Beach Boys" " 1961" "Hawthorne, California, USA" .
+<actor> "Kate Bush" "30 July 1958" "Erith, Kent, England, UK" .
+<actor> "Eric Clapton" "30 March 1945" "Ripley, Surrey, England, UK" .
+<actor> "Phil Collins (I)" "30 January 1951" "Chiswick, London, England, UK" .
+<actor> "Roger Daltrey" "1 March 1944" "Hammersmith, London, England, UK" .
+<actor> "John Entwistle" "9 October 1944" "Chiswick, London, England, UK" .
+<actor> "Daryl Hall (I)" "11 October 1946" "Pottstown, Pennsylvania, USA" .
+<actor> "Bruce Hornsby" "23 November 1954" "Williamsburg, Virginia, USA" .
+<actor> "George Michael (II)" "25 June 1963" "Bushey, Hertfordshire, England, UK" .
+<actor> "John Oates" "7 April 1948" "New York City, New York, USA" .
+<actor> "Sinéad O'Connor" "8 December 1966" "Dublin, Ireland" .
+<actor> "W. Axl Rose" "6 February 1962" "Lafayette, Indiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sting (I)" "2 October 1951" "Wallsend, Newcastle upon Tyne, England, UK" .
+<actor> "Tina Turner" "26 November 1939" "Nutbush, Tennessee, USA" .
+<actor> "The Who" " " "" .
+<actor> "Neil Young (I)" "12 November 1945" "Toronto, Ontario, Canada" .

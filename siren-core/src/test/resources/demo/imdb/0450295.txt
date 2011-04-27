@@ -1,0 +1,21 @@
+title:Make Your Own Damn Movie!
+url:http://www.imdb.com/title/tt0450295/
+<title> "Make Your Own Damn Movie!" .
+<director> "Lloyd Kaufman" "30 December 1945" "New York City, New York, USA" .
+<writer> "Gabriel Friedman" " 1974" "Boston, Massachusetts, USA" .
+<writer> "Trent Haaga" " " "" .
+<actor> "Lloyd Kaufman" "30 December 1945" "New York City, New York, USA" .
+<actor> "Trey Parker (I)" "19 October 1969" "Conifer, Colorado, USA" .
+<actor> "George A. Romero (I)" "4 February 1940" "New York City, New York, USA" .
+<actor> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .
+<actor> "Trent Haaga" " " "" .
+<actor> "James Gunn (II)" "5 August 1970" "Saint Louis, Missouri, USA" .
+<actor> "Quentin Tarantino" "27 March 1963" "Knoxville, Tennessee, USA" .
+<actor> "Purple Pam" " " "" .
+<actor> "Andy Signore" "15 August 1979" "Philadelphia, Pennsylvania, USA" .
+<actor> "Debbie Rochon" "3 November 1968" "Vancouver, British Columbia, Canada" .
+<actor> "Stan Lee (I)" "28 December 1922" "New York City, New York, USA" .
+<actor> "Herschell Gordon Lewis" "15 June 1929" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Larry Cohen (I)" "15 July 1938" "New York City, New York, USA" .
+<actor> "Jenna Fischer" "7 March 1974" "Ft. Wayne, Indiana, USA" .
+<actor> "Eli Roth" "18 April 1972" "Boston, Massachusetts, USA" .

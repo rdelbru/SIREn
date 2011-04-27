@@ -1,0 +1,51 @@
+title:The Best of the Don Lane Show
+url:http://www.imdb.com/title/tt0429662/
+<title> "The Best of the Don Lane Show" .
+<writer> "Tim Evans (VII)" " " "" .
+<writer> "Mike McColl Jones" " " "" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Dave Allen (XV)" " " "" .
+<actor> "David Bowie (I)" "8 January 1947" "Brixton, London, England, UK" .
+<actor> "Jackie Collins (I)" "4 October 1937" "London, England, UK" .
+<actor> "Alice Cooper (I)" "4 February 1948" "Detroit, Michigan, USA" .
+<actor> "Tony Curtis (I)" "3 June 1925" "The Bronx, New York, USA" .
+<actor> "Sammy Davis Jr." "8 December 1925" "Harlem, New York, USA" .
+<actor> "Phyllis Diller (I)" "17 July 1917" "Lima, Ohio, USA" .
+<actor> "Kirk Douglas (I)" "9 December 1916" "Amsterdam, New York, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Crystal Gayle" "9 January 1951" "Paintsville, Kentucky, USA" .
+<actor> "Mel Gibson (I)" "3 January 1956" "Peekskill, New York, USA" .
+<actor> "Geoff Harvey" " " "" .
+<actor> "Doctor Hook" " " "" .
+<actor> "Bob Hope (I)" "29 May 1903" "Eltham, London, England, UK" .
+<actor> "Jermaine Jackson (I)" "11 December 1954" "Gary, Indiana, USA" .
+<actor> "Randy Jones (II)" "13 September 1952" "Raleigh, North Carolina, USA" .
+<actor> "Deborah Kerr" "30 September 1921" "Helensburgh, Scotland, UK" .
+<actor> "The Kinks" " " "" .
+<actor> "Burt Lancaster" "2 November 1913" "New York City, New York, USA" .
+<actor> "Don Lane (I)" "13 November 1933" "New York City, New York, USA" .
+<actor> "Jerry Lee Lewis" "29 September 1935" "Ferriday, Louisiana, USA" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Dean Martin (I)" "7 June 1917" "Steubenville, Ohio, USA" .
+<actor> "Walter Matthau" "1 October 1920" "New York City, New York, USA" .
+<actor> "Roger Moore (I)" "14 October 1927" "Stockwell, London, England, UK" .
+<actor> "The Muppets" " " "" .
+<actor> "Anne Murray (I)" "20 June 1945" "Springhill, Nova Scotia, Canada" .
+<actor> "Jim Nabors" "12 June 1930" "Sylacauga, Alabama, USA" .
+<actor> "Paul Newman (I)" "26 January 1925" "Shaker Heights, Ohio, USA" .
+<actor> "Bert Newton" "23 July 1938" "Melbourne, Victoria, Australia" .
+<actor> "Des O'Connor" "12 January 1932" "Stepney, London, England, UK" .
+<actor> "Kerry Packer" "17 December 1937" "Sydney, New South Wales, Australia" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Vincent Price (I)" "25 May 1911" "St. Louis, Missouri, USA" .
+<actor> "James Randi" "7 August 1928" "Toronto, Ontario, Canada" .
+<actor> "Oliver Reed (III)" " " "" .
+<actor> "Debbie Reynolds (I)" "1 April 1932" "El Paso, Texas, USA" .
+<actor> "Cliff Richard" "14 October 1940" "Lucknow, India" .
+<actor> "Demis Roussos" "15 June 1947" "Alexandria, Egypt" .
+<actor> "Roy Scheider" "10 November 1932" "Orange, New Jersey, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "James Taylor (I)" "12 March 1948" "Boston, Massachusetts, USA" .
+<actor> "John Travolta" "18 February 1954" "Englewood, New Jersey, USA" .
+<actor> "Tina Turner" "26 November 1939" "Nutbush, Tennessee, USA" .
+<actor> "Robin Williams (I)" "21 July 1951" "Chicago, Illinois, USA" .

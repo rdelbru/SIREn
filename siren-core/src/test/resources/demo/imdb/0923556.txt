@@ -1,0 +1,44 @@
+title:Episode dated 18 December 2006
+url:http://www.imdb.com/title/tt0923556/
+<title> ""WWF Raw Is War" Episode dated 18 December 2006" .
+<actor> "Hazim Ali" "6 October 1978" "Chicago, Illinois, USA" .
+<actor> "Shelton Benjamin" "9 July 1975" "Orangeburg, South Carolina, USA" .
+<actor> "Adam Birch (I)" "13 April 1977" "Fairfax, Virginia, USA" .
+<actor> "Garrison Cade" "2 March 1980" "Omaha, Nebraska, USA" .
+<actor> "John Cena" "23 April 1977" "West Newbury, Massachusetts, USA" .
+<actor> "Carlos Colon Jr." "21 February 1979" "San Juan, Puerto Rico" .
+<actor> "Adam Copeland (I)" "30 October 1973" "Orangeville, Ontario, Canada" .
+<actor> "Nick Dinsmore" "17 December 1975" "Jeffersonville, Indiana, USA" .
+<actor> "Jim Duggan (II)" "14 January 1954" "Glens Falls, New York, USA" .
+<actor> "Eddie Fatu" "28 March 1973" "Samoa" .
+<actor> "Kevin Federline" "21 March 1978" "Fresno County, California, USA" .
+<actor> "Ric Flair" "25 February 1949" "Memphis, Tennessee, USA" .
+<actor> "Nelson Frazier Jr." "14 February 1968" "Memphis, Tennessee, USA" .
+<actor> "Shad Gaspard" " " "" .
+<actor> "Derek Graham-Couch" " " "Oban, Argyll, Scotland, UK" .
+<actor> "Todd Grisham" "9 January 1976" "Hattiesburg, Mississippi, USA" .
+<actor> "Charlie Haas" "27 March 1972" "Edmond, Oklahoma, USA" .
+<actor> "Jeff Hardy (I)" "31 August 1977" "Cameron, North Carolina, USA" .
+<actor> "John Hennigan (I)" "3 October 1979" "Los Angeles, California, USA" .
+<actor> "Francisco Islas (I)" "3 December 1973" "Tulancingo, Hidalgo, Mexico" .
+<actor> "Mickie James" "31 August 1979" "Richmond, Virginia, USA" .
+<actor> "Maria Kanellis" "25 February 1982" "Ottawa, Illinois, USA" .
+<actor> "Jerry Lawler" "29 November 1949" "Memphis, Tennessee, USA" .
+<actor> "Paul Levesque" "27 July 1969" "Nashua, New Hampshire, USA" .
+<actor> "Steve Lombardi (II)" "18 April 1961" "Brooklyn, New York, USA" .
+<actor> "Shawn Michaels (V)" "22 July 1965" "Phoenix, Arizona, USA" .
+<actor> "Chris Mordetzky" "8 January 1983" "Santa Monica, California, USA" .
+<actor> "Sean Morley" "16 March 1971" "Markham, Ontario, Canada" .
+<actor> "Russell Murray (VI)" "28 March 1976" "Oban, Argyll, Scotland, UK" .
+<actor> "Randy Orton" "1 April 1980" "Knoxville, Tennessee, USA" .
+<actor> "Jayson Paul" "10 December 1984" "Harlem, New York City, New York, USA" .
+<actor> "Melina Perez" "9 March 1979" "Los Angeles, California, USA" .
+<actor> "Oleg Aleksandrovich Prudius" "4 July 1972" "Yugoslavia" .
+<actor> "Trevor Rhodes" "10 September 1980" "Coffeyville, Kansas, USA" .
+<actor> "Jim Ross (III)" "3 January 1952" "Fort Bragg, California, USA" .
+<actor> "Ron Simmons (I)" "15 May 1958" "Warner Robins, Georgia, USA" .
+<actor> "Sgt. Slaughter" "27 August 1948" "Detroit, Michigan, USA" .
+<actor> "Gene Snitsky" "14 January 1970" "Nesquehoning, Pennsylvania, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Michael Francis Tobin" " " "" .
+<actor> "Lisa Marie Varon" "10 February 1971" "San Bernardino, California, USA" .

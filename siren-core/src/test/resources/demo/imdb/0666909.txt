@@ -1,0 +1,6 @@
+title:Episode dated 21 February 1992
+url:http://www.imdb.com/title/tt0666909/
+<title> ""The Oprah Winfrey Show" Episode dated 21 February 1992" .
+<actor> "Oprah Winfrey" "29 January 1954" "Kosciusko, Mississippi, USA" .
+<actor> "Elisabeth Shue" "6 October 1963" "Wilmington, Delaware, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

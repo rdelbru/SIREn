@@ -1,0 +1,68 @@
+title:A Century of Cinema
+url:http://www.imdb.com/title/tt0109390/
+<title> "A Century of Cinema" .
+<director> "Caroline Thomas (II)" " " "" .
+<writer> "Bob Thomas (III)" " 1922" "San Diego, California, USA" .
+<actor> "Don Ameche" "31 May 1908" "Kenosha, Wisconsin, USA" .
+<actor> "Richard Attenborough" "29 August 1923" "Cambridge, Cambridgeshire, England, UK" .
+<actor> "Dan Aykroyd" "1 July 1952" "Ottawa, Ontario, Canada" .
+<actor> "Kim Basinger" "8 December 1953" "Athens, Georgia, USA" .
+<actor> "Milton Berle" "12 July 1908" "New York City, New York, USA" .
+<actor> "George Burns" "20 January 1896" "New York City, New York, USA" .
+<actor> "Tim Burton (I)" "25 August 1958" "Burbank, California, USA" .
+<actor> "Nicolas Cage" "7 January 1964" "Long Beach, California, USA" .
+<actor> "John Carradine" "5 February 1906" "New York City, New York, USA" .
+<actor> "Marge Champion" "2 September 1919" "Los Angeles, California, USA" .
+<actor> "Geraldine Chaplin" "31 July 1944" "Santa Monica, California, USA" .
+<actor> "Chevy Chase" "8 October 1943" "Woodstock, New York, USA" .
+<actor> "Roger Corman" "5 April 1926" "Detroit, Michigan, USA" .
+<actor> "Kevin Costner" "18 January 1955" "Lynwood, California, USA" .
+<actor> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<actor> "Tony Curtis (I)" "3 June 1925" "The Bronx, New York, USA" .
+<actor> "Joe Dante (I)" "28 November 1946" "Morristown, New Jersey, USA" .
+<actor> "Kirk Douglas (I)" "9 December 1916" "Amsterdam, New York, USA" .
+<actor> "Robert Downey Jr." "4 April 1965" "New York City, New York, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Alice Faye (I)" "5 May 1915" "New York City, New York, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Harrison Ford (I)" "13 July 1942" "Chicago, Illinois, USA" .
+<actor> "Morgan Freeman (I)" "1 June 1937" "Memphis, Tennessee, USA" .
+<actor> "Janet Gaynor (I)" "6 October 1906" "Philadelphia, Pennsylvania, USA" .
+<actor> "Kathryn Grayson" "9 February 1922" "Winston-Salem, North Carolina, USA" .
+<actor> "Jack Haley Jr." "25 October 1933" "Los Angeles, California, USA" .
+<actor> "Charlton Heston" "4 October 1923" "Evanston, Illinois, USA" .
+<actor> "Bob Hope (I)" "29 May 1903" "Eltham, London, England, UK" .
+<actor> "Anthony Hopkins" "31 December 1937" "Margam, Port Talbot, West Glamorgan, Wales, UK" .
+<actor> "Bob Hoskins" "26 October 1942" "Bury St. Edmunds, Suffolk, England, UK" .
+<actor> "Norman Jewison" "21 July 1926" "Toronto, Ontario, Canada" .
+<actor> "Jessica Lange" "20 April 1949" "Cloquet, Minnesota, USA" .
+<actor> "Spike Lee" "20 March 1957" "Atlanta, Georgia, USA" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Bette Midler" "1 December 1945" "Honolulu, Hawaii, USA" .
+<actor> "Ann Miller (I)" "12 April 1923" "Nacogdoches, Texas, USA" .
+<actor> "Liza Minnelli" "12 March 1946" "Los Angeles, California, USA" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Maureen O'Hara (I)" "17 August 1920" "Ranelagh, County Dublin, Ireland (now Ranelagh, Dublin, Ireland)" .
+<actor> "Sidney Poitier" "20 February 1927" "Miami, Florida, USA" .
+<actor> "Vincent Price (I)" "25 May 1911" "St. Louis, Missouri, USA" .
+<actor> "Richard Pryor" "1 December 1940" "Peoria, Illinois, USA" .
+<actor> "Dennis Quaid" "9 April 1954" "Houston, Texas, USA" .
+<actor> "Burt Reynolds (I)" "11 February 1936" "Waycross, Georgia, USA" .
+<actor> "Hal Roach (I)" "14 January 1892" "Elmira, New York, USA" .
+<actor> "Julia Roberts (I)" "28 October 1967" "Smyrna, Georgia, USA" .
+<actor> "Cesar Romero (I)" "15 February 1907" "New York City, New York, USA" .
+<actor> "Mickey Rooney (I)" "23 September 1920" "Brooklyn, New York, USA" .
+<actor> "Meg Ryan (I)" "19 November 1961" "Fairfield, Connecticut, USA" .
+<actor> "Mark Rydell" "23 March 1934" "New York City, New York, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "James Stewart (I)" "20 May 1908" "Indiana, Pennsylvania, USA" .
+<actor> "Meryl Streep" "22 June 1949" "Summit, New Jersey, USA" .
+<actor> "Donald Sutherland (I)" "17 July 1935" "Saint John, New Brunswick, Canada" .
+<actor> "Jessica Tandy" "7 June 1909" "London, England, UK" .
+<actor> "Paul Verhoeven (I)" "18 July 1938" "Amsterdam, Noord-Holland, Netherlands" .
+<actor> "Denzel Washington" "28 December 1954" "Mount Vernon, New York, USA" .
+<actor> "Shelley Winters" "18 August 1920" "St. Louis, Missouri, USA" .
+<actor> "Robert Wise (I)" "10 September 1914" "Winchester, Indiana, USA" .

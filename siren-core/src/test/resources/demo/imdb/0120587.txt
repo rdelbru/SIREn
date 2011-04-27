@@ -1,0 +1,22 @@
+title:Antz
+url:http://www.imdb.com/title/tt0120587/
+<title> "Antz" .
+<director> "Eric Darnell (I)" " " "" .
+<director> "Tim Johnson (V)" " " "" .
+<writer> "Todd Alcott" "22 October 1961" "Crystal Lake, Illinois, USA" .
+<writer> "Chris Weitz" " 1969" "New York City, New York, USA" .
+<actor> "Woody Allen" "1 December 1935" "Brooklyn, New York, USA" .
+<actor> "Dan Aykroyd" "1 July 1952" "Ottawa, Ontario, Canada" .
+<actor> "Anne Bancroft (I)" "17 September 1931" "The Bronx, New York, USA" .
+<actor> "Jane Curtin" "6 September 1947" "Cambridge, Massachusetts, USA" .
+<actor> "Danny Glover" "22 July 1946" "San Francisco, California, USA" .
+<actor> "Gene Hackman" "30 January 1930" "San Bernardino, California, USA" .
+<actor> "Jennifer Lopez (I)" "24 July 1969" "The Bronx, New York, USA" .
+<actor> "John Mahoney (I)" "20 June 1940" "Blackpool, Lancashire, England, UK" .
+<actor> "Paul Mazursky" "25 April 1930" "Brooklyn, New York, USA" .
+<actor> "Grant Shaud" "27 February 1961" "Evanston, Illinois, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Christopher Walken" "31 March 1943" "Queens, New York, USA" .
+<actor> "Jim Cummings (I)" "3 November 1952" "Youngstown, Ohio, USA" .
+<actor> "April Winchell" "4 January 1960" "New York City, New York, USA" .

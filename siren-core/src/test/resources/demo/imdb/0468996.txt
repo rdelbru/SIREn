@@ -1,0 +1,4 @@
+title:"Hogan Knows Best"
+url:http://www.imdb.com/title/tt0468996/
+<title> ""Hogan Knows Best"" .
+<director> "Scott Bennett (V)" <birthDate> " " <birthPlace> "" .

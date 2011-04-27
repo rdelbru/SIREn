@@ -1,0 +1,22 @@
+title:Episode dated 11 January 2008
+url:http://www.imdb.com/title/tt1170079/
+<title> ""Entertainment Tonight" Episode dated 11 January 2008" .
+<actor> "Nikki Blonsky" "9 November 1988" "Great Neck, New York, USA" .
+<actor> "Sierra Boggess" "20 May 1982" "Denver, Colorado, USA" .
+<actor> "George Clooney" "6 May 1961" "Lexington, Kentucky, USA" .
+<actor> "Ice Cube" "15 June 1969" "Los Angeles, California, USA" .
+<actor> "Kevin Frazier (I)" "20 May 1965" "" .
+<actor> "Kathie Lee Gifford" "16 August 1953" "Paris, France" .
+<actor> "Mary Hart (I)" "8 November 1950" "Sioux Falls, South Dakota, USA" .
+<actor> "Lena Headey" "3 October 1973" "Bermuda" .
+<actor> "Jennifer Love Hewitt" "21 February 1979" "Waco, Texas, USA" .
+<actor> "Eva Longoria Parker" "15 March 1975" "Corpus Christi, Texas, USA" .
+<actor> "Mo'Nique" "11 December 1967" "Woodlawn, Maryland, USA" .
+<actor> "Tracy Morgan (II)" "10 November 1968" "The Bronx, New York, USA" .
+<actor> "Rosie O'Donnell" "21 March 1962" "Commack, Long Island, New York, USA" .
+<actor> "Lisa Rinna (I)" "11 July 1963" "Medford, Oregon, USA" .
+<actor> "Gabourey 'Gabbie' Sidibe" " " "" .
+<actor> "Richard Simmons (I)" "12 July 1948" "New Orleans, Louisiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Mark Steines" "7 June 1964" "Dubuque, Iowa, USA" .
+<actor> "Cheryl Woodcock (III)" " " "" .

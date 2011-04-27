@@ -1,0 +1,105 @@
+
+======================= Release 0.2.x 2010-xx-xx =======================
+
+Bugs
+
+* [SRN-25] Counting of matchers in SirenDisjunctionScorer is wrong
+* [SRN-79] Make URINormalisationFilter less agressive: token length minimum 
+           limit is now set to 3.
+* [SRN-80] Wrong position increment in LocalnameFilter if no previous tokens
+           before final tokens 
+* [SRN-82] ArrayOutOfBoundException in PackedIntSirenPayload
+* [SRN-87] URI normalisation problem in NTripleIndexing demo
+
+Improvements
+
+* [SRN-3] Extract literal analyzer from the tuple tokenizer
+* [SRN-75] Upgraded to lucene/solr 3.1-dev branch
+* [SRN-76] Add localname maximum length limit to URILocalnameNormalisation 
+           filter
+* [SRN-100] Improve user-readable version of the query
+
+New Features
+
+* [SRN-96] Add filter to expand accented words with non-accented form
+* [SRN-99] Boolean query group support in cell query
+
+
+======================= Release 0.2.0 2010-07-26 =======================
+
+Bug Fixes
+
+* [SRN-61] SirenTupleQuery#getClause() returns a SirenCellClause array
+* [SRN-64] Lucene interface enforces #incrementToken method to be final
+
+Improvements
+
+* [SRN-69] Make URINormalisation configurable in TupleAnalyzer
+* [SRN-70] Use packed integers for encoding payload data
+* [SRN-71] Add bnode filtering in analyzers
+
+======================= Release 0.2 RC6 2010-07-07 =======================
+
+Bug Fixes
+
+* [SRN-65] SirenPhraseQuery documentation refers to QueryParser
+* [SRN-67] SirenPayload is storing position information that is not used
+
+Improvements
+
+* [SRN-66] Make URINormalisationFilter less aggressive
+* [SRN-68] Upgrade to Lucene 3.0.2
+
+======================= Release 0.2 RC5 2010-04-14 =======================
+
+Bug Fixes
+
+* [SRN-57] SirenConjunctionScorer and SirenCellConjunctionScorer give a very 
+           large score to entity with multiples matches
+* [SRN-58] tokenStream and reusableTokenStream must be final
+
+Improvements
+
+* [SRN-55] Move demo resource files to test directory
+
+======================= Release 0.2 RC4 2010-03-12 =======================
+
+Bug Fixes
+
+* [SRN-52] BufferOverflow in URINormalisationFilter for large URIs
+
+Improvements
+
+* [SRN-53] Performance problem in TupleAnalyzer
+* [SRN-54] Add a WhitespaceTupleAnalyzer
+
+======================= Release 0.2 RC3 2010-03-11 =======================
+
+Improvements
+
+* [SRN-48] Upgrade to Lucene 3.0.1
+
+======================= Release 0.2 RC2 2010-02-08 =======================
+
+Bug Fixes
+
+* [SRN-44] NPE in scorer due to null field norms
+* [SRN-45] NPE when using BooleanQuery with excluded tuple
+* [SRN-46] NPE when using BooleanQuery with excluded cell
+
+======================= Release 0.2 RC1 2010-02-04 =======================
+
+Bug Fixes
+
+* [SRN-40] SirenConjunctionScorer is storing unnecessary term occurrences
+* [SRN-39] Exclusion of cells in a tuple is not working
+* [SRN-38] NPE when using ReqExcl scorer
+* [SRN-36] Tuple and Cell constraints could not work in certain case
+
+New Features
+
+* [SRN-37] Implement Tuple Constraint
+
+Improvements
+
+* [SRN-42] Migrating to Lucene 3.0

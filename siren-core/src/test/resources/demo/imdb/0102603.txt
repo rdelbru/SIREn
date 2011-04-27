@@ -1,0 +1,21 @@
+title:Oscar
+url:http://www.imdb.com/title/tt0102603/
+<title> "Oscar" .
+<director> "John Landis (I)" "3 August 1950" "Chicago, Illinois, USA" .
+<writer> "Claude Magnier (I)" "20 January 1920" "Paris, France" .
+<writer> "Michael Barrie (I)" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ornella Muti" "9 March 1955" "Rome, Italy" .
+<actor> "Don Ameche" "31 May 1908" "Kenosha, Wisconsin, USA" .
+<actor> "Peter Riegert" "11 April 1947" "New York City, New York, USA" .
+<actor> "Tim Curry (I)" "19 April 1946" "Grappenhall, Cheshire, England, UK" .
+<actor> "Vincent Spano" "18 October 1962" "Brooklyn, New York, USA" .
+<actor> "Marisa Tomei" "4 December 1964" "Brooklyn, New York, USA" .
+<actor> "Eddie Bracken" "7 February 1915" "Astoria, New York, USA" .
+<actor> "Linda Gray (I)" "12 September 1940" "Santa Monica, California, USA" .
+<actor> "Chazz Palminteri" "15 May 1952" "New York City, New York, USA" .
+<actor> "Kurtwood Smith" "3 July 1943" "New Lisbon, Wisconsin, USA" .
+<actor> "Yvonne De Carlo" "1 September 1922" "Vancouver, British Columbia, Canada" .
+<actor> "Ken Howard (I)" "28 March 1944" "El Centro, California, USA" .
+<actor> "William Atherton" "30 July 1947" "Orange, Connecticut, USA" .
+<actor> "Martin Ferrero" "29 September 1947" "Brockport, New York, USA" .

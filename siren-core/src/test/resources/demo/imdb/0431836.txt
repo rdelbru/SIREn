@@ -1,0 +1,17 @@
+title:Iron and Beyond
+url:http://www.imdb.com/title/tt0431836/
+<title> "Iron and Beyond" .
+<director> "Dave McVeigh (I)" " " "" .
+<director> "Scott McVeigh" " " "" .
+<writer> "Dave McVeigh (I)" " " "" .
+<writer> "Scott McVeigh" " " "" .
+<actor> "Dwayne Johnson (I)" "2 May 1972" "Hayward, California, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "John Milius" "11 April 1944" "St. Louis, Missouri, USA" .
+<actor> "James Cameron (I)" "16 August 1954" "Kapuskasing, Ontario, Canada" .
+<actor> "George Butler (II)" " 1944" "London, England, UK" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Bill Phillips (XVI)" " " "" .
+<actor> "John McTiernan (I)" "8 January 1951" "Albany, New York, USA" .
+<actor> "Liev Schreiber" "4 October 1967" "San Francisco, California, USA" .

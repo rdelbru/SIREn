@@ -1,0 +1,21 @@
+title:Victory
+url:http://www.imdb.com/title/tt0083284/
+<title> "Victory" .
+<director> "John Huston (I)" "5 August 1906" "Nevada, Missouri, USA" .
+<writer> "Yabo Yablonsky" "7 April 1931" "New York City, New York, USA" .
+<writer> "Djordje Milicevic" " 1942" "Belgrade, Serbia, Yugoslavia" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Michael Caine (I)" "14 March 1933" "Rotherhithe, London, England, UK" .
+<actor> "Pelé" "23 October 1940" "Três Corações, Minas Gerais, Brazil" .
+<actor> "Bobby Moore (I)" "12 April 1941" "London, England, UK" .
+<actor> "Osvaldo Ardiles" "3 August 1952" "Córdoba, Argentina" .
+<actor> "Paul Van Himst" "2 October 1943" "Sint-Pieters-Leeuw, Belgium" .
+<actor> "Kazimierz Deyna" "23 October 1947" "Starogard Gdanski, Poland" .
+<actor> "Hallvar Thoresen" "12 April 1957" "Larvik, Norway" .
+<actor> "Mike Summerbee" "15 December 1942" "Altrincham, Cheshire, England, UK" .
+<actor> "Co Prins" "5 June 1938" "Amsterdam, Noord-Holland, Netherlands" .
+<actor> "Russell Osman" "14 February 1959" "Ilkeston, Derbyshire, England, UK" .
+<actor> "John Wark (II)" "4 August 1957" "Glasgow, Scotland, UK" .
+<actor> "Søren Lindsted" "2 February 1957" "Denmark" .
+<actor> "Kevin O'Callaghan" "19 October 1961" "Dagenham, Essex, England, UK" .
+<actor> "Max von Sydow (I)" "10 April 1929" "Lund, Skåne län, Sweden" .

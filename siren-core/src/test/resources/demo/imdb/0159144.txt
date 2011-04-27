@@ -1,0 +1,34 @@
+title:Your Studio and You
+url:http://www.imdb.com/title/tt0159144/
+<title> "Your Studio and You" .
+<director> "Trey Parker (I)" "19 October 1969" "Conifer, Colorado, USA" .
+<writer> "Trey Parker (I)" "19 October 1969" "Conifer, Colorado, USA" .
+<writer> "Matt Stone (I)" "26 May 1971" "Houston, Texas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Michael J. Fox (I)" "9 June 1961" "Edmonton, Alberta, Canada" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "James Cameron (I)" "16 August 1954" "Kapuskasing, Ontario, Canada" .
+<actor> "John Singleton (I)" "6 January 1968" "Los Angeles, California, USA" .
+<actor> "David Zucker (I)" "16 October 1947" "Milwaukee, Wisconsin, USA" .
+<actor> "Jerry Zucker" "11 March 1950" "Milwaukee, Wisconsin, USA" .
+<actor> "Brian Grazer" "12 July 1951" "Los Angeles, California, USA" .
+<actor> "Jeffrey Katzenberg" "21 December 1950" "New York City, New York, USA" .
+<actor> "Andrew Bergman" "20 February 1945" "Queens, New York City, New York, USA" .
+<actor> "Jessica Knoblauch" " " "" .
+<actor> "Trey Parker (I)" "19 October 1969" "Conifer, Colorado, USA" .
+<actor> "Matt Stone (I)" "26 May 1971" "Houston, Texas, USA" .
+<actor> "Chas. Allan" " " "" .
+<actor> "Dian Bachar" "26 October 1970" "Denver, Colorado, USA" .
+<actor> "Shaun Cassidy" "27 September 1958" "Los Angeles, California, USA" .
+<actor> "Robin Cook (I)" "4 May 1940" "Brooklyn, New York, USA" .
+<actor> "Shelley Fabares" "19 January 1944" "Santa Monica, California, USA" .
+<actor> "Heavy D" "24 May 1967" "Mount Vernon, New York, USA" .
+<actor> "Barry Kemp (I)" " " "" .
+<actor> "Angela Lansbury" "16 October 1925" "London, England, UK" .
+<actor> "Lucy Lawless" "29 March 1968" "Mount Albert, Auckland, New Zealand" .
+<actor> "Mike Lobell" " " "" .
+<actor> "Traci Lords" "7 May 1968" "Steubenville, Ohio, USA" .
+<actor> "Kevin Misher" " " "" .
+<actor> "Alan Naggar" " " "" .
+<actor> "Marty Stuart" "30 September 1958" "Philadelphia, Mississippi, USA" .

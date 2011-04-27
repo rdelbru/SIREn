@@ -1,0 +1,10 @@
+title:Art of War: Completing Rambo
+url:http://www.imdb.com/title/tt1394308/
+<title> "Art of War: Completing Rambo" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kevin King Templeton" " " "" .
+<actor> "Sean Albertson" "29 October 1968" "New York City, New York, USA" .
+<actor> "Paul Harb" " " "" .
+<actor> "Leslie Shatz" " " "" .
+<actor> "Perry Robertson" " " "" .
+<actor> "Scott Sanders (III)" " " "" .

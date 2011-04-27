@@ -1,0 +1,7 @@
+title:"Good Morning America"
+url:http://www.imdb.com/title/tt0072506/
+<title> ""Good Morning America"" .
+<director> "Dan Funk" "7 October 1953" "Cleveland, Ohio, USA" .
+<director> "Bob McKinnon (II)" " " "" .
+<writer> "Edmund Levin" " " "" .
+<writer> "Margaret Traub-Aguirre" " " "" .

@@ -1,0 +1,20 @@
+title:Resurrecting the Champ
+url:http://www.imdb.com/title/tt0416185/
+<title> "Resurrecting the Champ" .
+<director> "Rod Lurie" "15 May 1962" "Israel" .
+<writer> "Michael Bortman" " " "" .
+<writer> "Allison Burnett" " " "Cleveland Heights, Ohio, USA" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "Josh Hartnett" "21 July 1978" "San Francisco, California, USA" .
+<actor> "Kathryn Morris (I)" "28 January 1969" "Cincinnati, Ohio, USA" .
+<actor> "Dakota Goyo" "22 August 1999" "Toronto, Canada" .
+<actor> "Alan Alda" "28 January 1936" "New York City, New York, USA" .
+<actor> "Rachel Nichols (I)" "8 January 1980" "Augusta, Maine, USA" .
+<actor> "Teri Hatcher" "8 December 1964" "Palo Alto, California, USA" .
+<actor> "Nick Sandow (I)" " " "" .
+<actor> "David Paymer" "30 August 1954" "Oceanside, Long Island, New York, USA" .
+<actor> "Harry Lennix" "16 November 1964" "Chicago, Illinois, USA" .
+<actor> "Peter Coyote" "10 October 1941" "Manhattan, New York, USA" .
+<actor> "Ryan McDonald (II)" "5 August 1984" "Surrey, British Columbia, Canada" .
+<actor> "Chris Ippolito" " " "" .
+<actor> "Jameson Trenholm" " " "" .

@@ -1,0 +1,26 @@
+title:Episode dated 10 October 2008
+url:http://www.imdb.com/title/tt1306393/
+<title> ""Entertainment Tonight" Episode dated 10 October 2008" .
+<actor> "Catherine Bell" "14 August 1968" "London, England, UK" .
+<actor> "Jann Carl" "19 May 1960" "Carthage, Missouri, USA" .
+<actor> "Peter Cook (II)" "1 January 1959" "New Jersey, USA" .
+<actor> "Leonardo DiCaprio" "11 November 1974" "Hollywood, California, USA" .
+<actor> "Linda Ellerbee" "15 August 1944" "Bryan, Texas, USA" .
+<actor> "Kevin Frazier (I)" "20 May 1965" "" .
+<actor> "Mary Hart (I)" "8 November 1950" "Sioux Falls, South Dakota, USA" .
+<actor> "Jennifer Hudson (I)" "12 September 1981" "Chicago, Illinois, USA" .
+<actor> "Alicia Keys" "25 January 1980" "New York City, New York, USA" .
+<actor> "Queen Latifah" "18 March 1970" "Newark, New Jersey, USA" .
+<actor> "Eva Longoria Parker" "15 March 1975" "Corpus Christi, Texas, USA" .
+<actor> "John McCain (I)" "29 August 1936" "Canal Zone, Panama" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Barack Obama" "4 August 1961" "Honolulu, Hawaii, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Dennis Quaid" "9 April 1954" "Houston, Texas, USA" .
+<actor> "Sara Ramirez (I)" "31 August 1975" "Mazatlan, Sinaloa, Mexico" .
+<actor> "Tim Robbins (I)" "16 October 1958" "West Covina, California, USA" .
+<actor> "Britney Spears" "2 December 1981" "Kentwood, Louisiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Meredith Vieira" "30 December 1953" "Providence, Rhode Island, USA" .
+<actor> "Barbara Walters" "25 September 1929" "Boston, Massachusetts, USA" .
+<actor> "Rumer Willis" "16 August 1988" "Paducah, Kentucky, USA" .

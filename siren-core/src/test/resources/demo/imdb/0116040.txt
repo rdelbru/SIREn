@@ -1,0 +1,19 @@
+title:Daylight
+url:http://www.imdb.com/title/tt0116040/
+<title> "Daylight" .
+<director> "Rob Cohen (I)" "12 March 1949" "Cornwall, New York, USA" .
+<writer> "Leslie Bohem" " 1952" "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Viggo Mortensen" "20 October 1958" "Manhattan, New York City, New York, USA" .
+<actor> "Dan Hedaya" "24 July 1940" "Brooklyn, New York, USA" .
+<actor> "Jay O. Sanders" "16 April 1953" "Austin, Texas, USA" .
+<actor> "Karen Young (I)" "29 September 1958" "Pequannock, New Jersey, USA" .
+<actor> "Claire Bloom (I)" "15 February 1931" "London, England, UK" .
+<actor> "Vanessa Bell Calloway" "20 March 1957" "Cleveland, Ohio, USA" .
+<actor> "Renoly Santiago" "15 March 1974" "Lajas, Puerto Rico" .
+<actor> "Colin Fox (I)" "20 November 1938" "Aldershot, Ontario, Canada" .
+<actor> "Danielle Harris" "1 June 1977" "Daytona Beach, Florida, USA" .
+<actor> "Trina McGee" "6 September 1969" "The Bronx, New York, USA" .
+<actor> "Marcello Thedford" " " "" .
+<actor> "Sage Stallone" "5 May 1976" "Los Angeles, California, USA" .
+<actor> "Jo Anderson (I)" "29 June 1958" "Tenafly, New Jersey, USA" .

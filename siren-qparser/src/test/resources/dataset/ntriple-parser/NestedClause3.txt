@@ -1,0 +1,37 @@
+ClauseQuery(
+  UnaryClause(
+    QueryExpression(
+      ClauseQuery(
+        BinaryClause(
+          SimpleExpression(
+            TriplePattern(
+              URIPattern(
+                s
+              ) [URIPattern]
+              URIPattern(
+                p
+              ) [URIPattern]
+              URIPattern(
+                o
+              ) [URIPattern]
+            ) [TriplePattern]
+          ) [SimpleExpression]
+          0
+          SimpleExpression(
+            TriplePattern(
+              URIPattern(
+                s
+              ) [URIPattern]
+              URIPattern(
+                p2
+              ) [URIPattern]
+              URIPattern(
+                o2
+              ) [URIPattern]
+            ) [TriplePattern]
+          ) [SimpleExpression]
+        ) [BinaryClause]
+      ) [ClauseQuery]
+    ) [QueryExpression]
+  ) [UnaryClause]
+) [ClauseQuery]

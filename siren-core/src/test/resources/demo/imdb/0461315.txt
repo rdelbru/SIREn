@@ -1,0 +1,5 @@
+title:Poe
+url:http://www.imdb.com/title/tt0461315/
+<title> "Poe" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

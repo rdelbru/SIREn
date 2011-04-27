@@ -1,0 +1,7 @@
+title:"The Tonight Show Starring Johnny Carson"
+url:http://www.imdb.com/title/tt0055708/
+<title> ""The Tonight Show Starring Johnny Carson"" .
+<director> "Dick Carson" " " "" .
+<director> "Frederick De Cordova" "27 October 1910" "New York City, New York, USA" .
+<writer> "Hank Bradford" " " "" .
+<writer> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .

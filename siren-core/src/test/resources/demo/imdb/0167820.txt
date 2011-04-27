@@ -1,0 +1,23 @@
+title:A Century of Science Fiction
+url:http://www.imdb.com/title/tt0167820/
+<title> "A Century of Science Fiction" .
+<director> "Ted Newsom" "3 December 1952" "Portland, Oregon, USA" .
+<writer> "Ted Newsom" "3 December 1952" "Portland, Oregon, USA" .
+<actor> "Yul Brynner" "11 July 1920" "Vladivostok, Primorsky province, Russia" .
+<actor> "Kevin Costner" "18 January 1955" "Lynwood, California, USA" .
+<actor> "Charlton Heston" "4 October 1923" "Evanston, Illinois, USA" .
+<actor> "Val Kilmer" "31 December 1959" "Los Angeles, California, USA" .
+<actor> "Burt Lancaster" "2 November 1913" "New York City, New York, USA" .
+<actor> "Christopher Lee (I)" "27 May 1922" "Belgravia, London, England, UK" .
+<actor> "Eddie Murphy (I)" "3 April 1961" "Brooklyn, New York, USA" .
+<actor> "Leonard Nimoy" "26 March 1931" "Boston, Massachusetts, USA" .
+<actor> "Vincent Price (I)" "25 May 1911" "St. Louis, Missouri, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "William Shatner" "22 March 1931" "Montreal, Quebec, Canada" .
+<actor> "Charlie Sheen (I)" "3 September 1965" "New York City, New York, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Jean-Claude Van Damme" "18 October 1960" "Berchem-Sainte-Agathe, Brussels, Belgium" .
+<actor> "Sigourney Weaver" "8 October 1949" "New York City, New York, USA" .
+<actor> "Raquel Welch" "5 September 1940" "Chicago, Illinois, USA" .

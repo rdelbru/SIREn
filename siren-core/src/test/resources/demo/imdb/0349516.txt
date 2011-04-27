@@ -1,0 +1,18 @@
+title:Les guignols, les dix premières années
+url:http://www.imdb.com/title/tt0349516/
+<title> "Les guignols, les dix premières années" .
+<director> "Patrick Menais" " " "" .
+<actor> "Alain de Greef" " " "" .
+<actor> "Arnold Boiseau" " " "" .
+<actor> "Alain Duverne" " " "" .
+<actor> "Charles Biétry" "5 November 1943" "Rennes, France" .
+<actor> "Patrick Poivre d'Arvor" "20 September 1947" "Reims, Marne, France" .
+<actor> "Yves Lecoq" "4 May 1946" "Paris, France" .
+<actor> "Benoît Delépine" "30 August 1958" "France" .
+<actor> "Pierre Lescure" "2 July 1945" "Choisy-le-Roi, Seine [now Val-de-Marne], France" .
+<actor> "Robert Hue" "19 October 1946" "Cormeilles-en-Parisis, Seine-et-Oise [now Val-d'Oise], France" .
+<actor> "Arlette Laguiller" "18 March 1940" "Les Lilas, Seine-Saint-Denis, France" .
+<actor> "Franz-Olivier Giesbert" "18 January 1949" "Wilmington, Delaware, USA" .
+<actor> "Dominique Strauss-Kahn" "25 April 1949" "Neuilly-sur-Seine, Seine [now Hauts-de-Seine], France" .
+<actor> "Jean-Pierre Gaillard" " " "" .
+<actor> "Alexandre Charlot" " " "" .

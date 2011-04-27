@@ -1,0 +1,83 @@
+title:Celebrity Naked Ambition
+url:http://www.imdb.com/title/tt0404862/
+<title> "Celebrity Naked Ambition" .
+<director> "Bruce Hepton" " " "" .
+<writer> "Chuck Cartmel" " " "" .
+<writer> "Harry Harrold" " " "" .
+<actor> "Nick Frost (I)" "28 March 1972" "Essex, England, UK" .
+<actor> "David Aaronovitch" "8 July 1954" "London, England, UK" .
+<actor> "Keith Allen (I)" "2 June 1953" "Llanelli, South Wales, UK" .
+<actor> "Pamela Anderson (I)" "1 July 1967" "Ladysmith, British Columbia, Canada" .
+<actor> "Julie Andrews (I)" "1 October 1935" "Walton-on-Thames, Surrey, England, UK" .
+<actor> "Tom Baker (I)" "20 January 1934" "Liverpool, England, UK" .
+<actor> "Anne Bancroft (I)" "17 September 1931" "The Bronx, New York, USA" .
+<actor> "Brigitte Bardot" "28 September 1934" "Paris, France" .
+<actor> "Kim Basinger" "8 December 1953" "Athens, Georgia, USA" .
+<actor> "Alan Bates (I)" "17 February 1934" "Allestree, Derbyshire, England, UK" .
+<actor> "Kathy Bates (I)" "28 June 1948" "Memphis, Tennessee, USA" .
+<actor> "Sean Bean" "17 April 1959" "Sheffield, South Yorkshire, England, UK" .
+<actor> "Lynda Bellingham" "31 May 1948" "Montréal, Québec, Canada" .
+<actor> "Elizabeth Berkley" "28 July 1972" "Farmington Hills, Michigan, USA" .
+<actor> "Halle Berry" "14 August 1966" "Cleveland, Ohio, USA" .
+<actor> "John Beyer (I)" " " "" .
+<actor> "Helena Bonham Carter" "26 May 1966" "Golders Green, London, England, UK" .
+<actor> "Phoebe Cates" "16 July 1963" "New York City, New York, USA" .
+<actor> "Kim Cattrall" "21 August 1956" "Liverpool, England, UK" .
+<actor> "Andrew Collins (III)" "4 March 1965" "Northampton, England, UK" .
+<actor> "Russell Crowe" "7 April 1964" "Wellington, North Island, New Zealand" .
+<actor> "Catherine Deneuve" "22 October 1943" "Paris, France" .
+<actor> "Bo Derek" "20 November 1956" "Long Beach, California, USA" .
+<actor> "Farrah Fawcett" "2 February 1947" "Corpus Christi, Texas, USA" .
+<actor> "Mike Fenton" " " "" .
+<actor> "Tara Fitzgerald (I)" "18 September 1967" "Cuckfield, Sussex, England, UK" .
+<actor> "Michael Forest (I)" "17 April 1929" "Harvey, North Dakota, USA" .
+<actor> "Kerry Fox (I)" "30 July 1966" "Wellington, New Zealand" .
+<actor> "Jeanine Gearity" " " "" .
+<actor> "Richard Gere" "31 August 1949" "Philadelphia, Pennsylvania, USA" .
+<actor> "Haji (I)" "24 January 1946" "Québec, Canada" .
+<actor> "David Hasselhoff" "17 July 1952" "Baltimore, Maryland, USA" .
+<actor> "Hugh M. Hefner" "9 April 1926" "Chicago, Illinois, USA" .
+<actor> "Elizabeth Hurley (I)" "10 June 1965" "Basingstoke, Hampshire, England, UK" .
+<actor> "Oliver James (II)" " 1953" "" .
+<actor> "Angelina Jolie" "4 June 1975" "Los Angeles, California, USA" .
+<actor> "Patsy Kensit" "4 March 1968" "Hounslow, London, England, UK" .
+<actor> "Nicole Kidman" "20 June 1967" "Honolulu, Hawaii, USA" .
+<actor> "Zalman King" "23 May 1942" "Trenton, New Jersey, USA" .
+<actor> "Kitten (I)" "12 June 1975" "Los Angeles, California, USA" .
+<actor> "Randal Kleiser" "20 July 1946" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sylvia Kristel" "28 September 1952" "Utrecht, Utrecht, Netherlands" .
+<actor> "Karen Krizanovich" " " "" .
+<actor> "Hedy Lamarr" "9 November 1914" "Vienna, Austria-Hungary [now Austria]" .
+<actor> "Jennifer Jason Leigh" "5 February 1962" "Hollywood, California, USA" .
+<actor> "Lucy Liu" "2 December 1968" "Queens, New York, USA" .
+<actor> "Kathy Lloyd (I)" "13 November 1967" "Portmeirion, Merionethshire, Wales, UK" .
+<actor> "Bibi Lynch" " " "" .
+<actor> "Ruth Madoc" "16 April 1943" "Norwich, Norfolk, England, UK" .
+<actor> "Madonna (I)" "16 August 1958" "Bay City, Michigan, USA" .
+<actor> "Jayne Mansfield" "19 April 1933" "Bryn Mawr, Pennsylvania, USA" .
+<actor> "Scott Manson" " " "" .
+<actor> "Shelley Michelle" "3 April 1962" "Hollywood, California, USA" .
+<actor> "Helen Mirren" "26 July 1945" "Chiswick, London, England, UK" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Paul Morley" "26 March 1957" "Stockport, Cheshire, England, UK" .
+<actor> "Emily Mortimer" "1 December 1971" "London, England, UK" .
+<actor> "Oliver Reed (I)" "13 February 1937" "Wimbledon, London, England, UK" .
+<actor> "Denise Richards" "17 February 1971" "Downers Grove, Illinois, USA" .
+<actor> "Joely Richardson" "9 January 1965" "London, England, UK" .
+<actor> "Mickey Rourke" "16 September 1952" "Schenectady, New York, USA" .
+<actor> "Ken Russell (I)" "3 July 1927" "Southampton, Hampshire, England, UK" .
+<actor> "Meg Ryan (I)" "19 November 1961" "Fairfield, Connecticut, USA" .
+<actor> "Mark Rylance" "18 January 1960" "Ashford, Kent, England, UK" .
+<actor> "Brian Sewell (III)" " " "" .
+<actor> "Eva Simpson" " " "" .
+<actor> "Mr. Skin" " " "" .
+<actor> "Anna Nicole Smith" "28 November 1967" "Houston, Texas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Pam St. Clement" "12 May 1942" "Harrow-on-the-Hill, Middlesex, England, UK" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Mamie Van Doren" "6 February 1931" "Rowena, South Dakota, USA" .
+<actor> "Paul Verhoeven (I)" "18 July 1938" "Amsterdam, Noord-Holland, Netherlands" .
+<actor> "Mike Walker (VIII)" " " "" .
+<actor> "Barbara Windsor" "6 August 1937" "Shoreditch, London, England, UK" .
+<actor> "Kate Winslet" "5 October 1975" "Reading, Berkshire, England, UK" .
+<actor> "Catherine Zeta-Jones" "25 September 1969" "Swansea, West Glamorgan, Wales, UK" .

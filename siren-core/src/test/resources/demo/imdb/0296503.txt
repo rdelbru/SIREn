@@ -1,0 +1,98 @@
+title:America: A Tribute to Heroes
+url:http://www.imdb.com/title/tt0296503/
+<title> "America: A Tribute to Heroes" .
+<director> "Joel Gallen" " " "" .
+<director> "Beth McCarthy-Miller" "3 September 1963" "Elizabeth, New Jersey, USA" .
+<writer> "Eli Attie" " " "" .
+<writer> "Bill Clark (V)" " " "" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Halle Berry" "14 August 1966" "Cleveland, Ohio, USA" .
+<actor> "Jon Bon Jovi" "2 March 1962" "Perth Amboy, New Jersey, USA" .
+<actor> "Bono" "10 May 1960" "Dublin, Ireland" .
+<actor> "Wes Borland" "8 February 1975" "Richmond, Virginia, USA" .
+<actor> "Amy Brenneman (I)" "22 June 1964" "New London, Connecticut, USA" .
+<actor> "Mike Campbell (III)" "1 February 1950" "Panama City, Florida, USA" .
+<actor> "Mariah Carey" "27 March 1969" "Huntington, New York, USA" .
+<actor> "Jim Carrey" "17 January 1962" "Newmarket, Ontario, Canada" .
+<actor> "Alvin Chea" " " "" .
+<actor> "Adam Clayton (I)" "13 March 1960" "Chinnor, Oxfordshire, England, UK" .
+<actor> "George Clooney" "6 May 1961" "Lexington, Kentucky, USA" .
+<actor> "Cindy Crawford (I)" "20 February 1966" "DeKalb, Illinois, USA" .
+<actor> "Sheryl Crow" "11 February 1962" "Kennett, Missouri, USA" .
+<actor> "Tom Cruise" "3 July 1962" "Syracuse, New York, USA" .
+<actor> "Penélope Cruz" "28 April 1974" "Madrid, Spain" .
+<actor> "John Cusack" "28 June 1966" "Evanston, Illinois, USA" .
+<actor> "Benicio Del Toro" "19 February 1967" "Santurce, Puerto Rico" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Cedric Dent" "24 September 1962" "" .
+<actor> "Danny DeVito" "17 November 1944" "Asbury Park, New Jersey, USA" .
+<actor> "Cameron Diaz" "30 August 1972" "San Diego, California, USA" .
+<actor> "Céline Dion" "30 March 1968" "Charlemagne, Quebec, Canada" .
+<actor> "Fred Durst" "20 August 1970" "Gastonia, North Carolina, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Howie Epstein" "21 July 1955" "Milwaukee, Wisconsin, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "Calista Flockhart" "11 November 1964" "Freeport, Illinois, USA" .
+<actor> "Dennis Franz (I)" "28 October 1944" "Chicago, Illinois, USA" .
+<actor> "Andy Garcia (I)" "12 April 1956" "Havana, Cuba" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Cuba Gooding Jr." "2 January 1968" "The Bronx, New York, USA" .
+<actor> "Kelsey Grammer" "21 February 1955" "St. Thomas, U.S. Virgin Islands" .
+<actor> "Tom Hanks" "9 July 1956" "Concord, California, USA" .
+<actor> "Goldie Hawn" "21 November 1945" "Washington, District of Columbia, USA" .
+<actor> "Salma Hayek" "2 September 1966" "Coatzacoalcos, Veracruz, Mexico" .
+<actor> "Faith Hill" "21 September 1967" "Jackson, Mississippi, USA" .
+<actor> "Enrique Iglesias (I)" "8 May 1975" "Madrid, Spain" .
+<actor> "Mick Jagger" "26 July 1943" "Dartford, Kent, England, UK" .
+<actor> "Wyclef Jean" "17 October 1972" "La Plaine, Haiti" .
+<actor> "Billy Joel" "9 May 1949" "Bronx, New York, USA" .
+<actor> "Jane Kaczmarek" "21 December 1955" "Milwaukee, Wisconsin, USA" .
+<actor> "Michael Keaton" "5 September 1951" "Coraopolis, Pennsylvania, USA" .
+<actor> "Alicia Keys" "25 January 1980" "New York City, New York, USA" .
+<actor> "Joey Kibble" "26 May 1971" "Buffalo, New York, USA" .
+<actor> "Mark Kibble" " " "" .
+<actor> "Nicole Kidman" "20 June 1967" "Honolulu, Hawaii, USA" .
+<actor> "Lucy Liu" "2 December 1968" "Queens, New York, USA" .
+<actor> "Martie Maguire" "12 October 1969" "York, Pennsylvania, USA" .
+<actor> "Natalie Maines" "14 October 1974" "Lubbock, Texas, USA" .
+<actor> "Mike McCready" "5 April 1966" "Pensacola, Florida, USA" .
+<actor> "Reba McEntire" "28 March 1955" "McAlester, Oklahoma, USA" .
+<actor> "Claude McKnight" " " "" .
+<actor> "Mike Myers (I)" "25 May 1963" "Scarborough, Ontario, Canada" .
+<actor> "Willie Nelson" "30 April 1933" "Abbott, Texas, USA" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Conan O'Brien" "18 April 1963" "Boston, Massachusetts, USA" .
+<actor> "Al Pacino" "25 April 1940" "New York City, New York, USA" .
+<actor> "Sarah Jessica Parker" "25 March 1965" "Nelsonville, Ohio, USA" .
+<actor> "Rhea Perlman" "31 March 1948" "Brooklyn, New York, USA" .
+<actor> "Tom Petty" "20 October 1950" "Gainesville, Florida, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Keith Richards (II)" "18 December 1943" "Dartford, Kent, England, UK" .
+<actor> "Julia Roberts (I)" "28 October 1967" "Smyrna, Georgia, USA" .
+<actor> "Emily Robison" "16 August 1972" "Pittsfield, Massachusetts, USA" .
+<actor> "Chris Rock (I)" "7 February 1965" "Andrews, South Carolina, USA" .
+<actor> "Ray Romano (I)" "21 December 1957" "Queens, New York, USA" .
+<actor> "Kurt Russell (I)" "17 March 1951" "Springfield, Massachusetts, USA" .
+<actor> "Meg Ryan (I)" "19 November 1961" "Fairfield, Connecticut, USA" .
+<actor> "Johnny Rzeznik" "5 December 1965" "Buffalo, New York, USA" .
+<actor> "Richie Sambora" "11 July 1959" "Perth Amboy, New Jersey, USA" .
+<actor> "Adam Sandler (I)" "9 September 1966" "Brooklyn, New York, USA" .
+<actor> "Paul Shaffer" "28 November 1949" "Thunder Bay, Ontario, Canada" .
+<actor> "Paul Simon (I)" "13 October 1941" "Newark, New Jersey, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Jimmy Smits" "9 July 1955" "Brooklyn, New York, USA" .
+<actor> "Bruce Springsteen" "23 September 1949" "Long Branch, New Jersey, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ben Stiller" "30 November 1965" "New York City, New York, USA" .
+<actor> "Sting (I)" "2 October 1951" "Wallsend, Newcastle upon Tyne, England, UK" .
+<actor> "Christine Taylor (I)" "30 July 1971" "Allentown, Pennsylvania, USA" .
+<actor> "The Edge" "8 August 1961" "Barking, Essex, England, UK" .
+<actor> "David Thomas (VIII)" " " "" .
+<actor> "Eddie Vedder" "23 December 1964" "Evanston, Illinois, USA" .
+<actor> "Mark Wahlberg (I)" "5 June 1971" "Dorchester, Massachusetts, USA" .
+<actor> "Sela Ward" "11 July 1956" "Meridian, Mississippi, USA" .
+<actor> "Don Was" "13 September 1952" "Detroit, Michigan, USA" .
+<actor> "Robin Williams (I)" "21 July 1951" "Chicago, Illinois, USA" .
+<actor> "Stevie Wonder" "13 May 1950" "Saginaw, Michigan, USA" .
+<actor> "James Woods (I)" "18 April 1947" "Vernal, Utah, USA" .
+<actor> "Neil Young (I)" "12 November 1945" "Toronto, Ontario, Canada" .

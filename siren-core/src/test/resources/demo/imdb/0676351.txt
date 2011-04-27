@@ -1,0 +1,13 @@
+title:The Cutting Edge
+url:http://www.imdb.com/title/tt0676351/
+<title> ""Police Story" The Cutting Edge" .
+<writer> "E. Jack Neuman" "27 February 1921" "Ohio, USA" .
+<writer> "Joseph Wambaugh" "22 January 1937" "East Pittsburgh, Pennsylvania, USA" .
+<actor> "Lola Albright" "20 July 1925" "Akron, Ohio, USA" .
+<actor> "Chuck Connors (I)" "10 April 1921" "Brooklyn, New York, USA" .
+<actor> "Alan Fudge" "27 February 1944" "Wichita, Kansas, USA" .
+<actor> "Erik Holland" " 1933" "Sandnes, Norway" .
+<actor> "Woodrow Parfrey" "5 October 1922" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Mark Stevens (I)" "13 December 1916" "Cleveland, Ohio, USA" .
+<actor> "Jay Varela" " " "" .

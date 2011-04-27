@@ -1,0 +1,12 @@
+title:Episode #4.12
+url:http://www.imdb.com/title/tt1178840/
+<title> ""El hormiguero" Episode #4.12" .
+<director> "Pablo Motos" "31 August 1965" "Requena, Valencia, Spain" .
+<director> "Jorge Salvador (I)" " " "" .
+<writer> "Fernando Acevedo (III)" "29 May 1973" "Madrid, Spain" .
+<writer> "Juan Herrera (V)" " " "" .
+<actor> "Pablo Motos" "31 August 1965" "Requena, Valencia, Spain" .
+<actor> "Juan Ibáñez Pérez" "7 August 1980" "Madrid, Madrid, Spain" .
+<actor> "Damián Molla Herman" "7 July 1980" "Madrid, Madrid, Spain" .
+<actor> "Flipy" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

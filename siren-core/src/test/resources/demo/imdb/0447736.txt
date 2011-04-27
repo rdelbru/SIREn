@@ -1,0 +1,5 @@
+title:"Cartelera"
+url:http://www.imdb.com/title/tt0447736/
+<title> ""Cartelera"" .
+<writer> "Javier García Diaz" <birthDate> " " <birthPlace> "" .
+<writer> "Samuel Martín Mateos" <birthDate> " " <birthPlace> "" .

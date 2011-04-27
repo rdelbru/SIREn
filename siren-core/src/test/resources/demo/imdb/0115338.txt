@@ -1,0 +1,7 @@
+title:"The Rosie O'Donnell Show"
+url:http://www.imdb.com/title/tt0115338/
+<title> ""The Rosie O'Donnell Show"" .
+<director> "Anthony Caleca" "18 September 1966" "Brooklyn, New York City, New York, USA" .
+<director> "Stan Lathan" "8 July 1945" "" .
+<writer> "Larry Amoros" " " "" .
+<writer> "Janette Barber" "25 September 1953" "USA" .

@@ -1,0 +1,5 @@
+title:"The Late Late Show with Craig Kilborn"
+url:http://www.imdb.com/title/tt0192906/
+<title> ""The Late Late Show with Craig Kilborn"" .
+<writer> "Gabe Abelson" " " "" .
+<writer> "Ross Abrash" " " "" .

@@ -1,0 +1,16 @@
+title:Afghanistan: Land in Crisis
+url:http://www.imdb.com/title/tt0321098/
+<title> "Afghanistan: Land in Crisis" .
+<director> "Laura Nix (II)" " " "" .
+<actor> "George W. Bush" "6 July 1946" "New Haven, Connecticut, USA" .
+<actor> "Ronald Reagan (I)" "6 February 1911" "Tampico, Illinois, USA" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Osama Bin Laden" "10 March 1957" "Riyadh, Saudi Arabia" .
+<actor> "John Powers (VII)" " " "" .
+<actor> "Brent Bozell" "14 July 1955" "Washington, District of Columbia, USA" .
+<actor> "Andrew G. Vajna" "1 August 1944" "Budapest, Hungary" .
+<actor> "Richard Dekmejian" " " "" .
+<actor> "Ella Shohat" " " "" .
+<actor> "Abdul Satar" " " "" .
+<actor> "Buzz Feitshans" " " "" .

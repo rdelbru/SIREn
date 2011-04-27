@@ -1,0 +1,8 @@
+title:Sylvester Stallone Call
+url:http://www.imdb.com/title/tt1188281/
+<title> ""Howard Stern on Demand" Sylvester Stallone Call" .
+<actor> "Howard Stern (I)" "12 January 1954" "Jackson Heights, Queens, New York City, New York, USA" .
+<actor> "Gary Dell'Abate" "14 March 1961" "Uniondale, Long Island, New York, USA" .
+<actor> "Artie Lange" "11 October 1967" "Union Township, New Jersey, USA" .
+<actor> "Robin Quivers" "8 August 1952" "Baltimore, Maryland, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

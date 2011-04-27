@@ -1,0 +1,10 @@
+title:Episode dated 24 September 2004
+url:http://www.imdb.com/title/tt0728858/
+<title> ""The Tonight Show with Jay Leno" Episode dated 24 September 2004" .
+<writer> "Brad Dickson (II)" " " "" .
+<writer> "Greg Grabianski" " " "" .
+<actor> "Jay Leno" "28 April 1950" "New Rochelle, New York, USA" .
+<actor> "Teri Hatcher" "8 December 1964" "Palo Alto, California, USA" .
+<actor> "Patti Scialfa" "29 July 1953" "Deal, New Jersey, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Blair Underwood" "25 August 1964" "Tacoma, Washington, USA" .

@@ -1,0 +1,11 @@
+title:In the Ring
+url:http://www.imdb.com/title/tt0951283/
+<title> "In the Ring" .
+<director> "Michael Gillis (I)" " " "" .
+<actor> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .
+<actor> "Robert Chartoff" "26 August 1933" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Irwin Winkler" "25 May 1931" "New York City, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .

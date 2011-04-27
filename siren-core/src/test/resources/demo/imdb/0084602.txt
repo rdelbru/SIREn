@@ -1,0 +1,20 @@
+title:Rocky III
+url:http://www.imdb.com/title/tt0084602/
+<title> "Rocky III" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Carl Weathers" "14 January 1948" "New Orleans, Louisiana, USA" .
+<actor> "Burgess Meredith" "16 November 1907" "Cleveland, Ohio, USA" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "Mr. T" "21 May 1952" "Chicago, Illinois, USA" .
+<actor> "Hulk Hogan" "11 August 1953" "Augusta, Georgia, USA" .
+<actor> "Ian Fried (I)" "17 December 1974" "Akron, Ohio, USA" .
+<actor> "Al Silvani" "26 March 1910" "" .
+<actor> "Wally Taylor" " " "" .
+<actor> "Jim Hill (I)" "21 October 1946" "San Antonio, Texas, USA" .
+<actor> "Don Sherman" " " "" .
+<actor> "Dennis James (I)" "24 August 1917" "Jersey City, New Jersey, USA" .
+<actor> "Jim Healy (I)" " " "" .

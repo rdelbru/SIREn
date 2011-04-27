@@ -1,0 +1,21 @@
+title:Cobra
+url:http://www.imdb.com/title/tt0090859/
+<title> "Cobra" .
+<director> "George P. Cosmatos" "4 January 1941" "Florence, Tuscany, Italy" .
+<writer> "Paula Gosling" "12 October 1939" "Detroit, Michigan, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Brigitte Nielsen" "15 July 1963" "Rødovre, Denmark" .
+<actor> "Reni Santoni" "21 April 1939" "New York City, New York, USA" .
+<actor> "Andrew Robinson (I)" "14 February 1942" "New York City, New York, USA" .
+<actor> "Brian Thompson (I)" "28 August 1959" "Ellensburg, Washington, USA" .
+<actor> "John Herzfeld" " " "" .
+<actor> "Lee Garlington" "20 July 1953" "Teaneck, New Jersey, USA" .
+<actor> "Art LaFleur (I)" "9 September 1943" "Gary, Indiana, USA" .
+<actor> "Marco Rodríguez (I)" " " "" .
+<actor> "Ross St. Phillip" " " "" .
+<actor> "Val Avery" "14 July 1924" "Philadelphia, Pennsylvania, USA" .
+<actor> "David Rasche" "7 August 1944" "St. Louis, Missouri, USA" .
+<actor> "John Hauk" "27 January 1953" "Japan" .
+<actor> "Nick Angotti" " " "" .
+<actor> "Nina Axelrod" " " "" .

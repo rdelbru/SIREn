@@ -1,0 +1,97 @@
+
+SIREn 0.2.1-SNAPSHOT Solr Demo - Install Instructions
+
+--------------------------------------------------------------------------------
+
+This is testing version of Solr 3.1 with SIREn.
+
+We provide a solr configuration example which use SIREn for indexing and 
+searching RDF data. The search interface is using the n-triples query language.
+
+Basic steps:
+  0) Install Tomcat 6
+  1) Configure Solr/Siren webapp
+  2) Copy webapp configuration file to Tomcat
+  3) Start Tomcat
+  4) Load some data
+  5) Run some queries
+
+0. Install Tomcat 6
+(NB: on Ubuntu, sudo apt-get install tomcat6)
+
+1. Configure Solr/Siren webapp
+
+Edit siren.xml to set the path of the war file and SORL_HOME correctly using 
+/your/local/path/siren-solr/example/solr as SOLR_HOME:
+
+2. Copy webapp configuration file to Tomcat
+
+Copy siren.xml to $CATALINA_BASE/conf/Catalina/localhost/siren.xml
+
+(NB: you may need to create that folder)
+
+(NB: on Ubuntu, $CATALINA_BASE=/var/lib/tomcat6/)
+
+3. Start (or restart) Tomcat. 
+
+(NB: on Ubuntu, you can start tomcat with the command 
+'sudo /etc/init.d/tomcat6 start'
+or restart it using
+'sudo /etc/init.d/tomcat6 restart')
+
+You should be able to access the Solr admin 
+interface at: http://localhost:8080/siren/
+
+(NB: check if tomcat has read and write permissions on $SOLR_HOME/data/,
+otherwise Solr will complain that it cannot create the directory 
+$SOLR_HOME/data/index)
+
+if problems, see logs:
+$CATALINA_BASE/logs/catalina.out
+
+4. Load some data
+
+We provide a script to load three artificial documents.
+To load the three documents, just run the command 
+"bash post.sh people.xml".
+
+If you go to the statistic page [1] of the Solr admin interface, you should see
+the counter 'numDocs' equals to 3.
+ 
+[1] http://localhost:8080/siren/admin/stats.jsp 
+
+5. Run some queries
+
+Go to the query form of the Solr admin interface [2]. Replace 'standard' in the
+field "Query Type" by 'ntriple' to activate the n-triple query parser.
+
+You can now enter one of the following query in the "Solr/Lucene Statement" field:
+Query 1: * <name> 'john AND gartner'
+http://localhost:8080/siren/select?indent=on&q=*+%3Cname%3E+%27john+AND+gartner%27&start=0&rows=10&fl=*%2Cscore&qt=ntriple&wt=standard
+Query 2: * <workplace> <galway> AND * <type> <student> AND * <age> "26"
+http://localhost:8080/siren/select?indent=on&q=*+%3Cworkplace%3E+%3Cgalway%3E+AND+*+%3Ctype%3E+%3Cstudent%3E+AND+*+%3Cage%3E+%2226%22&start=0&rows=10&fl=*%2Cscore&qt=ntriple&wt=standard
+
+You can also use the shell script 'query.sh' that will execute the two previous
+queries using curl, and will display the result in XML format.
+
+[2] http://localhost:8080/siren/admin/form.jsp
+
+--------------------------------------------------------------------------------
+
+For further information on SIREn, please join the SIREn-User mailing list by 
+visiting this site:
+  http://lists.deri.org/mailman/listinfo/siren
+
+Please post suggestions, questions, corrections or additions to this
+document to the lucene-user mailing list.
+
+--------------------------------------------------------------------------------
+
+This file was written by Renaud Delbru <renaud.delbru@deri.org> for SIREn.
+
+Copyright (c) 2010, 2011
+Renaud Delbru,
+Digital Enterprise Research Institute,
+National University of Ireland, Galway.  
+All rights reserved.
+

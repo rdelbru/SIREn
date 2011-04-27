@@ -1,0 +1,100 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+  <id>distribution</id>
+  <formats>
+    <format>tar.gz</format>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <!--
+    Copy sources of the siren-core, siren-qparser and siren-solr modules
+  -->
+  <moduleSets>
+    <moduleSet>
+      <includeSubModules>false</includeSubModules>
+      <excludes>
+        <exclude>org.sindice.siren:siren-site</exclude>
+      </excludes>
+      <sources>
+        <outputDirectoryMapping>
+          ${module.basedir.name}
+        </outputDirectoryMapping>
+        <fileSets>
+          <!--
+            Copy the source files
+          -->
+          <fileSet>
+            <directory>./</directory>
+            <excludes>
+              <exclude>target/**</exclude>
+              <exclude>profiles.xml</exclude>
+              <exclude>.project</exclude>
+							<exclude>.settings/**</exclude>
+							<exclude>.classpath</exclude>
+            </excludes>
+          </fileSet>
+        </fileSets>
+      </sources>
+      <!--
+        Copy binaries and required dependencies into solr example directory
+      -->
+      <binaries>
+        <outputDirectory>
+          siren-solr/example/solr/lib/
+        </outputDirectory>
+        <unpack>false</unpack>
+        <dependencySets>
+          <dependencySet>
+            <includes>
+				      <include>org.apache.lucene:lucene-queryparser</include>
+				      <include>net.sf.squirrel-sql.thirdparty.non-maven:java-cup</include>
+			      </includes>
+          </dependencySet>
+        </dependencySets>
+      </binaries>
+    </moduleSet>
+  </moduleSets>
+  <files>
+    <!--
+      Copy pom-dist.xml to siren-parent/pom.xml
+      pom-parent.xml is the pom parent modified for distribution
+    -->
+    <file>
+      <source>pom-dist.xml</source>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+      <outputDirectory>siren-parent</outputDirectory>
+      <destName>pom.xml</destName>
+    </file>
+    <!--
+      Copy BUILD.txt
+    -->
+    <file>
+      <source>BUILD.txt</source>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+      <outputDirectory>siren-parent</outputDirectory>
+    </file>
+    <!--
+      Copy LICENSE.txt
+    -->
+    <file>
+      <source>LICENSE.txt</source>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+      <outputDirectory>siren-parent</outputDirectory>
+    </file>
+    <!--
+      Copy NOTICE.txt
+    -->
+    <file>
+      <source>NOTICE.txt</source>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+      <outputDirectory>siren-parent</outputDirectory>
+    </file>
+  </files>
+
+</assembly>
+

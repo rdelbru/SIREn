@@ -1,0 +1,28 @@
+title:Muhammad Ali's 50th Birthday Celebration
+url:http://www.imdb.com/title/tt0358603/
+<title> "Muhammad Ali's 50th Birthday Celebration" .
+<director> "Louis J. Horvitz" " 1947" "" .
+<writer> "Buz Kohan" "9 August 1933" "New York City, New York, USA" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Dan Aykroyd" "1 July 1952" "Ottawa, Ontario, Canada" .
+<actor> "Renaldo Benson" "14 June 1937" "Detroit, Michigan, USA" .
+<actor> "Howard Cosell" "25 March 1918" "Winston-Salem, North Carolina, USA" .
+<actor> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<actor> "Tony Danza" "21 April 1951" "Brooklyn, New York, USA" .
+<actor> "Abdul 'Duke' Fakir" "26 December 1935" "Detroit, Michigan, USA" .
+<actor> "Ella Fitzgerald" "25 April 1917" "Newport News, Virginia, USA" .
+<actor> "Dustin Hoffman" "8 August 1937" "Los Angeles, California, USA" .
+<actor> "Whitney Houston" "9 August 1963" "Newark, New Jersey, USA" .
+<actor> "Magic Johnson" "14 August 1959" "Lansing, Michigan, USA" .
+<actor> "Little Richard" "5 December 1932" "Macon, Georgia, USA" .
+<actor> "Lawrence Payton" "2 March 1938" "Detroit, Michigan, USA" .
+<actor> "Anita Pointer" "23 January 1948" "Oakland, California, USA" .
+<actor> "June Pointer" "30 November 1953" "Oakland, California, USA" .
+<actor> "Ruth Pointer" "19 March 1946" "Oakland, California, USA" .
+<actor> "Raven-Symoné" "10 December 1985" "Atlanta, Georgia, USA" .
+<actor> "Diana Ross (I)" "26 March 1944" "Detroit, Michigan, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Sinbad" "10 November 1956" "Benton Harbor, Michigan, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Levi Stubbs" "6 June 1936" "Detroit, Michigan, USA" .
+<actor> "Blair Underwood" "25 August 1964" "Tacoma, Washington, USA" .

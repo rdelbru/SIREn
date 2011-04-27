@@ -1,0 +1,17 @@
+ClauseQuery(
+  UnaryClause(
+    SimpleExpression(
+      TriplePattern(
+        Wildcard(
+          *
+        ) [Wildcard]
+        URIPattern(
+          http://purl.org/dc/terms/license
+        ) [URIPattern]
+        Literal(
+          http://creativecommons.org/licenses/by-nc-sa/3.0/us
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+  ) [UnaryClause]
+) [ClauseQuery]

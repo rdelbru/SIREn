@@ -1,0 +1,18 @@
+title:Hulk Hogan and Family
+url:http://www.imdb.com/title/tt1348564/
+<title> ""E! True Hollywood Story" Hulk Hogan and Family" .
+<actor> "Hulk Hogan" "11 August 1953" "Augusta, Georgia, USA" .
+<actor> "Ruth Bollea" " " "" .
+<actor> "Vic Pettit" " " "" .
+<actor> "Ed Leslie" "21 April 1957" "Tampa, Florida, USA" .
+<actor> "Bubba the Love Sponge" "21 April 1966" "Warsaw, Indiana, USA" .
+<actor> "Brian Knobs" "6 May 1964" "Allentown, Pennsylvania, USA" .
+<actor> "Bobby Heenan" "1 November 1944" "Beverly Hills, California, USA" .
+<actor> "Eric Bischoff" "27 May 1955" "Detroit, Michigan, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Verne Gagne" "10 May 1923" "Robbinsdale, Minnesota, USA" .
+<actor> "Ken Resnick (II)" " " "" .
+<actor> "Linda Hogan" "24 August 1959" "Miami, Florida, USA" .
+<actor> "Gene Okerlund" "29 November 1938" "Robbinsdale, Minnesota, USA" .
+<actor> "Billy Juarez" " " "" .
+<actor> "Jason Hervey" "6 April 1972" "Los Angeles, California, USA" .

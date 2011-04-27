@@ -1,0 +1,49 @@
+title:Pelé Eterno
+url:http://www.imdb.com/title/tt0420066/
+<title> "Pelé Eterno" .
+<director> "Anibal Massaini Neto" " 1945" "São Paulo, São Paulo, Brazil" .
+<writer> "Armando Nogueira" "14 January 1927" "Xapuri, Acre, Brazil" .
+<writer> "José Roberto Torero" "9 October 1963" "Santos, São Paulo, Brazil" .
+<actor> "Celeste Arantes" " " "" .
+<actor> "Assiria" "1 February 1960" "Londrina, Paraná, Brazil" .
+<actor> "Gordon Banks" "30 December 1937" "Sheffield, Yorkshire, England, UK" .
+<actor> "Franz Beckenbauer" "11 September 1945" "Munich, West Germany" .
+<actor> "Belini" " " "" .
+<actor> "Paulo César Caju" " " "" .
+<actor> "Roberto Carlos (III)" "19 April 1941" "Cachoeiro do Itapemirim, Espírito Santo, Brazil" .
+<actor> "Coutinho" "5 January 1939" "Dom Pedrito, Rio Grande do Sul, Brazil" .
+<actor> "Jair da Rosa Pinto" "21 March 1921" "Barra Mansa, Rio de Janeiro, Brazil" .
+<actor> "Ramos Delgado" " " "" .
+<actor> "Jair de Oliveira" "17 March 1975" "São Paulo, São Paulo, Brazil" .
+<actor> "Didi (IV)" "28 October 1928" "Campos dos Goitacases, Rio de Janeiro, Brazil" .
+<actor> "Dorval" " " "" .
+<actor> "Gilmar dos Santos Neves" " " "" .
+<actor> "Edinho (I)" " " "" .
+<actor> "Edu (I)" "5 February 1947" "Rio de Janeiro, Rio de Janeiro, Brazil" .
+<actor> "Feijão" "9 May 1957" "Taubaté, São Paulo, Brazil" .
+<actor> "Gérson" "11 January 1941" "Niterói, Rio de Janeiro, Brazil" .
+<actor> "Ugo Giorgetti (I)" " 1942" "São Paulo, SP, Brazil" .
+<actor> "John Huston (I)" "5 August 1906" "Nevada, Missouri, USA" .
+<actor> "Lima" " " "" .
+<actor> "Manoel Maria" "29 February 1948" "Belém, Pará, Brazil" .
+<actor> "Júlio Mazzei" "27 August 1930" "Guaicara, São Paulo, Brazil" .
+<actor> "Xuxa Meneghel" "27 March 1963" "Santa Rosa, Rio Grande do Sul, Brazil" .
+<actor> "Phil Miler" " " "" .
+<actor> "Dondinho Nascimento" " " "" .
+<actor> "Armando Nogueira" "14 January 1927" "Xapuri, Acre, Brazil" .
+<actor> "Urubatão Calvo Nunes" "31 March 1931" "Rio de Janeiro, Rio de Janeiro, Brazil" .
+<actor> "Washington Olivetto" "29 September 1951" "São Paulo, São Paulo, Brazil" .
+<actor> "Carlos Alberto Parreira" "27 February 1943" "Rio de Janeiro, Rio de Janeiro, Brazil" .
+<actor> "Pelé" "23 October 1940" "Três Corações, Minas Gerais, Brazil" .
+<actor> "Pepe (II)" "25 February 1935" "Santos, São Paulo, Brazil" .
+<actor> "Piazza" "25 February 1943" "Ribeirão das Neves, Minas Gerais, Brazil" .
+<actor> "Rivelino" "1 January 1946" "São Paulo, São Paulo, Brazil" .
+<actor> "Dino Sani" "23 May 1932" "São Paulo, São Paulo, Brazil" .
+<actor> "Nilton Santos" "16 May 1925" "Rio de Janeiro, Brazil" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Fúlvio Stefanini" "12 October 1939" "São Paulo, São Paulo, Brazil" .
+<actor> "Carlos Alberto Torres" "17 July 1944" "Rio de Janeiro, Rio de Janeiro, Brazil" .
+<actor> "Tostão" "25 January 1947" "Belo Horizonte, Minas Gerais, Brazil" .
+<actor> "Zagalo" "9 August 1931" "Satuba, Alagoas, Brazil" .
+<actor> "Zito" "8 August 1932" "Roseira, São Paulo, Brazil" .
+<actor> "Zizinho" "14 September 1921" "São Gonçalo, Rio de Janeiro, Brazil" .

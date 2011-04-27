@@ -1,0 +1,6 @@
+title:Episode #1.12
+url:http://www.imdb.com/title/tt0542722/
+<title> ""Clive Anderson All Talk" Episode #1.12" .
+<actor> "Angus Deayton" "6 January 1956" "London, England, UK" .
+<actor> "Danny DeVito" "17 November 1944" "Asbury Park, New Jersey, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

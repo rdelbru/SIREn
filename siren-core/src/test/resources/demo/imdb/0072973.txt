@@ -1,0 +1,20 @@
+title:Farewell, My Lovely
+url:http://www.imdb.com/title/tt0072973/
+<title> "Farewell, My Lovely" .
+<director> "Dick Richards (I)" " 1936" "" .
+<writer> "David Zelag Goodman" " " "" .
+<writer> "Raymond Chandler" "23 July 1888" "Chicago, Illinois, USA" .
+<actor> "Robert Mitchum" "6 August 1917" "Bridgeport, Connecticut, USA" .
+<actor> "Charlotte Rampling" "5 February 1946" "Sturmer, England, UK" .
+<actor> "John Ireland (I)" "30 January 1914" "Vancouver, British Columbia, Canada" .
+<actor> "Sylvia Miles" "9 September 1923" "New York City, New York, USA" .
+<actor> "Anthony Zerbe" "20 May 1936" "Long Beach, California, USA" .
+<actor> "Harry Dean Stanton" "14 July 1926" "West Irvine, Kentucky, USA" .
+<actor> "Jack O'Halloran" "8 April 1943" "Philadelphia, Pennsylvania, USA" .
+<actor> "Joe Spinell" "28 October 1936" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kate Murtagh (I)" " 1920" "" .
+<actor> "John O'Leary (I)" "5 May 1926" "Newton, Massachusetts, USA" .
+<actor> "Walter McGinn" "6 July 1936" "Providence, Rhode Island, USA" .
+<actor> "Burton Gilliam" "9 August 1938" "Dallas, Texas, USA" .
+<actor> "Jimmy Archer" "9 February 1935" "New York City, New York, USA" .

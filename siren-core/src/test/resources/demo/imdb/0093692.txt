@@ -1,0 +1,21 @@
+title:Over the Top
+url:http://www.imdb.com/title/tt0093692/
+<title> "Over the Top" .
+<director> "Menahem Golan" "31 May 1929" "Tiberias, Palestine (now Israel)" .
+<writer> "Gary Conway (I)" "4 February 1936" "Boston, Massachusetts, USA" .
+<writer> "David Engelbach" "20 September 1946" "Philadelphia, Pennsylvania, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Robert Loggia" "3 January 1930" "New York City, New York, USA" .
+<actor> "Susan Blakely" "7 September 1948" "Frankfurt, Germany" .
+<actor> "Rick Zumwalt" "24 September 1951" "" .
+<actor> "David Mendenhall" "13 June 1971" "Oceanside, California, USA" .
+<actor> "Chris McCarty" " " "" .
+<actor> "Terry Funk" "30 June 1944" "Hammond, Indiana, USA" .
+<actor> "Bob Beattie" " " "" .
+<actor> "Allan Graf" " " "" .
+<actor> "Magic Schwarz" " " "" .
+<actor> "Bruce Way" " " "" .
+<actor> "Jimmy Keegan (I)" "3 November 1969" "Los Angeles, California, USA" .
+<actor> "John Braden (I)" " " "" .
+<actor> "Tony Munafo" " " "" .
+<actor> "Randy Raney" " " "" .

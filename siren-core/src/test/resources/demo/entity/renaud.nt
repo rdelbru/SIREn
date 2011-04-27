@@ -1,0 +1,12 @@
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/name> "Renaud Delbru" .
+<http://xmlns.com/foaf/0.1/givenname> "Renaud" .
+<http://xmlns.com/foaf/0.1/family_name> "Delbru" .
+<http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.deri.ie/> .
+<http://xmlns.com/foaf/0.1/schoolHomepage> <http://www.epita.fr/> .
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.okkam.org/entity/ok200706171184666809495> .
+<http://xmlns.com/foaf/0.1/knows> <http://eyaloren.org/foaf.rdf#me> <http://xmlns.com/foaf/0.1/name> "Eyal Oren" .
+<http://xmlns.com/foaf/0.1/knows> <http://eyaloren.org/foaf.rdf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "097f2342afa52f155f127042cc7a20c9491cf382" .
+<http://xmlns.com/foaf/0.1/knows> <http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/name> "Giovanni Tummarello" .
+<http://xmlns.com/foaf/0.1/knows> <http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a9dcc29cbf526167c1bd10e8e3dd2bca60d739e1" .
+

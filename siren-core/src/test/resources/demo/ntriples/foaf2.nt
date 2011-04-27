@@ -1,0 +1,54 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/PersonalProfileDocument> .
+<http://g1o.net/foaf.rdf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/givenname> "Giovanni" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/family_name> "Tummarello" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/nick> "Jccq" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/title> "Ph.D" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/icqChatID> "68832951" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid2 <http://xmlns.com/foaf/0.1/mbox> "olmedilla@l3s.de" .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Daniel Olmedilla" .
+_:genid2 <http://xmlns.com/foaf/0.1/mbox_sha1sum> "50ba0a36e73aaf5aa86cd7e5cc809aa51bd0e5a7" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> _:genid2 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid3 <http://xmlns.com/foaf/0.1/mbox> "jeen.broekstra@aduna.biz" .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Jeen Broekstra" .
+_:genid3 <http://xmlns.com/foaf/0.1/mbox_sha1sum> "18f3526f45d5f349a4ee8bf051aa58882a84b828" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> _:genid3 .
+<http://richard.cyganiak.de/foaf.rdf#cygri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> <http://richard.cyganiak.de/foaf.rdf#cygri> .
+<http://www.okkam.org/entity/ok200706301185791252056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> <http://www.okkam.org/entity/ok200706301185791252056> .
+<http://www.okkam.org/ens/iddfeb829d-6dfb-4889-845b-5ac6e6d9df29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.okkam.org/ens/iddfeb829d-6dfb-4889-845b-5ac6e6d9df29> <http://xmlns.com/foaf/0.1/name> "Michele Catasta" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> <http://www.okkam.org/ens/iddfeb829d-6dfb-4889-845b-5ac6e6d9df29> .
+<http://www.okkam.org/entity/ok200706171184666809495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.okkam.org/entity/ok200706171184666809495> <http://xmlns.com/foaf/0.1/name> "Renaud Delbru" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> <http://www.okkam.org/entity/ok200706171184666809495> .
+<http://www.okkam.org/entity/ok5f23a5ce-a683-4c4d-ae73-b78cdc17aec1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> <http://www.okkam.org/entity/ok5f23a5ce-a683-4c4d-ae73-b78cdc17aec1> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/name> "Giovanni Tummarello" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/homepage> <http://g1o.net> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/phone> "+353 87 3231282" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/depiction> <http://g1o.net/primopiano.JPG> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/mbox> <mailto:giovanni@wup.it> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/interest> <http://lirica.com> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://dbin.org> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://sindice.com> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/schoolHomepage> <http://univpm.it> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/weblog> <http://www.wup.it> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/workInfoHomepage> <http://www.deri.ie/about/> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.deri.ie> .
+_:genid1 <http://xmlns.com/foaf/0.1/primaryTopic> <http://g1o.net/foaf.rdf#me> .
+_:genid1 <http://xmlns.com/foaf/0.1/maker> _:A0 .
+<http://g1o.net/albums/Idleing-in-downtown-Calgary/IMGP0055.sized.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Image> .
+<http://g1o.net/albums/Idleing-in-downtown-Calgary/IMGP0055.sized.jpg> <http://xmlns.com/foaf/0.1/Depicts> <http://eyaloren.org/foaf.rdf#me> .
+<http://g1o.net/albums/Idleing-in-downtown-Calgary/IMGP0072.sized.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Image> .
+<http://g1o.net/albums/Idleing-in-downtown-Calgary/IMGP0072.sized.jpg> <http://xmlns.com/foaf/0.1/Depicts> <http://eyaloren.org/foaf.rdf#me> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Axel Polleres" .
+_:genid4 <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.polleres.net> .
+<http://g1o.net/albums/Idleing-in-downtown-Calgary/IMGP0072.sized.jpg> <http://xmlns.com/foaf/0.1/Depicts> _:genid4 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wot/0.1/PubKey> .
+_:genid5 <http://xmlns.com/wot/0.1/identify> <http://g1o.net/foaf.rdf#me> .
+_:genid5 <http://xmlns.com/wot/0.1/pubkeyAddress> <http://g1o.net/publickey.txt> .

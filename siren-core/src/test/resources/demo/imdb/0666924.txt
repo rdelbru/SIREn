@@ -1,0 +1,5 @@
+title:Episode dated 6 December 1996
+url:http://www.imdb.com/title/tt0666924/
+<title> ""The Oprah Winfrey Show" Episode dated 6 December 1996" .
+<actor> "Oprah Winfrey" "29 January 1954" "Kosciusko, Mississippi, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

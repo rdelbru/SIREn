@@ -1,0 +1,98 @@
+title:Terror in the Aisles
+url:http://www.imdb.com/title/tt0088249/
+<title> "Terror in the Aisles" .
+<director> "Andrew J. Kuehn" "24 September 1937" "Chicago, Illinois, USA" .
+<writer> "Margaret Doppelt" " " "" .
+<actor> "Donald Pleasence" "5 October 1919" "Worksop, Nottinghamshire, England, UK" .
+<actor> "Nancy Allen (I)" "24 June 1950" "New York City, New York, USA" .
+<actor> "Fred Asparagus" "10 June 1947" "Los Angeles County, California, USA" .
+<actor> "Lainie Cooke" " " "" .
+<actor> "Joel S. Rice" " " "" .
+<actor> "Ángel Salazar (I)" " " "" .
+<actor> "Diane Stilwell" " " "" .
+<actor> "Bud Abbott" "2 October 1895" "Asbury Park, New Jersey, USA" .
+<actor> "Brooke Adams (I)" "8 February 1949" "New York City, New York, USA" .
+<actor> "Ana Alicia" "12 December 1956" "Mexico City, Distrito Federal, Mexico" .
+<actor> "Alan Arkin" "26 March 1934" "New York City, New York, USA" .
+<actor> "Susan Backlinie" "1 September 1946" "Ventura, California, USA" .
+<actor> "Kirsten Baker" "7 April 1962" "Songnefjord, Norway" .
+<actor> "Martin Balsam" "4 November 1919" "The Bronx, New York, USA" .
+<actor> "Wilford Brimley" "27 September 1934" "Salt Lake City, Utah, USA" .
+<actor> "Marilyn Burns (I)" "5 July 1950" "Erie, Pennsylvania, USA" .
+<actor> "Ellen Burstyn" "7 December 1932" "Detroit, Michigan, USA" .
+<actor> "Michael Caine (I)" "14 March 1933" "Rotherhithe, London, England, UK" .
+<actor> "Veronica Cartwright" "20 April 1949" "Bristol, England, UK" .
+<actor> "John Cassavetes (I)" "9 December 1929" "New York City, New York, USA" .
+<actor> "Lon Chaney Jr." "10 February 1906" "Oklahoma City, Oklahoma, USA" .
+<actor> "Lou Costello (I)" "6 March 1906" "Paterson, New Jersey, USA" .
+<actor> "Joan Crawford (I)" "23 March 1905" "San Antonio, Texas, USA" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Jamie Lee Curtis" "22 November 1958" "Los Angeles, California, USA" .
+<actor> "Keith David (I)" "4 June 1956" "Harlem, New York, USA" .
+<actor> "Bette Davis" "5 April 1908" "Lowell, Massachusetts, USA" .
+<actor> "Brad Davis (I)" "6 November 1949" "Tallahassee, Florida, USA" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Angie Dickinson" "30 September 1931" "Kulm, North Dakota, USA" .
+<actor> "Eileen Dietz" "11 January 1945" "Bayside, New York, USA" .
+<actor> "Shelley Duvall" "7 July 1949" "Houston, Texas, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Morgan Fairchild" "3 February 1950" "Dallas, Texas, USA" .
+<actor> "Mia Farrow" "9 February 1945" "Los Angeles, California, USA" .
+<actor> "Jeff Goldblum" "22 October 1952" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Cary Grant" "18 January 1904" "Horfield, Bristol, England, UK" .
+<actor> "Roosevelt Grier" "14 July 1932" "Linden, New Jersey, USA" .
+<actor> "Wayne Hackett" " " "" .
+<actor> "Charles Hallahan" "29 July 1943" "Philadelphia, Pennsylvania, USA" .
+<actor> "Gunnar Hansen (II)" "4 March 1947" "Reykjavik, Iceland" .
+<actor> "Deborah Harry (I)" "1 July 1945" "Miami, Florida, USA" .
+<actor> "Rutger Hauer" "23 January 1944" "Breukelen, Utrecht, Netherlands" .
+<actor> "Wings Hauser" "12 December 1947" "Hollywood, California, USA" .
+<actor> "David Hedison" "20 May 1927" "Providence, Rhode Island, USA" .
+<actor> "Tippi Hedren" "19 January 1930" "New Ulm, Minnesota, USA" .
+<actor> "Alfred Hitchcock (I)" "13 August 1899" "Leytonstone, London, England, UK" .
+<actor> "Dustin Hoffman" "8 August 1937" "Los Angeles, California, USA" .
+<actor> "Ian Holm" "12 September 1931" "Goodmayes, Essex, England, UK" .
+<actor> "Season Hubley" "14 March 1951" "New York City, New York, USA" .
+<actor> "John Hurt" "22 January 1940" "Shirebrook, Derbyshire, England, UK" .
+<actor> "Amy Irving" "10 September 1953" "Palo Alto, California, USA" .
+<actor> "Duane Jones (I)" "2 February 1936" "New York City, New York, USA" .
+<actor> "Carol Kane (I)" "18 June 1952" "Cleveland, Ohio, USA" .
+<actor> "Boris Karloff" "23 November 1887" "Camberwell, London, England, UK" .
+<actor> "Grace Kelly (I)" "12 November 1929" "Philadelphia, Pennsylvania, USA" .
+<actor> "Margot Kidder" "17 October 1948" "Yellowknife, Northwest Territories, Canada" .
+<actor> "Carrie Klein" " " "" .
+<actor> "Yaphet Kotto" "15 November 1937" "New York City, New York, USA" .
+<actor> "Elsa Lanchester" "28 October 1902" "Lewisham, London, England, UK" .
+<actor> "Martin Landau" "20 June 1931" "Brooklyn, New York, USA" .
+<actor> "Piper Laurie" "22 January 1932" "Detroit, Michigan, USA" .
+<actor> "Ari Lehman" "2 May 1965" "Brooklyn, New York, USA" .
+<actor> "Janet Leigh" "6 July 1927" "Merced, California, USA" .
+<actor> "Jerry Lewis (I)" "16 March 1926" "Newark, New Jersey, USA" .
+<actor> "Zoë Lund" "9 February 1962" "New York City, New York, USA" .
+<actor> "Dean Martin (I)" "7 June 1917" "Steubenville, Ohio, USA" .
+<actor> "Ray Milland" "3 January 1905" "Neath, Glamorgan, Wales, UK" .
+<actor> "David Naughton (I)" "13 February 1951" "Hartford, Connecticut, USA" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Laurence Olivier" "22 May 1907" "Dorking, Surrey, England, UK" .
+<actor> "Heather O'Rourke" "27 December 1975" "San Diego, California, USA" .
+<actor> "Gregory Peck" "5 April 1916" "La Jolla, California, USA" .
+<actor> "Anthony Perkins (I)" "4 April 1932" "New York City, New York, USA" .
+<actor> "Christopher Plummer (I)" "13 December 1929" "Toronto, Ontario, Canada" .
+<actor> "Vincent Price (I)" "25 May 1911" "St. Louis, Missouri, USA" .
+<actor> "Lee Remick" "14 December 1935" "Quincy, Massachusetts, USA" .
+<actor> "Kurt Russell (I)" "17 March 1951" "Springfield, Massachusetts, USA" .
+<actor> "Roy Scheider" "10 November 1932" "Orange, New Jersey, USA" .
+<actor> "Tom Skerritt" "25 August 1933" "Detroit, Michigan, USA" .
+<actor> "Sissy Spacek" "25 December 1949" "Quitman, Texas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Harry Dean Stanton" "14 July 1926" "West Irvine, Kentucky, USA" .
+<actor> "Amy Steel (I)" "3 May 1960" "Pennsylvania, USA" .
+<actor> "Harvey Stephens (II)" "12 November 1970" "England, UK" .
+<actor> "Donald Sutherland (I)" "17 July 1935" "Saint John, New Brunswick, Canada" .
+<actor> "Gary Swanson" " " "Queens, New York, USA" .
+<actor> "Christopher Walken" "31 March 1943" "Queens, New York, USA" .
+<actor> "Robert Walker (I)" "13 October 1918" "Salt Lake City, Utah, USA" .
+<actor> "Jessica Walter (I)" "31 January 1941" "Brooklyn, New York, USA" .
+<actor> "Sigourney Weaver" "8 October 1949" "New York City, New York, USA" .
+<actor> "Jack Weston" "21 August 1924" "Cleveland, Ohio, USA" .
+<actor> "James Woods (I)" "18 April 1947" "Vernal, Utah, USA" .

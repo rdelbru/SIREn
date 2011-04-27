@@ -1,0 +1,6 @@
+title:Episode dated 15 August 1997
+url:http://www.imdb.com/title/tt0538930/
+<title> ""The Charlie Rose Show" Episode dated 15 August 1997" .
+<director> "Christopher Sgueglia" " " "" .
+<actor> "Charlie Rose (II)" "5 January 1942" "Henderson, North Carolina, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

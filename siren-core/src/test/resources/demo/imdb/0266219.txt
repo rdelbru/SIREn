@@ -1,0 +1,96 @@
+title:The 64th Annual Academy Awards
+url:http://www.imdb.com/title/tt0266219/
+<title> "The 64th Annual Academy Awards" .
+<director> "Jeff Margolis (I)" " " "" .
+<writer> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<writer> "Hal Kanter" "18 December 1918" "Savannah, Georgia, USA" .
+<actor> "Billy Crystal" "14 March 1948" "Long Beach, Long Island, New York, USA" .
+<actor> "Bryan Adams (I)" "5 November 1959" "Kingston, Ontario, Canada" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Kathy Bates (I)" "28 June 1948" "Memphis, Tennessee, USA" .
+<actor> "Warren Beatty" "30 March 1937" "Richmond, Virginia, USA" .
+<actor> "Annette Bening" "29 May 1958" "Topeka, Kansas, USA" .
+<actor> "Charles F. Bolden Jr." "19 August 1946" "Columbia, South Carolina, USA" .
+<actor> "Ronald M. Bozman" " " "" .
+<actor> "Ray Bradbury" "22 August 1920" "Waukegan, Illinois, USA" .
+<actor> "Jeff Bridges (I)" "4 December 1949" "Los Angeles, California, USA" .
+<actor> "Peabo Bryson" "13 April 1951" "Greenville, South Carolina, USA" .
+<actor> "James Caan (I)" "26 March 1940" "The Bronx, New York, USA" .
+<actor> "Dana Carvey" "2 June 1955" "Missoula, Montana, USA" .
+<actor> "Kevin Costner" "18 January 1955" "Lynwood, California, USA" .
+<actor> "Hume Cronyn" "18 July 1911" "London, Ontario, Canada" .
+<actor> "Geena Davis" "21 January 1956" "Wareham, Massachusetts, USA" .
+<actor> "Jonathan Demme" "22 February 1944" "Baldwin, Long Island, New York, USA" .
+<actor> "Rebecca De Mornay" "29 August 1959" "Santa Rosa, California, USA" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Céline Dion" "30 March 1968" "Charlemagne, Quebec, Canada" .
+<actor> "Michael Douglas (I)" "25 September 1944" "New Brunswick, New Jersey, USA" .
+<actor> "Brian Duffy (III)" "20 June 1953" "Boston, Massachusetts, USA" .
+<actor> "Robert Duvall" "5 January 1931" "San Diego, California, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "Michael Foale" "6 January 1957" "Louth, Lincolnshire, England, UK" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "Dirk D. Frimout" "21 March 1941" "Poperinge, Belgium" .
+<actor> "Richard Gere" "31 August 1949" "Philadelphia, Pennsylvania, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Tom Hanks" "9 July 1956" "Concord, California, USA" .
+<actor> "Daryl Hannah" "3 December 1960" "Chicago, Illinois, USA" .
+<actor> "Ray Harryhausen" "29 June 1920" "Los Angeles, California, USA" .
+<actor> "Dante Henderson" " " "" .
+<actor> "Audrey Hepburn" "4 May 1929" "Ixelles, Belgium" .
+<actor> "Anthony Hopkins" "31 December 1937" "Margam, Port Talbot, West Glamorgan, Wales, UK" .
+<actor> "Anjelica Huston" "8 July 1951" "Santa Monica, California, USA" .
+<actor> "Tommy Lee Jones" "15 September 1946" "San Saba, Texas, USA" .
+<actor> "Harvey Keitel" "13 May 1939" "Brooklyn, New York, USA" .
+<actor> "Callie Khouri" "27 November 1957" "San Antonio, Texas, USA" .
+<actor> "Nicole Kidman" "20 June 1967" "Honolulu, Hawaii, USA" .
+<actor> "Ben Kingsley" "31 December 1943" "Scarborough, Yorkshire, England, UK" .
+<actor> "Diane Ladd" "29 November 1932" "Meridian, Mississippi, USA" .
+<actor> "Jessica Lange" "20 April 1949" "Cloquet, Minnesota, USA" .
+<actor> "Angela Lansbury" "16 October 1925" "London, England, UK" .
+<actor> "Bill Lauch" " " "" .
+<actor> "Spike Lee" "20 March 1957" "Atlanta, Georgia, USA" .
+<actor> "David Leestma" "6 May 1949" "Muskegon, Michigan, USA" .
+<actor> "Michael Lerner (I)" "22 June 1941" "Brooklyn, New York, USA" .
+<actor> "Barry Levinson (I)" "6 April 1942" "Baltimore, Maryland, USA" .
+<actor> "Juliette Lewis (I)" "21 June 1973" "Los Angeles, California, USA" .
+<actor> "Byron K. Lichtenberg" "19 February 1948" "Stroudsburg, Pennsylvania, USA" .
+<actor> "Christopher Lloyd (I)" "22 October 1938" "Stamford, Connecticut, USA" .
+<actor> "George Lucas" "14 May 1944" "Modesto, California, USA" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Alan Menken" "22 July 1949" "New Rochelle, New York, USA" .
+<actor> "Bette Midler" "1 December 1945" "Honolulu, Hawaii, USA" .
+<actor> "Liza Minnelli" "12 March 1946" "Los Angeles, California, USA" .
+<actor> "Demi Moore" "11 November 1962" "Roswell, New Mexico, USA" .
+<actor> "Mike Myers (I)" "25 May 1963" "Scarborough, Ontario, Canada" .
+<actor> "Kate Nelligan" "16 March 1950" "London, Ontario, Canada" .
+<actor> "Paul Newman (I)" "26 January 1925" "Shaker Heights, Ohio, USA" .
+<actor> "Vivian Nixon" " 1984" "" .
+<actor> "Nick Nolte" "8 February 1941" "Omaha, Nebraska, USA" .
+<actor> "Paige O'Hara" "10 May 1956" "Ft. Lauderdale, Florida, USA" .
+<actor> "Jerry Orbach" "20 October 1935" "New York City, New York, USA" .
+<actor> "Jack Palance" "18 February 1919" "Lattimer Mines, Pennsylvania, USA" .
+<actor> "Joe Pesci" "9 February 1943" "Newark, New Jersey, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Kyli Rae" " " "" .
+<actor> "Satyajit Ray" "2 May 1921" "Calcutta, West Bengal, British India. [now India]" .
+<actor> "Hal Roach (I)" "14 January 1892" "Elmira, New York, USA" .
+<actor> "Mercedes Ruehl" "28 February 1948" "Queens, New York, USA" .
+<actor> "Susan Sarandon" "4 October 1946" "New York City, New York, USA" .
+<actor> "Edward Saxon" " " "St. Louis, Missouri, USA" .
+<actor> "Amber Scott" "10 October 1984" "USA" .
+<actor> "Ridley Scott" "30 November 1937" "South Shields, County Durham, England, UK" .
+<actor> "John Singleton (I)" "6 January 1968" "Los Angeles, California, USA" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Oliver Stone (I)" "15 September 1946" "New York City, New York, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Barbra Streisand" "24 April 1942" "Williamsburg, Brooklyn, New York, USA" .
+<actor> "Kathy Sullivan" "3 October 1951" "Paterson, New Jersey, USA" .
+<actor> "Patrick Swayze" "18 August 1952" "Houston, Texas, USA" .
+<actor> "Ted Tally" "9 April 1952" "" .
+<actor> "Jessica Tandy" "7 June 1909" "London, England, UK" .
+<actor> "Elizabeth Taylor (I)" "27 February 1932" "Hampstead, London, England, UK" .
+<actor> "Kathleen Turner (I)" "19 June 1954" "Springfield, Missouri, USA" .
+<actor> "Kenneth Utt (I)" "13 July 1921" "Winston-Salem, North Carolina, USA" .
+<actor> "Robin Williams (I)" "21 July 1951" "Chicago, Illinois, USA" .

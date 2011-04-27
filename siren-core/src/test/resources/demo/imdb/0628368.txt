@@ -1,0 +1,11 @@
+title:Episode dated 26 March 2001
+url:http://www.imdb.com/title/tt0628368/
+<title> ""Late Show with David Letterman" Episode dated 26 March 2001" .
+<director> "Jerry Foley" " " "Staten Island, New York, USA" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Carter Bays" " " "" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "George Carlin" "12 May 1937" "New York City, New York, USA" .
+<actor> "Powderfinger" " " "" .
+<actor> "Paul Shaffer" "28 November 1949" "Thunder Bay, Ontario, Canada" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

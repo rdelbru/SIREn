@@ -1,0 +1,20 @@
+title:Raw Iron: The Making of 'Pumping Iron'
+url:http://www.imdb.com/title/tt0369866/
+<title> "Raw Iron: The Making of 'Pumping Iron'" .
+<director> "Dave McVeigh (I)" " " "" .
+<director> "Scott McVeigh" " " "" .
+<writer> "Dave McVeigh (I)" " " "" .
+<writer> "Scott McVeigh" " " "" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Mike Katz (I)" " " "" .
+<actor> "Lou Ferrigno" "9 November 1951" "Brooklyn, New York, USA" .
+<actor> "Franco Columbu" "17 August 1941" "Ollolai, Sardinia, Italy" .
+<actor> "George Butler (II)" " 1944" "London, England, UK" .
+<actor> "Joe Weider" "29 November 1922" "Montreal, Canada" .
+<actor> "Bill Grant (IV)" " " "" .
+<actor> "Ken Waller (I)" " " "" .
+<actor> "Reg Park" "7 June 1928" "Leeds, Yorkshire, England, UK" .
+<actor> "Ed Corney" " " "" .
+<actor> "Matty Ferrigno" " " "" .
+<actor> "Liev Schreiber" "4 October 1967" "San Francisco, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,27 @@
+title:Jackie Chan: My Story
+url:http://www.imdb.com/title/tt0242545/
+<title> "Jackie Chan: My Story" .
+<director> "Jackie Chan (I)" "7 April 1954" "Hong Kong" .
+<writer> "Bey Logan" " 1963" "England, UK" .
+<actor> "Jackie Chan (I)" "7 April 1954" "Hong Kong" .
+<actor> "Charles Chan" "18 December 1915" "Anhui, China" .
+<actor> "Willie Chan" " " "" .
+<actor> "Emil Chau" "22 December 1960" "Hong Kong" .
+<actor> "Chuck D. (I)" "1 August 1960" "Roosevelt, Long Island, New York, USA" .
+<actor> "Joe Eszterhas" "23 November 1944" "Csakanydoroszlo, Hungary" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Arthur Hiller" "22 November 1923" "Edmonton, Alberta, Canada" .
+<actor> "Sammo Hung Kam-Bo" "7 January 1952" "Hong Kong, China" .
+<actor> "Sir David-Akers Jones" " " "" .
+<actor> "Martin Lawrence (I)" "16 April 1965" "Frankfurt-am-Main, Hessen, Germany" .
+<actor> "Jay Leno" "28 April 1950" "New Rochelle, New York, USA" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "Wesley Snipes" "31 July 1962" "Orlando, Florida, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Quentin Tarantino" "27 March 1963" "Knoxville, Tennessee, USA" .
+<actor> "Stanley Tong" " 1960" "Hong Kong" .
+<actor> "Michael Warrington" " " "" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .
+<actor> "John Woo (I)" "23 September 1946" "Guangzhou, China" .
+<actor> "Michelle Yeoh" "6 August 1962" "Ipoh, Perak, Malaysia" .
+<actor> "Biao Yuen" "26 July 1957" "Hong Kong" .

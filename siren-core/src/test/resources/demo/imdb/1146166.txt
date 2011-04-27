@@ -1,0 +1,26 @@
+title:Episode dated 23 November 2007
+url:http://www.imdb.com/title/tt1146166/
+<title> ""Access Hollywood" Episode dated 23 November 2007" .
+<actor> "Amy Adams (III)" "20 August 1974" "Aviano, Italy" .
+<actor> "Billy Bush" "13 October 1971" "Los Angeles, California, USA" .
+<actor> "Simon Cowell" "7 October 1959" "Brighton, East Sussex, England, UK" .
+<actor> "Patrick Dempsey (I)" "13 January 1966" "Lewiston, Maine, USA" .
+<actor> "Anna Faris" "29 November 1976" "Baltimore, Maryland, USA" .
+<actor> "Genie Francis" "26 May 1962" "Englewood, New Jersey, USA" .
+<actor> "Russell James (I)" " " "" .
+<actor> "Joe Jonas" "15 August 1989" "Casa Grande, Arizona, USA" .
+<actor> "Kevin Jonas" "5 November 1987" "Teaneck, New Jersey, USA" .
+<actor> "Nick Jonas" "16 September 1992" "Dallas, Texas, USA" .
+<actor> "Jay Leno" "28 April 1950" "New Rochelle, New York, USA" .
+<actor> "Stacy London" "25 May 1969" "New York City, New York, USA" .
+<actor> "James Marsden (I)" "18 September 1973" "Stillwater, Oklahoma, USA" .
+<actor> "Maria Menounos" "8 June 1978" "Medford, Massachusetts, USA" .
+<actor> "Nancy O'Dell" "25 February 1966" "Sumter, South Carolina, USA" .
+<actor> "Hayden Panettiere" "21 August 1989" "Palisades, New York, USA" .
+<actor> "Teri Polo" "1 June 1969" "Dover, Delaware, USA" .
+<actor> "Tony Potts (I)" "23 January 1963" "" .
+<actor> "Keri Russell" "23 March 1976" "Fountain Valley, California, USA" .
+<actor> "Susan Sarandon" "4 October 1946" "New York City, New York, USA" .
+<actor> "Seal" "19 February 1963" "Paddington, London, England, UK" .
+<actor> "Tori Spelling" "16 May 1973" "Los Angeles, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

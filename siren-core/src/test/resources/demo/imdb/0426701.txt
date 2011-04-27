@@ -1,0 +1,7 @@
+title:"Le grand journal de Canal+"
+url:http://www.imdb.com/title/tt0426701/
+<title> ""Le grand journal de Canal+"" .
+<director> "Renaud Le Van Kim" " " "" .
+<director> "Marc Gibaja" " " "" .
+<writer> "Marc Gibaja" " " "" .
+<writer> "Laurent Sarfati" " " "" .

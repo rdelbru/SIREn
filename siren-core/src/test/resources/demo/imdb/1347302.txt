@@ -1,0 +1,7 @@
+title:Amerika Idol
+url:http://www.imdb.com/title/tt1347302/
+<title> "Amerika Idol" .
+<director> "Barry Avrich" "9 May 1963" "Montréal, Québec, Canada" .
+<writer> "Barry Avrich" "9 May 1963" "Montréal, Québec, Canada" .
+<actor> "Barry Avrich" "9 May 1963" "Montréal, Québec, Canada" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

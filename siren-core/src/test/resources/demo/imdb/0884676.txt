@@ -1,0 +1,27 @@
+title:Episode #1.20
+url:http://www.imdb.com/title/tt0884676/
+<title> ""Sunday Morning Shootout" Episode #1.20" .
+<actor> "Denys Arcand" "25 June 1941" "Deschambault, Québec, Canada" .
+<actor> "T-Bone Burnett" "14 January 1948" "St. Louis, Missouri, USA" .
+<actor> "Keisha Castle-Hughes" "24 March 1990" "Donnybrook, Western Australia, Australia" .
+<actor> "Kevin Costner" "18 January 1955" "Lynwood, California, USA" .
+<actor> "Danny DeVito" "17 November 1944" "Asbury Park, New Jersey, USA" .
+<actor> "Robert Downey Jr." "4 April 1965" "New York City, New York, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Danny Elfman" "29 May 1953" "Los Angeles, California, USA" .
+<actor> "Cuba Gooding Jr." "2 January 1968" "The Bronx, New York, USA" .
+<actor> "Brian Grazer" "12 July 1951" "Los Angeles, California, USA" .
+<actor> "Dustin Hoffman" "8 August 1937" "Los Angeles, California, USA" .
+<actor> "Anthony Hopkins" "31 December 1937" "Margam, Port Talbot, West Glamorgan, Wales, UK" .
+<actor> "Ron Howard (I)" "1 March 1954" "Duncan, Oklahoma, USA" .
+<actor> "Anjelica Huston" "8 July 1951" "Santa Monica, California, USA" .
+<actor> "Peter Jackson (I)" "31 October 1961" "Pukerua Bay, North Island, New Zealand" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "Ben Kingsley" "31 December 1943" "Scarborough, Yorkshire, England, UK" .
+<actor> "Laura Linney" "5 February 1964" "New York City, New York, USA" .
+<actor> "Fernando Meirelles (I)" "9 November 1955" "São Paulo, São Paulo, Brazil" .
+<actor> "Edward Norton (I)" "18 August 1969" "Boston, Massachusetts, USA" .
+<actor> "Frank Pierson (I)" "12 May 1925" "Chappaqua, New York, USA" .
+<actor> "Gary Ross (I)" "3 November 1956" "Los Angeles, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Charlize Theron" "7 August 1975" "Benoni, Gauteng, South Africa" .

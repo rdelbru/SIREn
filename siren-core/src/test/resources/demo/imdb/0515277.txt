@@ -1,0 +1,7 @@
+title:Episode dated 22 December 1989
+url:http://www.imdb.com/title/tt0515277/
+<title> ""The Arsenio Hall Show" Episode dated 22 December 1989" .
+<writer> "Larry Charles (I)" "1 December 1956" "Brooklyn, New York, USA" .
+<actor> "Arsenio Hall" "12 February 1956" "Cleveland, Ohio, USA" .
+<actor> "Kurt Russell (I)" "17 March 1951" "Springfield, Massachusetts, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

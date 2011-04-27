@@ -1,0 +1,15 @@
+title:The Films of Norman Jewison
+url:http://www.imdb.com/title/tt0331470/
+<title> ""The Directors" The Films of Norman Jewison" .
+<director> "Robert J. Emery" " " "" .
+<writer> "Robert J. Emery" " " "" .
+<actor> "Norman Jewison" "21 July 1926" "Toronto, Ontario, Canada" .
+<actor> "James Caan (I)" "26 March 1940" "The Bronx, New York, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Goldie Hawn" "21 November 1945" "Washington, District of Columbia, USA" .
+<actor> "Craig T. Nelson" "4 April 1944" "Spokane, Washington, USA" .
+<actor> "Sidney Poitier" "20 February 1927" "Miami, Florida, USA" .
+<actor> "Sheryl Lee Ralph" "30 December 1956" "Waterbury, Connecticut, USA" .
+<actor> "Howard E. Rollins Jr." "17 October 1950" "Baltimore, Maryland, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Rod Steiger" "14 April 1925" "Westhampton, New York, USA" .

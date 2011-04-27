@@ -1,0 +1,31 @@
+title:Love and Mary
+url:http://www.imdb.com/title/tt0475330/
+<title> "Love and Mary" .
+<director> "Elizabeth Harrison (II)" " " "" .
+<writer> "Elizabeth Harrison (II)" " " "" .
+<actor> "Lauren German" "29 November 1978" "Huntington Beach, California, USA" .
+<actor> "Gabriel Mann (I)" "14 May 1972" "Middlebury, Vermont, USA" .
+<actor> "Whitney Able" " " "" .
+<actor> "Jesse Adams (II)" " " "" .
+<actor> "Joyce Anastasia Murray" " " "" .
+<actor> "Mary Bonner Baker" " " "" .
+<actor> "Greg Benson (I)" "23 January 1968" "Dallas, Texas, USA" .
+<actor> "Shelley Calene-Black" " " "" .
+<actor> "Charles Charpiot" " " "" .
+<actor> "Robert M. Clark" "8 August 1983" "Houston, Texas, USA" .
+<actor> "Alexandria Deberry" "26 October 1994" "Houston, Texas, USA" .
+<actor> "Bonnie Gallup" " " "" .
+<actor> "Ben Gourley" "26 May 1978" "Salt Lake City, Utah, USA" .
+<actor> "Pam Green (I)" " " "" .
+<actor> "Junie Hoang" "16 July 1971" "Saigon, Vietnam" .
+<actor> "Artee Kumar" " " "" .
+<actor> "Naomi Mercer" " " "" .
+<actor> "E.J. Nolan" "21 January 1953" "Detroit, Michigan, USA" .
+<actor> "Katerina Pasat" "30 June 1995" "Houston, Texas, USA" .
+<actor> "Marco Perella" " " "" .
+<actor> "Sylvia Caplan Rawley" " " "" .
+<actor> "Megan Robjohns" " " "" .
+<actor> "Will Shivers" " " "" .
+<actor> "Louanne Stephens" " " "" .
+<actor> "Brian Thornton" " " "" .
+<actor> "Tommy Townsend" " " "" .

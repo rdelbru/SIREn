@@ -1,0 +1,21 @@
+title:Rambo III
+url:http://www.imdb.com/title/tt0095956/
+<title> "Rambo III" .
+<director> "Peter MacDonald (I)" " " "London, England, UK" .
+<writer> "David Morrell (I)" "24 April 1943" "Kitchener, Ontario, Canada" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .
+<actor> "Marc de Jonge" "16 February 1949" "Nancy, Meurthe-et-Moselle, France" .
+<actor> "Kurtwood Smith" "3 July 1943" "New Lisbon, Wisconsin, USA" .
+<actor> "Spiros Focás" " 1937" "Greece" .
+<actor> "Sasson Gabai" " " "" .
+<actor> "Doudi Shoua" " " "" .
+<actor> "Randy Raney" " " "" .
+<actor> "Marcus Gilbert" " 1958" "" .
+<actor> "Alon Abutbul" "28 May 1965" "Israel" .
+<actor> "Mahmoud Assadollahi" " " "" .
+<actor> "Joseph Shiloach" " " "" .
+<actor> "Harold Diamond" " " "" .
+<actor> "Matti Seri" " " "" .
+<actor> "Hany Said El Deen" " " "" .

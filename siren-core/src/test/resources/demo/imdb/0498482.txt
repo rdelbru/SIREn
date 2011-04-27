@@ -1,0 +1,11 @@
+title:The Crazy World of Dolly Parton
+url:http://www.imdb.com/title/tt0498482/
+<title> "The Crazy World of Dolly Parton" .
+<director> "Richard Discoll" " " "" .
+<writer> "Jeremy Watkins (II)" " " "" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Emmylou Harris" "2 April 1947" "Birmingham, Alabama, USA" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Linda Ronstadt" "15 July 1946" "Tucson, Arizona, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Lily Tomlin" "1 September 1939" "Detroit, Michigan, USA" .

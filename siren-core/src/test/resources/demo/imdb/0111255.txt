@@ -1,0 +1,20 @@
+title:The Specialist
+url:http://www.imdb.com/title/tt0111255/
+<title> "The Specialist" .
+<director> "Luis Llosa" " 1951" "Lima, Peru" .
+<writer> "John Shirley (III)" "10 February 1953" "Houston, Texas, USA" .
+<writer> "Alexandra Seros" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "James Woods (I)" "18 April 1947" "Vernal, Utah, USA" .
+<actor> "Rod Steiger" "14 April 1925" "Westhampton, New York, USA" .
+<actor> "Eric Roberts (I)" "18 April 1956" "Biloxi, Mississippi, USA" .
+<actor> "Mario Ernesto Sánchez" " " "" .
+<actor> "Sergio Doré Jr." " " "" .
+<actor> "Chase Randolph" " " "" .
+<actor> "Jeana Bell" " " "" .
+<actor> "Brittany Paige Bouck" "12 October 1984" "Winter Park, Florida, USA" .
+<actor> "Emilio Estefan Jr." "4 March 1953" "Havana, Cuba" .
+<actor> "LaGaylia Frazier" " 1962" "USA" .
+<actor> "Ramón González Cuevas" " " "" .
+<actor> "Tony Munafo" " " "" .

@@ -1,0 +1,18 @@
+title:Episode dated 9 December 2006
+url:http://www.imdb.com/title/tt0907944/
+<title> ""Ali's Dozen" Episode dated 9 December 2006" .
+<actor> "George Chuvalo" "12 September 1937" "Toronto, Ontario, Canada" .
+<actor> "Henry Cooper" "3 May 1934" "London, England, UK" .
+<actor> "Angelo Dundee" "30 August 1921" "Philadelphia, Pennsylvania, USA" .
+<actor> "George Foreman" "10 January 1949" "Marshall, Texas, USA" .
+<actor> "Bob Goodman" " " "" .
+<actor> "Jerry Izenberg" " " "" .
+<actor> "Gene Kilroy" " " "" .
+<actor> "Dave Kindred" " " "" .
+<actor> "Michael Marley" " " "" .
+<actor> "Dr. Wilbert McClure" " " "" .
+<actor> "Hugh McIlvanney" " " "" .
+<actor> "Morton Sharnik" " " "" .
+<actor> "Earnie Shavers" "31 August 1944" "Garland, Alabama, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ernie Terrell" "4 April 1939" "Belzoni, Mississippi, USA" .

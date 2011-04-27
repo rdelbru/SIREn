@@ -1,0 +1,10 @@
+title:Episode dated 8 December 2006
+url:http://www.imdb.com/title/tt0918309/
+<title> ""The Tonight Show with Jay Leno" Episode dated 8 December 2006" .
+<actor> "Steve Bridges" " " "" .
+<actor> "Gilbert Gottfried" "28 February 1955" "Brooklyn, New York, USA" .
+<actor> "Jay Leno" "28 April 1950" "New Rochelle, New York, USA" .
+<actor> "Larry Miller (I)" "15 October 1953" "Valley Stream, Long Island, New York, USA" .
+<actor> "Parminder Nagra (I)" "5 October 1975" "Leicester, Leicestershire, England, UK" .
+<actor> "Seal" "19 February 1963" "Paddington, London, England, UK" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

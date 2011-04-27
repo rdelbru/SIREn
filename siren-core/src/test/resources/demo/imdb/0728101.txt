@@ -1,0 +1,7 @@
+title:Episode dated 2 May 1991
+url:http://www.imdb.com/title/tt0728101/
+<title> ""The Tonight Show Starring Johnny Carson" Episode dated 2 May 1991" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Tony DeSena" " " "" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,6 @@
+title:Episode dated 19 February 2007
+url:http://www.imdb.com/title/tt0967618/
+<title> ""A Current Affair" Episode dated 19 February 2007" .
+<actor> "Tracy Grimshaw" "3 June 1960" "Melbourne, Victoria, Australia" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Richard Wilkins (II)" "19 June 1954" "Auckland, New Zealand" .

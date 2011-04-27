@@ -1,0 +1,20 @@
+title:Mandingo
+url:http://www.imdb.com/title/tt0073349/
+<title> "Mandingo" .
+<director> "Richard Fleischer" "8 December 1916" "Brooklyn, New York City, New York, USA" .
+<writer> "Kyle Onstott" " " "" .
+<writer> "Jack Kirkland" "15 July 1901" "St. Louis, Missouri, USA" .
+<actor> "Susan George" "26 July 1950" "London, England, UK" .
+<actor> "Perry King" "30 April 1948" "Alliance, Ohio, USA" .
+<actor> "Richard Ward (I)" "15 March 1915" "Glenside, Pennsylvania, USA" .
+<actor> "Brenda Sykes" "25 June 1949" "Shreveport, Louisiana, USA" .
+<actor> "Ken Norton" "9 August 1943" "Jacksonville, Illinois, USA" .
+<actor> "Lillian Hayman" "17 July 1922" "Baltimore, Maryland, USA" .
+<actor> "Roy Poole (I)" "31 March 1924" "San Bernardino, California, USA" .
+<actor> "Ji-Tu Cumbuka" "4 March 1942" "Montgomery County, Alabama, USA" .
+<actor> "Ben Masters" "6 May 1947" "Corvallis, Oregon, USA" .
+<actor> "Paul Benedict" "17 September 1938" "Silver City, New Mexico, USA" .
+<actor> "Ray Spruell" "4 November 1924" "Louisiana, USA" .
+<actor> "Louis Turenne" "26 November 1933" "Montréal, Québec, Canada" .
+<actor> "Duane Allen (I)" "21 October 1937" "" .
+<actor> "Beatrice Winde" "5 January 1924" "Chicago, Illinois, USA" .

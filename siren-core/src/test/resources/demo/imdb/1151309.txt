@@ -1,0 +1,83 @@
+title:Bigger Stronger Faster*
+url:http://www.imdb.com/title/tt1151309/
+<title> "Bigger Stronger Faster\*" .
+<director> "Chris Bell (III)" " " "" .
+<writer> "Chris Bell (III)" " " "" .
+<writer> "Alexander Buono" " " "" .
+<actor> "Chris Bell (III)" " " "" .
+<actor> "Hank Aaron" "5 February 1934" "Mobile, Alabama, USA" .
+<actor> "Lyle Alzado" "3 April 1949" "Brooklyn, New York, USA" .
+<actor> "Joshua Amsden" " " "" .
+<actor> "Ben Aukes" " " "" .
+<actor> "Kelly Beecher" " " "" .
+<actor> "Mark Bell (XI)" " " "" .
+<actor> "Mike Bell (IX)" " 1971" "Poughkeepsie, New York, USA" .
+<actor> "Rosemary Bell" " " "" .
+<actor> "Sheldon Bell" " " "" .
+<actor> "Joe Biden" "20 November 1942" "Scranton, Pennsylvania, USA" .
+<actor> "Mike Blanton" " " "" .
+<actor> "Christian Boeving" "5 June 1969" "Dallas, Texas, USA" .
+<actor> "Barry Bonds" "24 July 1964" "Riverside, California, USA" .
+<actor> "Jim Bunning" "23 October 1931" "Southgate, Kentucky, USA" .
+<actor> "George Bush (I)" "12 June 1924" "Milton, Massachusetts, USA" .
+<actor> "George W. Bush" "6 July 1946" "New Haven, Connecticut, USA" .
+<actor> "Jeff Carwile" " " "" .
+<actor> "Dr. Carlon Colker" " " "" .
+<actor> "Meave Cox" " " "" .
+<actor> "Jay Cutler (II)" "3 August 1974" "Sterling, Massachusetts, USA" .
+<actor> "Dr. Eric Dodson" " " "" .
+<actor> "Jason Ellis (I)" "11 October 1971" "Melbourne, Victoria, Australia" .
+<actor> "Wade Exum" " " "" .
+<actor> "Dr. Norm Fost" " " "" .
+<actor> "Dr. Mark Gordon" " " "" .
+<actor> "Gene Haislip" " " "" .
+<actor> "Orrin G. Hatch" "22 March 1934" "Homestead Park, Pennsylvania, USA" .
+<actor> "Hulk Hogan" "11 August 1953" "Augusta, Georgia, USA" .
+<actor> "Donald Hooton" " " "" .
+<actor> "Rehan Jalali" " " "" .
+<actor> "Ben Johnson (VIII)" "30 December 1961" "Falmouth, Jamaica" .
+<actor> "Marion Jones (II)" "12 October 1975" "Los Angeles, California, USA" .
+<actor> "John F. Kennedy" "29 May 1917" "Brookline, Massachusetts, USA" .
+<actor> "Johnny Knox (I)" " " "" .
+<actor> "Floyd Landis" "14 October 1975" "Farmersville, Pennsylvania, USA" .
+<actor> "Stan Lee (I)" "28 December 1922" "New York City, New York, USA" .
+<actor> "Willie Litvack" " " "" .
+<actor> "Mickey Mantle" "20 October 1931" "Spavinaw, Oklahoma, USA" .
+<actor> "Roger Maris" "10 September 1934" "Hibbing, Minnesota, USA" .
+<actor> "Mark McGwire" "1 October 1963" "Pomona, California, USA" .
+<actor> "Marilyn Monroe" "1 June 1926" "Los Angeles, California, USA" .
+<actor> "Tony Mulhare" " " "" .
+<actor> "Joe Niekro" "7 November 1944" "Martins Ferry, Ohio, USA" .
+<actor> "Jackie Ochoa" " " "" .
+<actor> "Jack Owoc" " " "" .
+<actor> "Rafael Palmeiro" "24 September 1964" "Havana, Cuba" .
+<actor> "Joel Paredes" " " "" .
+<actor> "Craig Phillips (V)" " " "" .
+<actor> "Harrison Pope" " " "" .
+<actor> "Ronald Reagan (I)" "6 February 1911" "Tampico, Illinois, USA" .
+<actor> "John Romano (V)" " " "" .
+<actor> "Giovanni Roselli" "23 September 1980" "White Plains, New York, USA" .
+<actor> "Rosie Ruiz" " " "" .
+<actor> "Babe Ruth" "6 February 1895" "Baltimore, Maryland, USA" .
+<actor> "Rick Schaff" " " "" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Maria Shriver" "6 November 1955" "Chicago, Illinois, USA" .
+<actor> "Louis Simmons" " " "" .
+<actor> "Aubrey Smith (II)" " " "" .
+<actor> "Bee Smith" " " "" .
+<actor> "Dick 'Smitty' Smith" " " "" .
+<actor> "Sammy Sosa" "12 November 1968" "San Pedro de Macoris, Dominican Republic" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Paul Sullivan (XV)" " " "" .
+<actor> "Major Travis Swan" " " "" .
+<actor> "Dr. Lee Sweeney" " " "" .
+<actor> "John Sweeney (XII)" "9 August 1955" "Troy, New York, USA" .
+<actor> "Jeff Taylor (XXI)" " " "" .
+<actor> "Tim Urban" "12 November 1981" "Newton, Massachusetts, USA" .
+<actor> "Gregg Valentino" " " "" .
+<actor> "Chuck Vogelpohl" " " "" .
+<actor> "Gary Wadler" " " "" .
+<actor> "Diane Watson" " " "" .
+<actor> "Henry Waxman" "12 September 1939" "Los Angeles, California, USA" .
+<actor> "Tiger Woods" "30 December 1975" "Cypress, California, USA" .
+<actor> "Dr. Charles Yesalis" " " "" .

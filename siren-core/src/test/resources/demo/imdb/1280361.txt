@@ -1,0 +1,9 @@
+title:Filmen 'Demolition Man'/Nyheter och väder
+url:http://www.imdb.com/title/tt1280361/
+<title> ""Nyhetsmorgon" Filmen 'Demolition Man'/Nyheter och väder" .
+<actor> "Benjamin Bratt (I)" "16 December 1963" "San Francisco, California, USA" .
+<actor> "Sandra Bullock" "26 July 1964" "Arlington, Virginia, USA" .
+<actor> "Wesley Snipes" "31 July 1962" "Orlando, Florida, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Malou Von Sivers" " " "" .
+<actor> "Hans Wiklund" "17 September 1964" "" .

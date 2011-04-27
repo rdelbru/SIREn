@@ -1,0 +1,34 @@
+title:Nickelodeon Kids' Choice Awards '03
+url:http://www.imdb.com/title/tt0450062/
+<title> "Nickelodeon Kids' Choice Awards '03" .
+<actor> "Jessica Alba" "28 April 1981" "Pomona, California, USA" .
+<actor> "Drew Barrymore (I)" "22 February 1975" "Culver City, California, USA" .
+<actor> "Drake Bell" "27 June 1986" "Santa Ana, California, USA" .
+<actor> "Stevie Brock" "23 October 1990" "Dayton, Ohio, USA" .
+<actor> "Amanda Bynes" "3 April 1986" "Thousand Oaks, California, USA" .
+<actor> "Jim Carrey" "17 January 1962" "Newmarket, Ontario, Canada" .
+<actor> "Kelly Clarkson" "24 April 1982" "Fort Worth, Texas, USA" .
+<actor> "Cameron Diaz" "30 August 1972" "San Diego, California, USA" .
+<actor> "Hilary Duff" "28 September 1987" "Houston, Texas, USA" .
+<actor> "Will Ferrell" "16 July 1967" "Irvine, California, USA" .
+<actor> "Justin Guarini" "28 October 1978" "Columbus, Georgia, USA" .
+<actor> "Jennifer Love Hewitt" "21 February 1979" "Waco, Texas, USA" .
+<actor> "Dwayne Johnson (I)" "2 May 1972" "Hayward, California, USA" .
+<actor> "Ashton Kutcher" "7 February 1978" "Cedar Rapids, Iowa, USA" .
+<actor> "Matthew Lillard" "24 January 1970" "Lansing, Michigan, USA" .
+<actor> "Lucy Liu" "2 December 1968" "Queens, New York, USA" .
+<actor> "Mandy Moore (II)" "10 April 1984" "Nashua, New Hampshire, USA" .
+<actor> "Frankie Muniz" "5 December 1985" "Wood Ridge, New Jersey, USA" .
+<actor> "Brittany Murphy" "10 November 1977" "Atlanta, Georgia, USA" .
+<actor> "Mike Myers (I)" "25 May 1963" "Scarborough, Ontario, Canada" .
+<actor> "Rosie O'Donnell" "21 March 1962" "Commack, Long Island, New York, USA" .
+<actor> "Michelle Pfeiffer" "29 April 1958" "Santa Ana, California, USA" .
+<actor> "Brad Pitt" "18 December 1963" "Shawnee, Oklahoma, USA" .
+<actor> "Lil' Romeo" "19 August 1989" "New Orleans, Louisiana, USA" .
+<actor> "Daryl Sabara" "14 June 1992" "Torrance, California, USA" .
+<actor> "Adam Sandler (I)" "9 September 1966" "Brooklyn, New York, USA" .
+<actor> "Will Smith (I)" "25 September 1968" "Philadelphia, Pennsylvania, USA" .
+<actor> "Britney Spears" "2 December 1981" "Kentwood, Louisiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Justin Timberlake" "31 January 1981" "Memphis, Tennessee, USA" .
+<actor> "Bow Wow" "9 March 1987" "Columbus, Ohio, USA" .

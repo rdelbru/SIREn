@@ -1,0 +1,38 @@
+title:Episode #15.23
+url:http://www.imdb.com/title/tt1181210/
+<title> ""Quelli che... il calcio" Episode #15.23" .
+<director> "Paolo Beldì" "11 July 1954" "Novara, Piedmont, Italy" .
+<writer> "Furio Andreotti" " " "" .
+<writer> "Paolo Beldì" "11 July 1954" "Novara, Piedmont, Italy" .
+<actor> "Simona Ventura" "1 April 1965" "Bentivoglio, Bologna, Italy" .
+<actor> "Giampiero Galeazzi" "18 May 1946" "Rome, Italy" .
+<actor> "Bruno Gentili" " " "" .
+<actor> "Massimiliano Giusti" "28 July 1968" "Rome, Italy" .
+<actor> "Lucia Ocone" " 1974" "Rome, Italy" .
+<actor> "Riccardo Rossi" "9 November 1963" "Rome, Italy" .
+<actor> "Albertino" "7 August 1962" "Paderno Dugnano, Milan, Italy" .
+<actor> "DJ Angelo" "14 June 1966" "Seregno, Milan, Lombardy, Italy" .
+<actor> "Dodi Battaglia" " " "" .
+<actor> "Luca Bizzarri" "13 July 1971" "Genova, Italy" .
+<actor> "Francesco Brandi" " " "" .
+<actor> "Red Canzian" " " "" .
+<actor> "Massimo Caputi" "5 December 1961" "Rome, Lazio, Italy" .
+<actor> "Dario Cassini (I)" " " "" .
+<actor> "Martina Chiriaco" " " "" .
+<actor> "Maurizio Costanzo" "28 August 1938" "Rome, Italy" .
+<actor> "Gérard Depardieu" "27 December 1948" "Châteauroux, Indre, France" .
+<actor> "Stefano D'Orazio" " " "" .
+<actor> "Roby Facchinetti" "1 May 1944" "Bergamo, Italy" .
+<actor> "Manuel Ferruggia" " " "" .
+<actor> "Lisa Fusco (I)" " " "" .
+<actor> "Paolo Kessisoglu" "25 July 1969" "Genova, Italy" .
+<actor> "Paolo Limiti" " " "" .
+<actor> "Cristiano Malgioglio" "23 April 1950" "Ramacca, Catania, Italy" .
+<actor> "Massimiliano Novaresi" " " "" .
+<actor> "Mauro Perfetti" " " "" .
+<actor> "Max Pisu" "23 January 1965" "Legnano, Italy" .
+<actor> "Linda Santaguida" "17 January 1978" "Bologna, Italy" .
+<actor> "Viola Senatore" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Giorgia Trasselli" " " "" .
+<actor> "Massimiliano Varrese" "5 January 1976" "Rome, Lazio, Italy" .

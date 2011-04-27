@@ -1,0 +1,14 @@
+title:It's a Long Road: Resurrection of an Icon
+url:http://www.imdb.com/title/tt1394343/
+<title> "It's a Long Road: Resurrection of an Icon" .
+<actor> "Julie Benz" "1 May 1972" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Reynaldo Gallegos" " " "" .
+<actor> "Tim Kang" "16 March 1973" "San Francisco, California, USA" .
+<actor> "Jake La Botz" " " "" .
+<actor> "Avi Lerner" "13 October 1947" "Haifa, Israel" .
+<actor> "Matthew Marsden" "3 March 1973" "Walsall, West Midlands, England, UK" .
+<actor> "Graham McTavish" " 1961" "Glasgow, Scotland, UK" .
+<actor> "Paul Schulze (I)" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Kevin King Templeton" " " "" .
+<actor> "John Thompson (I)" " " "" .

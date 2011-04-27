@@ -1,0 +1,21 @@
+title:D-Tox
+url:http://www.imdb.com/title/tt0160184/
+<title> "D-Tox" .
+<director> "Jim Gillespie (I)" " " "" .
+<writer> "Howard Swindle" "20 November 1945" "Houston, Texas, USA" .
+<writer> "Ron L. Brinkerhoff" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Charles S. Dutton" "30 January 1951" "Baltimore, Maryland, USA" .
+<actor> "Polly Walker (II)" "10 May 1966" "Warrington, Cheshire, England, UK" .
+<actor> "Kris Kristofferson (I)" "22 June 1936" "Brownsville, Texas, USA" .
+<actor> "Mif" " " "Malta" .
+<actor> "Christopher Fulford" " 1955" "London, England, UK" .
+<actor> "Jeffrey Wright (I)" "7 December 1965" "Washington, District of Columbia, USA" .
+<actor> "Tom Berenger" "31 May 1949" "Chicago, Illinois, USA" .
+<actor> "Stephen Lang (I)" "11 July 1952" "New York City, New York, USA" .
+<actor> "Alan C. Peterson" " " "" .
+<actor> "Hrothgar Mathews" "27 January 1964" "Toronto, Ontario, Canada" .
+<actor> "Angela Alvarado (I)" " " "New York City, New York, USA" .
+<actor> "Robert Prosky" "13 December 1930" "Philadelphia, Pennsylvania, USA" .
+<actor> "Robert Patrick (I)" "5 November 1958" "Marietta, Georgia, USA" .
+<actor> "Courtney B. Vance" "12 March 1960" "Detroit, Michigan, USA" .

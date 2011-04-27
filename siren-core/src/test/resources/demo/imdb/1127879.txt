@@ -1,0 +1,12 @@
+title:Eckis Welt
+url:http://www.imdb.com/title/tt1127879/
+<title> "Eckis Welt" .
+<director> "Olaf Saumer" "22 April 1976" "Kassel, Germany" .
+<writer> "Olaf Saumer" "22 April 1976" "Kassel, Germany" .
+<actor> "Eckhard Baum" " " "" .
+<actor> "Fats Domino" "26 February 1928" "New Orleans, Louisiana, USA" .
+<actor> "Cornelia Froboess" "28 October 1943" "Wriezen a. d. Oder, Germany" .
+<actor> "Zachi Noy" "8 July 1953" "Haifa, Israel" .
+<actor> "Sibylle Rauch" "14 June 1960" "Munich, West Germany" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Will Williams (III)" " " "" .

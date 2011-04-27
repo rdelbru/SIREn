@@ -1,0 +1,15 @@
+title:Episode #4.7
+url:http://www.imdb.com/title/tt1311784/
+<title> ""Banda sonora" Episode #4.7" .
+<director> "Jordi Barrachina" " " "" .
+<director> "Josep Morell" " " "" .
+<actor> "Albert Espinosa" "5 November 1974" "Barcelona, Catalonia, Spain" .
+<actor> "Eloy Azorín" "19 February 1977" "Madrid, Spain" .
+<actor> "Jan Cornet" " 1982" "Vilafranca del Penedès, Barcelona, Catalonia, Spain" .
+<actor> "Matt Damon" "8 October 1970" "Boston, Massachusetts, USA" .
+<actor> "Francisco Díaz 'Frank'" "6 August 1971" "Barcelona, Spain" .
+<actor> "Constantino Fernández 'Tino'" "25 March 1967" "Barcelona, Spain" .
+<actor> "Macaco" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Gemma Termes Prat" "22 October 1969" "Barcelona, Spain" .
+<actor> "Yolanda Ventura" "21 October 1968" "Barcelona, Spain" .

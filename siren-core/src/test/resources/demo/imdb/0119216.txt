@@ -1,0 +1,19 @@
+title:The Good Life
+url:http://www.imdb.com/title/tt0119216/
+<title> "The Good Life" .
+<director> "Alan Mehrez" " " "" .
+<writer> "Alan Mehrez" " " "" .
+<actor> "Frank Stallone (I)" "30 July 1950" "New York City, New York, USA" .
+<actor> "Dennis Hopper" "17 May 1936" "Dodge City, Kansas, USA" .
+<actor> "Marina Anderson" "5 October 1952" "Burbank, California, USA" .
+<actor> "Erik Betts" "22 November 1967" "Boston, Massachusetts, USA" .
+<actor> "David Anthony Pizzuto" "9 July 1951" "Fort Erie, Ontario, Canada" .
+<actor> "Karen Trella" "25 March 1975" "Fairfax, Virginia, USA" .
+<actor> "Matt Raftery" " " "" .
+<actor> "Gi Gi Merone" " " "" .
+<actor> "Peter Dobson (I)" "19 July 1964" "Red Bank, New Jersey, USA" .
+<actor> "Andrew Dice Clay" "29 September 1957" "Brooklyn, New York, USA" .
+<actor> "David Carradine" "8 December 1936" "Hollywood, California, USA" .
+<actor> "Beverly D'Angelo" "15 November 1951" "Columbus, Ohio, USA" .
+<actor> "Nicole Lauren" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

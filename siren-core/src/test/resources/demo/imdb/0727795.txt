@@ -1,0 +1,10 @@
+title:Episode dated 21 May 1982
+url:http://www.imdb.com/title/tt0727795/
+<title> ""The Tonight Show Starring Johnny Carson" Episode dated 21 May 1982" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Jim Mulholland" " " "" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Ed McMahon (I)" "6 March 1923" "Detroit, Michigan, USA" .
+<actor> "Steve Martin (I)" "14 August 1945" "Waco, Texas, USA" .
+<actor> "Sage Stallone" "5 May 1976" "Los Angeles, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

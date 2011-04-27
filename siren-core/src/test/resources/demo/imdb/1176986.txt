@@ -1,0 +1,22 @@
+title:Episode dated 25 January 2008
+url:http://www.imdb.com/title/tt1176986/
+<title> ""Entertainment Tonight" Episode dated 25 January 2008" .
+<actor> "Thea Andrews" " " "Toronto, Ontario, Canada" .
+<actor> "Tom Arnold (I)" "6 March 1959" "Ottumwa, Iowa, USA" .
+<actor> "Nikki Blonsky" "9 November 1988" "Great Neck, New York, USA" .
+<actor> "Garth Brooks" "7 February 1962" "Tulsa, Oklahoma, USA" .
+<actor> "Steven Cojocaru" "5 January 1965" "Montreal, Quebec, Canada" .
+<actor> "Daniel Craig (I)" "2 March 1968" "Chester, Cheshire, England, UK" .
+<actor> "Daniel Day-Lewis" "29 April 1957" "London, England, UK" .
+<actor> "Kevin Frazier (I)" "20 May 1965" "" .
+<actor> "Andy Garcia (I)" "12 April 1956" "Havana, Cuba" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Mary Hart (I)" "8 November 1950" "Sioux Falls, South Dakota, USA" .
+<actor> "Diane Lane (I)" "22 January 1965" "New York City, New York, USA" .
+<actor> "Heath Ledger" "4 April 1979" "Perth, Western Australia, Australia" .
+<actor> "Leonard Maltin" "18 December 1950" "New York City, New York, USA" .
+<actor> "Mary-Kate Olsen" "13 June 1986" "Sherman Oaks, California, USA" .
+<actor> "Britney Spears" "2 December 1981" "Kentwood, Louisiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Mark Steines" "7 June 1964" "Dubuque, Iowa, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .

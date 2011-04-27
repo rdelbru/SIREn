@@ -1,0 +1,18 @@
+title:Stallone on the Edge: The Making of Cliffhanger
+url:http://www.imdb.com/title/tt0975740/
+<title> "Stallone on the Edge: The Making of Cliffhanger" .
+<director> "Michael Meadows" " " "" .
+<director> "John Pattyson" " " "" .
+<writer> "Michael Meadows" " " "" .
+<writer> "John Pattyson" " " "" .
+<actor> "Janine Turner" "6 December 1962" "Lincoln, Nebraska, USA" .
+<actor> "John Lithgow (I)" "19 October 1945" "Rochester, New York, USA" .
+<actor> "Renny Harlin" "15 March 1959" "Riihimäki, Finland" .
+<actor> "Terry Miller (I)" " " "" .
+<actor> "Frank J. Urioste" " " "" .
+<actor> "Joel Kramer" "10 September 1957" "Tucson, Arizona, USA" .
+<actor> "Alan Marshall (IV)" "12 August 1938" "London, England, UK" .
+<actor> "Michael Rooker" "6 April 1955" "Jasper, Alabama, USA" .
+<actor> "Mike Weis" " " "" .
+<actor> "Kevin Donald" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

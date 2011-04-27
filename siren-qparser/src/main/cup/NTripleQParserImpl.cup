@@ -1,0 +1,192 @@
+/**
+ * Copyright 2010, Renaud Delbru
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/**
+ * @project solr-plugins
+ * @author Renaud Delbru [ 25 Jul. 2010 ]
+ * @link http://renaud.delbru.fr/
+ * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
+ */
+package org.sindice.siren.qparser.ntriple;  
+   
+/* ----------------------Preliminary Declarations Section--------------------*/
+   
+/* Import the class java_cup.runtime.*  */
+import java_cup.runtime.*;
+
+/* Import IOException, used when parser errors occur */
+import java.io.IOException;
+
+/* Import the AST classes */
+import org.sindice.siren.qparser.ntriple.query.model.*;
+
+/* Import Logback Logger */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+   
+/* Parser code to change the way the parser reports errors (include
+   line and column number of the error). */
+parser code {:
+
+		private static final
+		Logger logger = LoggerFactory.getLogger(NTripleQParserImpl.class);
+    
+    /* Change the method report_error so it will display the line and
+       column of where the error occurred in the input as well as the
+       reason for the error which is passed into the method in the
+       String 'message'. */
+    public void report_error(String message, Object info) {
+      if (info instanceof Symbol) {
+      	 String[] params = {message, 
+      	                    Integer.toString(((Symbol) info).left+1),
+      	                    Integer.toString(((Symbol) info).right+1)};
+         logger.error("{} : Error in line {}, column {}", params);
+      } else
+         logger.error("{} : {}", message, cur_token);
+    }
+   
+    /* Change the method report_fatal_error so when it reports a fatal
+       error it will display the line and column number of where the
+       fatal error occurred in the input as well as the reason for the
+       fatal error which is passed into the method in the object
+       'message' and then exit.*/
+    public void report_fatal_error(String message, Object info) throws IOException {
+      done_parsing();
+      report_error(message, info);
+      throw new IOException(message);
+    }
+:};
+
+   
+/* ------------Declaration of Terminals and Non Terminals Section----------- */
+   
+/* Terminals (tokens returned by the scanner).  
+
+   Terminals that have no value are listed first and then terminals
+   that do have an value, in this case an String value, are listed on
+   the next line down. */
+   
+terminal           AND, OR, MINUS, LPAREN, RPAREN, WILDCARD;
+terminal String    URIPATTERN, LITERAL, LPATTERN;
+   
+/* Non terminals used in the grammar section.  
+
+   Non terminals that have an object value are listed first and then
+   non terminals that have an integer value are listed.  An object
+   value means that it can be any type, it isn't set to a specific
+   type.  So it could be an Integer or a String or whatever. */
+   
+non terminal NTripleQuery		Query;
+non terminal Clause     		Clause;
+non terminal Expression     Expr;
+non terminal TriplePattern  TriplePattern;
+non terminal Resource       Resource;
+non terminal Value          Value;
+
+
+/* ----------------------------Grammar Section-------------------- */
+   
+/* The grammar for our parser.
+   
+   Query          ::=   Clause
+                      |
+                      ;
+   
+   Clause         ::=   Expr BINARY_OP Clause
+                      | Expr
+                      ;
+                      
+   Expr           ::=   TriplePattern
+                      | LPAREN Query RPAREN
+                      
+   TriplePattern  ::=   Resource Resource Value
+   
+   Resource       ::=   URIPATTERN
+                      | WILDCARD
+                      
+   Value          ::=   Resource
+                      | LITERAL
+                      | LPATTERN
+                      
+   BINARY_OP      ::=   AND | OR | MINUS
+
+*/
+   
+/* 'Query' is the start of our grammar.  It can lead to a 'Clause' 
+   or nothing. */
+   
+   Query          ::= Clause:c
+   										{: RESULT = new ClauseQuery(c); :}
+                      |
+                      {: RESULT = new EmptyQuery(); :}
+                      ;
+                      
+   Clause         ::= Clause:c AND Expr:e
+                      {: 
+                      	 if (c instanceof UnaryClause)
+                           RESULT = new BinaryClause(c.getExpr(), Operator.AND, e);
+                         else
+                         	 RESULT = new NestedClause(c, Operator.AND, e);
+                      :}
+                      |
+                      Clause:c OR Expr:e
+                      {: 
+                      	 if (c instanceof UnaryClause)
+                           RESULT = new BinaryClause(c.getExpr(), Operator.OR, e);
+                         else
+                         	 RESULT = new NestedClause(c, Operator.OR, e);
+                      :}
+                      |
+                      Clause:c MINUS Expr:e
+                      {: 
+                      	 if (c instanceof UnaryClause)
+                           RESULT = new BinaryClause(c.getExpr(), Operator.MINUS, e);
+                         else
+                         	 RESULT = new NestedClause(c, Operator.MINUS, e);
+                      :}
+                      |
+                      Expr:e
+                      {: RESULT = new UnaryClause(e); :}
+                      ;
+
+   Expr              ::= TriplePattern:p
+		   			             {: RESULT = new SimpleExpression(p); :}
+		                     |
+		                     LPAREN Query:q RPAREN
+		                     {: RESULT = new QueryExpression(q); :}
+		                     ;
+   
+   TriplePattern     ::= Resource:s Resource:p Value:o
+   											 {: RESULT = new TriplePattern(s, p, o); :}
+                         ;
+
+   Value             ::= Resource:r
+   											 {: RESULT = r; :}
+                         |
+                         LITERAL:l
+                         {: RESULT = new Literal(l); :}
+                         |
+                         LPATTERN:p
+                         {: RESULT = new LiteralPattern(p); :}
+                         ;
+   
+   Resource          ::= URIPATTERN:u
+   											 {: RESULT = new URIPattern(u); :}
+                         |
+                         WILDCARD:w
+                         {: RESULT = new Wildcard("*"); :}
+                         ;
+                         

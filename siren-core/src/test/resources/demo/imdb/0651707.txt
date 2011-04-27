@@ -1,0 +1,9 @@
+title:Miniature Pyrotechnics: Baby Blasts
+url:http://www.imdb.com/title/tt0651707/
+<title> ""Movie Magic" Miniature Pyrotechnics: Baby Blasts" .
+<actor> "Bob Burns (III)" "12 May 1935" "Oklahoma, USA" .
+<actor> "James Cameron (I)" "16 August 1954" "Kapuskasing, Ontario, Canada" .
+<actor> "Renny Harlin" "15 March 1959" "Riihimäki, Finland" .
+<actor> "Thaine Morris" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Joe Viskocil" " " "" .

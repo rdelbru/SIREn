@@ -1,0 +1,6 @@
+title:Episode dated 25 July 2003
+url:http://www.imdb.com/title/tt0740359/
+<title> ""The View" Episode dated 25 July 2003" .
+<actor> "Antonio Banderas (I)" "10 August 1960" "Málaga, Málaga, Andalucía, Spain" .
+<actor> "Daryl Sabara" "14 June 1992" "Torrance, California, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

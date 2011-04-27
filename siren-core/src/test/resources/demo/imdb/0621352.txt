@@ -1,0 +1,21 @@
+title:My Brother, My Enemy
+url:http://www.imdb.com/title/tt0621352/
+<title> ""Kojak" My Brother, My Enemy" .
+<director> "Russ Mayberry" "22 December 1925" "Glasgow, Scotland, UK" .
+<writer> "Alvin Boretz" "15 June 1919" "New York City, New York, USA" .
+<writer> "Abby Mann" "1 December 1927" "Philadelphia, Pennsylvania, USA" .
+<actor> "Telly Savalas" "21 January 1922" "Garden City, Long Island, New York, USA" .
+<actor> "Dan Frazer" "20 November 1921" "New York City, New York, USA" .
+<actor> "Kevin Dobson (I)" "18 March 1943" "New York City, New York, USA" .
+<actor> "George Savalas" "5 December 1924" "Bronx, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Frank Aletter" "14 January 1926" "Queens, New York City, New York, USA" .
+<actor> "Alan Manson" "7 June 1918" "Brooklyn, New York City, New York, USA" .
+<actor> "Charles Napier" "12 April 1936" "Scottsville, Kentucky, USA" .
+<actor> "Stephen Pearlman" "26 February 1935" "Brooklyn, New York, USA" .
+<actor> "Ahna Capri" "6 July 1944" "Budapest, Hungary" .
+<actor> "Evelyn Russell (II)" "4 August 1926" "New York City, New York, USA" .
+<actor> "Claude Earl Jones" " " "" .
+<actor> "Ines Pedroza" " " "" .
+<actor> "Scott Ehrlich" " " "" .
+<actor> "Dave Morick" "15 November 1934" "Lakewood, Ohio, USA" .

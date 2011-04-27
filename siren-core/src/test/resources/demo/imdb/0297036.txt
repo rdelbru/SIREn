@@ -1,0 +1,8 @@
+title:Brigitte Nielsen
+url:http://www.imdb.com/title/tt0297036/
+<title> ""E! True Hollywood Story" Brigitte Nielsen" .
+<actor> "Raoul Meyer" "28 May 1960" "Zurich, Switzerland" .
+<actor> "Brigitte Nielsen" "15 July 1963" "Rødovre, Denmark" .
+<actor> "Frank Stallone (I)" "30 July 1950" "New York City, New York, USA" .
+<actor> "Jackie Stallone" "29 November 1921" "Washington, District of Columbia, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

@@ -1,0 +1,15 @@
+title:Episode #15.46
+url:http://www.imdb.com/title/tt1170956/
+<title> ""Late Show with David Letterman" Episode #15.46" .
+<director> "Jerry Foley" " " "Staten Island, New York, USA" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Jim Mulholland" " " "" .
+<actor> "David Letterman" "12 April 1947" "Indianapolis, Indiana, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Paul Teutul Jr." "2 October 1974" "" .
+<actor> "Paul Teutul Sr." "1 May 1949" "Yonkers, New York, USA" .
+<actor> "The Mars Volta" " " "" .
+<actor> "Paul Shaffer" "28 November 1949" "Thunder Bay, Ontario, Canada" .
+<actor> "Pat Farmer" " " "" .
+<actor> "Alan Kalter" " 1943" "Brooklyn, New York, USA" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .

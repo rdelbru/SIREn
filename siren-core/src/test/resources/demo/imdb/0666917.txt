@@ -1,0 +1,5 @@
+title:Episode dated 6 October 1995
+url:http://www.imdb.com/title/tt0666917/
+<title> ""The Oprah Winfrey Show" Episode dated 6 October 1995" .
+<actor> "Oprah Winfrey" "29 January 1954" "Kosciusko, Mississippi, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

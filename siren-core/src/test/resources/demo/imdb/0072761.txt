@@ -1,0 +1,20 @@
+title:Capone
+url:http://www.imdb.com/title/tt0072761/
+<title> "Capone" .
+<director> "Steve Carver (I)" "5 April 1945" "Brooklyn, New York City, New York, USA" .
+<writer> "Howard Browne" "15 April 1908" "Omaha, Nebraska, USA" .
+<actor> "Ben Gazzara" "28 August 1930" "New York City, New York, USA" .
+<actor> "Harry Guardino" "23 December 1925" "New York City, New York, USA" .
+<actor> "Susan Blakely" "7 September 1948" "Frankfurt, Germany" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "John Cassavetes (I)" "9 December 1929" "New York City, New York, USA" .
+<actor> "Frank Campanella (I)" "12 March 1919" "New York City, New York, USA" .
+<actor> "John Orchard (I)" "15 November 1928" "" .
+<actor> "Carmen Argenziano" "27 October 1943" "Sharon, Pennsylvania, USA" .
+<actor> "George Chandler (I)" "30 June 1898" "Waukegan, Illinois, USA" .
+<actor> "John Davis Chandler" "28 January 1937" "Hinton, West Virginia, USA" .
+<actor> "Royal Dano" "16 November 1922" "New York City, New York, USA" .
+<actor> "Joe De Nicola" " " "" .
+<actor> "Angelo Grisanti" " " "" .
+<actor> "Peter Maloney (I)" " " "" .
+<actor> "Dick Miller (I)" "25 December 1928" "The Bronx, New York, USA" .

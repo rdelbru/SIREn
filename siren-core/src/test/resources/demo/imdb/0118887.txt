@@ -1,0 +1,20 @@
+title:Cop Land
+url:http://www.imdb.com/title/tt0118887/
+<title> "Cop Land" .
+<director> "James Mangold" "16 December 1963" "New York City, New York, USA" .
+<writer> "James Mangold" "16 December 1963" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Harvey Keitel" "13 May 1939" "Brooklyn, New York, USA" .
+<actor> "Ray Liotta" "18 December 1954" "Newark, New Jersey, USA" .
+<actor> "Robert De Niro" "17 August 1943" "New York City, New York, USA" .
+<actor> "Peter Berg (I)" "11 March 1964" "New York City, New York, USA" .
+<actor> "Janeane Garofalo" "28 September 1964" "Newton, New Jersey, USA" .
+<actor> "Robert Patrick (I)" "5 November 1958" "Marietta, Georgia, USA" .
+<actor> "Michael Rapaport (I)" "20 March 1970" "New York City, New York, USA" .
+<actor> "Annabella Sciorra" "29 March 1960" "Wethersfield, Connecticut, USA" .
+<actor> "Noah Emmerich" "27 February 1965" "New York City, New York, USA" .
+<actor> "Cathy Moriarty" "29 November 1960" "The Bronx, New York, USA" .
+<actor> "John Spencer (I)" "20 December 1946" "New York City, New York, USA" .
+<actor> "Frank Vincent (I)" "4 August 1939" "North Adams, Massachusetts, USA" .
+<actor> "Malik Yoba" "17 September 1967" "Bronx, New York, USA" .
+<actor> "Arthur J. Nascarella" " " "" .

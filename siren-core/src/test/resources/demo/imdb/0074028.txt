@@ -1,0 +1,5 @@
+title:"The Muppet Show"
+url:http://www.imdb.com/title/tt0074028/
+<title> ""The Muppet Show"" .
+<writer> "Joseph A. Bailey" " " "" .
+<writer> "Jim Henson (I)" "24 September 1936" "Greenville, Mississippi, USA" .

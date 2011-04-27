@@ -1,0 +1,7 @@
+title:"The Arsenio Hall Show"
+url:http://www.imdb.com/title/tt0096537/
+<title> ""The Arsenio Hall Show"" .
+<director> "Sandra Fullerton" " " "" .
+<director> "Scott Schaefer" " " "" .
+<writer> "J. Anthony Brown" " " "Columbia, South Carolina, USA" .
+<writer> "Paul Clay (I)" " " "" .

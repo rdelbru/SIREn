@@ -1,0 +1,6 @@
+title:Sylvester Stallone
+url:http://www.imdb.com/title/tt0453554/
+<title> ""E! True Hollywood Story" Sylvester Stallone" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Frank Stallone (I)" "30 July 1950" "New York City, New York, USA" .
+<actor> "Paul Dion Monte" "7 April 1967" "Washington, District of Columbia, USA" .

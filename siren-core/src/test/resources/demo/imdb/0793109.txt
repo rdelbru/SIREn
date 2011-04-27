@@ -1,0 +1,6 @@
+title:Episode dated 10 February 2002
+url:http://www.imdb.com/title/tt0793109/
+<title> ""Larry King Live" Episode dated 10 February 2002" .
+<actor> "Kirk Douglas (I)" "9 December 1916" "Amsterdam, New York, USA" .
+<actor> "Kate Jackson (I)" "29 October 1948" "Birmingham, Alabama, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

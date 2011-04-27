@@ -1,0 +1,6 @@
+title:Episode dated 11 May 2005
+url:http://www.imdb.com/title/tt0740571/
+<title> ""The View" Episode dated 11 May 2005" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Wanda Sykes" "7 March 1964" "Portsmouth, Virginia, USA" .
+<actor> "Michael Vartan" "27 November 1968" "Boulogne-Billancourt, Hauts-de-Seine, Île-de-France, France" .

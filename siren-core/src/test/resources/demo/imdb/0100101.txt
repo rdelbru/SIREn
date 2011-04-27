@@ -1,0 +1,20 @@
+title:A Man Called... Rainbo
+url:http://www.imdb.com/title/tt0100101/
+<title> "A Man Called... Rainbo" .
+<director> "David Casci" " " "" .
+<writer> "Scott Altizer" " " "" .
+<actor> "Tony Page (I)" "7 May 1939" "The Bronx, New York, USA" .
+<actor> "Rebecca Grimes (I)" " " "" .
+<actor> "Roy White (I)" "27 December 1943" "Los Angeles, California, USA" .
+<actor> "Vickie Lancaster" " " "" .
+<actor> "Dennis Tate" "31 August 1931" "Iowa City, Iowa, USA" .
+<actor> "Barbara Lee Govan" " " "" .
+<actor> "Henry G. Sanders" "18 August 1942" "Houston, Texas, USA" .
+<actor> "Jed Mills" " " "Brooklyn, New York, USA" .
+<actor> "David Orange" " " "" .
+<actor> "Joe Kottler" " " "" .
+<actor> "Scott Dowd" " " "" .
+<actor> "Scott Altizer" " " "" .
+<actor> "Deke Anderson" "26 March 1959" "Reno, Nevada, USA" .
+<actor> "David Casci" " " "" .
+<actor> "Jeffrey Hilton (III)" " " "" .

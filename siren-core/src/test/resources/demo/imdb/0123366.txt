@@ -1,0 +1,5 @@
+title:"The View"
+url:http://www.imdb.com/title/tt0123366/
+<title> ""The View"" .
+<writer> "Beverly Kopf" <birthDate> " " <birthPlace> "" .
+<writer> "Christian McKiernan" <birthDate> " " <birthPlace> "" .

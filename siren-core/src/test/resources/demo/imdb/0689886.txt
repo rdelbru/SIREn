@@ -1,0 +1,7 @@
+title:Episode dated 4 October 2000
+url:http://www.imdb.com/title/tt0689886/
+<title> ""The Rosie O'Donnell Show" Episode dated 4 October 2000" .
+<actor> "Betsey Johnson" "10 August 1942" "Wethersfield, Connecticut, USA" .
+<actor> "Rosie O'Donnell" "21 March 1962" "Commack, Long Island, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Travis Tritt" "9 February 1963" "Marietta, Georgia, USA" .

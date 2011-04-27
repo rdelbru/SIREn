@@ -1,0 +1,62 @@
+<http://renaud.delbru.fr/rdf/foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/PersonalProfileDocument> .
+<http://renaud.delbru.fr/rdf/foaf> <http://www.w3.org/2000/01/rdf-schema#label> "FOAF file of Renaud Delbru" .
+<http://renaud.delbru.fr/rdf/foaf> <http://xmlns.com/foaf/0.1/maker> <http://renaud.delbru.fr/rdf/foaf#me> .
+<http://renaud.delbru.fr/rdf/foaf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://renaud.delbru.fr/rdf/foaf#me> .
+<http://renaud.delbru.fr/rdf/foaf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.okkam.org/entity/ok200706171184666809495> .
+<http://renaud.delbru.fr/rdf/foaf> <http://webns.net/mvcb/generatorAgent> <http://www.ldodds.com/foaf/foaf-a-matic> .
+<http://renaud.delbru.fr/rdf/foaf> <http://webns.net/mvcb/errorReportsTo> <mailto:leigh@ldodds.com> .
+<http://dbpedia.org/resource/Bordeaux_wine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/2008/06/10/concept/en/Wine> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/name> "Renaud Delbru" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/title> "Mr" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/givenname> "Renaud" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/family_name> "Delbru" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "247d80518c87c6f8129d5a3ec60a07665eded006" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/homepage> <http://renaud.delbru.fr/> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.deri.ie/> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/schoolHomepage> <http://www.epita.fr/> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/based_near> <http://www.tagcrumbs.com/cornelius/placemarks/deri-digital-enterprise-research-institute#placemark> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://www.w3.org/2002/07/owl#sameAs> <http://www.okkam.org/entity/ok200706171184666809495> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/topic_interest> <http://dbpedia.org/resource/Bordeaux_wine> .
+<http://eyaloren.org/foaf.rdf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://eyaloren.org/foaf.rdf#me> <http://xmlns.com/foaf/0.1/name> "Eyal Oren" .
+<http://eyaloren.org/foaf.rdf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "097f2342afa52f155f127042cc7a20c9491cf382" .
+<http://eyaloren.org/foaf.rdf#me> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.eyaloren.org/foaf.rdf> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://eyaloren.org/foaf.rdf#me> .
+<http://g1o.net/foaf.rdf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/name> "Giovanni Tummarello" .
+<http://g1o.net/foaf.rdf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a9dcc29cbf526167c1bd10e8e3dd2bca60d739e1" .
+<http://g1o.net/foaf.rdf#me> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://g1o.net/foaf.rdf> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://g1o.net/foaf.rdf#me> .
+<http://harth.org/andreas/foaf#ah> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://harth.org/andreas/foaf#ah> <http://xmlns.com/foaf/0.1/name> "Andreas Harth" .
+<http://harth.org/andreas/foaf#ah> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "349ba1da7307ffb78517ae557ade1dd5177a6dbb" .
+<http://harth.org/andreas/foaf#ah> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://harth.org/andreas/foaf> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://harth.org/andreas/foaf#ah> .
+<http://data.semanticweb.org/person/knud-moeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/knud-moeller> <http://xmlns.com/foaf/0.1/name> "Knud M\u00F6ller" .
+<http://data.semanticweb.org/person/knud-moeller> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b15d1e7efb11374644555fa9734bf75a553a362c" .
+<http://data.semanticweb.org/person/knud-moeller> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://sw.deri.org/~knud/knudfoaf.rdf> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://data.semanticweb.org/person/knud-moeller> .
+<http://www.deri.ie/about/team/member/Stefan_Decker#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.deri.ie/about/team/member/Stefan_Decker#me> <http://xmlns.com/foaf/0.1/name> "Stefan Decker" .
+<http://www.deri.ie/about/team/member/Stefan_Decker#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1bc1f862b688a45b7e0c8d4a8467c23177c53fad" .
+<http://www.deri.ie/about/team/member/Stefan_Decker#me> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.deri.ie/fileadmin/scripts/foaf.php?id=12> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://www.deri.ie/about/team/member/Stefan_Decker#me> .
+<http://semanticweb.org/id/Siegfried_Handschuh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://semanticweb.org/id/Siegfried_Handschuh> <http://xmlns.com/foaf/0.1/name> "Siegfried Handschuh" .
+<http://semanticweb.org/id/Siegfried_Handschuh> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "583cac1297018405882f186064c6d98cd127af70" .
+<http://semanticweb.org/id/Siegfried_Handschuh> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.siegfried-handschuh.net/metadata/foaf.rdf> .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://semanticweb.org/id/Siegfried_Handschuh> .
+<http://data.semanticweb.org/person/brian-davis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/brian-davis> <http://xmlns.com/foaf/0.1/name> "Brian Davis" .
+<http://data.semanticweb.org/person/brian-davis> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8c6dfc17028b508310f6c7cde2ba007c545b591f" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://data.semanticweb.org/person/brian-davis> .
+<http://data.semanticweb.org/person/simon-scerri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/simon-scerri> <http://xmlns.com/foaf/0.1/name> "Simon Scerri" .
+<http://data.semanticweb.org/person/simon-scerri> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ab6d7f6be0a4f94d5084190f850196fb50c3134a" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://data.semanticweb.org/person/simon-scerri> .
+<http://identi.ca/user/3546> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://identi.ca/user/3546> <http://xmlns.com/foaf/0.1/name> "J\u00FCrgen Umbrich" .
+<http://identi.ca/user/3546> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b9514eba2ed2ae41a072765fe3ed3544de10974f" .
+<http://renaud.delbru.fr/rdf/foaf#me> <http://xmlns.com/foaf/0.1/knows> <http://identi.ca/user/3546> .

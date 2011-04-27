@@ -1,0 +1,7 @@
+title:Midnight Ride
+url:http://www.imdb.com/title/tt0976668/
+<title> ""Liberty's Kids: Est. 1776" Midnight Ride" .
+<writer> "Cliff MacGillivray" " " "" .
+<writer> "Kelly Ward" "17 November 1956" "San Diego, California, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

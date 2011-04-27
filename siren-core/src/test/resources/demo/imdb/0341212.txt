@@ -1,0 +1,61 @@
+title:The 49th Annual Academy Awards
+url:http://www.imdb.com/title/tt0341212/
+<title> "The 49th Annual Academy Awards" .
+<director> "Marty Pasetta" " " "" .
+<actor> "Warren Beatty" "30 March 1937" "Richmond, Virginia, USA" .
+<actor> "Ellen Burstyn" "7 December 1932" "Detroit, Michigan, USA" .
+<actor> "Jane Fonda" "21 December 1937" "New York City, New York, USA" .
+<actor> "Richard Pryor" "1 December 1940" "Peoria, Illinois, USA" .
+<actor> "Edward Albert" "20 February 1951" "Los Angeles, California, USA" .
+<actor> "Jane Alexander (I)" "28 October 1939" "Boston, Massachusetts, USA" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Ann-Margret" "28 April 1941" "Valsjöbyn, Jämtlands län, Sweden" .
+<actor> "John G. Avildsen" "21 December 1935" "Oak Park, Illinois, USA" .
+<actor> "Pearl Bailey" "29 March 1918" "Newport News, Virginia, USA" .
+<actor> "Marie-Christine Barrault" "21 March 1944" "Paris, France" .
+<actor> "Pandro S. Berman" "28 March 1905" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Robert Chartoff" "26 August 1933" "New York City, New York, USA" .
+<actor> "Chevy Chase" "8 October 1943" "Woodstock, New York, USA" .
+<actor> "Paddy Chayefsky" "29 January 1923" "The Bronx, New York City, New York, USA" .
+<actor> "Scott Conrad (I)" " " "" .
+<actor> "Neil Diamond (I)" "24 January 1941" "Brooklyn, New York, USA" .
+<actor> "Tamara Dobson" "14 May 1947" "Baltimore, Maryland, USA" .
+<actor> "Faye Dunaway" "14 January 1941" "Bascom, Florida, USA" .
+<actor> "Eletha Finch" " " "" .
+<actor> "Louise Fletcher" "22 July 1934" "Birmingham, Alabama, USA" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "William Goldman" "12 August 1931" "Highland Park, Illinois, USA" .
+<actor> "Jerry Goldsmith" "10 February 1929" "Pasadena, California, USA" .
+<actor> "Lee Grant (I)" "31 October 1927" "New York City, New York, USA" .
+<actor> "Richard Halsey" " " "" .
+<actor> "Lillian Hellman" "20 June 1905" "New Orleans, Louisiana, USA" .
+<actor> "William Holden (I)" "17 April 1918" "O'Fallon, Illinois, USA" .
+<actor> "Tom Jones (I)" "7 June 1940" "Pontypridd, Wales, UK" .
+<actor> "Marthe Keller" "28 January 1945" "Basel, Switzerland" .
+<actor> "Barbara Kopple" "30 July 1946" "New York City, New York, USA" .
+<actor> "Piper Laurie" "22 January 1932" "Detroit, Michigan, USA" .
+<actor> "Lynne Littman" "26 June 1941" "New York City, New York, USA" .
+<actor> "Sidney Lumet" "25 June 1924" "Philadelphia, Pennsylvania, USA" .
+<actor> "Norman Mailer" "31 January 1923" "Long Branch, New Jersey, USA" .
+<actor> "Walter Mirisch" "8 November 1921" "New York City, New York, USA" .
+<actor> "Jeanne Moreau" "23 January 1928" "Paris, France" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Tatum O'Neal" "5 November 1963" "Los Angeles, California, USA" .
+<actor> "Alan J. Pakula" "7 April 1928" "The Bronx, New York City, New York, USA" .
+<actor> "Jason Robards" "26 July 1922" "Chicago, Illinois, USA" .
+<actor> "Leonard Rosenman" "7 September 1924" "Brooklyn, New York City, New York, USA" .
+<actor> "Roy Scheider" "10 November 1932" "Orange, New Jersey, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Red Skelton" "18 July 1913" "Vincennes, Indiana, USA" .
+<actor> "Sissy Spacek" "25 December 1949" "Quitman, Texas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Beatrice Straight" "2 August 1914" "Old Westbury, New York, USA" .
+<actor> "Barbra Streisand" "24 April 1942" "Williamsburg, Brooklyn, New York, USA" .
+<actor> "Donald Sutherland (I)" "17 July 1935" "Saint John, New Brunswick, Canada" .
+<actor> "Cicely Tyson" "19 December 1933" "New York City, New York, USA" .
+<actor> "Liv Ullmann" "16 December 1938" "Tokyo, Japan" .
+<actor> "Ben Vereen" "10 October 1946" "Dade County, Florida, USA" .
+<actor> "Tony Vivante" " " "" .
+<actor> "Lina Wertmüller" "14 August 1926" "Rome, Italy" .
+<actor> "Paul Williams (III)" "19 September 1940" "Bennington, Nebraska, USA" .
+<actor> "Irwin Winkler" "25 May 1931" "New York City, New York, USA" .

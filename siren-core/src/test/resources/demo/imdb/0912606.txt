@@ -1,0 +1,24 @@
+title:Ali Rap
+url:http://www.imdb.com/title/tt0912606/
+<title> "Ali Rap" .
+<director> "Joseph Maar" " " "" .
+<actor> "Kareem Abdul-Jabbar (I)" "16 April 1947" "New York City, New York, USA" .
+<actor> "Khaliah Ali" " " "" .
+<actor> "Muhammad Ali (I)" "17 January 1942" "Louisville, Kentucky, USA" .
+<actor> "Adam Carolla" "27 May 1964" "Philadelphia, Pennsylvania, USA" .
+<actor> "Chuck D. (I)" "1 August 1960" "Roosevelt, Long Island, New York, USA" .
+<actor> "Angelo Dundee" "30 August 1921" "Philadelphia, Pennsylvania, USA" .
+<actor> "Jermaine Dupri" "23 September 1972" "Atlanta, Georgia, USA" .
+<actor> "Fab 5 Freddy" " 1959" "Brooklyn, New York, USA" .
+<actor> "Doug E. Fresh" "17 September 1966" "St. Thomas, U.S. Virgin Islands" .
+<actor> "Charles Gibson (III)" " " "" .
+<actor> "James Earl Jones" "17 January 1931" "Arkabutla, Mississippi, USA" .
+<actor> "George Lois (I)" " " "" .
+<actor> "Ludacris" "11 September 1977" "Champaign, Illinois, USA" .
+<actor> "MC Lyte" "11 October 1971" "Queens, New York, USA" .
+<actor> "Bill Maher (I)" "20 January 1956" "New York City, New York, USA" .
+<actor> "Sidney Poitier" "20 February 1927" "Miami, Florida, USA" .
+<actor> "Rakim (I)" "28 January 1968" "Wyandanch, New York, USA" .
+<actor> "Diane Sawyer" "22 December 1945" "Glasgow, Kentucky, USA" .
+<actor> "Al Sharpton" "3 October 1954" "Brooklyn, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .

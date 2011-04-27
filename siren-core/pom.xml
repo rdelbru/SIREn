@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>siren-parent</artifactId>
+    <groupId>org.sindice.siren</groupId>
+    <version>0.2.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>org.sindice.siren</groupId>
+  <artifactId>siren-core</artifactId>
+  <version>0.2.1-SNAPSHOT</version>
+  <name>siren-core</name>
+  <url>http://siren.sindice.org</url>
+  
+  <developers>
+    <developer>
+      <id>rdelbru</id>
+      <name>Renaud Delbru</name>
+      <email>renaud.delbru::at::deri.org</email>
+      <url>http://renaud.delbru.fr/</url>
+      <organization>DERI Galway</organization>
+      <organizationUrl>http://www.deri.ie/</organizationUrl>
+      <roles>
+        <role>Developer</role>
+        <role>Architect</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>de.jflex</groupId>
+        <artifactId>maven-jflex-plugin</artifactId>
+        <version>1.4.3</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>src/main/java</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+	
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <dependencies>
+		
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>1.4</version>
+    </dependency>
+		
+	<dependency>
+	    <groupId>org.apache.lucene</groupId>
+	    <artifactId>lucene-core</artifactId>
+	    <version>${lucene.version}</version>
+	</dependency>
+    
+  </dependencies>
+
+</project>

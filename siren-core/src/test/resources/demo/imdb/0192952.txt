@@ -1,0 +1,47 @@
+title:AFI's 100 Years... 100 Movies
+url:http://www.imdb.com/title/tt0192952/
+<title> "AFI's 100 Years... 100 Movies" .
+<director> "Gary Smith (III)" " " "" .
+<director> "Dann Netter" " " "" .
+<writer> "Marty Farrell" "21 September 1927" "Baltimore, Maryland, USA" .
+<writer> "Fred A. Rappoport" " " "" .
+<actor> "Cher (I)" "20 May 1946" "El Centro, California, USA" .
+<actor> "Sally Field" "6 November 1946" "Pasadena, California, USA" .
+<actor> "Jodie Foster" "19 November 1962" "Los Angeles, California, USA" .
+<actor> "Richard Gere" "31 August 1949" "Philadelphia, Pennsylvania, USA" .
+<actor> "Woody Allen" "1 December 1935" "Brooklyn, New York, USA" .
+<actor> "Anne Bancroft (I)" "17 September 1931" "The Bronx, New York, USA" .
+<actor> "Candice Bergen" "9 May 1946" "Beverly Hills, Los Angeles, California, USA" .
+<actor> "Halle Berry" "14 August 1966" "Cleveland, Ohio, USA" .
+<actor> "Mel Brooks" "28 June 1926" "Brooklyn, New York, USA" .
+<actor> "Chevy Chase" "8 October 1943" "Woodstock, New York, USA" .
+<actor> "Bill Clinton (I)" "19 August 1946" "Hope, Arkansas, USA" .
+<actor> "David Copperfield (I)" "16 September 1956" "Metuchen, New Jersey, USA" .
+<actor> "Walter Cronkite" "4 November 1916" "St. Joseph, Missouri, USA" .
+<actor> "Clint Eastwood" "31 May 1930" "San Francisco, California, USA" .
+<actor> "Larry Gelbart" "25 February 1928" "Chicago, Illinois, USA" .
+<actor> "Whoopi Goldberg" "13 November 1955" "New York City, New York, USA" .
+<actor> "William Goldman" "12 August 1931" "Highland Park, Illinois, USA" .
+<actor> "Charlton Heston" "4 October 1923" "Evanston, Illinois, USA" .
+<actor> "Dustin Hoffman" "8 August 1937" "Los Angeles, California, USA" .
+<actor> "Samuel L. Jackson" "21 December 1948" "Washington, District of Columbia, USA" .
+<actor> "James Earl Jones" "17 January 1931" "Arkabutla, Mississippi, USA" .
+<actor> "Larry King (I)" "19 November 1933" "Brooklyn, New York, USA" .
+<actor> "Tommy Lasorda" "22 September 1927" "Norristown, Pennsylvania, USA" .
+<actor> "Ernest Lehman" "8 December 1915" "New York City, New York, USA" .
+<actor> "Susan Lucci" "23 December 1946" "Scarsdale, New York, USA" .
+<actor> "Sidney Lumet" "25 June 1924" "Philadelphia, Pennsylvania, USA" .
+<actor> "Dan Rather" "31 October 1931" "Wharton, Texas, USA" .
+<actor> "Burt Reynolds (I)" "11 February 1936" "Waycross, Georgia, USA" .
+<actor> "Julia Roberts (I)" "28 October 1967" "Smyrna, Georgia, USA" .
+<actor> "Martin Scorsese" "17 November 1942" "Queens, New York, USA" .
+<actor> "Brooke Shields" "31 May 1965" "New York City, New York, USA" .
+<actor> "Carly Simon" "25 June 1945" "New York City, New York, USA" .
+<actor> "Gene Siskel" "26 January 1946" "Chicago, Illinois, USA" .
+<actor> "Steven Spielberg" "18 December 1946" "Cincinnati, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Ben Stiller" "30 November 1965" "New York City, New York, USA" .
+<actor> "Oliver Stone (I)" "15 September 1946" "New York City, New York, USA" .
+<actor> "Donald Trump" "14 June 1946" "New York City, New York, USA" .
+<actor> "Ted Turner (I)" "19 November 1938" "Cincinnati, Ohio, USA" .
+<actor> "Jack Valenti" "5 September 1921" "Houston, Texas, USA" .

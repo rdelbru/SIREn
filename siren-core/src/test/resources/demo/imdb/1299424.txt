@@ -1,0 +1,22 @@
+title:Janice Dickinson
+url:http://www.imdb.com/title/tt1299424/
+<title> ""E! True Hollywood Story" Janice Dickinson" .
+<actor> "Jason Hildebrandt" " 1967" "New York City, New York, USA" .
+<actor> "Janice Dickinson (I)" "15 February 1955" "Brooklyn, New York, USA" .
+<actor> "Alexis Mayer (I)" " " "" .
+<actor> "Eric Salter" " " "" .
+<actor> "Monique Pillard" " " "" .
+<actor> "Peter Beard (I)" "22 January 1938" "New York City, New York, USA" .
+<actor> "Diane von Fürstenberg" "31 December 1945" "Brussels, Belgium" .
+<actor> "Beverly Johnson (III)" "13 October 1952" "Buffalo, New York, USA" .
+<actor> "Edward Tricomi" " " "" .
+<actor> "Tyra Banks" "4 December 1973" "Los Angeles, California, USA" .
+<actor> "Michael Birnbaum" " " "" .
+<actor> "Nathan Fields" "5 May 1987" "Los Angeles, California, USA" .
+<actor> "Jennifer Flavin" "14 August 1968" "Chicago, Illinois, USA" .
+<actor> "Mick Jagger" "26 July 1943" "Dartford, Kent, England, UK" .
+<actor> "B.B. King" "16 September 1925" "Itta Bena, Mississippi, USA" .
+<actor> "Phil McGraw" "1 September 1950" "Vinita, Oklahoma, USA" .
+<actor> "Dr. Frank Ryan" "21 May 1960" "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Bruce Willis" "19 March 1955" "Idar-Oberstein, West Germany" .

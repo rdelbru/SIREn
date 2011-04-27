@@ -1,0 +1,23 @@
+title:CyberWorld
+url:http://www.imdb.com/title/tt0233508/
+<title> "CyberWorld" .
+<director> "Colin Davies (I)" " " "" .
+<director> "Elaine Despins" " " "" .
+<writer> "Hugh Murray (II)" " " "" .
+<writer> "Charlie Rubin" " " "" .
+<actor> "Jenna Elfman" "30 September 1971" "Los Angeles, California, USA" .
+<actor> "Matt Frewer" "4 January 1958" "Washington, District of Columbia, USA" .
+<actor> "Robert Smith (XVIII)" " " "" .
+<actor> "Dave Foley (I)" "4 January 1963" "Toronto, Ontario, Canada" .
+<actor> "Woody Allen" "1 December 1935" "Brooklyn, New York, USA" .
+<actor> "Hank Azaria" "25 April 1964" "Queens, New York, USA" .
+<actor> "Nancy Cartwright (I)" "25 October 1957" "Kettering, Ohio, USA" .
+<actor> "Dan Castellaneta" "29 October 1957" "Chicago, Illinois, USA" .
+<actor> "Julie Kavner" "7 September 1950" "Los Angeles, California, USA" .
+<actor> "Chris Lowe (I)" "4 October 1959" "Blackpool, Lancashire, England, UK" .
+<actor> "Cara Pifko" "15 March 1976" "Toronto, Ontario, Canada" .
+<actor> "Harry Shearer" "23 December 1943" "Los Angeles, California, USA" .
+<actor> "Yeardley Smith" "3 July 1964" "Paris, France" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Neil Tennant" "10 July 1954" "North Shields, Tyne-and-Wear, England, UK" .

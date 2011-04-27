@@ -1,0 +1,22 @@
+title:The Lord's of Flatbush
+url:http://www.imdb.com/title/tt0071772/
+<title> "The Lord's of Flatbush" .
+<director> "Martin Davidson (I)" "7 November 1939" "Brooklyn, New York, USA" .
+<director> "Stephen Verona" "11 September 1940" "Springfield, Illinois, USA" .
+<writer> "Stephen Verona" "11 September 1940" "Springfield, Illinois, USA" .
+<writer> "Gayle Gleckler" " " "" .
+<actor> "Perry King" "30 April 1948" "Alliance, Ohio, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Henry Winkler" "30 October 1945" "New York City, New York, USA" .
+<actor> "Paul Mace" "4 April 1950" "New York City, New York, USA" .
+<actor> "Susan Blakely" "7 September 1948" "Frankfurt, Germany" .
+<actor> "Maria Smith (I)" " 1947" "Brooklyn, New York, USA" .
+<actor> "Renee Paris" " " "" .
+<actor> "Paul Jabara" "31 January 1948" "Brooklyn, New York, USA" .
+<actor> "Bruce Reed (I)" "13 November 1943" "" .
+<actor> "Frank Stiefel (II)" " " "" .
+<actor> "Martin Davidson (I)" "7 November 1939" "Brooklyn, New York, USA" .
+<actor> "Joe Stern (II)" " " "" .
+<actor> "Ruth Klinger" "31 October 1922" "" .
+<actor> "Joan Neuman" "4 October 1926" "New York City, New York, USA" .
+<actor> "Dolph Sweet" "18 July 1920" "New York City, New York, USA" .

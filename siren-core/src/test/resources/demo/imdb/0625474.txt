@@ -1,0 +1,21 @@
+title:To Protect and Serve Manicotti
+url:http://www.imdb.com/title/tt0625474/
+<title> ""Las Vegas" To Protect and Serve Manicotti" .
+<director> "Paul Michael Glaser" "25 March 1943" "Cambridge, Massachusetts, USA" .
+<writer> "Gary Scott Thompson" "7 October 1959" "Pago Pago, American Samoa" .
+<writer> "Gardner Stern" " " "" .
+<actor> "James Caan (I)" "26 March 1940" "The Bronx, New York, USA" .
+<actor> "Josh Duhamel" "14 November 1972" "Minot, North Dakota, USA" .
+<actor> "Nikki Cox" "2 June 1978" "Los Angeles, California, USA" .
+<actor> "James Lesure" "21 September 1970" "Los Angeles, California, USA" .
+<actor> "Vanessa Marcil" "15 October 1968" "Indio, California, USA" .
+<actor> "Molly Sims" "25 May 1973" "Murray, Kentucky, USA" .
+<actor> "Marsha Thomason" "19 January 1976" "Manchester, England, UK" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Joe Rogan (I)" "11 August 1967" "Newark, New Jersey, USA" .
+<actor> "Rikki Klieman" " " "Chicago, Illinois, USA" .
+<actor> "Yorgo Constantine" " " "" .
+<actor> "Anne Betancourt" " " "" .
+<actor> "Bradley Stryker" "29 June 1977" "Eugene, Oregon, USA" .
+<actor> "Nan Martin (I)" "15 July 1927" "Decatur, Illinois, USA" .
+<actor> "Lakshmi Manchu" " " "" .

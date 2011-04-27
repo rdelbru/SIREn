@@ -1,0 +1,18 @@
+title:Heart of a Champion: The Ray Mancini Story
+url:http://www.imdb.com/title/tt0089261/
+<title> "Heart of a Champion: The Ray Mancini Story" .
+<director> "Richard Michaels (I)" "15 February 1936" "Brooklyn, New York, USA" .
+<writer> "Dennis Nemec" " " "" .
+<actor> "Robert Blake (I)" "18 September 1933" "Nutley, New Jersey, USA" .
+<actor> "Doug McKeon" "10 June 1966" "Pompton Plains, New Jersey, USA" .
+<actor> "Mariclare Costello" "3 February 1936" "Peoria, Illinois, USA" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "Ray Buktenica" "6 August 1943" "New York City, New York, USA" .
+<actor> "James T. Callahan" "4 October 1930" "Grand Rapids, Michigan, USA" .
+<actor> "Richard Bakalyan" "29 January 1931" "Watertown, Massachusetts, USA" .
+<actor> "Luisa Leschin" " " "" .
+<actor> "Norman Alden" "13 September 1924" "Fort Worth, Texas, USA" .
+<actor> "Ben Frank (I)" "2 September 1934" "New York City, New York, USA" .
+<actor> "Judith Penrod" " " "" .
+<actor> "James Arone" "7 July 1953" "Boston, Massachusetts, USA" .
+<actor> "Marty Denkin" " " "" .

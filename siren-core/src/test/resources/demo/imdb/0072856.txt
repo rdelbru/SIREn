@@ -1,0 +1,20 @@
+title:Death Race 2000
+url:http://www.imdb.com/title/tt0072856/
+<title> "Death Race 2000" .
+<director> "Paul Bartel (I)" "6 August 1938" "Brooklyn, New York, USA" .
+<writer> "Robert Thom (I)" "2 July 1929" "" .
+<actor> "David Carradine" "8 December 1936" "Hollywood, California, USA" .
+<actor> "Simone Griffeth" "4 April 1950" "Savannah, Georgia, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Mary Woronov" "8 December 1943" "Brooklyn, New York, USA" .
+<actor> "Roberta Collins" "17 November 1944" "USA" .
+<actor> "Martin Kove" "6 March 1946" "Brooklyn, New York, USA" .
+<actor> "Louisa Moritz" "25 March 1946" "Havana, Cuba" .
+<actor> "Don Steele (I)" "1 April 1936" "Hollywood, California, USA" .
+<actor> "Joyce Jameson" "26 September 1932" "Chicago, Illinois, USA" .
+<actor> "Carle Bensen" " " "" .
+<actor> "Sandy McCallum" " " "" .
+<actor> "Paul Laurence (I)" " " "" .
+<actor> "Harriet Medin" "14 March 1914" "Somerville, Massachusetts, USA" .
+<actor> "Vince Trankina" "6 August 1945" "Seattle, Washington, USA" .
+<actor> "Bill Morey" "19 December 1919" "Framingham, Massachusetts, USA" .

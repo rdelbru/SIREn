@@ -1,0 +1,5 @@
+title:A Score to Settle: The Music of Rambo
+url:http://www.imdb.com/title/tt1394371/
+<title> "A Score to Settle: The Music of Rambo" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Brian Tyler (IV)" " " "" .

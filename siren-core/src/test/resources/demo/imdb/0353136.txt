@@ -1,0 +1,79 @@
+title:The 56th Annual Academy Awards
+url:http://www.imdb.com/title/tt0353136/
+<title> "The 56th Annual Academy Awards" .
+<director> "Marty Pasetta" " " "" .
+<writer> "Michael Barrie (I)" " " "" .
+<writer> "Jim Mulholland" " " "" .
+<actor> "Johnny Carson (I)" "23 October 1925" "Corning, Iowa, USA" .
+<actor> "Jane Alexander (I)" "28 October 1939" "Boston, Massachusetts, USA" .
+<actor> "Herb Alpert" "31 March 1935" "Los Angeles, California, USA" .
+<actor> "Richard Attenborough" "29 August 1923" "Cambridge, Cambridgeshire, England, UK" .
+<actor> "Kevin Bacon" "8 July 1958" "Philadelphia, Pennsylvania, USA" .
+<actor> "Jennifer Beals (I)" "19 December 1963" "Chicago, Illinois, USA" .
+<actor> "Ray Bolger" "10 January 1904" "Dorchester, Massachusetts, USA" .
+<actor> "Christie Brinkley" "2 February 1954" "Detroit, Michigan, USA" .
+<actor> "Matthew Broderick (I)" "21 March 1962" "New York City, New York, USA" .
+<actor> "James L. Brooks" "9 May 1940" "North Bergen, New Jersey, USA" .
+<actor> "Michael Caine (I)" "14 March 1933" "Rotherhithe, London, England, UK" .
+<actor> "Dyan Cannon" "4 January 1937" "Tacoma, Washington, USA" .
+<actor> "Frank Capra" "18 May 1897" "Bisacquino, Sicily, Italy" .
+<actor> "Irene Cara" "18 March 1959" "New York City, New York, USA" .
+<actor> "Cher (I)" "20 May 1946" "El Centro, California, USA" .
+<actor> "Tommy Chong" "24 May 1938" "Edmonton, Alberta, Canada" .
+<actor> "Glenn Close" "19 March 1947" "Greenwich, Connecticut, USA" .
+<actor> "Joan Collins" "23 May 1933" "London, England, UK" .
+<actor> "Jackie Cooper (I)" "15 September 1922" "Los Angeles, California, USA" .
+<actor> "Sammy Davis Jr." "8 December 1925" "Harlem, New York, USA" .
+<actor> "Mac Davis (I)" "21 January 1942" "Lubbock, Texas, USA" .
+<actor> "Neil Diamond (I)" "24 January 1941" "Brooklyn, New York, USA" .
+<actor> "Charles Durning" "28 February 1923" "Highland Falls, New York, USA" .
+<actor> "Robert Duvall" "5 January 1931" "San Diego, California, USA" .
+<actor> "Horton Foote" "14 March 1916" "Wharton, Texas, USA" .
+<actor> "Keith Forsey" "22 January 1948" "London, England, UK" .
+<actor> "Anthony Franciosa (I)" "25 October 1928" "New York City, New York, USA" .
+<actor> "John Gavin (I)" "8 April 1928" "Los Angeles, California, USA" .
+<actor> "Mel Gibson (I)" "3 January 1956" "Peekskill, New York, USA" .
+<actor> "Cary Grant" "18 January 1904" "Horfield, Bristol, England, UK" .
+<actor> "Gene Hackman" "30 January 1930" "San Bernardino, California, USA" .
+<actor> "Lani Hall" "1 November 1945" "Chicago, Illinois, USA" .
+<actor> "Daryl Hannah" "3 December 1960" "Chicago, Illinois, USA" .
+<actor> "Jennifer Holliday" "19 October 1960" "Houston, Texas, USA" .
+<actor> "Rock Hudson" "17 November 1925" "Winnetka, Illinois, USA" .
+<actor> "Linda Hunt" "2 April 1945" "Morristown, New Jersey, USA" .
+<actor> "Anjelica Huston" "8 July 1951" "Santa Monica, California, USA" .
+<actor> "Timothy Hutton" "16 August 1960" "Malibu, California, USA" .
+<actor> "Amy Irving" "10 September 1953" "Palo Alto, California, USA" .
+<actor> "Michael Keaton" "5 September 1951" "Coraopolis, Pennsylvania, USA" .
+<actor> "Gene Kelly (I)" "23 August 1912" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Val Kilmer" "31 December 1959" "Los Angeles, California, USA" .
+<actor> "John Lithgow (I)" "19 October 1945" "Rochester, New York, USA" .
+<actor> "Shirley MacLaine" "24 April 1934" "Richmond, Virginia, USA" .
+<actor> "Cheech Marin" "13 July 1946" "Los Angeles, California, USA" .
+<actor> "Tom McCaffrey" "7 August 1973" "Southampton, New York, USA" .
+<actor> "George 'Spanky' McFarland" "2 October 1928" "Dallas, Texas, USA" .
+<actor> "Liza Minnelli" "12 March 1946" "Los Angeles, California, USA" .
+<actor> "Mary Tyler Moore" "29 December 1936" "Brooklyn, New York, USA" .
+<actor> "Roger Moore (I)" "14 October 1927" "Stockwell, London, England, UK" .
+<actor> "Jack Nicholson" "22 April 1937" "Neptune, New Jersey, USA" .
+<actor> "Joanna Pacula" "2 January 1957" "Tomaszow Lubelski, Poland" .
+<actor> "Holly Palance" "5 August 1950" "Los Angeles, California, USA" .
+<actor> "Jack Palance" "18 February 1919" "Lattimer Mines, Pennsylvania, USA" .
+<actor> "Dolly Parton" "19 January 1946" "Sevierville, Tennessee, USA" .
+<actor> "Jane Powell (I)" "1 April 1929" "Portland, Oregon, USA" .
+<actor> "Hal Roach (I)" "14 January 1892" "Elmira, New York, USA" .
+<actor> "Arnold Schwarzenegger" "30 July 1947" "Thal, Styria, Austria" .
+<actor> "Frank Sinatra" "12 December 1915" "Hoboken, New Jersey, USA" .
+<actor> "Sissy Spacek" "25 December 1949" "Quitman, Texas, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Meryl Streep" "22 June 1949" "Summit, New Jersey, USA" .
+<actor> "Donna Summer" "31 December 1948" "Boston, Massachusetts, USA" .
+<actor> "Shirley Temple" "23 April 1928" "Santa Monica, California, USA" .
+<actor> "Rip Torn" "6 February 1931" "Temple, Texas, USA" .
+<actor> "Tommy Tune" "28 February 1939" "Wichita Falls, Texas, USA" .
+<actor> "Twiggy (I)" "19 September 1949" "Neasden, England, UK" .
+<actor> "Bonnie Tyler" "8 June 1951" "Skewen, South Wales, UK" .
+<actor> "Jack Valenti" "5 September 1921" "Houston, Texas, USA" .
+<actor> "Julie Walters (I)" "22 February 1950" "Smethwick, West Midlands, England, UK" .
+<actor> "Debra Winger" "16 May 1955" "Cleveland Heights, Ohio, USA" .
+<actor> "Robert Wise (I)" "10 September 1914" "Winchester, Indiana, USA" .
+<actor> "Alfre Woodard" "8 November 1952" "Tulsa, Oklahoma, USA" .

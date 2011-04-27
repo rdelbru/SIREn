@@ -1,0 +1,21 @@
+title:Rocky Balboa
+url:http://www.imdb.com/title/tt0479143/
+<title> "Rocky Balboa" .
+<director> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<writer> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Burt Young" "30 April 1940" "New York City, New York, USA" .
+<actor> "Antonio Tarver" "21 November 1968" "Orlando, Florida, USA" .
+<actor> "Geraldine Hughes" " 1970" "Belfast, Northern Ireland, UK" .
+<actor> "Milo Ventimiglia" "8 July 1977" "Anaheim, California, USA" .
+<actor> "Tony Burton (I)" "23 March 1937" "Flint, Michigan, USA" .
+<actor> "A.J. Benza" "2 June 1962" "Brooklyn, New York, USA" .
+<actor> "James Francis Kelly III" "1 August 1989" "Pittsburgh, Pennsylvania, USA" .
+<actor> "Talia Shire" "25 April 1946" "Lake Success, Long Island, New York, USA" .
+<actor> "Lou DiBella (I)" "17 May 1960" "Brooklyn, New York, USA" .
+<actor> "Mike Tyson (I)" "30 June 1966" "Brooklyn, New York, USA" .
+<actor> "Henry G. Sanders" "18 August 1942" "Houston, Texas, USA" .
+<actor> "Pedro Lovell" "9 June 1945" "Buenos Aires, Argentina" .
+<actor> "Ana Gerena" " " "" .
+<actor> "Angela Boyd (I)" " " "" .

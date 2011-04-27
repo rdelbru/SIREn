@@ -1,0 +1,11 @@
+title:Drawing First Blood
+url:http://www.imdb.com/title/tt0317376/
+<title> "Drawing First Blood" .
+<director> "Ian T. Haufrect" " " "" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "David Morrell (II)" " " "" .
+<actor> "Ted Kotcheff" "7 April 1931" "Toronto, Ontario, Canada" .
+<actor> "Andrew G. Vajna" "1 August 1944" "Budapest, Hungary" .
+<actor> "Mario Kassar" "10 October 1951" "Beirut, Lebanon" .
+<actor> "Buzz Feitshans" " " "" .
+<actor> "Richard Crenna" "30 November 1926" "Los Angeles, California, USA" .

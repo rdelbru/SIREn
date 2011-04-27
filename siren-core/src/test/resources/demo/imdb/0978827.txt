@@ -1,0 +1,6 @@
+title:A Personal Introduction from Renny Harlin
+url:http://www.imdb.com/title/tt0978827/
+<title> "A Personal Introduction from Renny Harlin" .
+<actor> "Renny Harlin" "15 March 1959" "Riihimäki, Finland" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Janine Turner" "6 December 1962" "Lincoln, Nebraska, USA" .

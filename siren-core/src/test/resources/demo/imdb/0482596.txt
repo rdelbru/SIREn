@@ -1,0 +1,22 @@
+title:Sharon Stone
+url:http://www.imdb.com/title/tt0482596/
+<title> ""E! True Hollywood Story" Sharon Stone" .
+<writer> "Charles Winecoff" "13 April 1960" "" .
+<actor> "Melissa Sue Anderson" "26 September 1962" "Berkeley, California, USA" .
+<actor> "Dick Baker (IV)" " " "" .
+<actor> "Phil Bronstein" " " "" .
+<actor> "Mimi Craven" " " "" .
+<actor> "Faye Dunaway" "14 January 1941" "Bascom, Florida, USA" .
+<actor> "Michael Greenburg" " " "Scarsdale, New York, USA" .
+<actor> "Michael Munn" "8 October 1952" "London, England, UK" .
+<actor> "Mark Rydell" "23 March 1934" "New York City, New York, USA" .
+<actor> "Tricia Sawyer" "6 April 1968" "Pasadena, California, USA" .
+<actor> "Martin Scorsese" "17 November 1942" "Queens, New York, USA" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Dorothy Stone (II)" " " "" .
+<actor> "Joseph Stone (II)" " " "" .
+<actor> "Kelly Stone (V)" " " "" .
+<actor> "Mike Stone (II)" " " "" .
+<actor> "Sharon Stone (I)" "10 March 1958" "Meadville, Pennsylvania, USA" .
+<actor> "Paul Verhoeven (I)" "18 July 1938" "Amsterdam, Noord-Holland, Netherlands" .
+<actor> "Harvey Weinstein" "19 March 1952" "Flushing, Queens, New York, USA" .

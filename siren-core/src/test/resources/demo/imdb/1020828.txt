@@ -1,0 +1,13 @@
+title:Reality in the Ring: Filming Rocky's Final Fight
+url:http://www.imdb.com/title/tt1020828/
+<title> "Reality in the Ring: Filming Rocky's Final Fight" .
+<actor> "Sylvester Stallone" "6 July 1946" "New York City, New York, USA" .
+<actor> "Robert Sale (I)" " " "" .
+<actor> "Guy Riedel" " " "" .
+<actor> "Charles Winkler" " " "" .
+<actor> "Antonio Tarver" "21 November 1968" "Orlando, Florida, USA" .
+<actor> "Kevin King (II)" " " "" .
+<actor> "William Chartoff" "15 March 1963" "New York City, New York, USA" .
+<actor> "David Winkler (I)" " " "" .
+<actor> "J. Clark Mathis" " " "" .
+<actor> "Kevin King Templeton" " " "" .

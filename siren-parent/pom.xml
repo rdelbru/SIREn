@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.sindice.siren</groupId>
@@ -8,7 +9,7 @@
   <packaging>pom</packaging>
   <name>siren-parent</name>
   <url>http://siren.sindice.org</url>
-  
+
   <developers>
     <developer>
       <id>rdelbru</id>
@@ -22,23 +23,18 @@
       </roles>
     </developer>
   </developers>
-  
-  <modules>
-    <module>../siren-core</module>
-    <module>../siren-solr</module>
-    <module>../siren-qparser</module>
-  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <lucene.version>3.1.0</lucene.version>
+    <lucene.version>3.1.0</lucene.version>
   </properties>
-  
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -46,11 +42,11 @@
           <charset>UTF-8</charset>
         </configuration>
       </plugin>
-	    <!-- Deploy source jar -->
+      <!-- Deploy source jar -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>2.1</version> 
+        <version>2.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -63,7 +59,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-				<!-- Need to use 2.2-beta-4 to avoid duplicate entries in archive -->
+        <!-- Need to use 2.2-beta-4 to avoid duplicate entries in archive -->
         <version>2.2-beta-4</version>
         <configuration>
           <descriptors>
@@ -73,8 +69,17 @@
         </configuration>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>de.jflex</groupId>
+          <artifactId>maven-jflex-plugin</artifactId>
+          <version>1.4.3</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
-  
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -82,13 +87,13 @@
       <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
-		
+
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>0.9.11</version>
+      <version>0.9.24</version>
     </dependency>
-		
+
   </dependencies>
 
 </project>

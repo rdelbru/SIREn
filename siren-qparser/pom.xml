@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
- 
+
   <parent>
     <groupId>org.sindice.siren</groupId>
     <artifactId>siren-parent</artifactId>
     <version>0.2.1-SNAPSHOT</version>
+    <relativePath>../siren-parent</relativePath>
   </parent>
-  
+
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-qparser</artifactId>
   <version>0.2.1-SNAPSHOT</version>
   <name>siren-qparser</name>
   <url>http://siren.sindice.org</url>
-	
+
   <build>
     <plugins>
-      <!--
-      Generate Parser Source File with JCup and maven ant plugin
-      -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${project.build.directory}/generated-sources/parser-sources</source>
+                <source>${project.build.directory}/generated-sources/ast-sources</source>
+                <source>${project.build.directory}/generated-sources/lexer-sources</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Generate Parser Source File with JCup and maven ant plugin -->
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
@@ -32,20 +52,21 @@
             <configuration>
               <tasks>
                 <echo>Running Java CUP</echo>
-                <taskdef name="cup" classname="java_cup.anttask.CUPTask" classpathref="maven.compile.classpath"/>
-                <cup srcfile="${basedir}/src/main/cup/NTripleQParserImpl.cup" destdir="${basedir}/src/main/java" parser="NTripleQParserImpl" symbols="NTripleQParserSymbols" interface="true"/>
-								<cup srcfile="${basedir}/src/main/cup/EntityQParserImpl.cup" destdir="${basedir}/src/main/java" parser="EntityQParserImpl" symbols="EntityQParserSymbols" expect="9" interface="true"/>
+                <taskdef name="cup" classname="java_cup.anttask.CUPTask" classpathref="maven.compile.classpath" />
+                <cup srcfile="${basedir}/src/main/cup/NTripleQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources"
+                  parser="NTripleQParserImpl" symbols="NTripleQParserSymbols" interface="true" />
+                <cup srcfile="${basedir}/src/main/cup/EntityQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources"
+                  parser="EntityQParserImpl" symbols="EntityQParserSymbols" expect="9" interface="true" />
               </tasks>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      <!--
-      Generate AST Source File with maven exec:java classgen.Main
-      -->
+      <!-- Generate AST Source File with maven exec:java classgen.Main -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2</version>
         <executions>
           <execution>
             <id>ntriple-classgen-task</id>
@@ -53,18 +74,18 @@
             <goals>
               <goal>exec</goal>
             </goals>
-		        <configuration>
-		          <executable>java</executable>
-		          <workingDirectory>${basedir}/src/main/java/</workingDirectory>
-		          <arguments>
-		            <argument>-classpath</argument>
-		            <argument>${basedir}/src/main/resources/classgen.jar</argument>
-		            <argument>classgen.Main</argument>
-		            <argument>-visitor</argument>
-		            <argument>-overwrite</argument>
-		            <argument>${basedir}/src/main/classgen/NTripleQueryClassDefinition.cl</argument>
-		          </arguments>
-		        </configuration>
+            <configuration>
+              <executable>java</executable>
+              <workingDirectory>${project.build.directory}/generated-sources/ast-sources/</workingDirectory>
+              <arguments>
+                <argument>-classpath</argument>
+                <argument>${basedir}/src/main/resources/classgen.jar</argument>
+                <argument>classgen.Main</argument>
+                <argument>-visitor</argument>
+                <argument>-overwrite</argument>
+                <argument>${basedir}/src/main/classgen/NTripleQueryClassDefinition.cl</argument>
+              </arguments>
+            </configuration>
           </execution>
           <execution>
             <id>entity-classgen-task</id>
@@ -74,7 +95,7 @@
             </goals>
             <configuration>
               <executable>java</executable>
-              <workingDirectory>${basedir}/src/main/java/</workingDirectory>
+              <workingDirectory>${project.build.directory}/generated-sources/ast-sources/</workingDirectory>
               <arguments>
                 <argument>-classpath</argument>
                 <argument>${basedir}/src/main/resources/classgen.jar</argument>
@@ -87,13 +108,10 @@
           </execution>
         </executions>
       </plugin>
-      <!--
-      Generate Lexer Source File with JFlex Maven Plugin 
-      -->
+      <!-- Generate Lexer Source File with JFlex Maven Plugin -->
       <plugin>
         <groupId>de.jflex</groupId>
         <artifactId>maven-jflex-plugin</artifactId>
-        <version>1.4.3</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -101,7 +119,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <outputDirectory>src/main/java</outputDirectory>
+              <outputDirectory>${project.build.directory}/generated-sources/lexer-sources</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -109,31 +127,39 @@
     </plugins>
   </build>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>jflex</id>
+      <name>JFlex repository</name>
+      <url>http://jflex.sourceforge.net/repo/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <dependencies>
     <dependency>
       <groupId>org.sindice.siren</groupId>
       <artifactId>siren-core</artifactId>
       <version>${project.version}</version>
     </dependency>
-		
+
     <dependency>
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-queryparser</artifactId>
       <version>${lucene.version}</version>
     </dependency>
-    
+
     <dependency>
       <groupId>net.sf.squirrel-sql.thirdparty.non-maven</groupId>
       <artifactId>java-cup</artifactId>
       <version>11a</version>
     </dependency>
-		
-		<dependency>
-	    <groupId>commons-lang</groupId>
-	    <artifactId>commons-lang</artifactId>
-	    <version>2.5</version>
-		</dependency>
+
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.5</version>
+    </dependency>
 
   </dependencies>
-  
+
 </project>

@@ -336,14 +336,6 @@ class SirenBooleanScorer extends SirenPrimitiveScorer {
   }
 
   @Override
-  public float scoreCell()
-  throws IOException {
-    coordinator.initDoc();
-    final float sum = countingSumScorer.scoreCell();
-    return sum * coordinator.coordFactor();
-  }
-
-  @Override
   public int advance(final int entity) throws IOException {
     if (countingSumScorer == null) {
       this.initCountingSumScorer();
@@ -448,11 +440,6 @@ class SirenBooleanScorer extends SirenPrimitiveScorer {
         coordinator.nrMatchers++;
       }
       return scorer.score();
-    }
-
-    @Override
-    public float scoreCell() throws IOException {
-      return scorer.scoreCell();
     }
 
     @Override

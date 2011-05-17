@@ -70,11 +70,6 @@ class NonMatchingScorer extends SirenPrimitiveScorer {
   public float score() { throw new UnsupportedOperationException(); }
 
   @Override
-  public float scoreCell() {
-    throw new UnsupportedOperationException();
-  }
-
-  @Override
   public int advance(final int target) { return NO_MORE_DOCS; }
 
 

@@ -158,37 +158,6 @@ extends SirenScorer {
   }
 
   @Override
-  public float scoreCell() throws IOException {
-    final int curEntity = reqScorer.entity();
-    final int curTuple = reqScorer.tuple();
-    final int curCell = reqScorer.cell();
-    final float reqScore = reqScorer.scoreCell();
-
-    if (firstTimeOptScorer) {
-      firstTimeOptScorer = false;
-      if (optScorer.advance(curEntity, curTuple, curCell) == NO_MORE_DOCS) {
-        optScorer = null;
-        return reqScore;
-      }
-    }
-    else if (optScorer == null) {
-      return reqScore;
-    }
-    else if ((optScorer.entity() < curEntity ||
-              optScorer.entity() == curEntity && optScorer.tuple() < curTuple ||
-              optScorer.entity() == curEntity && optScorer.tuple() == curTuple && optScorer.cell() < curCell)
-              && (optScorer.advance(curEntity, curTuple, curCell) == NO_MORE_DOCS)) {
-      optScorer = null;
-      return reqScore;
-    }
-
-    return (optScorer.entity() == curEntity &&
-            optScorer.tuple() == curTuple &&
-            optScorer.cell() == curCell) ? reqScore + optScorer.scoreCell()
-                                         : reqScore;
-  }
-
-  @Override
   public String toString() {
     return "SirenReqOptScorer(" + this.dataset() + "," + this.entity() + "," + this.tuple() + "," + this.cell() + ")";
   }

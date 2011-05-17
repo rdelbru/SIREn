@@ -33,12 +33,15 @@ import org.sindice.siren.search.SirenIdIterator;
  * Decorator of the {@link TermPositions} class that implements all the logic
  * to iterate over the tuple table structure.
  */
-public class SirenTermPositions implements TermPositions {
+public class BufferedSirenTermPositions implements TermPositions {
 
   /**
    * The wrapped Lucene {@link TermPositions}.
    */
   private final TermPositions _termPositions;
+
+  /** Flag to know if tuple information are loaded */
+  private boolean             _isTuplesLoaded = false;
 
   /** Flag to know if next or skipTo has been called */
   private boolean             _isFirstTime = true;
@@ -46,8 +49,17 @@ public class SirenTermPositions implements TermPositions {
   /** Payload byte array buffer */
   private final byte[]        payloadBuffer = new byte[6];
 
+  /** Capacity of the buffers */
+  private int                 BUFFER_CAPACITY = 32;
+  /** index of the first element that should not be read or written */
+  private int                 _bufferLimit = -1;
   /** index of the next element to be read or written */
-  private int                 _posPtr = -1;
+  private int                 _bufferPosition = -1;
+
+  /** Tuple, cell and position buffers */
+  private int[]               _tupleBuffer = new int[BUFFER_CAPACITY];
+  private int[]               _cellBuffer = new int[BUFFER_CAPACITY];
+  private int[]               _positionBuffer = new int[BUFFER_CAPACITY];
 
   /** Current structural and positional information */
   private int                 dataset = -1;
@@ -56,13 +68,13 @@ public class SirenTermPositions implements TermPositions {
   private int                 cell = -1;
   private int                 pos = -1;
 
-  public SirenTermPositions(final TermPositions termPositions) {
+  public BufferedSirenTermPositions(final TermPositions termPositions) {
     _termPositions = termPositions;
   }
 
   protected void reinit() {
-    _isFirstTime = true;
-    _posPtr = -1;
+    _isFirstTime = true; _isTuplesLoaded = false;
+    _bufferLimit = _bufferPosition = -1;
     dataset = entity = tuple = cell = pos = -1;
   }
 
@@ -148,8 +160,10 @@ public class SirenTermPositions implements TermPositions {
    * <p> This is invalid until {@link #nextPosition()} is called for the first time.
    **/
   public int freqCell() {
-    // TODO: add frequency counter
-    return 1;
+    int f = 0;
+    for (int p = _bufferPosition; p < _bufferLimit && cell == _cellBuffer[p]; p++)
+      f++;
+    return f;
   }
 
   @Override
@@ -162,8 +176,7 @@ public class SirenTermPositions implements TermPositions {
     }
     entity = _termPositions.doc();
     dataset = tuple = cell = pos = -1;
-    _isFirstTime = false;
-    _posPtr = -1;
+    _isFirstTime = _isTuplesLoaded = false;
     return true;
   }
 
@@ -185,8 +198,12 @@ public class SirenTermPositions implements TermPositions {
     if (_isFirstTime)
       throw new RuntimeException("Invalid call, next should be called first.");
 
-    if (++_posPtr < _termPositions.freq()) {
-      this.loadTuple();
+    this.loadTuples();
+
+    if (++_bufferPosition < _bufferLimit) {
+      tuple = _tupleBuffer[_bufferPosition];
+      cell = _cellBuffer[_bufferPosition];
+      pos = _positionBuffer[_bufferPosition];
       return pos;
     }
 
@@ -201,7 +218,7 @@ public class SirenTermPositions implements TermPositions {
   throws IOException {
     if (entity == entityID) { // optimised case: reset buffer
       dataset = tuple = cell = pos = -1;
-      _posPtr = -1;
+      _bufferPosition = 0;
       return true;
     }
 
@@ -212,8 +229,7 @@ public class SirenTermPositions implements TermPositions {
     }
     entity = _termPositions.doc();
     dataset = tuple = cell = pos = -1;
-    _isFirstTime = false;
-    _posPtr = -1;
+    _isFirstTime = _isTuplesLoaded = false;
     return true;
   }
 
@@ -228,6 +244,10 @@ public class SirenTermPositions implements TermPositions {
       // If we skipped to the right entity, load the tuples and let's try to
       // find the right one
       if (entity == entityID) {
+        // if tuples were already loaded, it does not do anything. Useful in the
+        // case where skipTo is called multiples times with the same entityID in
+        // order to avoid to load tuples multiples times.
+        this.loadTuples();
         // If tuple is not found, just move to the next entity (SRN-17), and
         // to the next cell (SRN-24)
         if (!this.findTuple(tupleID)) {
@@ -256,15 +276,16 @@ public class SirenTermPositions implements TermPositions {
    *
    * @param tupleID The target tuple identifier
    * @return True if the tuple is found, false otherwise (SRN-17)
-   * @throws IOException
    */
-  private boolean findTuple(final int tupleID) throws IOException {
-    while (++_posPtr < _termPositions.freq()) {
-      this.loadTuple();
+  private boolean findTuple(final int tupleID) {
+    while (++_bufferPosition < _bufferLimit) {
       // if the current tuple is lesser than the target, continue
-      if (tuple < tupleID) {
+      if (_tupleBuffer[_bufferPosition] < tupleID) {
         continue;
       } else {
+        tuple = _tupleBuffer[_bufferPosition];
+        cell = _cellBuffer[_bufferPosition];
+        pos = _positionBuffer[_bufferPosition];
         return true;
       }
     }
@@ -282,6 +303,10 @@ public class SirenTermPositions implements TermPositions {
       // If we skipped to the right entity, load the tuples and let's try to
       // find the right one
       if (entity == entityID) {
+        // if tuples were already loaded, it does not do anything. Useful in the
+        // case where skipTo is called multiples times with the same entityID in
+        // order to avoid to load tuples multiples times.
+        this.loadTuples();
         // If tuple and cell are not found, just move to the next entity
         // (SRN-17), and to the next cell (SRN-24)
         if (!this.findCell(tupleID, cellID)) {
@@ -310,47 +335,54 @@ public class SirenTermPositions implements TermPositions {
    *
    * @param tupleID The target tuple identifier
    * @return True if the tuple and cell are found, false otherwise (SRN-17)
-   * @throws IOException
    */
-  private boolean findCell(final int tupleID, final int cellID) throws IOException {
-    while (++_posPtr < _termPositions.freq()) {
-      this.loadTuple();
+  private boolean findCell(final int tupleID, final int cellID) {
+    while (++_bufferPosition < _bufferLimit) {
       // if the current tuple is lesser or equal than the target,
       // and the current cell is lesser than the target, continue
-      if (tuple < tupleID ||
-         (tuple == tupleID && cell < cellID)) {
+      if (_tupleBuffer[_bufferPosition] < tupleID ||
+          (_tupleBuffer[_bufferPosition] == tupleID && _cellBuffer[_bufferPosition] < cellID)) {
         continue;
       } else {
+        tuple = _tupleBuffer[_bufferPosition];
+        cell = _cellBuffer[_bufferPosition];
+        pos = _positionBuffer[_bufferPosition];
         return true;
       }
     }
     return false;
   }
 
-  protected void loadTuple() throws IOException {
-    pos = _termPositions.nextPosition();
-    final AbstractSirenPayload payload = this.getPayload();
-    tuple = tuple == -1 ? payload.getTupleID() : tuple + payload.getTupleID();
-    if (cell == -1 || payload.getTupleID() != 0) {
-      cell = payload.getCellID();
+  protected void loadTuples() throws IOException {
+    if (_isTuplesLoaded) return;
+
+    this.initiateBuffer(_termPositions.freq());
+    for (int i = 0; i < _termPositions.freq(); i++) {
+      _positionBuffer[i] = _termPositions.nextPosition();
+      final AbstractSirenPayload payload = this.getPayload();
+      _tupleBuffer[i] = payload.getTupleID();
+      _cellBuffer[i] = payload.getCellID();
     }
-    else { // if (payload.getTupleID() == 0)
-      cell += payload.getCellID();
+    _isTuplesLoaded = true;
+  }
+
+  protected void initiateBuffer(final int size) {
+    if (BUFFER_CAPACITY < size) {
+      BUFFER_CAPACITY = size;
+      _positionBuffer = new int[BUFFER_CAPACITY];
+      _tupleBuffer = new int[BUFFER_CAPACITY];
+      _cellBuffer = new int[BUFFER_CAPACITY];
     }
+    _bufferLimit = size;
+    _bufferPosition = -1;
   }
 
   final PackedIntSirenPayload payload = new PackedIntSirenPayload();
 
   protected AbstractSirenPayload getPayload() throws IOException {
-    if (_termPositions.isPayloadAvailable()) {
-      payload.setData(_termPositions.getPayload(payloadBuffer, 0), 0,
-          _termPositions.getPayloadLength());
-      payload.decode();
-    }
-    else { // no payload, special case where tuple and cell == 0
-      payload._tupleID = 0;
-      payload._cellID = 0;
-    }
+    payload.setData(_termPositions.getPayload(payloadBuffer, 0), 0,
+        _termPositions.getPayloadLength());
+    payload.decode();
     return payload;
   }
 

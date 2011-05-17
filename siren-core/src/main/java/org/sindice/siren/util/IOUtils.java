@@ -24,6 +24,7 @@ package org.sindice.siren.util;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class IOUtils {
 
@@ -40,6 +41,38 @@ public class IOUtils {
    */
   public static String flattenNTriples(final String[] values) {
     final Map<String,StringBuilder> map = new HashMap<String, StringBuilder>();
+    return flattenNTriples(values, map);
+  }
+
+  /**
+   * Sort and flatten a list of triples to n-tuples containing many objects for
+   * the same subject/predicate pair. Generate one n-tuple per subject/predicate
+   * pair. The tuples are ordered by subject/predicate.
+   * <br>
+   * This is useful for the document-centric indexing approach. The sorted and
+   * flatten representation is generally more efficient in term of index size
+   * than the normal flatten approach.
+   *
+   * @param values The list of n-triples.
+   * @return The n-tuples concatenated.
+   */
+  public static String sortAndFlattenNTriples(final String[] values) {
+    final Map<String,StringBuilder> map = new TreeMap<String, StringBuilder>();
+    return flattenNTriples(values, map);
+  }
+
+  /**
+   * Flatten a list of triples to n-tuples containing many objects for the same
+   * subject/predicate pair. Generate one n-tuple per subject/predicate pair.
+   * <br>
+   * This is useful for the document-centric indexing approach. The flatten
+   * representation is more efficient in term of index size than the plain
+   * n-triples approach.
+   *
+   * @param values The list of n-triples.
+   * @return The n-tuples concatenated.
+   */
+  private static String flattenNTriples(final String[] values, final Map<String,StringBuilder> map) {
     for (final String value : values) {
       if (value != null) {
         final int firstWhitespace = value.indexOf(' ');

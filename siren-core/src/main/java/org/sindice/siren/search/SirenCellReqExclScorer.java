@@ -233,11 +233,6 @@ extends SirenScorer {
                               // already return false
   }
 
-  @Override
-  public float scoreCell() throws IOException {
-    return reqScorer.scoreCell();
-  }
-
   /**
    * Skips to the first match beyond the current whose document number is
    * greater than or equal to a given target. <br>

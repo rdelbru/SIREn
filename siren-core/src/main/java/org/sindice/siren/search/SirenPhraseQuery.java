@@ -31,13 +31,13 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermPositions;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Explanation;
+import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
-import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.util.ToStringUtils;
 
 /**
@@ -267,7 +267,7 @@ extends SirenPrimitiveQuery {
       }
       final Explanation tfExplanation = new Explanation();
       final int d = scorer.advance(doc);
-      final float phraseFreq = (d == doc) ? scorer.currentFreq() : 0.0f;
+      final float phraseFreq = (d == doc) ? scorer.phraseFreq() : 0.0f;
       tfExplanation.setValue(similarity.tf(phraseFreq));
       tfExplanation.setDescription("tf(phraseFreq=" + phraseFreq + ")");
 

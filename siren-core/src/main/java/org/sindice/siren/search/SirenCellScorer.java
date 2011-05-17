@@ -184,8 +184,8 @@ extends SirenScorer {
     boolean more = true;
     cell = primitiveScorer.cell();
 
-    while (more && (cell < cellConstraintStart ||
-                    cell > cellConstraintEnd)) {
+    // while cell are not within the constraints, iterate
+    while (more && (cell < cellConstraintStart || cell > cellConstraintEnd)) {
       if (primitiveScorer.nextPosition() == NO_MORE_POS) {
         more = (primitiveScorer.nextDoc() != NO_MORE_DOCS);
       }
@@ -208,8 +208,7 @@ extends SirenScorer {
     do {
       more = (primitiveScorer.nextPosition() != NO_MORE_POS);
       cell = primitiveScorer.cell();
-    } while (more && (cell < cellConstraintStart ||
-                      cell > cellConstraintEnd));
+    } while (more && (cell < cellConstraintStart || cell > cellConstraintEnd)); // while cell are not within the constraints, iterate
     if (more) {
       tuple = primitiveScorer.tuple(); // update current tuple
       return 0; // position is invalid in this scorer, return 0
@@ -225,12 +224,6 @@ extends SirenScorer {
   public float score()
   throws IOException {
     return primitiveScorer.score();
-  }
-
-  @Override
-  public float scoreCell()
-  throws IOException {
-    return primitiveScorer.scoreCell();
   }
 
   @Override

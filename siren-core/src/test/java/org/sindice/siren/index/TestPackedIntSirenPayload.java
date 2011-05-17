@@ -51,6 +51,26 @@ public class TestPackedIntSirenPayload {
   }
 
   @Test
+  public void testSpecialCases()
+  throws Exception {
+    PackedIntSirenPayload payload1 = new PackedIntSirenPayload(0, 1);
+    PackedIntSirenPayload payload2 = new PackedIntSirenPayload(payload1.getData());
+    assertEquals(payload1._tupleID, payload2._tupleID);
+    assertEquals(payload1._cellID, payload2._cellID);
+
+    payload1 = new PackedIntSirenPayload(1, 0);
+    payload2 = new PackedIntSirenPayload(payload1.getData());
+    assertEquals(payload1._tupleID, payload2._tupleID);
+    assertEquals(payload1._cellID, payload2._cellID);
+
+    payload1 = new PackedIntSirenPayload(1, 1);
+    payload2 = new PackedIntSirenPayload(payload1.getData());
+    assertEquals(payload1._tupleID, payload2._tupleID);
+    assertEquals(payload1._cellID, payload2._cellID);
+  }
+
+
+  @Test
   public void testRandomPackedInt88()
   throws Exception {
     final Random r = new Random(42);

@@ -172,7 +172,7 @@
 				<filter class="solr.LengthFilterFactory" min="2" max="256"/>
 				
 				<!-- Filter converting tuple and cell information in the term payload. -->
-				<filter class="org.sindice.siren.solr.analysis.SirenPayloadFilterFactory"/>
+				<filter class="org.sindice.siren.solr.analysis.SirenDeltaPayloadFilterFactory"/>
         
       </analyzer>
 

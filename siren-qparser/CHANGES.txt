@@ -14,6 +14,7 @@ Improvements
 * [SRN-75] Upgraded to lucene/solr 3.1-dev branch
 * [SRN-84] Add qname support in ntriple query parser
 * [SRN-85] NTripleQueryParser: Allow boolean operator within URI pattern
+* [SRN-105] Upgrade to Lucene/Solr 3.1
 
 New Features
 

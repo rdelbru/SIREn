@@ -18,12 +18,16 @@ Improvements
 * [SRN-76] Add localname maximum length limit to URILocalnameNormalisation 
            filter
 * [SRN-100] Improve user-readable version of the query
+* [SRN-105] Upgrade to Lucene/Solr 3.1
 
 New Features
 
 * [SRN-96] Add filter to expand accented words with non-accented form
 * [SRN-99] Boolean query group support in cell query
 
+Tasks
+
+* [SRN-110] Remove scoreCell function
 
 ======================= Release 0.2.0 2010-07-26 =======================
 

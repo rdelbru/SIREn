@@ -62,6 +62,15 @@ public class NTripleQueryParserTest {
 
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
   }
+  
+  @Test
+  public void testLuceneSpecialCharacter()
+  throws Exception {
+    final String ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
+    final String query = " <http://sw.deri.org/~aidanh/> <http://p> <http://o>";
+
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
 
   @Test
   public void testNTripleQuerySimpleImplicitTriple()

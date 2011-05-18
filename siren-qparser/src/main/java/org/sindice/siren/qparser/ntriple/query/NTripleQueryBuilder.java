@@ -26,9 +26,9 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
@@ -309,7 +309,7 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
     for (int i = 0; i < s.length(); i++) {
       final char c = s.charAt(i);
       // These characters are part of the query syntax and must be escaped
-      if (c == ':') {
+      if (c == ':' || c == '~') {
         sb.append('\\');
       }
       sb.append(c);

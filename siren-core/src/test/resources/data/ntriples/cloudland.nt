@@ -1,0 +1,517 @@
+
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.aksw.org/2008/triplify-04/> .
+<http://sioc-project.org/node/138> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/138" .
+<http://www.digitalbazaar.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Bazaar" .
+<http://sioc-project.org/node/310> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/310" .
+<http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&event=odbase2008> <http://www.w3.org/2000/01/rdf-schema#label> "ODBASE 2008" .
+<http://smob.sioc-project.org/server> <http://www.w3.org/2000/01/rdf-schema#label> "server view" .
+<http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx> <http://www.w3.org/2000/01/rdf-schema#label> "announced on their blog in June" .
+<http://www.johnbreslin.com/blog/category/data-portability/> <http://www.w3.org/2000/01/rdf-schema#label> "Data Portability" .
+<http://www.johnbreslin.com/blog/category/internet/> <http://www.w3.org/2000/01/rdf-schema#label> "Internet" .
+<http://www.boab.info/people/david/index.html> <http://www.w3.org/2000/01/rdf-schema#label> "David Peterson" .
+<http://www.johnbreslin.com/blog/category/sioc/> <http://www.w3.org/2000/01/rdf-schema#label> "SIOC" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/138> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/> .
+<http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/> <http://www.w3.org/2000/01/rdf-schema#label> "related blog post on RDFa" .
+<http://sdow2008.semanticweb.org/> <http://www.w3.org/2000/01/rdf-schema#label> "1st Social Data on the Web Workshop" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.deri.ie/about/team/member/?uid=234> .
+<http://oxfordrepo.blogspot.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Ben O'Steen" .
+<http://www.freelinereport.com/freeline-2-5-08/> <http://www.w3.org/2000/01/rdf-schema#label> "Freeline Report" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/social-networks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community> .
+<http://sindice.com/developers/siocwidget> <http://www.w3.org/2000/01/rdf-schema#label> "SIOC Widget" .
+<http://www.openlinksw.com/blog/~kidehen/?id=1333> <http://www.w3.org/2000/01/rdf-schema#label> "WordPress blogs can be incorporated into the Linked Data Web using Virtuoso" .
+<http://www.tcd.ie/> <http://www.w3.org/2000/01/rdf-schema#label> "TCD" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.sindice.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://vanirsystems.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://xml.lt/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.lespetitescases.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://rdfa.digitalbazaar.com/demos/digg/stemcells.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/sioc/> .
+<http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx> <http://www.w3.org/2000/01/rdf-schema#label> "public feeds API for ZYB" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.flinter.com/2008/07/08/tangler-versus-sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/boards/> .
+<http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-> <http://www.w3.org/2000/01/rdf-schema#label> "how to plan a Semantic Web site" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html> .
+<http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762> <http://www.w3.org/2000/01/rdf-schema#label> "Digg were incorporating RDFa in their pages" .
+<http://vanirsystems.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Daniel Lewis" .
+<http://smob.sioc-project.org/client> <http://www.w3.org/2000/01/rdf-schema#label> "anonymous client" .
+<http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE IS publication" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://apassant.net/> .
+<http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/> <http://www.w3.org/2000/01/rdf-schema#label> "ProgrammableWeb" .
+<http://blog.madskristensen.dk/> <http://www.w3.org/2000/01/rdf-schema#label> "Mads Kristensen" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/deri/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/> .
+<http://www.lespetitescases.net/files/smob.zip> <http://www.w3.org/2000/01/rdf-schema#label> "Drupal 5 widget that shows the latest SIOC postings on a given SMOB server" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/data-portability/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://xmlns.com/foaf/0.1/maker> <http://www.johnbreslin.com/blog/author/cloud/#foaf> .
+<http://www.ibm.com/developerworks/> <http://www.w3.org/2000/01/rdf-schema#label> "IBM Developer Works site," .
+<http://sioc-project.org/node/328> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/328" .
+<http://xml.lt/> <http://www.w3.org/2000/01/rdf-schema#label> "Martynas Jusevi\u00C4\u008Dius" .
+<http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/> <http://www.w3.org/2000/01/rdf-schema#label> "Universe of Discourse / Discussion" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/79> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://smwforum.ontoprise.com/smwforum/index.php/Main_Page> .
+<http://sdow2008.semanticweb.org/#program> <http://www.w3.org/2000/01/rdf-schema#label> "accepted papers" .
+<http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9> <http://www.w3.org/2000/01/rdf-schema#label> "siocosphere9" .
+<http://www.tangler.com/forum/semantic-web/topic/3704> <http://www.w3.org/2000/01/rdf-schema#label> "others think so too" .
+<http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx> <http://www.w3.org/2000/01/rdf-schema#label> "SemanticEngine.NET" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdfa/> .
+<http://www.deri.ie/about/team/member/?uid=234> <http://www.w3.org/2000/01/rdf-schema#label> "Vassilios Peristeras" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/foaf/> .
+<http://sindice.com/developers/siocapi> <http://www.w3.org/2000/01/rdf-schema#label> "SIOC API" .
+<http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/> <http://www.w3.org/2000/01/rdf-schema#label> "StraightWalker" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/> .
+<http://www.johnbreslin.com/blog/author/cloud/> <http://www.w3.org/2000/01/rdf-schema#label> "Cloud" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.tangler.com/forum/semantic-web/topic/3704> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/271> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://triplify.org/Documentation#h47-7> .
+<http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/> <http://www.w3.org/2000/01/rdf-schema#label> "my blog post about SMOB" .
+<http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html> <http://www.w3.org/2000/01/rdf-schema#label> "2" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.deri.ie/about/team/member/deirdre_lee/> .
+<http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/> <http://www.w3.org/2000/01/rdf-schema#label> "public-rdf-in-html-tf list" .
+<http://www.johnbreslin.com/blog/category/wikis/> <http://www.w3.org/2000/01/rdf-schema#label> "Wikis" .
+<http://www.deri.ie/about/team/member/deirdre_lee/> <http://www.w3.org/2000/01/rdf-schema#label> "Deirdre Lee" .
+<http://www.johnbreslin.com/blog/category/blogs/> <http://www.w3.org/2000/01/rdf-schema#label> "Blogs" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://smob.sioc-project.org/server> .
+<http://www.johnbreslin.com/blog/category/boards/> <http://www.w3.org/2000/01/rdf-schema#label> "Boards" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#has_reply> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-661473> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sindice.com/developers/siocwidget> .
+<http://www.johnbreslin.com/blog/category/social-software/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Software" .
+<http://www.johnbreslin.com/blog/category/web-20/> <http://www.w3.org/2000/01/rdf-schema#label> "Web 2.0" .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.johnbreslin.com/blog/index.php?sioc_type=user&sioc_id=1> .
+<http://www.johnbreslin.com/blog/author/cloud/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.johnbreslin.com/blog/index.php?sioc_type=user&sioc_id=1> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#has_reply> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-636391> .
+<http://www.johnbreslin.com/blog/category/nui-galway/> <http://www.w3.org/2000/01/rdf-schema#label> "NUI Galway" .
+<http://www.openlinksw.com/blog/~kidehen/> <http://www.w3.org/2000/01/rdf-schema#label> "Kingsley Idehen" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-661473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Post> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-636391> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Post> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.johnbreslin.com/blog/author/cloud/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#User> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Post> .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/2000/01/rdf-schema#label> "Cloud" .
+<http://sioc-project.org/node/271> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/271" .
+<http://sioc-project.org/node/272> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/272" .
+<http://sioc-project.org/node/294> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/294" .
+<http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/> <http://www.w3.org/2000/01/rdf-schema#label> "last time" .
+<http://www.johnbreslin.com/blog/category/social-media/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Media" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "473512dff629bf494df04371628c14165691721f" .
+<http://smwforum.ontoprise.com/smwforum/index.php/Main_Page> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic MediaWiki Plus User Group" .
+<http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html> <http://www.w3.org/2000/01/rdf-schema#label> "3" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/created> "2008-10-01T08:07:02Z" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/blogs/> .
+<http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html> <http://www.w3.org/2000/01/rdf-schema#label> "ditch his database-based blog for a semantic one" .
+<http://www.boogdesign.com/b2evo/> <http://www.w3.org/2000/01/rdf-schema#label> "Rob Crowther" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/social-media/> .
+<http://www.lespetitescases.net/smob-twitter-version-web-semantique> <http://www.w3.org/2000/01/rdf-schema#label> "This SMOB post from Gautier Poupeau" .
+<http://www.elec.qmul.ac.uk/digitalmusic/> <http://www.w3.org/2000/01/rdf-schema#label> "Centre for Digital Music" .
+<http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html> <http://www.w3.org/2000/01/rdf-schema#label> "which vocabularies should be used in Drupal core" .
+<http://rn7.net/b/> <http://www.w3.org/2000/01/rdf-schema#label> "Charles Nepote" .
+<http://rdfa.digitalbazaar.com/demos/digg/stemcells.html> <http://www.w3.org/2000/01/rdf-schema#label> "here" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sindice.com/developers/siocapi> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.freelinereport.com/freeline-2-5-08/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/social-software/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.openlinksw.com/blog/~kidehen/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html> .
+<http://www.davelangley.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Dave Langley" .
+<http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks> <http://www.w3.org/2000/01/rdf-schema#label> "technologies including SIOC can enable semantic social networks" .
+<http://lists.w3.org/Archives/Public/public-rdfa/> <http://www.w3.org/2000/01/rdf-schema#label> "public-rdfa list" .
+<http://www.johnbreslin.com/blog/category/deri/> <http://www.w3.org/2000/01/rdf-schema#label> "DERI" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-661473> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.johnbreslin.com/blog/index.php?sioc_type=comment&sioc_id=661473> .
+<http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities> <http://www.w3.org/2000/01/rdf-schema#label> "SIOC Twine" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-> .
+<http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Music Meets the Semantic Web" .
+<http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html> <http://www.w3.org/2000/01/rdf-schema#label> "reasons for using FOAF and SIOC independently or together" .
+<http://oscf.davelangley.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Online Semantic Community Framework" .
+<http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#> <http://www.w3.org/2000/01/rdf-schema#label> "Operator user script that checks if a SIOC-enabled post is referenced in del.icio.us" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/> .
+<http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community> <http://www.w3.org/2000/01/rdf-schema#label> "Mike Alexrod has blogged about joining the SIOC-o-sphere" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/internet/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/272> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://apassant.net/blog/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.ibm.com/developerworks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.digitalbazaar.com/> .
+<http://blog.flinter.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Steve Flinter" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.lespetitescases.net/files/smob.zip> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://apassant.net/blog/2008/05/13/sioc-based-microblogging/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/nui-galway/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.elec.qmul.ac.uk/digitalmusic/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://triplify.org/Overview> .
+<http://triplify.org/Documentation#h47-7> <http://www.w3.org/2000/01/rdf-schema#label> "SIOC and other vocabularies" .
+<http://apassant.net/blog/> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Passant" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://websemantique.org/VotreMicroBlogSurCeWiki> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://smob.sioc-project.org/client> .
+<http://www.johnbreslin.com/blog/category/semantic-web/> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Web" .
+<http://websemantique.org/VotreMicroBlogSurCeWiki> <http://www.w3.org/2000/01/rdf-schema#label> "get the client" .
+<http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02> <http://www.w3.org/2000/01/rdf-schema#label> "1" .
+<http://www.johnbreslin.com/blog/category/foaf/> <http://www.w3.org/2000/01/rdf-schema#label> "FOAF" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/rss/1.0/modules/content/encoded> "<p><img src='http://www.johnbreslin.com/blog/wp-content/uploads/2008/04/20080403a.png' alt='20080403a.png' align='right' /> It&#8217;s time for another installment from the world of SIOC!</p>\n<ul>\n<li>After the news in May that <a href=\"http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762\">Digg were incorporating RDFa in their pages</a>, <a href=\"http://www.digitalbazaar.com/\">Digital Bazaar</a> CEO Manu Sporny (in Blacksburg, where I lived for some time in 1996 and 2000) has written an excellent three-part guide on the <a href=\"http://lists.w3.org/Archives/Public/public-rdfa/\">public-rdfa list</a> about how more semantic information can be incorporated into Digg pages using SIOC RDFa (parts <a href=\"http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html\">1</a>, <a href=\"http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html\">2</a> and <a href=\"http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html\">3</a>).  You can view the result (as validating XHTML) <a href=\"http://rdfa.digitalbazaar.com/demos/digg/stemcells.html\">here</a>.  See also this interesting <a href=\"http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/\">related blog post on RDFa</a> by Manu.</li>\n<li>As part of their data portability drive, the mobile phonebook service <a href=\"http://www.zyb.com/\">ZYB</a> (recently acquired by Vodafone) <a href=\"http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx\">announced on their blog in June</a> that their latest release introduced FOAF and SIOC exports from user&#8217;s profile pages (with the full export only available to the users themselves at zyb.com/profilename.foaf and zyb.com/profilename.sioc respectively).  SIOC is being used to describe actions performed by ZYB users such as shouting, writing comments or updating status messages on Facebook.  You can also read more about their new <a href=\"http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx\">public feeds API for ZYB</a>.</li>\n<li>The <a href=\"http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx\">SemanticEngine.NET</a> class library has just been released by <a href=\"http://blog.madskristensen.dk/\">Mads Kristensen</a>, which supports various different formats ready to use in .NET (currently APML, FOAF, XFN, and soon SIOC and microformats).</li>\n<li><a href=\"http://www.lespetitescases.net/\">Gautier Poupeau</a> has written an <a href=\"http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#\">Operator user script that checks if a SIOC-enabled post is referenced in del.icio.us</a>.</li>\n<li><a href=\"http://xml.lt/\">Martynas Jusevi\u00C4\u008Dius</a> talks about how <a href=\"http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks\">technologies including SIOC can enable semantic social networks</a>.</li>\n<li>Brad Fallon gives SIOC a namecheck in his <a href=\"http://www.freelinereport.com/freeline-2-5-08/\">Freeline Report</a> video podcast.  Thanks Brad!</li>\n<li>On the <a href=\"http://www.ibm.com/developerworks/\">IBM Developer Works site, </a><a href=\"http://www.boogdesign.com/b2evo/\">Rob Crowther</a> mentions SIOC in his description of <a href=\"http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-\">how to plan a Semantic Web site</a>.</li>\n<li><a href=\"http://oxfordrepo.blogspot.com/\">Ben O&#8217;Steen</a> describes how he plans to <a href=\"http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html\">ditch his database-based blog for a semantic one</a>, using terms from SIOC.</li>\n<li><a href=\"http://blog.aksw.org/2008/triplify-04/\">Triplify 0.4</a> has been released which uses <a href=\"http://triplify.org/Documentation#h47-7\">SIOC and other vocabularies</a> to <a href=\"http://triplify.org/Overview\">expose instance data as RDF from a variety of web applications</a>.</li>\n<li><a href=\"http://www.openlinksw.com/blog/~kidehen/\">Kingsley Idehen</a> describes how <a href=\"http://www.openlinksw.com/blog/~kidehen/?id=1333\">WordPress blogs can be incorporated into the Linked Data Web using Virtuoso</a>.</li>\n<li><a href=\"http://vanirsystems.com/\">Daniel Lewis</a> talks about a <a href=\"http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/\">Universe of Discourse / Discussion</a> and SIOC.  He has also developed a WordPress theme called <a href=\"http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/\">StraightWalker</a> that links into the SIOC vocabulary.</li>\n<li>I mentioned <a href=\"http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/\">last time</a> that the <a href=\"http://www.sindice.com/\">Sindice</a> group would soon release the SWPop widget for WordPress.  It&#8217;s now available as the <a href=\"http://sindice.com/developers/siocwidget\">SIOC Widget</a> and it allows you to view posts, comments, topics, etc. made by any blog commenter across the SIOC-o-sphere (as indexed by Sindice).  They&#8217;ve also created a <a href=\"http://sindice.com/developers/siocapi\">SIOC API</a> for Sindice.</li>\n<li><a href=\"http://apassant.net/blog/\">Alex Passant</a> has led work on a prototype system called <a href=\"http://smob.sioc-project.org/\">SMOB</a> (Semantic Microblogging) for distributed / decentralised microblogging, that uses FOAF and SIOC to model microbloggers, services and microblog posts.  You can read more in <a href=\"http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/\">my blog post about SMOB</a> or in <a href=\"http://apassant.net/blog/2008/05/13/sioc-based-microblogging/\">Alex&#8217;s blog post</a>.  You can also try the <a href=\"http://smob.sioc-project.org/client\">anonymous client</a> and see a <a href=\"http://smob.sioc-project.org/server\">server view</a>.</li>\n<li>From IRC (<a href=\"http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02\">1</a>, <a href=\"http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54\">2</a>), we found out about a French wiki system called WikiNi that has been adapted by <a href=\"http://rn7.net/b/\">Charles Nepote</a> to allow publishing to SMOB.  You can <a href=\"http://websemantique.org/VotreMicroBlogSurCeWiki\">get the client</a> here.</li>\n<li><a href=\"http://www.lespetitescases.net/smob-twitter-version-web-semantique\">This SMOB post from Gautier Poupeau</a> links to his <a href=\"http://www.lespetitescases.net/files/smob.zip\">Drupal 5 widget that shows the latest SIOC postings on a given SMOB server</a>.</li>\n<li><a href=\"http://blog.flinter.com/\">Steve Flinter</a> has written a blog post entitled &#8220;<a href=\"http://blog.flinter.com/2008/07/08/tangler-versus-sioc/\">Tangler versus SIOC</a>&#8220;, referring to the <a href=\"http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/\">ProgrammableWeb</a> announcement about Tangler, an API for discussion forums.  I think it&#8217;d be great if SIOC could be used by Tangler, and I&#8217;m glad to see that <a href=\"http://www.tangler.com/forum/semantic-web/topic/3704\">others think so too</a>.</li>\n<li><a href=\"http://www.tcd.ie/\">TCD</a> student <a href=\"http://www.davelangley.com/\">Dave Langley</a> has created the <a href=\"http://oscf.davelangley.com/\">Online Semantic Community Framework</a> (OSCF), a platform for managing online communities based on semantic technologies including SIOC.  It uses a SPARQL endpoint as its data source.</li>\n<li><a href=\"http://www.boab.info/people/david/index.html\">David Peterson</a> has been discussing on the <a href=\"http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/\">public-rdf-in-html-tf list</a> about <a href=\"http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html\">which vocabularies should be used in Drupal core</a>, and Manu Sporny replies with some <a href=\"http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html\">reasons for using FOAF and SIOC independently or together</a>.</li>\n<li><a href=\"http://www.deri.ie/about/team/member/deirdre_lee/\">Deirdre Lee</a>, <a href=\"http://www.deri.ie/about/team/member/?uid=234\">Vassilios Peristeras</a> et al. have been working on a very nice enterprise application for SIOC, where it is being used in collaborative work environments (CWEs) as an interoperable format to share workspaces and documents between different CWE systems (e.g. BSCW and Business Collaborator).  This work was carried out as part of the ECOSPACE integrated project, and you can find out more from <a href=\"http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol\">their newsletter wiki</a>, our <a href=\"http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50\">IEEE IS publication</a> or attend the presentation at <a href=\"http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&#038;event=odbase2008\">ODBASE 2008</a> in November.</li>\n<li>The <a href=\"http://smwforum.ontoprise.com/smwforum/index.php/Main_Page\">Semantic MediaWiki Plus User Group</a> has been set up, and they are investigating how SMW templates can support FOAF and SIOC.</li>\n<li>I&#8217;m very pleased to announce that our SIOC &#8220;partner-in-crime&#8221; <a href=\"http://apassant.net/\">Alex Passant</a> has joined DERI.  Alex recently gave an interesting presentation at the <a href=\"http://www.elec.qmul.ac.uk/digitalmusic/\">Centre for Digital Music</a> (repeated here in DERI) about where &#8220;<a href=\"http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/\">Social Music Meets the Semantic Web</a>&#8220;.</li>\n<li><a href=\"http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community\">Mike Alexrod has blogged about joining the SIOC-o-sphere</a>, along with the unexpected SEO benefits that he experienced as a result!</li>\n<li>Over 60 competitors have signed up for the <a href=\"http://data.sioc-project.org/\">boards.ie SIOC Data Competition</a> and there\u00E2\u20AC\u2122s still one month left&#8230;</li>\n<li>Finally, the <a href=\"http://sdow2008.semanticweb.org/\">1st Social Data on the Web Workshop</a> (or what we like to call the &#8220;SIOC Workshop&#8221;!) will be held at the <a href=\"http://iswc2008.semanticweb.org/\">7th International Semantic Web Conference</a> in Karlsruhe this October.  The list of <a href=\"http://sdow2008.semanticweb.org/#program\">accepted papers</a> is now available; it&#8217;s going to be a very interesting event.  We hope that you can attend!</li>\n</ul>\n<p>Previous SIOC-o-sphere articles:</p>\n<p>#7 <a href=\"http://sioc-project.org/node/328\">http://sioc-project.org/node/328</a><br />\n#6 <a href=\"http://sioc-project.org/node/310\">http://sioc-project.org/node/310</a><br />\n#5 <a href=\"http://sioc-project.org/node/294\">http://sioc-project.org/node/294</a><br />\n#4 <a href=\"http://sioc-project.org/node/272\">http://sioc-project.org/node/272</a><br />\n#3 <a href=\"http://sioc-project.org/node/271\">http://sioc-project.org/node/271</a><br />\n#2 <a href=\"http://sioc-project.org/node/138\">http://sioc-project.org/node/138</a><br />\n#1 <a href=\"http://sioc-project.org/node/79\">http://sioc-project.org/node/79</a></p>\n<p>If you wish to contribute to the next article, join the <a href=\"http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities\">SIOC Twine</a> and use the tag &#8220;<a href=\"http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9\">siocosphere9</a>&#8221; when you add items.</p>" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/wikis/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/294> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/310> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sioc-project.org/node/328> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sdow2008.semanticweb.org/#program> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://iswc2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://sdow2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://data.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://oscf.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.tcd.ie/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-636391> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.johnbreslin.com/blog/index.php?sioc_type=comment&sioc_id=636391> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://rn7.net/b/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#topic> <http://www.johnbreslin.com/blog/category/web-20/> .
+<http://apassant.net/> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Passant" .
+<http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54> <http://www.w3.org/2000/01/rdf-schema#label> "2" .
+<http://www.lespetitescases.net/> <http://www.w3.org/2000/01/rdf-schema#label> "Gautier Poupeau" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.lespetitescases.net/smob-twitter-version-web-semantique> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://xmlns.com/foaf/0.1/homepage> <http://www.johnbreslin.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://smob.sioc-project.org/> .
+<http://blog.aksw.org/2008/triplify-04/> <http://www.w3.org/2000/01/rdf-schema#label> "Triplify 0.4" .
+<http://smob.sioc-project.org/> <http://www.w3.org/2000/01/rdf-schema#label> "SMOB" .
+<http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html> <http://www.w3.org/2000/01/rdf-schema#label> "1" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://oxfordrepo.blogspot.com/> .
+<http://data.sioc-project.org/> <http://www.w3.org/2000/01/rdf-schema#label> "boards.ie SIOC Data Competition" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.boogdesign.com/b2evo/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.madskristensen.dk/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://blog.flinter.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html> .
+<http://www.johnbreslin.com/blog/category/social-networks/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Networks" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/title> "Tales from the SIOC-o-sphere #8" .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://purl.org/dc/elements/1.1/title> "SIOC Post profile for \"Cloudlands\"" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.zyb.com/> .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://purl.org/dc/elements/1.1/description> "A SIOC profile describes the structure and contents of a weblog in a machine readable form. For more information please refer to http://sioc-project.org/." .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://webns.net/mvcb/generatorAgent> <http://rdfs.org/sioc/wp-sioc.php?version=1.25> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#link> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#has_container> <http://www.johnbreslin.com/blog/index.php?sioc_type=site#weblog> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#has_creator> <http://www.johnbreslin.com/blog/author/cloud/> .
+<http://www.zyb.com/> <http://www.w3.org/2000/01/rdf-schema#label> "ZYB" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&event=odbase2008> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#content> "It's time for another installment from the world of SIOC!\n\n\n\tAfter the news in May that Digg were incorporating RDFa in their pages, Digital Bazaar CEO Manu Sporny (in Blacksburg, where I lived for some time in 1996 and 2000) has written an excellent three-part guide on the public-rdfa list about how more semantic information can be incorporated into Digg pages using SIOC RDFa (parts 1, 2 and 3).  You can view the result (as validating XHTML) here.  See also this interesting related blog post on RDFa by Manu.\n\tAs part of their data portability drive, the mobile phonebook service ZYB (recently acquired by Vodafone) announced on their blog in June that their latest release introduced FOAF and SIOC exports from user's profile pages (with the full export only available to the users themselves at zyb.com/profilename.foaf and zyb.com/profilename.sioc respectively).  SIOC is being used to describe actions performed by ZYB users such as shouting, writing comments or updating status messages on Facebook.  You can also read more about their new public feeds API for ZYB.\n\tThe SemanticEngine.NET class library has just been released by Mads Kristensen, which supports various different formats ready to use in .NET (currently APML, FOAF, XFN, and soon SIOC and microformats).\n\tGautier Poupeau has written an Operator user script that checks if a SIOC-enabled post is referenced in del.icio.us.\n\tMartynas Jusevi\u00C4\u008Dius talks about how technologies including SIOC can enable semantic social networks.\n\tBrad Fallon gives SIOC a namecheck in his Freeline Report video podcast.  Thanks Brad!\n\tOn the IBM Developer Works site, Rob Crowther mentions SIOC in his description of how to plan a Semantic Web site.\n\tBen O'Steen describes how he plans to ditch his database-based blog for a semantic one, using terms from SIOC.\n\tTriplify 0.4 has been released which uses SIOC and other vocabularies to expose instance data as RDF from a variety of web applications.\n\tKingsley Idehen describes how WordPress blogs can be incorporated into the Linked Data Web using Virtuoso.\n\tDaniel Lewis talks about a Universe of Discourse / Discussion and SIOC.  He has also developed a WordPress theme called StraightWalker that links into the SIOC vocabulary.\n\tI mentioned last time that the Sindice group would soon release the SWPop widget for WordPress.  It's now available as the SIOC Widget and it allows you to view posts, comments, topics, etc. made by any blog commenter across the SIOC-o-sphere (as indexed by Sindice).  They've also created a SIOC API for Sindice.\n\tAlex Passant has led work on a prototype system called SMOB (Semantic Microblogging) for distributed / decentralised microblogging, that uses FOAF and SIOC to model microbloggers, services and microblog posts.  You can read more in my blog post about SMOB or in Alex's blog post.  You can also try the anonymous client and see a server view.\n\tFrom IRC (1, 2), we found out about a French wiki system called WikiNi that has been adapted by Charles Nepote to allow publishing to SMOB.  You can get the client here.\n\tThis SMOB post from Gautier Poupeau links to his Drupal 5 widget that shows the latest SIOC postings on a given SMOB server.\n\tSteve Flinter has written a blog post entitled \"Tangler versus SIOC\", referring to the ProgrammableWeb announcement about Tangler, an API for discussion forums.  I think it'd be great if SIOC could be used by Tangler, and I'm glad to see that others think so too.\n\tTCD student Dave Langley has created the Online Semantic Community Framework (OSCF), a platform for managing online communities based on semantic technologies including SIOC.  It uses a SPARQL endpoint as its data source.\n\tDavid Peterson has been discussing on the public-rdf-in-html-tf list about which vocabularies should be used in Drupal core, and Manu Sporny replies with some reasons for using FOAF and SIOC independently or together.\n\tDeirdre Lee, Vassilios Peristeras et al. have been working on a very nice enterprise application for SIOC, where it is being used in collaborative work environments (CWEs) as an interoperable format to share workspaces and documents between different CWE systems (e.g. BSCW and Business Collaborator).  This work was carried out as part of the ECOSPACE integrated project, and you can find out more from their newsletter wiki, our IEEE IS publication or attend the presentation at ODBASE 2008 in November.\n\tThe Semantic MediaWiki Plus User Group has been set up, and they are investigating how SMW templates can support FOAF and SIOC.\n\tI'm very pleased to announce that our SIOC \"partner-in-crime\" Alex Passant has joined DERI.  Alex recently gave an interesting presentation at the Centre for Digital Music (repeated here in DERI) about where \"Social Music Meets the Semantic Web\".\n\tMike Alexrod has blogged about joining the SIOC-o-sphere, along with the unexpected SEO benefits that he experienced as a result!\n\tOver 60 competitors have signed up for the boards.ie SIOC Data Competition and there\u00E2\u20AC\u2122s still one month left...\n\tFinally, the 1st Social Data on the Web Workshop (or what we like to call the \"SIOC Workshop\"!) will be held at the 7th International Semantic Web Conference in Karlsruhe this October.  The list of accepted papers is now available; it's going to be a very interesting event.  We hope that you can attend!\n\n\nPrevious SIOC-o-sphere articles:\n\n#7 http://sioc-project.org/node/328\n#6 http://sioc-project.org/node/310\n#5 http://sioc-project.org/node/294\n#4 http://sioc-project.org/node/272\n#3 http://sioc-project.org/node/271\n#2 http://sioc-project.org/node/138\n#1 http://sioc-project.org/node/79\n\nIf you wish to contribute to the next article, join the SIOC Twine and use the tag \"siocosphere9\" when you add items." .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.boab.info/people/david/index.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.openlinksw.com/blog/~kidehen/?id=1333> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html> .
+<http://sioc-project.org/node/79> <http://www.w3.org/2000/01/rdf-schema#label> "http://sioc-project.org/node/79" .
+<http://triplify.org/Overview> <http://www.w3.org/2000/01/rdf-schema#label> "expose instance data as RDF from a variety of web applications" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://rdfs.org/sioc/ns#links_to> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9> .
+<http://iswc2008.semanticweb.org/> <http://www.w3.org/2000/01/rdf-schema#label> "7th International Semantic Web Conference" .
+<http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "their newsletter wiki" .
+<http://blog.flinter.com/2008/07/08/tangler-versus-sioc/> <http://www.w3.org/2000/01/rdf-schema#label> "Tangler versus SIOC" .
+<http://apassant.net/blog/2008/05/13/sioc-based-microblogging/> <http://www.w3.org/2000/01/rdf-schema#label> "Alex's blog post" .
+<http://www.sindice.com/> <http://www.w3.org/2000/01/rdf-schema#label> "Sindice" .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wordnet/1.6/Document> .
+<http://www.johnbreslin.com/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wordnet/1.6/Document> .
+<http://www.johnbreslin.com/blog/author/cloud/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/OnlineAccount> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wordnet/1.6/Agent> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wordnet/1.6/Agent-3> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/wordnet/1.6/Person> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/10/swap/pim/contact#SocialEntity> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=site#weblog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Container> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-636391> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Item> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-661473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Item> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Item> .
+<http://www.johnbreslin.com/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://www.johnbreslin.com/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.johnbreslin.com/blog/author/cloud/#foaf> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/date> "2008-10-01T08:07:02Z" .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.johnbreslin.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://xmlns.com/foaf/0.1/page> <http://www.johnbreslin.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://xmlns.com/foaf/0.1/page> <http://www.johnbreslin.com/blog/index.php?sioc_type=post&sioc_id=1587> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.digitalbazaar.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdfa/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://rdfa.digitalbazaar.com/demos/digg/stemcells.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.zyb.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.madskristensen.dk/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.lespetitescases.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://xml.lt/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.freelinereport.com/freeline-2-5-08/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.ibm.com/developerworks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.boogdesign.com/b2evo/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://oxfordrepo.blogspot.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.aksw.org/2008/triplify-04/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://triplify.org/Documentation#h47-7> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://triplify.org/Overview> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.openlinksw.com/blog/~kidehen/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.openlinksw.com/blog/~kidehen/?id=1333> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://vanirsystems.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.sindice.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sindice.com/developers/siocwidget> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sindice.com/developers/siocapi> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://apassant.net/blog/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://smob.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://apassant.net/blog/2008/05/13/sioc-based-microblogging/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://smob.sioc-project.org/client> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://smob.sioc-project.org/server> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://rn7.net/b/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://websemantique.org/VotreMicroBlogSurCeWiki> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.lespetitescases.net/smob-twitter-version-web-semantique> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.lespetitescases.net/files/smob.zip> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.flinter.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.flinter.com/2008/07/08/tangler-versus-sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.tangler.com/forum/semantic-web/topic/3704> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.tcd.ie/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://oscf.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.boab.info/people/david/index.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.deri.ie/about/team/member/deirdre_lee/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.deri.ie/about/team/member/?uid=234> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&event=odbase2008> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://smwforum.ontoprise.com/smwforum/index.php/Main_Page> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://apassant.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.elec.qmul.ac.uk/digitalmusic/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://data.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sdow2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://iswc2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sdow2008.semanticweb.org/#program> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/328> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/310> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/294> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/272> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/271> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/138> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://sioc-project.org/node/79> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/relation> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/blogs/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/boards/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/deri/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/data-portability/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/foaf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/internet/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/nui-galway/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/social-media/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/social-networks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/social-software/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/web-20/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/subject> <http://www.johnbreslin.com/blog/category/wikis/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/blogs/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/boards/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/deri/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/data-portability/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/foaf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/internet/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/nui-galway/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/social-media/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/social-networks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/social-software/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/web-20/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/subject> <http://www.johnbreslin.com/blog/category/wikis/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/date> "2008-10-01T08:07:02Z" .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-636391> <http://rdfs.org/sioc/ns#reply_of> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/#comment-661473> <http://rdfs.org/sioc/ns#reply_of> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.digitalbazaar.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdfa/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://rdfa.digitalbazaar.com/demos/digg/stemcells.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.zyb.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.madskristensen.dk/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.lespetitescases.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://xml.lt/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.freelinereport.com/freeline-2-5-08/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.ibm.com/developerworks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.boogdesign.com/b2evo/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://oxfordrepo.blogspot.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.aksw.org/2008/triplify-04/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://triplify.org/Documentation#h47-7> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://triplify.org/Overview> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.openlinksw.com/blog/~kidehen/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.openlinksw.com/blog/~kidehen/?id=1333> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://vanirsystems.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.sindice.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sindice.com/developers/siocwidget> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sindice.com/developers/siocapi> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://apassant.net/blog/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://smob.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://apassant.net/blog/2008/05/13/sioc-based-microblogging/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://smob.sioc-project.org/client> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://smob.sioc-project.org/server> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://rn7.net/b/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://websemantique.org/VotreMicroBlogSurCeWiki> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.lespetitescases.net/smob-twitter-version-web-semantique> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.lespetitescases.net/files/smob.zip> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.flinter.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.flinter.com/2008/07/08/tangler-versus-sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.tangler.com/forum/semantic-web/topic/3704> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.tcd.ie/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://oscf.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.boab.info/people/david/index.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.deri.ie/about/team/member/deirdre_lee/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.deri.ie/about/team/member/?uid=234> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&event=odbase2008> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://smwforum.ontoprise.com/smwforum/index.php/Main_Page> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://apassant.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.elec.qmul.ac.uk/digitalmusic/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://data.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sdow2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://iswc2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sdow2008.semanticweb.org/#program> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/328> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/310> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/294> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/272> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/271> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/138> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://sioc-project.org/node/79> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/elements/1.1/relation> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9> .
+<http://www.johnbreslin.com/blog/index.php?sioc_type=site#weblog> <http://rdfs.org/sioc/ns#container_of> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/author/cloud/> <http://rdfs.org/sioc/ns#creator_of> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/author/cloud/#foaf> <http://xmlns.com/foaf/0.1/made> <http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.betanews.com/article/Digg_makes_official_its_adoption_of_a_semantic_Web_standard/1209743762> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.digitalbazaar.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdfa/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0014.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0015.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdfa/2008Sep/0017.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://rdfa.digitalbazaar.com/demos/digg/stemcells.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.digitalbazaar.com/2008/08/23/html5-rdfa-and-microformats/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.zyb.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://pimpmy.zyb.com/post/2008/06/23/FOAF-and-SIOC-are-now-available.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://pimpmy.zyb.com/post/2008/08/25/OpenID-public-API-and-better-performance.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.madskristensen.dk/post/Introducing-SemanticEngineNET.aspx> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.madskristensen.dk/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.lespetitescases.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://groups.google.com/group/sioc-dev/browse_frm/thread/d290949d91189c1f?hl=en#> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://xml.lt/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.xml.lt/Blog/2008/04/02/Semantic+social+networks> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.freelinereport.com/freeline-2-5-08/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.ibm.com/developerworks/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.boogdesign.com/b2evo/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.ibm.com/developerworks/xml/library/x-plansemantic/index.html?ca=drs-> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://oxfordrepo.blogspot.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://oxfordrepo.blogspot.com/2008/04/ditching-db-based-blog-for-semantic-one.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.aksw.org/2008/triplify-04/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://triplify.org/Documentation#h47-7> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://triplify.org/Overview> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.openlinksw.com/blog/~kidehen/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.openlinksw.com/blog/~kidehen/?id=1333> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://vanirsystems.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://vanirsystems.com/danielsblog/2008/04/10/universe-of-discourse/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://vanirsystems.com/danielsblog/2008/05/09/introducing-straightwalker/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.johnbreslin.com/blog/2008/04/05/tales-from-the-sioc-o-sphere-7/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.sindice.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sindice.com/developers/siocwidget> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sindice.com/developers/siocapi> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://apassant.net/blog/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://smob.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.johnbreslin.com/blog/2008/05/09/prototype-for-distributed-decentralised-microblogging-using-semantics/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://apassant.net/blog/2008/05/13/sioc-based-microblogging/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://smob.sioc-project.org/client> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://smob.sioc-project.org/server> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://tuukka.iki.fi/tmp/sioc-2008-05-27#21:44:02> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://tuukka.iki.fi/tmp/sioc-2008-05-29#12:54:54> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://rn7.net/b/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://websemantique.org/VotreMicroBlogSurCeWiki> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.lespetitescases.net/smob-twitter-version-web-semantique> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.lespetitescases.net/files/smob.zip> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.flinter.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.flinter.com/2008/07/08/tangler-versus-sioc/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://blog.programmableweb.com/2008/07/08/tangler-an-api-for-discussion-forums/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.tangler.com/forum/semantic-web/topic/3704> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.tcd.ie/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://oscf.davelangley.com/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.boab.info/people/david/index.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0176.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf/2008Sep/0180.html> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.deri.ie/about/team/member/deirdre_lee/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.deri.ie/about/team/member/?uid=234> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.ami-communities.eu/wiki/ECOSPACE_Newsletter_No_6#SIOC.2C_the_Social_Communication_Protocol> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://doi.ieeecomputersociety.org/10.1109/MIS.2008.50> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.cs.rmit.edu.au/fedconf/index.html?page=accepted_submissions&event=odbase2008> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://smwforum.ontoprise.com/smwforum/index.php/Main_Page> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://apassant.net/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.elec.qmul.ac.uk/digitalmusic/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://apassant.net/blog/2008/07/23/social-music-meets-the-semantic-web/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.mikeaxelrod.com/wp/2008/06/01/sioc-joining-the-semantically-interlinked-online-community> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://data.sioc-project.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sdow2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://iswc2008.semanticweb.org/> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sdow2008.semanticweb.org/#program> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/328> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/310> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/294> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/272> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/271> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/138> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://sioc-project.org/node/79> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities> .
+<http://www.johnbreslin.com/blog/2008/10/01/tales-from-the-sioc-o-sphere-8/> <http://purl.org/dc/terms/references> <http://www.twine.com/twine/1rz6jr8b-h0/sioc-semantically-interlinked-online-communities/items?tag=siocosphere9> .

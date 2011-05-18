@@ -52,6 +52,19 @@ public class QNamesFilterTest {
     Assert.assertEquals("http://xmlns.com/foaf/0.1/name", cTermAtt.toString());
     filter.close();
   }
+  
+  @Test
+  public void testNotQName() throws Exception {
+    final String query = "mailto:aidan.hogan@deri.org";
+    final WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final TokenStream stream = analyzer.tokenStream(null, new StringReader(query));
+    final TokenFilter filter = new QNamesFilter(stream, "./src/test/resources/conf/qnames");
+
+    final CharTermAttribute cTermAtt = filter.getAttribute(CharTermAttribute.class);
+    Assert.assertTrue(filter.incrementToken());
+    Assert.assertEquals("mailto:aidan.hogan@deri.org", cTermAtt.toString());
+    filter.close();
+  }
 
   @Test
   public void testInvalidQName() throws Exception {

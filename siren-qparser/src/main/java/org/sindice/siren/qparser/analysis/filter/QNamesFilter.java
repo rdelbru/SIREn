@@ -111,7 +111,7 @@ public final class QNamesFilter extends TokenFilter {
     if (qnames.containsKey(prefix)) {
       return qnames.getProperty(prefix).toCharArray();
     }
-    return prefix.toCharArray();
+    return cTermAtt.subSequence(0, offset + 1).toString().toCharArray();
   }
 
   @Override
@@ -123,8 +123,8 @@ public final class QNamesFilter extends TokenFilter {
     int offset = 0;
     if ((offset = this.findDelimiter()) != termLength) {
       final char[] prefix = this.convertQName(offset);
-      final CharSequence suffix = cTermAtt.subSequence(offset + 1, termLength);
-      final int newSize = prefix.length + (termLength - (offset + 1));
+      final CharSequence suffix = cTermAtt.subSequence(offset + 1, termLength); // skip the QName delimiter
+      final int newSize = prefix.length + suffix.length();
       cTermAtt.resizeBuffer(newSize);
       cTermAtt.setEmpty();
       cTermAtt.copyBuffer(prefix, 0, prefix.length);

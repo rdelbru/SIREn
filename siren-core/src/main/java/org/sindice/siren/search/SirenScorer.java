@@ -22,8 +22,6 @@
  */
 package org.sindice.siren.search;
 
-import java.io.IOException;
-
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Similarity;
@@ -37,11 +35,6 @@ public abstract class SirenScorer extends Scorer implements SirenIdIterator {
   protected SirenScorer(final Similarity similarity) {
     super(similarity);
   }
-
-  /**
-   * Returns the score impact for the current cell.
-   */
-  public abstract float scoreCell() throws IOException;
 
   public class InvalidCallException extends RuntimeException {
 

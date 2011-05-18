@@ -16,6 +16,7 @@ Improvements
 * [SRN-84] Add qname support in ntriple query parser
 * [SRN-94] Field query can be disabled in the KeywordQParser
 * [SRN-102] Catch SolrException in SIREnQParser#parse
+* [SRN-105] Upgrade to Lucene/Solr 3.1
 
 Tasks
 

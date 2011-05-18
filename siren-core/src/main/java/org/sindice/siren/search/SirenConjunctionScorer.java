@@ -23,11 +23,9 @@
 package org.sindice.siren.search;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.List;
 
 import org.apache.lucene.search.Similarity;
 
@@ -60,18 +58,6 @@ extends SirenScorer {
   private int                 lastTuple   = -1;
 
   private int                 lastCell   = -1;
-
-  /**
-   * <p> Occurrences of the conjunction of scorers in current entity.
-   * <p> If there is no occurrences, the lists are empty.
-   */
-  private final List<Integer> tuples = new ArrayList<Integer>();
-  private final List<Integer> cells = new ArrayList<Integer>();
-
-  /**
-   * Pointer that keeps position when traversing the occurrences lists
-   */
-  protected int              p;
 
   public SirenConjunctionScorer(final Similarity similarity,
                                 final Collection<SirenPrimitiveScorer> scorers)
@@ -151,13 +137,10 @@ extends SirenScorer {
       firstScorer = scorers[first];
     }
 
-    // Load occurrences for nextPosition() and score()
     if (more) {
       lastEntity = lastScorer.entity();
       lastTuple = lastScorer.tuple();
       lastCell = lastScorer.cell();
-      this.loadOccurrences();
-      p = 0; // reset pointer
       return lastEntity;
     }
     else {
@@ -166,52 +149,31 @@ extends SirenScorer {
     }
   }
 
-  /**
-   * Load in memory the occurrences of the scorer conjunction in the current entity.
-   * The occurrences are used in {@link #nextPosition()} and in {@link #score()}.
-   * @throws IOException
-   */
-  private void loadOccurrences() throws IOException {
-    tuples.clear(); cells.clear();
-
+  @Override
+  public int nextPosition() throws IOException {
     int first = 0;
     SirenScorer lastScorer = scorers[scorers.length - 1];
     SirenScorer firstScorer = scorers[first];
 
-    do { // find position w/ all terms
-      while (firstScorer.tuple() < lastScorer.tuple() ||
-            (firstScorer.tuple() == lastScorer.tuple() && firstScorer.cell() < lastScorer.cell())) { // scan forward in first
-        do {
-          if (firstScorer.nextPosition() == NO_MORE_POS)
-            return;
-        } while (firstScorer.tuple() < lastScorer.tuple() ||
-                (firstScorer.tuple() == lastScorer.tuple() && firstScorer.cell() < lastScorer.cell()));
-        lastScorer = firstScorer;
-        first = (first == (scorers.length - 1)) ? 0 : first + 1;
-        firstScorer = scorers[first];
-      }
-      // all equal: a match
-      tuples.add(firstScorer.tuple());
-      cells.add(firstScorer.cell());
-      // Go to next cell or tuple in lastScorer
-      do {
-        if (lastScorer.nextPosition() == NO_MORE_POS)
-          return;
-      } while (lastScorer.tuple() == firstScorer.tuple() &&
-               lastScorer.cell() == firstScorer.cell());
-    } while (true);
-  }
-
-  @Override
-  public int nextPosition() {
-    // Here we increment the pointer in the first place, because the first
-    // position is normally already loaded.
-    if (++p < tuples.size()) {
-      lastTuple = tuples.get(p);
-      lastCell = cells.get(p);
-      return 0; // position is invalid in this scorer, returns 0
+    if (lastScorer.nextPosition() == NO_MORE_POS) { // scan forward in last
+      return NO_MORE_POS;
     }
-    return NO_MORE_POS;
+
+    while (firstScorer.tuple() < lastScorer.tuple() ||
+          (firstScorer.tuple() == lastScorer.tuple() && firstScorer.cell() < lastScorer.cell())) { // scan forward in first
+      do {
+        if (firstScorer.nextPosition() == NO_MORE_POS)
+          return NO_MORE_POS;
+      } while (firstScorer.tuple() < lastScorer.tuple() ||
+              (firstScorer.tuple() == lastScorer.tuple() && firstScorer.cell() < lastScorer.cell()));
+      lastScorer = firstScorer;
+      first = (first == (scorers.length - 1)) ? 0 : first + 1;
+      firstScorer = scorers[first];
+    }
+    // all equal: a match
+    lastTuple = firstScorer.tuple();
+    lastCell = firstScorer.cell();
+    return -1; // position is invalid in this scorer, returns -1
   }
 
   @Override
@@ -308,18 +270,7 @@ extends SirenScorer {
     for (final SirenPrimitiveScorer scorer : scorers) {
       sum += scorer.score();
     }
-    // Multiply by the root square of the number of matches
-    return sum * coord * ((float) Math.sqrt(tuples.size()));
-  }
-
-  @Override
-  public float scoreCell() throws IOException {
-    float sum = 0.0f;
-    for (final SirenPrimitiveScorer scorer : scorers) {
-      sum += scorer.scoreCell();
-    }
-    // Multiply by the root square of the number of matches
-    return sum * coord * ((float) Math.sqrt(tuples.size()));
+    return sum * coord;
   }
 
   @Override

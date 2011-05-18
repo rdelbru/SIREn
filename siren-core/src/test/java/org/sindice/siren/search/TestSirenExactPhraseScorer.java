@@ -22,7 +22,10 @@
  */
 package org.sindice.siren.search;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -76,13 +79,13 @@ extends AbstractTestSirenScorer {
       new AssertNextEntityFunctor(),
       new String[] { "<http://renaud.delbru.fr/> <http://renaud.delbru.fr/> . " },
       new String[] { "renaud", "delbru" }, 1, new int[] { 1 }, new int[] { 2 },
-      new int[] { 0 }, new int[] { 0 }, new int[] { 0 }, new int[] { Integer.MAX_VALUE });
+      new int[] { 0 }, new int[] { 0 }, new int[] { 0 }, new int[] { 0 });
     this.assertTo(new AssertNextEntityFunctor(), new String[] {
         "<http://renaud.delbru.fr/> <http://renaud.delbru.fr/> . ",
         "<http://renaud.delbru.fr/> <http://test/name> \"Renaud Delbru\" . " },
       new String[] { "renaud", "delbru" }, 2, new int[] { 1, 1 }, new int[] { 2, 2 },
       new int[] { 0, 1 }, new int[] { 0, 0 }, new int[] { 0, 0 },
-      new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE });
+      new int[] { 0, 0 });
   }
 
   @Test
@@ -93,13 +96,13 @@ extends AbstractTestSirenScorer {
       new String[] { "<http://renaud.delbru.fr/> <http://renaud.delbru.fr/> . " },
       new String[] { "renaud", "delbru" }, 1, new int[] { 1 }, new int[] { 2 },
       new int[] { 0, 0 }, new int[] { 0, 0 }, new int[] { 0, 1 },
-      new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE });
+      new int[] { 0, 2 });
     this.assertTo(new AssertNextPositionEntityFunctor(), new String[] {
         "<http://renaud.delbru.fr/> <http://renaud.delbru.fr/> . ",
         "<http://renaud.delbru.fr/> <http://test/name> \"Renaud Delbru\" . " },
       new String[] { "renaud" }, 2, new int[] { 1, 1 }, new int[] { 2, 2 },
       new int[] { 0, 0, 1, 1 }, new int[] { 0, 0, 0, 0 }, new int[] { 0, 1, 0, 2 },
-      new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE });
+      new int[] { 0, 2, 0, 4 });
   }
 
   @Test
@@ -110,7 +113,7 @@ extends AbstractTestSirenScorer {
       new String[] { "<http://renaud.delbru.fr/> \"renaud delbru delbru renaud renaud delbru\" . " },
       new String[] { "renaud", "delbru" }, 1, new int[] { 1 }, new int[] { 3 },
       new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 }, new int[] { 0, 1, 1 },
-      new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE });
+      new int[] { 0, 2, 6 });
   }
 
   @Test
@@ -125,7 +128,7 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(0, scorer.pos());
   }
 
   @Test
@@ -141,16 +144,14 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(0, scorer.pos());
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(17, scorer.entity());
   }
 
   /**
-   * Check if skipTo works correctly when a call to next has reached the last
-   * entity. This is testing an extreme case: when next() is called on the
-   * last entity, the occurrences arrays is loaded, and subsequent call to
-   * skipTo should relies on these arrays.
+   * Check if {@link SirenPhraseScorer#advance(int, int, int)} works correctly
+   * when advancing to the same entity.
    */
   @Test
   public void testNextSkipToEntity1()
@@ -163,22 +164,20 @@ extends AbstractTestSirenScorer {
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
     assertFalse(scorer.advance(0, 1, 0) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(0, scorer.docID());
     assertEquals(0, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }
 
   /**
-   * Check if skipTo works correctly when a call to next has reached the last
-   * entity. This is testing an extreme case: when next() is called on the
-   * last entity, the occurrences arrays is loaded, and subsequent call to
-   * skipTo should relies on these arrays.
+   * Check if {@link SirenPhraseScorer#advance(int, int, int)} works correctly
+   * when advancing to the same entity.
    */
   @Test
   public void testNextSkipToEntity2()
@@ -191,7 +190,7 @@ extends AbstractTestSirenScorer {
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
     assertFalse(scorer.advance(0, 0) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(0, scorer.docID());
     assertEquals(0, scorer.entity());
@@ -220,13 +219,13 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(0, scorer.pos());
 
     assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(2, scorer.pos());
 
     assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
   }
@@ -243,7 +242,7 @@ extends AbstractTestSirenScorer {
     assertEquals(2, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
   }
 
   @Test
@@ -258,7 +257,7 @@ extends AbstractTestSirenScorer {
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
   }
 
   @Test
@@ -273,7 +272,7 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(0, scorer.pos());
   }
 
   @Test
@@ -288,14 +287,14 @@ extends AbstractTestSirenScorer {
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(2, scorer.pos());
 
     // Should not return match in first tuple (tuple 0)
     assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
     assertEquals(-1, scorer.dataset());
-    assertEquals(Integer.MAX_VALUE, scorer.pos());
+    assertEquals(4, scorer.pos());
 
     assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
   }

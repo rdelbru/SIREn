@@ -35,6 +35,8 @@ extends SirenPrimitiveScorer {
 
   private final SirenTermPositions termPositions;
 
+  private final Similarity    sim;
+
   private final byte[]        norms;
 
   private final float         weightValue;
@@ -67,12 +69,13 @@ extends SirenPrimitiveScorer {
   protected SirenTermScorer(final Weight weight, final TermPositions tp,
                             final Similarity similarity, final byte[] norms) {
     super(similarity);
+    sim = similarity;
     this.termPositions = new SirenTermPositions(tp);
     this.norms = norms;
     this.weightValue = weight.getValue();
 
     for (int i = 0; i < SCORE_CACHE_SIZE; i++)
-      scoreCache[i] = this.getSimilarity().tf(i) * weightValue;
+      scoreCache[i] = sim.tf(i) * weightValue;
   }
 
   @Override
@@ -95,44 +98,13 @@ extends SirenPrimitiveScorer {
 
   @Override
   public float score() throws IOException {
-    final Similarity sim = this.getSimilarity();
     final int f = termPositions.freq();
     final float raw =                                   // compute tf(f)*weight
       f < SCORE_CACHE_SIZE                              // check cache
       ? scoreCache[f]                                   // cache hit
       : sim.tf(f) * weightValue;                        // cache miss
 
-    return norms == null ? raw : raw * Similarity.decodeNorm(norms[this.entity()]); // normalize for field
-  }
-
-//  /**
-//   * Returns the score impact for the current tuple.
-//   */
-//  public float scoreTuple()
-//  throws IOException {
-//    int f = 0;
-//    for (int p = _bufferPosition; p < _bufferLimit && tuple == _tupleBuffer[p]; p++)
-//      f++;
-//
-//    final float raw =                                   // compute tf(f)*weight
-//      f < SCORE_CACHE_SIZE                        // check cache
-//      ? scoreCache[f]                             // cache hit
-//      : this.getSimilarity().tf(f) * weightValue;      // cache miss
-//
-//    return raw * Similarity.decodeNorm(norms[entity]); // normalize for field
-//  }
-
-  @Override
-  public float scoreCell() {
-    final Similarity sim = this.getSimilarity();
-    final int f = termPositions.freqCell();
-
-    final float raw =                                   // compute tf(f)*weight
-      f < SCORE_CACHE_SIZE                        // check cache
-      ? scoreCache[f]                             // cache hit
-      : sim.tf(f) * weightValue;      // cache miss
-
-    return norms == null ? raw : raw * Similarity.decodeNorm(norms[entity]); // normalize for field
+    return norms == null ? raw : raw * sim.decodeNormValue(norms[this.entity()]); // normalize for field
   }
 
   /** Move to the next entity matching the query.

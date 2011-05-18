@@ -42,51 +42,24 @@ extends SirenPhraseScorer {
   }
 
   @Override
-  protected final int[][] phraseOccurrences()
-  throws IOException {
-    // sort list with pq
-    pq.clear();
-    for (SirenPhrasePositions pp = first; pp != null; pp = pp.next) {
-      pp.firstPosition();
-      pq.add(pp); // build pq from list
+  public int doNextPosition() throws IOException {
+    while (first.tuple() < last.tuple() ||
+          (first.tuple() == last.tuple() && first.cell() < last.cell()) ||
+          (first.tuple() == last.tuple() && first.cell() == last.cell() && first.pos() < last.pos())) {
+      do {
+        if (first.nextPosition() == NO_MORE_POS)
+          return NO_MORE_POS;
+      } while (first.tuple() < last.tuple() ||
+          (first.tuple() == last.tuple() && first.cell() < last.cell()) ||
+          (first.tuple() == last.tuple() && first.cell() == last.cell() && first.pos() < last.pos()));
+      this.firstToLast();
     }
-    this.pqToList(); // rebuild list from pq
-
-    // for finding how many times the exact phrase is found in current
-    // entity, just find how many times all SirenPhrasePosition's have exactly
-    // the same position, tuple and cell.
-    tuples.clear(); cells.clear();
-
-    do { // find position w/ all terms
-      while (first.tuple() < last.tuple() ||
-            (first.tuple() == last.tuple() && first.cell() < last.cell()) ||
-            (first.tuple() == last.tuple() && first.cell() == last.cell() && first.pos() < last.pos())) { // scan forward in first
-        do {
-          if (first.nextPosition() == NO_MORE_POS)
-            return this.preprareOccurrences(occurrences);
-        } while (first.tuple() < last.tuple() ||
-                (first.tuple() == last.tuple() && first.cell() < last.cell()) ||
-                (first.tuple() == last.tuple() && first.cell() == last.cell() && first.pos() < last.pos()));
-        this.firstToLast();
-      }
-      // all equal: a match
-      tuples.add(first.tuple());
-      cells.add(first.cell());
-    } while (last.nextPosition() != NO_MORE_POS);
-
-    return this.preprareOccurrences(occurrences);
-  }
-
-  private int[][] preprareOccurrences(final int[][] occurrences) {
-    occurrences[0] = new int[tuples.size()];
-    for (int i = 0; i < tuples.size(); i++) {
-      occurrences[0][i] = tuples.get(i);
-    }
-    occurrences[1] = new int[cells.size()];
-    for (int i = 0; i < cells.size(); i++) {
-      occurrences[1][i] = cells.get(i);
-    }
-    return occurrences;
+    // all equal: a match
+    tuple = first.tuple();
+    cell = first.cell();
+    pos = first.pos();
+    occurrences++; // increase occurrences
+    return pos;
   }
 
 }

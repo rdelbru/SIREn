@@ -23,7 +23,9 @@
 package org.sindice.siren.search;
 
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.apache.lucene.search.DocIdSetIterator;
 import org.junit.Test;
@@ -43,29 +45,23 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    float score = scorer.scoreCell();
     assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertEquals(0, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(score > scorer.scoreCell()); // first cell must have a higher score
-    score = scorer.scoreCell();
     assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertEquals(0, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.scoreCell() > score); // third cell must have a higher score than the second
     assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    score = scorer.scoreCell();
     assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(score < scorer.scoreCell());
     assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }

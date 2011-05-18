@@ -389,14 +389,6 @@ extends SirenScorer {
   }
 
   @Override
-  public float scoreCell()
-  throws IOException {
-    coordinator.initDoc();
-    final float sum = countingSumScorer.scoreCell();
-    return sum * coordinator.coordFactor();
-  }
-
-  @Override
   public int advance(final int entity) throws IOException {
     if (countingSumScorer == null) {
       this.initCountingSumScorer();
@@ -480,11 +472,6 @@ extends SirenScorer {
         coordinator.nrMatchers++;
       }
       return scorer.score();
-    }
-
-    @Override
-    public float scoreCell() throws IOException {
-      return scorer.scoreCell();
     }
 
     @Override

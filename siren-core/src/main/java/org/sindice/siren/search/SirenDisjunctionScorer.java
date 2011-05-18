@@ -253,12 +253,6 @@ extends SirenScorer {
     return currentScore;
   }
 
-  @Override
-  public float scoreCell() {
-    // Cell is invalid in this scorer
-    return 0;
-  }
-
   /**
    * Returns the number of subscorers matching the current document. Initially
    * invalid, until {@link #next()} is called the first time.

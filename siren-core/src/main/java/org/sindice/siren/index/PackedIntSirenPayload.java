@@ -26,12 +26,10 @@ package org.sindice.siren.index;
  * An implementation of the SIREn payload using a technique to pack two
  * integers:
  * <ul>
- * <li> 5 bits to encode the size of the first integer
+ * <li> 4 bits to encode the frame code
  * <li> n bits to encode the two integers.
  * <ul>
- * The size of the second integer is computed based on the size of the payload
- * and the size of the first integer. In the best case, this allows to use only
- * 2.5 bits per integer.
+ * In the best case, this allows to use only 4 bits per integer.
  */
 public class PackedIntSirenPayload
 extends AbstractSirenPayload {
@@ -101,12 +99,13 @@ extends AbstractSirenPayload {
     return -1;
   }
 
+  static final int[] values = new int[2];
+
   /**
    * Unpack two integers using optimised routines
    * @param compressedArray The compressed array
    */
   protected static final int[] unpack(final byte[] compressedArray) {
-    final int[] values = new int[2];
     final int code = (compressedArray[0] >>> 4) & 15;
 
     switch (code) {

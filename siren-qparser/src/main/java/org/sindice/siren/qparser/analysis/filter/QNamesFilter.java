@@ -89,10 +89,6 @@ public final class QNamesFilter extends TokenFilter {
     return termLength;
   }
 
-  protected boolean isQNameDelim(final char c) {
-    return c == ':';
-  }
-
   /**
    * Based on {@link http://www.w3.org/TR/REC-xml/#NT-Name}.
    * @param c
@@ -100,6 +96,10 @@ public final class QNamesFilter extends TokenFilter {
    */
   protected boolean isNameStartChar(final char c) {
     return c == ':' || c == '_' || Character.isLetter(c);
+  }
+  
+  protected boolean isQNameDelim(final char c) {
+    return c == ':';
   }
 
   protected CharSequence convertQName(final int offset) {

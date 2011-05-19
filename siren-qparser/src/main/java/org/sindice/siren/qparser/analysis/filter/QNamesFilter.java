@@ -104,6 +104,7 @@ public final class QNamesFilter extends TokenFilter {
 
   protected CharSequence convertQName(final int offset) {
     final String prefix = cTermAtt.subSequence(0, offset).toString();
+
     if (qnames.containsKey(prefix)) {
       return qnames.getProperty(prefix);
     }

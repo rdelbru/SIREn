@@ -102,16 +102,12 @@ public final class QNamesFilter extends TokenFilter {
     return c == ':' || c == '_' || Character.isLetter(c);
   }
 
-  /**
-   * Convert the QName to the associated namespace. If the prefix is not a
-   * qname, it just returns the original prefix.
-   */
-  protected char[] convertQName(final int offset) {
+  protected CharSequence convertQName(final int offset) {
     final String prefix = cTermAtt.subSequence(0, offset).toString();
     if (qnames.containsKey(prefix)) {
-      return qnames.getProperty(prefix).toCharArray();
+      return qnames.getProperty(prefix);
     }
-    return cTermAtt.subSequence(0, offset + 1).toString().toCharArray();
+    return cTermAtt.subSequence(0, offset + 1);
   }
 
   @Override
@@ -122,12 +118,12 @@ public final class QNamesFilter extends TokenFilter {
     termLength = cTermAtt.length();
     int offset = 0;
     if ((offset = this.findDelimiter()) != termLength) {
-      final char[] prefix = this.convertQName(offset);
+      final CharSequence prefix = this.convertQName(offset);
       final CharSequence suffix = cTermAtt.subSequence(offset + 1, termLength); // skip the QName delimiter
-      final int newSize = prefix.length + suffix.length();
+      final int newSize = prefix.length() + suffix.length();
       cTermAtt.resizeBuffer(newSize);
       cTermAtt.setEmpty();
-      cTermAtt.copyBuffer(prefix, 0, prefix.length);
+      cTermAtt.append(prefix);
       cTermAtt.append(suffix);
     }
     return true;

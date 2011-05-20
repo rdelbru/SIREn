@@ -82,7 +82,7 @@ public class URLEncodingFilter extends TokenFilter {
   }
 
   @Override
-  public boolean incrementToken()
+  public final boolean incrementToken()
   throws IOException {
     if (modifiedURI) { // Return the previously decoded URI
       modifiedURI = false;

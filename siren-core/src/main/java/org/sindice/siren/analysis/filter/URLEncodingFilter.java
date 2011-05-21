@@ -193,6 +193,67 @@ public class URLEncodingFilter extends TokenFilter {
   }
   
   /**
+   * Return the decimal value of an hexadecimal number, multiplied by 16.
+   * If it is not hexadecimal, a negative value is returned.
+   * @param c
+   * @return
+   */
+  private int hexaToInt2(final char c) {
+    switch (c) {
+      case '0':
+        return 0;
+      case '1':
+        return 16;
+      case '2':
+        return 32;
+      case '3':
+        return 48;
+      case '4':
+        return 64;
+      case '5':
+        return 80;
+      case '6':
+        return 96;
+      case '7':
+        return 112;
+      case '8':
+        return 128;
+      case '9':
+        return 144;
+      case 'a':
+        return 160;
+      case 'b':
+        return 176;
+      case 'c':
+        return 192;
+      case 'd':
+        return 208;
+      case 'e':
+        return 224;
+      case 'f':
+        return 240;
+      case 'A':
+        return 160;
+      case 'B':
+        return 176;
+      case 'C':
+        return 192;
+      case 'D':
+        return 208;
+      case 'E':
+        return 224;
+      case 'F':
+        return 240;
+      default:
+        /*
+         * Return a negative value if the hexadecimal character is invalid.
+         * Because it is < 0 and big enough, the character won't be decoded.
+         */
+        return -241;
+    }
+  }
+
+  /**
    * Decode URL encoded characters of the URI
    */
   private void decode() {
@@ -223,7 +284,7 @@ public class URLEncodingFilter extends TokenFilter {
           final char c2 = termAtt.charAt(i + 2);
           
           // The next two characters converted from a hex to a decimal value
-          final int value = (hexaToInt(c1) << 4) + hexaToInt(c2);
+          final int value = hexaToInt2(c1) + hexaToInt(c2);
           if (value >= 0) { // Negative value are illegal. Just skip it.
             if (!decoded.hasRemaining()) { // No more place in the buffer, output what is already there.
               decoded.position(0);

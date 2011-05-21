@@ -28,7 +28,6 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.UnsupportedCharsetException;
-import java.util.Arrays;
 
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
@@ -72,16 +71,12 @@ public class TestURLEncodingFilter {
   
   private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems)
   throws IOException {
-    final String[] expectedTypes = new String[expectedStems.length];
-    Arrays.fill(expectedTypes, uritype);
-    this.assertURLDecodedTo(t, "UTF-8", uri, expectedStems, expectedTypes, null);
+    this.assertURLDecodedTo(t, "UTF-8", uri, expectedStems, null, null);
   }
   
   private void assertURLDecodedTo(Tokenizer t, String encoding, String uri, String[] expectedStems)
   throws IOException {
-    final String[] expectedTypes = new String[expectedStems.length];
-    Arrays.fill(expectedTypes, uritype);
-    this.assertURLDecodedTo(t, encoding, uri, expectedStems, expectedTypes, null);
+    this.assertURLDecodedTo(t, encoding, uri, expectedStems, null, null);
   }
   
   private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems, String[] expectedTypes, int[] expectedPosIncr)
@@ -105,7 +100,10 @@ public class TestURLEncodingFilter {
     for (int i = 0; i < expectedStems.length; i++) {
         assertTrue("token " + i + " exists", filter.incrementToken());
         assertEquals(expectedStems[i], termAtt.toString());
-        assertEquals(expectedTypes[i], typeAtt.type());
+        if (expectedTypes == null)
+          assertEquals(uritype, typeAtt.type());
+        else
+          assertEquals(expectedTypes[i], typeAtt.type());
         if (expectedPosIncr != null)
           assertEquals(expectedPosIncr[i], posIncrAtt.getPositionIncrement());
     }

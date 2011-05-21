@@ -46,6 +46,10 @@ import org.apache.lucene.queryParser.standard.config.MultiFieldAttribute;
  * added to a {@link BooleanQueryNode} together with the original node. N is
  * defined by the number of fields that it will be expanded to. The
  * {@link BooleanQueryNode} is returned. <br/>
+ * <br/>
+ * Extended version of the original
+ * {@link org.apache.lucene.queryParser.standard.processors.MultiFieldQueryNodeProcessor}
+ * to expand query using OR operator.
  *
  * @see MultiFieldAttribute
  */

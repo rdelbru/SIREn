@@ -70,6 +70,10 @@ import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
  * <br/>
  * If no term is returned by the analyzer a {@link NoTokenFoundQueryNode} object
  * is returned. <br/>
+ * <br/>
+ * Extended version of the original
+ * {@link org.apache.lucene.queryParser.standard.processors.AnalyzerQueryNodeProcessor}
+ * to expand query using OR operator.
  *
  * @see Analyzer
  * @see TokenStream

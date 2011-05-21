@@ -38,8 +38,8 @@ import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.sindice.siren.analysis.TupleAnalyzer;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer.URINormalisation;
 
 public class TestSirenTermQuery {
 
@@ -48,7 +48,7 @@ public class TestSirenTermQuery {
   @Before
   public void setUp()
   throws Exception {
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+    final DeltaTupleAnalyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
     analyzer.setURINormalisation(URINormalisation.FULL);
     _helper = new QueryTestingHelper(analyzer);
   }

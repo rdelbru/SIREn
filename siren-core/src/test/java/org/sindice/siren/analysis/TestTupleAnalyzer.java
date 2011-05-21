@@ -37,13 +37,13 @@ import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer.URINormalisation;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
 
 public class TestTupleAnalyzer {
 
-  private final TupleAnalyzer _a = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+  private final DeltaTupleAnalyzer _a = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
 
   public TestTupleAnalyzer() {
     _a.setURINormalisation(URINormalisation.FULL);

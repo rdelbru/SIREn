@@ -37,7 +37,7 @@ import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer;
 
 public class TestSirenPhraseQuery {
 
@@ -46,7 +46,7 @@ public class TestSirenPhraseQuery {
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+    _helper = new QueryTestingHelper(new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
   }
 
   @After

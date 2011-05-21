@@ -36,13 +36,17 @@ import org.apache.lucene.queryParser.standard.processors.DefaultPhraseSlopQueryN
 import org.apache.lucene.queryParser.standard.processors.FuzzyQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.LowercaseExpandedTermsQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MatchAllDocsQueryNodeProcessor;
-import org.apache.lucene.queryParser.standard.processors.MultiFieldQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MultiTermRewriteMethodProcessor;
 import org.apache.lucene.queryParser.standard.processors.ParametricRangeQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.PhraseSlopQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.RemoveEmptyNonLeafQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.WildcardQueryNodeProcessor;
 import org.apache.lucene.search.Query;
+import org.sindice.siren.qparser.keyword.query.processors.AllowFuzzyAndWildcardProcessor;
+import org.sindice.siren.qparser.keyword.query.processors.AnalyzerQueryNodeProcessor;
+import org.sindice.siren.qparser.keyword.query.processors.ChangeDefaultOperatorNodeProcessor;
+import org.sindice.siren.qparser.keyword.query.processors.MultiFieldQueryNodeProcessor;
+import org.sindice.siren.qparser.keyword.query.processors.GroupQueryNodeProcessor;
 
 /**
  * This pipeline has all the processors needed to process a query node tree,
@@ -66,17 +70,18 @@ extends QueryNodeProcessorPipeline {
   public ResourceQueryNodeProcessorPipeline(final QueryConfigHandler queryConfig) {
     super(queryConfig);
 
-    this.add(new ResourceGroupQueryNodeProcessor());
+    this.add(new ChangeDefaultOperatorNodeProcessor());
     this.add(new WildcardQueryNodeProcessor());
     this.add(new MultiFieldQueryNodeProcessor());
     this.add(new FuzzyQueryNodeProcessor());
     this.add(new MatchAllDocsQueryNodeProcessor());
     this.add(new LowercaseExpandedTermsQueryNodeProcessor());
     this.add(new ParametricRangeQueryNodeProcessor());
+    this.add(new AllowFuzzyAndWildcardProcessor());
     this.add(new AllowLeadingWildcardProcessor());
-    this.add(new ResourceAnalyzerQueryNodeProcessor());
+    this.add(new AnalyzerQueryNodeProcessor());
     this.add(new PhraseSlopQueryNodeProcessor());
-    this.add(new ResourceGroupQueryNodeProcessor());
+    this.add(new GroupQueryNodeProcessor());
     this.add(new NoChildOptimizationQueryNodeProcessor());
     this.add(new RemoveDeletedQueryNodesProcessor());
     this.add(new RemoveEmptyNonLeafQueryNodeProcessor());

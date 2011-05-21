@@ -8,6 +8,8 @@ Bugs
 * [SRN-93] QnamesFilter is restricted to a single token type
 * [SRN-97] Default Operator not respected in literal pattern
 * [SRN-98] Query Expansion creates invalid query in literal pattern
+* [SRN-106] Query expansion does not respect unary operator
+* [SRN-111] ResourceGroupQueryProcessor defined two times in processor pipeline
 
 Improvements
 

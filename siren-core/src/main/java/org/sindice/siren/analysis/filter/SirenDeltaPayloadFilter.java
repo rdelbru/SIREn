@@ -56,6 +56,13 @@ extends TokenFilter {
   }
 
   @Override
+  public void close() throws IOException {
+    super.close();
+    previousTerms.clear();
+  }
+
+
+  @Override
   public void reset() throws IOException {
     super.reset();
     previousTerms.clear();

@@ -4,65 +4,90 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2009 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.analysis;
+package org.sindice.siren.analysis.bench;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer;
+import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.WhitespaceTupleAnalyzer;
+import org.sindice.siren.bench.SirenBenchmark;
 
-public class TupleAnalyzerBenchmark {
+import com.google.caliper.Param;
+import com.google.caliper.Runner;
 
-  final Analyzer analyzer;
+public class TupleAnalyzerBenchmark extends SirenBenchmark {
 
-  final File file1 = new File("./src/test/resources/demo/ntriples/foaf1.nt");
-  final File file2 = new File("./src/test/resources/demo/ntriples/foaf2.nt");
+  @Param({"100", "1000"}) private int size;
 
-  public TupleAnalyzerBenchmark(final Analyzer analyzer) throws IOException {
-    this.analyzer = analyzer;
+  @Override
+  protected void setUp() throws Exception {
+    rand.setSeed(42);
   }
 
-  public void analyzeFile(final File input) throws FileNotFoundException, IOException {
-    final TokenStream stream = analyzer.reusableTokenStream("", new FileReader(input));
-    while (stream.incrementToken()) {
-      // do nothing
+  public long timeStandardAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_31);
+      counter += this.performAnalysis(analyzer);
     }
+    return counter;
   }
 
-  public void benchmark(final int iterations) throws FileNotFoundException, IOException {
-    long startMillis = 0, testMillis = 0;
+  public long timeWhitespaceTupleAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new WhitespaceTupleAnalyzer();
+      counter += this.performAnalysis(analyzer);
+    }
+    return counter;
+  }
 
-    int it = 0;
-    while (it++ < 10) {
-      startMillis = System.currentTimeMillis();
-      for (int i = 0; i < iterations; i++) {
-        this.analyzeFile(file1);
-        this.analyzeFile(file2);
+  public long timeTupleAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+      counter += this.performAnalysis(analyzer);
+    }
+    return counter;
+  }
+
+  public long timeDeltaTupleAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+      counter += this.performAnalysis(analyzer);
+    }
+    return counter;
+  }
+
+  public int performAnalysis(final Analyzer analyzer)
+  throws FileNotFoundException, IOException {
+    int counter = 0;
+
+    for (int i = 0; i < size; i++) {
+      final String content = this.readNTriplesFile(this.nextFile());
+      final TokenStream stream = analyzer.reusableTokenStream("", new StringReader(content));
+      try {
+        while (stream.incrementToken()) {
+          counter++;
+        }
       }
-      testMillis = System.currentTimeMillis() - startMillis;
-      System.out.println("Execution Time: " + testMillis);
+      finally {
+        stream.close();
+      }
     }
+    return counter;
   }
 
-  /**
-   * @param args
-   * @throws IOException
-   */
-  public static void main(final String[] args) throws IOException {
-    System.out.println("StandardAnalyzer Execution Time");
-    TupleAnalyzerBenchmark bench = new TupleAnalyzerBenchmark(new StandardAnalyzer(Version.LUCENE_30));
-    bench.benchmark(2000);
-    System.out.println("WhitespaceTupleAnalyzer Execution Time");
-    bench = new TupleAnalyzerBenchmark(new WhitespaceTupleAnalyzer());
-    bench.benchmark(2000);
-    System.out.println("TupleAnalyzer Execution Time");
-    bench = new TupleAnalyzerBenchmark(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
-    bench.benchmark(2000);
+  public static void main(final String[] args) throws Exception {
+    Runner.main(TupleAnalyzerBenchmark.class, args);
   }
 
 }

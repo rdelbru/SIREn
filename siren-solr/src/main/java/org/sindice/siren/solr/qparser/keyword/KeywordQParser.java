@@ -38,6 +38,7 @@ import org.apache.solr.common.params.SolrParams;
 import org.apache.solr.request.SolrQueryRequest;
 import org.apache.solr.schema.FieldType;
 import org.apache.solr.search.QParser;
+import org.sindice.siren.qparser.keyword.KeywordQParserImpl;
 import org.sindice.siren.solr.SirenParams;
 import org.sindice.siren.solr.analysis.MultiQueryAnalyzerWrapper;
 

@@ -44,8 +44,8 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.TupleAnalyzer;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer;
+import org.sindice.siren.analysis.DeltaTupleAnalyzer.URINormalisation;
 import org.sindice.siren.search.SirenBooleanClause;
 import org.sindice.siren.search.SirenBooleanQuery;
 import org.sindice.siren.search.SirenCellQuery;
@@ -70,7 +70,7 @@ public class EntityCentricIndexing {
   public EntityCentricIndexing()
   throws CorruptIndexException, LockObtainFailedException, IOException {
     dir = new RAMDirectory();
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+    final DeltaTupleAnalyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
     analyzer.setURINormalisation(URINormalisation.NONE);
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
       analyzer);

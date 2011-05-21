@@ -87,7 +87,6 @@ public class URLEncodingFilter extends TokenFilter {
     if (modifiedURI) { // Return the previously decoded URI
       modifiedURI = false;
       termAtt.setEmpty();
-      termAtt.setLength(termBuffer.position());
       termAtt.copyBuffer(termBuffer.array(), 0, termBuffer.position());
       posIncrAtt.setPositionIncrement(0);
       return true;

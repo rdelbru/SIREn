@@ -1,4 +1,4 @@
-# SIREn: Efficient semi-structured Information Retrieval for Lucene
+# SIREn: Efficient semi-structured Information Retrieval for Lucene/Solr
 
 ## Introduction
 

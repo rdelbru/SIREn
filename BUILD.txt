@@ -32,10 +32,10 @@ releases are available for download from:
 Download the tarred/gzipped version of the archive, and
 uncompress it into a directory of your choice.
 
-Step 2) From the command line, change (cd) into the parent module directory, 
-i.e., siren-parent, of your SIREn installation
+Step 2) From the command line, change (cd) into the directory of your SIREn
+installation
 
-SIREn's parent module directory contains the parent pom.xml file. By default,
+SIREn's installation directory contains the project pom.xml file. By default,
 you do not need to change any of the settings in this file, but you do
 need to run maven from this location so it knows where to find pom.xml.
 
@@ -43,17 +43,17 @@ Step 3) Run maven
 
 Assuming you have maven in your PATH, typing "mvn package" at the shell prompt
 and command prompt should run maven. Maven will by default look for the
-"pom.xml" files in the sub-modules (siren-core, siren-qparser and siren-solr), 
+"pom.xml" files in the sub-modules (siren-core, siren-qparser and siren-solr),
 compile them and run the tests.
 
-The SIREn jar file will be located at "./target/siren-#{version}.jar".
+The SIREn jar file will be located at "#{sub-module}/target/siren-#{version}.jar".
 
-You might want also to install them into your local maven repository by typing 
+You might want also to install them into your local maven repository by typing
 "mvn install".
 
-To generate the javadoc, you should type "mvn javadoc:javadoc" at the shell 
-prompt. Maven will generate the javadoc API in the directory 
-"./target/site/apidocs/".
+To generate the javadoc, you should type "mvn javadoc:javadoc" at the shell
+prompt. Maven will generate the javadoc API in the directory
+"#{sub-module}/target/site/apidocs/".
 
 --------------------------------------------------------------------------------
 
@@ -69,16 +69,17 @@ Please join the SIREn-User mailing list by visiting this site:
   http://lists.deri.org/mailman/listinfo/siren
 
 Please post suggestions, questions, corrections or additions to this
-document to the lucene-user mailing list.
+document to the siren-user mailing list.
 
 --------------------------------------------------------------------------------
 
 This file was originally written by Steven J. Owens <puff@darksleep.com> for
-Lucene, and has been modified by Renaud Delbru <renaud.delbru@deri.org> for 
+Lucene, and has been modified by Renaud Delbru <renaud.delbru@deri.org> for
 SIREn.
 
 Copyright (c) 2010, 2011
 Renaud Delbru,
 Digital Enterprise Research Institute,
-National University of Ireland, Galway.  
+National University of Ireland, Galway.
 All rights reserved.
+

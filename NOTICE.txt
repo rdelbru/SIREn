@@ -1,6 +1,6 @@
 ==============================================================
  SIREn
- Copyright 2010
+ Copyright 2010, 2011
  Digital Enterprise Research Institute,
  National University of Ireland, Galway
 ==============================================================
@@ -24,8 +24,7 @@ must include the following acknowledgement:
 Alternately, this acknowledgement may appear in the software itself,
 if and wherever such third-party acknowledgements normally appear.
 
-The names "SIREn" must not be used to endorse or promote products derived 
-from this software without prior written permission. For written permission, 
+The names "SIREn" must not be used to endorse or promote products derived
+from this software without prior written permission. For written permission,
 please contact Renaud Delbru (renaud.delbru@deri.org).
-
 

@@ -61,11 +61,18 @@ extends AbstractSirenPayload {
 
   @Override
   public void encode(final int tupleID, final int cellID) {
+    _tupleID = tupleID;
+    _cellID = cellID;
+
     final int tupleIDFrame = PackedIntSirenPayload.logNextHigherPowerOf2(tupleID) + 1;
     final int cellIDFrame = PackedIntSirenPayload.logNextHigherPowerOf2(cellID) + 1;
     final int bestConfig = findBestConfiguration(tupleIDFrame, cellIDFrame);
     length = configurationSizes[bestConfig];
-    data = new byte[length];
+
+    if (data == null || data.length < length) { // optimisation, create array only when necessary
+      data = new byte[length];
+    }
+
     pack(bestConfig, tupleID, cellID, data);
     offset = 0;
   }

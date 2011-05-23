@@ -35,6 +35,7 @@ Improvements
 * [SRN-105] Upgrade to Lucene/Solr 3.1
 * [GH-1] Pom fixes
 * [GH-4] siren-core - Query Processing Optimisation - Load tuples lazily
+* [GH-3] siren-core - Query Processing Optimisation - Avoid unnecessary object creation
 * [GH-5] siren-core - Query Processing Optimisation - SirenCellScorer iterates
          over cell ids that are outside constraint boundaries
 * [GH-6] siren-core - delta encoding

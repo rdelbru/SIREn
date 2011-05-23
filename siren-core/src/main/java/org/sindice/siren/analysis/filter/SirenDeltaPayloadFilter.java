@@ -45,7 +45,10 @@ extends TokenFilter {
   private final PayloadAttribute payloadAtt;
   private final CharTermAttribute termAtt;
 
-  Map<Integer, Integer[]> previousTerms = new HashMap<Integer, Integer[]>();
+  Map<Integer, Integer> previousTuples = new HashMap<Integer, Integer>();
+  Map<Integer, Integer> previousCells = new HashMap<Integer, Integer>();
+
+  PackedIntSirenPayload payload = new PackedIntSirenPayload();
 
   public SirenDeltaPayloadFilter(final TokenStream input) {
     super(input);
@@ -58,14 +61,16 @@ extends TokenFilter {
   @Override
   public void close() throws IOException {
     super.close();
-    previousTerms.clear();
+    previousTuples.clear();
+    previousCells.clear();
   }
 
 
   @Override
   public void reset() throws IOException {
     super.reset();
-    previousTerms.clear();
+    previousTuples.clear();
+    previousCells.clear();
   }
 
   @Override
@@ -75,37 +80,41 @@ extends TokenFilter {
     if (input.incrementToken()) {
 
       final int hash = termAtt.hashCode();
-      if (!previousTerms.containsKey(hash)) {
+
+      if (!previousTuples.containsKey(hash)) {
         tuple = tupleAtt.tuple();
         cell = cellAtt.cell();
-        previousTerms.put(termAtt.hashCode(), new Integer[]{tuple, cell});
+        previousTuples.put(hash, tuple);
+        previousCells.put(hash, cell);
 
         if (tuple != 0 || cell != 0) { // if tuple and cell == 0, no need to store payload
-          payloadAtt.setPayload(new PackedIntSirenPayload(tuple, cell));
+          payload.encode(tuple, cell);
+          payloadAtt.setPayload(payload);
         }
       }
       else {
-        tuple = previousTerms.get(termAtt.hashCode())[0];
-        cell = previousTerms.get(termAtt.hashCode())[1];
-        previousTerms.put(termAtt.hashCode(), new Integer[]{tupleAtt.tuple(), cellAtt.cell()});
+        // retrieve previous tuple and cell IDs
+        tuple = previousTuples.get(termAtt.hashCode());
+        cell = previousCells.get(termAtt.hashCode());
+        // store new tuple and cell IDs
+        previousTuples.put(hash, tupleAtt.tuple());
+        previousCells.put(hash, cellAtt.cell());
 
-        if (tuple == tupleAtt.tuple()) {
+        if (tuple == tupleAtt.tuple()) { // tuple == 0
           if (cell == cellAtt.cell()) { // tuple and cell == 0, no need to store payload
             return true;
           }
-          payloadAtt.setPayload(new PackedIntSirenPayload(0,
-            cellAtt.cell() - cell));
+          payload.encode(0, cellAtt.cell() - cell);
+          payloadAtt.setPayload(payload);
         }
         else { // tuple < tupleAtt.tuple()
-          payloadAtt.setPayload(new PackedIntSirenPayload(tupleAtt.tuple() - tuple,
-            cellAtt.cell()));
+          payload.encode(tupleAtt.tuple() - tuple, cellAtt.cell());
+          payloadAtt.setPayload(payload);
         }
       }
       return true;
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
 }

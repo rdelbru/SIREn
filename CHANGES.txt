@@ -1,32 +1,58 @@
 
-======================= Release 0.2.x 2010-xx-xx =======================
+======================= Release 0.2.x 2011-xx-xx =======================
 
 Bugs
 
 * [SRN-25] Counting of matchers in SirenDisjunctionScorer is wrong
-* [SRN-79] Make URINormalisationFilter less agressive: token length minimum 
+* [SRN-79] Make URINormalisationFilter less agressive: token length minimum
            limit is now set to 3.
 * [SRN-80] Wrong position increment in LocalnameFilter if no previous tokens
-           before final tokens 
+           before final tokens
 * [SRN-82] ArrayOutOfBoundException in PackedIntSirenPayload
 * [SRN-87] URI normalisation problem in NTripleIndexing demo
+* [SRN-90] Keyword parser does not respect default search operator
+* [SRN-91] NOT operator is not recognised by the NTriple query parser
+* [SRN-92] QnamesFilter cannot have qname http
+* [SRN-93] QnamesFilter is restricted to a single token type
+* [SRN-97] Default Operator not respected in literal pattern
+* [SRN-98] Query Expansion creates invalid query in literal pattern
+* [SRN-106] Query expansion does not respect unary operator
+* [SRN-111] ResourceGroupQueryProcessor defined two times in processor pipeline
 
 Improvements
 
 * [SRN-3] Extract literal analyzer from the tuple tokenizer
 * [SRN-75] Upgraded to lucene/solr 3.1-dev branch
-* [SRN-76] Add localname maximum length limit to URILocalnameNormalisation 
+* [SRN-76] Add localname maximum length limit to URILocalnameNormalisation
            filter
+* [SRN-77] Create in-memory solr server for unit testing
+* [SRN-83] Merge Simple and NTriple query interface into one
+* [SRN-84] Add qname support in ntriple query parser
+* [SRN-85] NTripleQueryParser: Allow boolean operator within URI pattern
+* [SRN-94] Field query can be disabled in the KeywordQParser
 * [SRN-100] Improve user-readable version of the query
+* [SRN-102] Catch SolrException in SIREnQParser#parse
 * [SRN-105] Upgrade to Lucene/Solr 3.1
+* [GH-1] Pom fixes
+* [GH-4] siren-core - Query Processing Optimisation - Load tuples lazily
+* [GH-5] siren-core - Query Processing Optimisation - SirenCellScorer iterates
+         over cell ids that are outside constraint boundaries
+* [GH-6] siren-core - delta encoding
 
 New Features
 
+* [SRN-78] Add Solr configuration example
 * [SRN-96] Add filter to expand accented words with non-accented form
 * [SRN-99] Boolean query group support in cell query
+* [SRN-101] Boost support in literal and uri patterns
+* [SRN-104] Create an OptimizeSchedulerListerner
 
 Tasks
 
+* [SRN-8] Create parser for simple queries
+* [SRN-72] Separate query parser and solr plugin
+* [SRN-74] Create a siren-solr module
+* [SRN-89] Clean Solr home and related files
 * [SRN-110] Remove scoreCell function
 
 ======================= Release 0.2.0 2010-07-26 =======================
@@ -58,7 +84,7 @@ Improvements
 
 Bug Fixes
 
-* [SRN-57] SirenConjunctionScorer and SirenCellConjunctionScorer give a very 
+* [SRN-57] SirenConjunctionScorer and SirenCellConjunctionScorer give a very
            large score to entity with multiples matches
 * [SRN-58] tokenStream and reusableTokenStream must be final
 
@@ -107,3 +133,4 @@ New Features
 Improvements
 
 * [SRN-42] Migrating to Lucene 3.0
+

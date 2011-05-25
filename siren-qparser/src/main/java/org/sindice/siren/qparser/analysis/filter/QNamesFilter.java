@@ -97,11 +97,15 @@ public final class QNamesFilter extends TokenFilter {
   protected boolean isNameStartChar(final char c) {
     return c == ':' || c == '_' || Character.isLetter(c);
   }
-  
+
   protected boolean isQNameDelim(final char c) {
     return c == ':';
   }
 
+  /**
+   * Convert the QName to the associated namespace. If the prefix is not a
+   * qname, it just returns the original prefix.
+   */
   protected CharSequence convertQName(final int offset) {
     final String prefix = cTermAtt.subSequence(0, offset).toString();
 

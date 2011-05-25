@@ -149,7 +149,7 @@ public class TestURILocalnameFilter {
       new String[] { "<URI>" });
     // Tokenise on upper case
     this.assertNormalisesTo(_t, "<http://renaud.delbru.fr/rdf/uppercaseShouldBeTokenised>",
-      new String[] { "uppercase", "Should", "Tokenised", "http://renaud.delbru.fr/rdf/uppercaseShouldBeTokenised" });
+      new String[] { "uppercase", "Should", "Tokenised", "uppercaseShouldBeTokenised", "http://renaud.delbru.fr/rdf/uppercaseShouldBeTokenised" });
     this.assertNormalisesTo(_t, "<http://renaud.delbru.fr/rdf/AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised>",
       new String[] { "AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised", "http://renaud.delbru.fr/rdf/AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised" });
   }
@@ -158,14 +158,14 @@ public class TestURILocalnameFilter {
   public void testOpenCycURI()
   throws Exception {
     this.assertNormalisesTo(_t, "<http://sw.opencyc.org/concept/Mx4ri_sbFDVGEdaAAACgydogAg>",
-      new String[] { "Mx4ri", "Eda", "Cgydog", "http://sw.opencyc.org/concept/Mx4ri_sbFDVGEdaAAACgydogAg" },
-      new String[] { "<URI>", "<URI>", "<URI>", "<URI>" });
+      new String[] { "Mx4ri", "Eda", "Cgydog", "Mx4ri_sbFDVGEdaAAACgydogAg", "http://sw.opencyc.org/concept/Mx4ri_sbFDVGEdaAAACgydogAg" },
+      new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" });
     this.assertNormalisesTo(_t, "<http://sw.opencyc.org/concept/Mx4rpZ2oIm5SEdqAAAACs71DGQ>",
-      new String[] { "Mx4rp", "Z2o", "Im5", "Edq", "Cs71", "http://sw.opencyc.org/concept/Mx4rpZ2oIm5SEdqAAAACs71DGQ" },
-      new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" });
+      new String[] { "Mx4rp", "Z2o", "Im5", "Edq", "Cs71", "Mx4rpZ2oIm5SEdqAAAACs71DGQ", "http://sw.opencyc.org/concept/Mx4rpZ2oIm5SEdqAAAACs71DGQ" },
+      new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" });
     this.assertNormalisesTo(_t, "<http://sw.opencyc.org/concept/Mx4r7FpweNCOQdiMucbWDv61HQ>",
-      new String[] { "Mx4r7", "Fpwe", "Qdi", "Mucb", "Dv61", "http://sw.opencyc.org/concept/Mx4r7FpweNCOQdiMucbWDv61HQ" },
-      new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" });
+      new String[] { "Mx4r7", "Fpwe", "Qdi", "Mucb", "Dv61", "Mx4r7FpweNCOQdiMucbWDv61HQ", "http://sw.opencyc.org/concept/Mx4r7FpweNCOQdiMucbWDv61HQ" },
+      new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" });
   }
 
   @Test
@@ -191,6 +191,10 @@ public class TestURILocalnameFilter {
       new String[] { "http://example.org/schema/me" },
       new String[] { "<URI>" },
       new int[] { 1 });
+    this.assertNormalisesTo(_t, "<http://rdf.data-vocabulary.org/#startDate>",
+      new String[] { "start", "Date", "startDate", "http://rdf.data-vocabulary.org/#startDate" },
+      new String[] { "<URI>", "<URI>", "<URI>", "<URI>" },
+      new int[] { 1, 1, 0, 0 });
   }
 
 }

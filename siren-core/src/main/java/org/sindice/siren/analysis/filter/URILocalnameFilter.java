@@ -39,6 +39,9 @@ import org.sindice.siren.analysis.TupleTokenizer;
  * Extract the localname of an URI, and break it into smaller components based
  * on delimiters, such as uppercase or integers.
  * <br>
+ * This filter returns the complete URI, the full localname of the URIs as well
+ * as the localname tokens.
+ * <br>
  * This filter is less demanding than the {@link URINormalisationFilter}
  * in term of CPU. In addition, it is also less costly in term of index size
  * since it creates less tokens per URI.
@@ -54,8 +57,10 @@ extends TokenFilter {
   private int maxLength = DEFAULT_MAX_LENGTH;
 
   protected boolean _isNormalising = false;
+  protected boolean _shouldReturnLocalname = false;
   protected int     _nTokens = 0;
 
+  private int    startLocalname;
   private int    start;
   private int    end;
   private int    termLength;
@@ -93,9 +98,10 @@ extends TokenFilter {
         termLength = termAtt.length();
         this.updateBuffer();
         _isNormalising = true;
+        _shouldReturnLocalname = false; // we return the full localname only if a breakpoint is found
         _nTokens = 0;
-        start = end = 0;
-        start = this.findLocalname();
+        startLocalname = start = end = 0;
+        startLocalname = start = this.findLocalname();
         this.nextToken();
       }
       return true;
@@ -144,6 +150,13 @@ extends TokenFilter {
       _nTokens++;
       return;
     }
+
+    if (_shouldReturnLocalname && startLocalname < termLength) { // return the full localname
+      this.updateLocalnameToken();
+      _shouldReturnLocalname = false;
+      return;
+    }
+
     // No more delimiters, we have to return the full URI as last step
     this.updateFinalToken();
     _isNormalising = false;
@@ -166,6 +179,9 @@ extends TokenFilter {
         do {
           end++;
         } while (end < termLength && !this.isBreakPoint(termBuffer.get(end)));
+        if (end < termLength) { // we found a breakpoint, we should return the fulle localname
+          _shouldReturnLocalname = true;
+        }
         return true;
       }
     }
@@ -176,6 +192,11 @@ extends TokenFilter {
   protected void updateToken() {
     termAtt.copyBuffer(termBuffer.array(), start, end - start);
     start = end;
+  }
+
+  protected void updateLocalnameToken() {
+    termAtt.copyBuffer(termBuffer.array(), startLocalname + 1, termLength - (startLocalname + 1));
+    posIncrAtt.setPositionIncrement(0);
   }
 
   protected void updateFinalToken() {
@@ -211,9 +232,9 @@ extends TokenFilter {
     		"<http://test.com/M%C3%B6ller>"),
     		Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
     final TokenStream result = new URILocalnameFilter(stream);
+    final CharTermAttribute termAtt = result.getAttribute(CharTermAttribute.class);
+    final PositionIncrementAttribute posIncrAtt = result.getAttribute(PositionIncrementAttribute.class);
     while (result.incrementToken()) {
-      final CharTermAttribute termAtt = result.getAttribute(CharTermAttribute.class);
-      final PositionIncrementAttribute posIncrAtt = result.getAttribute(PositionIncrementAttribute.class);
       System.out.println(termAtt.toString() + ", " + posIncrAtt.getPositionIncrement());
     }
   }

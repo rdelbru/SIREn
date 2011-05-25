@@ -33,6 +33,8 @@ Improvements
 * [SRN-100] Improve user-readable version of the query
 * [SRN-102] Catch SolrException in SIREnQParser#parse
 * [SRN-105] Upgrade to Lucene/Solr 3.1
+* [SRN-112] Tokenisation problem with URI localnames
+
 * [GH-1] Pom fixes
 * [GH-4] siren-core - Query Processing Optimisation - Load tuples lazily
 * [GH-3] siren-core - Query Processing Optimisation - Avoid unnecessary object creation

@@ -53,7 +53,7 @@ public class MailtoFilter extends TokenFilter {
   /**
    * @param input
    */
-  protected MailtoFilter(TokenStream input) {
+  public MailtoFilter(TokenStream input) {
     super(input);
     termAtt = this.addAttribute(CharTermAttribute.class);
     typeAtt = this.addAttribute(TypeAttribute.class);

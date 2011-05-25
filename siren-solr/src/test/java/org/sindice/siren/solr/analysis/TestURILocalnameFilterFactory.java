@@ -51,7 +51,7 @@ extends BaseSirenStreamTestCase {
     stream = factory.create(new TupleTokenizer(reader,
       Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
     this.assertTokenStreamContents(stream,
-        new String[] { "another", "Localname", "http://test/anotherLocalname", "." });
+        new String[] { "another", "Localname", "anotherLocalname", "http://test/anotherLocalname", "." });
   }
 
   @Test

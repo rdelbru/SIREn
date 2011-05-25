@@ -43,7 +43,7 @@ import org.sindice.siren.analysis.TupleTokenizer;
 /**
  * 
  */
-public class TestURLEncodingFilter {
+public class TestURIEncodingFilter {
 
   private final String uritype = TupleTokenizer.getTokenTypes()[TupleTokenizer.URI];
   private final String defaulttype = TypeAttribute.DEFAULT_TYPE;
@@ -96,7 +96,7 @@ public class TestURLEncodingFilter {
     PositionIncrementAttribute posIncrAtt = t.getAttribute(PositionIncrementAttribute.class);
     
     t.reset(new StringReader(uri));
-    final URLEncodingFilter filter = new URLEncodingFilter(t, encoding);
+    final URIEncodingFilter filter = new URIEncodingFilter(t, encoding);
     for (int i = 0; i < expectedStems.length; i++) {
         assertTrue("token " + i + " exists", filter.incrementToken());
         assertEquals(expectedStems[i], termAtt.toString());
@@ -194,7 +194,7 @@ public class TestURLEncodingFilter {
   }
   
   /**
-   * Test where {@link URLEncodingFilter#hexaToInt} return a negative value
+   * Test where {@link URIEncodingFilter#hexaToInt} return a negative value
    * @throws Exception
    */
   @Test

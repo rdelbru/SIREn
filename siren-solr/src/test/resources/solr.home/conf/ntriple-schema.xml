@@ -48,6 +48,10 @@
 
         <!-- Remove trailing slash of URIs. -->       
         <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+				
+			  <!-- Filters out those tokens *not* having length min through max 
+             inclusive. -->
+        <filter class="solr.LengthFilterFactory" min="2" max="256"/>
         
         <!-- Change to lowercase text -->
         <filter class="solr.LowerCaseFilterFactory"/>
@@ -60,10 +64,6 @@
                 words="stopwords.txt"
                 enablePositionIncrements="true"
                 />
-								
-				<!-- Filters out those tokens *not* having length min through max 
-             inclusive. -->
-        <filter class="solr.LengthFilterFactory" min="2" max="256"/>
 				
 				<!-- Replace Qnames by their name spaces in URIs. -->
         <filter class="org.sindice.siren.solr.analysis.QNamesFilterFactory" 

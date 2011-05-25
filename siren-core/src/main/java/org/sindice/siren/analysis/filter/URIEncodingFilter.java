@@ -37,7 +37,7 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * Decode the URL encoding format of special characters such as '?' or '<'; special
+ * Decode the URI encoding format of special characters such as '?' or '<'; special
  * characters (excepth of the SPACE that can be encoded with '+') begins with a '%'
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
@@ -49,7 +49,7 @@ import org.sindice.siren.analysis.TupleTokenizer;
  * <li> the decoded URI </li>
  * </ul>
  */
-public class URLEncodingFilter extends TokenFilter {
+public class URIEncodingFilter extends TokenFilter {
 
   private final CharsetDecoder    charsetDecoder;
   private final ByteBuffer        decoded = ByteBuffer.allocate(32);
@@ -68,7 +68,7 @@ public class URLEncodingFilter extends TokenFilter {
    * @param encoding the name of a supported <a href="../lang/package-summary.html#charenc">character encoding</a>.
    * @throws UnsupportedCharsetException if the character encoding is not supported or recognised.
    */
-  public URLEncodingFilter(TokenStream input, String encoding)
+  public URIEncodingFilter(TokenStream input, String encoding)
   throws UnsupportedCharsetException {
     super(input);
     final Charset charset = this.lookupCharset(encoding);

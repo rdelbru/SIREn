@@ -40,7 +40,7 @@ public class TestURIEncodingFilterFactory extends BaseSirenStreamTestCase {
   public void testURLencodedURI()
   throws Exception {    
     final Map<String,String> args = this.getDefaultInitArgs();
-    final URLEncodingFilterFactory factory = new URLEncodingFilterFactory();
+    final URIEncodingFilterFactory factory = new URIEncodingFilterFactory();
     factory.init(args);
 
     final Reader reader = new StringReader("<http://stephane.net/who%3fwho>");

@@ -33,7 +33,6 @@ import org.apache.lucene.analysis.CachingTokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.config.QueryConfigHandler;
 import org.apache.lucene.queryParser.core.nodes.FieldQueryNode;
@@ -50,6 +49,7 @@ import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
 import org.apache.lucene.queryParser.standard.config.AnalyzerAttribute;
 import org.apache.lucene.queryParser.standard.config.PositionIncrementsAttribute;
 import org.apache.lucene.queryParser.standard.nodes.MultiPhraseQueryNode;
+import org.apache.lucene.queryParser.standard.nodes.StandardBooleanQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
 
 /**
@@ -221,15 +221,15 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
 
           // If multiple terms at one single position, this must be a query
           // expansion. Perform a OR between the terms.
-          if (positionCount == 1) {
+          if (severalTokensAtSamePosition && positionCount == 1) {
             return new GroupQueryNode(new OrQueryNode(children));
           }
-          // Multiple terms over more than one position.
-          // Not able to support such a case. Usually, it is the result of a bad
-          // use of filters at query time. Better to throw an exception.
+          else if (positionCount == 1) {
+            return new GroupQueryNode(
+              new StandardBooleanQueryNode(children, true));
+          }
           else {
-            throw new QueryNodeException(new MessageImpl(
-              "Multiple terms over more than one position"));
+            return new StandardBooleanQueryNode(children, false);
           }
 
         }

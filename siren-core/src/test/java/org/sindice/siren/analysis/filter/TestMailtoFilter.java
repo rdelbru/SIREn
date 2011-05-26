@@ -119,4 +119,10 @@ public class TestMailtoFilter {
       new int[] { 1, 1, 0, 1, 1, 1, 0 });
   }
   
+  @Test
+  public void testShortURI()
+  throws Exception {
+    this.assertURLDecodedTo(_t, "<steph>", new String[] { "steph" });
+  }
+  
 }

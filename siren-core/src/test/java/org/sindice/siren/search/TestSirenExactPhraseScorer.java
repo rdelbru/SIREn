@@ -33,6 +33,7 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermPositions;
 import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
 import org.junit.Test;
 import org.sindice.siren.search.SirenScorer.InvalidCallException;
@@ -338,15 +339,20 @@ extends AbstractTestSirenScorer {
     tps[0] = reader.termPositions(t1);
     tps[1] = reader.termPositions(t2);
 
+    final byte[] norms = reader.norms(QueryTestingHelper.DEFAULT_FIELD);
     final SirenPhraseScorer scorer = new SirenExactPhraseScorer(
       new ConstantWeight(), tps, new int[] {0, 1},
       _helper.getSearcher().getSimilarity(),
-      reader.norms(QueryTestingHelper.DEFAULT_FIELD));
+      norms);
     assertNotNull("ts is null and it shouldn't be", scorer);
 
     assertFalse("no doc returned", scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(0, scorer.entity());
-    assertEquals(0.70, scorer.score(), 0.01);
+    
+    final Similarity sim = scorer.getSimilarity();
+    final float tf = sim.tf(2);
+    assertEquals(tf * sim.decodeNormValue(norms[scorer.first.entity()]), scorer.score(), 0.01);
+//    assertEquals(0.70, scorer.score(), 0.01);
   }
 
   // /////////////////////////////////

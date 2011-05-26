@@ -37,6 +37,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.RAMDirectory;
+import org.sindice.siren.similarity.SirenSimilarity;
 
 public class QueryTestingHelper {
 
@@ -81,7 +82,10 @@ public class QueryTestingHelper {
   public IndexSearcher getSearcher()
   throws IOException {
     // Instantiate a new searcher
-    return new IndexSearcher(this.getIndexReader());
+//    return new IndexSearcher(this.getIndexReader());
+    final IndexSearcher searcher = new IndexSearcher(this.getIndexReader());
+    searcher.setSimilarity(new SirenSimilarity());
+    return searcher;
   }
 
   public void close()

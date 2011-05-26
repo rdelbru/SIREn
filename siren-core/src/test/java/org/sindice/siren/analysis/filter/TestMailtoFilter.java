@@ -39,31 +39,31 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 
 /**
- * 
+ *
  */
 public class TestMailtoFilter {
 
   private final String uritype = TupleTokenizer.getTokenTypes()[TupleTokenizer.URI];
   private final String defaulttype = TypeAttribute.DEFAULT_TYPE;
-  
+
   private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
     Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
-  
+
   /*
    * Helpers
    */
-  
-  private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String uri, final String[] expectedStems)
   throws IOException {
     this.assertURLDecodedTo(t, uri, expectedStems, null);
   }
-  
-  private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems, String[] expectedTypes)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String uri, final String[] expectedStems, final String[] expectedTypes)
   throws IOException {
     this.assertURLDecodedTo(t, uri, expectedStems, expectedTypes, null);
   }
-  
-  private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems, String[] expectedTypes, int[] expectedPosIncr)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String uri, final String[] expectedStems, final String[] expectedTypes, final int[] expectedPosIncr)
   throws IOException {
     assertTrue("has CharTermAttribute", t.hasAttribute(CharTermAttribute.class));
     final CharTermAttribute termAtt = t.getAttribute(CharTermAttribute.class);
@@ -72,8 +72,8 @@ public class TestMailtoFilter {
     final TypeAttribute typeAtt = t.getAttribute(TypeAttribute.class);
 
     assertTrue("has PositionIncrementAttribute", t.hasAttribute(PositionIncrementAttribute.class));
-    PositionIncrementAttribute posIncrAtt = t.getAttribute(PositionIncrementAttribute.class);
-    
+    final PositionIncrementAttribute posIncrAtt = t.getAttribute(PositionIncrementAttribute.class);
+
     t.reset(new StringReader(uri));
     final TokenFilter filter = new MailtoFilter(t);
     for (int i = 0; i < expectedStems.length; i++) {
@@ -94,12 +94,12 @@ public class TestMailtoFilter {
   throws Exception {
     this.assertURLDecodedTo(_t, "<http://stephane.net>", new String[] { "http://stephane.net" });
   }
-  
+
   @Test
   public void testMailto()
   throws Exception {
     this.assertURLDecodedTo(_t, "<mailto:stephane.campinas@deri.org>",
-      new String[] { "mailto", "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" });
+      new String[] { "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" });
   }
 
   @Test
@@ -108,21 +108,21 @@ public class TestMailtoFilter {
     this.assertURLDecodedTo(_t, "<mailto//stephane.net>", new String[] { "mailto//stephane.net" });
     this.assertURLDecodedTo(_t, "<mailTo:stephane.net>", new String[] { "mailTo:stephane.net" });
   }
-  
+
   @Test
   public void testDifferentTypes()
   throws Exception {
     this.assertURLDecodedTo(_t, "<mailto:stephane.net> \"literal\" <mailto:stephane.campinas@deri.org>",
-      new String[] { "mailto", "stephane.net", "mailto:stephane.net", "literal",
-                     "mailto", "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" },
-      new String[] { uritype, uritype, uritype, defaulttype, uritype, uritype, uritype},
-      new int[] { 1, 1, 0, 1, 1, 1, 0 });
+      new String[] { "stephane.net", "mailto:stephane.net", "literal",
+                     "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" },
+      new String[] { uritype, uritype, defaulttype, uritype, uritype},
+      new int[] { 1, 0, 1, 1, 0 });
   }
-  
+
   @Test
   public void testShortURI()
   throws Exception {
     this.assertURLDecodedTo(_t, "<steph>", new String[] { "steph" });
   }
-  
+
 }

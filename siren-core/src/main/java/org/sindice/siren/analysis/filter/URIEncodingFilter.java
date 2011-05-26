@@ -42,7 +42,7 @@ import org.sindice.siren.analysis.TupleTokenizer;
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.
- * When an URI has special characters, two stems of the URI are produced 
+ * When an URI has special characters, two stems of the URI are produced
  * (both terms have the same position):
  * <ul>
  * <li> the original URI </li>
@@ -53,7 +53,7 @@ public class URIEncodingFilter extends TokenFilter {
 
   private final CharsetDecoder    charsetDecoder;
   private final ByteBuffer        decoded = ByteBuffer.allocate(32);
-  
+
   private boolean                 modifiedURI = false;
   private CharBuffer              termBuffer;
   private int                     termLength;
@@ -63,18 +63,18 @@ public class URIEncodingFilter extends TokenFilter {
   private final PositionIncrementAttribute  posIncrAtt;
 
   /**
-   * 
+   *
    * @param input
    * @param encoding the name of a supported <a href="../lang/package-summary.html#charenc">character encoding</a>.
    * @throws UnsupportedCharsetException if the character encoding is not supported or recognised.
    */
-  public URIEncodingFilter(TokenStream input, String encoding)
+  public URIEncodingFilter(final TokenStream input, final String encoding)
   throws UnsupportedCharsetException {
     super(input);
     final Charset charset = this.lookupCharset(encoding);
     charsetDecoder = charset.newDecoder()
                             .onMalformedInput(CodingErrorAction.REPLACE)
-                            .onUnmappableCharacter(CodingErrorAction.REPLACE);    
+                            .onUnmappableCharacter(CodingErrorAction.REPLACE);
     termAtt = this.addAttribute(CharTermAttribute.class);
     typeAtt = this.addAttribute(TypeAttribute.class);
     posIncrAtt = this.addAttribute(PositionIncrementAttribute.class);
@@ -91,13 +91,13 @@ public class URIEncodingFilter extends TokenFilter {
       posIncrAtt.setPositionIncrement(0);
       return true;
     }
-    
+
     if (input.incrementToken()) {
       final String type = typeAtt.type();
       if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI])) {
         termLength = termAtt.length();
         this.updateBuffer();
-        decode();
+        this.decode();
       }
       return true;
     }
@@ -109,20 +109,20 @@ public class URIEncodingFilter extends TokenFilter {
    */
   private void updateBuffer() {
     final int newTermLength = termLength >> 1;
-    
+
     if (termBuffer.capacity() < termLength && termBuffer.capacity() < newTermLength) {
       termBuffer = CharBuffer.allocate(termLength > 500 ? newTermLength : termLength);
     }
     termBuffer.clear();
   }
-  
+
   /**
    * look for the class of the given charset
    * @param csn
    * @return
    * @throws UnsupportedCharsetException
    */
-  private Charset lookupCharset(String csn)
+  private Charset lookupCharset(final String csn)
   throws UnsupportedCharsetException {
     if (Charset.isSupported(csn)) {
       return Charset.forName(csn);
@@ -190,7 +190,7 @@ public class URIEncodingFilter extends TokenFilter {
         return -241;
     }
   }
-  
+
   /**
    * Return the decimal value of an hexadecimal number, multiplied by 16.
    * If it is not hexadecimal, a negative value is returned.
@@ -253,27 +253,26 @@ public class URIEncodingFilter extends TokenFilter {
   }
 
   /**
-   * Decode URL encoded characters of the URI
+   * Partial decoding of URI encoded characters.
+   * <br>
+   * Ignore the '+' (SPACE) case, as it does not make sense to index URIs with
+   * a space. Nobody will be able to search them as a space will be considered
+   * as a character delimitation.
    */
   private void decode() {
     char c;
     int i = 0;
-    
+
     while (i < termLength) {
       c = termAtt.charAt(i);
       switch (c) {
-      case '+': // SPACE
-        modifiedURI = true;
-        termBuffer.put(' ');
-        i++;
-        break;
       case '%': // Special character
         /*
          * Starting with this instance of %, process all consecutive substrings
          * of the form %xy. Each substring %xy will yield a byte. Convert all
          * consecutive  bytes obtained this way to whatever character(s) they
          * represent in the provided encoding.
-         * 
+         *
          * xy is a hexadecimal number.
          */
         modifiedURI = true;
@@ -281,9 +280,9 @@ public class URIEncodingFilter extends TokenFilter {
         while (i + 2 < termLength && c == '%') {
           final char c1 = termAtt.charAt(i + 1);
           final char c2 = termAtt.charAt(i + 2);
-          
+
           // The next two characters converted from a hex to a decimal value
-          final int value = hexaToInt2(c1) + hexaToInt(c2);
+          final int value = this.hexaToInt2(c1) + this.hexaToInt(c2);
           if (value >= 0) { // Negative value are illegal. Just skip it.
             if (!decoded.hasRemaining()) { // No more place in the buffer, output what is already there.
               decoded.position(0);
@@ -315,5 +314,5 @@ public class URIEncodingFilter extends TokenFilter {
       }
     }
   }
-  
+
 }

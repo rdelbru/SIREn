@@ -45,15 +45,14 @@ public class MailtoFilter extends TokenFilter {
   private final CharTermAttribute           termAtt;
   private final TypeAttribute               typeAtt;
   private final PositionIncrementAttribute  posIncrAtt;
-  
+
   private CharBuffer termBuffer;
   private boolean isMailto = false;
-  private boolean getMail = true;
-  
+
   /**
    * @param input
    */
-  public MailtoFilter(TokenStream input) {
+  public MailtoFilter(final TokenStream input) {
     super(input);
     termAtt = this.addAttribute(CharTermAttribute.class);
     typeAtt = this.addAttribute(TypeAttribute.class);
@@ -66,31 +65,27 @@ public class MailtoFilter extends TokenFilter {
   throws IOException {
     if (isMailto) {
       termAtt.setEmpty();
-      if (getMail) { // return only the mail part
-        getMail = false;
-        termAtt.copyBuffer(termBuffer.array(), 7, termBuffer.position() - 7);
-      } else { // return the scheme + the mail part
-        isMailto = false;
-        getMail = true;
-        posIncrAtt.setPositionIncrement(0);
-        termAtt.copyBuffer(termBuffer.array(), 0, termBuffer.position());
-      }
+      // return the scheme + the mail part
+      isMailto = false;
+      posIncrAtt.setPositionIncrement(0);
+      termAtt.copyBuffer(termBuffer.array(), 0, termBuffer.position());
       return true;
     }
-    
+
     if (input.incrementToken()) {
       final String type = typeAtt.type();
-      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI]) && isMailtoScheme()) {
-        updateBuffer();
+      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI]) && this.isMailtoScheme()) {
+        this.updateBuffer();
         termBuffer.put(termAtt.buffer(), 0, termAtt.length());
-        termAtt.setLength(6); // keep only mailto
-        
+        // return only the mail part
+        posIncrAtt.setPositionIncrement(1);
+        termAtt.copyBuffer(termBuffer.array(), 7, termBuffer.position() - 7);
       }
       return true;
     }
     return false;
   }
-  
+
   /**
    * Check if the buffer is big enough
    */
@@ -100,9 +95,9 @@ public class MailtoFilter extends TokenFilter {
     }
     termBuffer.clear();
   }
-  
+
   /**
-   * 
+   *
    * @return true if the URI start with mailto:
    */
   private boolean isMailtoScheme() {

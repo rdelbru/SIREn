@@ -32,20 +32,20 @@ import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * 
+ *
  */
 public class TestMailtoFilterFactory extends BaseSirenStreamTestCase {
 
   @Test
   public void testMailtoFilterFactory()
-  throws Exception {    
+  throws Exception {
     final Map<String,String> args = this.getDefaultInitArgs();
     final MailtoFilterFactory factory = new MailtoFilterFactory();
     factory.init(args);
 
     final Reader reader = new StringReader("<mailto:stephane.campinas@deri.org>");
     final TokenStream stream = factory.create(new TupleTokenizer(reader, Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
-    this.assertTokenStreamContents(stream, new String[] { "mailto", "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" });
+    this.assertTokenStreamContents(stream, new String[] { "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" });
   }
-  
+
 }

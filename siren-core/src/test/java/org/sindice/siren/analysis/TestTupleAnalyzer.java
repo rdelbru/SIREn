@@ -154,8 +154,9 @@ public class TestTupleAnalyzer {
                      "<URI>", "<URI>" });
     this.assertAnalyzesTo(_a, "<mailto:renaud@delbru.fr>",
       new String[] { "renaud", "delbru",
+                     "renaud@delbru.fr",
                      "mailto:renaud@delbru.fr" },
-      new String[] { "<URI>", "<URI>", "<URI>" });
+      new String[] { "<URI>", "<URI>", "<URI>", "<URI>" });
     this.assertAnalyzesTo(_a, "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
       new String[] { "1999", "syntax", "type",
                      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"},

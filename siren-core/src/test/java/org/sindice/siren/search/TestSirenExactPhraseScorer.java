@@ -326,7 +326,7 @@ extends AbstractTestSirenScorer {
 
   @Test
   public void testScore() throws IOException {
-    _helper.addDocument("\"Renaud Delbru\" . <mailto:renaud@delbru.fr> . ");
+    _helper.addDocument("\"Renaud Delbru\" . <http://renaud.delbru.fr> . ");
 
     final Term t1 = new Term(QueryTestingHelper.DEFAULT_FIELD, "renaud");
     final Term t2 = new Term(QueryTestingHelper.DEFAULT_FIELD, "delbru");

@@ -41,16 +41,16 @@ import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * 
+ *
  */
 public class TestURIEncodingFilter {
 
   private final String uritype = TupleTokenizer.getTokenTypes()[TupleTokenizer.URI];
   private final String defaulttype = TypeAttribute.DEFAULT_TYPE;
-  
+
   private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
     Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
-  
+
   /**
    * @throws java.lang.Exception
    */
@@ -68,23 +68,23 @@ public class TestURIEncodingFilter {
   /*
    * Helpers
    */
-  
-  private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String uri, final String[] expectedStems)
   throws IOException {
     this.assertURLDecodedTo(t, "UTF-8", uri, expectedStems, null, null);
   }
-  
-  private void assertURLDecodedTo(Tokenizer t, String encoding, String uri, String[] expectedStems)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String encoding, final String uri, final String[] expectedStems)
   throws IOException {
     this.assertURLDecodedTo(t, encoding, uri, expectedStems, null, null);
   }
-  
-  private void assertURLDecodedTo(Tokenizer t, String uri, String[] expectedStems, String[] expectedTypes, int[] expectedPosIncr)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String uri, final String[] expectedStems, final String[] expectedTypes, final int[] expectedPosIncr)
   throws IOException {
     this.assertURLDecodedTo(t, "UTF-8", uri, expectedStems, expectedTypes, expectedPosIncr);
   }
-  
-  private void assertURLDecodedTo(Tokenizer t, String encoding, String uri, String[] expectedStems, String[] expectedTypes, int[] expectedPosIncr)
+
+  private void assertURLDecodedTo(final Tokenizer t, final String encoding, final String uri, final String[] expectedStems, final String[] expectedTypes, final int[] expectedPosIncr)
   throws IOException {
     assertTrue("has CharTermAttribute", t.hasAttribute(CharTermAttribute.class));
     final CharTermAttribute termAtt = t.getAttribute(CharTermAttribute.class);
@@ -93,8 +93,8 @@ public class TestURIEncodingFilter {
     final TypeAttribute typeAtt = t.getAttribute(TypeAttribute.class);
 
     assertTrue("has PositionIncrementAttribute", t.hasAttribute(PositionIncrementAttribute.class));
-    PositionIncrementAttribute posIncrAtt = t.getAttribute(PositionIncrementAttribute.class);
-    
+    final PositionIncrementAttribute posIncrAtt = t.getAttribute(PositionIncrementAttribute.class);
+
     t.reset(new StringReader(uri));
     final URIEncodingFilter filter = new URIEncodingFilter(t, encoding);
     for (int i = 0; i < expectedStems.length; i++) {
@@ -109,7 +109,7 @@ public class TestURIEncodingFilter {
     }
     filter.end();
   }
-  
+
   /**
    * Check if an URI with no URL encoded characters is left as it is
    * @throws Exception
@@ -119,7 +119,7 @@ public class TestURIEncodingFilter {
   throws Exception {
     this.assertURLDecodedTo(_t, "<http://stephane.net>", new String[] { "http://stephane.net" });
   }
-  
+
   /**
    * Check if special characters are correctly decoded and if the filters produces the two stems of the URI
    * @throws Exception
@@ -131,10 +131,11 @@ public class TestURIEncodingFilter {
       new String[] { "http://stephane.net/%32%21Space%21space", "http://stephane.net/2!Space!space" });
     this.assertURLDecodedTo(_t, "<http://stephane.net/%57%68%4F%61%72%65%79%6f%75%3F>",
       new String[] { "http://stephane.net/%57%68%4F%61%72%65%79%6f%75%3F", "http://stephane.net/WhOareyou?" });
+    // We does not decode space
     this.assertURLDecodedTo(_t, "<http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F>",
-      new String[] { "http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F", "http://stephane.net/WhO are you ?" });
+      new String[] { "http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F", "http://stephane.net/WhO+are+you ?" });
   }
-  
+
   /**
    * Check if the boundaries of the internal buffers are correct.
    * @throws Exception
@@ -147,7 +148,7 @@ public class TestURIEncodingFilter {
                      "deus@@@@@@@@@@@@@@@@@@@@" });
     this.assertURLDecodedTo(_t, "<deus%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40+%3f>",
       new String[] { "deus%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40+%3f",
-                     "deus@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ?" });
+                     "deus@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+?" });
     final String looong = "%20%21%22%23%24%25%26%27%28%29%2a%2b%2c%2d%2e%2f%30" +
     		"%31%32%33%34%35%36%37%38%39%3a%3b%3c%3d%3e%3f%40%41%42%43%44%45%46%47" +
     		"%48%49%4a%4b%4c%4d%4e%4f%50%51%52%53%54%55%56%57%58%59%5a%5b%5c%5d%5e" +
@@ -155,14 +156,14 @@ public class TestURIEncodingFilter {
     		"%76%77%78%79%7a%7b%7c%7d%7e";
     final String decLooong = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOP" +
     		"QRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
-    this.assertURLDecodedTo(_t, "<" + looong + looong + looong + looong + ">", 
+    this.assertURLDecodedTo(_t, "<" + looong + looong + looong + looong + ">",
       new String[]{ looong + looong + looong + looong,
                     decLooong + decLooong + decLooong + decLooong });
-    this.assertURLDecodedTo(_t, "<" + looong + looong + looong + looong + looong + looong + looong + looong + ">", 
+    this.assertURLDecodedTo(_t, "<" + looong + looong + looong + looong + looong + looong + looong + looong + ">",
       new String[]{ looong + looong + looong + looong + looong + looong + looong + looong,
                     decLooong + decLooong + decLooong + decLooong + decLooong + decLooong + decLooong + decLooong });
   }
-  
+
   /**
    * Check that badly encoded URL characters are left as they are. The decoding continue
    * nonetheless on the rest of the URI
@@ -182,7 +183,7 @@ public class TestURIEncodingFilter {
     this.assertURLDecodedTo(_t, "<http://stephane.net/%G3porco%2erosso>",
       new String[] { "http://stephane.net/%G3porco%2erosso", "http://stephane.net/%G3porco.rosso" });
   }
-  
+
   /**
    * Test bad Charset name
    * @throws Exception
@@ -192,7 +193,7 @@ public class TestURIEncodingFilter {
   throws Exception {
     this.assertURLDecodedTo(_t, "FTU_8", "", new String[] {});
   }
-  
+
   /**
    * Test where {@link URIEncodingFilter#hexaToInt} return a negative value
    * @throws Exception
@@ -202,7 +203,7 @@ public class TestURIEncodingFilter {
   throws Exception {
     this.assertURLDecodedTo(_t, "<http://stephane%FGnet/>", new String[] { "http://stephane%FGnet/" });
   }
-  
+
   /**
    * Test a sequence of tokens with different types.
    * @throws Exception
@@ -215,5 +216,5 @@ public class TestURIEncodingFilter {
       new String[] { uritype, uritype, defaulttype, defaulttype, defaulttype, uritype, uritype },
       new int[] { 1, 0, 1, 1, 1, 1, 0 });
   }
-  
+
 }

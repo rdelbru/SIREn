@@ -41,6 +41,7 @@ import org.apache.lucene.search.SimilarityDelegator;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.util.ToStringUtils;
+import org.sindice.siren.similarity.SirenWeight;
 
 /**
  * A Query that matches tuples matching boolean combinations of cell queries,
@@ -191,16 +192,13 @@ extends Query {
     this.tupleConstraintEnd = index;
   }
 
-  private class SirenTupleWeight extends Weight {
+  private class SirenTupleWeight extends SirenWeight {
 
     private static final long serialVersionUID = 1L;
-
-    protected Similarity similarity;
 
     protected ArrayList<Weight>  weights;
 
     public SirenTupleWeight(final Searcher searcher) throws IOException {
-      this.similarity = SirenTupleQuery.this.getSimilarity(searcher);
       weights = new ArrayList<Weight>(clauses.size());
       for (int i = 0; i < clauses.size(); i++) {
         final SirenTupleClause c = clauses.get(i);

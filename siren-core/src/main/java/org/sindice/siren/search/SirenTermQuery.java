@@ -39,6 +39,7 @@ import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.util.ToStringUtils;
+import org.sindice.siren.similarity.SirenWeight;
 
 /**
  * A Query that matches entities containing a term. Provides an interface to
@@ -52,9 +53,7 @@ extends SirenPrimitiveQuery {
   private final Term term;
 
   protected class SirenTermWeight
-  extends Weight {
-
-    private final Similarity similarity;
+  extends SirenWeight {
 
     private float            value;
 
@@ -67,7 +66,6 @@ extends SirenPrimitiveQuery {
     private final IDFExplanation   idfExp;
 
     public SirenTermWeight(final Searcher searcher) throws IOException {
-      this.similarity = SirenTermQuery.this.getSimilarity(searcher);
       idfExp = similarity.idfExplain(term, searcher);
       idf = idfExp.getIdf();
     }

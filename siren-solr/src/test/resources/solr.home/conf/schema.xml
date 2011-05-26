@@ -143,7 +143,8 @@
 						 Add bnode=0 to not filter blank node tokens. -->
         <filter class="org.sindice.siren.solr.analysis.TokenTypeFilterFactory"/>
 				
-				<!-- filter class="solr.StandardFilterFactory"/ -->
+        <!-- Decode URIs. -->       
+        <filter class="org.sindice.siren.solr.analysis.URIEncodingFilterFactory"/>
 				
 				<!-- Extract and tokenise localname of URIs.
 				     Add maxLength=n to not tokenise localname with more than n 

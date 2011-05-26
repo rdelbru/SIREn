@@ -299,4 +299,22 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testEncodedURI() throws IOException, SolrServerException {
+    this.addNTripleString("id1", "<http://s> <http://p> <http://dblp.l3s.de/d2r/resource/authors/Knud_M%C3%B6ller> .");
+    SolrQuery query = new SolrQuery();
+    query.setQuery("http://dblp.l3s.de/d2r/resource/authors/Knud_M%C3%B6ller");
+    query.setQueryType("siren");
+
+    String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+
+    query = new SolrQuery();
+    query.setQuery("Möller");
+    query.setQueryType("siren");
+
+    results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+
 }

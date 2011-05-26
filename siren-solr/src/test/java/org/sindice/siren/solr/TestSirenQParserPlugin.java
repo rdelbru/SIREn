@@ -263,4 +263,40 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     Assert.assertTrue("id2 should get higher score than id1", score1 < score2);
   }
 
+  @Test
+  public void testMailto() throws IOException, SolrServerException {
+    this.addNTripleString("id1", "<http://s> <http://p> <mailto:test@test.org> .");
+    SolrQuery query = new SolrQuery();
+    query.setQuery("mailto:test@test.org");
+    query.setQueryType("siren");
+
+    String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+
+    query = new SolrQuery();
+    query.setQuery("test@test.org");
+    query.setQueryType("siren");
+
+    results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+
+  @Test
+  public void testTildeInURI() throws IOException, SolrServerException {
+    this.addNTripleString("id1", "<http://s> <http://p> <http://sw.deri.org/~aidanh/> .");
+    SolrQuery query = new SolrQuery();
+    query.setQuery("http://sw.deri.org/~aidanh/");
+    query.setQueryType("siren");
+
+    String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+
+    query = new SolrQuery();
+    query.setQuery("http://sw.deri.org/~aidanh");
+    query.setQueryType("siren");
+
+    results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+
 }

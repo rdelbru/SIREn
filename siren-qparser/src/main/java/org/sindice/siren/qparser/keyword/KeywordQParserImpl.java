@@ -70,11 +70,12 @@ public class KeywordQParserImpl {
     }
   }
 
+  // TODO: does not support mailto: uri
   static String uriRegExp = "(news|(ht|f)tp(s?))\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?";
   static Pattern pattern = Pattern.compile(uriRegExp);
 
   // TODO: check if other special characters of lucene can appear in a URI, and
-  // escape them
+  // escape them, for example ~.
   private String escapeURIs(final String query) {
     final Matcher matcher = pattern.matcher(query);
 
@@ -96,7 +97,7 @@ public class KeywordQParserImpl {
     for (int i = 0; i < s.length(); i++) {
       final char c = s.charAt(i);
       // These characters are part of the field query syntax and must be escaped
-      if (c == ':' || c == '\\') {
+      if (c == ':' || c == '\\' || c == '~') {
         sb.append('\\');
       }
       sb.append(c);

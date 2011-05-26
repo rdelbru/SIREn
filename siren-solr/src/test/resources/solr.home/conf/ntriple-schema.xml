@@ -44,6 +44,7 @@
     -->
     <fieldType name="ntriple-uri" class="org.apache.solr.schema.SubTextField">
       <analyzer type="query">
+      	<!-- whitespace tokenizer to not tokenize URI -->   
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
 
         <!-- Remove trailing slash of URIs. -->       
@@ -130,7 +131,12 @@
     -->
     <fieldType name="ntriple-keyword" class="org.apache.solr.schema.SubTextField">
       <analyzer type="query">
+      	<!-- whitespace tokenizer to not tokenize URI -->
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+				
+				<!-- Remove trailing slash of URIs. -->       
+        <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"
+				        checkTokenType="false"/>
         
         <!-- Filters out those tokens *not* having length min through max 
              inclusive. -->

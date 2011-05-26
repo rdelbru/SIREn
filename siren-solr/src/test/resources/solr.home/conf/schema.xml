@@ -100,10 +100,8 @@
         
       </analyzer>
       <analyzer type="query">
-        <!-- UAX29URLEmailTokenizer for query in order to recognise URI, 
-             email, and QName.
-        -->
-        <tokenizer class="solr.UAX29URLEmailTokenizerFactory"/>
+        <!-- whitespace tokenizer to not tokenize URI -->
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
                 
         <!-- Filters out those tokens *not* having length min through max 
              inclusive. -->
@@ -154,6 +152,9 @@
 
         <!-- Remove trailing slash of URIs. -->				
 				<filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+				
+        <!-- Tokenize mailto URI -->
+        <filter class="org.sindice.siren.solr.analysis.MailtoFilterFactory"/>
 				
 				<!-- Filters out those tokens *not* having length min through max 
              inclusive. -->

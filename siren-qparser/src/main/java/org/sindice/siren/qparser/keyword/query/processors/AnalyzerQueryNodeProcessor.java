@@ -49,7 +49,6 @@ import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
 import org.apache.lucene.queryParser.standard.config.AnalyzerAttribute;
 import org.apache.lucene.queryParser.standard.config.PositionIncrementsAttribute;
 import org.apache.lucene.queryParser.standard.nodes.MultiPhraseQueryNode;
-import org.apache.lucene.queryParser.standard.nodes.StandardBooleanQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
 
 /**
@@ -63,10 +62,13 @@ import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
  * If the analyzer return only one term, the returned term is set to the
  * {@link FieldQueryNode} and it's returned. <br/>
  * <br/>
- * If the analyzer return more than one term, a {@link OrQueryNode},
+ * If the analyzer return more than one term
  * {@link TokenizedPhraseQueryNode} or {@link MultiPhraseQueryNode} is created,
  * whether there is one or more
  * terms at the same position, and it's returned. <br/>
+ * <br/>
+ * A {@link OrQueryNode} can be returned if query expansion is detected, i.e.,
+ * more than one term at the same position.
  * <br/>
  * If no term is returned by the analyzer a {@link NoTokenFoundQueryNode} object
  * is returned. <br/>
@@ -183,7 +185,8 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
       if (numTokens == 0) {
         return new NoTokenFoundQueryNode();
 
-      } else if (numTokens == 1) {
+      }
+      else if (numTokens == 1) {
         String term = null;
         try {
           boolean hasNext;
@@ -199,13 +202,18 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
 
         return fieldNode;
 
-      } else if (severalTokensAtSamePosition || !(node instanceof QuotedFieldQueryNode)) {
+      }
+      else if (severalTokensAtSamePosition || !(node instanceof QuotedFieldQueryNode)) {
         if (positionCount == 1 || !(node instanceof QuotedFieldQueryNode)) {
           // no phrase query:
           final LinkedList<QueryNode> children = new LinkedList<QueryNode>();
 
+          int position = -1;
+
           for (int i = 0; i < numTokens; i++) {
             String term = null;
+            final int positionIncrement = 1;
+
             try {
               final boolean hasNext = buffer.incrementToken();
               assert hasNext == true;
@@ -215,8 +223,16 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
               // safe to ignore, because we know the number of tokens
             }
 
-            children.add(new FieldQueryNode(field, term, -1, -1));
+            final FieldQueryNode newFieldNode = new FieldQueryNode(field, term, -1, -1);
 
+            if (this.positionIncrementsEnabled) {
+              position += positionIncrement;
+              newFieldNode.setPositionIncrement(position);
+            } else {
+              newFieldNode.setPositionIncrement(i);
+            }
+
+            children.add(new FieldQueryNode(field, term, -1, -1));
           }
 
           // If multiple terms at one single position, this must be a query
@@ -224,12 +240,14 @@ public class AnalyzerQueryNodeProcessor extends QueryNodeProcessorImpl {
           if (severalTokensAtSamePosition && positionCount == 1) {
             return new GroupQueryNode(new OrQueryNode(children));
           }
-          else if (positionCount == 1) {
-            return new GroupQueryNode(
-              new StandardBooleanQueryNode(children, true));
-          }
+          // if several tokens at same position && position count > 1, then
+          // results can be unexpected
           else {
-            return new StandardBooleanQueryNode(children, false);
+            final TokenizedPhraseQueryNode pq = new TokenizedPhraseQueryNode();
+            for (int i = 0; i < children.size(); i++) {
+              pq.add(children.get(i));
+            }
+            return pq;
           }
 
         }

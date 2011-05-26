@@ -20,3 +20,4 @@ out/
 
 # Other
 bin/
+siren-solr/src/test/resources/solr.home/data/

@@ -53,7 +53,7 @@ extends QueryConfigHandler {
     this.addAttribute(MultiTermRewriteMethodAttribute.class);
     this.addAttribute(AllowFuzzyAndWildcardAttribute.class);
     this.addAttribute(AllowLeadingWildcardAttribute.class);
-    this.addAttribute(PositionIncrementsAttribute.class);
+    this.addAttribute(PositionIncrementsAttribute.class).setPositionIncrementsEnabled(true);
     this.addAttribute(LocaleAttribute.class);
     this.addAttribute(DefaultPhraseSlopAttribute.class);
     this.addAttribute(MultiTermRewriteMethodAttribute.class);

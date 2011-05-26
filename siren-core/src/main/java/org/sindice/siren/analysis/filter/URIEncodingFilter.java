@@ -38,7 +38,7 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Decode the URI encoding format of special characters such as '?' or '<'; special
- * characters (excepth of the SPACE that can be encoded with '+') begins with a '%'
+ * characters (except of the SPACE that can be encoded with '+') begins with a '%'
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.
@@ -282,7 +282,10 @@ public class URIEncodingFilter extends TokenFilter {
 
           // The next two characters converted from a hex to a decimal value
           final int value = this.hexaToInt2(c1) + this.hexaToInt(c2);
-          if (value != 32 && value >= 0) { // Negative value are illegal. Just skip it.
+          if (value == 32) { // replace the SPACE character, encoded by %20, by +
+            decodeChars();
+            termBuffer.put('+');
+          } else if (value >= 0) { // Negative value are illegal. Just skip it.
             if (!decoded.hasRemaining()) { // No more place in the buffer, output what is already there.
               decodeChars();
             }

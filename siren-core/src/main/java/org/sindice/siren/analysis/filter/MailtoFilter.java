@@ -84,6 +84,7 @@ public class MailtoFilter extends TokenFilter {
         updateBuffer();
         termBuffer.put(termAtt.buffer(), 0, termAtt.length());
         termAtt.setLength(6); // keep only mailto
+        
       }
       return true;
     }
@@ -105,7 +106,7 @@ public class MailtoFilter extends TokenFilter {
    * @return true if the URI start with mailto:
    */
   private boolean isMailtoScheme() {
-    if (termAtt.charAt(6) != ':') {
+    if (termAtt.length() < 7 || termAtt.charAt(6) != ':') {
       return false;
     }
     if (termAtt.charAt(0) != 'm' || termAtt.charAt(1) != 'a' || termAtt.charAt(2) != 'i' ||

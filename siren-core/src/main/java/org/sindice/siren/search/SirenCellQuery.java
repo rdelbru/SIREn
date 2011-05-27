@@ -101,9 +101,7 @@ extends Query {
   private class SirenCellWeight extends Weight {
 
     private static final long serialVersionUID = 1L;
-
     protected Similarity  similarity;
-
     protected Weight      primitiveWeight;
 
     public SirenCellWeight(final Searcher searcher) throws IOException {

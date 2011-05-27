@@ -173,9 +173,7 @@ extends SirenPrimitiveQuery {
   private class SirenBooleanWeight extends Weight {
 
     private static final long serialVersionUID = 1L;
-
-    protected Similarity similarity;
-
+    protected final Similarity similarity;
     protected ArrayList<Weight>  weights;
 
     public SirenBooleanWeight(final Searcher searcher) throws IOException {

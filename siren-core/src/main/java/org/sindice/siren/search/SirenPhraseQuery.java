@@ -31,13 +31,13 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermPositions;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Explanation;
-import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
+import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.util.ToStringUtils;
 
 /**
@@ -155,7 +155,6 @@ extends SirenPrimitiveQuery {
 
     public SirenPhraseWeight(final Searcher searcher) throws IOException {
       this.similarity = SirenPhraseQuery.this.getSimilarity(searcher);
-
       idfExp = similarity.idfExplain(terms, searcher);
       idf = idfExp.getIdf();
     }

@@ -25,7 +25,6 @@ package org.sindice.siren.search;
 import java.io.IOException;
 
 import org.apache.lucene.search.Collector;
-import org.apache.lucene.search.DefaultSimilarity;
 import org.apache.lucene.search.Similarity;
 
 /**
@@ -40,7 +39,8 @@ extends SirenScorer {
 
   private SirenPrimitiveScorer primitiveScorer;
 
-  private static Similarity defaultSimilarity = new DefaultSimilarity();
+  // TODO: debug code left? this variable is never used
+//  private static Similarity defaultSimilarity = new DefaultSimilarity();
 
   private final int dataset = -1;
   private int entity = -1;

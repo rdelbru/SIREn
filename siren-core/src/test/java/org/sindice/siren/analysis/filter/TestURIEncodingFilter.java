@@ -28,6 +28,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.UnsupportedCharsetException;
+import java.util.Random;
 
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
@@ -222,6 +223,18 @@ public class TestURIEncodingFilter {
   throws Exception {
     this.assertURLDecodedTo(_t, "<http://s+t+e%20%20p+h%20+%20ane/>", new String[] { "http://s+t+e%20%20p+h%20+%20ane/",
                                                                                      "http://s+t+e++p+h+++ane/" });
+  }
+  
+  @Test
+  public void testBufferOverflow()
+  throws Exception {
+    final StringBuilder sb = new StringBuilder();
+    final Random r = new Random(42);
+    
+    for (int i = 0; i < 300; i++) {
+      sb.append((char) 65 + r.nextInt(26));
+    }
+    this.assertURLDecodedTo(_t, "<" + sb.toString() + ">", new String[] { sb.toString() });
   }
   
 }

@@ -39,7 +39,6 @@ import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.search.Explanation.IDFExplanation;
 import org.apache.lucene.util.ToStringUtils;
-import org.sindice.siren.similarity.SirenWeight;
 
 /**
  * A Query that matches cells containing a particular sequence of terms. A
@@ -140,7 +139,9 @@ extends SirenPrimitiveQuery {
   }
 
   private class SirenPhraseWeight
-  extends SirenWeight {
+  extends Weight {
+
+    private final Similarity similarity;
 
     private float            value;
 
@@ -153,6 +154,7 @@ extends SirenPrimitiveQuery {
     private final IDFExplanation idfExp;
 
     public SirenPhraseWeight(final Searcher searcher) throws IOException {
+      this.similarity = SirenPhraseQuery.this.getSimilarity(searcher);
       idfExp = similarity.idfExplain(terms, searcher);
       idf = idfExp.getIdf();
     }

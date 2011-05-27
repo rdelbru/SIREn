@@ -40,7 +40,6 @@ import org.apache.lucene.search.SimilarityDelegator;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.util.ToStringUtils;
-import org.sindice.siren.similarity.SirenWeight;
 
 /**
  * A Query that matches a boolean combination of term
@@ -171,13 +170,14 @@ extends SirenPrimitiveQuery {
     return clauses;
   }
 
-  private class SirenBooleanWeight extends SirenWeight {
+  private class SirenBooleanWeight extends Weight {
 
     private static final long serialVersionUID = 1L;
-
+    protected final Similarity similarity;
     protected ArrayList<Weight>  weights;
 
     public SirenBooleanWeight(final Searcher searcher) throws IOException {
+      this.similarity = SirenBooleanQuery.this.getSimilarity(searcher);
       weights = new ArrayList<Weight>(clauses.size());
       for (int i = 0; i < clauses.size(); i++) {
         final SirenBooleanClause c = clauses.get(i);

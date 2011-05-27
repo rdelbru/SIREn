@@ -35,7 +35,6 @@ import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.Similarity;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.util.ToStringUtils;
-import org.sindice.siren.similarity.SirenWeight;
 
 /**
  * A Query that matches cells matching boolean combinations of term
@@ -99,13 +98,14 @@ extends Query {
     this.cellConstraintEnd = index;
   }
 
-  private class SirenCellWeight extends SirenWeight {
+  private class SirenCellWeight extends Weight {
 
     private static final long serialVersionUID = 1L;
-
+    protected Similarity  similarity;
     protected Weight      primitiveWeight;
 
     public SirenCellWeight(final Searcher searcher) throws IOException {
+      this.similarity = SirenCellQuery.this.getSimilarity(searcher);
       primitiveWeight = primitive.createWeight(searcher);
     }
 

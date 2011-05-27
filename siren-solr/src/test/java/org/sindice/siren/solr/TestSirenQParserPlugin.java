@@ -317,4 +317,15 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testMatchingPartURL() throws Exception {
+    this.addNTripleString("http://data-gov.tw.rpi.edu/raw/", "<http://s> <http://p> <http://o> .");
+
+    final SolrQuery query = new SolrQuery();
+    query.setParam("qt", "siren");
+    query.setQuery("rpi.edu");
+    final String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+
 }

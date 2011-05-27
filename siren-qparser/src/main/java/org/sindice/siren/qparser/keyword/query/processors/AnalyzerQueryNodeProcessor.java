@@ -74,8 +74,7 @@ import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
  * is returned. <br/>
  * <br/>
  * Extended version of the original
- * {@link org.apache.lucene.queryParser.standard.processors.AnalyzerQueryNodeProcessor}
- * to expand query using OR operator.
+ * {@link org.apache.lucene.queryParser.standard.processors.AnalyzerQueryNodeProcessor}.
  *
  * @see Analyzer
  * @see TokenStream

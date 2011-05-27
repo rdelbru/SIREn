@@ -126,7 +126,7 @@
 		  The SIREn NTriple field type:
 			Use the TupleAnalyzer 
 			- Parse n-triple data 
-			- Tokenise Literals but also URIs
+			- Defer tokenisation of Literals and URIs to sub-analyzers
 			
 			Field norms are not useful for SIREn fields. Set omitNorms to true reduces
 			memory consumption, and improve ranking.

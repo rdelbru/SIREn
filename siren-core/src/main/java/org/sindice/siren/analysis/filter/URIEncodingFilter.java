@@ -112,10 +112,8 @@ public class URIEncodingFilter extends TokenFilter {
    * Check if the buffer is big enough
    */
   private void updateBuffer() {
-    final int newTermLength = termLength >> 1;
-
-    if (termBuffer.capacity() < termLength && termBuffer.capacity() < newTermLength) {
-      termBuffer = CharBuffer.allocate(termLength > 500 ? newTermLength : termLength);
+    if (termBuffer.capacity() < termLength) {
+      termBuffer = CharBuffer.allocate(termLength);
     }
     termBuffer.clear();
   }

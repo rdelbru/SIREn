@@ -38,7 +38,11 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Decode the URI encoding format of special characters such as '?' or '<'; special
+<<<<<<< HEAD
  * characters (excepth of the SPACE that can be encoded with '+') begins with a '%'
+=======
+ * characters (except of the SPACE that can be encoded with '+') begins with a '%'
+>>>>>>> scampi/sim3
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.
@@ -255,9 +259,12 @@ public class URIEncodingFilter extends TokenFilter {
   /**
    * Partial decoding of URI encoded characters.
    * <br>
-   * Ignore the '+' (SPACE) case, as it does not make sense to index URIs with
-   * a space. Nobody will be able to search them as a space will be considered
-   * as a character delimitation.
+   * Ignore the '+' (SPACE) cases, as it does not
+   * make sense to index URIs with a space. Nobody will be able to search them
+   * as a space will be considered as a character delimitation.
+   * <br>
+   * Replace %20 by +, so that the URI can be tokenised easily (%20 causes
+   * problem during tokenisation, while + does not).
    */
   private void decode() {
     char c;
@@ -276,31 +283,31 @@ public class URIEncodingFilter extends TokenFilter {
          * xy is a hexadecimal number.
          */
         modifiedURI = true;
-        decoded.clear();
+
         while (i + 2 < termLength && c == '%') {
           final char c1 = termAtt.charAt(i + 1);
           final char c2 = termAtt.charAt(i + 2);
 
           // The next two characters converted from a hex to a decimal value
           final int value = this.hexaToInt2(c1) + this.hexaToInt(c2);
-          if (value >= 0) { // Negative value are illegal. Just skip it.
+          if (value == 32) { // replace the SPACE character, encoded by %20, by +
+            this.decodeChars();
+            termBuffer.put('+');
+          } else if (value >= 0) { // Negative value are illegal. Just skip it.
             if (!decoded.hasRemaining()) { // No more place in the buffer, output what is already there.
-              decoded.position(0);
-              charsetDecoder.decode(decoded, termBuffer, true);
-              decoded.clear();
+              this.decodeChars();
             }
             decoded.put((byte) value);
-          } else // put the value back, without changing it
+          } else { // put the value back, without changing it
+            this.decodeChars();
             termBuffer.put('%').put(c1).put(c2);
+          }
           i += 3;
           if (i < termLength)
             c = termAtt.charAt(i);
         }
         // decode the chain of special characters
-        final int limit = decoded.position();
-        decoded.position(0);
-        decoded.limit(limit);
-        charsetDecoder.decode(decoded, termBuffer, true);
+        this.decodeChars();
         // incomplete byte encoding (e.g., %x). Skip it.
         if (i < termLength && c == '%') {
           termBuffer.put('%');
@@ -313,6 +320,14 @@ public class URIEncodingFilter extends TokenFilter {
         break;
       }
     }
+  }
+
+  private void decodeChars() {
+    final int limit = decoded.position();
+    decoded.position(0);
+    decoded.limit(limit);
+    charsetDecoder.decode(decoded, termBuffer, true);
+    decoded.clear();
   }
 
 }

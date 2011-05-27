@@ -133,7 +133,7 @@ public class TestURIEncodingFilter {
       new String[] { "http://stephane.net/%57%68%4F%61%72%65%79%6f%75%3F", "http://stephane.net/WhOareyou?" });
     // We does not decode space
     this.assertURLDecodedTo(_t, "<http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F>",
-      new String[] { "http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F", "http://stephane.net/WhO+are+you ?" });
+      new String[] { "http://stephane.net/%57%68%4F+%61%72%65+%79%6f%75%20%3F", "http://stephane.net/WhO+are+you+?" });
   }
 
   /**
@@ -154,7 +154,7 @@ public class TestURIEncodingFilter {
     		"%48%49%4a%4b%4c%4d%4e%4f%50%51%52%53%54%55%56%57%58%59%5a%5b%5c%5d%5e" +
     		"%5f%60%61%62%63%64%65%66%67%68%69%6a%6b%6c%6d%6e%6f%70%71%72%73%74%75" +
     		"%76%77%78%79%7a%7b%7c%7d%7e";
-    final String decLooong = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOP" +
+    final String decLooong = "+!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOP" +
     		"QRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
     this.assertURLDecodedTo(_t, "<" + looong + looong + looong + looong + ">",
       new String[]{ looong + looong + looong + looong,
@@ -201,7 +201,7 @@ public class TestURIEncodingFilter {
   @Test
   public void testBadHexadecimalNumber()
   throws Exception {
-    this.assertURLDecodedTo(_t, "<http://stephane%FGnet/>", new String[] { "http://stephane%FGnet/" });
+    this.assertURLDecodedTo(_t, "<http://stephane%3f%FGnet/>", new String[] { "http://stephane%3f%FGnet/", "http://stephane?%FGnet/" });
   }
 
   /**
@@ -215,6 +215,13 @@ public class TestURIEncodingFilter {
       new String[] { "stephane%3Fnet/", "stephane?net/", "A", "literal", "!!!!", "porco%2erosso", "porco.rosso" },
       new String[] { uritype, uritype, defaulttype, defaulttype, defaulttype, uritype, uritype },
       new int[] { 1, 0, 1, 1, 1, 1, 0 });
+  }
+
+  @Test
+  public void testSpaces()
+  throws Exception {
+    this.assertURLDecodedTo(_t, "<http://s+t+e%20%20p+h%20+%20ane/>", new String[] { "http://s+t+e%20%20p+h%20+%20ane/",
+                                                                                     "http://s+t+e++p+h+++ane/" });
   }
 
 }

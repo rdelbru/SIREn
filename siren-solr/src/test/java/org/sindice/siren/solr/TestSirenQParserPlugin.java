@@ -190,6 +190,17 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testQNameInURIField() throws IOException, SolrServerException {
+    this.addNTripleString("http://xmlns.com/foaf/0.1/FakePerson", "<http://s> <http://p> <http://xmlns.com/foaf/0.1/Agent> .");
+    final SolrQuery query = new SolrQuery();
+    query.setQuery("foaf:FakePerson");
+    query.setQueryType("siren");
+
+    final String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+
   /**
    * SRN-96
    */

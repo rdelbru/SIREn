@@ -254,5 +254,9 @@
       or to add multiple fields to the same field for easier/faster searching.  -->
 
  <copyField source="url" dest="id"/>
+ 
+<!-- Similarity is the scoring routine for each document vs. a query.
+     A custom similarity is specified here  -->
+<similarity class="org.sindice.siren.similarity.SirenSimilarity"/>
 
 </schema>

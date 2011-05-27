@@ -50,6 +50,7 @@ New Features
 * [SRN-99] Boolean query group support in cell query
 * [SRN-101] Boost support in literal and uri patterns
 * [SRN-104] Create an OptimizeSchedulerListerner
+* [SRN-109] Similarity to saturate term frequency
 
 Tasks
 

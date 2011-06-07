@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
 
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!-- 
+     For more details about configurations options that may appear in this 
+     file, see http://wiki.apache.org/solr/SolrConfigXml.
+
+     Specifically, the Solr Config can support XInclude, which may make it easier to manage
+     the configuration.  See https://issues.apache.org/jira/browse/SOLR-1167
+-->
 <config>
   <!-- Set this to 'false' if you want solr to continue working after it has 
        encountered an severe configuration error.  In a production environment, 
@@ -17,7 +39,7 @@
     and queried.
   -->
   <luceneMatchVersion>LUCENE_31</luceneMatchVersion>
-
+	
   <!-- lib directives can be used to instruct Solr to load an Jars identified
        and use them to resolve any "plugins" specified in your solrconfig.xml or
        schema.xml (ie: Analyzers, Request Handlers, etc...).
@@ -29,10 +51,6 @@
        
               <lib dir="./lib" />
     -->
-		
-    <!-- The library directory is located in the parent directory since it is
-		     shared by the master and slave configurations. -->
-	<lib dir="../lib" />
   
   <!-- Used to specify an alternate directory to hold all index data
        other than the default ./data under the Solr home.
@@ -40,10 +58,8 @@
   <dataDir>${solr.data.dir:}</dataDir>
 
   <!--  The DirectoryFactory to use for indexes.
-        solr.StandardDirectoryFactory, the default, is filesystem based.
-        solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
+        solr.RAMDirectoryFactory is memory based, for unit test only. -->
   <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
-
 
   <!-- WARNING: this <indexDefaults> section only provides defaults for index writers
        in general. See also the <mainIndex> section after that when changing parameters
@@ -53,15 +69,15 @@
     <useCompoundFile>false</useCompoundFile>
 
     <mergeFactor>10</mergeFactor>
+    <!-- If both ramBufferSizeMB and maxBufferedDocs is set, then Lucene will flush
+     based on whichever limit is hit first.  -->
+    <!--<maxBufferedDocs>1000</maxBufferedDocs>-->
 
     <!-- Sets the amount of RAM that may be used by Lucene indexing
       for buffering added documents and deletions before they are
-      flushed to the Directory.  
-			
-			rendel: from my experiments, 32MB provides the best performance. A bigger
-			RAM does not provide better performance.
-			-->
+      flushed to the Directory.  -->
     <ramBufferSizeMB>32</ramBufferSizeMB>
+    <!-- <maxMergeDocs>2147483647</maxMergeDocs> -->
     <maxFieldLength>10000</maxFieldLength>
     <writeLockTimeout>1000</writeLockTimeout>
     <commitLockTimeout>10000</commitLockTimeout>
@@ -88,14 +104,14 @@
   </indexDefaults>
 
   <mainIndex>
-  	
     <!-- options specific to the main on-disk lucene index -->
     <useCompoundFile>false</useCompoundFile>
     <ramBufferSizeMB>32</ramBufferSizeMB>
     <mergeFactor>10</mergeFactor>
-		
-	  <!-- rendel: Increase the default field length for large RDF files -->
+	  <!-- Increase the default field length from 10,000 to 100,000 for large RDF files -->
     <maxFieldLength>10000000</maxFieldLength>
+
+    <!-- inherit from indexDefaults <maxFieldLength>10000</maxFieldLength> -->
 
     <!-- If true, unlock any held write or commit locks on startup. 
          This defeats the locking mechanism that allows multiple
@@ -129,11 +145,6 @@
       <str name="maxOptimizedCommitsToKeep">0</str>
     </deletionPolicy>
 
-    <!--  To aid in advanced debugging, you may turn on IndexWriter debug logging.
-      Setting to true will set the file that the underlying Lucene IndexWriter
-      will write its debug infostream to.  -->
-     <infoStream file="INFOSTREAM.txt">false</infoStream> 
-
   </mainIndex>
 
   <!-- the default high-performance update handler -->
@@ -146,13 +157,17 @@
          when adding documents. http://wiki.apache.org/solr/UpdateXmlMessages
     -->
     <autoCommit> 
-		  <!-- put max doc large enough to rely on ram buffer -->
-      <maxDocs>10000</maxDocs>
+      <maxDocs>100000</maxDocs>
       <maxTime>60000</maxTime> 
     </autoCommit>
+		
+    <listener event="postCommit" class="solr.OptimizeSchedulerListener">
+      <int name="maxSegments">4</int>
+			<int name="optimizeInterval">1</int>
+    </listener>
 
   </updateHandler>
-  
+
   <query>
     <!-- Maximum number of clauses in a boolean query... in the past, this affected
         range or prefix queries that expanded to big boolean queries - built in Solr 
@@ -160,13 +175,13 @@
         An exception is thrown if exceeded.  -->
     <maxBooleanClauses>1024</maxBooleanClauses>
 
+
     <!-- There are two implementations of cache available for Solr,
          LRUCache, based on a synchronized LinkedHashMap, and
          FastLRUCache, based on a ConcurrentHashMap.  FastLRUCache has faster gets
          and slower puts in single threaded operation and thus is generally faster
          than LRUCache when the hit ratio of the cache is high (> 75%), and may be
          faster under other scenarios on multi-cpu systems. -->
-				 
     <!-- Cache used by SolrIndexSearcher for filters (DocSets),
          unordered sets of *all* documents that match a query.
          When a new searcher is opened, its caches may be prepopulated
@@ -179,43 +194,29 @@
          initialSize - the initial capacity (number of entries) of
            the cache.  (seel java.util.HashMap)
          autowarmCount - the number of entries to prepopulate from
-           and old cache. -->
-					 
-		<!-- rendel: decrease cache size for the master since it is not meant to be
-		     queried -->
+           and old cache.
+         -->
     <filterCache
       class="solr.FastLRUCache"
-      size="512"
-      initialSize="512"
-      autowarmCount="0"/>
-
-    <!-- Cache used to hold field values that are quickly accessible
-         by document id.  The fieldValueCache is created by default
-         even if not configured here.
-      <fieldValueCache
-        class="solr.FastLRUCache"
-        size="512"
-        autowarmCount="128"
-        showItems="32"
-      />
-    -->
+      size="64"
+      initialSize="64"
+      autowarmCount="32"/>
 
    <!-- queryResultCache caches results of searches - ordered lists of
          document ids (DocList) based on a query, a sort, and the range
          of documents requested.  -->
     <queryResultCache
       class="solr.LRUCache"
-      size="512"
-      initialSize="512"
-      autowarmCount="0"/>
+      size="64"
+      initialSize="64"
+      autowarmCount="32"/>
 
-  <!-- documentCache caches Lucene Document objects (the stored fields for each 
-	     document). Since Lucene internal document ids are transient, this cache 
-			 will not be autowarmed.  -->
+  <!-- documentCache caches Lucene Document objects (the stored fields for each document).
+       Since Lucene internal document ids are transient, this cache will not be autowarmed.  -->
     <documentCache
       class="solr.LRUCache"
-      size="512"
-      initialSize="512"
+      size="64"
+      initialSize="64"
       autowarmCount="0"/>
 
     <!-- If true, stored fields that are not requested will be loaded lazily.
@@ -235,7 +236,7 @@
 
     <!-- Maximum number of documents to cache for any entry in the
          queryResultCache. -->
-    <queryResultMaxDocsCached>200</queryResultMaxDocsCached>
+    <queryResultMaxDocsCached>50</queryResultMaxDocsCached>
 
     <!-- If a search request comes in and there is no current registered searcher,
          then immediately register the still warming searcher and use it.  If
@@ -259,6 +260,12 @@
     <!--Make sure your system has some authentication before enabling remote streaming!  -->
     <requestParsers enableRemoteStreaming="true" multipartUploadLimitInKB="2048000" />
 
+    <!-- Set HTTP caching related parameters (for proxy caches and clients).
+          
+         To get the behaviour of Solr 1.2 (ie: no caching related headers)
+         use the never304="true" option and do not specify a value for
+         <cacheControl>
+    -->
     <!-- <httpCaching never304="true"> -->
     <httpCaching lastModifiedFrom="openTime"
                  etagSeed="Solr">
@@ -303,86 +310,8 @@
     <!-- default values for query parameters -->
      <lst name="defaults">
        <str name="echoParams">explicit</str>
-       <!--
-       <int name="rows">10</int>
-       <str name="fl">*</str>
-       <str name="version">2.1</str>
-        -->
      </lst>
   </requestHandler>
-
-  <!-- DisMaxRequestHandler allows easy searching across multiple fields
-       for simple user-entered phrases.  It's implementation is now
-       just the standard SearchHandler with a default query type
-       of "dismax". 
-       see http://wiki.apache.org/solr/DisMaxRequestHandler
-   -->
-  <requestHandler name="dismax" class="solr.SearchHandler" >
-    <lst name="defaults">
-     <str name="defType">dismax</str>
-     <str name="echoParams">explicit</str>
-     <float name="tie">0.01</float>
-     <str name="qf">
-        text^0.5 features^1.0 name^1.2 sku^1.5 id^10.0 manu^1.1 cat^1.4
-     </str>
-     <str name="pf">
-        text^0.2 features^1.1 name^1.5 manu^1.4 manu_exact^1.9
-     </str>
-     <str name="bf">
-        popularity^0.5 recip(price,1,1000,1000)^0.3
-     </str>
-     <str name="fl">
-        id,name,price,score
-     </str>
-     <str name="mm">
-        2&lt;-1 5&lt;-2 6&lt;90%
-     </str>
-     <int name="ps">100</int>
-     <str name="q.alt">*:*</str>
-     <!-- example highlighter config, enable per-query with hl=true -->
-     <str name="hl.fl">text features name</str>
-     <!-- for this field, we want no fragmenting, just highlighting -->
-     <str name="f.name.hl.fragsize">0</str>
-     <!-- instructs Solr to return the field itself if no query terms are
-          found -->
-     <str name="f.name.hl.alternateField">name</str>
-     <str name="f.text.hl.fragmenter">regex</str> <!-- defined below -->
-    </lst>
-  </requestHandler>
-
-  <!--
-   Search components are registered to SolrCore and used by Search Handlers
-   
-   By default, the following components are avaliable:
-    
-   <searchComponent name="query"     class="org.apache.solr.handler.component.QueryComponent" />
-   <searchComponent name="facet"     class="org.apache.solr.handler.component.FacetComponent" />
-   <searchComponent name="mlt"       class="org.apache.solr.handler.component.MoreLikeThisComponent" />
-   <searchComponent name="highlight" class="org.apache.solr.handler.component.HighlightComponent" />
-   <searchComponent name="stats"     class="org.apache.solr.handler.component.StatsComponent" />
-   <searchComponent name="debug"     class="org.apache.solr.handler.component.DebugComponent" />
-   
-   Default configuration in a requestHandler would look like:
-    <arr name="components">
-      <str>query</str>
-      <str>facet</str>
-      <str>mlt</str>
-      <str>highlight</str>
-      <str>stats</str>
-      <str>debug</str>
-    </arr>
-
-    If you register a searchComponent to one of the standard names, that will be used instead.
-    To insert components before or after the 'standard' components, use:
-    
-    <arr name="first-components">
-      <str>myFirstComponentName</str>
-    </arr>
-    
-    <arr name="last-components">
-      <str>myLastComponentName</str>
-    </arr>
-  -->
 
   <!-- A component to return terms and document frequency of those terms. -->
   <searchComponent name="termsComponent" class="org.apache.solr.handler.component.TermsComponent"/>
@@ -404,7 +333,6 @@
        To enable solr1.1 behavior, remove the /update handler or change its path
     -->
   <requestHandler name="/update" class="solr.XmlUpdateRequestHandler" />
-
 
   <requestHandler name="/update/javabin" class="solr.BinaryUpdateRequestHandler" />
 
@@ -488,140 +416,44 @@
     </lst>
   </requestHandler>
 
-  <!-- Echo the request contents back to the client -->
-  <requestHandler name="/debug/dump" class="solr.DumpRequestHandler" >
-    <lst name="defaults">
-     <str name="echoParams">explicit</str> <!-- for all params (including the default etc) use: 'all' -->
-     <str name="echoHandler">true</str>
-    </lst>
-  </requestHandler>
-	
-  <searchComponent class="solr.HighlightComponent" name="highlight">
-  <highlighting>
-   <!-- Configure the standard fragmenter -->
-   <!-- This could most likely be commented out in the "default" case -->
-   <fragmenter name="gap" class="org.apache.solr.highlight.GapFragmenter" default="true">
-    <lst name="defaults">
-     <int name="hl.fragsize">100</int>
-    </lst>
-   </fragmenter>
-
-   <!-- A regular-expression-based fragmenter (f.i., for sentence extraction) -->
-   <fragmenter name="regex" class="org.apache.solr.highlight.RegexFragmenter">
-    <lst name="defaults">
-      <!-- slightly smaller fragsizes work better because of slop -->
-      <int name="hl.fragsize">70</int>
-      <!-- allow 50% slop on fragment sizes -->
-      <float name="hl.regex.slop">0.5</float>
-      <!-- a basic sentence pattern -->
-      <str name="hl.regex.pattern">[-\w ,/\n\"']{20,200}</str>
-    </lst>
-   </fragmenter>
-
-   <!-- Configure the standard formatter -->
-   <formatter name="html" class="org.apache.solr.highlight.HtmlFormatter" default="true">
-    <lst name="defaults">
-     <str name="hl.simple.pre"><![CDATA[<em>]]></str>
-     <str name="hl.simple.post"><![CDATA[</em>]]></str>
-    </lst>
-   </formatter>
-
-   <!-- Configure the standard fragListBuilder -->
-   <fragListBuilder name="simple" class="org.apache.solr.highlight.SimpleFragListBuilder" default="true"/>
-
-   <!-- multi-colored tag FragmentsBuilder -->
-   <fragmentsBuilder name="colored" class="org.apache.solr.highlight.MultiColoredScoreOrderFragmentsBuilder" default="true"/>
-  </highlighting>
-  </searchComponent>
-
-  <!-- queryResponseWriter plugins... query responses will be written using
-       the writer specified by the 'wt' request parameter matching the name
-       of a registered writer.
-       The "default" writer is the default and will be used if 'wt' is not
-       specified in the request.
-
-       The following response writers are implicitly configured unless
-       overridden...
-
-    <queryResponseWriter name="xml" class="solr.XMLResponseWriter" default="true"/>
-    <queryResponseWriter name="json" class="solr.JSONResponseWriter"/>
-    <queryResponseWriter name="python" class="solr.PythonResponseWriter"/>
-    <queryResponseWriter name="ruby" class="solr.RubyResponseWriter"/>
-    <queryResponseWriter name="php" class="solr.PHPResponseWriter"/>
-    <queryResponseWriter name="phps" class="solr.PHPSerializedResponseWriter"/>
-
-      Custom response writers can be declared as needed...
-    
-    <queryResponseWriter name="custom" class="com.example.MyResponseWriter"/>
-  -->
-
-<!--
-  <queryResponseWriter name="velocity" class="solr.VelocityResponseWriter"/>
--->
-
   <!-- XSLT response writer transforms the XML output by any xslt file found
        in Solr's conf/xslt directory.  Changes to xslt files are checked for
-       every xsltCacheLifetimeSeconds. -->
+       every xsltCacheLifetimeSeconds.  
+   -->
   <queryResponseWriter name="xslt" class="solr.XSLTResponseWriter">
     <int name="xsltCacheLifetimeSeconds">5</int>
   </queryResponseWriter>
 	
-	<!-- Registration of the ntriple query parser -->
-  <queryParser name="ntriple" class="org.sindice.siren.solr.qparser.ntriple.NTripleQParserPlugin"/>
-	
-  <requestHandler name="ntriple" class="solr.StandardRequestHandler">
-     <!-- default values for query parameters -->
-     <lst name="defaults">
-       <str name="echoParams">explicit</str>
-			 <str name="defType">ntriple</str>
-     </lst>
-  </requestHandler>
-  
-	<!-- Registration of the simple query parser. The simple query parser 
-	     receives keyword queries, and expand them to multiple fields.
-	     A list of fields can be defined for expanding the keyword query to all
-			 these fields, using the associated float as boost factor -->
-  <queryParser name="simple" class="org.sindice.siren.solr.qparser.simple.SimpleQParserPlugin">
-    <lst name="fields">
-      <float name="content">1.0</float>
-      <float name="url">4.0</float>
-      <float name="id">10.0</float>
-    </lst>
-    <str name="defaultOperator">AND</str>
-  </queryParser>
-
-  <requestHandler name="simple" class="solr.StandardRequestHandler">
-    <!-- default values for query parameters -->
-     <lst name="defaults">
-       <str name="echoParams">explicit</str>
-       <str name="defType">simple</str>
-     </lst>
-  </requestHandler>
-
-  <!-- Registration of the siren query parser. -->
-  <queryParser name="simple" class="org.sindice.siren.solr.qparser.SirenQParserPlugin">
-    <lst name="fields">
-      <float name="content">1.0</float>
-      <float name="url">4.0</float>
-      <float name="id">10.0</float>
-    </lst>
-  </queryParser>
+  <!-- Example of Registration of the siren query parser. -->
+  <queryParser name="siren" class="org.sindice.siren.solr.SirenQParserPlugin"/>
 
   <requestHandler name="siren" class="solr.StandardRequestHandler">
     <!-- default values for query parameters -->
      <lst name="defaults">
-       <str name="echoParams">explicit</str>
        <str name="defType">siren</str>
+       <str name="echoParams">explicit</str>
+			 <!-- Disable field query in keyword parser -->
+       <str name="disableField">true</str>
+			 <str name="qf">
+         ntriple^1.0 url^1.2
+       </str>
+       <str name="nqf">
+         ntriple^1.0
+       </str>
+       <!-- the NTriple query multi-field operator:
+            - disjunction: the query should match in at least one of the fields
+            - scattered: each Ntriple patterns should match in at least on of the fields
+       -->  
+       <str name="nqfo">scattered</str>
+			 <str name="fl">
+         id
+       </str>
      </lst>
   </requestHandler>
 
   <!-- config for the admin interface -->
   <admin>
     <defaultQuery>solr</defaultQuery>
-
-    <!-- configure a healthcheck file for servers behind a loadbalancer
-    <healthcheck type="file">server-enabled</healthcheck>
-    -->
   </admin>
 
 </config>

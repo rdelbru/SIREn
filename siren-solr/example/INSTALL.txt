@@ -10,46 +10,66 @@ searching RDF data. The search interface is using the n-triples query language.
 
 Basic steps:
   0) Install Tomcat 6
-  1) Configure Solr/Siren webapp
-  2) Copy webapp configuration file to Tomcat
-  3) Start Tomcat
-  4) Load some data
-  5) Run some queries
+  1) Stop tomcat
+  2) Clean previously installed siren
+  3) Configure Solr/Siren webapp
+  4) Copying context file
+  5) Copying SIREn libs
+  6) Change file permissions
+  7) Start tomcat
+  8) Load some data
+  9) Run some queries
 
 0. Install Tomcat 6
 (NB: on Ubuntu, sudo apt-get install tomcat6)
 
-1. Configure Solr/Siren webapp
+1. STOP TOMCAT
+
+- stop your tomcat instance before performing the following steps. 
+
+> /etc/init.d/tomcat6 stop
+
+2. CLEAN PREVIOUSLY INSTALLED SIREN
+
+In order to avoid unexpected conflict with previously deployed Solr webapp,  
+remove siren webapp directory
+> rm -rf $CATALINA_BASE/webapps/siren
+
+3. CONFIGURE SOLR/SIREN WEBAPP
 
 Edit siren.xml to set the path of the war file and SORL_HOME correctly using 
 /your/local/path/siren-solr/example/solr as SOLR_HOME:
 
-2. Copy webapp configuration file to Tomcat
+4. COPYING CONTEXT FILE
 
-Copy siren.xml to $CATALINA_BASE/conf/Catalina/localhost/siren.xml
-
+Copy siren.xml to:
+$CATALINA_BASE/conf/Catalina/localhost/siren.xml
 (NB: you may need to create that folder)
 
-(NB: on Ubuntu, $CATALINA_BASE=/var/lib/tomcat6/)
+5. COPYING SIREN LIBS
 
-3. Start (or restart) Tomcat. 
+Build SIREn and copy siren-core-0.2.1-SNAPSHOT.jar, 
+siren-qparser-0.2.1-SNAPSHOT.jar and siren-solr-0.2.1-SNAPSHOT.jar in 
+SOLR_HOME/lib.
 
-(NB: on Ubuntu, you can start tomcat with the command 
-'sudo /etc/init.d/tomcat6 start'
-or restart it using
-'sudo /etc/init.d/tomcat6 restart')
+6. CHANGE FILE PERMISSIONS
 
-You should be able to access the Solr admin 
-interface at: http://localhost:8080/siren/
+- ensure that tomcat has full file permissions on SOLR_HOME:
 
-(NB: check if tomcat has read and write permissions on $SOLR_HOME/data/,
-otherwise Solr will complain that it cannot create the directory 
-$SOLR_HOME/data/index)
+> chown -R tomcat6:tomcat6 $SOLR_HOME
 
-if problems, see logs:
-$CATALINA_BASE/logs/catalina.out
+7. START TOMCAT
 
-4. Load some data
+- start tomcat
+
+> /etc/init.d/tomcat6 start
+
+- you should be able to access the Solr admin page at 
+  http://localhost:8080/siren/
+  
+- if problems see $CATALINA_BASE/logs/catalina.out
+
+8. LOAD DATA
 
 We provide a script to load three artificial documents.
 To load the three documents, just run the command 
@@ -60,16 +80,16 @@ the counter 'numDocs' equals to 3.
  
 [1] http://localhost:8080/siren/admin/stats.jsp 
 
-5. Run some queries
+9. EXECUTE QUERIES
 
 Go to the query form of the Solr admin interface [2]. Replace 'standard' in the
-field "Query Type" by 'ntriple' to activate the n-triple query parser.
+field "Query Type" by 'siren' to activate the SIREn query parser.
 
 You can now enter one of the following query in the "Solr/Lucene Statement" field:
 Query 1: * <name> 'john AND gartner'
-http://localhost:8080/siren/select?indent=on&q=*+%3Cname%3E+%27john+AND+gartner%27&start=0&rows=10&fl=*%2Cscore&qt=ntriple&wt=standard
+http://localhost:8080/siren/select?indent=on&nq=*+%3Cname%3E+%27john+AND+gartner%27&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
 Query 2: * <workplace> <galway> AND * <type> <student> AND * <age> "26"
-http://localhost:8080/siren/select?indent=on&q=*+%3Cworkplace%3E+%3Cgalway%3E+AND+*+%3Ctype%3E+%3Cstudent%3E+AND+*+%3Cage%3E+%2226%22&start=0&rows=10&fl=*%2Cscore&qt=ntriple&wt=standard
+http://localhost:8080/siren/select?indent=on&nq=*+%3Cworkplace%3E+%3Cgalway%3E+AND+*+%3Ctype%3E+%3Cstudent%3E+AND+*+%3Cage%3E+%2226%22&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
 
 You can also use the shell script 'query.sh' that will execute the two previous
 queries using curl, and will display the result in XML format.

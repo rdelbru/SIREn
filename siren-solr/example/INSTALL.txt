@@ -84,6 +84,9 @@ the counter 'numDocs' equals to 3.
 
 Go to the query form of the Solr admin interface [2]. Replace 'standard' in the
 field "Query Type" by 'siren' to activate the SIREn query parser.
+The Solr admin interface allows only keyword queries. In order to run the
+following ntriple queries, you need to replace "&q" by "&nq" in the address bar
+of your browser.
 
 You can now enter one of the following query in the "Solr/Lucene Statement" field:
 Query 1: * <name> 'john AND gartner'

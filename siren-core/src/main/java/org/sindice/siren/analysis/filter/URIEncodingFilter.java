@@ -38,11 +38,7 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Decode the URI encoding format of special characters such as '?' or '<'; special
-<<<<<<< HEAD
- * characters (excepth of the SPACE that can be encoded with '+') begins with a '%'
-=======
  * characters (except of the SPACE that can be encoded with '+') begins with a '%'
->>>>>>> scampi/sim3
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.

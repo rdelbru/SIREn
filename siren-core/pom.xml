@@ -85,13 +85,21 @@
       <version>${lucene.version}</version>
     </dependency>
 		
-		<dependency>
-		  <groupId>com.google.code.caliper</groupId>
-		  <artifactId>caliper</artifactId>
-		  <version>1.0-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
+    <dependency>
+      <groupId>com.google.code.caliper</groupId>
+      <artifactId>caliper</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
 
+    <!-- This is because Caliper has a dependency on an unexisting SNAPSHOT -->    
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>1.7.1</version>
+      <scope>test</scope>
+    </dependency>
+    
   </dependencies>
 
 </project>

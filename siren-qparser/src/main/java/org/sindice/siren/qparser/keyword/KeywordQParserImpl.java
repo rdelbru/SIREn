@@ -66,7 +66,7 @@ public class KeywordQParserImpl {
       }
     }
     catch (final QueryNodeException e) {
-      throw new ParseException(e.getMessage());
+      throw new ParseException("Invalid keyword query");
     }
   }
 

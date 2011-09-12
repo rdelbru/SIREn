@@ -84,17 +84,24 @@ the counter 'numDocs' equals to 3.
 
 Go to the query form of the Solr admin interface [2]. Replace 'standard' in the
 field "Query Type" by 'siren' to activate the SIREn query parser.
-The Solr admin interface allows only keyword queries. In order to run the
-following ntriple queries, you need to replace "&q" by "&nq" in the address bar
-of your browser.
+The Solr admin interface allows only keyword queries. In order to run a ntriple
+query, you need to replace the parameter "&q" by "&nq" in the address bar of
+your browser.
 
 You can now enter one of the following query in the "Solr/Lucene Statement" field:
-Query 1: * <name> 'john AND gartner'
+- the following is a keyword query (using the parameter "&q"):
+Query 1: galway
+http://localhost:8080/siren/select?indent=on&q=galway&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
+- the following are ntriple queries (using the parameter "&nq"):
+Query 2: * <name> 'john AND gartner'
 http://localhost:8080/siren/select?indent=on&nq=*+%3Cname%3E+%27john+AND+gartner%27&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
-Query 2: * <workplace> <galway> AND * <type> <student> AND * <age> "26"
+Query 3: * <workplace> <galway> AND * <type> <student> AND * <age> "26"
 http://localhost:8080/siren/select?indent=on&nq=*+%3Cworkplace%3E+%3Cgalway%3E+AND+*+%3Ctype%3E+%3Cstudent%3E+AND+*+%3Cage%3E+%2226%22&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
+- the following is a mix of keyword and ntriple query:
+Query 4: galway AND * <type> <student>
+http://localhost:8080/siren/select?indent=on&version=2.2&q=galway&nq=*+%3Ctype%3E+%3Cstudent%3E&fq=&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
 
-You can also use the shell script 'query.sh' that will execute the two previous
+You can also use the shell script 'query.sh' that will execute the four previous
 queries using curl, and will display the result in XML format.
 
 [2] http://localhost:8080/siren/admin/form.jsp

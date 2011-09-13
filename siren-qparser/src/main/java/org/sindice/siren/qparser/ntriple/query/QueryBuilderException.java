@@ -23,7 +23,6 @@ package org.sindice.siren.qparser.ntriple.query;
 
 /**
  * Exception handling with the query builder
- * @version $Id: QueryBuilderException 5 Nov 2010 Campinas Stephane $
  */
 public class QueryBuilderException extends RuntimeException {
 

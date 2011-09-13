@@ -27,6 +27,9 @@ import org.apache.lucene.queryParser.standard.StandardQueryParser;
 import org.sindice.siren.qparser.keyword.config.KeywordQueryConfigHandler;
 import org.sindice.siren.qparser.keyword.query.KeywordQueryNodeProcessorPipeline;
 
+/**
+ * Parse and creates a query of a boolean expression of keyword terms
+ */
 public class KeywordQueryParser
 extends StandardQueryParser {
 

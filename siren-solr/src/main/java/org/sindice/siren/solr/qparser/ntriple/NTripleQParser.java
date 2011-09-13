@@ -45,6 +45,11 @@ import org.sindice.siren.solr.analysis.MultiQueryAnalyzerWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Creates a Ntriple query. The literal and the URI part of the triple pattern
+ * can have their own analyzers. If the #scattered option is true, then the pattern
+ * will be match over multiple Lucene fields.
+ */
 public class NTripleQParser extends QParser {
 
   /**

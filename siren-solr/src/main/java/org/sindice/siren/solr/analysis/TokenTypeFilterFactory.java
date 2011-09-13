@@ -30,6 +30,9 @@ import org.apache.solr.analysis.BaseTokenFilterFactory;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
 
+/**
+ * Filter out tokens of the specified type.
+ */
 public class TokenTypeFilterFactory
 extends BaseTokenFilterFactory {
 

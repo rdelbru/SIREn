@@ -26,6 +26,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Transform input data into a SIREn specific format
+ */
 public class IOUtils {
 
   /**

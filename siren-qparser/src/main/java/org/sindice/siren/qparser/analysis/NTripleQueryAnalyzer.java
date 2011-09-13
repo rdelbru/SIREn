@@ -16,6 +16,12 @@ package org.sindice.siren.qparser.analysis;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/**
+ * @project siren
+ * @author Renaud Delbru [ 21 Jan 2011 ]
+ * @link http://renaud.delbru.fr/
+ * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
+ */
 
 import java.io.IOException;
 import java.io.Reader;

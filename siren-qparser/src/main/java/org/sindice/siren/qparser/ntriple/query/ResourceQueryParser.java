@@ -27,6 +27,7 @@ import org.apache.lucene.queryParser.standard.StandardQueryParser;
 import org.sindice.siren.qparser.ntriple.query.builders.ResourceQueryTreeBuilder;
 import org.sindice.siren.qparser.ntriple.query.processors.ResourceQueryNodeProcessorPipeline;
 
+
 public class ResourceQueryParser extends StandardQueryParser {
 
   /**

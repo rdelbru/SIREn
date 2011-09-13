@@ -1,5 +1,3 @@
-package org.sindice.siren.qparser.ntriple.query.builders;
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -16,6 +14,13 @@ package org.sindice.siren.qparser.ntriple.query.builders;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/**
+ * @project siren
+ * @author Renaud Delbru [ 21 Jan 2011 ]
+ * @link http://renaud.delbru.fr/
+ * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
+ */
+package org.sindice.siren.qparser.ntriple.query.builders;
 
 import java.util.List;
 

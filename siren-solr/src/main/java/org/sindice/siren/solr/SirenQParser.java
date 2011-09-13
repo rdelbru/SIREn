@@ -38,6 +38,9 @@ import org.sindice.siren.solr.qparser.ntriple.NTripleQParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Create a Siren query with the provided solr params
+ */
 public class SirenQParser extends QParser {
 
   protected Map<String, Float> keywordQueryFields;

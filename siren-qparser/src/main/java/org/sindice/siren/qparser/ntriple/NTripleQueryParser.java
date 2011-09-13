@@ -45,6 +45,9 @@ import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Create a Ntriple query from the AST tree
+ */
 public class NTripleQueryParser {
 
   private static final

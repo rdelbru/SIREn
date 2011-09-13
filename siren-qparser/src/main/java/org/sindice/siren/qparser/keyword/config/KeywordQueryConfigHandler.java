@@ -36,6 +36,9 @@ import org.apache.lucene.queryParser.standard.config.MultiTermRewriteMethodAttri
 import org.apache.lucene.queryParser.standard.config.PositionIncrementsAttribute;
 import org.apache.lucene.queryParser.standard.config.RangeCollatorAttribute;
 
+/**
+ * Provide a configuration to keyword query nodes processors
+ */
 public class KeywordQueryConfigHandler
 extends QueryConfigHandler {
 

@@ -26,7 +26,8 @@ import org.apache.solr.analysis.BaseTokenFilterFactory;
 import org.sindice.siren.analysis.filter.MailtoFilter;
 
 /**
- * 
+ * Create a filter that outputs for an URI matching "^mailto:*" two tokens:
+ * one with mailto: removed, the other unchanged
  */
 public class MailtoFilterFactory extends BaseTokenFilterFactory {
 

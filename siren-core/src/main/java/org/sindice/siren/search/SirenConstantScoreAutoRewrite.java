@@ -29,10 +29,11 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.ConstantScoreQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.MultiTermQuery.ConstantScoreAutoRewrite;
 import org.sindice.siren.search.SirenBooleanClause.Occur;
 
 /**
- * 
+ * class copied from {@link ConstantScoreAutoRewrite}
  */
 public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<SirenBooleanQuery> {
 

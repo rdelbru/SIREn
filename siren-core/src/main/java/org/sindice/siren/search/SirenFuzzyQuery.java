@@ -27,12 +27,13 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FilteredTermEnum;
+import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.FuzzyTermEnum;
 import org.apache.lucene.search.SingleTermEnum;
 import org.apache.lucene.util.ToStringUtils;
 
 /**
- * 
+ * Copied from {@link FuzzyQuery} for the siren use case
  */
 public class SirenFuzzyQuery extends SirenMultiTermQuery {
 

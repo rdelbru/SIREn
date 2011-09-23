@@ -33,6 +33,7 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -41,6 +42,7 @@ import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.search.SirenMultiTermQuery.TopTermsBoostOnlySirenBooleanQueryRewrite;
 
 /**
  * Tests {@link SirenSirenFuzzyQuery}.
@@ -334,7 +336,7 @@ public class TestSirenFuzzyQuery {
     directory.close();
   }
   
-  /** Test the TopTermsBoostOnlyBooleanQueryRewrite rewrite method. */
+  /** Test the {@link TopTermsBoostOnlySirenBooleanQueryRewrite} rewrite method. */
   @Test
   public void testBoostOnlyRewrite() throws Exception {
     Directory directory = new RAMDirectory();
@@ -361,43 +363,45 @@ public class TestSirenFuzzyQuery {
     directory.close();
   }
   
-//  public void testGiga() throws Exception {
-//
-//    Directory directory = new RAMDirectory();
-//    final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31));
-//    IndexWriter w = new IndexWriter(directory, conf);
-//
-//    addDoc("Lucene in Action", w);
-//    addDoc("Lucene for Dummies", w);
-//
-//    //addDoc("Giga", w);
-//    addDoc("Giga byte", w);
-//
-//    addDoc("ManagingGigabytesManagingGigabyte", w);
-//    addDoc("ManagingGigabytesManagingGigabytes", w);
-//
-//    addDoc("The Art of Computer Science", w);
-//    addDoc("J. K. Rowling", w);
-//    addDoc("JK Rowling", w);
-//    addDoc("Joanne K Roling", w);
-//    addDoc("Bruce Willis", w);
-//    addDoc("Willis bruce", w);
-//    addDoc("Brute willis", w);
-//    addDoc("B. willis", w);
-//    IndexReader r = IndexReader.open(directory);
-//    w.close();
-//
-//    Query q = new QueryParser(TEST_VERSION_CURRENT, "field", analyzer).parse( "giga~0.9" );
-//
-//    // 3. search
-//    IndexSearcher searcher = new IndexSearcher(directory);
-//    ScoreDoc[] hits = searcher.search(q, 10).scoreDocs;
-//    assertEquals(1, hits.length);
-//    assertEquals(getTriple("Giga byte"), searcher.doc(hits[0].doc).get("field"));
-//    searcher.close();
-//    r.close();
-//    directory.close();
-//  }
+  @Test
+  public void testGiga() throws Exception {
+    
+    StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_31);
+    Directory directory = new RAMDirectory();
+    final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31));
+    IndexWriter w = new IndexWriter(directory, conf);
+
+    addDoc("Lucene in Action", w);
+    addDoc("Lucene for Dummies", w);
+
+    //addDoc("Giga", w);
+    addDoc("Giga byte", w);
+
+    addDoc("ManagingGigabytesManagingGigabyte", w);
+    addDoc("ManagingGigabytesManagingGigabytes", w);
+
+    addDoc("The Art of Computer Science", w);
+    addDoc("J. K. Rowling", w);
+    addDoc("JK Rowling", w);
+    addDoc("Joanne K Roling", w);
+    addDoc("Bruce Willis", w);
+    addDoc("Willis bruce", w);
+    addDoc("Brute willis", w);
+    addDoc("B. willis", w);
+    IndexReader r = IndexReader.open(directory);
+    w.close();
+
+    Query q = new QueryParser(Version.LUCENE_31, "field", analyzer).parse( "giga~0.9" );
+
+    // 3. search
+    IndexSearcher searcher = new IndexSearcher(directory);
+    ScoreDoc[] hits = searcher.search(q, 10).scoreDocs;
+    assertEquals(1, hits.length);
+    assertEquals(getTriple("Giga byte"), searcher.doc(hits[0].doc).get("field"));
+    searcher.close();
+    r.close();
+    directory.close();
+  }
 
   private String getTriple(String text) {
     return "<http://fake.doc> <http://foaf.fake> \"" + text + "\" .\n";

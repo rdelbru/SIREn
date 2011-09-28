@@ -1,18 +1,22 @@
 /**
- * Copyright 2011, Campinas Stephane
+ * Copyright (c) 2009-2011 Sindice Limited. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Project and contact information: http://www.siren.sindice.com/
  *
- *    http://www.apache.org/licenses/LICENSE-2.0
+ * This file is part of the SIREn project.
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * SIREn is a free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of
+ * the License, or (at your option) any later version.
+ *
+ * SIREn is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public
+ * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
  * @project siren-core_rdelbru
@@ -30,7 +34,6 @@ import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.FilteredTermEnum;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.MultiTermQuery;
-import org.apache.lucene.search.MultiTermQuery.TopTermsScoringBooleanQueryRewrite;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.Weight;
@@ -59,8 +62,8 @@ import org.sindice.siren.search.SirenBooleanClause.Occur;
  * #CONSTANT_SCORE_AUTO_REWRITE_DEFAULT}: it doesn't spend CPU
  * computing unhelpful scores, and it tries to pick the most
  * performant rewrite method given the query. If you
- * need scoring (like {@link FuzzyQuery}, use
- * {@link TopTermsScoringBooleanQueryRewrite} which uses
+ * need scoring (like {@link SirenFuzzyQuery}, use
+ * {@link TopTermsScoringSirenBooleanQueryRewrite} which uses
  * a priority queue to only collect competitive terms
  * and not hit this limitation.
  *

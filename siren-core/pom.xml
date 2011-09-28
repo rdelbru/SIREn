@@ -85,6 +85,13 @@
       <version>${lucene.version}</version>
     </dependency>
 		
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-test-framework</artifactId>
+      <version>${lucene.version}</version>
+			<scope>test</scope>
+    </dependency>
+		
 		<dependency>
 		  <groupId>com.google.code.caliper</groupId>
 		  <artifactId>caliper</artifactId>
@@ -98,6 +105,7 @@
       <version>1.7.1</version>
       <scope>test</scope>
     </dependency>
+		
   </dependencies>
 
 </project>

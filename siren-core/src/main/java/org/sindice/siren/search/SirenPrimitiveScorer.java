@@ -27,6 +27,7 @@
 package org.sindice.siren.search;
 
 import org.apache.lucene.search.Similarity;
+import org.apache.lucene.search.Weight;
 
 /**
  * Abstract class for the SIREn primitive scorers
@@ -36,6 +37,10 @@ extends SirenScorer {
 
   protected SirenPrimitiveScorer(final Similarity similarity) {
     super(similarity);
+  }
+
+  protected SirenPrimitiveScorer(final Similarity similarity, final Weight weight) {
+    super(similarity, weight);
   }
 
 }

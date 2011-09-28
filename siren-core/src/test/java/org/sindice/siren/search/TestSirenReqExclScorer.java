@@ -101,16 +101,16 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
   }
 
   @Test
@@ -126,7 +126,7 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
 
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
 
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(1, scorer.entity());
@@ -135,12 +135,12 @@ extends AbstractTestSirenScorer {
 
     // here, the prohibited scorer should be set to null (exhausted), let see
     // if there is a null pointer exception somewhere
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
 
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
 
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }
@@ -158,20 +158,20 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(0, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }
 
@@ -189,25 +189,25 @@ extends AbstractTestSirenScorer {
     assertEquals(16, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(16, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(2, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS); // should match two times (two positions in the cell)
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS); // should match two times (two positions in the cell)
     assertEquals(16, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(2, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(18, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.advance(40, 1) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(40, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(2, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS); // should match two times (two positions in the cell)
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS); // should match two times (two positions in the cell)
     assertEquals(40, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(2, scorer.cell());
@@ -233,21 +233,21 @@ extends AbstractTestSirenScorer {
     assertEquals(32, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(32, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.advance(40, 1) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(40, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.advance(52, 1, 0) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(52, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.advance(53, 0, 1) == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(53, scorer.entity());
     assertEquals(0, scorer.tuple());

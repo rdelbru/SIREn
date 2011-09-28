@@ -1,21 +1,25 @@
 /**
- * Copyright 2011, Campinas Stephane
+ * Copyright (c) 2009-2011 Sindice Limited. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Project and contact information: http://www.siren.sindice.com/
  *
- *    http://www.apache.org/licenses/LICENSE-2.0
+ * This file is part of the SIREn project.
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * SIREn is a free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of
+ * the License, or (at your option) any later version.
+ *
+ * SIREn is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public
+ * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @project siren-core_rdelbru
+ * @project siren-core
  * @author Campinas Stephane [ 21 Sep 2011 ]
  * @link stephane.campinas@deri.org
  */
@@ -29,30 +33,43 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FilteredTermEnum;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.FuzzyTermEnum;
+import org.apache.lucene.search.MultiTermQuery;
 import org.apache.lucene.search.SingleTermEnum;
 import org.apache.lucene.util.ToStringUtils;
 
 /**
- * Copied from {@link FuzzyQuery} for the siren use case
+ * Implements the fuzzy search query. The similarity measurement
+ * is based on the Levenshtein (edit distance) algorithm.
+ *
+ * <p><em>Warning:</em> this query is not very scalable with its default prefix
+ * length of 0 - in this case, *every* term will be enumerated and
+ * cause an edit score calculation.
+ *
+ * <p>This query uses {@link MultiTermQuery.TopTermsScoringBooleanQueryRewrite}
+ * as default. So terms will be collected and scored according to their
+ * edit distance. Only the top terms are used for building the {@link BooleanQuery}.
+ * It is not recommended to change the rewrite mode for fuzzy queries.
+ *
+ * <p> Code taken from {@link FuzzyQuery} and adapted for SIREn.
  */
 public class SirenFuzzyQuery extends SirenMultiTermQuery {
 
   public final static float   defaultMinSimilarity  = 0.5f;
   public final static int     defaultPrefixLength   = 0;
   public final static int     defaultMaxExpansions  = Integer.MAX_VALUE;
-  
-  private float               minimumSimilarity;
-  private int                 prefixLength;
+
+  private final float               minimumSimilarity;
+  private final int                 prefixLength;
   private boolean             termLongEnough        = false;
-  
+
   protected Term              term;
-  
+
   /**
-   * Create a new SirenFuzzyQuery that will match terms with a similarity 
+   * Create a new SirenFuzzyQuery that will match terms with a similarity
    * of at least <code>minimumSimilarity</code> to <code>term</code>.
    * If a <code>prefixLength</code> &gt; 0 is specified, a common prefix
    * of that length is also required.
-   * 
+   *
    * @param term the term to search for
    * @param minimumSimilarity a value between 0 and 1 to set the required similarity
    *  between the query term and the matching terms. For example, for a
@@ -61,14 +78,14 @@ public class SirenFuzzyQuery extends SirenMultiTermQuery {
    *  between both terms is less than <code>length(term)*0.5</code>
    * @param prefixLength length of common (non-fuzzy) prefix
    * @param maxExpansions the maximum number of terms to match. If this number is
-   *  greater than {@link BooleanQuery#getMaxClauseCount} when the query is rewritten, 
+   *  greater than {@link BooleanQuery#getMaxClauseCount} when the query is rewritten,
    *  then the maxClauseCount will be used instead.
    * @throws IllegalArgumentException if minimumSimilarity is &gt;= 1 or &lt; 0
    * or if prefixLength &lt; 0
    */
-  public SirenFuzzyQuery(Term term, float minimumSimilarity, int prefixLength, int maxExpansions) {
+  public SirenFuzzyQuery(final Term term, final float minimumSimilarity, final int prefixLength, final int maxExpansions) {
     this.term = term;
-    
+
     if (minimumSimilarity >= 1.0f)
       throw new IllegalArgumentException("minimumSimilarity >= 1");
     else if (minimumSimilarity < 0.0f)
@@ -77,38 +94,38 @@ public class SirenFuzzyQuery extends SirenMultiTermQuery {
       throw new IllegalArgumentException("prefixLength < 0");
     if (maxExpansions < 0)
       throw new IllegalArgumentException("maxExpansions < 0");
-    
-    setRewriteMethod(new SirenMultiTermQuery.TopTermsScoringSirenBooleanQueryRewrite(maxExpansions));
-    
+
+    this.setRewriteMethod(new SirenMultiTermQuery.TopTermsScoringSirenBooleanQueryRewrite(maxExpansions));
+
     if (term.text().length() > 1.0f / (1.0f - minimumSimilarity)) {
       this.termLongEnough = true;
     }
-    
+
     this.minimumSimilarity = minimumSimilarity;
     this.prefixLength = prefixLength;
   }
-  
+
   /**
    * Calls {@link #SirenFuzzyQuery(Term, float) SirenFuzzyQuery(term, minimumSimilarity, prefixLength, Integer.MAX_VALUE)}.
    */
-  public SirenFuzzyQuery(Term term, float minimumSimilarity, int prefixLength) {
+  public SirenFuzzyQuery(final Term term, final float minimumSimilarity, final int prefixLength) {
     this(term, minimumSimilarity, prefixLength, defaultMaxExpansions);
   }
-  
+
   /**
    * Calls {@link #SirenFuzzyQuery(Term, float) SirenFuzzyQuery(term, minimumSimilarity, 0, Integer.MAX_VALUE)}.
    */
-  public SirenFuzzyQuery(Term term, float minimumSimilarity) {
+  public SirenFuzzyQuery(final Term term, final float minimumSimilarity) {
     this(term, minimumSimilarity, defaultPrefixLength, defaultMaxExpansions);
   }
 
   /**
    * Calls {@link #SirenFuzzyQuery(Term, float) SirenFuzzyQuery(term, 0.5f, 0, Integer.MAX_VALUE)}.
    */
-  public SirenFuzzyQuery(Term term) {
+  public SirenFuzzyQuery(final Term term) {
     this(term, defaultMinSimilarity, defaultPrefixLength, defaultMaxExpansions);
   }
-  
+
   /**
    * Returns the minimum similarity that is required for this query to match.
    * @return float value between 0.0 and 1.0
@@ -116,33 +133,33 @@ public class SirenFuzzyQuery extends SirenMultiTermQuery {
   public float getMinSimilarity() {
     return minimumSimilarity;
   }
-    
+
   /**
    * Returns the non-fuzzy prefix length. This is the number of characters at the start
    * of a term that must be identical (not fuzzy) to the query term if the query
-   * is to match that term. 
+   * is to match that term.
    */
   public int getPrefixLength() {
     return prefixLength;
   }
 
   @Override
-  protected FilteredTermEnum getEnum(IndexReader reader) throws IOException {
+  protected FilteredTermEnum getEnum(final IndexReader reader) throws IOException {
     if (!termLongEnough) {  // can only match if it's exact
       return new SingleTermEnum(reader, term);
     }
-    return new FuzzyTermEnum(reader, getTerm(), minimumSimilarity, prefixLength);
+    return new FuzzyTermEnum(reader, this.getTerm(), minimumSimilarity, prefixLength);
   }
-  
+
   /**
    * Returns the pattern term.
    */
   public Term getTerm() {
     return term;
   }
-    
+
   @Override
-  public String toString(String field) {
+  public String toString(final String field) {
     final StringBuilder buffer = new StringBuilder();
     if (!term.field().equals(field)) {
         buffer.append(term.field());
@@ -151,10 +168,10 @@ public class SirenFuzzyQuery extends SirenMultiTermQuery {
     buffer.append(term.text());
     buffer.append('~');
     buffer.append(Float.toString(minimumSimilarity));
-    buffer.append(ToStringUtils.boost(getBoost()));
+    buffer.append(ToStringUtils.boost(this.getBoost()));
     return buffer.toString();
   }
-  
+
   @Override
   public int hashCode() {
     final int prime = 31;
@@ -166,14 +183,14 @@ public class SirenFuzzyQuery extends SirenMultiTermQuery {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     if (this == obj)
       return true;
     if (!super.equals(obj))
       return false;
-    if (getClass() != obj.getClass())
+    if (this.getClass() != obj.getClass())
       return false;
-    SirenFuzzyQuery other = (SirenFuzzyQuery) obj;
+    final SirenFuzzyQuery other = (SirenFuzzyQuery) obj;
     if (Float.floatToIntBits(minimumSimilarity) != Float
         .floatToIntBits(other.minimumSimilarity))
       return false;

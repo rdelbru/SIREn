@@ -22,7 +22,6 @@
  * @project siren
  * @author Renaud Delbru [ 9 Dec 2009 ]
  * @link http://renaud.delbru.fr/
- * @copyright Copyright (C) 2009 by Renaud Delbru, All rights reserved.
  */
 package org.sindice.siren.search;
 
@@ -31,10 +30,10 @@ import java.io.IOException;
 import org.apache.lucene.search.DocIdSetIterator;
 
 /**
- * Interface for the SirenScorer that extends the functionalities of
+ * Interface that extends the functionalities of
  * {@link DocIdSetIterator} for the SIREn use case.
  */
-public interface SirenIdIterator {
+public interface DocTupCelIdSetIterator {
 
   /**
    * When returned by {@link #nextPosition()} it means there are no more
@@ -47,7 +46,7 @@ public interface SirenIdIterator {
    * there is such an entity identifier.
    * <p> Move the tuple, cell and pos pointer to the first position [SRN-24].
    **/
-  public abstract int nextDoc() throws IOException;
+  public int nextDoc() throws IOException;
 
   /**
    * Move to the next tuple, cell and position in the current entity matching
@@ -58,7 +57,7 @@ public interface SirenIdIterator {
    * @return false iff there is no more tuple, cell and position for the current
    * entity.
    */
-  public abstract int nextPosition() throws IOException;
+  public int nextPosition() throws IOException;
 
   /** Skips to the first match (including the current) whose
    * is greater than or equal to a given entity.

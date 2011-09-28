@@ -42,8 +42,8 @@ import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
 
 public class TestSirenTermQuery {
 
@@ -52,7 +52,7 @@ public class TestSirenTermQuery {
   @Before
   public void setUp()
   throws Exception {
-    final DeltaTupleAnalyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
     analyzer.setURINormalisation(URINormalisation.FULL);
     _helper = new QueryTestingHelper(analyzer);
   }
@@ -156,7 +156,7 @@ public class TestSirenTermQuery {
     // Explain entity 0
     Explanation explanation = w.explain(reader, 0);
     assertNotNull("explanation is null and it shouldn't be", explanation);
-    System.out.println("Explanation: " + explanation.toString());
+    // System.out.println("Explanation: " + explanation.toString());
     //All this Explain does is return the term frequency
     assertEquals("term frq is not 1", 1f, explanation.getDetails()[0].getValue(), 0f);
 

@@ -48,8 +48,8 @@ import org.apache.lucene.util.ToStringUtils;
 /**
  * A Query that matches a boolean combination of term
  * queries, e.g. {@link SirenTermQuery}s or {@link SirenPhraseQuery}s.
- * <p>
- * Code taken from {@link BooleanQuery} and adapted for the Siren use case.
+ *
+ * <p> Code taken from {@link BooleanQuery} and adapted for the Siren use case.
  */
 public class SirenBooleanQuery
 extends SirenPrimitiveQuery {

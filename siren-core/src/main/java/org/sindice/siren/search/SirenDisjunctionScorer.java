@@ -163,7 +163,7 @@ extends SirenScorer {
    * @return true if more matching documents may remain.
    */
   @Override
-  protected boolean score(final Collector collector, final int max, final int firstDocID)
+  public boolean score(final Collector collector, final int max, final int firstDocID)
   throws IOException {
     // firstDocID is ignored since nextDoc() sets 'currentDoc'
     collector.setScorer(this);

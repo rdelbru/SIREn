@@ -31,7 +31,7 @@ import java.io.IOException;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermEnum;
 import org.apache.lucene.index.TermPositions;
-import org.sindice.siren.search.SirenIdIterator;
+import org.sindice.siren.search.DocTupCelIdSetIterator;
 
 /**
  * Decorator of the {@link TermPositions} class that implements all the logic
@@ -194,7 +194,7 @@ public class SirenTermPositions implements TermPositions {
       return pos;
     }
 
-    return SirenIdIterator.NO_MORE_POS;
+    return DocTupCelIdSetIterator.NO_MORE_POS;
   }
 
   /** Skips to the first match (including the current) whose

@@ -24,7 +24,7 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2009 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.analysis;
+package org.sindice.siren.analysis.bench;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,10 +40,9 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.MailtoFilter;
-import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
+import org.sindice.siren.analysis.TupleTokenizer;
+import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.URIEncodingFilter;
 import org.sindice.siren.analysis.filter.URILocalnameFilter;
 import org.sindice.siren.analysis.filter.URINormalisationFilter;
 import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
@@ -63,7 +62,7 @@ import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
  * the WhitespaceTupleAnalyzer. If you are not indexing RDF data, consider to
  * use the WhitespaceTupleAnalyzer instead.
  */
-public class DeltaTupleAnalyzer
+public class NoDeltaTupleAnalyzer
 extends Analyzer {
 
   public enum URINormalisation {NONE, LOCALNAME, FULL};
@@ -82,14 +81,14 @@ extends Analyzer {
   /**
    * Builds an analyzer with the default stop words ({@link #STOP_WORDS}).
    */
-  public DeltaTupleAnalyzer(final Analyzer literalAnalyzer) {
+  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer) {
     this(literalAnalyzer, STOP_WORDS);
   }
 
   /**
    * Builds an analyzer with the given stop words.
    */
-  public DeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Set<?> stopWords) {
+  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Set<?> stopWords) {
     this.literalAnalyzer = literalAnalyzer;
     stopSet = stopWords;
   }
@@ -97,7 +96,7 @@ extends Analyzer {
   /**
    * Builds an analyzer with the given stop words.
    */
-  public DeltaTupleAnalyzer(final Analyzer literalAnalyzer, final String[] stopWords) {
+  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final String[] stopWords) {
     this.literalAnalyzer = literalAnalyzer;
     stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
   }
@@ -107,7 +106,7 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(File)
    */
-  public DeltaTupleAnalyzer(final Analyzer literalAnalyzer, final File stopwords) throws IOException {
+  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final File stopwords) throws IOException {
     this.literalAnalyzer = literalAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
@@ -117,7 +116,7 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(Reader)
    */
-  public DeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Reader stopwords) throws IOException {
+  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Reader stopwords) throws IOException {
     this.literalAnalyzer = literalAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
@@ -138,13 +137,11 @@ extends Analyzer {
                                                                 TupleTokenizer.DATATYPE,
                                                                 TupleTokenizer.LANGUAGE});
     result = new StandardFilter(Version.LUCENE_31, result);
-    result = new URIEncodingFilter(result, "UTF-8");
     result = this.applyURINormalisation(result);
-    result = new MailtoFilter(result);
     result = new LowerCaseFilter(Version.LUCENE_31, result);
     result = new StopFilter(Version.LUCENE_31, result, stopSet);
     result = new LengthFilter(result, 2, 256);
-    result = new SirenDeltaPayloadFilter(result);
+    result = new SirenPayloadFilter(result);
     return result;
   }
 
@@ -159,13 +156,11 @@ extends Analyzer {
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT,
                    TupleTokenizer.DATATYPE, TupleTokenizer.LANGUAGE});
       streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new URIEncodingFilter(streams.filteredTokenStream, "UTF-8");
       streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
-      streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
       streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
       streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
-      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
+      streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);
     }

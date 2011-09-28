@@ -37,9 +37,9 @@ import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer;
+import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.search.QueryTestingHelper;
-import org.sindice.siren.search.SirenIdIterator;
+import org.sindice.siren.search.DocTupCelIdSetIterator;
 
 public class TestSirenTermPositions {
 
@@ -48,7 +48,7 @@ public class TestSirenTermPositions {
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
   }
 
   @After
@@ -79,7 +79,7 @@ public class TestSirenTermPositions {
     assertEquals(0, termPositions.pos());
 
     // end of the list, should return NO_MORE_POS
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test
@@ -106,7 +106,7 @@ public class TestSirenTermPositions {
     assertEquals(2, termPositions.pos());
 
     // end of the list, should return NO_MORE_POS
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test
@@ -139,7 +139,7 @@ public class TestSirenTermPositions {
     assertEquals(2, termPositions.pos());
 
     // end of the list, should return NO_MORE_POS
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test
@@ -176,7 +176,7 @@ public class TestSirenTermPositions {
     assertEquals(5, termPositions.pos());
 
     // end of the list, should return NO_MORE_POS
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test
@@ -321,7 +321,7 @@ public class TestSirenTermPositions {
     for (int i = 0; i < termPositions.freq(); i++) {
       assertEquals(i, termPositions.nextPosition());
     }
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test
@@ -350,7 +350,7 @@ public class TestSirenTermPositions {
     assertEquals(3, termPositions.pos());
 
     // end of the list, should return NO_MORE_POS
-    assertEquals(SirenIdIterator.NO_MORE_POS, termPositions.nextPosition());
+    assertEquals(DocTupCelIdSetIterator.NO_MORE_POS, termPositions.nextPosition());
   }
 
   @Test

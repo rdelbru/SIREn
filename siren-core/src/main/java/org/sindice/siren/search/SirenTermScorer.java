@@ -89,7 +89,7 @@ extends SirenPrimitiveScorer {
 
   // firstDocID is ignored since nextDoc() sets 'doc'
   @Override
-  protected boolean score(final Collector c, final int end, final int firstDocID) throws IOException {
+  public boolean score(final Collector c, final int end, final int firstDocID) throws IOException {
     c.setScorer(this);
     while (entity < end) {                           // for docs in window
       c.collect(entity);                             // collect score

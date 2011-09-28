@@ -60,7 +60,7 @@ extends SirenScorer {
    *          The optional scorer. This is used for scoring only.
    */
   public SirenReqOptScorer(final SirenScorer reqScorer, final SirenScorer optScorer) {
-    super(null); // No similarity used.
+    super(null, null); // No similarity used.
     this.reqScorer = reqScorer;
     this.optScorer = optScorer;
   }

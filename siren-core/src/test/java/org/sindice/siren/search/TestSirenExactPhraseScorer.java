@@ -225,13 +225,13 @@ extends AbstractTestSirenScorer {
     assertEquals(-1, scorer.dataset());
     assertEquals(0, scorer.pos());
 
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.tuple());
     assertEquals(0, scorer.cell());
     assertEquals(-1, scorer.dataset());
     assertEquals(2, scorer.pos());
 
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
   }
 
   @Test
@@ -294,13 +294,13 @@ extends AbstractTestSirenScorer {
     assertEquals(2, scorer.pos());
 
     // Should not return match in first tuple (tuple 0)
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
     assertEquals(-1, scorer.dataset());
     assertEquals(4, scorer.pos());
 
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
   }
 
 

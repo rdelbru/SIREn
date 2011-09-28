@@ -46,8 +46,8 @@ import org.apache.lucene.search.Weight;
 import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
 
 public abstract class AbstractTestSirenScorer {
 
@@ -56,7 +56,7 @@ public abstract class AbstractTestSirenScorer {
   @Before
   public void setUp()
   throws Exception {
-    final DeltaTupleAnalyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
     analyzer.setURINormalisation(URINormalisation.FULL);
     _helper = new QueryTestingHelper(analyzer);
   }
@@ -127,12 +127,12 @@ public abstract class AbstractTestSirenScorer {
             assertEquals(expectedPos[index], scorer.pos());
             index++;
             if (k < expectedNumCells[j] - 1)
-              assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+              assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
           }
           if (j < expectedNumTuples[i] - 1)
-            assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+            assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
         }
-        assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+        assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
       }
     }
   }

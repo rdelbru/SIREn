@@ -132,13 +132,13 @@ public class TestSirenTermScorer extends AbstractTestSirenScorer {
     assertEquals(3, scorer.pos());
 
     // Should not return match in first tuple (tuple 0)
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
     assertEquals(-1, scorer.dataset());
     assertEquals(5, scorer.pos());
 
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
   }
 
 

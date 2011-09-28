@@ -35,7 +35,7 @@ import org.sindice.siren.index.SirenTermPositions;
 /**
  * Code taken from {@link PhrasePositions} and adapted for the Siren use case.
  */
-class SirenPhrasePositions implements SirenIdIterator {
+class SirenPhrasePositions implements DocTupCelIdSetIterator {
 
   /**
    * Flag to know if {@link #advance(int, int)} or {@link #advance(int, int, int)}

@@ -34,7 +34,6 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.analysis.WhitespaceTupleAnalyzer;
 import org.sindice.siren.bench.SirenBenchmark;
@@ -72,7 +71,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+      final Analyzer analyzer = new NoDeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -81,7 +80,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeDeltaTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+      final Analyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
       counter += this.performAnalysis(analyzer);
     }
     return counter;

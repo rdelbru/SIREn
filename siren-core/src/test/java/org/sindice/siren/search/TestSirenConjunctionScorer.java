@@ -186,15 +186,15 @@ extends AbstractTestSirenScorer {
     assertEquals(0, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(0, scorer.entity());
     assertEquals(2, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(0, scorer.entity());
     assertEquals(3, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }
 
@@ -217,16 +217,16 @@ extends AbstractTestSirenScorer {
     assertEquals(1, scorer.entity());
     assertEquals(2, scorer.tuple());
     assertEquals(0, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertFalse(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
     assertEquals(2, scorer.entity());
     assertEquals(0, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertFalse(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertFalse(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertEquals(2, scorer.entity());
     assertEquals(1, scorer.tuple());
     assertEquals(1, scorer.cell());
-    assertTrue(scorer.nextPosition() == SirenIdIterator.NO_MORE_POS);
+    assertTrue(scorer.nextPosition() == DocTupCelIdSetIterator.NO_MORE_POS);
     assertTrue(scorer.nextDoc() == DocIdSetIterator.NO_MORE_DOCS);
   }
 

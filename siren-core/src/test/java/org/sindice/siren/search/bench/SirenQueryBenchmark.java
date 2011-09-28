@@ -29,7 +29,7 @@ import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.DeltaTupleAnalyzer;
+import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.bench.SirenBenchmark;
 import org.sindice.siren.search.QueryTestingHelper;
 import org.sindice.siren.search.SirenCellQuery;
@@ -48,7 +48,7 @@ public class SirenQueryBenchmark extends SirenBenchmark {
   @Override
   protected void setUp() throws Exception {
     rand.setSeed(42);
-    _helper = new QueryTestingHelper(new DeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
     this.prepareIndex();
   }
 

@@ -40,8 +40,10 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.SirenPayloadFilter;
+import org.sindice.siren.analysis.filter.MailtoFilter;
+import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
+import org.sindice.siren.analysis.filter.URIEncodingFilter;
 import org.sindice.siren.analysis.filter.URILocalnameFilter;
 import org.sindice.siren.analysis.filter.URINormalisationFilter;
 import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
@@ -136,11 +138,13 @@ extends Analyzer {
                                                                 TupleTokenizer.DATATYPE,
                                                                 TupleTokenizer.LANGUAGE});
     result = new StandardFilter(Version.LUCENE_31, result);
+    result = new URIEncodingFilter(result, "UTF-8");
     result = this.applyURINormalisation(result);
+    result = new MailtoFilter(result);
     result = new LowerCaseFilter(Version.LUCENE_31, result);
     result = new StopFilter(Version.LUCENE_31, result, stopSet);
     result = new LengthFilter(result, 2, 256);
-    result = new SirenPayloadFilter(result);
+    result = new SirenDeltaPayloadFilter(result);
     return result;
   }
 
@@ -155,11 +159,13 @@ extends Analyzer {
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT,
                    TupleTokenizer.DATATYPE, TupleTokenizer.LANGUAGE});
       streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
+      streams.filteredTokenStream = new URIEncodingFilter(streams.filteredTokenStream, "UTF-8");
       streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
+      streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
       streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
       streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
-      streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
+      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);
     }

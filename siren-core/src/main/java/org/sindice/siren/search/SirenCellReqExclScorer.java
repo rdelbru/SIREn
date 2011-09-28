@@ -62,7 +62,7 @@ extends SirenScorer {
    */
   public SirenCellReqExclScorer(final SirenScorer reqScorer,
                                 final SirenScorer exclScorer) {
-    super(null); // No similarity used.
+    super(null, null); // No similarity used.
     this.reqScorer = reqScorer;
     this.exclScorer = exclScorer;
   }

@@ -27,24 +27,20 @@ import java.util.ArrayList;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.ConstantScoreQuery;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.search.MultiTermQuery.ConstantScoreAutoRewrite;
+import org.apache.lucene.search.Query;
 import org.sindice.siren.search.SirenBooleanClause.Occur;
 
 /**
- * class copied from {@link ConstantScoreAutoRewrite}
+ * Code taken from {@link ConstantScoreAutoRewrite} and adapted for SIREn.
  */
 public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<SirenBooleanQuery> {
 
-  // Defaults derived from rough tests with a 20.0 million
-  // doc Wikipedia index.  With more than 350 terms in the
-  // query, the filter method is fastest:
-  public static int DEFAULT_TERM_COUNT_CUTOFF = 350;
+  // Term cutoff deactivated until a efficient filter-based approach is found
+  public static int DEFAULT_TERM_COUNT_CUTOFF = Integer.MAX_VALUE;
 
-  // If the query will hit more than 1 in 1000 of the docs
-  // in the index (0.1%), the filter method is fastest:
-  public static double DEFAULT_DOC_COUNT_PERCENT = 0.1;
+  // Document cutoff deactivated until a efficient filter-based approach is found
+  public static double DEFAULT_DOC_COUNT_PERCENT = 200;
 
   private int termCountCutoff = DEFAULT_TERM_COUNT_CUTOFF;
   private double docCountPercent = DEFAULT_DOC_COUNT_PERCENT;
@@ -52,7 +48,7 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
   /** If the number of terms in this query is equal to or
    *  larger than this setting then {@link
    *  #CONSTANT_SCORE_FILTER_REWRITE} is used. */
-  public void setTermCountCutoff(int count) {
+  public void setTermCountCutoff(final int count) {
     termCountCutoff = count;
   }
 
@@ -66,7 +62,7 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
    *  maxDoc() for the index, then {@link
    *  #CONSTANT_SCORE_FILTER_REWRITE} is used.
    *  @param percent 0.0 to 100.0 */
-  public void setDocCountPercent(double percent) {
+  public void setDocCountPercent(final double percent) {
     docCountPercent = percent;
   }
 
@@ -79,9 +75,9 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
   protected SirenBooleanQuery getTopLevelQuery() {
     return new SirenBooleanQuery(true);
   }
-  
+
   @Override
-  protected void addClause(SirenBooleanQuery topLevel, Term term, float boost /*ignored*/) {
+  protected void addClause(final SirenBooleanQuery topLevel, final Term term, final float boost /*ignored*/) {
     topLevel.add(new SirenTermQuery(term), Occur.SHOULD);
   }
 
@@ -96,36 +92,36 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
     final int termCountLimit = Math.min(BooleanQuery.getMaxClauseCount(), termCountCutoff);
 
     final CutOffTermCollector col = new CutOffTermCollector(reader, docCountCutoff, termCountLimit);
-    collectTerms(reader, query, col);
-    
+    this.collectTerms(reader, query, col);
+
     if (col.hasCutOff) {
       return SirenMultiTermQuery.CONSTANT_SCORE_FILTER_REWRITE.rewrite(reader, query);
     } else {
       final Query result;
       if (col.pendingTerms.isEmpty()) {
-        result = getTopLevelQuery();
+        result = this.getTopLevelQuery();
       } else {
-        SirenBooleanQuery bq = getTopLevelQuery();
-        for(Term term : col.pendingTerms) {
-          addClause(bq, term, 1.0f);
+        final SirenBooleanQuery bq = this.getTopLevelQuery();
+        for(final Term term : col.pendingTerms) {
+          this.addClause(bq, term, 1.0f);
         }
         // Strip scores
-        result = new ConstantScoreQuery(bq);
+        result = new SirenConstantScoreQuery(bq);
         result.setBoost(query.getBoost());
       }
       query.incTotalNumberOfTerms(col.pendingTerms.size());
       return result;
     }
   }
-  
+
   private static final class CutOffTermCollector implements TermCollector {
-    CutOffTermCollector(IndexReader reader, int docCountCutoff, int termCountLimit) {
+    CutOffTermCollector(final IndexReader reader, final int docCountCutoff, final int termCountLimit) {
       this.reader = reader;
       this.docCountCutoff = docCountCutoff;
       this.termCountLimit = termCountLimit;
     }
-  
-    public boolean collect(Term t, float boost) throws IOException {
+
+    public boolean collect(final Term t, final float boost) throws IOException {
       pendingTerms.add(t);
       // Loading the TermInfo from the terms dict here
       // should not be costly, because 1) the
@@ -138,10 +134,10 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
       }
       return true;
     }
-    
+
     int docVisitCount = 0;
     boolean hasCutOff = false;
-    
+
     final IndexReader reader;
     final int docCountCutoff, termCountLimit;
     final ArrayList<Term> pendingTerms = new ArrayList<Term>();
@@ -154,15 +150,15 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     if (this == obj)
       return true;
     if (obj == null)
       return false;
-    if (getClass() != obj.getClass())
+    if (this.getClass() != obj.getClass())
       return false;
 
-    SirenConstantScoreAutoRewrite other = (SirenConstantScoreAutoRewrite) obj;
+    final SirenConstantScoreAutoRewrite other = (SirenConstantScoreAutoRewrite) obj;
     if (other.termCountCutoff != termCountCutoff) {
       return false;
     }
@@ -170,7 +166,7 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
     if (Double.doubleToLongBits(other.docCountPercent) != Double.doubleToLongBits(docCountPercent)) {
       return false;
     }
-    
+
     return true;
   }
 

@@ -34,29 +34,29 @@ import org.apache.lucene.search.Query;
 import org.sindice.siren.search.SirenMultiTermQuery.RewriteMethod;
 
 /**
- * Class copied from TermCollectingRewrite for the siren use case
+ * Code taken from {@link TermCollectingRewrite} and adapted for SIREn.
  */
 abstract class SirenTermCollectingRewrite<Q extends Query> extends RewriteMethod {
 
   /** Return a suitable top-level Query for holding all expanded terms. */
   protected abstract Q getTopLevelQuery() throws IOException;
-  
+
   /** Add a MultiTermQuery term to the top-level query */
   protected abstract void addClause(Q topLevel, Term term, float boost) throws IOException;
-  
-  protected final void collectTerms(IndexReader reader, SirenMultiTermQuery query, TermCollector collector) throws IOException {
+
+  protected final void collectTerms(final IndexReader reader, final SirenMultiTermQuery query, final TermCollector collector) throws IOException {
     final FilteredTermEnum enumerator = query.getEnum(reader);
     try {
       do {
         final Term t = enumerator.term();
         if (t == null || !collector.collect(t, enumerator.difference()))
           break;
-      } while (enumerator.next());    
+      } while (enumerator.next());
     } finally {
       enumerator.close();
     }
   }
-  
+
   protected interface TermCollector {
     /** return false to stop collecting */
     boolean collect(Term t, float boost) throws IOException;

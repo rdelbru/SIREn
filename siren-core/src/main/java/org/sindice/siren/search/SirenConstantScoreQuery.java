@@ -33,7 +33,6 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.CachingWrapperFilter;
 import org.apache.lucene.search.Collector;
 import org.apache.lucene.search.ComplexExplanation;
-import org.apache.lucene.search.ConstantScoreQuery;
 import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Scorer;
@@ -348,7 +347,7 @@ public class SirenConstantScoreQuery extends SirenPrimitiveQuery {
     if (this == o) return true;
     if (!super.equals(o))
       return false;
-    if (o instanceof ConstantScoreQuery) {
+    if (o instanceof SirenConstantScoreQuery) {
       final SirenConstantScoreQuery other = (SirenConstantScoreQuery) o;
       return
         ((this.filter == null) ? other.filter == null : this.filter.equals(other.filter)) &&

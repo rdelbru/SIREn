@@ -267,9 +267,40 @@ extends SirenPrimitiveQuery {
   @Override
   public Query rewrite(final IndexReader reader)
   throws IOException {
-    // TODO we cannot optimise 1-clause queries. The query will be rewritten
-    // into a single {@link SirenTermQuery} without any cell index constraint.
-    return this; // no clauses rewrote
+    if (clauses.size() == 1) {                    // optimize 1-clause queries
+      final SirenBooleanClause c = clauses.get(0);
+      if (!c.isProhibited()) {        // just return clause
+
+        Query query = c.getQuery().rewrite(reader);    // rewrite first
+
+        if (this.getBoost() != 1.0f) {                  // incorporate boost
+          if (query == c.getQuery()) {                  // if rewrite was no-op
+            query = (Query) query.clone();         // then clone before boost
+          }
+          query.setBoost(this.getBoost() * query.getBoost());
+        }
+
+        return query;
+      }
+    }
+
+    SirenBooleanQuery clone = null;                    // recursively rewrite
+    for (int i = 0 ; i < clauses.size(); i++) {
+      final SirenBooleanClause c = clauses.get(i);
+      final Query query = c.getQuery().rewrite(reader);
+      if (query != c.getQuery()) {                     // clause rewrote: must clone
+        if (clone == null) {
+          clone = (SirenBooleanQuery) this.clone();
+        }
+        clone.clauses.set(i, new SirenBooleanClause((SirenPrimitiveQuery) query, c.getOccur()));
+      }
+    }
+    if (clone != null) {
+      return clone;                               // some clauses rewrote
+    }
+    else {
+      return this;                                // no clauses rewrote
+    }
   }
 
   @Override

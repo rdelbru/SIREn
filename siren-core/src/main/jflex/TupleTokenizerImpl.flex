@@ -27,6 +27,7 @@
 package org.sindice.siren.analysis;
 
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.sindice.siren.util.XSDDatatype;
 import static org.sindice.siren.analysis.TupleTokenizer.*;
 
 %%
@@ -66,6 +67,13 @@ import static org.sindice.siren.analysis.TupleTokenizer.*;
 	public static final String[] TOKEN_TYPES = getTokenTypes();
 
   StringBuffer buffer = new StringBuffer();
+  StringBuffer metadataBuffer = new StringBuffer();
+  
+  /** Datatype representing xsd:anyURI */
+  private static final char[] XSD_ANY_URI = XSDDatatype.XSD_ANY_URI.toCharArray();
+  
+  /** Datatype representing xsd:string */
+  private static final char[] XSD_STRING = XSDDatatype.XSD_STRING.toCharArray();
   
 	public final int yychar()	{
 		return yychar;
@@ -77,35 +85,12 @@ import static org.sindice.siren.analysis.TupleTokenizer.*;
   public final void getText(CharTermAttribute t) {
     t.copyBuffer(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead);
   }
-
-  /**
-   * Fills Lucene TermAttribute with the current token text, removing the first character.
-   */
-  public final void getLanguageText(CharTermAttribute t) {
-    t.copyBuffer(zzBuffer, zzStartRead + 1, zzMarkedPos - zzStartRead - 1);
-  }
-	
-	/**
-	 * Fills Lucene TermAttribute with the current token text, removing the three first and 
-	 * the last characters.
-	 */
-	public final void getDatatypeText(CharTermAttribute t) {
-	  t.copyBuffer(zzBuffer, zzStartRead + 3, zzMarkedPos - zzStartRead - 4);
-	}
 	
   /**
    * Fills Lucene TermAttribute with the current token text, removing the two first 
    * characters.
    */
   public final void getBNodeText(CharTermAttribute t) {
-    t.copyBuffer(zzBuffer, zzStartRead + 2, zzMarkedPos - zzStartRead - 2);
-  }
-  
-   /**
-   * Fills Lucene TermAttribute with the current token text, removing the two first 
-   * characters.
-   */
-  public final void getFlagText(CharTermAttribute t) {
     t.copyBuffer(zzBuffer, zzStartRead + 2, zzMarkedPos - zzStartRead - 2);
   }
 	
@@ -135,6 +120,33 @@ import static org.sindice.siren.analysis.TupleTokenizer.*;
     return chars;
 	}
 	
+  /**
+   * Return the language tag.
+   * 
+   * <p> Return empty char array if no language tag has been defined
+   */
+  public final char[] getLanguageTag() {
+    char[] chars = new char[metadataBuffer.length()];
+    metadataBuffer.getChars(0, metadataBuffer.length(), chars, 0);
+    return chars;
+  }
+	
+  /**
+   * Return the datatype URI.
+   *
+   * <p> Return the datatype xsd:string by default.
+   */
+  public final char[] getDatatypeURI() {
+    // If not datatype, returns by default datatype xsd:string
+    if (metadataBuffer.length() == 0) {
+      return XSD_STRING;
+    }
+    
+    char[] chars = new char[metadataBuffer.length()];
+    metadataBuffer.getChars(0, metadataBuffer.length(), chars, 0);
+    return chars;
+  }
+	
 %}
 
 ENDOFLINE 		 =  \r|\n|\r\n
@@ -156,15 +168,16 @@ LANGUAGE			 =  [a-z]+('-'[a-z0-9]+)*
 
 <YYINITIAL> {
 
-	{URI}				    { return URI; }
+	{URI}				    { // Assign the xsd:anyURI
+	                  metadataBuffer.setLength(0);
+	                  metadataBuffer.append(XSD_ANY_URI);
+	                  return URI; }
 	
 	{BNODE}         { return BNODE; }
 	
-	\"							{ buffer.setLength(0); yybegin(STRING); }
-									
-	@{LANGUAGE}			{ return LANGUAGE; }
-	
-	\^\^{URI}		    { return DATATYPE; }
+	\"							{ buffer.setLength(0); 
+	                  metadataBuffer.setLength(0); 
+	                  yybegin(STRING); }
 	
 	{WHITESPACE}		{ /* ignore */ }
 	
@@ -172,9 +185,27 @@ LANGUAGE			 =  [a-z]+('-'[a-z0-9]+)*
 	
 }
 
+// The class of plain literals without without a datatype or language tag can 
+// be considered equivalent to the datatype class xsd:string.
+// We assume that a literal with a language tag is considered equivalent to the 
+// datatype class xsd:string.
+// A literal cannot have both a datatype and a language tag.
+// @link http://pedantic-web.org/fops.html
+
 <STRING> {
 
-	\" 							{ yybegin(YYINITIAL);	return LITERAL; }
+  \"\^\^{URI}     { yybegin(YYINITIAL);
+                    // remove the first four and the last characters.
+                    metadataBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
+                    return LITERAL; }
+                    
+  \"@{LANGUAGE}   { yybegin(YYINITIAL);
+                    // remove the first two characters.
+                    metadataBuffer.append(zzBuffer, zzStartRead + 2, zzMarkedPos - zzStartRead - 2);
+                    return LITERAL; }
+
+	\" 							{ yybegin(YYINITIAL);	
+	                  return LITERAL; }
 
   [^\"\\]+  			{ buffer.append(yytext()); }
   

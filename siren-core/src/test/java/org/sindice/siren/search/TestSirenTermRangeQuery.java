@@ -292,9 +292,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
     public final TokenStream tokenStream(final String fieldName, final Reader reader) {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-                                                                  TupleTokenizer.DOT,
-                                                                  TupleTokenizer.DATATYPE,
-                                                                  TupleTokenizer.LANGUAGE});
+                                                                  TupleTokenizer.DOT});
       result = new SirenDeltaPayloadFilter(result);
       return result;
     }
@@ -307,8 +305,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
         this.setPreviousTokenStream(streams);
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
-          new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT,
-                     TupleTokenizer.DATATYPE, TupleTokenizer.LANGUAGE});
+          new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
         streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
       } else {
         streams.tokenStream.reset(reader);

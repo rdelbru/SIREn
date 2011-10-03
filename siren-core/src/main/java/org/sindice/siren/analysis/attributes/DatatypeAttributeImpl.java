@@ -42,7 +42,12 @@ public class DatatypeAttributeImpl extends AttributeImpl implements DatatypeAttr
   @Override
   public void setDatatypeURI(final char[] datatypeURI) {
     buffer.clear();
-    buffer.put(datatypeURI);
+
+    if (datatypeURI != null) {
+      buffer.put(datatypeURI);
+    }
+
+    buffer.flip();
   }
 
   @Override
@@ -65,6 +70,7 @@ public class DatatypeAttributeImpl extends AttributeImpl implements DatatypeAttr
   protected void copyBuffer(final CharBuffer buffer) {
     this.buffer.clear();
     this.buffer.put(buffer);
+    this.buffer.flip();
   }
 
 }

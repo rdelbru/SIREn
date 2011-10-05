@@ -27,14 +27,16 @@
 package org.sindice.siren.analysis;
 
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.junit.Test;
 import org.sindice.siren.analysis.attributes.CellAttribute;
@@ -75,8 +77,8 @@ public class TestWhitespaceTupleAnalyzer {
   throws Exception {
     final TokenStream t = a.reusableTokenStream("", new StringReader(input));
 
-    assertTrue("has TermAttribute", t.hasAttribute(TermAttribute.class));
-    final TermAttribute termAtt = t.getAttribute(TermAttribute.class);
+    assertTrue("has TermAttribute", t.hasAttribute(CharTermAttribute.class));
+    final CharTermAttribute termAtt = t.getAttribute(CharTermAttribute.class);
 
     TypeAttribute typeAtt = null;
     if (expectedTypes != null) {
@@ -106,7 +108,7 @@ public class TestWhitespaceTupleAnalyzer {
 
       assertTrue("token "+i+" exists", t.incrementToken());
 
-      assertEquals(expectedImages[i], termAtt.term());
+      assertEquals(expectedImages[i], termAtt.toString());
 
       if (expectedTypes != null) {
         assertEquals(expectedTypes[i], typeAtt.type());
@@ -160,21 +162,6 @@ public class TestWhitespaceTupleAnalyzer {
         "word", "word" });
     this.assertAnalyzesTo(_a, "\"ABC\\u0061\\u0062\\u0063\\u00E9\\u00e9ABC\"",
       new String[] { "abcabcééabc" }, new String[] { "word" });
-  }
-
-  @Test
-  public void testLanguage()
-  throws Exception {
-    this.assertAnalyzesTo(_a, "\"test\"@en", new String[] { "test" },
-      new String[] { "word" });
-  }
-
-  @Test
-  public void testDatatype()
-  throws Exception {
-    this.assertAnalyzesTo(_a, "<http://test/>^^<http://type/test>",
-      new String[] { "http://test/" },
-      new String[] { "<URI>" });
   }
 
   @Test

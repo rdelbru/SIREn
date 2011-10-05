@@ -60,7 +60,7 @@ public class TupleAnalyzer extends Analyzer {
 
   private Analyzer stringAnalyzer;
   private Analyzer anyURIAnalyzer;
-  
+
   private final Set<?>            stopSet;
 
   /**
@@ -119,25 +119,13 @@ public class TupleAnalyzer extends Analyzer {
   public void setLiteralAnalyzer(final Analyzer analyzer) {
     stringAnalyzer = analyzer;
   }
-  
+
   public void setAnyURIAnalyzer(final Analyzer analyzer) {
     anyURIAnalyzer = analyzer;
   }
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-//    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
-//    TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-//                                                                TupleTokenizer.DOT});
-//    result = new StandardFilter(Version.LUCENE_31, result);
-//    result = new URIEncodingFilter(result, "UTF-8");
-//    result = this.applyURINormalisation(result);
-//    result = new MailtoFilter(result);
-//    result = new LowerCaseFilter(Version.LUCENE_31, result);
-//    result = new StopFilter(Version.LUCENE_31, result, stopSet);
-//    result = new LengthFilter(result, 2, 256);
-//    result = new SirenDeltaPayloadFilter(result);
-    
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
@@ -152,18 +140,6 @@ public class TupleAnalyzer extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-//      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
-//      streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
-//        new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-//      streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
-//      streams.filteredTokenStream = new URIEncodingFilter(streams.filteredTokenStream, "UTF-8");
-//      streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
-//      streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
-//      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-//      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
-//      streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
-//      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
-      
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});

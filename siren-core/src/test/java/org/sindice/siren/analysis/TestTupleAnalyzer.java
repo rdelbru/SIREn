@@ -46,7 +46,7 @@ import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
 
 public class TestTupleAnalyzer {
-  
+
   private final TupleAnalyzer _a;
 
   public TestTupleAnalyzer() {
@@ -193,24 +193,6 @@ public class TestTupleAnalyzer {
         "<ALPHANUM>", "<ALPHANUM>" });
     this.assertAnalyzesTo(_a, "\"ABC\\u0061\\u0062\\u0063\\u00E9\\u00e9ABC\"",
       new String[] { "abcabcééabc" }, new String[] { "<ALPHANUM>" });
-  }
-  
-  @Test
-  public void testLanguage()
-  throws Exception {
-    this.assertAnalyzesTo(_a, "\"test\"@en", new String[] { "test" },
-      new String[] { "<ALPHANUM>" });
-  }
-
-  @Test
-  public void testDatatype()
-  throws Exception {
-//    this.assertAnalyzesTo(_a, "<http://test/>^^<http://type/test>",
-    this.assertAnalyzesTo(_a, "\"http://test/\"^^<http://type/test>",
-//      new String[] { "test", "http://test" },
-      new String[] { "http", "test" },
-//      new String[] { "<URI>", "<URI>" });
-      new String[] { "<ALPHANUM>", "<ALPHANUM>" });
   }
 
   @Test

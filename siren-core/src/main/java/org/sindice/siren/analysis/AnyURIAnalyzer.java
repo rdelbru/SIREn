@@ -52,8 +52,8 @@ public class AnyURIAnalyzer extends Analyzer {
 
   public AnyURIAnalyzer() {
   }
-  
-  public void setUriNormalisation(URINormalisation n) {
+
+  public void setUriNormalisation(final URINormalisation n) {
     normalisationType = n;
   }
 
@@ -65,7 +65,7 @@ public class AnyURIAnalyzer extends Analyzer {
     result = new MailtoFilter(result);
     result = new LowerCaseFilter(Version.LUCENE_31, result );
 //  streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
-    result = new LengthFilter(result, 2, 256);
+    result = new LengthFilter(true, result, 2, 256);
     result = new AssignTokenType(result, TupleTokenizer.URI);
     return result;
   }
@@ -82,7 +82,7 @@ public class AnyURIAnalyzer extends Analyzer {
       streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
 //      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
-      streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
+      streams.filteredTokenStream = new LengthFilter(true, streams.filteredTokenStream, 2, 256);
       streams.filteredTokenStream = new AssignTokenType(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {
       streams.tokenStream.reset(reader);

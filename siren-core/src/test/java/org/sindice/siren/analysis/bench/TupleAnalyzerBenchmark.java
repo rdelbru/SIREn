@@ -32,10 +32,12 @@ import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.WhitespaceAnyURIAnalyzer;
 import org.sindice.siren.analysis.WhitespaceTupleAnalyzer;
 import org.sindice.siren.bench.SirenBenchmark;
 
@@ -60,19 +62,39 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
     return counter;
   }
 
-  public long timeWhitespaceTupleAnalyzer(final int reps) throws IOException {
+  public long timePlainTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new WhitespaceTupleAnalyzer();
+      final Analyzer analyzer = new PlainTupleAnalyzer();
       counter += this.performAnalysis(analyzer);
     }
     return counter;
   }
 
-  public long timeTupleAnalyzer(final int reps) throws IOException {
+  public long timePlainDeltaTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new NoDeltaTupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+      final Analyzer analyzer = new PlainDeltaTupleAnalyzer();
+      counter += this.performAnalysis(analyzer);
+    }
+    return counter;
+  }
+
+  public long timeNoDeltaWhitespaceTupleAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new NoDeltaTupleAnalyzer(
+        new WhitespaceAnalyzer(Version.LUCENE_31),
+        new WhitespaceAnyURIAnalyzer());
+      counter += this.performAnalysis(analyzer);
+    }
+    return counter;
+  }
+
+  public long timeWhitespaceTupleAnalyzer(final int reps) throws IOException {
+    long counter = 0;
+    for (int i = 0; i < reps; i++) {
+      final Analyzer analyzer = new WhitespaceTupleAnalyzer();
       counter += this.performAnalysis(analyzer);
     }
     return counter;

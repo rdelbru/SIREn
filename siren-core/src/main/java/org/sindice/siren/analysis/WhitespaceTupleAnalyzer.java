@@ -32,15 +32,13 @@ import java.io.Reader;
 import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.StopAnalyzer;
 import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.PositionFilter;
-import org.sindice.siren.analysis.filter.SirenPayloadFilter;
+import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
 import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
@@ -107,22 +105,12 @@ extends Analyzer {
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-//    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE,
-//        new WhitespaceAnalyzer(Version.LUCENE_31));
-//    TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-//                                                                TupleTokenizer.DOT});
-//    result = new LowerCaseFilter(Version.LUCENE_31, result);
-//    result = new PositionFilter(result); // in last, just before the payload filter since it assigns the token position
-//    result = new SirenPayloadFilter(result);
-    
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                               TupleTokenizer.DOT});
     result = new TupleTokenAnalyzerFilter(result, new WhitespaceAnalyzer(Version.LUCENE_31),
                                                   new WhitespaceAnyURIAnalyzer());
-    result = new LowerCaseFilter(Version.LUCENE_31, result);
-    result = new PositionFilter(result); // in last, just before the payload filter since it assigns the token position
-    result = new SirenPayloadFilter(result);
+    result = new SirenDeltaPayloadFilter(result);
     return result;
   }
 
@@ -137,9 +125,7 @@ extends Analyzer {
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
       streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
                                                                                               new WhitespaceAnyURIAnalyzer());
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new PositionFilter(streams.filteredTokenStream); // in last, just before the payload filter since it assigns the token position
-      streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
+      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);
     }

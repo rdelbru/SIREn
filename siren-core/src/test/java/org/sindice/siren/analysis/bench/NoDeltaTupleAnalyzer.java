@@ -32,43 +32,25 @@ import java.io.Reader;
 import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.LengthFilter;
-import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.StopAnalyzer;
 import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
-import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.URILocalnameFilter;
-import org.sindice.siren.analysis.filter.URINormalisationFilter;
-import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
+import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 /**
- * The TupleAnalyzer is especially designed to process RDF data. It applies
- * various post-processing on URIs and Literals.
- * <br>
- * The URI normalisation can be configured. You can disable it, activate it
- * only on URI local name, or on the full URI. However, URI normalisation on the
- * full URI is costly in term of CPU at indexing time, and can double the size
- * of the index, since each URI is duplicated by n tokens.
- * <br>
- * By default, the URI normalisation is disabled.
- * <br>
- * When full uri normalisation is activated, the analyzer is much slower than
- * the WhitespaceTupleAnalyzer. If you are not indexing RDF data, consider to
- * use the WhitespaceTupleAnalyzer instead.
+ * Old version of the TupleAnalyzer that does not encode tuple and cell ids in
+ * delta representation.
  */
 public class NoDeltaTupleAnalyzer
 extends Analyzer {
 
-  public enum URINormalisation {NONE, LOCALNAME, FULL};
-
-  private URINormalisation normalisationType = URINormalisation.NONE;
-  private Analyzer literalAnalyzer;
+  private Analyzer stringAnalyzer;
+  private Analyzer anyURIAnalyzer;
 
   private final Set<?>            stopSet;
 
@@ -81,23 +63,25 @@ extends Analyzer {
   /**
    * Builds an analyzer with the default stop words ({@link #STOP_WORDS}).
    */
-  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer) {
-    this(literalAnalyzer, STOP_WORDS);
+  public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
+    this(stringAnalyzer, anyURIAnalyzer, STOP_WORDS);
   }
 
   /**
    * Builds an analyzer with the given stop words.
    */
-  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Set<?> stopWords) {
-    this.literalAnalyzer = literalAnalyzer;
+  public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Set<?> stopWords) {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = stopWords;
   }
 
   /**
    * Builds an analyzer with the given stop words.
    */
-  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final String[] stopWords) {
-    this.literalAnalyzer = literalAnalyzer;
+  public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final String[] stopWords) {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
   }
 
@@ -106,8 +90,9 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(File)
    */
-  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final File stopwords) throws IOException {
-    this.literalAnalyzer = literalAnalyzer;
+  public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final File stopwords) throws IOException {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
 
@@ -116,31 +101,26 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(Reader)
    */
-  public NoDeltaTupleAnalyzer(final Analyzer literalAnalyzer, final Reader stopwords) throws IOException {
-    this.literalAnalyzer = literalAnalyzer;
+  public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Reader stopwords) throws IOException {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
 
-  public void setURINormalisation(final URINormalisation type) {
-    this.normalisationType = type;
+  public void setLiteralAnalyzer(final Analyzer analyzer) {
+    stringAnalyzer = analyzer;
   }
 
-  public void setLiteralAnalyzer(final Analyzer analyzer) {
-    literalAnalyzer = analyzer;
+  public void setAnyURIAnalyzer(final Analyzer analyzer) {
+    anyURIAnalyzer = analyzer;
   }
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-                                                                TupleTokenizer.DOT,
-                                                                TupleTokenizer.DATATYPE,
-                                                                TupleTokenizer.LANGUAGE});
-    result = new StandardFilter(Version.LUCENE_31, result);
-    result = this.applyURINormalisation(result);
-    result = new LowerCaseFilter(Version.LUCENE_31, result);
-    result = new StopFilter(Version.LUCENE_31, result, stopSet);
-    result = new LengthFilter(result, 2, 256);
+                                                                TupleTokenizer.DOT});
+    result = new TupleTokenAnalyzerFilter(result, stringAnalyzer, anyURIAnalyzer);
     result = new SirenPayloadFilter(result);
     return result;
   }
@@ -151,15 +131,11 @@ extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
-        new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT,
-                   TupleTokenizer.DATATYPE, TupleTokenizer.LANGUAGE});
-      streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
-      streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
+        new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
+      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream,
+        stringAnalyzer, anyURIAnalyzer);
       streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);
@@ -170,34 +146,6 @@ extends Analyzer {
   private static final class SavedStreams {
     TupleTokenizer tokenStream;
     TokenStream filteredTokenStream;
-  }
-
-  /**
-   * Given the type of URI normalisation, apply the right sequence of operations
-   * and filters to the token stream.
-   */
-  private TokenStream applyURINormalisation(TokenStream in) {
-    switch (normalisationType) {
-      case NONE:
-        return new URITrailingSlashFilter(in);
-
-      // here, trailing slash filter is after localname filtering, in order to
-      // avoid filtering subdirectory instead of localname
-      case LOCALNAME:
-        in = new URILocalnameFilter(in);
-        return new URITrailingSlashFilter(in);
-
-      // here, trailing slash filter is before localname filtering, in order to
-      // avoid trailing slash checking on every tokens generated by the
-      // URI normalisation filter
-      case FULL:
-        in = new URITrailingSlashFilter(in);
-        return new URINormalisationFilter(in);
-
-      default:
-        throw new EnumConstantNotPresentException(URINormalisation.class,
-          normalisationType.toString());
-    }
   }
 
 }

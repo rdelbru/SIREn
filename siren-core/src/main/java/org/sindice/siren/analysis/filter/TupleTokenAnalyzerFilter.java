@@ -45,14 +45,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 
+ *
  */
 public class TupleTokenAnalyzerFilter extends TokenFilter {
 
   private final Logger logger = LoggerFactory.getLogger(TupleTokenAnalyzerFilter.class);
-  
+
   private final HashMap<CharBuffer, Analyzer> dtsAnalyzer = new HashMap<CharBuffer, Analyzer>();
-  
+
   private CharTermAttribute termAtt;
   private OffsetAttribute offsetAtt;
   private PositionIncrementAttribute posIncrAtt;
@@ -60,7 +60,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   private DatatypeAttribute dtypeAtt;
   private TupleAttribute tupleAtt;
   private CellAttribute cellAtt;
-  
+
   private CharTermAttribute tokenTermAtt;
   private OffsetAttribute tokenOffsetAtt;
   private PositionIncrementAttribute tokenPosIncrAtt;
@@ -68,21 +68,21 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   private DatatypeAttribute tokenDtypeAtt;
   private TupleAttribute tokenTupleAtt;
   private CellAttribute tokenCellAtt;
-  
+
   private boolean isConsumingToken = false;
   private TokenStream curentStream;
-  
+
   private final CharBuffer xsdString = CharBuffer.wrap(XSDDatatype.XSD_STRING);
   private final CharBuffer xsdAnyURI = CharBuffer.wrap(XSDDatatype.XSD_ANY_URI);
-  
-  public TupleTokenAnalyzerFilter(TokenStream input, Analyzer stringAnalyzer, Analyzer anyURIAnalyzer) {
+
+  public TupleTokenAnalyzerFilter(final TokenStream input, final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
     super(input);
-    initAttributes();
+    this.initAttributes();
     // register the default analyzers
-    register(xsdString, stringAnalyzer);
-    register(xsdAnyURI, anyURIAnalyzer);
+    this.register(xsdString, stringAnalyzer);
+    this.register(xsdAnyURI, anyURIAnalyzer);
   }
-  
+
   private void initAttributes() {
     termAtt = input.getAttribute(CharTermAttribute.class);
     offsetAtt = input.getAttribute(OffsetAttribute.class);
@@ -92,7 +92,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
     tupleAtt = input.getAttribute(TupleAttribute.class);
     cellAtt = input.getAttribute(CellAttribute.class);
   }
-  
+
   private void initTokenAttributes() {
     tokenTermAtt = curentStream.addAttribute(CharTermAttribute.class);
     tokenOffsetAtt = curentStream.addAttribute(OffsetAttribute.class);
@@ -102,13 +102,13 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
     tokenTupleAtt = curentStream.addAttribute(TupleAttribute.class);
     tokenCellAtt = curentStream.addAttribute(CellAttribute.class);
   }
-  
+
   /**
    * Map the given analyzer to that dataTypeURI
    * @param dataTypeURI
    * @param analyzer
    */
-  public void register(CharBuffer dataTypeURI, Analyzer analyzer) {
+  public void register(final CharBuffer dataTypeURI, final Analyzer analyzer) {
     if (!dtsAnalyzer.containsKey(dataTypeURI)) {
       dtsAnalyzer.put(dataTypeURI, analyzer);
     }
@@ -132,15 +132,15 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
           logger.info("No mapping found for the DataType {}, using the default xsd:string analyzer", dt);
           analyzer = dtsAnalyzer.get(xsdString);
         }
-        
+
         curentStream = analyzer.reusableTokenStream("", new CharArrayReader(termAtt.buffer(), 0, termAtt.length()));
         curentStream.reset();
-        initTokenAttributes();   
+        this.initTokenAttributes();
       }
       // Consume the token with the registered analyzer
       isConsumingToken = curentStream.incrementToken();
     } while(!isConsumingToken);
-    copyInnerStreamAttributes();
+    this.copyInnerStreamAttributes();
     return true;
   }
 
@@ -154,5 +154,5 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
     tupleAtt.setTuple(tokenTupleAtt.tuple());
     cellAtt.setCell(tokenCellAtt.cell());
   }
-  
+
 }

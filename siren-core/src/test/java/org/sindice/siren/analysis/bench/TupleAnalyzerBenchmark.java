@@ -103,7 +103,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeDeltaTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
+      final Analyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
       counter += this.performAnalysis(analyzer);
     }
     return counter;

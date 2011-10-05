@@ -25,14 +25,19 @@
  */
 package org.sindice.siren.analysis;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.LengthFilter;
 import org.apache.lucene.analysis.LowerCaseFilter;
+import org.apache.lucene.analysis.StopAnalyzer;
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceTokenizer;
+import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.AssignTokenType;
 import org.sindice.siren.analysis.filter.MailtoFilter;
@@ -46,17 +51,42 @@ import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
  */
 public class AnyURIAnalyzer extends Analyzer {
 
+  private final Set<?>            stopSet;
+
+  /**
+   * An array containing some common English words that are usually not useful
+   * for searching.
+   */
+  public static final Set<?> STOP_WORDS = StopAnalyzer.ENGLISH_STOP_WORDS_SET;
+  
   public enum URINormalisation {NONE, LOCALNAME, FULL};
 
   private URINormalisation normalisationType = URINormalisation.NONE;
 
   public AnyURIAnalyzer() {
+    this(STOP_WORDS);
+  }
+  
+  public AnyURIAnalyzer(final Set<?> stopWords) {
+    stopSet = stopWords;
+  }
+  
+  public AnyURIAnalyzer(final String[] stopWords) {
+    stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
+  }
+  
+  public AnyURIAnalyzer(final File stopwords) throws IOException {
+    stopSet = WordlistLoader.getWordSet(stopwords);
+  }
+  
+  public AnyURIAnalyzer(final Reader stopWords) throws IOException {
+    stopSet = WordlistLoader.getWordSet(stopWords);
   }
 
   public void setUriNormalisation(final URINormalisation n) {
     normalisationType = n;
   }
-
+  
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
     TokenStream result = new WhitespaceTokenizer(Version.LUCENE_31, reader);

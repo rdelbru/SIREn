@@ -49,7 +49,7 @@ public class SirenQueryBenchmark extends SirenBenchmark {
   @Override
   protected void setUp() throws Exception {
     rand.setSeed(42);
-    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     this.prepareIndex();
   }
 

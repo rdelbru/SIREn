@@ -54,7 +54,7 @@ public class TestSirenPrefixQuery extends LuceneTestCase {
                                         "/computers/windows"};
 
     final RandomIndexWriter writer = new RandomIndexWriter(random, directory,
-      new TupleAnalyzer(new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
+      new TupleAnalyzer(Version.LUCENE_31, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
 
     for (final String category : categories) {
       final Document doc = new Document();

@@ -53,8 +53,7 @@ import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
  * indexing records from database and not RDF.
  */
 
-public class WhitespaceTupleAnalyzer
-extends Analyzer {
+public class WhitespaceTupleAnalyzer extends Analyzer {
 
   private final Set<?>            stopSet;
 

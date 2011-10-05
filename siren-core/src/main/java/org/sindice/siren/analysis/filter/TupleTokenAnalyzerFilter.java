@@ -128,9 +128,8 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
         final Analyzer analyzer;
         if (dtsAnalyzer.containsKey(dt))
           analyzer = dtsAnalyzer.get(dt);
-        else {
-          logger.info("No mapping found for the DataType {}, using the default xsd:string analyzer", dt);
-          analyzer = dtsAnalyzer.get(xsdString);
+        else { // the datatype is not registered, leave the token as it is
+          return true;
         }
 
         curentStream = analyzer.reusableTokenStream("", new CharArrayReader(termAtt.buffer(), 0, termAtt.length()));

@@ -75,7 +75,7 @@ public class NTriplesIndexing {
     dir = new RAMDirectory();
     final AnyURIAnalyzer anyURI = new AnyURIAnalyzer();
     anyURI.setUriNormalisation(URINormalisation.FULL);
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), anyURI);
+    final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), anyURI);
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
       analyzer);
     writer = new IndexWriter(dir, conf);

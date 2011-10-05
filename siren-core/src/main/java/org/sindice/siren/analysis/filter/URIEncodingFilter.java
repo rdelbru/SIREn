@@ -37,16 +37,10 @@ import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Decode the URI encoding format of special characters such as '?' or '<'; special
-<<<<<<< HEAD
- * characters (excepth of the SPACE that can be encoded with '+') begins with a '%'
-=======
  * characters (except of the SPACE that can be encoded with '+') begins with a '%'
->>>>>>> scampi/sim3
  * and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.
@@ -67,7 +61,6 @@ public class URIEncodingFilter extends TokenFilter {
   private int                     termLength;
 
   private final CharTermAttribute           termAtt;
-  private final TypeAttribute               typeAtt;
   private final PositionIncrementAttribute  posIncrAtt;
 
   /**
@@ -84,7 +77,6 @@ public class URIEncodingFilter extends TokenFilter {
                             .onMalformedInput(CodingErrorAction.REPLACE)
                             .onUnmappableCharacter(CodingErrorAction.REPLACE);
     termAtt = this.addAttribute(CharTermAttribute.class);
-    typeAtt = this.addAttribute(TypeAttribute.class);
     posIncrAtt = this.addAttribute(PositionIncrementAttribute.class);
     termBuffer = CharBuffer.allocate(256);
   }
@@ -101,12 +93,9 @@ public class URIEncodingFilter extends TokenFilter {
     }
 
     if (input.incrementToken()) {
-      final String type = typeAtt.type();
-      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI])) {
-        termLength = termAtt.length();
-        this.updateBuffer();
-        this.decode();
-      }
+      termLength = termAtt.length();
+      this.updateBuffer();
+      this.decode();
       return true;
     }
     return false;

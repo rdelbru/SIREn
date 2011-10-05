@@ -32,8 +32,6 @@ import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Split the URI with a mailto scheme into.
@@ -47,7 +45,6 @@ import org.sindice.siren.analysis.TupleTokenizer;
 public class MailtoFilter extends TokenFilter {
 
   private final CharTermAttribute           termAtt;
-  private final TypeAttribute               typeAtt;
   private final PositionIncrementAttribute  posIncrAtt;
 
   private CharBuffer termBuffer;
@@ -59,7 +56,6 @@ public class MailtoFilter extends TokenFilter {
   public MailtoFilter(final TokenStream input) {
     super(input);
     termAtt = this.addAttribute(CharTermAttribute.class);
-    typeAtt = this.addAttribute(TypeAttribute.class);
     posIncrAtt = this.addAttribute(PositionIncrementAttribute.class);
     termBuffer = CharBuffer.allocate(256);
   }
@@ -77,8 +73,7 @@ public class MailtoFilter extends TokenFilter {
     }
 
     if (input.incrementToken()) {
-      final String type = typeAtt.type();
-      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI]) && this.isMailtoScheme()) {
+      if (this.isMailtoScheme()) {
         this.updateBuffer();
         termBuffer.put(termAtt.buffer(), 0, termAtt.length());
         // return only the mail part

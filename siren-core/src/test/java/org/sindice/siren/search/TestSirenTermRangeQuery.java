@@ -46,9 +46,11 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.Searcher;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.LuceneTestCase;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
+import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 
 public class TestSirenTermRangeQuery extends LuceneTestCase {
@@ -290,9 +292,10 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
 
     @Override
     public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-      final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+      final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
+      result = new TupleTokenAnalyzerFilter(result, literalAnalyzer, new AnyURIAnalyzer());
       result = new SirenDeltaPayloadFilter(result);
       return result;
     }
@@ -303,9 +306,10 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
       if (streams == null) {
         streams = new SavedStreams();
         this.setPreviousTokenStream(streams);
-        streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+        streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
           new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
+        streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, literalAnalyzer, new AnyURIAnalyzer());
         streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
       } else {
         streams.tokenStream.reset(reader);

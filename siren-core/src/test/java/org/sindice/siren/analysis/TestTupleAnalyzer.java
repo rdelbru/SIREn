@@ -41,16 +41,18 @@ import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
 
 public class TestTupleAnalyzer {
-
-  private final TupleAnalyzer _a = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
+  
+  private final TupleAnalyzer _a;
 
   public TestTupleAnalyzer() {
-    _a.setURINormalisation(URINormalisation.FULL);
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
+    uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
+    _a = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
   }
 
   public void assertAnalyzesTo(final Analyzer a, final String input,
@@ -134,7 +136,7 @@ public class TestTupleAnalyzer {
       }
     }
 
-    assertFalse("end of stream", t.incrementToken());
+    assertFalse("end of stream, received token " + termAtt.term(), t.incrementToken());
     t.end();
     t.close();
   }
@@ -178,6 +180,22 @@ public class TestTupleAnalyzer {
   }
 
   @Test
+  public void testLiteral2()
+  throws Exception {
+    this.assertAnalyzesTo(_a, "\"Renaud\"", new String[] { "renaud" },
+      new String[] { "<ALPHANUM>" });
+    this.assertAnalyzesTo(_a, "\"1 and 2\"", new String[] { "1", "2" },
+      new String[] { "<NUM>", "<NUM>" });
+    this.assertAnalyzesTo(_a, "\"renaud http://test/ \"", new String[] {
+        "renaud", "http", "test" }, new String[] { "<ALPHANUM>", "<ALPHANUM>", "<ALPHANUM>" });
+    this.assertAnalyzesTo(_a, "\"foo bar FOO BAR\"", new String[] { "foo",
+        "bar", "foo", "bar" }, new String[] { "<ALPHANUM>", "<ALPHANUM>",
+        "<ALPHANUM>", "<ALPHANUM>" });
+    this.assertAnalyzesTo(_a, "\"ABC\\u0061\\u0062\\u0063\\u00E9\\u00e9ABC\"",
+      new String[] { "abcabcééabc" }, new String[] { "<ALPHANUM>" });
+  }
+  
+  @Test
   public void testLanguage()
   throws Exception {
     this.assertAnalyzesTo(_a, "\"test\"@en", new String[] { "test" },
@@ -187,9 +205,12 @@ public class TestTupleAnalyzer {
   @Test
   public void testDatatype()
   throws Exception {
-    this.assertAnalyzesTo(_a, "<http://test/>^^<http://type/test>",
-      new String[] { "test", "http://test" },
-      new String[] { "<URI>", "<URI>" });
+//    this.assertAnalyzesTo(_a, "<http://test/>^^<http://type/test>",
+    this.assertAnalyzesTo(_a, "\"http://test/\"^^<http://type/test>",
+//      new String[] { "test", "http://test" },
+      new String[] { "http", "test" },
+//      new String[] { "<URI>", "<URI>" });
+      new String[] { "<ALPHANUM>", "<ALPHANUM>" });
   }
 
   @Test

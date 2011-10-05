@@ -46,8 +46,9 @@ import org.apache.lucene.search.Weight;
 import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
+import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 
 public abstract class AbstractTestSirenScorer {
 
@@ -56,8 +57,9 @@ public abstract class AbstractTestSirenScorer {
   @Before
   public void setUp()
   throws Exception {
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
-    analyzer.setURINormalisation(URINormalisation.FULL);
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
+    uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
+    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
     _helper = new QueryTestingHelper(analyzer);
   }
 

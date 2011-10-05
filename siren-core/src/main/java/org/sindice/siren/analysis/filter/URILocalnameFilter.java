@@ -32,11 +32,8 @@ import java.nio.CharBuffer;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
@@ -71,13 +68,11 @@ extends TokenFilter {
   private CharBuffer termBuffer;
 
   private final CharTermAttribute termAtt;
-  private final TypeAttribute typeAtt;
   private final PositionIncrementAttribute posIncrAtt;
 
   public URILocalnameFilter(final TokenStream input) {
     super(input);
     termAtt = this.addAttribute(CharTermAttribute.class);
-    typeAtt = this.addAttribute(TypeAttribute.class);
     posIncrAtt = this.addAttribute(PositionIncrementAttribute.class);
     termBuffer = CharBuffer.allocate(256);
   }
@@ -97,17 +92,14 @@ extends TokenFilter {
 
     // Otherwise, get next URI token and start normalisation
     if (input.incrementToken()) {
-      final String type = typeAtt.type();
-      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI])) {
-        termLength = termAtt.length();
-        this.updateBuffer();
-        _isNormalising = true;
-        _shouldReturnLocalname = false; // we return the full localname only if a breakpoint is found
-        _nTokens = 0;
-        startLocalname = start = end = 0;
-        startLocalname = start = this.findLocalname();
-        this.nextToken();
-      }
+      termLength = termAtt.length();
+      this.updateBuffer();
+      _isNormalising = true;
+      _shouldReturnLocalname = false; // we return the full localname only if a breakpoint is found
+      _nTokens = 0;
+      startLocalname = start = end = 0;
+      startLocalname = start = this.findLocalname();
+      this.nextToken();
       return true;
     }
 
@@ -234,7 +226,7 @@ extends TokenFilter {
     		"<mailto:renaud.delbru@deri.org> <http://renaud.delbru.fr/rdf/foaf> " +
     		"<http://renaud.delbru.fr/>  <http://xmlns.com/foaf/0.1/workplaceHomepage> " +
     		"<http://test.com/M%C3%B6ller>"),
-    		Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
+    		Integer.MAX_VALUE);
     final TokenStream result = new URILocalnameFilter(stream);
     final CharTermAttribute termAtt = result.getAttribute(CharTermAttribute.class);
     final PositionIncrementAttribute posIncrAtt = result.getAttribute(PositionIncrementAttribute.class);

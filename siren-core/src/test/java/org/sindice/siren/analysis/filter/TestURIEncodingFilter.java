@@ -35,11 +35,9 @@ import java.nio.charset.UnsupportedCharsetException;
 import java.util.Random;
 
 import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,8 +51,7 @@ public class TestURIEncodingFilter {
   private final String uritype = TupleTokenizer.getTokenTypes()[TupleTokenizer.URI];
   private final String defaulttype = TypeAttribute.DEFAULT_TYPE;
 
-  private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
-    Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
+  private final Tokenizer _t = new TupleTokenizer(new StringReader(""), Integer.MAX_VALUE);
 
   /**
    * @throws java.lang.Exception
@@ -217,9 +214,9 @@ public class TestURIEncodingFilter {
   public void testDifferentTypes()
   throws Exception {
     this.assertURLDecodedTo(_t, "<stephane%3Fnet/> \"A literal !!!!\" <porco%2erosso>",
-      new String[] { "stephane%3Fnet/", "stephane?net/", "A", "literal", "!!!!", "porco%2erosso", "porco.rosso" },
-      new String[] { uritype, uritype, defaulttype, defaulttype, defaulttype, uritype, uritype },
-      new int[] { 1, 0, 1, 1, 1, 1, 0 });
+      new String[] { "stephane%3Fnet/", "stephane?net/", "A literal !!!!", "porco%2erosso", "porco.rosso" },
+      new String[] { uritype, uritype, TupleTokenizer.getTokenTypes()[TupleTokenizer.LITERAL], uritype, uritype },
+      new int[] { 1, 0, 1, 1, 0 });
   }
 
   @Test

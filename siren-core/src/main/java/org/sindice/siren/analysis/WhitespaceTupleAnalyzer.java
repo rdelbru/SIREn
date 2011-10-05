@@ -42,6 +42,7 @@ import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.PositionFilter;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
+import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 /**
  * The WhitespaceTupleAnalyzer is a more simple analyzer for tuples.
@@ -106,10 +107,19 @@ extends Analyzer {
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE,
-        new WhitespaceAnalyzer(Version.LUCENE_31));
+//    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE,
+//        new WhitespaceAnalyzer(Version.LUCENE_31));
+//    TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
+//                                                                TupleTokenizer.DOT});
+//    result = new LowerCaseFilter(Version.LUCENE_31, result);
+//    result = new PositionFilter(result); // in last, just before the payload filter since it assigns the token position
+//    result = new SirenPayloadFilter(result);
+    
+    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-                                                                TupleTokenizer.DOT});
+                                                              TupleTokenizer.DOT});
+    result = new TupleTokenAnalyzerFilter(result, new WhitespaceAnalyzer(Version.LUCENE_31),
+                                                  new WhitespaceAnyURIAnalyzer());
     result = new LowerCaseFilter(Version.LUCENE_31, result);
     result = new PositionFilter(result); // in last, just before the payload filter since it assigns the token position
     result = new SirenPayloadFilter(result);
@@ -122,12 +132,13 @@ extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE,
-          new WhitespaceAnalyzer(Version.LUCENE_31));
+      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
+      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
+                                                                                              new WhitespaceAnyURIAnalyzer());
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new PositionFilter(streams.filteredTokenStream);
+      streams.filteredTokenStream = new PositionFilter(streams.filteredTokenStream); // in last, just before the payload filter since it assigns the token position
       streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);

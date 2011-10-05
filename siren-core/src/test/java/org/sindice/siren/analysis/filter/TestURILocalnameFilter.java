@@ -33,11 +33,9 @@ import static org.junit.Assert.assertTrue;
 import java.io.StringReader;
 
 import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.attributes.CellAttribute;
@@ -47,8 +45,7 @@ public class TestURILocalnameFilter {
 
   private int MAX_LENGTH = URILocalnameFilter.DEFAULT_MAX_LENGTH;
 
-  private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
-    Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
+  private final Tokenizer _t = new TupleTokenizer(new StringReader(""), Integer.MAX_VALUE);
 
   public void assertNormalisesTo(final Tokenizer t, final String input,
                                 final String[] expected)

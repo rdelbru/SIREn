@@ -32,12 +32,9 @@ import java.nio.CharBuffer;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TermAttribute;
-import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
@@ -59,13 +56,11 @@ extends TokenFilter {
   private CharBuffer termBuffer;
 
   private final TermAttribute termAtt;
-  private final TypeAttribute typeAtt;
   private final PositionIncrementAttribute posIncrAtt;
 
   public URINormalisationFilter(final TokenStream input) {
     super(input);
     termAtt = this.addAttribute(TermAttribute.class);
-    typeAtt = this.addAttribute(TypeAttribute.class);
     posIncrAtt = this.addAttribute(PositionIncrementAttribute.class);
     termBuffer = CharBuffer.allocate(256);
   }
@@ -81,15 +76,12 @@ extends TokenFilter {
 
     // Otherwise, get next URI token and start normalisation
     if (input.incrementToken()) {
-      final String type = typeAtt.type();
-      if (type.equals(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI])) {
-        termLength = termAtt.termLength();
-        this.updateBuffer();
-        _isNormalising = true;
-        start = end = 0;
-        this.skipScheme();
-        this.nextToken();
-      }
+      termLength = termAtt.termLength();
+      this.updateBuffer();
+      _isNormalising = true;
+      start = end = 0;
+      this.skipScheme();
+      this.nextToken();
       return true;
     }
 
@@ -185,7 +177,7 @@ extends TokenFilter {
     final TupleTokenizer stream = new TupleTokenizer(new StringReader("" +
     		"<mailto:renaud.delbru@deri.org> <http://renaud.delbru.fr/rdf/foaf> " +
     		"<http://renaud.delbru.fr/>  <http://xmlns.com/foaf/0.1/workplaceHomepage/>"),
-    		Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
+    		Integer.MAX_VALUE);
     final TokenStream result = new URINormalisationFilter(stream);
     while (result.incrementToken()) {
       final CharTermAttribute termAtt = result.getAttribute(CharTermAttribute.class);

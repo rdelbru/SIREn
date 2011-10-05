@@ -40,16 +40,16 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
-import org.sindice.siren.analysis.TupleAnalyzer.URINormalisation;
 import org.sindice.siren.search.SirenBooleanClause;
 import org.sindice.siren.search.SirenBooleanQuery;
 import org.sindice.siren.search.SirenCellQuery;
@@ -74,8 +74,7 @@ public class EntityCentricIndexing {
   public EntityCentricIndexing()
   throws CorruptIndexException, LockObtainFailedException, IOException {
     dir = new RAMDirectory();
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31));
-    analyzer.setURINormalisation(URINormalisation.NONE);
+    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
       analyzer);
     writer = new IndexWriter(dir, conf);

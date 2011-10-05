@@ -44,6 +44,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.search.SirenMultiTermQuery.TopTermsBoostOnlySirenBooleanQueryRewrite;
 
@@ -56,7 +57,7 @@ public class TestSirenFuzzyQuery {
   public void testFuzziness() throws Exception {
     final Directory directory = new RAMDirectory();
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
-      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     final IndexWriter writer = new IndexWriter(directory, conf);
 
     this.addDoc("aaaaa", writer);
@@ -213,7 +214,7 @@ public class TestSirenFuzzyQuery {
   public void testFuzzinessLong() throws Exception {
     final Directory directory = new RAMDirectory();
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
-      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     final IndexWriter writer = new IndexWriter(directory, conf);
     this.addDoc("aaaaaaa", writer);
     this.addDoc("segment", writer);
@@ -306,7 +307,7 @@ public class TestSirenFuzzyQuery {
   public void testTokenLengthOpt() throws IOException {
     final Directory directory = new RAMDirectory();
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
-      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     final IndexWriter writer = new IndexWriter(directory, conf);
     this.addDoc("12345678911", writer);
     this.addDoc("segment", writer);
@@ -346,7 +347,7 @@ public class TestSirenFuzzyQuery {
   public void testBoostOnlyRewrite() throws Exception {
     final Directory directory = new RAMDirectory();
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
-      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     final IndexWriter writer = new IndexWriter(directory, conf);
     this.addDoc("Lucene", writer);
     this.addDoc("Lucene", writer);
@@ -374,7 +375,7 @@ public class TestSirenFuzzyQuery {
 
     final Directory directory = new RAMDirectory();
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
-      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     final IndexWriter w = new IndexWriter(directory, conf);
 
     this.addDoc("Lucene in Action", w);

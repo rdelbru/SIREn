@@ -37,9 +37,10 @@ import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
-import org.sindice.siren.search.QueryTestingHelper;
 import org.sindice.siren.search.DocTupCelIdSetIterator;
+import org.sindice.siren.search.QueryTestingHelper;
 
 public class TestSirenTermPositions {
 
@@ -48,7 +49,7 @@ public class TestSirenTermPositions {
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31)));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
   }
 
   @After

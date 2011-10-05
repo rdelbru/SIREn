@@ -42,6 +42,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 
 /**
@@ -314,7 +315,7 @@ public class TestSirenWildcardQuery extends LuceneTestCase {
   throws IOException {
     final Directory indexStore = newDirectory();
     final RandomIndexWriter writer = new RandomIndexWriter(random, indexStore,
-      new TupleAnalyzer(new WhitespaceAnalyzer(Version.LUCENE_31)));
+      new TupleAnalyzer(new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
     for (int i = 0; i < contents.length; ++i) {
       final Document doc = new Document();
       doc.add(newField(field, this.getTriple(contents[i]), Field.Store.YES, Field.Index.ANALYZED));

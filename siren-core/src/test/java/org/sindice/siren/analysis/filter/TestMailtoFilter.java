@@ -33,11 +33,9 @@ import java.io.StringReader;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
@@ -48,10 +46,8 @@ import org.sindice.siren.analysis.TupleTokenizer;
 public class TestMailtoFilter {
 
   private final String uritype = TupleTokenizer.getTokenTypes()[TupleTokenizer.URI];
-  private final String defaulttype = TypeAttribute.DEFAULT_TYPE;
 
-  private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
-    Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31));
+  private final Tokenizer _t = new TupleTokenizer(new StringReader(""), Integer.MAX_VALUE);
 
   /*
    * Helpers
@@ -119,7 +115,7 @@ public class TestMailtoFilter {
     this.assertURLDecodedTo(_t, "<mailto:stephane.net> \"literal\" <mailto:stephane.campinas@deri.org>",
       new String[] { "stephane.net", "mailto:stephane.net", "literal",
                      "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" },
-      new String[] { uritype, uritype, defaulttype, uritype, uritype},
+      new String[] { uritype, uritype, TupleTokenizer.getTokenTypes()[TupleTokenizer.LITERAL], uritype, uritype},
       new int[] { 1, 0, 1, 1, 0 });
   }
 

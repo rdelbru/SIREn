@@ -106,23 +106,6 @@ public class TestTupleTokenizer {
       new String[] { "ABCabcééABC" }, new String[] { "<LITERAL>" });
   }
 
-// TODO: Convert test for TupleTokenAnalzerFilter
-//  @Test
-//  public void testLiteral()
-//  throws Exception {
-//    this.assertTokenizesTo(_t, "\"Renaud\"", new String[] { "renaud" },
-//      new String[] { "<ALPHANUM>" });
-//    this.assertTokenizesTo(_t, "\"1 and 2\"", new String[] { "1", "2" },
-//      new String[] { "<NUM>", "<NUM>" });
-//    this.assertTokenizesTo(_t, "\"renaud http://test/ \"", new String[] {
-//        "renaud", "http", "test" }, new String[] { "<ALPHANUM>", "<ALPHANUM>", "<ALPHANUM>" });
-//    this.assertTokenizesTo(_t, "\"foo bar FOO BAR\"", new String[] { "foo",
-//        "bar", "foo", "bar" }, new String[] { "<ALPHANUM>", "<ALPHANUM>",
-//        "<ALPHANUM>", "<ALPHANUM>" });
-//    this.assertTokenizesTo(_t, "\"ABC\\u0061\\u0062\\u0063\\u00E9\\u00e9ABC\"",
-//      new String[] { "abcabcééabc" }, new String[] { "<ALPHANUM>" });
-//  }
-
   @Test
   public void testDot()
   throws Exception {
@@ -191,8 +174,7 @@ public class TestTupleTokenizer {
           1, 0, 1 });
   }
 
-  private final Tokenizer _t = new TupleTokenizer(new StringReader(""),
-                               Integer.MAX_VALUE);
+  private final Tokenizer _t = new TupleTokenizer(new StringReader(""), Integer.MAX_VALUE);
 
   public void assertTokenizesTo(final Tokenizer t, final String input,
                                 final String[] expectedImages,

@@ -32,21 +32,14 @@ import java.io.Reader;
 import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.LengthFilter;
-import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.StopAnalyzer;
 import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
-import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.MailtoFilter;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.URIEncodingFilter;
-import org.sindice.siren.analysis.filter.URILocalnameFilter;
-import org.sindice.siren.analysis.filter.URINormalisationFilter;
-import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
+import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 /**
  * The TupleAnalyzer is especially designed to process RDF data. It applies
@@ -63,14 +56,11 @@ import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
  * the WhitespaceTupleAnalyzer. If you are not indexing RDF data, consider to
  * use the WhitespaceTupleAnalyzer instead.
  */
-public class TupleAnalyzer
-extends Analyzer {
+public class TupleAnalyzer extends Analyzer {
 
-  public enum URINormalisation {NONE, LOCALNAME, FULL};
-
-  private URINormalisation normalisationType = URINormalisation.NONE;
-  private Analyzer literalAnalyzer;
-
+  private Analyzer stringAnalyzer;
+  private Analyzer anyURIAnalyzer;
+  
   private final Set<?>            stopSet;
 
   /**
@@ -82,23 +72,25 @@ extends Analyzer {
   /**
    * Builds an analyzer with the default stop words ({@link #STOP_WORDS}).
    */
-  public TupleAnalyzer(final Analyzer literalAnalyzer) {
-    this(literalAnalyzer, STOP_WORDS);
+  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
+    this(stringAnalyzer, anyURIAnalyzer, STOP_WORDS);
   }
 
   /**
    * Builds an analyzer with the given stop words.
    */
-  public TupleAnalyzer(final Analyzer literalAnalyzer, final Set<?> stopWords) {
-    this.literalAnalyzer = literalAnalyzer;
+  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Set<?> stopWords) {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = stopWords;
   }
 
   /**
    * Builds an analyzer with the given stop words.
    */
-  public TupleAnalyzer(final Analyzer literalAnalyzer, final String[] stopWords) {
-    this.literalAnalyzer = literalAnalyzer;
+  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final String[] stopWords) {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
   }
 
@@ -107,8 +99,9 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(File)
    */
-  public TupleAnalyzer(final Analyzer literalAnalyzer, final File stopwords) throws IOException {
-    this.literalAnalyzer = literalAnalyzer;
+  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final File stopwords) throws IOException {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
 
@@ -117,31 +110,38 @@ extends Analyzer {
    *
    * @see WordlistLoader#getWordSet(Reader)
    */
-  public TupleAnalyzer(final Analyzer literalAnalyzer, final Reader stopwords) throws IOException {
-    this.literalAnalyzer = literalAnalyzer;
+  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Reader stopwords) throws IOException {
+    this.stringAnalyzer = stringAnalyzer;
+    this.anyURIAnalyzer = anyURIAnalyzer;
     stopSet = WordlistLoader.getWordSet(stopwords);
   }
 
-  public void setURINormalisation(final URINormalisation type) {
-    this.normalisationType = type;
-  }
-
   public void setLiteralAnalyzer(final Analyzer analyzer) {
-    literalAnalyzer = analyzer;
+    stringAnalyzer = analyzer;
+  }
+  
+  public void setAnyURIAnalyzer(final Analyzer analyzer) {
+    anyURIAnalyzer = analyzer;
   }
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+//    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+//    TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
+//                                                                TupleTokenizer.DOT});
+//    result = new StandardFilter(Version.LUCENE_31, result);
+//    result = new URIEncodingFilter(result, "UTF-8");
+//    result = this.applyURINormalisation(result);
+//    result = new MailtoFilter(result);
+//    result = new LowerCaseFilter(Version.LUCENE_31, result);
+//    result = new StopFilter(Version.LUCENE_31, result, stopSet);
+//    result = new LengthFilter(result, 2, 256);
+//    result = new SirenDeltaPayloadFilter(result);
+    
+    final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    result = new StandardFilter(Version.LUCENE_31, result);
-    result = new URIEncodingFilter(result, "UTF-8");
-    result = this.applyURINormalisation(result);
-    result = new MailtoFilter(result);
-    result = new LowerCaseFilter(Version.LUCENE_31, result);
-    result = new StopFilter(Version.LUCENE_31, result, stopSet);
-    result = new LengthFilter(result, 2, 256);
+    result = new TupleTokenAnalyzerFilter(result, stringAnalyzer, anyURIAnalyzer);
     result = new SirenDeltaPayloadFilter(result);
     return result;
   }
@@ -152,16 +152,22 @@ extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+//      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE, literalAnalyzer);
+//      streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
+//        new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
+//      streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
+//      streams.filteredTokenStream = new URIEncodingFilter(streams.filteredTokenStream, "UTF-8");
+//      streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
+//      streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
+//      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
+//      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
+//      streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
+//      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
+      
+      streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new StandardFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new URIEncodingFilter(streams.filteredTokenStream, "UTF-8");
-      streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
-      streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
-      streams.filteredTokenStream = new LengthFilter(streams.filteredTokenStream, 2, 256);
+      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, stringAnalyzer, anyURIAnalyzer);
       streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);
@@ -172,34 +178,6 @@ extends Analyzer {
   private static final class SavedStreams {
     TupleTokenizer tokenStream;
     TokenStream filteredTokenStream;
-  }
-
-  /**
-   * Given the type of URI normalisation, apply the right sequence of operations
-   * and filters to the token stream.
-   */
-  private TokenStream applyURINormalisation(TokenStream in) {
-    switch (normalisationType) {
-      case NONE:
-        return new URITrailingSlashFilter(in);
-
-      // here, trailing slash filter is after localname filtering, in order to
-      // avoid filtering subdirectory instead of localname
-      case LOCALNAME:
-        in = new URILocalnameFilter(in);
-        return new URITrailingSlashFilter(in);
-
-      // here, trailing slash filter is before localname filtering, in order to
-      // avoid trailing slash checking on every tokens generated by the
-      // URI normalisation filter
-      case FULL:
-        in = new URITrailingSlashFilter(in);
-        return new URINormalisationFilter(in);
-
-      default:
-        throw new EnumConstantNotPresentException(URINormalisation.class,
-          normalisationType.toString());
-    }
   }
 
 }

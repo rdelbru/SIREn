@@ -25,6 +25,7 @@
  */
 package org.sindice.siren.analysis.filter;
 
+import java.io.BufferedReader;
 import java.io.CharArrayReader;
 import java.io.IOException;
 import java.nio.CharBuffer;
@@ -40,6 +41,7 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
+import org.sindice.siren.util.ReusableCharArrayReader;
 import org.sindice.siren.util.XSDDatatype;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,6 +77,8 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   private final CharBuffer xsdString = CharBuffer.wrap(XSDDatatype.XSD_STRING);
   private final CharBuffer xsdAnyURI = CharBuffer.wrap(XSDDatatype.XSD_ANY_URI);
 
+  private ReusableCharArrayReader reusableCharArry;
+  
   public TupleTokenAnalyzerFilter(final TokenStream input, final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
     super(input);
     this.initAttributes();
@@ -132,7 +136,11 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
           return true;
         }
 
-        curentStream = analyzer.reusableTokenStream("", new CharArrayReader(termAtt.buffer(), 0, termAtt.length()));
+        if (reusableCharArry == null) {
+          reusableCharArry = new ReusableCharArrayReader(termAtt.buffer(), 0, termAtt.length());
+        } else
+          reusableCharArry.reset(termAtt.buffer(), 0, termAtt.length());
+        curentStream = analyzer.reusableTokenStream("", reusableCharArry);
         curentStream.reset();
         this.initTokenAttributes();
       }

@@ -26,17 +26,12 @@
  */
 package org.sindice.siren.analysis;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.StopAnalyzer;
-import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
@@ -53,54 +48,9 @@ import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
  * indexing records from database and not RDF.
  */
 
-public class WhitespaceTupleAnalyzer
-extends Analyzer {
+public class WhitespaceTupleAnalyzer extends Analyzer {
 
-  private final Set<?>            stopSet;
-
-  /**
-   * An array containing some common English words that are usually not useful
-   * for searching.
-   */
-  public static final Set<?> STOP_WORDS = StopAnalyzer.ENGLISH_STOP_WORDS_SET;
-
-  /**
-   * Builds an analyzer with the default stop words ({@link #STOP_WORDS}).
-   */
   public WhitespaceTupleAnalyzer() {
-    this(STOP_WORDS);
-  }
-
-  /**
-   * Builds an analyzer with the given stop words.
-   */
-  public WhitespaceTupleAnalyzer(final Set<?> stopWords) {
-    stopSet = stopWords;
-  }
-
-  /**
-   * Builds an analyzer with the given stop words.
-   */
-  public WhitespaceTupleAnalyzer(final String[] stopWords) {
-    stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
-  }
-
-  /**
-   * Builds an analyzer with the stop words from the given file.
-   *
-   * @see WordlistLoader#getWordSet(File)
-   */
-  public WhitespaceTupleAnalyzer(final File stopwords) throws IOException {
-    stopSet = WordlistLoader.getWordSet(stopwords);
-  }
-
-  /**
-   * Builds an analyzer with the stop words from the given reader.
-   *
-   * @see WordlistLoader#getWordSet(Reader)
-   */
-  public WhitespaceTupleAnalyzer(final Reader stopwords) throws IOException {
-    stopSet = WordlistLoader.getWordSet(stopwords);
   }
 
   @Override

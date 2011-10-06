@@ -59,7 +59,7 @@ public abstract class AbstractTestSirenScorer {
   throws Exception {
     final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
-    final TupleAnalyzer analyzer = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
     _helper = new QueryTestingHelper(analyzer);
   }
 

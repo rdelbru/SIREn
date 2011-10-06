@@ -49,7 +49,7 @@ public class TestSirenTermPositions {
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
   }
 
   @After

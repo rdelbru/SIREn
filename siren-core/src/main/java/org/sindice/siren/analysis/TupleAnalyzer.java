@@ -26,16 +26,14 @@
  */
 package org.sindice.siren.analysis;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Set;
+import java.nio.CharBuffer;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.StopAnalyzer;
-import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
@@ -60,62 +58,19 @@ public class TupleAnalyzer extends Analyzer {
 
   private Analyzer stringAnalyzer;
   private Analyzer anyURIAnalyzer;
+  
+  private final Version matchVersion;
+  
+  private final HashMap<CharBuffer, Analyzer> regLitAnalyzers = new HashMap<CharBuffer, Analyzer>();
 
-  private final Set<?>            stopSet;
-
-  /**
-   * An array containing some common English words that are usually not useful
-   * for searching.
-   */
-  public static final Set<?> STOP_WORDS = StopAnalyzer.ENGLISH_STOP_WORDS_SET;
-
-  /**
-   * Builds an analyzer with the default stop words ({@link #STOP_WORDS}).
-   */
-  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
-    this(stringAnalyzer, anyURIAnalyzer, STOP_WORDS);
-  }
-
-  /**
-   * Builds an analyzer with the given stop words.
-   */
-  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Set<?> stopWords) {
+  
+  public TupleAnalyzer(Version version, final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
+    matchVersion = version;
     this.stringAnalyzer = stringAnalyzer;
     this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = stopWords;
+    
   }
-
-  /**
-   * Builds an analyzer with the given stop words.
-   */
-  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final String[] stopWords) {
-    this.stringAnalyzer = stringAnalyzer;
-    this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
-  }
-
-  /**
-   * Builds an analyzer with the stop words from the given file.
-   *
-   * @see WordlistLoader#getWordSet(File)
-   */
-  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final File stopwords) throws IOException {
-    this.stringAnalyzer = stringAnalyzer;
-    this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = WordlistLoader.getWordSet(stopwords);
-  }
-
-  /**
-   * Builds an analyzer with the stop words from the given reader.
-   *
-   * @see WordlistLoader#getWordSet(Reader)
-   */
-  public TupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Reader stopwords) throws IOException {
-    this.stringAnalyzer = stringAnalyzer;
-    this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = WordlistLoader.getWordSet(stopwords);
-  }
-
+  
   public void setLiteralAnalyzer(final Analyzer analyzer) {
     stringAnalyzer = analyzer;
   }
@@ -124,13 +79,26 @@ public class TupleAnalyzer extends Analyzer {
     anyURIAnalyzer = analyzer;
   }
 
+  public void registerLiteralAnalyzer(CharBuffer datatype, Analyzer a) {
+    if (!regLitAnalyzers.containsKey(datatype)) {
+      regLitAnalyzers.put(datatype, a);
+    }
+  }
+  
+  public void clearRegisterLiteralAnalyzers() {
+    regLitAnalyzers.clear();
+  }
+
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    result = new TupleTokenAnalyzerFilter(result, stringAnalyzer, anyURIAnalyzer);
-    result = new SirenDeltaPayloadFilter(result);
+    final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(result, stringAnalyzer, anyURIAnalyzer);
+    for (Entry<CharBuffer, Analyzer> e : regLitAnalyzers.entrySet()) {
+      tt.register(e.getKey(), e.getValue());
+    }
+    result = new SirenDeltaPayloadFilter(tt);
     return result;
   }
 
@@ -143,8 +111,12 @@ public class TupleAnalyzer extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, stringAnalyzer, anyURIAnalyzer);
-      streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
+      final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, stringAnalyzer, anyURIAnalyzer);
+      for (Entry<CharBuffer, Analyzer> e : regLitAnalyzers.entrySet()) {
+        tt.register(e.getKey(), e.getValue());
+      }
+      streams.filteredTokenStream = new SirenDeltaPayloadFilter(tt);
+
     } else {
       streams.tokenStream.reset(reader);
     }

@@ -32,6 +32,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.StringReader;
+import java.nio.CharBuffer;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -52,7 +53,7 @@ public class TestTupleAnalyzer {
   public TestTupleAnalyzer() {
     final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
-    _a = new TupleAnalyzer(new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
   }
 
   public void assertAnalyzesTo(final Analyzer a, final String input,
@@ -193,6 +194,28 @@ public class TestTupleAnalyzer {
         "<ALPHANUM>", "<ALPHANUM>" });
     this.assertAnalyzesTo(_a, "\"ABC\\u0061\\u0062\\u0063\\u00E9\\u00e9ABC\"",
       new String[] { "abcabcééabc" }, new String[] { "<ALPHANUM>" });
+  }
+
+  /**
+   * The datatype "en" was not registered, hence the literal is not analyzed
+   * @throws Exception
+   */
+  @Test
+  public void testLanguage()
+  throws Exception {
+    this.assertAnalyzesTo(_a, "\"test test2\"@en", new String[] { "test test2" }, new String[] { TupleTokenizer.getTokenTypes()[TupleTokenizer.LITERAL] });
+  }
+  
+  /**
+   * Register the "en" datatype analyzer
+   * @throws Exception
+   */
+  @Test
+  public void testLanguage2()
+  throws Exception {
+    _a.registerLiteralAnalyzer(CharBuffer.wrap("en"), new StandardAnalyzer(Version.LUCENE_31));
+    this.assertAnalyzesTo(_a, "\"test test2\"@en", new String[] { "test", "test2" }, new String[] { "<ALPHANUM>", "<ALPHANUM>" });
+    _a.clearRegisterLiteralAnalyzers();
   }
 
   @Test

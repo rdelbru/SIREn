@@ -94,7 +94,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeWhitespaceTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new WhitespaceTupleAnalyzer();
+      final Analyzer analyzer = new WhitespaceTupleAnalyzer(Version.LUCENE_31);
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -127,7 +127,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
     }
     return counter;
   }
-
+  
   public static void main(final String[] args) throws Exception {
     Runner.main(TupleAnalyzerBenchmark.class, args);
   }

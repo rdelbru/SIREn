@@ -26,51 +26,34 @@
 package org.sindice.siren.analysis.attributes;
 
 import java.io.Serializable;
-import java.nio.CharBuffer;
 
 import org.apache.lucene.util.AttributeImpl;
 
 public class DatatypeAttributeImpl extends AttributeImpl implements DatatypeAttribute, Cloneable, Serializable {
 
-  private final CharBuffer buffer = CharBuffer.allocate(64);
+  private char[] dataTypeURI = null;
 
   @Override
-  public CharBuffer datatypeURI() {
-    return buffer;
+  public char[] datatypeURI() {
+    return dataTypeURI;
   }
 
   @Override
   public void setDatatypeURI(final char[] datatypeURI) {
-    buffer.clear();
-
-    if (datatypeURI != null) {
-      buffer.put(datatypeURI);
-    }
-
-    buffer.flip();
+    clear();
+    this.dataTypeURI = datatypeURI;
   }
 
   @Override
   public void clear() {
-    buffer.clear();
+    dataTypeURI = null;
   }
 
   @Override
   public void copyTo(final AttributeImpl target) {
     final DatatypeAttributeImpl t = (DatatypeAttributeImpl) target;
-    t.copyBuffer(buffer);
-  }
-
-  /**
-   * Copies the contents of buffer, starting at offset for
-   * length characters, into the termBuffer array.
-   *
-   * @param buffer the buffer to copy
-   */
-  protected void copyBuffer(final CharBuffer buffer) {
-    this.buffer.clear();
-    this.buffer.put(buffer);
-    this.buffer.flip();
+    t.clear();
+    t.setDatatypeURI(dataTypeURI);
   }
 
 }

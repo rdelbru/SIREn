@@ -25,8 +25,6 @@
  */
 package org.sindice.siren.analysis.attributes;
 
-import java.nio.CharBuffer;
-
 import org.apache.lucene.util.Attribute;
 
 /**
@@ -36,11 +34,8 @@ public interface DatatypeAttribute extends Attribute {
 
   /**
    * Returns the datatype URI.
-   *
-   * <p> The datatype URI is wrapped into a {@link CharBuffer} in order to avoid
-   * the creation of {@link String} objects.
    */
-  public CharBuffer datatypeURI();
+  public char[] datatypeURI();
 
   /**
    * Set the datatype URI.

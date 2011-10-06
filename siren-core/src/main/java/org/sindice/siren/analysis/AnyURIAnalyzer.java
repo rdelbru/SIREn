@@ -94,7 +94,7 @@ public class AnyURIAnalyzer extends Analyzer {
     result = this.applyURINormalisation(result);
     result = new MailtoFilter(result);
     result = new LowerCaseFilter(Version.LUCENE_31, result );
-//  streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
+    result = new StopFilter(Version.LUCENE_31, result, stopSet);
     result = new LengthFilter(true, result, 2, 256);
     result = new AssignTokenType(result, TupleTokenizer.URI);
     return result;
@@ -111,7 +111,7 @@ public class AnyURIAnalyzer extends Analyzer {
       streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
       streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-//      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
+      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
       streams.filteredTokenStream = new LengthFilter(true, streams.filteredTokenStream, 2, 256);
       streams.filteredTokenStream = new AssignTokenType(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {

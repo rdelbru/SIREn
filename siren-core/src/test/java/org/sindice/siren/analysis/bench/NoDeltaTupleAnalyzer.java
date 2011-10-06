@@ -120,7 +120,7 @@ extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    result = new TupleTokenAnalyzerFilter(result, stringAnalyzer, anyURIAnalyzer);
+    result = new TupleTokenAnalyzerFilter(Version.LUCENE_31, result, stringAnalyzer, anyURIAnalyzer);
     result = new SirenPayloadFilter(result);
     return result;
   }
@@ -134,7 +134,7 @@ extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream,
+      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream,
         stringAnalyzer, anyURIAnalyzer);
       streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {

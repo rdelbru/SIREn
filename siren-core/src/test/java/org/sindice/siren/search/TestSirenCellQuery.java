@@ -212,6 +212,22 @@ public class TestSirenCellQuery {
 
     assertEquals(1, _helper.search(q).length);
   }
+  
+  /**
+   * <code>cell(+ddd +eee)</code>, same tuple but not the same cell
+   */
+  @Test
+  public void testMust2() throws IOException {
+    _helper.addDocument("\"eee\" \"ddd\" . ");
+    _helper.addDocument("\"bbb\" \"ddd eee\" . ");
+
+    final SirenBooleanQuery bq = new SirenBooleanQuery();
+    bq.add(ddd, SirenBooleanClause.Occur.MUST);
+    bq.add(eee, SirenBooleanClause.Occur.MUST);
+    final SirenCellQuery q = new SirenCellQuery(bq);
+
+    assertEquals(1, _helper.search(q).length);
+  }
 
   /**
    * <code>cell(+ddd eee)</code>

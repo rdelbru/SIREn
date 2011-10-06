@@ -50,7 +50,10 @@ import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 public class WhitespaceTupleAnalyzer extends Analyzer {
 
-  public WhitespaceTupleAnalyzer() {
+  private final Version matchVersion;
+  
+  public WhitespaceTupleAnalyzer(Version matchVersion) {
+    this.matchVersion = matchVersion;
   }
 
   @Override
@@ -58,7 +61,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                               TupleTokenizer.DOT});
-    result = new TupleTokenAnalyzerFilter(result, new WhitespaceAnalyzer(Version.LUCENE_31),
+    result = new TupleTokenAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion),
                                                   new WhitespaceAnyURIAnalyzer());
     result = new SirenDeltaPayloadFilter(result);
     return result;
@@ -73,7 +76,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
+      streams.filteredTokenStream = new TupleTokenAnalyzerFilter(matchVersion, streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
                                                                                               new WhitespaceAnyURIAnalyzer());
       streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {

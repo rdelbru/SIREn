@@ -32,15 +32,17 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.StringReader;
-import java.nio.CharBuffer;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.util.Version;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 import org.sindice.siren.analysis.attributes.CellAttribute;
@@ -48,12 +50,18 @@ import org.sindice.siren.analysis.attributes.TupleAttribute;
 
 public class TestTupleAnalyzer {
 
-  private final TupleAnalyzer _a;
+  private TupleAnalyzer _a;
 
-  public TestTupleAnalyzer() {
+  @Before
+  public void setUp() {
     final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
     _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+  }
+  
+  @After
+  public void tearDown() {
+    _a.close();
   }
 
   public void assertAnalyzesTo(final Analyzer a, final String input,
@@ -207,14 +215,27 @@ public class TestTupleAnalyzer {
   }
   
   /**
-   * Register the "en" datatype analyzer
+   * Register the "en" and "fr" datatypes analyzers
    * @throws Exception
    */
   @Test
   public void testLanguage2()
   throws Exception {
-    _a.registerLiteralAnalyzer(CharBuffer.wrap("en"), new StandardAnalyzer(Version.LUCENE_31));
-    this.assertAnalyzesTo(_a, "\"test test2\"@en", new String[] { "test", "test2" }, new String[] { "<ALPHANUM>", "<ALPHANUM>" });
+    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(Version.LUCENE_31));
+    _a.registerLiteralAnalyzer("fr".toCharArray(), new WhitespaceAnalyzer(Version.LUCENE_31));
+    this.assertAnalyzesTo(_a, "\"Test Test2\"@en <aaa> \"Test Test2\"@fr",
+      new String[] { "test", "test2", "aaa", "Test", "Test2" },
+      new String[] { "<ALPHANUM>", "<ALPHANUM>", "<URI>", "word", "word" });
+    _a.clearRegisterLiteralAnalyzers();
+  }
+  
+  @Test
+  public void testAlreadyRegisteredAnalyzer()
+  throws Exception {
+    _a.registerLiteralAnalyzer("en".toCharArray(), new WhitespaceAnalyzer(Version.LUCENE_31));
+    // this analyzer is not used, as the datatype "en" is already to an analyzer
+    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(Version.LUCENE_31));
+    this.assertAnalyzesTo(_a, "\"Test tesT2\"@en", new String[] { "Test", "tesT2" }, new String[] { "word", "word" });
     _a.clearRegisterLiteralAnalyzers();
   }
 
@@ -224,6 +245,18 @@ public class TestTupleAnalyzer {
     this.assertAnalyzesTo(_a, "_:b123 <aaa> <bbb> _:b212",
       new String[] { "aaa", "bbb" },
       new String[] { "<URI>", "<URI>" });
+  }
+  
+  /**
+   * test that the tokenization is resumed after filtering a token
+   * @throws Exception
+   */
+  @Test
+  public void testBNodeFiltering2()
+  throws Exception {
+    this.assertAnalyzesTo(_a, "_:b123 <http://renaud.delbru.fr/> _:b212 \"bbb rrr\"",
+      new String[] { "renaud", "delbru", "http://renaud.delbru.fr", "bbb", "rrr" },
+      new String[] { "<URI>", "<URI>", "<URI>", "<ALPHANUM>", "<ALPHANUM>" });
   }
 
 }

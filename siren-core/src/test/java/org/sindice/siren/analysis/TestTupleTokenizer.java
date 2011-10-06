@@ -257,7 +257,7 @@ public class TestTupleTokenizer {
       }
 
       if (expectedDatatypes != null) {
-        assertEquals(expectedDatatypes[i], dtypeAtt.datatypeURI().toString());
+        assertEquals(expectedDatatypes[i], dtypeAtt.datatypeURI() == null ? "" : String.valueOf(dtypeAtt.datatypeURI()));
       }
 
       if (expectedPosIncrs != null) {

@@ -33,14 +33,16 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- *
+ * Assign the given token type to the tokens which pass through. To be used when
+ * the token stream is of same token type (e.g., with the AnyURIanalyzer, any token
+ * is an URI).
  */
-public class AssignTokenType extends TokenFilter {
+public class AssignTokenTypeFilter extends TokenFilter {
 
   private final TypeAttribute typeAtt;
   private final String tokenType;
 
-  public AssignTokenType(final TokenStream input, final int tupleTokenizerType) {
+  public AssignTokenTypeFilter(final TokenStream input, final int tupleTokenizerType) {
     super(input);
     typeAtt = this.input.addAttribute(TypeAttribute.class);
     tokenType = TupleTokenizer.getTokenTypes()[tupleTokenizerType];

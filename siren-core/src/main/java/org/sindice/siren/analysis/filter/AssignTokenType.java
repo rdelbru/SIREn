@@ -33,21 +33,21 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * 
+ *
  */
 public class AssignTokenType extends TokenFilter {
 
   private final TypeAttribute typeAtt;
   private final String tokenType;
-  
-  public AssignTokenType(TokenStream input, int tupleTokenizerType) {
+
+  public AssignTokenType(final TokenStream input, final int tupleTokenizerType) {
     super(input);
     typeAtt = this.input.addAttribute(TypeAttribute.class);
     tokenType = TupleTokenizer.getTokenTypes()[tupleTokenizerType];
   }
 
   @Override
-  public boolean incrementToken()
+  public final boolean incrementToken()
   throws IOException {
     if (!input.incrementToken()) {
       return false;

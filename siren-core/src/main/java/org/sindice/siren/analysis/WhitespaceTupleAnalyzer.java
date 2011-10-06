@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.util.Version;
@@ -63,6 +64,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
                                                               TupleTokenizer.DOT});
     result = new TupleTokenAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion),
                                                   new WhitespaceAnyURIAnalyzer());
+    result = new LowerCaseFilter(Version.LUCENE_31, result);
     result = new SirenDeltaPayloadFilter(result);
     return result;
   }
@@ -78,6 +80,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
       streams.filteredTokenStream = new TupleTokenAnalyzerFilter(matchVersion, streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
                                                                                               new WhitespaceAnyURIAnalyzer());
+      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
       streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);

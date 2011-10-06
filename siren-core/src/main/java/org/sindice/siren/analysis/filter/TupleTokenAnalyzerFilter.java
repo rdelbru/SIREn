@@ -38,7 +38,9 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
+import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
+import org.sindice.siren.analysis.attributes.TupleAttribute;
 import org.sindice.siren.util.ReusableCharArrayReader;
 import org.sindice.siren.util.XSDDatatype;
 
@@ -46,7 +48,11 @@ import org.sindice.siren.util.XSDDatatype;
  * This class performs post-processing operation on the tokens extracted by the
  * {@link TupleTokenizer} class, e.g., Literal, URI. An URI and a Literal have
  * default analyzers assigned, specified through the {@link TupleAnalyzer}
- * constructor. 
+ * constructor.
+ * <p>
+ * This filter provides a {@link #register(char[], Analyzer)} method which allows
+ * to register an analyzer to a specific datatype URI. It can be called through
+ * the {@link TupleAnalyzer} class.
  */
 public class TupleTokenAnalyzerFilter extends TokenFilter {
 
@@ -57,12 +63,13 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   private PositionIncrementAttribute posIncrAtt;
   private TypeAttribute typeAtt;
   private DatatypeAttribute dtypeAtt;
-
+  private TupleAttribute tupleAtt;
+  private CellAttribute cellAtt;
+  
   private CharTermAttribute tokenTermAtt;
   private OffsetAttribute tokenOffsetAtt;
   private PositionIncrementAttribute tokenPosIncrAtt;
   private TypeAttribute tokenTypeAtt;
-  private DatatypeAttribute tokenDtypeAtt;
 
   private boolean isConsumingToken = false;
   private TokenStream curentStream;
@@ -87,6 +94,8 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
     posIncrAtt = input.getAttribute(PositionIncrementAttribute.class);
     typeAtt = input.getAttribute(TypeAttribute.class);
     dtypeAtt = input.getAttribute(DatatypeAttribute.class);
+    tupleAtt = this.addAttribute(TupleAttribute.class);
+    cellAtt = this.addAttribute(CellAttribute.class);
   }
 
   /**
@@ -97,7 +106,6 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
     tokenOffsetAtt = curentStream.addAttribute(OffsetAttribute.class);
     tokenPosIncrAtt = curentStream.addAttribute(PositionIncrementAttribute.class);
     tokenTypeAtt = curentStream.addAttribute(TypeAttribute.class);
-    tokenDtypeAtt = curentStream.addAttribute(DatatypeAttribute.class);
   }
 
   /**
@@ -137,6 +145,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
         } else
           reusableCharArray.reset(termAtt.buffer(), 0, termAtt.length());
         curentStream = analyzer.reusableTokenStream("", reusableCharArray);
+        
         this.initTokenAttributes();
       }
       // Consume the token with the registered analyzer
@@ -147,16 +156,30 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   }
 
   /**
-   * Copy the inner's stream attributes values to the main stream's ones
+   * Copy the inner's stream attributes values to the main stream's ones. This filter
+   * uses an inner stream, therefore it needs to be cleared so that other filters
+   * have clean attributes data. Because of that, the attributes datatypeURI, tuple
+   * and cell have to saved in order to be restored after.
    */
   private void copyInnerStreamAttributes() {
+    // backup datatype, tuple and cell id
+    final int tupleID = tupleAtt.tuple();
+    final int cellID = cellAtt.cell();
+    final char[] dt = dtypeAtt.datatypeURI();
+    // clear attributes
+    input.clearAttributes();
+    // copy inner attributes
     final int len = tokenTermAtt.length();
     termAtt.copyBuffer(tokenTermAtt.buffer(), 0, len);
     offsetAtt.setOffset(tokenOffsetAtt.startOffset(), tokenOffsetAtt.endOffset());
     posIncrAtt.setPositionIncrement(tokenPosIncrAtt.getPositionIncrement());
     typeAtt.setType(tokenTypeAtt.type());
-    dtypeAtt.setDatatypeURI(tokenDtypeAtt.datatypeURI());
-    // TupleTokenizer handles the setting of tuple/cell values
+    // TupleTokenizer handles the setting of tuple/cell values and the datatype URI
+    
+    // restore datatype, tuple and cell
+    tupleAtt.setTuple(tupleID);
+    cellAtt.setCell(cellID);
+    dtypeAtt.setDatatypeURI(dt);
   }
 
   @Override

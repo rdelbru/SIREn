@@ -6,13 +6,13 @@
   <parent>
     <artifactId>siren-parent</artifactId>
     <groupId>org.sindice.siren</groupId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.2-SNAPSHOT</version>
     <relativePath>../siren-parent</relativePath>
   </parent>
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-core</artifactId>
-  <version>0.2.1-SNAPSHOT</version>
+  <version>0.2.2-SNAPSHOT</version>
   <name>siren-core</name>
   <url>http://siren.sindice.org</url>
 

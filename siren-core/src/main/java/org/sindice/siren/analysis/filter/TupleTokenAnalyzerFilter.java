@@ -72,11 +72,14 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   private TypeAttribute tokenTypeAtt;
 
   private boolean isConsumingToken = false;
-  private TokenStream curentStream;
+  private TokenStream currentStream;
 
   private ReusableCharArrayReader reusableCharArray;
-  
-  public TupleTokenAnalyzerFilter(final Version version, final TokenStream input, final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
+
+  public TupleTokenAnalyzerFilter(final Version version,
+                                  final TokenStream input,
+                                  final Analyzer stringAnalyzer,
+                                  final Analyzer anyURIAnalyzer) {
     super(input);
     dtsAnalyzer = new CharArrayMap<Analyzer>(version, 64, false);
     this.initAttributes();
@@ -102,10 +105,10 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
    * Initialise the attributes of the inner stream used to tokenize the incoming token.
    */
   private void initTokenAttributes() {
-    tokenTermAtt = curentStream.addAttribute(CharTermAttribute.class);
-    tokenOffsetAtt = curentStream.addAttribute(OffsetAttribute.class);
-    tokenPosIncrAtt = curentStream.addAttribute(PositionIncrementAttribute.class);
-    tokenTypeAtt = curentStream.addAttribute(TypeAttribute.class);
+    tokenTermAtt = currentStream.addAttribute(CharTermAttribute.class);
+    tokenOffsetAtt = currentStream.addAttribute(OffsetAttribute.class);
+    tokenPosIncrAtt = currentStream.addAttribute(PositionIncrementAttribute.class);
+    tokenTypeAtt = currentStream.addAttribute(TypeAttribute.class);
   }
 
   /**
@@ -118,7 +121,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
       dtsAnalyzer.put(dataTypeURI, analyzer);
     }
   }
-  
+
   @Override
   public boolean incrementToken()
   throws IOException {
@@ -131,25 +134,27 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
       if (!isConsumingToken) {
         if (!input.incrementToken())
           return false;
-        
+
         final char[] dt = dtypeAtt.datatypeURI();
         if (dt == null || dt.length == 0) { // empty datatype, e.g., a bnode
           return true;
         }
-        if (!dtsAnalyzer.containsKey(dt)) // the datatype is not registered, leave the token as it is
+
+        // the datatype is not registered, leave the token as it is
+        if (!dtsAnalyzer.containsKey(dt))
           return true;
-        
+
         final Analyzer analyzer = dtsAnalyzer.get(dt);
         if (reusableCharArray == null) {
           reusableCharArray = new ReusableCharArrayReader(termAtt.buffer(), 0, termAtt.length());
-        } else
+        } else {
           reusableCharArray.reset(termAtt.buffer(), 0, termAtt.length());
-        curentStream = analyzer.reusableTokenStream("", reusableCharArray);
-        
+        }
+        currentStream = analyzer.reusableTokenStream("", reusableCharArray);
         this.initTokenAttributes();
       }
       // Consume the token with the registered analyzer
-      isConsumingToken = curentStream.incrementToken();
+      isConsumingToken = currentStream.incrementToken();
     } while(!isConsumingToken);
     this.copyInnerStreamAttributes();
     return true;
@@ -186,8 +191,8 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   public void close()
   throws IOException {
     try {
-      if (curentStream != null)
-        curentStream.close();
+      if (currentStream != null)
+        currentStream.close();
     } finally {
       super.close();
     }

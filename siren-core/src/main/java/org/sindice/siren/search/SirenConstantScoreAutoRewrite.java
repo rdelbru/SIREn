@@ -30,7 +30,6 @@ import java.util.ArrayList;
 
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.MultiTermQuery.ConstantScoreAutoRewrite;
 import org.apache.lucene.search.Query;
 import org.sindice.siren.search.SirenBooleanClause.Occur;
@@ -93,7 +92,8 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
     // cutoffs, we use ConstantBooleanQueryRewrite; else,
     // ConstantFilterRewrite:
     final int docCountCutoff = (int) ((docCountPercent / 100.) * reader.maxDoc());
-    final int termCountLimit = Math.min(BooleanQuery.getMaxClauseCount(), termCountCutoff);
+    // final int termCountLimit = Math.min(BooleanQuery.getMaxClauseCount(), termCountCutoff);
+    final int termCountLimit = termCountCutoff;
 
     final CutOffTermCollector col = new CutOffTermCollector(reader, docCountCutoff, termCountLimit);
     this.collectTerms(reader, query, col);

@@ -28,7 +28,6 @@
  *    Permission to use, copy, modify, and distribute this software is
  *    freely granted, provided that this notice is preserved.
  */
-
 /**
  * @project siren-core
  * @author Renaud Delbru [ 5 Oct 2011 ]

@@ -39,7 +39,7 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceTokenizer;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.AssignTokenType;
+import org.sindice.siren.analysis.filter.AssignTokenTypeFilter;
 import org.sindice.siren.analysis.filter.MailtoFilter;
 import org.sindice.siren.analysis.filter.URIEncodingFilter;
 import org.sindice.siren.analysis.filter.URILocalnameFilter;
@@ -96,7 +96,7 @@ public class AnyURIAnalyzer extends Analyzer {
     result = new LowerCaseFilter(Version.LUCENE_31, result );
     result = new StopFilter(Version.LUCENE_31, result, stopSet);
     result = new LengthFilter(true, result, 2, 256);
-    result = new AssignTokenType(result, TupleTokenizer.URI);
+    result = new AssignTokenTypeFilter(result, TupleTokenizer.URI);
     return result;
   }
 
@@ -113,7 +113,7 @@ public class AnyURIAnalyzer extends Analyzer {
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
       streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
       streams.filteredTokenStream = new LengthFilter(true, streams.filteredTokenStream, 2, 256);
-      streams.filteredTokenStream = new AssignTokenType(streams.filteredTokenStream, TupleTokenizer.URI);
+      streams.filteredTokenStream = new AssignTokenTypeFilter(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {
       streams.tokenStream.reset(reader);
     }

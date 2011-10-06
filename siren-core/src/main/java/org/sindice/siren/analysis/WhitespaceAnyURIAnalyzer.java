@@ -38,7 +38,7 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceTokenizer;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.AssignTokenType;
+import org.sindice.siren.analysis.filter.AssignTokenTypeFilter;
 
 /**
  * Analyzer designed to deal with any kind of URIs.
@@ -77,7 +77,7 @@ public class WhitespaceAnyURIAnalyzer extends Analyzer {
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
     TokenStream result = new WhitespaceTokenizer(Version.LUCENE_31, reader);
     result = new LowerCaseFilter(Version.LUCENE_31, result);
-    result = new AssignTokenType(result, TupleTokenizer.URI);
+    result = new AssignTokenTypeFilter(result, TupleTokenizer.URI);
     return result;
   }
 
@@ -89,7 +89,7 @@ public class WhitespaceAnyURIAnalyzer extends Analyzer {
       this.setPreviousTokenStream(streams);
       streams.tokenStream = new WhitespaceTokenizer(Version.LUCENE_31, reader);
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.tokenStream);
-      streams.filteredTokenStream = new AssignTokenType(streams.filteredTokenStream, TupleTokenizer.URI);
+      streams.filteredTokenStream = new AssignTokenTypeFilter(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {
       streams.tokenStream.reset(reader);
     }

@@ -123,7 +123,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
   }
 
   @Override
-  public boolean incrementToken()
+  public final boolean incrementToken()
   throws IOException {
     /*
      * the use of the loop is necessary in the case where it was consuming a token

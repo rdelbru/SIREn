@@ -71,7 +71,8 @@ public class NTripleQueryParserTest {
   public void testLuceneSpecialCharacter()
   throws Exception {
     final String ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
-    final String query = " <http://sw.deri.org/~aidanh/> <http://p> <http://o>";
+    // The URITrailingSlashFilter is called
+    final String query = " <http://sw.deri.org/~aidanh> <http://p> <http://o>";
 
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
   }

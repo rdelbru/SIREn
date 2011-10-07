@@ -41,9 +41,11 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
+import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
 
 public class NTripleTestHelper {
 
@@ -82,12 +84,10 @@ public class NTripleTestHelper {
 
     @Override
     public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-      final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE,
-        new WhitespaceAnalyzer(Version.LUCENE_31));
+      final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
-                                                                  TupleTokenizer.DOT,
-                                                                  TupleTokenizer.DATATYPE,
-                                                                  TupleTokenizer.LANGUAGE});
+                                                                  TupleTokenizer.DOT});
+      result = new TupleTokenAnalyzerFilter(Version.LUCENE_31, result, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
       result = new SirenPayloadFilter(result);
       return result;
     }
@@ -98,11 +98,11 @@ public class NTripleTestHelper {
       if (streams == null) {
         streams = new SavedStreams();
         this.setPreviousTokenStream(streams);
-        streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE,
-          new WhitespaceAnalyzer(Version.LUCENE_31));
-        streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
-          new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT,
-                     TupleTokenizer.DATATYPE, TupleTokenizer.LANGUAGE});
+        streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
+        streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream, new int[] {TupleTokenizer.BNODE,
+                                                                                          TupleTokenizer.DOT});
+        streams.filteredTokenStream = new TupleTokenAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream ,
+          new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
         streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
       } else {
         streams.tokenStream.reset(reader);

@@ -20,14 +20,16 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
-import org.apache.commons.lang.NotImplementedException;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
-import org.apache.lucene.search.WildcardQuery;
+import org.sindice.siren.qparser.ntriple.query.config.SirenMultiTermRewriteMethodAttribute;
+import org.sindice.siren.search.SirenMultiTermQuery;
+import org.sindice.siren.search.SirenWildcardQuery;
 
 /**
- * Builds a {@link WildcardQuery} object from a {@link WildcardQueryNode}
+ * Builds a {@link SirenWildcardQuery} object from a {@link WildcardQueryNode}
  * object.
  */
 public class WildcardQueryNodeBuilder implements ResourceQueryBuilder {
@@ -36,21 +38,18 @@ public class WildcardQueryNodeBuilder implements ResourceQueryBuilder {
     // empty constructor
   }
 
-  public WildcardQuery build(QueryNode queryNode) throws QueryNodeException {
-    throw new NotImplementedException("Wildcard query is not supported yet");
+  public SirenWildcardQuery build(QueryNode queryNode) throws QueryNodeException {
+    WildcardQueryNode wildcardNode = (WildcardQueryNode) queryNode;
+
+    SirenWildcardQuery q = new SirenWildcardQuery(new Term(wildcardNode.getFieldAsString(),
+                                                           wildcardNode.getTextAsString()));
     
-//TODO: To implement when siren will support wildcard query
-//    WildcardQueryNode wildcardNode = (WildcardQueryNode) queryNode;
-//
-//    WildcardQuery q = new WildcardQuery(new Term(wildcardNode.getFieldAsString(),
-//                                                 wildcardNode.getTextAsString()));
-//    
-//    MultiTermQuery.RewriteMethod method = (MultiTermQuery.RewriteMethod)queryNode.getTag(MultiTermRewriteMethodAttribute.TAG_ID);
-//    if (method != null) {
-//      q.setRewriteMethod(method);
-//    }
-//    
-//    return q;
+    SirenMultiTermQuery.RewriteMethod method = (SirenMultiTermQuery.RewriteMethod)queryNode.getTag(SirenMultiTermRewriteMethodAttribute.TAG_ID);
+    if (method != null) {
+      q.setRewriteMethod(method);
+    }
+    
+    return q;
   }
 
 }

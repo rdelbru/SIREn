@@ -20,14 +20,14 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
-import org.apache.commons.lang.NotImplementedException;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.nodes.FuzzyQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
-import org.apache.lucene.search.FuzzyQuery;
+import org.sindice.siren.search.SirenFuzzyQuery;
 
 /**
- * Builds a {@link FuzzyQuery} object from a {@link FuzzyQueryNode} object.
+ * Builds a {@link SirenFuzzyQuery} object from a {@link FuzzyQueryNode} object.
  */
 public class FuzzyQueryNodeBuilder implements ResourceQueryBuilder {
 
@@ -35,19 +35,11 @@ public class FuzzyQueryNodeBuilder implements ResourceQueryBuilder {
     // empty constructor
   }
 
-  public FuzzyQuery build(QueryNode queryNode) throws QueryNodeException {
-    throw new NotImplementedException("FuzzyQueries are not supported yet");
+  public SirenFuzzyQuery build(QueryNode queryNode) throws QueryNodeException {
+    FuzzyQueryNode fuzzyNode = (FuzzyQueryNode) queryNode;
     
-//TODO: TO implement when Siren will support Fuzzy queries    
-//	  if(true){
-//		  
-//	  }
-//    FuzzyQueryNode fuzzyNode = (FuzzyQueryNode) queryNode;
-//
-//    return new FuzzyQuery(new Term(fuzzyNode.getFieldAsString(), fuzzyNode
-//        .getTextAsString()), fuzzyNode.getSimilarity(), fuzzyNode
-//        .getPrefixLength());
-//
+    return new SirenFuzzyQuery(new Term(fuzzyNode.getFieldAsString(), fuzzyNode.getTextAsString()),
+      fuzzyNode.getSimilarity(), fuzzyNode.getPrefixLength());
   }
 
 }

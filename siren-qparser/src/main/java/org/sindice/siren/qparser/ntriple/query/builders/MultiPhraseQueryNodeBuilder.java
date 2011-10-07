@@ -20,19 +20,11 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.TreeMap;
-
 import org.apache.commons.lang.NotImplementedException;
-import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.core.QueryNodeException;
-import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
-import org.apache.lucene.queryParser.core.nodes.FieldQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.standard.nodes.MultiPhraseQueryNode;
 import org.apache.lucene.search.MultiPhraseQuery;
-import org.apache.lucene.search.TermQuery;
 
 /**
  * Builds a {@link MultiPhraseQuery} object from a {@link MultiPhraseQueryNode}
@@ -46,7 +38,6 @@ public class MultiPhraseQueryNodeBuilder implements ResourceQueryBuilder {
 
   public MultiPhraseQuery build(QueryNode queryNode) throws QueryNodeException {
     throw new NotImplementedException("Multi phrase queries are not supported by SIRen yet");
-    
 //    
 //    MultiPhraseQueryNode phraseNode = (MultiPhraseQueryNode) queryNode;
 //

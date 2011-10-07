@@ -413,4 +413,78 @@ public class NTripleQueryParserTest {
     assertTrue(score1 > score2);
   }
 
+  @Test
+  public void testFuzzyQuery()
+  throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
+    String query = "<http://stephane> * 'literal~'";
+
+    /*
+     * match because the distance between literal and literaleme is 3, which is
+     * lower than length(literal)*0.5, with 0.5 the minimum similarity.
+     */
+    String ntriple = "<http://stephane> <http://p1> \"literaleme\" .\n";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+
+    /*
+     * do no match because the distance between literal and literalement is 4, which is
+     * higher than length(literal)*0.5, with 0.5 the minimum similarity.
+     */
+    ntriple = "<http://stephane> <http://p1> \"literalemen\" .\n";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    // it matches with a default similarity of 0.2
+    query = "<http://stephane> * 'literal~0.2'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    /*
+     * Matching within an URI: cannot match because tilde is escaped inside the URI
+     */
+    query = "<http://stephan~> * 'literalemen'";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
+  @Test
+  public void testPrefixQuery()
+  throws Exception {
+    final String ntriple = "<http://stephane> <http://p1> \"literaleme\" .\n";
+    String query = "<http://stephane> * 'lit*'";
+    
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://steph*> * \"literaleme\"";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane> * \"lita*\"";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
+  @Test
+  public void testTermRangeQuery()
+  throws Exception {
+    final String ntriple = "<http://stephane> <http://p1> \"literal laretil\" .\n";
+    
+    String query = "<http://stephane> * '[bla TO mla]'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane> * '[bla TO k]'";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
+  @Test
+  public void testWildcardQuery()
+  throws Exception {
+    final String ntriple = "<http://stephane.campinas> <http://p1> \"literal laretil\" .\n";
+    
+    String query = "<http://stephane.campinas> * 'li*al'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane.campinas> * 'liter?l'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://st*e.ca*as> * 'literal'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    query = "<http://stephane.ca*os> * 'literal'";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
 }

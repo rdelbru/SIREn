@@ -20,11 +20,15 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
-import org.apache.commons.lang.NotImplementedException;
 import org.apache.lucene.queryParser.core.QueryNodeException;
+import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
+import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode.CompareOperator;
 import org.apache.lucene.queryParser.standard.nodes.RangeQueryNode;
 import org.apache.lucene.search.TermRangeQuery;
+import org.sindice.siren.qparser.ntriple.query.config.SirenMultiTermRewriteMethodAttribute;
+import org.sindice.siren.search.SirenMultiTermQuery;
+import org.sindice.siren.search.SirenTermRangeQuery;
 
 /**
  * Builds a {@link TermRangeQuery} object from a {@link RangeQueryNode} object.
@@ -35,38 +39,34 @@ public class RangeQueryNodeBuilder implements ResourceQueryBuilder {
     // empty constructor
   }
 
-  public TermRangeQuery build(QueryNode queryNode) throws QueryNodeException {
-    throw new NotImplementedException("TermRange queries not supported yet");
+  public SirenTermRangeQuery build(QueryNode queryNode) throws QueryNodeException {
+    RangeQueryNode rangeNode = (RangeQueryNode) queryNode;
+    ParametricQueryNode upper = rangeNode.getUpperBound();
+    ParametricQueryNode lower = rangeNode.getLowerBound();
+  
+    boolean lowerInclusive = false;
+    boolean upperInclusive = false;
+  
+    if (upper.getOperator() == CompareOperator.LE) {
+      upperInclusive = true;
+    }
+  
+    if (lower.getOperator() == CompareOperator.GE) {
+      lowerInclusive = true;
+    }
+  
+    String field = rangeNode.getField().toString();
+  
+    SirenTermRangeQuery rangeQuery = new SirenTermRangeQuery(field, lower
+        .getTextAsString(), upper.getTextAsString(), lowerInclusive,
+        upperInclusive, rangeNode.getCollator());
     
-//TODO: To implement when SIRen will support termrange queries    
-//    RangeQueryNode rangeNode = (RangeQueryNode) queryNode;
-//    ParametricQueryNode upper = rangeNode.getUpperBound();
-//    ParametricQueryNode lower = rangeNode.getLowerBound();
-//
-//    boolean lowerInclusive = false;
-//    boolean upperInclusive = false;
-//
-//    if (upper.getOperator() == CompareOperator.LE) {
-//      upperInclusive = true;
-//    }
-//
-//    if (lower.getOperator() == CompareOperator.GE) {
-//      lowerInclusive = true;
-//    }
-//
-//    String field = rangeNode.getField().toString();
-//
-//    TermRangeQuery rangeQuery = new TermRangeQuery(field, lower
-//        .getTextAsString(), upper.getTextAsString(), lowerInclusive,
-//        upperInclusive, rangeNode.getCollator());
-//    
-//    MultiTermQuery.RewriteMethod method = (MultiTermQuery.RewriteMethod)queryNode.getTag(MultiTermRewriteMethodAttribute.TAG_ID);
-//    if (method != null) {
-//      rangeQuery.setRewriteMethod(method);
-//    }
-//
-//    return rangeQuery;
-
+    SirenMultiTermQuery.RewriteMethod method = (SirenMultiTermQuery.RewriteMethod)queryNode.getTag(SirenMultiTermRewriteMethodAttribute.TAG_ID);
+    if (method != null) {
+      rangeQuery.setRewriteMethod(method);
+    }
+  
+    return rangeQuery;
   }
 
 }

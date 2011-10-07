@@ -49,8 +49,8 @@ import org.apache.lucene.search.Query;
 import org.sindice.siren.qparser.keyword.query.processors.AllowFuzzyAndWildcardProcessor;
 import org.sindice.siren.qparser.keyword.query.processors.AnalyzerQueryNodeProcessor;
 import org.sindice.siren.qparser.keyword.query.processors.ChangeDefaultOperatorNodeProcessor;
-import org.sindice.siren.qparser.keyword.query.processors.MultiFieldQueryNodeProcessor;
 import org.sindice.siren.qparser.keyword.query.processors.GroupQueryNodeProcessor;
+import org.sindice.siren.qparser.keyword.query.processors.MultiFieldQueryNodeProcessor;
 
 /**
  * This pipeline has all the processors needed to process a query node tree,

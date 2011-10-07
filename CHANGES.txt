@@ -1,5 +1,12 @@
 
-======================= Release 0.2.x 2011-xx-xx =======================
+======================= Release 0.2.2 2011-xx-xx =======================
+
+New Features
+
+* [GH-19] Port MultiTermQuery
+* [GH-20] Extend analyzer for datatype support
+
+======================= Release 0.2.1 2011-09-13 =======================
 
 Bugs
 

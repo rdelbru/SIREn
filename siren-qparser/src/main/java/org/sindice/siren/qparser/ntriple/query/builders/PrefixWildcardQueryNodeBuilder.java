@@ -20,14 +20,16 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
-import org.apache.commons.lang.NotImplementedException;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.standard.nodes.PrefixWildcardQueryNode;
-import org.apache.lucene.search.PrefixQuery;
+import org.sindice.siren.qparser.ntriple.query.config.SirenMultiTermRewriteMethodAttribute;
+import org.sindice.siren.search.SirenMultiTermQuery;
+import org.sindice.siren.search.SirenPrefixQuery;
 
 /**
- * Builds a {@link PrefixQuery} object from a {@link PrefixWildcardQueryNode}
+ * Builds a {@link SirenPrefixQuery} object from a {@link PrefixWildcardQueryNode}
  * object.
  */
 public class PrefixWildcardQueryNodeBuilder implements ResourceQueryBuilder {
@@ -36,21 +38,18 @@ public class PrefixWildcardQueryNodeBuilder implements ResourceQueryBuilder {
     // empty constructor
   }
 
-  public PrefixQuery build(QueryNode queryNode) throws QueryNodeException {    
-    throw new NotImplementedException("Prefix queries are not implemented in siren yet");
+  public SirenPrefixQuery build(QueryNode queryNode) throws QueryNodeException {
+    PrefixWildcardQueryNode wildcardNode = (PrefixWildcardQueryNode) queryNode;
     
-//TODO: To implement when SIRen will support prefix queries    
-//    PrefixWildcardQueryNode wildcardNode = (PrefixWildcardQueryNode) queryNode;
-//
-//    String text = wildcardNode.getText().subSequence(0, wildcardNode.getText().length() - 1).toString();
-//    PrefixQuery q = new PrefixQuery(new Term(wildcardNode.getFieldAsString(), text));
-//    
-//    MultiTermQuery.RewriteMethod method = (MultiTermQuery.RewriteMethod)queryNode.getTag(MultiTermRewriteMethodAttribute.TAG_ID);
-//    if (method != null) {
-//      q.setRewriteMethod(method);
-//    }
-//    
-//    return q;
+    final String text = wildcardNode.getText().subSequence(0, wildcardNode.getText().length() - 1).toString();
+    SirenPrefixQuery q = new SirenPrefixQuery(new Term(wildcardNode.getFieldAsString(), text));
+    
+    SirenMultiTermQuery.RewriteMethod method = (SirenMultiTermQuery.RewriteMethod)queryNode.getTag(SirenMultiTermRewriteMethodAttribute.TAG_ID);
+    if (method != null) {
+      q.setRewriteMethod(method);
+    }
+        
+    return q;
   }
 
 }

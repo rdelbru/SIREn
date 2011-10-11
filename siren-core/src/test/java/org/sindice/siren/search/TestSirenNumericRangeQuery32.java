@@ -77,7 +77,8 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
 
     final RandomIndexWriter writer = new RandomIndexWriter(random, directory,
         newIndexWriterConfig(TEST_VERSION_CURRENT, analyzer)
-        .setMaxBufferedDocs(_TestUtil.nextInt(random, 50, 1000)));
+        .setMaxBufferedDocs(_TestUtil.nextInt(random, 100, 1000))
+        .setMergePolicy(newLogMergePolicy()));
 
     // Add a series of noDocs docs with increasing int values
     for (int l=0; l<noDocs; l++) {

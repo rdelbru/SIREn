@@ -443,7 +443,8 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
      */
     @Override
     protected boolean termCompare(final Term term) {
-      return (term.field() == field && term.text().compareTo(currentUpperBound) <= 0);
+//      return (term.field() == field && term.text().compareTo(currentUpperBound) <= 0);
+      return (term.text().compareTo(currentUpperBound) <= 0);
     }
 
     /** Increments the enumeration to the next element.  True if one exists. */

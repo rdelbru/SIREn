@@ -289,9 +289,23 @@ extends Query {
   @Override
   public Query rewrite(final IndexReader reader)
   throws IOException {
-    // TODO we cannot optimise 1-clause queries. The query will be rewritten
-    // into a single {@link SirenTermQuery} without any tuple index constraint.
-    return this; // no clauses rewrote
+    SirenTupleQuery clone = null;                    // recursively rewrite
+    for (int i = 0 ; i < clauses.size(); i++) {
+      final SirenTupleClause c = clauses.get(i);
+      final Query query = c.getQuery().rewrite(reader);
+      if (query != c.getQuery()) {                     // clause rewrote: must clone
+        if (clone == null) {
+          clone = (SirenTupleQuery) this.clone();
+        }
+        clone.clauses.set(i, new SirenTupleClause((SirenCellQuery) query, c.getOccur()));
+      }
+    }
+    if (clone != null) {
+      return clone;                               // some clauses rewrote
+    }
+    else {
+      return this;                                // no clauses rewrote
+    }
   }
 
   @Override
@@ -306,6 +320,9 @@ extends Query {
   public Object clone() {
     final SirenTupleQuery clone = (SirenTupleQuery) super.clone();
     clone.clauses = (ArrayList<SirenTupleClause>) this.clauses.clone();
+    clone.disableCoord = this.disableCoord;
+    clone.tupleConstraintStart = this.tupleConstraintStart;
+    clone.tupleConstraintEnd = this.tupleConstraintEnd;
     return clone;
   }
 
@@ -347,7 +364,10 @@ extends Query {
     if (!(o instanceof SirenTupleQuery)) return false;
     final SirenTupleQuery other = (SirenTupleQuery) o;
     return (this.getBoost() == other.getBoost()) &&
-           this.clauses.equals(other.clauses);
+           this.clauses.equals(other.clauses) &&
+           this.disableCoord == other.disableCoord &&
+           this.tupleConstraintStart == other.tupleConstraintStart &&
+           this.tupleConstraintEnd == other.tupleConstraintEnd;
   }
 
   /** Returns a hash code value for this object. */

@@ -19,7 +19,7 @@
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @project siren
+ * @project siren-qparser_rdelbru
  * @author Renaud Delbru [ 21 Jan 2011 ]
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
@@ -41,6 +41,8 @@ import org.apache.lucene.queryParser.standard.processors.FuzzyQueryNodeProcessor
 import org.apache.lucene.queryParser.standard.processors.LowercaseExpandedTermsQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MatchAllDocsQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MultiTermRewriteMethodProcessor;
+import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcessor;
+import org.apache.lucene.queryParser.standard.processors.NumericRangeQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.ParametricRangeQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.PhraseSlopQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.RemoveEmptyNonLeafQueryNodeProcessor;
@@ -79,6 +81,8 @@ extends QueryNodeProcessorPipeline {
     this.add(new MultiFieldQueryNodeProcessor());
     this.add(new FuzzyQueryNodeProcessor());
     this.add(new MatchAllDocsQueryNodeProcessor());
+    this.add(new NumericQueryNodeProcessor());
+    this.add(new NumericRangeQueryNodeProcessor());
     this.add(new LowercaseExpandedTermsQueryNodeProcessor());
     this.add(new ParametricRangeQueryNodeProcessor());
     this.add(new AllowFuzzyAndWildcardProcessor());

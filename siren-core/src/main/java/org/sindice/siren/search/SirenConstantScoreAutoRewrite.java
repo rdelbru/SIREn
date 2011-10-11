@@ -43,7 +43,7 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
   public static int DEFAULT_TERM_COUNT_CUTOFF = Integer.MAX_VALUE;
 
   // Document cutoff deactivated until a efficient filter-based approach is found
-  public static double DEFAULT_DOC_COUNT_PERCENT = 200;
+  public static double DEFAULT_DOC_COUNT_PERCENT = Integer.MAX_VALUE;
 
   private int termCountCutoff = DEFAULT_TERM_COUNT_CUTOFF;
   private double docCountPercent = DEFAULT_DOC_COUNT_PERCENT;
@@ -87,13 +87,9 @@ public class SirenConstantScoreAutoRewrite extends SirenTermCollectingRewrite<Si
   @Override
   public Query rewrite(final IndexReader reader, final SirenMultiTermQuery query) throws IOException {
 
-    // Get the enum and start visiting terms.  If we
-    // exhaust the enum before hitting either of the
-    // cutoffs, we use ConstantBooleanQueryRewrite; else,
-    // ConstantFilterRewrite:
-    final int docCountCutoff = (int) ((docCountPercent / 100.) * reader.maxDoc());
-    // final int termCountLimit = Math.min(BooleanQuery.getMaxClauseCount(), termCountCutoff);
-    final int termCountLimit = termCountCutoff;
+    // Disabled cutoffs
+    final int docCountCutoff = Integer.MAX_VALUE;
+    final int termCountLimit = Integer.MAX_VALUE;
 
     final CutOffTermCollector col = new CutOffTermCollector(reader, docCountCutoff, termCountLimit);
     this.collectTerms(reader, query, col);

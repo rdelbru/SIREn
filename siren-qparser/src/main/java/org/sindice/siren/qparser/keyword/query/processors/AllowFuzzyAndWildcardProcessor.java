@@ -44,7 +44,7 @@ import org.sindice.siren.qparser.keyword.config.AllowFuzzyAndWildcardAttribute;
  * {@link QueryConfigHandler}. If it is and fuzzy and wildcard are not allowed,
  * it looks for every {@link FuzzyQueryNode} or {@link WildcardQueryNode}
  * contained in the query node tree
- * and throws an exception if it found any of them. <br/>
+ * and throws an exception if it founds any of them. <br/>
  *
  * @see AllowFuzzyAndWildcardAttribute
  */

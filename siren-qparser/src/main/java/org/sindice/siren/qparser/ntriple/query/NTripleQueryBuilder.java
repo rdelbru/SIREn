@@ -305,7 +305,7 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   }
 
   /**
-   * Returns a String where the colon character that QueryParser
+   * Returns a String where the colon and the tilde characters that QueryParser
    * expects to be escaped are escaped by a preceding <code>\</code>.
    */
   protected static String escape(final String s) {

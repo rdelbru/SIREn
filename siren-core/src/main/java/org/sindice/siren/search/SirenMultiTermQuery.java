@@ -35,8 +35,6 @@ import org.apache.lucene.search.FilteredTermEnum;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.MultiTermQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.Searcher;
-import org.apache.lucene.search.Weight;
 import org.sindice.siren.search.SirenBooleanClause.Occur;
 
 /**
@@ -290,12 +288,6 @@ public abstract class SirenMultiTermQuery extends SirenPrimitiveQuery {
   /** Construct the enumeration to be used, expanding the pattern term. */
   protected abstract FilteredTermEnum getEnum(IndexReader reader)
       throws IOException;
-
-  @Override
-  public Weight createWeight(final Searcher searcher)
-  throws IOException {
-    return this.weight(searcher);
-  }
 
   /**
    * Expert: Return the number of unique terms visited during execution of the query.

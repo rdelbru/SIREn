@@ -163,6 +163,16 @@ extends Query {
   throws IOException {
     return new SirenCellWeight(searcher);
   }
+  
+  @Override
+  public Query rewrite(final IndexReader reader)
+  throws IOException {
+    SirenPrimitiveQuery newQ = (SirenPrimitiveQuery) primitive.rewrite(reader);
+    if (newQ == primitive) return this;
+    SirenCellQuery bq = (SirenCellQuery) this.clone();
+    bq.primitive = newQ;
+    return bq;
+  }
 
   @Override
   public void extractTerms(final Set<Term> terms) {
@@ -173,6 +183,8 @@ extends Query {
   public Object clone() {
     final SirenCellQuery clone = (SirenCellQuery) super.clone();
     clone.primitive = (SirenPrimitiveQuery) this.primitive.clone();
+    clone.cellConstraintStart = this.cellConstraintStart;
+    clone.cellConstraintEnd = this.cellConstraintEnd;
     return clone;
   }
 
@@ -197,6 +209,8 @@ extends Query {
     if (!(o instanceof SirenCellQuery)) return false;
     final SirenCellQuery other = (SirenCellQuery) o;
     return (this.getBoost() == other.getBoost()) &&
+           this.cellConstraintStart == other.cellConstraintStart &&
+           this.cellConstraintEnd == other.cellConstraintEnd &&
            this.primitive.equals(other.primitive);
   }
 

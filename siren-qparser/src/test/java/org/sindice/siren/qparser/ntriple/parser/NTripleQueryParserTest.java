@@ -31,10 +31,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.core.parser.EscapeQuerySyntax;
+import org.apache.lucene.queryParser.standard.parser.EscapeQuerySyntaxImpl;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.junit.After;
 import org.junit.Before;
@@ -485,6 +488,28 @@ public class NTripleQueryParserTest {
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
     query = "<http://stephane.ca*os> * 'literal'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
+  @Test
+  public void testNumericQuery()
+  throws Exception {
+    String ntriple = "<http://stephane> <http://p1> \"300\"^^<int> .\n";
+    String query = "<http://stephane> * 'INT:[10 TO 2000]'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane> * 'INT:[500 TO 2000]'";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    ntriple = "<http://stephane> <http://p1> \"3.42\"^^<float> .\n";
+    query = "<http://stephane> * 'FLOAT:[3.3 TO 3.5]'";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+  }
+  
+  final private static EscapeQuerySyntax ESCAPER = new EscapeQuerySyntaxImpl();
+  
+  private static String numberToString(Integer number) {
+    return number == null ? "*" : ESCAPER.escape(Integer.toString(number),
+        Locale.getDefault(), EscapeQuerySyntax.Type.STRING).toString();
   }
   
 }

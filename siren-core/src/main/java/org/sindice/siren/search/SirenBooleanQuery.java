@@ -314,6 +314,7 @@ extends SirenPrimitiveQuery {
   public Object clone() {
     final SirenBooleanQuery clone = (SirenBooleanQuery) super.clone();
     clone.clauses = (ArrayList<SirenBooleanClause>) this.clauses.clone();
+    clone.disableCoord = this.disableCoord;
     return clone;
   }
 
@@ -367,7 +368,8 @@ extends SirenPrimitiveQuery {
     if (!(o instanceof SirenBooleanQuery)) return false;
     final SirenBooleanQuery other = (SirenBooleanQuery) o;
     return (this.getBoost() == other.getBoost()) &&
-           this.clauses.equals(other.clauses);
+           this.clauses.equals(other.clauses) &&
+           this.disableCoord == other.disableCoord;
   }
 
   /** Returns a hash code value for this object. */

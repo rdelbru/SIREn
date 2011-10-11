@@ -26,8 +26,13 @@
  */
 package org.sindice.siren.qparser.ntriple.query;
 
+import java.text.NumberFormat;
+import java.util.HashMap;
+
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.queryParser.standard.StandardQueryParser;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.sindice.siren.qparser.ntriple.query.builders.ResourceQueryTreeBuilder;
 import org.sindice.siren.qparser.ntriple.query.processors.ResourceQueryNodeProcessorPipeline;
 
@@ -45,6 +50,11 @@ public class ResourceQueryParser extends StandardQueryParser {
     super();
     this.setQueryNodeProcessor(new ResourceQueryNodeProcessorPipeline(this.getQueryConfigHandler()));
     this.setQueryBuilder(new ResourceQueryTreeBuilder());
+    
+    final HashMap<String, NumericConfig> map = new HashMap<String, NumericConfig>();
+    map.put("INT", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
+    map.put("FLOAT", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
+    this.setNumericConfigMap(map);
   }
 
   /**

@@ -33,7 +33,10 @@ import org.apache.lucene.queryParser.core.nodes.ModifierQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.nodes.SlopQueryNode;
 import org.apache.lucene.queryParser.core.nodes.TokenizedPhraseQueryNode;
+import org.apache.lucene.queryParser.standard.builders.DummyQueryNodeBuilder;
 import org.apache.lucene.queryParser.standard.nodes.MultiPhraseQueryNode;
+import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
+import org.apache.lucene.queryParser.standard.nodes.NumericRangeQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.PrefixWildcardQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.RangeQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.StandardBooleanQueryNode;
@@ -68,6 +71,8 @@ public class ResourceQueryTreeBuilder extends QueryTreeBuilder implements Resour
     setBuilder(StandardBooleanQueryNode.class, new StandardBooleanQueryNodeBuilder());
     setBuilder(MultiPhraseQueryNode.class, new MultiPhraseQueryNodeBuilder());
     setBuilder(MatchAllDocsQueryNode.class, new MatchAllDocsQueryNodeBuilder());
+    setBuilder(NumericRangeQueryNode.class, new NumericRangeQueryNodeBuilder());
+    setBuilder(NumericQueryNode.class, new DummyQueryNodeBuilder());
   }
 
   @Override

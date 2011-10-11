@@ -19,7 +19,7 @@
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @project solr-plugins
+ * @project siren-qparser_rdelbru
  *
  * Copyright (C) 2007,
  * @author Renaud Delbru [ 25 Apr 2008 ]
@@ -42,6 +42,8 @@ import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
+import org.sindice.siren.analysis.FloatNumericAnalyzer;
+import org.sindice.siren.analysis.IntNumericAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
@@ -87,8 +89,10 @@ public class NTripleTestHelper {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
-      result = new TupleTokenAnalyzerFilter(Version.LUCENE_31, result, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
-      result = new SirenPayloadFilter(result);
+      final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(Version.LUCENE_31, result, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
+      tt.register("int".toCharArray(), new IntNumericAnalyzer(4));
+      tt.register("float".toCharArray(), new FloatNumericAnalyzer(4));
+      result = new SirenPayloadFilter(tt);
       return result;
     }
 
@@ -101,9 +105,11 @@ public class NTripleTestHelper {
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream, new int[] {TupleTokenizer.BNODE,
                                                                                           TupleTokenizer.DOT});
-        streams.filteredTokenStream = new TupleTokenAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream ,
+        final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream ,
           new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
-        streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
+        tt.register("int".toCharArray(), new IntNumericAnalyzer(4));
+        tt.register("float".toCharArray(), new FloatNumericAnalyzer(4));
+        streams.filteredTokenStream = new SirenPayloadFilter(tt);
       } else {
         streams.tokenStream.reset(reader);
       }

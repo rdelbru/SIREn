@@ -141,6 +141,13 @@
     </dependency>
 
     <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-test-framework</artifactId>
+      <version>${lucene.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>net.sf.squirrel-sql.thirdparty.non-maven</groupId>
       <artifactId>java-cup</artifactId>
       <version>11a</version>

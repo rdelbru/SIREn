@@ -32,7 +32,7 @@ import java.io.Reader;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.sindice.siren.qparser.ntriple.query.config.DatatypeAttribute;
+import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 
 public final class NTripleQueryTokenizer extends Tokenizer {
 

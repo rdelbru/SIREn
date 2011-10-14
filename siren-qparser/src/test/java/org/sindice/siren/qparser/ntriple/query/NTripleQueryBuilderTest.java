@@ -31,10 +31,11 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
 import org.junit.Test;
-import org.sindice.siren.qparser.ntriple.DatatypeLit;
+import org.sindice.siren.qparser.ntriple.DatatypeValue;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
 import org.sindice.siren.qparser.ntriple.query.model.Literal;
@@ -59,7 +60,10 @@ public class NTripleQueryBuilderTest {
 
   private final String  _field = "triple";
 
-  private final static Version matchVersion = Version.LUCENE_34;
+  private final static char[] XSD_ANY_URI = XSDDatatype.XSD_ANY_URI.toCharArray();
+  private final static char[] XSD_STRING = XSDDatatype.XSD_STRING.toCharArray();
+  
+  private final static Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
   private final static Map<String, Object> tokenConfigMap = new HashMap<String, Object>();
   static {
     tokenConfigMap.put(XSDDatatype.XSD_ANY_URI,  new WhitespaceAnalyzer(matchVersion));
@@ -78,7 +82,9 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitTriplePattern1() {
-    final TriplePattern pattern = new TriplePattern(new URIPattern("s"), new URIPattern("p"),new URIPattern("o"));
+    final TriplePattern pattern = new TriplePattern(new URIPattern(new DatatypeValue(XSD_ANY_URI, "s")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
@@ -119,8 +125,9 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitTriplePattern2() {
     final String literal = " literal ";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
@@ -149,8 +156,9 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitTriplePattern3() {
     final String literal = " some literal ";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
@@ -181,8 +189,9 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitTriplePattern4() {
     final String literal = " (literal OR text) ";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new LiteralPattern(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new LiteralPattern(dtLit));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
@@ -236,12 +245,15 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitBinaryClause1() {
-    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
+    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
     final String literal = "some literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.OR, rhe);
@@ -299,12 +311,15 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitBinaryClause2() {
-    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
+    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
     final String literal = "some literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.AND, rhe);
@@ -362,12 +377,15 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitBinaryClause3() {
-    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
+    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
     final String literal = "some literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.MINUS, rhe);
@@ -425,15 +443,20 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitBinaryClause4() {
-    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
+    final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
     final String literal = "some literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
     final SimpleExpression rhe1 = new SimpleExpression(pattern2);
 
-    final TriplePattern pattern3 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new URIPattern("o2"));
+    final TriplePattern pattern3 = new TriplePattern(new Wildcard("s"),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
+      new URIPattern(new DatatypeValue(XSD_ANY_URI, "o2")));
     final SimpleExpression rhe2 = new SimpleExpression(pattern3);
 
     final BinaryClause bclause = new BinaryClause(lhe, Operator.AND, rhe1);
@@ -518,7 +541,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteral() {
     final String text = "Some Literal ...";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final Literal literal = new Literal(dtLit);
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
@@ -545,7 +568,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern() {
     final String text = "\"Some Literal ...\"";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
@@ -572,7 +595,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern2() {
     final String text = "Some AND Literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
@@ -604,7 +627,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern3() {
     final String text = "Some OR Literal";
-    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
@@ -638,7 +661,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitURIPattern1() {
     final String text = "aaa://s";
-    final URIPattern uri = new URIPattern(text);
+    final URIPattern uri = new URIPattern(new DatatypeValue(XSD_ANY_URI, text));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);
@@ -653,7 +676,7 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitURIPattern2() {
     final String text = "aaa://s || http://test";
-    final URIPattern uri = new URIPattern(text);
+    final URIPattern uri = new URIPattern(new DatatypeValue(XSD_ANY_URI, text));
 
     final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);

@@ -33,18 +33,21 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser.Operator;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
 import org.junit.Test;
 
 public class KeywordQParserTest {
 
+  private final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
+  
   private Map<String, Float> boosts;
   private KeywordQParserImpl parser;
 
   @Before
   public void setUp() throws Exception {
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(analyzer);
     boosts = new HashMap<String, Float>();
     boosts.put("explicit-content", 1.0f);
@@ -61,9 +64,9 @@ public class KeywordQParserTest {
 
   @Test
   public void testDistinctAnalyzer() throws ParseException {
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(analyzer);
-    analyzerWrapper.addAnalyzer("label", new StandardAnalyzer(Version.LUCENE_31));
+    analyzerWrapper.addAnalyzer("label", new StandardAnalyzer(matchVersion));
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzerWrapper, boosts, false);
     final Query q = parser.parse("hELlo");
     assertEquals("explicit-content:hELlo label:hello^2.5",
@@ -150,7 +153,7 @@ public class KeywordQParserTest {
   public void testDisabledFieldQuery() throws ParseException {
     final Map<String, Float> boosts = new HashMap<String, Float>();
     boosts.put("explicit-content", 1.0f);
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, true);
     final Query q = parser.parse("+foaf:name -foaf\\:person domain:dbpedia.org http://test.org/");
     assertEquals("+explicit-content:foaf:name " +
@@ -164,7 +167,7 @@ public class KeywordQParserTest {
     final Map<String, Float> boosts = new HashMap<String, Float>();
     boosts.put("explicit-content", 1.0f);
     boosts.put("label", 1.0f);
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, true);
     final Query q = parser.parse("+foaf:name http://test.org/");
     assertEquals("+(explicit-content:foaf:name label:foaf:name) " +
@@ -176,7 +179,7 @@ public class KeywordQParserTest {
   public void testUnaryOperator() throws ParseException {
     final Map<String, Float> boosts = new HashMap<String, Float>();
     boosts.put("explicit-content", 1.0f);
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, true);
 
     parser.setDefaultOperator(Operator.AND);
@@ -200,7 +203,7 @@ public class KeywordQParserTest {
   public void testNestedGroups() throws ParseException {
     final Map<String, Float> boosts = new HashMap<String, Float>();
     boosts.put("explicit-content", 1.0f);
-    final Analyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, true);
     parser.setDefaultOperator(Operator.AND);
 

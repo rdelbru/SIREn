@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Token;
 import java_cup.runtime.*;
 import org.sindice.siren.util.XSDDatatype;
-import org.sindice.siren.qparser.ntriple.DatatypeLit;
+import org.sindice.siren.qparser.ntriple.DatatypeValue;
 
 %%
 
@@ -106,6 +106,9 @@ import org.sindice.siren.qparser.ntriple.DatatypeLit;
 	private final StringBuffer buffer = new StringBuffer();
 	private final StringBuffer metadataBuffer = new StringBuffer();
   
+  /** Datatype representing xsd:string */
+  private static final char[] XSD_STRING = XSDDatatype.XSD_STRING.toCharArray();
+  
 	public final int yychar()	{
 		return yychar;
 	}
@@ -128,7 +131,7 @@ import org.sindice.siren.qparser.ntriple.DatatypeLit;
 	  return new Symbol(type, yyline, yycolumn, value);
 	}
 	
-	private Symbol symbol(int type, DatatypeLit dl) {
+	private Symbol symbol(int type, DatatypeValue dl) {
 	logger.debug("Obtain token {} \"{}\"", type, dl);
     return new Symbol(type, yyline, yycolumn, dl);
 	}
@@ -170,12 +173,14 @@ import org.sindice.siren.qparser.ntriple.DatatypeLit;
    *
    * <p> Return the datatype xsd:string by default.
    */
-  public final String getDatatypeURI() {
+  public final char[] getDatatypeURI() {
     // If not datatype, returns by default datatype xsd:string
     if (metadataBuffer.length() == 0) {
-      return XSDDatatype.XSD_STRING;
+      return XSD_STRING;
     }
-    return metadataBuffer.toString();
+    char[] chars = new char[metadataBuffer.length()];
+    metadataBuffer.getChars(0, metadataBuffer.length(), chars, 0);
+    return chars;
   }
 	
 %}

@@ -6,7 +6,7 @@ ClauseQuery(
           *
         ) [Wildcard]
         URIPattern(
-          http://purl.org/dc/terms/license
+          http://www.w3.org/2001/XMLSchema#anyURI:http://purl.org/dc/terms/license
         ) [URIPattern]
         Literal(
           http://www.w3.org/2001/XMLSchema#string:http://creativecommons.org/licenses/by-nc-sa/3.0/us

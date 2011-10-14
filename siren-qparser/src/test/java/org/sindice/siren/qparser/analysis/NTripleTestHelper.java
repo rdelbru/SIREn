@@ -44,6 +44,7 @@ import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
+import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.DoubleNumericAnalyzer;
@@ -58,7 +59,7 @@ import org.sindice.siren.util.XSDDatatype;
 
 public class NTripleTestHelper {
 
-  protected static final Version matchVersion = Version.LUCENE_34;
+  protected static final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
   
   protected static final String _defaultField = "explicit_content";
   protected static final String _implicitField = "implicit_content";

@@ -44,13 +44,14 @@ import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.QueryParserHelper;
 import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
 import org.apache.lucene.queryParser.standard.StandardQueryParser;
-import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute.Operator;
 import org.apache.lucene.queryParser.standard.config.StandardQueryConfigHandler;
+import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute.Operator;
 import org.apache.lucene.queryParser.standard.parser.StandardSyntaxParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.RAMDirectory;
+import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.junit.After;
 import org.junit.Before;
@@ -70,20 +71,21 @@ import org.sindice.siren.search.SirenTermQuery;
 public class StandardQueryTreeBuilderTest {
 
   private final String DEFAULT_CONTENT_FIELD = "content";
-
+  private final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
+  
   private RAMDirectory        dir = null;
   private IndexWriter         writer = null;
   private Analyzer            analyser = null;
   private StandardQueryParser qph = null;
   private QueryTreeBuilder    qBuilder = null;
-  private final Analyzer      simpleAnalyser = new SimpleAnalyzer(Version.LUCENE_31);
+  private final Analyzer      simpleAnalyser = new SimpleAnalyzer(matchVersion);
 
   @Before
   public void setUp()
   throws Exception {
     qBuilder = new ResourceQueryTreeBuilder();
-    final IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_31,
-      new StandardAnalyzer(Version.LUCENE_31));
+    final IndexWriterConfig config = new IndexWriterConfig(matchVersion,
+      new StandardAnalyzer(matchVersion));
 
     dir = new RAMDirectory();
     writer = new IndexWriter(dir, config);
@@ -132,8 +134,8 @@ public class StandardQueryTreeBuilderTest {
   public void testQuerySyntax() throws QueryNodeException {
 
     this.assertQueryEquals("term term term", null, "term term term");
-    this.assertQueryEquals("t�rm term term", new WhitespaceAnalyzer(Version.LUCENE_31), "t�rm term term");
-    this.assertQueryEquals("�mlaut", new WhitespaceAnalyzer(Version.LUCENE_31), "�mlaut");
+    this.assertQueryEquals("t�rm term term", new WhitespaceAnalyzer(LuceneTestCase.TEST_VERSION_CURRENT), "t�rm term term");
+    this.assertQueryEquals("�mlaut", new WhitespaceAnalyzer(LuceneTestCase.TEST_VERSION_CURRENT), "�mlaut");
 
     this.assertQueryEquals("\"\"", new KeywordAnalyzer(), "");
     this.assertQueryEquals("foo:\"\"", new KeywordAnalyzer(), "foo:");
@@ -181,7 +183,7 @@ public class StandardQueryTreeBuilderTest {
 
   @Test
   public void testEscaped() throws QueryNodeException {
-    final Analyzer a = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Analyzer a = new WhitespaceAnalyzer(matchVersion);
 
     this.assertQueryEquals("\\*", a, "*");
 
@@ -275,7 +277,7 @@ public class StandardQueryTreeBuilderTest {
 
       @Override
       public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-        TokenStream ts = new WhitespaceAnalyzer(Version.LUCENE_31).tokenStream(fieldName, reader);
+        TokenStream ts = new WhitespaceAnalyzer(matchVersion).tokenStream(fieldName, reader);
         ts = new ASCIIFoldingExpansionFilter(ts);
         return ts;
       }

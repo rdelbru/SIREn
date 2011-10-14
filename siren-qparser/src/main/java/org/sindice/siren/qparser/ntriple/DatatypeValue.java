@@ -25,33 +25,39 @@
  */
 package org.sindice.siren.qparser.ntriple;
 
+import org.sindice.siren.qparser.ntriple.query.model.Literal;
+import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
+import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
+
 /**
- * 
+ * Set the datatype of an {@link URIPattern}, a {@link LiteralPattern} or a
+ * {@link Literal}. For a literal for instance, the datatype is the URI extracted
+ * from Literal^^&lt;URI&gt;.
  */
-public final class DatatypeLit {
+public final class DatatypeValue {
 
   private final String datatype;
-  private final String lit;
+  private final String value;
   
   /**
    * 
    */
-  public DatatypeLit(final String datatype, final String lit) {
-    this.datatype = datatype;
-    this.lit = lit;
+  public DatatypeValue(final char[] datatype, final String value) {
+    this.datatype = new String(datatype);
+    this.value = value;
   }
 
   public String getDatatypeURI() {
     return datatype;
   }
 
-  public String getLit() {
-    return lit;
+  public String getValue() {
+    return value;
   }
 
   @Override
   public String toString() {
-    return new String(datatype) + ":" + lit;
+    return datatype + ":" + value;
   }
   
 }

@@ -6,10 +6,10 @@ ClauseQuery(
           *
         ) [Wildcard]
         URIPattern(
-          http://ns/#s
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/#s
         ) [URIPattern]
         URIPattern(
-          http://ns/p
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/p
         ) [URIPattern]
       ) [TriplePattern]
     ) [SimpleExpression]

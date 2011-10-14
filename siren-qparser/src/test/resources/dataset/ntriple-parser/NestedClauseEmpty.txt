@@ -3,13 +3,13 @@ ClauseQuery(
     SimpleExpression(
       TriplePattern(
         URIPattern(
-          s
+          http://www.w3.org/2001/XMLSchema#anyURI:s
         ) [URIPattern]
         URIPattern(
-          p
+          http://www.w3.org/2001/XMLSchema#anyURI:p
         ) [URIPattern]
         URIPattern(
-          o
+          http://www.w3.org/2001/XMLSchema#anyURI:o
         ) [URIPattern]
       ) [TriplePattern]
     ) [SimpleExpression]

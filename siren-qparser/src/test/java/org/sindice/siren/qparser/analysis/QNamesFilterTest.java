@@ -26,6 +26,7 @@
  */
 package org.sindice.siren.qparser.analysis;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.StringReader;
@@ -37,17 +38,22 @@ import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.qparser.analysis.filter.QNamesFilter;
 import org.sindice.siren.qparser.ntriple.NTripleQueryParser.CupScannerWrapper;
+import org.sindice.siren.util.XSDDatatype;
+
 
 public class QNamesFilterTest {
 
+  private final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
+  
   @Test
   public void testQName() throws Exception {
     final String query = "foaf:name";
-    final WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final TokenStream stream = analyzer.tokenStream(null, new StringReader(query));
     final TokenFilter filter = new QNamesFilter(stream, "./src/test/resources/conf/qnames");
 
@@ -60,7 +66,7 @@ public class QNamesFilterTest {
   @Test
   public void testNotQName() throws Exception {
     final String query = "mailto:aidan.hogan@deri.org";
-    final WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final TokenStream stream = analyzer.tokenStream(null, new StringReader(query));
     final TokenFilter filter = new QNamesFilter(stream, "./src/test/resources/conf/qnames");
 
@@ -80,13 +86,13 @@ public class QNamesFilterTest {
     final CupScannerWrapper wrapper = new CupScannerWrapper(filter);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("http:"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":http:", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("foaf:2"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":foaf:2", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("foaf:-qw"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":foaf:-qw", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
     stream.close();
@@ -102,13 +108,13 @@ public class QNamesFilterTest {
     final CupScannerWrapper wrapper = new CupScannerWrapper(filter);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("http://ns/#s"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":http://ns/#s", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("http://ns/p"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.value.toString().equals("http://ns/o"));
+    assertEquals(XSDDatatype.XSD_ANY_URI + ":http://ns/o", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
     stream.close();

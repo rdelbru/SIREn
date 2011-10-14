@@ -43,10 +43,10 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 import org.sindice.siren.qparser.analysis.NTripleQueryTokenizerImpl;
 import org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
-import org.sindice.siren.qparser.ntriple.query.config.DatatypeAttribute;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -293,11 +293,10 @@ public class NTripleQueryParser {
           logger.error("Received unknown token: {}", cTermAtt.toString());
         }
 
-        if (idx == NTripleQueryTokenizerImpl.URIPATTERN) {
-          return new Symbol(idx, cTermAtt.toString());
-        } else if (idx == NTripleQueryTokenizerImpl.LITERAL ||
-                   idx == NTripleQueryTokenizerImpl.LPATTERN) {
-          return new Symbol(idx, new DatatypeLit(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
+        if (idx == NTripleQueryTokenizerImpl.URIPATTERN ||
+            idx == NTripleQueryTokenizerImpl.LITERAL ||
+            idx == NTripleQueryTokenizerImpl.LPATTERN) {
+          return new Symbol(idx, new DatatypeValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
         } else {
           return new Symbol(idx);
         }

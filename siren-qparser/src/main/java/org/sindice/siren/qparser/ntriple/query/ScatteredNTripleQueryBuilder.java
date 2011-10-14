@@ -40,7 +40,7 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.qparser.ntriple.DatatypeLit;
+import org.sindice.siren.qparser.ntriple.DatatypeValue;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
@@ -59,7 +59,6 @@ import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
-import org.sindice.siren.util.XSDDatatype;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -262,7 +261,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
-    final DatatypeLit dtLit = l.getL();
+    final DatatypeValue dtLit = l.getL();
     final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dtLit.getDatatypeURI()));
     qph.setDefaultOperator(defaultOp);
     try {
@@ -271,7 +270,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
       }
       for (final String fieldName : boosts.keySet()) {
         // Add quotes so that the parser evaluates it as a phrase query
-        l.getQueries().put(fieldName, qph.parse("\"" + dtLit.getLit() + "\"", fieldName));
+        l.getQueries().put(fieldName, qph.parse("\"" + dtLit.getValue() + "\"", fieldName));
       }
     }
     catch (final QueryNodeException e) {
@@ -287,7 +286,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
-    final DatatypeLit dtLit = lp.getLp();
+    final DatatypeValue dtLit = lp.getLp();
     final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
     final ResourceQueryParser qph;
     
@@ -307,7 +306,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
         lp.setQueries(new HashMap<String, Query>());
       }
       for (final String fieldName : boosts.keySet()) {
-        lp.getQueries().put(fieldName, qph.parse(dtLit.getLit(), fieldName));
+        lp.getQueries().put(fieldName, qph.parse(dtLit.getValue(), fieldName));
       }
     }
     catch (final QueryNodeException e) {
@@ -322,15 +321,18 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
-    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(XSDDatatype.XSD_ANY_URI));
+    final DatatypeValue dtLit = u.getUp();
+    final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
+    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dt));
+    
     qph.setDefaultOperator(defaultOp);
-    u.setV(NTripleQueryBuilder.escape(u.getV())); // URI schemes handling
+    final String uri = NTripleQueryBuilder.escape(dtLit.getValue()); // URI schemes handling
     try {
       if (u.getQueries() == null) {
         u.setQueries(new HashMap<String, Query>());
       }
       for (final String fieldName : boosts.keySet()) {
-        u.getQueries().put(fieldName, qph.parse(u.getV(), fieldName));
+        u.getQueries().put(fieldName, qph.parse(uri, fieldName));
       }
     }
     catch (final QueryNodeException e) {

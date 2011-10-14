@@ -3,13 +3,13 @@ ClauseQuery(
     SimpleExpression(
       TriplePattern(
         URIPattern(
-          s
+          http://www.w3.org/2001/XMLSchema#anyURI:s
         ) [URIPattern]
         URIPattern(
-          p
+          http://www.w3.org/2001/XMLSchema#anyURI:p
         ) [URIPattern]
         URIPattern(
-          o
+          http://www.w3.org/2001/XMLSchema#anyURI:o
         ) [URIPattern]
       ) [TriplePattern]
     ) [SimpleExpression]
@@ -20,13 +20,13 @@ ClauseQuery(
           SimpleExpression(
             TriplePattern(
               URIPattern(
-                s
+                http://www.w3.org/2001/XMLSchema#anyURI:s
               ) [URIPattern]
               URIPattern(
-                p2
+                http://www.w3.org/2001/XMLSchema#anyURI:p2
               ) [URIPattern]
               URIPattern(
-                o2
+                http://www.w3.org/2001/XMLSchema#anyURI:o2
               ) [URIPattern]
             ) [TriplePattern]
           ) [SimpleExpression]
@@ -34,10 +34,10 @@ ClauseQuery(
           SimpleExpression(
             TriplePattern(
               URIPattern(
-                s
+                http://www.w3.org/2001/XMLSchema#anyURI:s
               ) [URIPattern]
               URIPattern(
-                p3
+                http://www.w3.org/2001/XMLSchema#anyURI:p3
               ) [URIPattern]
               Literal(
                 http://www.w3.org/2001/XMLSchema#string:A literal

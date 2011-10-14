@@ -47,10 +47,6 @@ public class ResourceQueryParser extends StandardQueryParser {
     super();
     this.setQueryNodeProcessor(new ResourceQueryNodeProcessorPipeline(this.getQueryConfigHandler()));
     this.setQueryBuilder(new ResourceQueryTreeBuilder());
-//    final HashMap<String, NumericConfig> map = new HashMap<String, NumericConfig>();
-//    map.put("INT", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
-//    map.put("FLOAT", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
-//    this.setNumericConfigMap(map);
   }
 
   /**

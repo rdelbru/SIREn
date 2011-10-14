@@ -47,36 +47,42 @@ public class WhitespaceAnyURIAnalyzer extends Analyzer {
 
   private final Set<?>            stopSet;
 
+  private final Version matchVersion;
+  
   /**
    * An array containing some common English words that are usually not useful
    * for searching.
    */
   public static final Set<?> STOP_WORDS = StopAnalyzer.ENGLISH_STOP_WORDS_SET;
   
-  public WhitespaceAnyURIAnalyzer() {
-    this(STOP_WORDS);
+  public WhitespaceAnyURIAnalyzer(Version version) {
+    this(version, STOP_WORDS);
   }
   
-  public WhitespaceAnyURIAnalyzer(final Set<?> stopWords) {
+  public WhitespaceAnyURIAnalyzer(Version version, final Set<?> stopWords) {
     stopSet = stopWords;
+    matchVersion = version;
   }
   
-  public WhitespaceAnyURIAnalyzer(final String[] stopWords) {
+  public WhitespaceAnyURIAnalyzer(Version version, final String[] stopWords) {
     stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
+    matchVersion = version;
   }
   
-  public WhitespaceAnyURIAnalyzer(final File stopwords) throws IOException {
+  public WhitespaceAnyURIAnalyzer(Version version, final File stopwords) throws IOException {
     stopSet = WordlistLoader.getWordSet(stopwords);
+    matchVersion = version;
   }
   
-  public WhitespaceAnyURIAnalyzer(final Reader stopWords) throws IOException {
+  public WhitespaceAnyURIAnalyzer(Version version, final Reader stopWords) throws IOException {
     stopSet = WordlistLoader.getWordSet(stopWords);
+    matchVersion = version;
   }
   
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    TokenStream result = new WhitespaceTokenizer(Version.LUCENE_31, reader);
-    result = new LowerCaseFilter(Version.LUCENE_31, result);
+    TokenStream result = new WhitespaceTokenizer(matchVersion, reader);
+    result = new LowerCaseFilter(matchVersion, result);
     result = new AssignTokenTypeFilter(result, TupleTokenizer.URI);
     return result;
   }
@@ -87,8 +93,8 @@ public class WhitespaceAnyURIAnalyzer extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new WhitespaceTokenizer(Version.LUCENE_31, reader);
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.tokenStream);
+      streams.tokenStream = new WhitespaceTokenizer(matchVersion, reader);
+      streams.filteredTokenStream = new LowerCaseFilter(matchVersion, streams.tokenStream);
       streams.filteredTokenStream = new AssignTokenTypeFilter(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {
       streams.tokenStream.reset(reader);

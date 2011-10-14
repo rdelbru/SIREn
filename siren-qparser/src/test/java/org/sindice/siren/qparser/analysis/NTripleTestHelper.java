@@ -30,6 +30,9 @@ package org.sindice.siren.qparser.analysis;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -37,30 +40,52 @@ import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
+import org.sindice.siren.analysis.DoubleNumericAnalyzer;
 import org.sindice.siren.analysis.FloatNumericAnalyzer;
 import org.sindice.siren.analysis.IntNumericAnalyzer;
+import org.sindice.siren.analysis.LongNumericAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
+import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
+import org.sindice.siren.util.XSDDatatype;
 
 public class NTripleTestHelper {
 
+  protected static final Version matchVersion = Version.LUCENE_34;
+  
   protected static final String _defaultField = "explicit_content";
   protected static final String _implicitField = "implicit_content";
   protected static final String _ID_FIELD     = "id";
 
+  protected static final Map<String, Object> tokenConfigMap = new HashMap<String, Object>();
+  static {
+    tokenConfigMap.put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
+    tokenConfigMap.put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
+  }
+  
+  public static void registerTokenConfig(final String datatype, final Object tc) {
+    if (!tokenConfigMap.containsKey(datatype)) {
+      tokenConfigMap.put(datatype, tc);
+    }
+  }
+  
+  public static void unRegisterTokenConfig(final String datatype) {
+    tokenConfigMap.remove(datatype);
+  }
+  
   /**
    * Create a IndexWriter for a RAMDirectoy
    */
   public static IndexWriter createRamIndexWriter(final RAMDirectory dir)
   throws CorruptIndexException, LockObtainFailedException, IOException {
-    final IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_31, new SimpleTupleAnalyzer());
+    final IndexWriterConfig config = new IndexWriterConfig(matchVersion, new SimpleTupleAnalyzer());
     final IndexWriter ramIndexWriter = new IndexWriter(dir, config);
     return ramIndexWriter;
   }
@@ -89,9 +114,28 @@ public class NTripleTestHelper {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
-      final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(Version.LUCENE_31, result, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
-      tt.register("int".toCharArray(), new IntNumericAnalyzer(4));
-      tt.register("float".toCharArray(), new FloatNumericAnalyzer(4));
+      final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
+      for (Entry<String, Object> tc : tokenConfigMap.entrySet()) {
+        if (tc.getValue() instanceof NumericConfig) {
+          final NumericConfig nc = (NumericConfig) tc.getValue();
+          switch (nc.getType()) {
+            case INT:
+              tt.register(tc.getKey().toCharArray(), new IntNumericAnalyzer(nc.getPrecisionStep()));
+              break;
+            case DOUBLE:
+              tt.register(tc.getKey().toCharArray(), new DoubleNumericAnalyzer(nc.getPrecisionStep()));
+              break;
+            case FLOAT:
+              tt.register(tc.getKey().toCharArray(), new FloatNumericAnalyzer(nc.getPrecisionStep()));
+              break;
+            case LONG:
+              tt.register(tc.getKey().toCharArray(), new LongNumericAnalyzer(nc.getPrecisionStep()));
+              break;
+            default:
+              break;
+          }
+        }
+      }
       result = new SirenPayloadFilter(tt);
       return result;
     }
@@ -105,10 +149,29 @@ public class NTripleTestHelper {
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream, new int[] {TupleTokenizer.BNODE,
                                                                                           TupleTokenizer.DOT});
-        final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream ,
-          new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
-        tt.register("int".toCharArray(), new IntNumericAnalyzer(4));
-        tt.register("float".toCharArray(), new FloatNumericAnalyzer(4));
+        final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, streams.filteredTokenStream ,
+          new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
+        for (Entry<String, Object> tc : tokenConfigMap.entrySet()) {
+          if (tc.getValue() instanceof NumericConfig) {
+            final NumericConfig nc = (NumericConfig) tc.getValue();
+            switch (nc.getType()) {
+              case INT:
+                tt.register(tc.getKey().toCharArray(), new IntNumericAnalyzer(nc.getPrecisionStep()));
+                break;
+              case DOUBLE:
+                tt.register(tc.getKey().toCharArray(), new DoubleNumericAnalyzer(nc.getPrecisionStep()));
+                break;
+              case FLOAT:
+                tt.register(tc.getKey().toCharArray(), new FloatNumericAnalyzer(nc.getPrecisionStep()));
+                break;
+              case LONG:
+                tt.register(tc.getKey().toCharArray(), new LongNumericAnalyzer(nc.getPrecisionStep()));
+                break;
+              default:
+                break;
+            }
+          }
+        }
         streams.filteredTokenStream = new SirenPayloadFilter(tt);
       } else {
         streams.tokenStream.reset(reader);

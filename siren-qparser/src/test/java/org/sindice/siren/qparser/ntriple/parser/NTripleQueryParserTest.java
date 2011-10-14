@@ -30,18 +30,20 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
+import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.core.parser.EscapeQuerySyntax;
-import org.apache.lucene.queryParser.standard.parser.EscapeQuerySyntaxImpl;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericQueryNodeProcessor;
+import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericRangeQueryNodeProcessor;
 
 public class NTripleQueryParserTest {
 
@@ -490,26 +492,55 @@ public class NTripleQueryParserTest {
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
   
+  /**
+   * Numeric ranges get processed with {@link SirenNumericRangeQueryNodeProcessor}.
+   * Single numeric values are processed with {@link SirenNumericQueryNodeProcessor}.
+   * @throws Exception
+   */
   @Test
   public void testNumericQuery()
   throws Exception {
-    String ntriple = "<http://stephane> <http://p1> \"300\"^^<int> .\n";
-    String query = "<http://stephane> * 'INT:[10 TO 2000]'";
+    NTripleQueryParserTestHelper.registerTokenConfig("int4", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
+    NTripleQueryParserTestHelper.registerTokenConfig("float4", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
+    
+    /*
+     * Test for integer
+     */
+    String ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> .\n";
+    String query = "<http://stephane> * '[10 TO 2000]'^^<int4>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+
+    // boolean of ranges
+    query = "<http://stephane> * '[900 TO 2000] OR [5000 TO 20000]'^^<int4>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+
+    ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> \"6420\"^^<int4> .\n";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
     
-    query = "<http://stephane> * 'INT:[500 TO 2000]'";
+    /*
+     * Test for float
+     */
+    ntriple = "<http://stephane> <http://p1> \"3.42\"^^<float4> .\n";
+    query = "<http://stephane> * '[3.3 TO 3.5]'^^<float4>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane> * '[3.45 TO 3.5]'^^<float4>";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
     
-    ntriple = "<http://stephane> <http://p1> \"3.42\"^^<float> .\n";
-    query = "<http://stephane> * 'FLOAT:[3.3 TO 3.5]'";
+    query = "<http://stephane> * '3.42'^^<float4>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-  }
-  
-  final private static EscapeQuerySyntax ESCAPER = new EscapeQuerySyntaxImpl();
-  
-  private static String numberToString(Integer number) {
-    return number == null ? "*" : ESCAPER.escape(Integer.toString(number),
-        Locale.getDefault(), EscapeQuerySyntax.Type.STRING).toString();
+    
+    query = "<http://stephane> * '42.42 OR [1 TO 5]'^^<float4>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    query = "<http://stephane> * '42.42 OR [4 TO 50]'^^<float4>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    /*
+     * Test on a value without datatype
+     */
+    query = "<http://stephane> * '3.42'";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
   
 }

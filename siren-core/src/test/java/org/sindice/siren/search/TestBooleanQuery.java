@@ -50,7 +50,7 @@ public class TestBooleanQuery {
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34)));
   }
 
   @After

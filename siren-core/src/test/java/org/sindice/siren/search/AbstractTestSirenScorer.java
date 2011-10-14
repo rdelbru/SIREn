@@ -57,7 +57,7 @@ public abstract class AbstractTestSirenScorer {
   @Before
   public void setUp()
   throws Exception {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
     final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
     _helper = new QueryTestingHelper(analyzer);

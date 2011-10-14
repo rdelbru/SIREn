@@ -26,13 +26,21 @@
  */
 package org.sindice.siren.qparser.ntriple.query;
 
+import java.util.Map;
+
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
+import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.core.QueryNodeException;
+import org.apache.lucene.queryParser.core.messages.QueryParserMessages;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.util.Version;
+import org.sindice.siren.qparser.ntriple.DatatypeLit;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
@@ -51,6 +59,7 @@ import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
+import org.sindice.siren.util.XSDDatatype;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,13 +73,18 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
    * Lucene's field to query
    */
   String field;
-
+  
   /**
-   * The inner query analyzers for processing URI and Literal patterns
+   * The configuration map between the datatype URI and the {@link Analyzer} or,
+   * in the case of a numeric query, the {@link NumericConfig}.
    */
-  Analyzer uriAnalyzer;
-  Analyzer literalAnalyzer;
-
+  private final Map<String, Object> tokenConfigMap;
+  
+  /**
+   * Analyzer used on a {@link LiteralPattern}, in the case of a numeric query.
+   */
+  private final WhitespaceAnalyzer wsAnalyzer;
+  
   /**
    * The default operator to use in the inner parsers
    */
@@ -83,12 +97,12 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
 
   private static final Logger logger = LoggerFactory.getLogger(VisitorAdaptor.class);
 
-  public NTripleQueryBuilder(final String field,
-                             final Analyzer uriAnalyzer,
-                             final Analyzer literalAnalyzer) {
+  public NTripleQueryBuilder(final Version matchVersion,
+                             final String field,
+                             final Map<String, Object> tokenConfigMap) {
     this.field = field;
-    this.uriAnalyzer = uriAnalyzer;
-    this.literalAnalyzer = literalAnalyzer;
+    this.tokenConfigMap = tokenConfigMap;
+    wsAnalyzer = new WhitespaceAnalyzer(matchVersion);
   }
 
   public void setDefaultOperator(final DefaultOperatorAttribute.Operator op) {
@@ -231,11 +245,12 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   @Override
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
-    final ResourceQueryParser qph = new ResourceQueryParser(literalAnalyzer);
+    final DatatypeLit dtLit = l.getL();
+    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dtLit.getDatatypeURI()));
     qph.setDefaultOperator(defaultOp);
     try {
       // Add quotes so that the parser evaluates it as a phrase query
-      l.setQuery(qph.parse("\"" + l.getV() + "\"", field));
+      l.setQuery(qph.parse("\"" + dtLit.getLit() + "\"", field));
     }
     catch (final QueryNodeException e) {
       logger.error("Parsing of the LiteralPattern failed", e);
@@ -251,10 +266,23 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   @Override
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
-    final ResourceQueryParser qph = new ResourceQueryParser(literalAnalyzer);
+    final DatatypeLit dtLit = lp.getLp();
+    final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
+    final ResourceQueryParser qph;
+    
+    if (dt instanceof Analyzer)
+      qph = new ResourceQueryParser((Analyzer) dt);
+    else if (dt instanceof NumericConfig)
+      qph = new ResourceQueryParser(wsAnalyzer, (NumericConfig) dt);
+    else {
+      logger.error("Wrong configuration Object. Recieved unknown Object {}", dt.getClass().getName());
+      this.createQueryException(new QueryNodeException(new MessageImpl(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED)));
+      return;
+    }
+
     qph.setDefaultOperator(defaultOp);
     try {
-      lp.setQuery(qph.parse(lp.getV(), field));
+      lp.setQuery(qph.parse(dtLit.getLit(), field));
     }
     catch (final QueryNodeException e) {
       logger.error("Parsing of the LiteralPattern failed", e);
@@ -269,7 +297,7 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   @Override
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
-    final ResourceQueryParser qph = new ResourceQueryParser(uriAnalyzer);
+    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(XSDDatatype.XSD_ANY_URI));
     qph.setDefaultOperator(defaultOp);
     u.setV(NTripleQueryBuilder.escape(u.getV())); // URI schemes handling
     try {

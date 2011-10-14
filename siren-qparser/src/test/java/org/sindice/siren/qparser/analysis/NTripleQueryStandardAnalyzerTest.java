@@ -28,6 +28,7 @@
  */
 package org.sindice.siren.qparser.analysis;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.StringReader;
@@ -39,6 +40,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.sindice.siren.qparser.ntriple.NTripleQueryParser.CupScannerWrapper;
+import org.sindice.siren.util.XSDDatatype;
 
 public class NTripleQueryStandardAnalyzerTest {
 
@@ -131,7 +133,7 @@ public class NTripleQueryStandardAnalyzerTest {
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
     assertTrue(symbol.sym == NTripleQueryTokenizer.LITERAL);
-    assertTrue(symbol.value.toString().equals("test"));
+    assertEquals(symbol.value.toString(), XSDDatatype.XSD_STRING + ":test");
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
     stream.close();

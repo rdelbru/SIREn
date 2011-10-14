@@ -315,7 +315,7 @@ public class TestSirenWildcardQuery extends LuceneTestCase {
   throws IOException {
     final Directory indexStore = newDirectory();
     final RandomIndexWriter writer = new RandomIndexWriter(random, indexStore,
-      new TupleAnalyzer(Version.LUCENE_31, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer()));
+      new TupleAnalyzer(Version.LUCENE_31, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34)));
     for (int i = 0; i < contents.length; ++i) {
       final Document doc = new Document();
       doc.add(newField(field, this.getTriple(contents[i]), Field.Store.YES, Field.Index.ANALYZED));

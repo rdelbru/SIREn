@@ -26,13 +26,10 @@
  */
 package org.sindice.siren.qparser.ntriple.query;
 
-import java.text.NumberFormat;
-import java.util.HashMap;
-
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.queryParser.standard.StandardQueryParser;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
+import org.apache.lucene.queryParser.standard.config.StandardQueryConfigHandler.ConfigurationKeys;
 import org.sindice.siren.qparser.ntriple.query.builders.ResourceQueryTreeBuilder;
 import org.sindice.siren.qparser.ntriple.query.processors.ResourceQueryNodeProcessorPipeline;
 
@@ -50,11 +47,10 @@ public class ResourceQueryParser extends StandardQueryParser {
     super();
     this.setQueryNodeProcessor(new ResourceQueryNodeProcessorPipeline(this.getQueryConfigHandler()));
     this.setQueryBuilder(new ResourceQueryTreeBuilder());
-    
-    final HashMap<String, NumericConfig> map = new HashMap<String, NumericConfig>();
-    map.put("INT", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
-    map.put("FLOAT", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
-    this.setNumericConfigMap(map);
+//    final HashMap<String, NumericConfig> map = new HashMap<String, NumericConfig>();
+//    map.put("INT", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
+//    map.put("FLOAT", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
+//    this.setNumericConfigMap(map);
   }
 
   /**
@@ -72,6 +68,11 @@ public class ResourceQueryParser extends StandardQueryParser {
   public ResourceQueryParser(final Analyzer analyzer) {
     this();
     this.setAnalyzer(analyzer);
+  }
+  
+  public ResourceQueryParser(final Analyzer analyzer, final NumericConfig nc) {
+    this(analyzer);
+    this.getQueryConfigHandler().set(ConfigurationKeys.NUMERIC_CONFIG, nc);
   }
 
 }

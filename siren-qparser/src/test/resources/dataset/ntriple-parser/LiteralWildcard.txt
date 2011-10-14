@@ -9,7 +9,7 @@ ClauseQuery(
           *
         ) [Wildcard]
         Literal(
-          pao*
+          http://www.w3.org/2001/XMLSchema#string:pao*
         ) [Literal]
       ) [TriplePattern]
     ) [SimpleExpression]

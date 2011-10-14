@@ -41,8 +41,6 @@ import org.apache.lucene.queryParser.standard.processors.FuzzyQueryNodeProcessor
 import org.apache.lucene.queryParser.standard.processors.LowercaseExpandedTermsQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MatchAllDocsQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.MultiTermRewriteMethodProcessor;
-import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcessor;
-import org.apache.lucene.queryParser.standard.processors.NumericRangeQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.ParametricRangeQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.PhraseSlopQueryNodeProcessor;
 import org.apache.lucene.queryParser.standard.processors.RemoveEmptyNonLeafQueryNodeProcessor;
@@ -81,8 +79,8 @@ extends QueryNodeProcessorPipeline {
     this.add(new MultiFieldQueryNodeProcessor());
     this.add(new FuzzyQueryNodeProcessor());
     this.add(new MatchAllDocsQueryNodeProcessor());
-    this.add(new NumericQueryNodeProcessor());
-    this.add(new NumericRangeQueryNodeProcessor());
+    this.add(new SirenNumericQueryNodeProcessor());
+    this.add(new SirenNumericRangeQueryNodeProcessor());
     this.add(new LowercaseExpandedTermsQueryNodeProcessor());
     this.add(new ParametricRangeQueryNodeProcessor());
     this.add(new AllowFuzzyAndWildcardProcessor());

@@ -54,7 +54,7 @@ public class TestTupleAnalyzer {
 
   @Before
   public void setUp() {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer();
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
     _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
   }

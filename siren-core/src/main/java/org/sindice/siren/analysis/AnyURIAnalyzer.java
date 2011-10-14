@@ -53,6 +53,8 @@ public class AnyURIAnalyzer extends Analyzer {
 
   private final Set<?>            stopSet;
 
+  private final Version matchVersion;
+  
   /**
    * An array containing some common English words that are usually not useful
    * for searching.
@@ -63,24 +65,28 @@ public class AnyURIAnalyzer extends Analyzer {
 
   private URINormalisation normalisationType = URINormalisation.NONE;
 
-  public AnyURIAnalyzer() {
-    this(STOP_WORDS);
+  public AnyURIAnalyzer(Version version) {
+    this(version, STOP_WORDS);
   }
   
-  public AnyURIAnalyzer(final Set<?> stopWords) {
+  public AnyURIAnalyzer(Version version, final Set<?> stopWords) {
     stopSet = stopWords;
+    matchVersion = version;
   }
   
-  public AnyURIAnalyzer(final String[] stopWords) {
+  public AnyURIAnalyzer(Version version, final String[] stopWords) {
     stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
+    matchVersion = version;
   }
   
-  public AnyURIAnalyzer(final File stopwords) throws IOException {
+  public AnyURIAnalyzer(Version version, final File stopwords) throws IOException {
     stopSet = WordlistLoader.getWordSet(stopwords);
+    matchVersion = version;
   }
   
-  public AnyURIAnalyzer(final Reader stopWords) throws IOException {
+  public AnyURIAnalyzer(Version version, final Reader stopWords) throws IOException {
     stopSet = WordlistLoader.getWordSet(stopWords);
+    matchVersion = version;
   }
 
   public void setUriNormalisation(final URINormalisation n) {
@@ -89,12 +95,12 @@ public class AnyURIAnalyzer extends Analyzer {
   
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    TokenStream result = new WhitespaceTokenizer(Version.LUCENE_31, reader);
+    TokenStream result = new WhitespaceTokenizer(matchVersion, reader);
     result = new URIEncodingFilter(result, "UTF-8");
     result = this.applyURINormalisation(result);
     result = new MailtoFilter(result);
-    result = new LowerCaseFilter(Version.LUCENE_31, result );
-    result = new StopFilter(Version.LUCENE_31, result, stopSet);
+    result = new LowerCaseFilter(matchVersion, result );
+    result = new StopFilter(matchVersion, result, stopSet);
     result = new LengthFilter(true, result, 2, 256);
     result = new AssignTokenTypeFilter(result, TupleTokenizer.URI);
     return result;
@@ -106,12 +112,12 @@ public class AnyURIAnalyzer extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new WhitespaceTokenizer(Version.LUCENE_31, reader);
+      streams.tokenStream = new WhitespaceTokenizer(matchVersion, reader);
       streams.filteredTokenStream = new URIEncodingFilter(streams.tokenStream, "UTF-8");
       streams.filteredTokenStream = this.applyURINormalisation(streams.filteredTokenStream);
       streams.filteredTokenStream = new MailtoFilter(streams.filteredTokenStream);
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
-      streams.filteredTokenStream = new StopFilter(Version.LUCENE_31, streams.filteredTokenStream, stopSet);
+      streams.filteredTokenStream = new LowerCaseFilter(matchVersion, streams.filteredTokenStream);
+      streams.filteredTokenStream = new StopFilter(matchVersion, streams.filteredTokenStream, stopSet);
       streams.filteredTokenStream = new LengthFilter(true, streams.filteredTokenStream, 2, 256);
       streams.filteredTokenStream = new AssignTokenTypeFilter(streams.filteredTokenStream, TupleTokenizer.URI);
     } else {

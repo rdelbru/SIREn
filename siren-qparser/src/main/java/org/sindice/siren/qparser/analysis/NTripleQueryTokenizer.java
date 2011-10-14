@@ -32,11 +32,13 @@ import java.io.Reader;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
+import org.sindice.siren.qparser.ntriple.query.config.DatatypeAttribute;
 
 public final class NTripleQueryTokenizer extends Tokenizer {
 
   private final CharTermAttribute cTermAtt;
   private final TypeAttribute typeAtt;
+  private final DatatypeAttribute dataTypeAtt;
 
   /** A private instance of the JFlex-constructed scanner */
   private final NTripleQueryTokenizerImpl _scanner;
@@ -63,6 +65,7 @@ public final class NTripleQueryTokenizer extends Tokenizer {
     this._scanner = new NTripleQueryTokenizerImpl(input);
     cTermAtt = this.addAttribute(CharTermAttribute.class);
     typeAtt = this.addAttribute(TypeAttribute.class);
+    dataTypeAtt = this.addAttribute(DatatypeAttribute.class);
   }
 
   @Override
@@ -88,18 +91,21 @@ public final class NTripleQueryTokenizer extends Tokenizer {
         typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getURIText());
+        dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
         break;
 
       case NTripleQueryTokenizer.LITERAL:
         typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
+        dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
         break;
 
       case NTripleQueryTokenizer.LPATTERN:
         typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
+        dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
         break;
 
       case NTripleQueryTokenizer.EOF:

@@ -16,8 +16,8 @@ Expression    ::= {SimpleExpression} TriplePattern:tp
 TriplePattern ::= Resource:s Resource:p Value:o
 
 Value         ::=   {Resource}
-                  | {Literal} String:v
-                  | {LiteralPattern} String:v
+                  | {Literal} "org.sindice.siren.qparser.ntriple.DatatypeLit":l
+                  | {LiteralPattern} "org.sindice.siren.qparser.ntriple.DatatypeLit":lp
                       
 Resource      ::=   {URIPattern} String:v
                   | {Wildcard} String:v

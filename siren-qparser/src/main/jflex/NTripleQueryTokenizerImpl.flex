@@ -30,6 +30,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Token;
 import java_cup.runtime.*;
+import org.sindice.siren.util.XSDDatatype;
+import org.sindice.siren.qparser.ntriple.DatatypeLit;
 
 %%
 
@@ -101,9 +103,9 @@ import java_cup.runtime.*;
 	private static final
 	Logger logger = LoggerFactory.getLogger(NTripleQueryTokenizerImpl.class);
 	
-	private final 
-	StringBuffer buffer = new StringBuffer();
-	
+	private final StringBuffer buffer = new StringBuffer();
+	private final StringBuffer metadataBuffer = new StringBuffer();
+  
 	public final int yychar()	{
 		return yychar;
 	}
@@ -124,6 +126,11 @@ import java_cup.runtime.*;
 	private Symbol symbol(int type, String value) {
 		logger.debug("Obtain token {} \"{}\"", type, value);
 	  return new Symbol(type, yyline, yycolumn, value);
+	}
+	
+	private Symbol symbol(int type, DatatypeLit dl) {
+	logger.debug("Obtain token {} \"{}\"", type, dl);
+    return new Symbol(type, yyline, yycolumn, dl);
 	}
 	
 	/**
@@ -158,6 +165,19 @@ import java_cup.runtime.*;
 	  t.setTermBuffer(chars, 0, chars.length);
 	}
 	
+	/**
+   * Return the datatype URI.
+   *
+   * <p> Return the datatype xsd:string by default.
+   */
+  public final String getDatatypeURI() {
+    // If not datatype, returns by default datatype xsd:string
+    if (metadataBuffer.length() == 0) {
+      return XSDDatatype.XSD_STRING;
+    }
+    return metadataBuffer.toString();
+  }
+	
 %}
 
 ENDOFLINE 		 =  \r|\n|\r\n
@@ -173,7 +193,10 @@ URIREF				 =  "<" [^>]+ ">"
 
 <YYINITIAL> {
 
-	{URIREF}				{ return URIPATTERN; }
+	{URIREF}				{ // Assign the xsd:anyURI
+                    metadataBuffer.setLength(0);
+                    metadataBuffer.append(XSDDatatype.XSD_ANY_URI);
+	                  return URIPATTERN; }
 	
 	"AND" | "&&"    { return AND; }
 	
@@ -187,9 +210,13 @@ URIREF				 =  "<" [^>]+ ">"
 	
 	"*"    					{ return WILDCARD; }
 	
-	\"							{ buffer.setLength(0); yybegin(LITSTR); }
+	\"							{ buffer.setLength(0);
+	                  metadataBuffer.setLength(0);
+	                  yybegin(LITSTR); }
 	
-	"'"							{ buffer.setLength(0); yybegin(LITPATSTR); }
+	\'							{ buffer.setLength(0);
+	                  metadataBuffer.setLength(0);
+	                  yybegin(LITPATSTR); }
 	
 	{WHITESPACE}		{ /* ignore */ }
 	
@@ -205,6 +232,11 @@ URIREF				 =  "<" [^>]+ ">"
 
 <LITSTR> {
 
+  \"\^\^{URIREF}  { yybegin(YYINITIAL);
+                    // remove the first four and the last characters.
+                    metadataBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
+                    return LITERAL; }
+                    
 	\" 							{ yybegin(YYINITIAL); return LITERAL; }
 
   [^\"\\]+  			{ buffer.append(yytext()); }
@@ -218,7 +250,12 @@ URIREF				 =  "<" [^>]+ ">"
 
 <LITPATSTR> {
 
-	\' 							{ yybegin(YYINITIAL); return LPATTERN; }
+  \'\^\^{URIREF}  { yybegin(YYINITIAL);
+                    // remove the first four and the last characters.
+                    metadataBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
+                    return LPATTERN; }
+                    
+	\'							{ yybegin(YYINITIAL); return LPATTERN; }
 
   [^\'\\]+  			{ buffer.append(yytext()); }
   

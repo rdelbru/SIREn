@@ -54,7 +54,7 @@ import org.sindice.siren.util.XSDDatatype;
  * to register an analyzer to a specific datatype URI. It can be called through
  * the {@link TupleAnalyzer} class.
  */
-public class TupleTokenAnalyzerFilter extends TokenFilter {
+public class DataTypeAnalyzerFilter extends TokenFilter {
 
   private final CharArrayMap<Analyzer> dtsAnalyzer;
 
@@ -76,7 +76,7 @@ public class TupleTokenAnalyzerFilter extends TokenFilter {
 
   private ReusableCharArrayReader reusableCharArray;
 
-  public TupleTokenAnalyzerFilter(final Version version,
+  public DataTypeAnalyzerFilter(final Version version,
                                   final TokenStream input,
                                   final Analyzer stringAnalyzer,
                                   final Analyzer anyURIAnalyzer) {

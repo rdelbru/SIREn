@@ -85,7 +85,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
     for (int i = 0; i < reps; i++) {
       final Analyzer analyzer = new NoDeltaTupleAnalyzer(
         new WhitespaceAnalyzer(Version.LUCENE_31),
-        new WhitespaceAnyURIAnalyzer());
+        new WhitespaceAnyURIAnalyzer(Version.LUCENE_31));
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -103,7 +103,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeDeltaTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
+      final Analyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34));
       counter += this.performAnalysis(analyzer);
     }
     return counter;

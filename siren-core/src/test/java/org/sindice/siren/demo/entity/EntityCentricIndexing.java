@@ -74,7 +74,7 @@ public class EntityCentricIndexing {
   public EntityCentricIndexing()
   throws CorruptIndexException, LockObtainFailedException, IOException {
     dir = new RAMDirectory();
-    final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer());
+    final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34));
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,
       analyzer);
     writer = new IndexWriter(dir, conf);

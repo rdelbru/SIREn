@@ -30,11 +30,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
+import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.core.QueryNodeException;
+import org.apache.lucene.queryParser.core.messages.QueryParserMessages;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
-import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.util.Version;
+import org.sindice.siren.qparser.ntriple.DatatypeLit;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
@@ -53,6 +59,7 @@ import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
+import org.sindice.siren.util.XSDDatatype;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,11 +75,16 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   Map<String, Float> boosts;
 
   /**
-   * The inner query analyzers for processing URI and Literal patterns
+   * The configuration map between the datatype URI and the {@link Analyzer} or,
+   * in the case of a numeric query, the {@link NumericConfig}.
    */
-  Analyzer uriAnalyzer;
-  Analyzer literalAnalyzer;
+  private final Map<String, Object> tokenConfigMap;
 
+  /**
+   * Analyzer used on a {@link LiteralPattern}, in the case of a numeric query.
+   */
+  private final WhitespaceAnalyzer wsAnalyzer;
+  
   /**
    * The default operator to use in the inner parsers
    */
@@ -86,17 +98,17 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   private static final
   Logger logger = LoggerFactory.getLogger(VisitorAdaptor.class);
 
-  public ScatteredNTripleQueryBuilder(final Map<String, Float> boosts,
-                                      final Analyzer uriAnalyzer,
-                                      final Analyzer literalAnalyzer) {
+  public ScatteredNTripleQueryBuilder(final Version matchVersion,
+                                      final Map<String, Float> boosts,
+                                      final Map<String, Object> tokenConfigMap) {
     this.boosts = boosts;
-    this.uriAnalyzer = uriAnalyzer;
-    this.literalAnalyzer = literalAnalyzer;
+    this.tokenConfigMap = tokenConfigMap;
+    this.wsAnalyzer = new WhitespaceAnalyzer(matchVersion);
   }
 
   @Override
   public boolean hasError() {
-    return queryException != null && queryException.getError() != Error.NO_ERROR;
+    return queryException != null && queryException.getError() != org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error.NO_ERROR;
   }
 
   @Override
@@ -250,7 +262,8 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
-    final ResourceQueryParser qph = new ResourceQueryParser(literalAnalyzer);
+    final DatatypeLit dtLit = l.getL();
+    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dtLit.getDatatypeURI()));
     qph.setDefaultOperator(defaultOp);
     try {
       if (l.getQueries() == null) {
@@ -258,7 +271,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
       }
       for (final String fieldName : boosts.keySet()) {
         // Add quotes so that the parser evaluates it as a phrase query
-        l.getQueries().put(fieldName, qph.parse("\"" + l.getV() + "\"", fieldName));
+        l.getQueries().put(fieldName, qph.parse("\"" + dtLit.getLit() + "\"", fieldName));
       }
     }
     catch (final QueryNodeException e) {
@@ -274,14 +287,27 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
-    final ResourceQueryParser qph = new ResourceQueryParser(literalAnalyzer);
+    final DatatypeLit dtLit = lp.getLp();
+    final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
+    final ResourceQueryParser qph;
+    
+    if (dt instanceof Analyzer)
+      qph = new ResourceQueryParser((Analyzer) dt);
+    else if (dt instanceof NumericConfig)
+      qph = new ResourceQueryParser(wsAnalyzer, (NumericConfig) dt);
+    else {
+      logger.error("Wrong configuration Object. Recieved unknown Object {}", dt.getClass().getName());
+      this.createQueryException(new QueryNodeException(new MessageImpl(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED)));
+      return;
+    }
+    
     qph.setDefaultOperator(defaultOp);
     try {
       if (lp.getQueries() == null) {
         lp.setQueries(new HashMap<String, Query>());
       }
       for (final String fieldName : boosts.keySet()) {
-        lp.getQueries().put(fieldName, qph.parse(lp.getV(), fieldName));
+        lp.getQueries().put(fieldName, qph.parse(dtLit.getLit(), fieldName));
       }
     }
     catch (final QueryNodeException e) {
@@ -296,7 +322,7 @@ public class ScatteredNTripleQueryBuilder extends VisitorAdaptor implements Quer
   @Override
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
-    final ResourceQueryParser qph = new ResourceQueryParser(uriAnalyzer);
+    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(XSDDatatype.XSD_ANY_URI));
     qph.setDefaultOperator(defaultOp);
     u.setV(NTripleQueryBuilder.escape(u.getV())); // URI schemes handling
     try {

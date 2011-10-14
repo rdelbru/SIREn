@@ -40,7 +40,7 @@ ClauseQuery(
                 p3
               ) [URIPattern]
               Literal(
-                A literal
+                http://www.w3.org/2001/XMLSchema#string:A literal
               ) [Literal]
             ) [TriplePattern]
           ) [SimpleExpression]

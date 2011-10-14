@@ -24,8 +24,8 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.qparser.ntriple;  
-   
+package org.sindice.siren.qparser.ntriple;
+
 /* ----------------------Preliminary Declarations Section--------------------*/
    
 /* Import the class java_cup.runtime.*  */
@@ -40,7 +40,9 @@ import org.sindice.siren.qparser.ntriple.query.model.*;
 /* Import Logback Logger */
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-   
+
+import org.sindice.siren.qparser.ntriple.DatatypeLit;
+
 /* Parser code to change the way the parser reports errors (include
    line and column number of the error). */
 parser code {:
@@ -73,7 +75,6 @@ parser code {:
       throw new IOException(message);
     }
 :};
-
    
 /* ------------Declaration of Terminals and Non Terminals Section----------- */
    
@@ -83,8 +84,9 @@ parser code {:
    that do have an value, in this case an String value, are listed on
    the next line down. */
    
-terminal           AND, OR, MINUS, LPAREN, RPAREN, WILDCARD;
-terminal String    URIPATTERN, LITERAL, LPATTERN;
+terminal          AND, OR, MINUS, LPAREN, RPAREN, WILDCARD;
+terminal String   URIPATTERN;
+terminal org.sindice.siren.qparser.ntriple.DatatypeLit   LITERAL, LPATTERN;
    
 /* Non terminals used in the grammar section.  
 

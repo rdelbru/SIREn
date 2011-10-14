@@ -73,7 +73,7 @@ public class NTriplesIndexing {
   public NTriplesIndexing()
   throws CorruptIndexException, LockObtainFailedException, IOException {
     dir = new RAMDirectory();
-    final AnyURIAnalyzer anyURI = new AnyURIAnalyzer();
+    final AnyURIAnalyzer anyURI = new AnyURIAnalyzer(Version.LUCENE_34);
     anyURI.setUriNormalisation(URINormalisation.FULL);
     final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), anyURI);
     final IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_31,

@@ -36,7 +36,7 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.TupleTokenAnalyzerFilter;
+import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
 
 /**
  * The TupleAnalyzer is especially designed to process RDF data. It applies
@@ -93,7 +93,7 @@ public class TupleAnalyzer extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(matchVersion, result, stringAnalyzer, anyURIAnalyzer);
+    final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, result, stringAnalyzer, anyURIAnalyzer);
     for (Entry<Object, Analyzer> e : regLitAnalyzers.entrySet()) {
       tt.register((char[]) e.getKey(), e.getValue());
     }
@@ -110,7 +110,7 @@ public class TupleAnalyzer extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      final TupleTokenAnalyzerFilter tt = new TupleTokenAnalyzerFilter(matchVersion, streams.filteredTokenStream, stringAnalyzer, anyURIAnalyzer);
+      final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, streams.filteredTokenStream, stringAnalyzer, anyURIAnalyzer);
       for (Entry<Object, Analyzer> e : regLitAnalyzers.entrySet()) {
         tt.register((char[]) e.getKey(), e.getValue());
       }

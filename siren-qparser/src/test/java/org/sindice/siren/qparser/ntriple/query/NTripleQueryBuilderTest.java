@@ -23,14 +23,18 @@ package org.sindice.siren.qparser.ntriple.query;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
 import org.junit.Test;
+import org.sindice.siren.qparser.ntriple.DatatypeLit;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
 import org.sindice.siren.qparser.ntriple.query.model.Literal;
@@ -48,12 +52,20 @@ import org.sindice.siren.search.SirenPhraseQuery;
 import org.sindice.siren.search.SirenTermQuery;
 import org.sindice.siren.search.SirenTupleClause;
 import org.sindice.siren.search.SirenTupleQuery;
+import org.sindice.siren.util.XSDDatatype;
 
 
 public class NTripleQueryBuilderTest {
 
   private final String  _field = "triple";
 
+  private final static Version matchVersion = Version.LUCENE_34;
+  private final static Map<String, Object> tokenConfigMap = new HashMap<String, Object>();
+  static {
+    tokenConfigMap.put(XSDDatatype.XSD_ANY_URI,  new WhitespaceAnalyzer(matchVersion));
+    tokenConfigMap.put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
+  }
+  
   /**
    * @throws java.lang.Exception
    */
@@ -68,8 +80,7 @@ public class NTripleQueryBuilderTest {
   public void testVisitTriplePattern1() {
     final TriplePattern pattern = new TriplePattern(new URIPattern("s"), new URIPattern("p"),new URIPattern("o"));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -107,10 +118,11 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitTriplePattern2() {
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(" literal "));
+    final String literal = " literal ";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -136,10 +148,11 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitTriplePattern3() {
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(" some literal "));
+    final String literal = " some literal ";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new Literal(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -167,10 +180,11 @@ public class NTripleQueryBuilderTest {
    */
   @Test
   public void testVisitTriplePattern4() {
-    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new LiteralPattern(" (literal OR text) "));
+    final String literal = " (literal OR text) ";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new LiteralPattern(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -208,8 +222,7 @@ public class NTripleQueryBuilderTest {
   public void testVisitEmptyQuery() {
     final EmptyQuery empty = new EmptyQuery();
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     empty.traverseBottomUp(translator);
     final Query query = empty.getQuery();
     //System.out.println(query.toString());
@@ -226,13 +239,14 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal("some literal"));
+    final String literal = "some literal";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.OR, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -288,13 +302,14 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal("some literal"));
+    final String literal = "some literal";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.AND, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -350,13 +365,14 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal("some literal"));
+    final String literal = "some literal";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
     final SimpleExpression rhe = new SimpleExpression(pattern2);
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.MINUS, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -412,7 +428,9 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern1 = new TriplePattern(new Wildcard("*"), new URIPattern("p"), new URIPattern("o"));
     final SimpleExpression lhe = new SimpleExpression(pattern1);
 
-    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal("some literal"));
+    final String literal = "some literal";
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, literal);
+    final TriplePattern pattern2 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new Literal(dtLit));
     final SimpleExpression rhe1 = new SimpleExpression(pattern2);
 
     final TriplePattern pattern3 = new TriplePattern(new Wildcard("s"), new URIPattern("p"), new URIPattern("o2"));
@@ -422,8 +440,7 @@ public class NTripleQueryBuilderTest {
 
     final NestedClause qclause = new NestedClause(bclause, Operator.OR, rhe2);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     qclause.traverseBottomUp(translator);
     final Query query = qclause.getQuery();
 
@@ -501,10 +518,10 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteral() {
     final String text = "Some Literal ...";
-    final Literal literal = new Literal(text);
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final Literal literal = new Literal(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -528,10 +545,10 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern() {
     final String text = "\"Some Literal ...\"";
-    final LiteralPattern literal = new LiteralPattern(text);
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -555,10 +572,10 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern2() {
     final String text = "Some AND Literal";
-    final LiteralPattern literal = new LiteralPattern(text);
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -587,10 +604,10 @@ public class NTripleQueryBuilderTest {
   @Test
   public void testVisitLiteralPattern3() {
     final String text = "Some OR Literal";
-    final LiteralPattern literal = new LiteralPattern(text);
+    final DatatypeLit dtLit = new DatatypeLit(XSDDatatype.XSD_STRING, text);
+    final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -623,8 +640,7 @@ public class NTripleQueryBuilderTest {
     final String text = "aaa://s";
     final URIPattern uri = new URIPattern(text);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);
     final Query query = uri.getQuery();
 
@@ -639,8 +655,7 @@ public class NTripleQueryBuilderTest {
     final String text = "aaa://s || http://test";
     final URIPattern uri = new URIPattern(text);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(_field,
-      new WhitespaceAnalyzer(Version.LUCENE_31), new WhitespaceAnalyzer(Version.LUCENE_31));
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);
     final Query query = uri.getQuery();
 

@@ -9,7 +9,7 @@ ClauseQuery(
           http://ns/p
         ) [URIPattern]
         Literal(
-          A Literal ...
+          http://www.w3.org/2001/XMLSchema#string:A Literal ...
         ) [Literal]
       ) [TriplePattern]
     ) [SimpleExpression]

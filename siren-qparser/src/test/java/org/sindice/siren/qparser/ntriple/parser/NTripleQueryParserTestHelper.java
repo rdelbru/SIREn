@@ -33,7 +33,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.Field.Index;
@@ -48,7 +47,6 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
-import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.analysis.NTripleQueryAnalyzer;
 import org.sindice.siren.qparser.analysis.NTripleTestHelper;
 import org.sindice.siren.qparser.ntriple.NTripleQueryParser;
@@ -58,7 +56,7 @@ import org.slf4j.LoggerFactory;
 public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
   private static final Logger logger = LoggerFactory.getLogger(NTripleTestHelper.class);
-
+  
   public static float getScore(final Map<String, String> ntriples,
                                final Map<String, Float> boosts, final String query,
                                final boolean scattered)
@@ -182,9 +180,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, field,
-        new NTripleQueryAnalyzer(), new WhitespaceAnalyzer(Version.LUCENE_31),
-        new WhitespaceAnalyzer(Version.LUCENE_31), Operator.AND);
+      final Query q = NTripleQueryParser.parse(query, matchVersion, field,
+        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -200,9 +197,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, boosts, scattered,
-        new NTripleQueryAnalyzer(), new WhitespaceAnalyzer(Version.LUCENE_31),
-        new WhitespaceAnalyzer(Version.LUCENE_31), Operator.AND);
+      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts, scattered,
+        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -218,9 +214,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, boosts, scattered,
-        new NTripleQueryAnalyzer(), new WhitespaceAnalyzer(Version.LUCENE_31),
-        new WhitespaceAnalyzer(Version.LUCENE_31), Operator.AND);
+      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts, scattered,
+        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
       logger.debug("{} = {}", query, q.toString());
       final ScoreDoc[] result = ramSearcher.search(q, null, 100).scoreDocs;
       assertEquals(1, result.length);

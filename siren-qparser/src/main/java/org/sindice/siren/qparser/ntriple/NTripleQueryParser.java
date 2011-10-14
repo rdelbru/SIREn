@@ -39,12 +39,14 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.analysis.NTripleQueryTokenizerImpl;
 import org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
+import org.sindice.siren.qparser.ntriple.query.config.DatatypeAttribute;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,17 +69,17 @@ public class NTripleQueryParser {
    * @throws ParseException If something is wrong with the query string
    */
   public static final Query parse(final String qstr,
+                                  final Version matchVersion,
                                   final String field,
                                   final Analyzer ntripleAnalyzer,
-                                  final Analyzer uriAnalyzer,
-                                  final Analyzer literalAnalyzer,
+                                  final Map<String, Object> tokenConfigMap,
                                   final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     // Parse NTriple and create abstract syntax tree
     final TokenStream tokenStream = prepareTokenStream(qstr, ntripleAnalyzer);
     final Symbol sym = createAST(tokenStream);
     // Translate the AST into query objects
-    return buildSingleFieldQuery(sym, field, uriAnalyzer, literalAnalyzer, op);
+    return buildSingleFieldQuery(sym, matchVersion, field, tokenConfigMap, op);
   }
 
   /**
@@ -96,11 +98,11 @@ public class NTripleQueryParser {
    * @throws ParseException If something is wrong with the query string
    */
   public static final Query parse(final String qstr,
+                                  final Version matchVersion,
                                   final Map<String, Float> boosts,
                                   final boolean scattered,
                                   final Analyzer ntripleAnalyzer,
-                                  final Analyzer uriAnalyzer,
-                                  final Analyzer literalAnalyzer,
+                                  final Map<String, Object> tokenConfigMap,
                                   final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     if (boosts.isEmpty()) {
@@ -113,10 +115,10 @@ public class NTripleQueryParser {
 
     // Translate the AST into query objects
     if (scattered) {
-      return buildScatteredMultiFieldQuery(sym, boosts, uriAnalyzer, literalAnalyzer, op);
+      return buildScatteredMultiFieldQuery(sym, matchVersion, boosts, tokenConfigMap, op);
     }
     else {
-      return buildMultiFieldQuery(sym, boosts, uriAnalyzer, literalAnalyzer, op);
+      return buildMultiFieldQuery(sym, matchVersion, boosts, tokenConfigMap, op);
     }
   }
 
@@ -187,12 +189,12 @@ public class NTripleQueryParser {
    * @throws ParseException
    */
   private static Query buildSingleFieldQuery(final Symbol sym,
+                                             final Version matchVersion,
                                              final String field,
-                                             final Analyzer uriAnalyzer,
-                                             final Analyzer literalAnalyzer,
+                                             final Map<String, Object> tokenConfigMap,
                                              final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(field, uriAnalyzer, literalAnalyzer);
+    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, field, tokenConfigMap);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);
@@ -213,14 +215,14 @@ public class NTripleQueryParser {
    * @throws ParseException
    */
   private static Query buildMultiFieldQuery(final Symbol sym,
+                                            final Version matchVersion,
                                             final Map<String, Float> boosts,
-                                            final Analyzer uriAnalyzer,
-                                            final Analyzer literalAnalyzer,
+                                            final Map<String, Object> tokenConfigMap,
                                             final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     final BooleanQuery bq = new BooleanQuery(true);
     for (final String field : boosts.keySet()) {
-      final NTripleQueryBuilder translator = new NTripleQueryBuilder(field, uriAnalyzer, literalAnalyzer);
+      final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, field, tokenConfigMap);
       translator.setDefaultOperator(op);
       final NTripleQuery nq = (NTripleQuery) sym.value;
       nq.traverseBottomUp(translator);
@@ -246,12 +248,12 @@ public class NTripleQueryParser {
    * @throws ParseException
    */
   private static Query buildScatteredMultiFieldQuery(final Symbol sym,
-                                            final Map<String, Float> boosts,
-                                            final Analyzer uriAnalyzer,
-                                            final Analyzer literalAnalyzer,
-                                            final DefaultOperatorAttribute.Operator op)
+                                                     final Version matchVersion,
+                                                     final Map<String, Float> boosts,
+                                                     final Map<String, Object> tokenConfigMap,
+                                                     final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(boosts, uriAnalyzer, literalAnalyzer);
+    final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(matchVersion, boosts, tokenConfigMap);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);
@@ -264,11 +266,13 @@ public class NTripleQueryParser {
     private final TokenStream _stream;
     private final CharTermAttribute cTermAtt;
     private final TypeAttribute typeAtt;
+    private final DatatypeAttribute dataTypeAtt;
 
     public CupScannerWrapper(final TokenStream stream) {
       _stream = stream;
       cTermAtt = _stream.getAttribute(CharTermAttribute.class);
       typeAtt = _stream.getAttribute(TypeAttribute.class);
+      dataTypeAtt = stream.getAttribute(DatatypeAttribute.class);
     }
 
     /* (non-Javadoc)
@@ -284,17 +288,17 @@ public class NTripleQueryParser {
           }
         }
 
-        logger.debug("Received token {}", cTermAtt.toString());
+        logger.debug("Received token {}, type={}", cTermAtt.toString(), typeAtt.type());
         if (idx == -1) {
           logger.error("Received unknown token: {}", cTermAtt.toString());
         }
 
-        if (idx == NTripleQueryTokenizerImpl.LITERAL ||
-            idx == NTripleQueryTokenizerImpl.URIPATTERN ||
-            idx == NTripleQueryTokenizerImpl.LPATTERN) {
+        if (idx == NTripleQueryTokenizerImpl.URIPATTERN) {
           return new Symbol(idx, cTermAtt.toString());
-        }
-        else {
+        } else if (idx == NTripleQueryTokenizerImpl.LITERAL ||
+                   idx == NTripleQueryTokenizerImpl.LPATTERN) {
+          return new Symbol(idx, new DatatypeLit(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
+        } else {
           return new Symbol(idx);
         }
       }

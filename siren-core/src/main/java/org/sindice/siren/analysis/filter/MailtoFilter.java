@@ -32,6 +32,7 @@ import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
+import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Split the URI with a mailto scheme into.
@@ -41,6 +42,8 @@ import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
  * <li>test@test.fr</li>
  * <li>mailto:test@test.fr</li> (at the same position as the last one)
  * </ul>
+ * <p>
+ * This filter is to be applied on a token of type {@link TupleTokenizer.URI} only.
  */
 public class MailtoFilter extends TokenFilter {
 

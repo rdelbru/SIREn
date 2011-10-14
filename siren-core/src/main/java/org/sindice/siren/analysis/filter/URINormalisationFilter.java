@@ -39,7 +39,8 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Break an URI into smaller components based on delimiters, such as ':', '/',
- * etc. and uppercase.
+ * etc. and uppercase. This filter is to be applied on a token of type
+ * {@link TupleTokenizer.URI} only.
  * <br>
  * This filter is very demanding in term of CPU. In general, when this filter is
  * used, the parsing time for a set of tuples doubles. If you don't need it,

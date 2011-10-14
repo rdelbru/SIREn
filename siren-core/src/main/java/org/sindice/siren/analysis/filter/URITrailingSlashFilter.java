@@ -30,54 +30,21 @@ import java.io.IOException;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.standard.UAX29URLEmailTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * Filter that removes the trailing slash to token of type
- * {@link TupleTokenizer.URI} or {@link UAX29URLEmailTokenizer.URL_TYPE}
+ * Filter that removes the trailing slash of the URI token. This filter is to be
+ * applied on a token of type {@link TupleTokenizer.URI} only.
  */
 public class URITrailingSlashFilter extends TokenFilter {
 
-//  private Set<String> tokenTypes = new HashSet<String>();
-//  private final static Set<String> DEFAULT_TOKEN_TYPES = new HashSet<String>();
-
   private final CharTermAttribute termAtt;
-//  private final TypeAttribute typeAtt;
-
-  // by default, check the token type
-//  public static final boolean DEFAULT_CHECKTYPE = true;
-//  private boolean checkType = DEFAULT_CHECKTYPE;
-
-//  static {
-//    DEFAULT_TOKEN_TYPES.add(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI]);
-//    DEFAULT_TOKEN_TYPES.add(UAX29URLEmailTokenizer.URL_TYPE);
-//  }
 
   public URITrailingSlashFilter(final TokenStream in) {
-//    this(in, new HashSet<String>(DEFAULT_TOKEN_TYPES));
     super(in);
     termAtt = this.addAttribute(CharTermAttribute.class);
   }
-
-//  public URITrailingSlashFilter(final TokenStream in, final String tokenType) {
-//    super(in);
-//    this.tokenTypes.add(tokenType);
-//    termAtt = this.addAttribute(CharTermAttribute.class);
-//    typeAtt = this.addAttribute(TypeAttribute.class);
-//  }
-//
-//  public URITrailingSlashFilter(final TokenStream in, final Set<String> tokenTypes) {
-//    super(in);
-//    this.tokenTypes = tokenTypes;
-//    termAtt = this.addAttribute(CharTermAttribute.class);
-//    typeAtt = this.addAttribute(TypeAttribute.class);
-//  }
-
-//  public void setCheckTokenType(final boolean checkType) {
-//    this.checkType = checkType;
-//  }
 
   @Override
   public final boolean incrementToken() throws IOException {
@@ -85,15 +52,12 @@ public class URITrailingSlashFilter extends TokenFilter {
       return false;
     }
 
-//    final String type = typeAtt.type();
-//    if (checkType ? tokenTypes.contains(type) : true) {
-      final int bufferLength = termAtt.length();
-      // Remove trailing slash
-      if (termAtt.buffer()[bufferLength - 1] == '/') {
-        // Strip last character off
-        termAtt.setLength(bufferLength - 1);
-      }
-//    }
+    final int bufferLength = termAtt.length();
+    // Remove trailing slash
+    if (termAtt.buffer()[bufferLength - 1] == '/') {
+      // Strip last character off
+      termAtt.setLength(bufferLength - 1);
+    }
     return true;
   }
 

@@ -38,7 +38,8 @@ import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Extract the localname of an URI, and break it into smaller components based
- * on delimiters, such as uppercase or integers.
+ * on delimiters, such as uppercase or integers. This filter is to be applied on
+ * a token of type {@link TupleTokenizer.URI} only.
  * <br>
  * This filter returns the complete URI, the full localname of the URIs as well
  * as the localname tokens.

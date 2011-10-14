@@ -37,11 +37,12 @@ import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
+import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
  * Decode the URI encoding format of special characters such as '?' or '<'; special
- * characters (except of the SPACE that can be encoded with '+') begins with a '%'
- * and are followed by two characters in hexadecimal format.
+ * characters (except of the SPACE that can be encoded with '+' and '%20') begins
+ * with a '%' and are followed by two characters in hexadecimal format.
  * if a special character cannot be decoded, it is just skipped and the decoding
  * process just continue.
  * When an URI has special characters, two stems of the URI are produced
@@ -50,6 +51,8 @@ import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
  * <li> the original URI </li>
  * <li> the decoded URI </li>
  * </ul>
+ * <p>
+ * This filter is to be applied on a token of type {@link TupleTokenizer.URI} only.
  */
 public class URIEncodingFilter extends TokenFilter {
 

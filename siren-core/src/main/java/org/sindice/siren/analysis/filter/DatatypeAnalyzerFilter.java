@@ -46,15 +46,17 @@ import org.sindice.siren.util.XSDDatatype;
 
 /**
  * This class performs post-processing operation on the tokens extracted by the
- * {@link TupleTokenizer} class, e.g., Literal, URI. An URI and a Literal have
- * default analyzers assigned, specified through the {@link TupleAnalyzer}
- * constructor.
+ * {@link TupleTokenizer} class, e.g., Literal, URI, based on their datatype
+ * attribute.
  * <p>
  * This filter provides a {@link #register(char[], Analyzer)} method which allows
  * to register an analyzer to a specific datatype URI. It can be called through
  * the {@link TupleAnalyzer} class.
+ * <p> The {@link TupleTokenizer} assigns by default the datatype
+ * {@link XSDDatatype.XSD_STRING} to literals and
+ * {@link XSDDatatype.XSD_ANY_URI} to URI.
  */
-public class DataTypeAnalyzerFilter extends TokenFilter {
+public class DatatypeAnalyzerFilter extends TokenFilter {
 
   private final CharArrayMap<Analyzer> dtsAnalyzer;
 
@@ -65,7 +67,7 @@ public class DataTypeAnalyzerFilter extends TokenFilter {
   private DatatypeAttribute dtypeAtt;
   private TupleAttribute tupleAtt;
   private CellAttribute cellAtt;
-  
+
   private CharTermAttribute tokenTermAtt;
   private OffsetAttribute tokenOffsetAtt;
   private PositionIncrementAttribute tokenPosIncrAtt;
@@ -76,13 +78,18 @@ public class DataTypeAnalyzerFilter extends TokenFilter {
 
   private ReusableCharArrayReader reusableCharArray;
 
-  public DataTypeAnalyzerFilter(final Version version,
-                                  final TokenStream input,
-                                  final Analyzer stringAnalyzer,
-                                  final Analyzer anyURIAnalyzer) {
+  public DatatypeAnalyzerFilter(final Version version,
+                                final TokenStream input) {
     super(input);
     dtsAnalyzer = new CharArrayMap<Analyzer>(version, 64, false);
     this.initAttributes();
+  }
+
+  public DatatypeAnalyzerFilter(final Version version,
+                                final TokenStream input,
+                                final Analyzer stringAnalyzer,
+                                final Analyzer anyURIAnalyzer) {
+    this(version, input);
     // register the default analyzers
     this.register(XSDDatatype.XSD_STRING.toCharArray(), stringAnalyzer);
     this.register(XSDDatatype.XSD_ANY_URI.toCharArray(), anyURIAnalyzer);
@@ -180,7 +187,7 @@ public class DataTypeAnalyzerFilter extends TokenFilter {
     posIncrAtt.setPositionIncrement(tokenPosIncrAtt.getPositionIncrement());
     typeAtt.setType(tokenTypeAtt.type());
     // TupleTokenizer handles the setting of tuple/cell values and the datatype URI
-    
+
     // restore datatype, tuple and cell
     tupleAtt.setTuple(tupleID);
     cellAtt.setCell(cellID);

@@ -34,7 +34,7 @@ import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
 
@@ -62,7 +62,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                               TupleTokenizer.DOT});
-    result = new DataTypeAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion),
+    result = new DatatypeAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion),
                                                   new WhitespaceAnyURIAnalyzer(matchVersion));
     result = new LowerCaseFilter(Version.LUCENE_31, result);
     result = new SirenDeltaPayloadFilter(result);
@@ -78,7 +78,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new DataTypeAnalyzerFilter(matchVersion, streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
+      streams.filteredTokenStream = new DatatypeAnalyzerFilter(matchVersion, streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
                                                                                               new WhitespaceAnyURIAnalyzer(matchVersion));
       streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
       streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);

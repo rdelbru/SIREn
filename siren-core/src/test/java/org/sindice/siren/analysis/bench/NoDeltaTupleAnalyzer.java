@@ -40,7 +40,7 @@ import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
 /**
  * Old version of the TupleAnalyzer that does not encode tuple and cell ids in
@@ -120,7 +120,7 @@ extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    result = new DataTypeAnalyzerFilter(Version.LUCENE_31, result, stringAnalyzer, anyURIAnalyzer);
+    result = new DatatypeAnalyzerFilter(Version.LUCENE_31, result, stringAnalyzer, anyURIAnalyzer);
     result = new SirenPayloadFilter(result);
     return result;
   }
@@ -134,7 +134,7 @@ extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new DataTypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream,
+      streams.filteredTokenStream = new DatatypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream,
         stringAnalyzer, anyURIAnalyzer);
       streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {

@@ -51,7 +51,7 @@ import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
 
 public class TestSirenTermRangeQuery extends LuceneTestCase {
@@ -296,7 +296,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
-      result = new DataTypeAnalyzerFilter(Version.LUCENE_31, result, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
+      result = new DatatypeAnalyzerFilter(Version.LUCENE_31, result, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
       result = new SirenDeltaPayloadFilter(result);
       return result;
     }
@@ -310,7 +310,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
           new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-        streams.filteredTokenStream = new DataTypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
+        streams.filteredTokenStream = new DatatypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
         streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
       } else {
         streams.tokenStream.reset(reader);

@@ -31,9 +31,9 @@ import java.util.Map;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.ntriple.DatatypeValue;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
@@ -71,14 +71,14 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
    * The configuration map between the datatype URI and the {@link Analyzer} or,
    * in the case of a numeric query, the {@link NumericConfig}.
    */
-  private final Map<String, Object> datatypeConfig;
+  private final Map<String, Analyzer> datatypeConfig;
 
   private static final
   Logger logger = LoggerFactory.getLogger(SimpleNTripleQueryBuilder.class);
 
   public SimpleNTripleQueryBuilder(final Version matchVersion,
-                             final String field,
-                             final Map<String, Object> datatypeConfig) {
+                                   final String field,
+                                   final Map<String, Analyzer> datatypeConfig) {
     super(matchVersion);
     this.field = field;
     this.datatypeConfig = datatypeConfig;
@@ -235,8 +235,8 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
     final DatatypeValue dtLit = lp.getLp();
 
     try {
-      final Object obj = this.getAnalyzerOrNumericConfig(dtLit.getDatatypeURI());
-      final ResourceQueryParser qph = this.getResourceQueryParser(obj);
+      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
+      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
       lp.setQuery(qph.parse(dtLit.getValue(), field));
     }
     catch (final Exception e) {
@@ -253,7 +253,8 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
     final DatatypeValue dtLit = u.getUp();
-    final String uri = SimpleNTripleQueryBuilder.escape(dtLit.getValue()); // URI schemes handling
+    // URI schemes and special Lucene characters handling
+    final String uri = SimpleNTripleQueryBuilder.escape(dtLit.getValue());
 
     try {
       final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
@@ -298,33 +299,13 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
    * @param datatypeURI The datatype URI associated to this analyzer
    */
   private Analyzer getAnalyzer(final String datatypeURI) {
-    if (datatypeConfig.get(datatypeURI) instanceof Analyzer) {
-      final Analyzer analyzer = (Analyzer) datatypeConfig.get(datatypeURI);
-      if (analyzer == null) {
-        throw new QueryBuilderException(Error.PARSE_ERROR,
-          "Field '" + field + ": Unknown datatype " + datatypeURI);
-      }
-      return analyzer;
-    }
-    else {
+    final Analyzer analyzer = datatypeConfig.get(datatypeURI);
+    
+    if (analyzer == null) {
       throw new QueryBuilderException(Error.PARSE_ERROR,
-        "Field '" + field + ": Expected TextDatatype but got " + datatypeURI);
+        "Field '" + field + ": Unknown datatype " + datatypeURI);
     }
-  }
-
-  /**
-   * Get the associated {@link Analyzer} or {@link NumericConfig}.
-   * If no analyzer or config exists, then throw an exception.
-   *
-   * @param datatypeURI The datatype URI associated to this analyzer
-   */
-  private Object getAnalyzerOrNumericConfig(final String datatypeURI) {
-    if (datatypeConfig.get(datatypeURI) == null) {
-      throw new QueryBuilderException(Error.PARSE_ERROR,
-        "Field '" + field + "': Unknown datatype " + datatypeURI);
-    }
-
-    return datatypeConfig.get(datatypeURI);
+    return analyzer;
   }
 
 }

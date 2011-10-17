@@ -26,6 +26,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
@@ -64,7 +65,7 @@ public class NTripleQueryBuilderTest {
   private final static char[] XSD_STRING = XSDDatatype.XSD_STRING.toCharArray();
   
   private final static Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
-  private final static Map<String, Object> tokenConfigMap = new HashMap<String, Object>();
+  private final static Map<String, Analyzer> tokenConfigMap = new HashMap<String, Analyzer>();
   static {
     tokenConfigMap.put(XSDDatatype.XSD_ANY_URI,  new WhitespaceAnalyzer(matchVersion));
     tokenConfigMap.put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));

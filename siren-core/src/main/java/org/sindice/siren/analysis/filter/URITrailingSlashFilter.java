@@ -27,23 +27,50 @@
 package org.sindice.siren.analysis.filter;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.standard.UAX29URLEmailTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * Filter that removes the trailing slash of the URI token. This filter is to be
- * applied on a token of type {@link TupleTokenizer.URI} only.
+ * Filter that removes the trailing slash of the URI token.
  */
 public class URITrailingSlashFilter extends TokenFilter {
-
+  
+  private final Set<String> tokenTypes = new HashSet<String>();
+  private final static Set<String> DEFAULT_TOKEN_TYPES = new HashSet<String>();
+  
   private final CharTermAttribute termAtt;
+  private final TypeAttribute typeAtt;
 
+  // by default, check the token type
+  public static final boolean DEFAULT_CHECKTYPE = true;
+  private final boolean checkType;
+
+  static {
+    DEFAULT_TOKEN_TYPES.add(TupleTokenizer.getTokenTypes()[TupleTokenizer.URI]);
+    DEFAULT_TOKEN_TYPES.add(UAX29URLEmailTokenizer.TOKEN_TYPES[UAX29URLEmailTokenizer.URL]);
+  }
+  
   public URITrailingSlashFilter(final TokenStream in) {
+    this(in, DEFAULT_TOKEN_TYPES, DEFAULT_CHECKTYPE);
+  }
+  
+  public URITrailingSlashFilter(final TokenStream in, boolean checkType) {
+    this(in, DEFAULT_TOKEN_TYPES, checkType);
+  }
+  
+  public URITrailingSlashFilter(final TokenStream in, final Set<String> tokenTypes, boolean checkType) {
     super(in);
     termAtt = this.addAttribute(CharTermAttribute.class);
+    typeAtt = this.addAttribute(TypeAttribute.class);
+    this.checkType = checkType;
+    this.tokenTypes.addAll(tokenTypes);
   }
 
   @Override
@@ -53,10 +80,13 @@ public class URITrailingSlashFilter extends TokenFilter {
     }
 
     final int bufferLength = termAtt.length();
-    // Remove trailing slash
-    if (termAtt.buffer()[bufferLength - 1] == '/') {
-      // Strip last character off
-      termAtt.setLength(bufferLength - 1);
+    final String type = typeAtt.type();
+    if (checkType ? tokenTypes.contains(type) : true) {
+      // Remove trailing slash
+      if (termAtt.buffer()[bufferLength - 1] == '/') {
+        // Strip last character off
+        termAtt.setLength(bufferLength - 1);
+      }
     }
     return true;
   }

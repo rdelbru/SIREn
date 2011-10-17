@@ -31,6 +31,7 @@ import java.io.Reader;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.NumericTokenStream;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.document.NumericField.DataType;
 
 /**
  * Analyzer that enables indexing of numeric values for efficient range
@@ -83,5 +84,11 @@ public abstract class NumericAnalyzer extends Analyzer {
   private static final class SavedStreams {
     NumericTokenStream tokenStream;
   }
+
+  public int getPrecisionStep() {
+    return precisionStep;
+  }
+  
+  public abstract DataType getNumericType();
 
 }

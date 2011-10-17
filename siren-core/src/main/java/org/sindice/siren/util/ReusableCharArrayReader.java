@@ -28,7 +28,8 @@ package org.sindice.siren.util;
 import java.io.CharArrayReader;
 
 /**
- * 
+ * Implementation of the {@link CharArrayReader} that allow to reset the reader
+ * to a new char array input. 
  */
 public class ReusableCharArrayReader extends CharArrayReader {
 

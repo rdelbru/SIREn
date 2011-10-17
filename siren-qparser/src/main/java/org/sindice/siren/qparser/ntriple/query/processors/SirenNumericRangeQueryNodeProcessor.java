@@ -25,8 +25,8 @@
  */
 package org.sindice.siren.qparser.ntriple.query.processors;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.List;
 
 import org.apache.lucene.messages.MessageImpl;
@@ -39,11 +39,12 @@ import org.apache.lucene.queryParser.core.nodes.ParametricRangeQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode.CompareOperator;
 import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
-import org.apache.lucene.queryParser.standard.config.StandardQueryConfigHandler.ConfigurationKeys;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
-import org.apache.lucene.queryParser.standard.nodes.NumericRangeQueryNode;
 import org.apache.lucene.queryParser.standard.processors.NumericRangeQueryNodeProcessor;
+import org.sindice.siren.analysis.NumericAnalyzer;
+import org.sindice.siren.qparser.ntriple.query.ResourceQueryParser.SirenConfigurationKeys;
+import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
+import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 /**
  * 
@@ -67,64 +68,56 @@ public class SirenNumericRangeQueryNodeProcessor extends QueryNodeProcessorImpl 
       if (config != null) {
         ParametricRangeQueryNode parametricRangeNode = (ParametricRangeQueryNode) node;
         
-        NumericConfig numericConfig = config.get(ConfigurationKeys.NUMERIC_CONFIG);
+        final NumericAnalyzer na = config.get(SirenConfigurationKeys.NUMERIC_ANALYZERS);
         
-        if (numericConfig != null) {
+        if (na != null) {
           
           ParametricQueryNode lower = parametricRangeNode.getLowerBound();
           ParametricQueryNode upper = parametricRangeNode.getUpperBound();
           
-          NumberFormat numberFormat = numericConfig.getNumberFormat();
-          Number lowerNumber, upperNumber;
-          
+          final Number lowerNumber, upperNumber;
+          final StringReader lowerReader = new StringReader(lower.getTextAsString());
+          final StringReader upperReader = new StringReader(upper.getTextAsString());
           try {
-            lowerNumber = numberFormat.parse(lower.getTextAsString());
-            
-          } catch (ParseException e) {
+            switch (na.getNumericType()) {
+              case LONG:
+                lowerNumber = XSDPrimitiveTypeParser.parseLong(lowerReader);
+                upperNumber = XSDPrimitiveTypeParser.parseLong(upperReader);
+                break;
+              case INT:
+                lowerNumber = XSDPrimitiveTypeParser.parseInt(lowerReader);
+                upperNumber = XSDPrimitiveTypeParser.parseInt(upperReader);
+                break;
+              case DOUBLE:
+                lowerNumber = XSDPrimitiveTypeParser.parseDouble(lowerReader);
+                upperNumber = XSDPrimitiveTypeParser.parseDouble(upperReader);
+                break;
+              case FLOAT:
+                lowerNumber = XSDPrimitiveTypeParser.parseFloat(lowerReader);
+                upperNumber = XSDPrimitiveTypeParser.parseFloat(upperReader);
+                break;
+              default:
+                throw new QueryNodeParseException(new MessageImpl(
+                  QueryParserMessages.UNSUPPORTED_NUMERIC_DATA_TYPE, na.getNumericType()));
+            }          
+          } catch (NumberFormatException e) {
             throw new QueryNodeParseException(new MessageImpl(
-                QueryParserMessages.COULD_NOT_PARSE_NUMBER, lower
-                    .getTextAsString(), numberFormat.getClass()
-                    .getCanonicalName()), e);
-          }
-          
-          try {
-            upperNumber = numberFormat.parse(upper.getTextAsString());
-            
-          } catch (ParseException e) {
+              QueryParserMessages.COULD_NOT_PARSE_NUMBER, lower.getTextAsString(), upper.getTextAsString()), e);
+          } catch (IOException e) {
             throw new QueryNodeParseException(new MessageImpl(
-                QueryParserMessages.COULD_NOT_PARSE_NUMBER, upper
-                    .getTextAsString(), numberFormat.getClass()
-                    .getCanonicalName()), e);
-          }
-          
-          switch (numericConfig.getType()) {
-            case LONG:
-              upperNumber = upperNumber.longValue();
-              lowerNumber = lowerNumber.longValue();
-              break;
-            case INT:
-              upperNumber = upperNumber.intValue();
-              lowerNumber = lowerNumber.intValue();
-              break;
-            case DOUBLE:
-              upperNumber = upperNumber.doubleValue();
-              lowerNumber = lowerNumber.doubleValue();
-              break;
-            case FLOAT:
-              upperNumber = upperNumber.floatValue();
-              lowerNumber = lowerNumber.floatValue();
+              QueryParserMessages.COULD_NOT_PARSE_NUMBER, lower.getTextAsString(), upper.getTextAsString()), e);
           }
           
           NumericQueryNode lowerNode = new NumericQueryNode(
-              parametricRangeNode.getField(), lowerNumber, numberFormat);
+              parametricRangeNode.getField(), lowerNumber, null);
           NumericQueryNode upperNode = new NumericQueryNode(
-              parametricRangeNode.getField(), upperNumber, numberFormat);
+              parametricRangeNode.getField(), upperNumber, null);
           
           boolean upperInclusive = upper.getOperator() == CompareOperator.LE;
           boolean lowerInclusive = lower.getOperator() == CompareOperator.GE;
           
-          return new NumericRangeQueryNode(lowerNode, upperNode,
-              lowerInclusive, upperInclusive, numericConfig);
+          return new SirenNumericRangeQueryNode(lowerNode, upperNode,
+              lowerInclusive, upperInclusive, na);
         }
       }
       

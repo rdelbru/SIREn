@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.lucene.analysis.NumericTokenStream;
+import org.apache.lucene.document.NumericField.DataType;
 import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 public class IntNumericAnalyzer
@@ -45,6 +46,11 @@ extends NumericAnalyzer {
   protected void setNumericValue(final NumericTokenStream tokenStream, final Reader reader)
   throws IOException {
     tokenStream.setIntValue(XSDPrimitiveTypeParser.parseInt(reader));
+  }
+
+  @Override
+  public DataType getNumericType() {
+    return DataType.INT;
   }
 
 }

@@ -18,19 +18,24 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.NumericField;
 import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.messages.QueryParserMessages;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.util.StringUtils;
+import org.apache.lucene.queryParser.standard.builders.NumericRangeQueryNodeBuilder;
+import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
 import org.sindice.siren.analysis.NumericAnalyzer;
 import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.search.SirenNumericRangeQuery;
 
 /**
- * 
+ * Class copied from {@link NumericRangeQueryNodeBuilder} for the Siren use case:
+ * in Siren, we use an {@link Analyzer} instead of a {@link NumericConfig}
+ * configuration object.
  */
 public class SirenNumericRangeQueryNodeBuilder implements ResourceQueryBuilder {
 

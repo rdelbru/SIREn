@@ -47,16 +47,11 @@ import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 /**
- * 
+ * Class copied from {@link NumericRangeQueryNodeProcessor} for the SIREn use case.
  */
 public class SirenNumericRangeQueryNodeProcessor extends QueryNodeProcessorImpl {
 
-  /**
-   * Constructs an empty {@link SirenNumericRangeQueryNodeProcessor} object.
-   * Class copied from {@link NumericRangeQueryNodeProcessor} for the SIREn use case.
-   */
   public SirenNumericRangeQueryNodeProcessor() {
-  // empty constructor
   }
   
   @Override

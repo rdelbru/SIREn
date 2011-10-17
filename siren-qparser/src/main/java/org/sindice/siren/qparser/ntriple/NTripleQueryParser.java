@@ -72,7 +72,7 @@ public class NTripleQueryParser {
                                   final Version matchVersion,
                                   final String field,
                                   final Analyzer ntripleAnalyzer,
-                                  final Map<String, Object> datatypeConfig,
+                                  final Map<String, Analyzer> datatypeConfig,
                                   final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     // Parse NTriple and create abstract syntax tree
@@ -101,7 +101,7 @@ public class NTripleQueryParser {
                                   final Version matchVersion,
                                   final Map<String, Float> boosts,
                                   final Analyzer ntripleAnalyzer,
-                                  final Map<String, Map<String, Object>> datatypeConfigs,
+                                  final Map<String, Map<String, Analyzer>> datatypeConfigs,
                                   final DefaultOperatorAttribute.Operator op,
                                   final boolean scattered)
   throws ParseException {
@@ -191,7 +191,7 @@ public class NTripleQueryParser {
   private static Query buildSingleFieldQuery(final Symbol sym,
                                              final Version matchVersion,
                                              final String field,
-                                             final Map<String, Object> datatypeConfig,
+                                             final Map<String, Analyzer> datatypeConfig,
                                              final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, field, datatypeConfig);
@@ -217,7 +217,7 @@ public class NTripleQueryParser {
   private static Query buildMultiFieldQuery(final Symbol sym,
                                             final Version matchVersion,
                                             final Map<String, Float> boosts,
-                                            final Map<String, Map<String, Object>> datatypeConfigs,
+                                            final Map<String, Map<String, Analyzer>> datatypeConfigs,
                                             final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     final BooleanQuery bq = new BooleanQuery(true);
@@ -251,7 +251,7 @@ public class NTripleQueryParser {
   private static Query buildScatteredMultiFieldQuery(final Symbol sym,
                                                      final Version matchVersion,
                                                      final Map<String, Float> boosts,
-                                                     final Map<String, Map<String, Object>> datatypeConfigs,
+                                                     final Map<String, Map<String, Analyzer>> datatypeConfigs,
                                                      final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(matchVersion, boosts, datatypeConfigs);

@@ -52,7 +52,7 @@ import org.sindice.siren.analysis.FloatNumericAnalyzer;
 import org.sindice.siren.analysis.IntNumericAnalyzer;
 import org.sindice.siren.analysis.LongNumericAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
-import org.sindice.siren.analysis.filter.DataTypeAnalyzerFilter;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
 import org.sindice.siren.util.XSDDatatype;
@@ -60,27 +60,34 @@ import org.sindice.siren.util.XSDDatatype;
 public class NTripleTestHelper {
 
   protected static final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
-  
-  protected static final String _defaultField = "explicit_content";
-  protected static final String _implicitField = "implicit_content";
-  protected static final String _ID_FIELD     = "id";
 
-  protected static final Map<String, Object> tokenConfigMap = new HashMap<String, Object>();
+  public static final String _defaultField = "explicit_content";
+  public static final String _implicitField = "implicit_content";
+  public static final String _ID_FIELD     = "id";
+
+  protected static final Map<String, Map<String, Object>> datatypeConfigs = new HashMap<String, Map<String, Object>>();
   static {
-    tokenConfigMap.put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
-    tokenConfigMap.put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
+    datatypeConfigs.put(_defaultField, new HashMap<String, Object>());
+    datatypeConfigs.get(_defaultField).put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
+    datatypeConfigs.get(_defaultField).put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
+    datatypeConfigs.put(_implicitField, new HashMap<String, Object>());
+    datatypeConfigs.get(_implicitField).put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
+    datatypeConfigs.get(_implicitField).put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
   }
-  
-  public static void registerTokenConfig(final String datatype, final Object tc) {
-    if (!tokenConfigMap.containsKey(datatype)) {
-      tokenConfigMap.put(datatype, tc);
+
+  public static void registerTokenConfig(final String field, final String datatype, final Object tc) {
+    if (!datatypeConfigs.containsKey(field)) {
+      datatypeConfigs.put(field, new HashMap<String, Object>());
+    }
+    if (!datatypeConfigs.get(field).containsKey(datatype)) {
+      datatypeConfigs.get(field).put(datatype, tc);
     }
   }
-  
-  public static void unRegisterTokenConfig(final String datatype) {
-    tokenConfigMap.remove(datatype);
+
+  public static void unRegisterTokenConfig(final String field, final String datatype) {
+    datatypeConfigs.get(field).remove(datatype);
   }
-  
+
   /**
    * Create a IndexWriter for a RAMDirectoy
    */
@@ -115,8 +122,9 @@ public class NTripleTestHelper {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
-      final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
-      for (Entry<String, Object> tc : tokenConfigMap.entrySet()) {
+      final DatatypeAnalyzerFilter tt = new DatatypeAnalyzerFilter(matchVersion,
+        result, new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
+      for (final Entry<String, Object> tc : datatypeConfigs.get(fieldName).entrySet()) {
         if (tc.getValue() instanceof NumericConfig) {
           final NumericConfig nc = (NumericConfig) tc.getValue();
           switch (nc.getType()) {
@@ -150,9 +158,10 @@ public class NTripleTestHelper {
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream, new int[] {TupleTokenizer.BNODE,
                                                                                           TupleTokenizer.DOT});
-        final DataTypeAnalyzerFilter tt = new DataTypeAnalyzerFilter(matchVersion, streams.filteredTokenStream ,
+        final DatatypeAnalyzerFilter tt = new DatatypeAnalyzerFilter(matchVersion,
+          streams.filteredTokenStream ,
           new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
-        for (Entry<String, Object> tc : tokenConfigMap.entrySet()) {
+        for (final Entry<String, Object> tc : datatypeConfigs.get(fieldName).entrySet()) {
           if (tc.getValue() instanceof NumericConfig) {
             final NumericConfig nc = (NumericConfig) tc.getValue();
             switch (nc.getType()) {

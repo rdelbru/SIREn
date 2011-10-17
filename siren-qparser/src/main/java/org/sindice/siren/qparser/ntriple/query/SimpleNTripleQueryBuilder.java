@@ -29,16 +29,11 @@ package org.sindice.siren.qparser.ntriple.query;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.core.QueryNodeException;
-import org.apache.lucene.queryParser.core.messages.QueryParserMessages;
-import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.ntriple.DatatypeValue;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
@@ -54,7 +49,6 @@ import org.sindice.siren.qparser.ntriple.query.model.SimpleExpression;
 import org.sindice.siren.qparser.ntriple.query.model.TriplePattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
 import org.sindice.siren.qparser.ntriple.query.model.UnaryClause;
-import org.sindice.siren.qparser.ntriple.query.model.VisitorAdaptor;
 import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
@@ -66,56 +60,28 @@ import org.slf4j.LoggerFactory;
  * The visitor for translating the AST into a Siren NTriple Query.
  * This visitor must traverse the AST with a bottom up approach.
  */
-public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderException.Exception {
+public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
 
   /**
    * Lucene's field to query
    */
   String field;
-  
+
   /**
    * The configuration map between the datatype URI and the {@link Analyzer} or,
    * in the case of a numeric query, the {@link NumericConfig}.
    */
-  private final Map<String, Object> tokenConfigMap;
-  
-  /**
-   * Analyzer used on a {@link LiteralPattern}, in the case of a numeric query.
-   */
-  private final WhitespaceAnalyzer wsAnalyzer;
-  
-  /**
-   * The default operator to use in the inner parsers
-   */
-  DefaultOperatorAttribute.Operator defaultOp         = DefaultOperatorAttribute.Operator.AND;
+  private final Map<String, Object> datatypeConfig;
 
-  /**
-   * Exception handling during building a query
-   */
-  private QueryBuilderException     queryException    = null;
+  private static final
+  Logger logger = LoggerFactory.getLogger(SimpleNTripleQueryBuilder.class);
 
-  private static final Logger logger = LoggerFactory.getLogger(VisitorAdaptor.class);
-
-  public NTripleQueryBuilder(final Version matchVersion,
+  public SimpleNTripleQueryBuilder(final Version matchVersion,
                              final String field,
-                             final Map<String, Object> tokenConfigMap) {
+                             final Map<String, Object> datatypeConfig) {
+    super(matchVersion);
     this.field = field;
-    this.tokenConfigMap = tokenConfigMap;
-    wsAnalyzer = new WhitespaceAnalyzer(matchVersion);
-  }
-
-  public void setDefaultOperator(final DefaultOperatorAttribute.Operator op) {
-    defaultOp = op;
-  }
-
-  @Override
-  public boolean hasError() {
-    return queryException != null && queryException.getError() != Error.NO_ERROR;
-  }
-
-  @Override
-  public String getErrorDescription() {
-    return queryException.toString();
+    this.datatypeConfig = datatypeConfig;
   }
 
   @Override
@@ -245,14 +211,15 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
     final DatatypeValue dtLit = l.getL();
-    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dtLit.getDatatypeURI()));
-    qph.setDefaultOperator(defaultOp);
+
     try {
+      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
+      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
       // Add quotes so that the parser evaluates it as a phrase query
       l.setQuery(qph.parse("\"" + dtLit.getValue() + "\"", field));
     }
-    catch (final QueryNodeException e) {
-      logger.error("Parsing of the LiteralPattern failed", e);
+    catch (final Exception e) {
+      logger.error("Parsing of the Literal failed", e);
       this.createQueryException(e);
     }
   }
@@ -266,24 +233,13 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
     final DatatypeValue dtLit = lp.getLp();
-    final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
-    final ResourceQueryParser qph;
-    
-    if (dt instanceof Analyzer)
-      qph = new ResourceQueryParser((Analyzer) dt);
-    else if (dt instanceof NumericConfig)
-      qph = new ResourceQueryParser(wsAnalyzer, (NumericConfig) dt);
-    else {
-      logger.error("Wrong configuration Object. Recieved unknown Object {}", dt.getClass().getName());
-      this.createQueryException(new QueryNodeException(new MessageImpl(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED)));
-      return;
-    }
 
-    qph.setDefaultOperator(defaultOp);
     try {
+      final Object obj = this.getAnalyzerOrNumericConfig(dtLit.getDatatypeURI());
+      final ResourceQueryParser qph = this.getResourceQueryParser(obj);
       lp.setQuery(qph.parse(dtLit.getValue(), field));
     }
-    catch (final QueryNodeException e) {
+    catch (final Exception e) {
       logger.error("Parsing of the LiteralPattern failed", e);
       this.createQueryException(e);
     }
@@ -297,31 +253,16 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
     final DatatypeValue dtLit = u.getUp();
-    final Object dt = tokenConfigMap.get(dtLit.getDatatypeURI());
-    final ResourceQueryParser qph = new ResourceQueryParser((Analyzer) tokenConfigMap.get(dt));
-    qph.setDefaultOperator(defaultOp);
-    final String uri = NTripleQueryBuilder.escape(dtLit.getValue()); // URI schemes handling
+    final String uri = SimpleNTripleQueryBuilder.escape(dtLit.getValue()); // URI schemes handling
+
     try {
+      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
+      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
       u.setQuery(qph.parse(uri, field));
     }
-    catch (final QueryNodeException e) {
+    catch (final Exception e) {
       logger.error("Parsing of the URIPattern failed", e);
       this.createQueryException(e);
-    }
-  }
-
-  private void createQueryException(final QueryNodeException e) {
-    if (queryException == null) {
-      String message = null;
-      if (e.getCause() != null) {
-        message = e.getCause().getMessage();
-      }
-      else {
-        message = e.getMessage();
-      }
-      queryException = new QueryBuilderException(Error.PARSE_ERROR,
-        "Parsing of the LiteralPattern failed: " + message,
-        e.getStackTrace());
     }
   }
 
@@ -348,6 +289,42 @@ public class NTripleQueryBuilder extends VisitorAdaptor implements QueryBuilderE
       sb.append(c);
     }
     return sb.toString();
+  }
+
+  /**
+   * Get the associated analyzer. If no analyzer exists, then throw an
+   * exception.
+   *
+   * @param datatypeURI The datatype URI associated to this analyzer
+   */
+  private Analyzer getAnalyzer(final String datatypeURI) {
+    if (datatypeConfig.get(datatypeURI) instanceof Analyzer) {
+      final Analyzer analyzer = (Analyzer) datatypeConfig.get(datatypeURI);
+      if (analyzer == null) {
+        throw new QueryBuilderException(Error.PARSE_ERROR,
+          "Field '" + field + ": Unknown datatype " + datatypeURI);
+      }
+      return analyzer;
+    }
+    else {
+      throw new QueryBuilderException(Error.PARSE_ERROR,
+        "Field '" + field + ": Expected TextDatatype but got " + datatypeURI);
+    }
+  }
+
+  /**
+   * Get the associated {@link Analyzer} or {@link NumericConfig}.
+   * If no analyzer or config exists, then throw an exception.
+   *
+   * @param datatypeURI The datatype URI associated to this analyzer
+   */
+  private Object getAnalyzerOrNumericConfig(final String datatypeURI) {
+    if (datatypeConfig.get(datatypeURI) == null) {
+      throw new QueryBuilderException(Error.PARSE_ERROR,
+        "Field '" + field + "': Unknown datatype " + datatypeURI);
+    }
+
+    return datatypeConfig.get(datatypeURI);
   }
 
 }

@@ -39,14 +39,14 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 import org.sindice.siren.qparser.analysis.NTripleQueryTokenizerImpl;
-import org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
+import org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,14 +72,14 @@ public class NTripleQueryParser {
                                   final Version matchVersion,
                                   final String field,
                                   final Analyzer ntripleAnalyzer,
-                                  final Map<String, Object> tokenConfigMap,
+                                  final Map<String, Object> datatypeConfig,
                                   final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     // Parse NTriple and create abstract syntax tree
     final TokenStream tokenStream = prepareTokenStream(qstr, ntripleAnalyzer);
     final Symbol sym = createAST(tokenStream);
     // Translate the AST into query objects
-    return buildSingleFieldQuery(sym, matchVersion, field, tokenConfigMap, op);
+    return buildSingleFieldQuery(sym, matchVersion, field, datatypeConfig, op);
   }
 
   /**
@@ -100,10 +100,10 @@ public class NTripleQueryParser {
   public static final Query parse(final String qstr,
                                   final Version matchVersion,
                                   final Map<String, Float> boosts,
-                                  final boolean scattered,
                                   final Analyzer ntripleAnalyzer,
-                                  final Map<String, Object> tokenConfigMap,
-                                  final DefaultOperatorAttribute.Operator op)
+                                  final Map<String, Map<String, Object>> datatypeConfigs,
+                                  final DefaultOperatorAttribute.Operator op,
+                                  final boolean scattered)
   throws ParseException {
     if (boosts.isEmpty()) {
       throw new ParseException("Cannot parse query: no field specified");
@@ -115,10 +115,10 @@ public class NTripleQueryParser {
 
     // Translate the AST into query objects
     if (scattered) {
-      return buildScatteredMultiFieldQuery(sym, matchVersion, boosts, tokenConfigMap, op);
+      return buildScatteredMultiFieldQuery(sym, matchVersion, boosts, datatypeConfigs, op);
     }
     else {
-      return buildMultiFieldQuery(sym, matchVersion, boosts, tokenConfigMap, op);
+      return buildMultiFieldQuery(sym, matchVersion, boosts, datatypeConfigs, op);
     }
   }
 
@@ -165,7 +165,7 @@ public class NTripleQueryParser {
    * @param translator
    * @throws ParseException
    */
-  private static void queryBuildingError(final NTripleQueryBuilder translator)
+  private static void queryBuildingError(final SimpleNTripleQueryBuilder translator)
   throws ParseException {
     if (translator.hasError()) {
       throw new ParseException(translator.getErrorDescription());
@@ -191,10 +191,10 @@ public class NTripleQueryParser {
   private static Query buildSingleFieldQuery(final Symbol sym,
                                              final Version matchVersion,
                                              final String field,
-                                             final Map<String, Object> tokenConfigMap,
+                                             final Map<String, Object> datatypeConfig,
                                              final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, field, datatypeConfig);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);
@@ -217,12 +217,13 @@ public class NTripleQueryParser {
   private static Query buildMultiFieldQuery(final Symbol sym,
                                             final Version matchVersion,
                                             final Map<String, Float> boosts,
-                                            final Map<String, Object> tokenConfigMap,
+                                            final Map<String, Map<String, Object>> datatypeConfigs,
                                             final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     final BooleanQuery bq = new BooleanQuery(true);
     for (final String field : boosts.keySet()) {
-      final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, field, tokenConfigMap);
+      final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion,
+        field, datatypeConfigs.get(field));
       translator.setDefaultOperator(op);
       final NTripleQuery nq = (NTripleQuery) sym.value;
       nq.traverseBottomUp(translator);
@@ -250,10 +251,10 @@ public class NTripleQueryParser {
   private static Query buildScatteredMultiFieldQuery(final Symbol sym,
                                                      final Version matchVersion,
                                                      final Map<String, Float> boosts,
-                                                     final Map<String, Object> tokenConfigMap,
+                                                     final Map<String, Map<String, Object>> datatypeConfigs,
                                                      final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(matchVersion, boosts, tokenConfigMap);
+    final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(matchVersion, boosts, datatypeConfigs);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);

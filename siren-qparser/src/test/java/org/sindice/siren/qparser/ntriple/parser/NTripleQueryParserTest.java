@@ -42,6 +42,7 @@ import org.apache.lucene.store.LockObtainFailedException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sindice.siren.qparser.analysis.NTripleTestHelper;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericQueryNodeProcessor;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericRangeQueryNodeProcessor;
 
@@ -71,7 +72,7 @@ public class NTripleQueryParserTest {
 
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
   @Test
   public void testLuceneSpecialCharacter()
   throws Exception {
@@ -436,62 +437,62 @@ public class NTripleQueryParserTest {
      */
     ntriple = "<http://stephane> <http://p1> \"literalemen\" .\n";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     // it matches with a default similarity of 0.2
     query = "<http://stephane> * 'literal~0.2'";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     /*
      * Matching within an URI: cannot match because tilde is escaped inside the URI
      */
     query = "<http://stephan~> * 'literalemen'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
   @Test
   public void testPrefixQuery()
   throws Exception {
     final String ntriple = "<http://stephane> <http://p1> \"literaleme\" .\n";
     String query = "<http://stephane> * 'lit*'";
-    
+
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://steph*> * \"literaleme\"";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * \"lita*\"";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
   @Test
   public void testTermRangeQuery()
   throws Exception {
     final String ntriple = "<http://stephane> <http://p1> \"literal laretil\" .\n";
-    
+
     String query = "<http://stephane> * '[bla TO mla]'";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * '[bla TO k]'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
   @Test
   public void testWildcardQuery()
   throws Exception {
     final String ntriple = "<http://stephane.campinas> <http://p1> \"literal laretil\" .\n";
-    
+
     String query = "<http://stephane.campinas> * 'li*al'";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane.campinas> * 'liter?l'";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://st*e.ca*as> * 'literal'";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
     query = "<http://stephane.ca*os> * 'literal'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
   /**
    * Numeric ranges get processed with {@link SirenNumericRangeQueryNodeProcessor}.
    * Single numeric values are processed with {@link SirenNumericQueryNodeProcessor}.
@@ -500,9 +501,11 @@ public class NTripleQueryParserTest {
   @Test
   public void testNumericQuery()
   throws Exception {
-    NTripleQueryParserTestHelper.registerTokenConfig("int4", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
-    NTripleQueryParserTestHelper.registerTokenConfig("float4", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
-    
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
+      "int4", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
+      "float4", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
+
     /*
      * Test for integer
      */
@@ -516,31 +519,31 @@ public class NTripleQueryParserTest {
 
     ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> \"6420\"^^<int4> .\n";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     /*
      * Test for float
      */
     ntriple = "<http://stephane> <http://p1> \"3.42\"^^<float4> .\n";
     query = "<http://stephane> * '[3.3 TO 3.5]'^^<float4>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * '[3.45 TO 3.5]'^^<float4>";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * '3.42'^^<float4>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * '42.42 OR [1 TO 5]'^^<float4>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     query = "<http://stephane> * '42.42 OR [4 TO 50]'^^<float4>";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
-    
+
     /*
      * Test on a value without datatype
      */
     query = "<http://stephane> * '3.42'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
-  
+
 }

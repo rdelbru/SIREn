@@ -50,10 +50,6 @@ import org.sindice.siren.qparser.ntriple.NTripleQueryParser.CupScannerWrapper;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 
-/**
- * @author renaud
- *
- */
 public class NTripleQParserImplTest {
 
   private final String _dsDir = "src/test/resources/dataset/ntriple-parser/";

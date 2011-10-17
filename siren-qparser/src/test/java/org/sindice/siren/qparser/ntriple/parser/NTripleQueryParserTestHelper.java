@@ -56,7 +56,7 @@ import org.slf4j.LoggerFactory;
 public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
   private static final Logger logger = LoggerFactory.getLogger(NTripleTestHelper.class);
-  
+
   public static float getScore(final Map<String, String> ntriples,
                                final Map<String, Float> boosts, final String query,
                                final boolean scattered)
@@ -181,7 +181,7 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
       final Query q = NTripleQueryParser.parse(query, matchVersion, field,
-        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
+        new NTripleQueryAnalyzer(), datatypeConfigs.get(field), Operator.AND);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -197,8 +197,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts, scattered,
-        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
+      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts,
+        new NTripleQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -214,8 +214,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts, scattered,
-        new NTripleQueryAnalyzer(), tokenConfigMap, Operator.AND);
+      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts,
+        new NTripleQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
       logger.debug("{} = {}", query, q.toString());
       final ScoreDoc[] result = ramSearcher.search(q, null, 100).scoreDocs;
       assertEquals(1, result.length);

@@ -77,7 +77,7 @@ public class NTripleQueryBuilderTest {
   public void setUp() throws Exception {}
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
    * Test a TriplePattern composed of 3 URIPattern: s, p, o.
    */
   @Test
@@ -86,7 +86,7 @@ public class NTripleQueryBuilderTest {
       new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")),
       new URIPattern(new DatatypeValue(XSD_ANY_URI, "o")));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -119,7 +119,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
    * Test a TriplePattern composed of 1 URIPattern and 1 literal: p, " literal ".
    */
   @Test
@@ -129,7 +129,7 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
       new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -150,7 +150,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
    * Test a TriplePattern composed of 1 URIPattern and 1 literal: p, " some literal ".
    */
   @Test
@@ -160,7 +160,7 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
       new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new Literal(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -183,7 +183,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.TriplePattern)}.
    * Test a TriplePattern composed of 1 URIPattern and 1 boolean literal pattern: p, "Some (literal OR text) ".
    */
   @Test
@@ -193,7 +193,7 @@ public class NTripleQueryBuilderTest {
     final TriplePattern pattern = new TriplePattern(new Wildcard("*"),
       new URIPattern(new DatatypeValue(XSD_ANY_URI, "p")), new LiteralPattern(dtLit));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     pattern.traverseBottomUp(translator);
     final Query query = pattern.getQuery();
 
@@ -231,7 +231,7 @@ public class NTripleQueryBuilderTest {
   public void testVisitEmptyQuery() {
     final EmptyQuery empty = new EmptyQuery();
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     empty.traverseBottomUp(translator);
     final Query query = empty.getQuery();
     //System.out.println(query.toString());
@@ -240,7 +240,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
    * Test disjunctive binary clause
    */
   @Test
@@ -258,7 +258,7 @@ public class NTripleQueryBuilderTest {
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.OR, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -306,7 +306,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
    * Test conjunctive binary clause
    */
   @Test
@@ -324,7 +324,7 @@ public class NTripleQueryBuilderTest {
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.AND, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -372,7 +372,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
    * Test substractive binary clause
    */
   @Test
@@ -390,7 +390,7 @@ public class NTripleQueryBuilderTest {
 
     final BinaryClause clause = new BinaryClause(lhe, Operator.MINUS, rhe);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     clause.traverseBottomUp(translator);
     final Query query = clause.getQuery();
 
@@ -438,7 +438,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.BinaryClause)}.
    * Test nested binary clause: <p> <o> OR (<s> <p> "some literal" AND <s> <p> <o2>)
    */
   @Test
@@ -463,7 +463,7 @@ public class NTripleQueryBuilderTest {
 
     final NestedClause qclause = new NestedClause(bclause, Operator.OR, rhe2);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     qclause.traverseBottomUp(translator);
     final Query query = qclause.getQuery();
 
@@ -536,7 +536,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
    */
   @Test
   public void testVisitLiteral() {
@@ -544,7 +544,7 @@ public class NTripleQueryBuilderTest {
     final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final Literal literal = new Literal(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -563,7 +563,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
    */
   @Test
   public void testVisitLiteralPattern() {
@@ -571,7 +571,7 @@ public class NTripleQueryBuilderTest {
     final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -590,7 +590,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
    */
   @Test
   public void testVisitLiteralPattern2() {
@@ -598,7 +598,7 @@ public class NTripleQueryBuilderTest {
     final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -622,7 +622,7 @@ public class NTripleQueryBuilderTest {
   }
 
   /**
-   * Test method for {@link org.sindice.siren.qparser.ntriple.query.NTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
+   * Test method for {@link org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder#visit(org.sindice.siren.qparser.ntriple.query.model.Literal)}.
    */
   @Test
   public void testVisitLiteralPattern3() {
@@ -630,7 +630,7 @@ public class NTripleQueryBuilderTest {
     final DatatypeValue dtLit = new DatatypeValue(XSD_STRING, text);
     final LiteralPattern literal = new LiteralPattern(dtLit);
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     literal.traverseBottomUp(translator);
     final Query query = literal.getQuery();
 
@@ -663,7 +663,7 @@ public class NTripleQueryBuilderTest {
     final String text = "aaa://s";
     final URIPattern uri = new URIPattern(new DatatypeValue(XSD_ANY_URI, text));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);
     final Query query = uri.getQuery();
 
@@ -678,7 +678,7 @@ public class NTripleQueryBuilderTest {
     final String text = "aaa://s || http://test";
     final URIPattern uri = new URIPattern(new DatatypeValue(XSD_ANY_URI, text));
 
-    final NTripleQueryBuilder translator = new NTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
+    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, _field, tokenConfigMap);
     uri.traverseBottomUp(translator);
     final Query query = uri.getQuery();
 

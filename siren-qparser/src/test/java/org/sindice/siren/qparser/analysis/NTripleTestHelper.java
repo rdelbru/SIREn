@@ -35,22 +35,19 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
-import org.sindice.siren.analysis.DoubleNumericAnalyzer;
-import org.sindice.siren.analysis.FloatNumericAnalyzer;
-import org.sindice.siren.analysis.IntNumericAnalyzer;
-import org.sindice.siren.analysis.LongNumericAnalyzer;
+import org.sindice.siren.analysis.NumericAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
 import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
@@ -65,19 +62,19 @@ public class NTripleTestHelper {
   public static final String _implicitField = "implicit_content";
   public static final String _ID_FIELD     = "id";
 
-  protected static final Map<String, Map<String, Object>> datatypeConfigs = new HashMap<String, Map<String, Object>>();
+  protected static final Map<String, Map<String, Analyzer>> datatypeConfigs = new HashMap<String, Map<String, Analyzer>>();
   static {
-    datatypeConfigs.put(_defaultField, new HashMap<String, Object>());
+    datatypeConfigs.put(_defaultField, new HashMap<String, Analyzer>());
     datatypeConfigs.get(_defaultField).put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
     datatypeConfigs.get(_defaultField).put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
-    datatypeConfigs.put(_implicitField, new HashMap<String, Object>());
+    datatypeConfigs.put(_implicitField, new HashMap<String, Analyzer>());
     datatypeConfigs.get(_implicitField).put(XSDDatatype.XSD_ANY_URI, new WhitespaceAnalyzer(matchVersion));
     datatypeConfigs.get(_implicitField).put(XSDDatatype.XSD_STRING, new WhitespaceAnalyzer(matchVersion));
   }
 
-  public static void registerTokenConfig(final String field, final String datatype, final Object tc) {
+  public static void registerTokenConfig(final String field, final String datatype, final Analyzer tc) {
     if (!datatypeConfigs.containsKey(field)) {
-      datatypeConfigs.put(field, new HashMap<String, Object>());
+      datatypeConfigs.put(field, new HashMap<String, Analyzer>());
     }
     if (!datatypeConfigs.get(field).containsKey(datatype)) {
       datatypeConfigs.get(field).put(datatype, tc);
@@ -93,7 +90,10 @@ public class NTripleTestHelper {
    */
   public static IndexWriter createRamIndexWriter(final RAMDirectory dir)
   throws CorruptIndexException, LockObtainFailedException, IOException {
-    final IndexWriterConfig config = new IndexWriterConfig(matchVersion, new SimpleTupleAnalyzer());
+    final PerFieldAnalyzerWrapper analyzer = new PerFieldAnalyzerWrapper(new WhitespaceAnalyzer(matchVersion));
+    analyzer.addAnalyzer(_defaultField, new SimpleTupleAnalyzer());
+    analyzer.addAnalyzer(_implicitField, new SimpleTupleAnalyzer());
+    final IndexWriterConfig config = new IndexWriterConfig(matchVersion, analyzer);
     final IndexWriter ramIndexWriter = new IndexWriter(dir, config);
     return ramIndexWriter;
   }
@@ -124,25 +124,9 @@ public class NTripleTestHelper {
                                                                   TupleTokenizer.DOT});
       final DatatypeAnalyzerFilter tt = new DatatypeAnalyzerFilter(matchVersion,
         result, new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
-      for (final Entry<String, Object> tc : datatypeConfigs.get(fieldName).entrySet()) {
-        if (tc.getValue() instanceof NumericConfig) {
-          final NumericConfig nc = (NumericConfig) tc.getValue();
-          switch (nc.getType()) {
-            case INT:
-              tt.register(tc.getKey().toCharArray(), new IntNumericAnalyzer(nc.getPrecisionStep()));
-              break;
-            case DOUBLE:
-              tt.register(tc.getKey().toCharArray(), new DoubleNumericAnalyzer(nc.getPrecisionStep()));
-              break;
-            case FLOAT:
-              tt.register(tc.getKey().toCharArray(), new FloatNumericAnalyzer(nc.getPrecisionStep()));
-              break;
-            case LONG:
-              tt.register(tc.getKey().toCharArray(), new LongNumericAnalyzer(nc.getPrecisionStep()));
-              break;
-            default:
-              break;
-          }
+      for (final Entry<String, Analyzer> tc : datatypeConfigs.get(fieldName).entrySet()) {
+        if (tc.getValue() instanceof NumericAnalyzer) {
+          tt.register(tc.getKey().toCharArray(), tc.getValue());
         }
       }
       result = new SirenPayloadFilter(tt);
@@ -161,25 +145,9 @@ public class NTripleTestHelper {
         final DatatypeAnalyzerFilter tt = new DatatypeAnalyzerFilter(matchVersion,
           streams.filteredTokenStream ,
           new WhitespaceAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
-        for (final Entry<String, Object> tc : datatypeConfigs.get(fieldName).entrySet()) {
-          if (tc.getValue() instanceof NumericConfig) {
-            final NumericConfig nc = (NumericConfig) tc.getValue();
-            switch (nc.getType()) {
-              case INT:
-                tt.register(tc.getKey().toCharArray(), new IntNumericAnalyzer(nc.getPrecisionStep()));
-                break;
-              case DOUBLE:
-                tt.register(tc.getKey().toCharArray(), new DoubleNumericAnalyzer(nc.getPrecisionStep()));
-                break;
-              case FLOAT:
-                tt.register(tc.getKey().toCharArray(), new FloatNumericAnalyzer(nc.getPrecisionStep()));
-                break;
-              case LONG:
-                tt.register(tc.getKey().toCharArray(), new LongNumericAnalyzer(nc.getPrecisionStep()));
-                break;
-              default:
-                break;
-            }
+        for (final Entry<String, Analyzer> tc : datatypeConfigs.get(fieldName).entrySet()) {
+          if (tc.getValue() instanceof NumericAnalyzer) {
+            tt.register(tc.getKey().toCharArray(), tc.getValue());
           }
         }
         streams.filteredTokenStream = new SirenPayloadFilter(tt);

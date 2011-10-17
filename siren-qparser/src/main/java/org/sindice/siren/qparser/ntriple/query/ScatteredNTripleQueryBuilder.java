@@ -31,9 +31,9 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.ntriple.DatatypeValue;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
@@ -72,14 +72,14 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
    * {@link Analyzer} or, in the case of a numeric query, the
    * {@link NumericConfig}.
    */
-  private final Map<String, Map<String, Object>> datatypeConfigs;
+  private final Map<String, Map<String, Analyzer>> datatypeConfigs;
 
   private static final
   Logger logger = LoggerFactory.getLogger(ScatteredNTripleQueryBuilder.class);
 
   public ScatteredNTripleQueryBuilder(final Version matchVersion,
                                       final Map<String, Float> boosts,
-                                      final Map<String, Map<String, Object>> datatypeConfigs) {
+                                      final Map<String, Map<String, Analyzer>> datatypeConfigs) {
     super(matchVersion);
     this.boosts = boosts;
     this.datatypeConfigs = datatypeConfigs;
@@ -262,15 +262,15 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
     final DatatypeValue dtLit = lp.getLp();
 
     try {
-      Object obj;
+      Analyzer analyzer;
       ResourceQueryParser qph;
 
       if (lp.getQueries() == null) {
         lp.setQueries(new HashMap<String, Query>());
       }
       for (final String fieldName : boosts.keySet()) {
-        obj = this.getAnalyzerOrNumericConfig(fieldName, dtLit.getDatatypeURI());
-        qph = this.getResourceQueryParser(obj);
+        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
+        qph = this.getResourceQueryParser(analyzer);
         lp.getQueries().put(fieldName, qph.parse(dtLit.getValue(), fieldName));
       }
     }
@@ -332,30 +332,6 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
       throw new QueryBuilderException(Error.PARSE_ERROR,
         "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
     }
-
-    if (datatypeConfigs.get(fieldName).get(datatypeURI) instanceof Analyzer) {
-      return (Analyzer) datatypeConfigs.get(fieldName).get(datatypeURI);
-    }
-    else {
-      throw new QueryBuilderException(Error.PARSE_ERROR,
-        "Field '" + fieldName + "': Expected TextDatatype but got " + datatypeURI);
-    }
-  }
-
-  /**
-   * Get the associated {@link Analyzer} or {@link NumericConfig}.
-   * If no analyzer or config exists, then throw an exception.
-   *
-   * @param fieldName The field name associated to this analyzer
-   * @param datatypeURI The datatype URI associated to this analyzer
-   * @return
-   */
-  private Object getAnalyzerOrNumericConfig(final String fieldName, final String datatypeURI) {
-    if (datatypeConfigs.get(fieldName).get(datatypeURI) == null) {
-      throw new QueryBuilderException(Error.PARSE_ERROR,
-        "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
-    }
-
     return datatypeConfigs.get(fieldName).get(datatypeURI);
   }
 

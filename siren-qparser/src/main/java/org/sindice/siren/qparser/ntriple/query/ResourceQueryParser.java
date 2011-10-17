@@ -27,18 +27,27 @@
 package org.sindice.siren.qparser.ntriple.query;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.queryParser.core.config.ConfigurationKey;
 import org.apache.lucene.queryParser.standard.StandardQueryParser;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
-import org.apache.lucene.queryParser.standard.config.StandardQueryConfigHandler.ConfigurationKeys;
+import org.sindice.siren.analysis.NumericAnalyzer;
 import org.sindice.siren.qparser.ntriple.query.builders.ResourceQueryTreeBuilder;
 import org.sindice.siren.qparser.ntriple.query.processors.ResourceQueryNodeProcessorPipeline;
 
 public class ResourceQueryParser extends StandardQueryParser {
 
+  final public static class SirenConfigurationKeys {
+    
+    /**
+     * Key used to set a token to its numeric datatype.
+     */
+    final public static ConfigurationKey<NumericAnalyzer> NUMERIC_ANALYZERS = ConfigurationKey.newInstance();
+    
+  }
+  
   /**
    * Constructs a {@link ResourceQueryParser} object. The same as:
    * <ul>
-   * StandardQueryParser qph = new StandardQueryParser(literalAnalyzer);
+   * StandardQueryParser qph = new StandardQueryParser();
    * qph.setQueryBuilder(new ResourceQueryTreeBuilder());
    * qph.setQueryNodeProcessor(new ResourceQueryNodeProcessorPipeline(qph.getQueryConfigHandler()));
    * <ul>
@@ -66,9 +75,21 @@ public class ResourceQueryParser extends StandardQueryParser {
     this.setAnalyzer(analyzer);
   }
   
-  public ResourceQueryParser(final Analyzer analyzer, final NumericConfig nc) {
+  /**
+   * Constructs a {@link ResourceQueryParser} object and sets a NumericAnalyzer
+   * that will be used to parse numeric queries. The same as:
+   *
+   * <ul>
+   * ResourceQueryParser qp = new ResourceQueryParser(analyzer);
+   * qp.getQueryConfigHandler().set();
+   * </ul>
+   * 
+   * @param analyzer
+   * @param na
+   */
+  public ResourceQueryParser(final Analyzer analyzer, final NumericAnalyzer na) {
     this(analyzer);
-    this.getQueryConfigHandler().set(ConfigurationKeys.NUMERIC_CONFIG, nc);
+    this.getQueryConfigHandler().set(SirenConfigurationKeys.NUMERIC_ANALYZERS, na);
   }
 
 }

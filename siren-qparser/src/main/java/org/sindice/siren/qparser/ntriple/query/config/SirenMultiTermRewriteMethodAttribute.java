@@ -26,11 +26,13 @@
 package org.sindice.siren.qparser.ntriple.query.config;
 
 import org.apache.lucene.queryParser.standard.config.MultiTermRewriteMethodAttribute;
+import org.apache.lucene.search.MultiTermQuery;
 import org.apache.lucene.util.Attribute;
 import org.sindice.siren.search.SirenMultiTermQuery;
 
 /**
- * Copied from {@link MultiTermRewriteMethodAttribute} for the SIren use case
+ * Copied from {@link MultiTermRewriteMethodAttribute} for the SIren use case:
+ * it uses the {@link SirenMultiTermQuery} instead of {@link MultiTermQuery}.
  */
 public interface SirenMultiTermRewriteMethodAttribute extends Attribute {
 

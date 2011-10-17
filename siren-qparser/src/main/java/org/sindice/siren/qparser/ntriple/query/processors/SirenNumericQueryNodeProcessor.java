@@ -25,8 +25,8 @@
  */
 package org.sindice.siren.qparser.ntriple.query.processors;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.List;
 
 import org.apache.lucene.messages.MessageImpl;
@@ -38,11 +38,12 @@ import org.apache.lucene.queryParser.core.nodes.FieldQueryNode;
 import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
-import org.apache.lucene.queryParser.standard.config.StandardQueryConfigHandler.ConfigurationKeys;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
-import org.apache.lucene.queryParser.standard.nodes.NumericRangeQueryNode;
 import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcessor;
+import org.sindice.siren.analysis.NumericAnalyzer;
+import org.sindice.siren.qparser.ntriple.query.ResourceQueryParser.SirenConfigurationKeys;
+import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
+import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 /**
  * Copied from {@link NumericQueryNodeProcessor} for the Siren use case.
@@ -50,7 +51,7 @@ import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcess
  * query.
  */
 public class SirenNumericQueryNodeProcessor extends QueryNodeProcessorImpl {
-
+  
   /**
    * Constructs a {@link SirenNumericQueryNodeProcessor} object.
    */
@@ -66,44 +67,41 @@ public class SirenNumericQueryNodeProcessor extends QueryNodeProcessorImpl {
       FieldQueryNode fieldNode = (FieldQueryNode) node;
       QueryConfigHandler config = getQueryConfigHandler();
 
-      NumericConfig numericConfig = config.get(ConfigurationKeys.NUMERIC_CONFIG);
+      final NumericAnalyzer na = config.get(SirenConfigurationKeys.NUMERIC_ANALYZERS);
       
-      if (numericConfig != null) {
-
-        NumberFormat numberFormat = numericConfig.getNumberFormat();
-        Number number;
-        
+      if (na != null) {
+        final Number number;        
+        final StringReader textReader = new StringReader(fieldNode.getTextAsString());
         try {
-          number = numberFormat.parse(fieldNode.getTextAsString());
-          
-        } catch (ParseException e) {
+          switch (na.getNumericType()) {
+            case LONG:
+              number = XSDPrimitiveTypeParser.parseLong(textReader);
+              break;
+            case INT:
+              number = XSDPrimitiveTypeParser.parseInt(textReader);
+              break;
+            case DOUBLE:
+              number = XSDPrimitiveTypeParser.parseDouble(textReader);
+              break;
+            case FLOAT:
+              number = XSDPrimitiveTypeParser.parseFloat(textReader);
+              break;
+            default:
+              throw new QueryNodeParseException(new MessageImpl(
+                QueryParserMessages.UNSUPPORTED_NUMERIC_DATA_TYPE, na.getNumericType()));
+          }          
+        } catch (NumberFormatException e) {
           throw new QueryNodeParseException(new MessageImpl(
-              QueryParserMessages.COULD_NOT_PARSE_NUMBER, fieldNode
-                  .getTextAsString(), numberFormat.getClass()
-                  .getCanonicalName()), e);
+            QueryParserMessages.COULD_NOT_PARSE_NUMBER, fieldNode.getTextAsString()), e);
+        } catch (IOException e) {
+          throw new QueryNodeParseException(new MessageImpl(
+            QueryParserMessages.COULD_NOT_PARSE_NUMBER, fieldNode.getTextAsString()), e);
         }
         
-        switch (numericConfig.getType()) {
-          case LONG:
-            number = number.longValue();
-            break;
-          case INT:
-            number = number.intValue();
-            break;
-          case DOUBLE:
-            number = number.doubleValue();
-            break;
-          case FLOAT:
-            number = number.floatValue();
-        }
+        NumericQueryNode lowerNode = new NumericQueryNode(fieldNode.getField(), number, null);
+        NumericQueryNode upperNode = new NumericQueryNode(fieldNode.getField(), number, null);
         
-        NumericQueryNode lowerNode = new NumericQueryNode(fieldNode
-            .getField(), number, numberFormat);
-        NumericQueryNode upperNode = new NumericQueryNode(fieldNode
-            .getField(), number, numberFormat);
-        
-        return new NumericRangeQueryNode(lowerNode, upperNode, true, true,
-            numericConfig);
+        return new SirenNumericRangeQueryNode(lowerNode, upperNode, true, true, na);
       }
       
     }

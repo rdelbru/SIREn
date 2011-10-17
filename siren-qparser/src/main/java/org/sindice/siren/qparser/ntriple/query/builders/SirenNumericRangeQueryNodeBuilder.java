@@ -18,37 +18,42 @@
  */
 package org.sindice.siren.qparser.ntriple.query.builders;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.NumericField;
 import org.apache.lucene.messages.MessageImpl;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.messages.QueryParserMessages;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.util.StringUtils;
+import org.apache.lucene.queryParser.standard.builders.NumericRangeQueryNodeBuilder;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
-import org.apache.lucene.queryParser.standard.nodes.NumericRangeQueryNode;
+import org.sindice.siren.analysis.NumericAnalyzer;
+import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.search.SirenNumericRangeQuery;
 
 /**
- * 
+ * Class copied from {@link NumericRangeQueryNodeBuilder} for the Siren use case:
+ * in Siren, we use an {@link Analyzer} instead of a {@link NumericConfig}
+ * configuration object.
  */
-public class NumericRangeQueryNodeBuilder implements ResourceQueryBuilder {
+public class SirenNumericRangeQueryNodeBuilder implements ResourceQueryBuilder {
 
   /**
-   * Constructs a {@link NumericRangeQueryNodeBuilder} object.
+   * Constructs a {@link SirenNumericRangeQueryNodeBuilder} object.
    */
-  public NumericRangeQueryNodeBuilder() {
+  public SirenNumericRangeQueryNodeBuilder() {
     // empty constructor
   }
 
   public SirenNumericRangeQuery<? extends Number> build(QueryNode queryNode)
   throws QueryNodeException {
-    NumericRangeQueryNode numericRangeNode = (NumericRangeQueryNode) queryNode;
+    SirenNumericRangeQueryNode numericRangeNode = (SirenNumericRangeQueryNode) queryNode;
 
     NumericQueryNode lowerNumericNode = numericRangeNode.getLowerBound();
     NumericQueryNode upperNumericNode = numericRangeNode.getUpperBound();
 
-    Number lowerNumber, upperNumber;
+    final Number lowerNumber, upperNumber;
 
     if (lowerNumericNode != null) {
       lowerNumber = lowerNumericNode.getValue();
@@ -64,12 +69,12 @@ public class NumericRangeQueryNodeBuilder implements ResourceQueryBuilder {
       upperNumber = null;
     }
 
-    NumericConfig numericConfig = numericRangeNode.getNumericConfig();
-    NumericField.DataType numberType = numericConfig.getType();
+    NumericAnalyzer numericAnalyzer = numericRangeNode.getNumericAnalyzer();
+    NumericField.DataType numberType = numericAnalyzer.getNumericType();
     String field = StringUtils.toString(numericRangeNode.getField());
     boolean minInclusive = numericRangeNode.isLowerInclusive();
     boolean maxInclusive = numericRangeNode.isUpperInclusive();
-    int precisionStep = numericConfig.getPrecisionStep();
+    int precisionStep = numericAnalyzer.getPrecisionStep();
 
     switch (numberType) {
 

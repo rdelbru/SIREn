@@ -36,13 +36,13 @@ import org.apache.lucene.queryParser.core.nodes.TokenizedPhraseQueryNode;
 import org.apache.lucene.queryParser.standard.builders.DummyQueryNodeBuilder;
 import org.apache.lucene.queryParser.standard.nodes.MultiPhraseQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
-import org.apache.lucene.queryParser.standard.nodes.NumericRangeQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.PrefixWildcardQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.RangeQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.StandardBooleanQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
 import org.apache.lucene.queryParser.standard.processors.StandardQueryNodeProcessorPipeline;
 import org.apache.lucene.search.Query;
+import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
 
 /**
  * This query tree builder only defines the necessary map to build a
@@ -71,7 +71,7 @@ public class ResourceQueryTreeBuilder extends QueryTreeBuilder implements Resour
     setBuilder(StandardBooleanQueryNode.class, new StandardBooleanQueryNodeBuilder());
     setBuilder(MultiPhraseQueryNode.class, new MultiPhraseQueryNodeBuilder());
     setBuilder(MatchAllDocsQueryNode.class, new MatchAllDocsQueryNodeBuilder());
-    setBuilder(NumericRangeQueryNode.class, new NumericRangeQueryNodeBuilder());
+    setBuilder(SirenNumericRangeQueryNode.class, new SirenNumericRangeQueryNodeBuilder());
     setBuilder(NumericQueryNode.class, new DummyQueryNodeBuilder());
   }
 

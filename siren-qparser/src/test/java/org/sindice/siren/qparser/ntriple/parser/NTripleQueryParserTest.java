@@ -30,18 +30,17 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sindice.siren.analysis.FloatNumericAnalyzer;
+import org.sindice.siren.analysis.IntNumericAnalyzer;
 import org.sindice.siren.qparser.analysis.NTripleTestHelper;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericQueryNodeProcessor;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericRangeQueryNodeProcessor;
@@ -347,30 +346,30 @@ public class NTripleQueryParserTest {
   public void testNTripleMultiFieldQuery()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final Map<String, Float> boosts = new HashMap<String, Float>();
-    boosts.put("explicit", 1.0f);
-    boosts.put("implicit", 1.0f);
+    boosts.put(NTripleTestHelper._defaultField, 1.0f);
+    boosts.put(NTripleTestHelper._implicitField, 1.0f);
 
     Map<String, String> ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n");
-    ntriples.put("implicit", "<http://s> <http://p2> <http://o> .\n");
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o> .\n");
     final String query = "<http://s> * 'literal' AND\r\n * <http://p2> \n\r \n <http://o>";
 
     // Should not match, no field content is matching the two triple patterns
     assertFalse(NTripleQueryParserTestHelper.match(ntriples, boosts, query, false));
 
     ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n" +
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n" +
     		"<http://s> <http://p2> <http://o> .\n");
-    ntriples.put("implicit", "<http://s> <http://p1> \"literal\" .\n" +
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p1> \"literal\" .\n" +
     		"<http://s> <http://p2> <http://o> .\n");
 
     // Should match, the two field content are matching the two triple patterns
     assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, false));
 
     ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n" +
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n" +
         "<http://s> <http://p2> <http://o> .\n");
-    ntriples.put("implicit", "<http://s> <http://p2> <http://o> .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o> .\n");
 
     // Should match, one of the field content is matching the two triple patterns
     assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, false));
@@ -380,40 +379,93 @@ public class NTripleQueryParserTest {
   public void testScatteredNTripleMultiFieldQuery()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final Map<String, Float> boosts = new HashMap<String, Float>();
-    boosts.put("explicit", 1.0f);
-    boosts.put("implicit", 1.0f);
+    boosts.put(NTripleTestHelper._defaultField, 1.0f);
+    boosts.put(NTripleTestHelper._implicitField, 1.0f);
     Map<String, String> ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n");
-    ntriples.put("implicit", "<http://s> <http://p2> <http://o> .\n");
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o> .\n");
     final String query = "<http://s> * 'literal' AND\r\n * <http://p2> \n\r \n <http://o>";
 
     // Should match, the two field content are matching either one of the two triple patterns
     assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, true));
 
     ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n");
-    ntriples.put("implicit", "<http://s> <http://p2> <http://o2> .\n");
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o2> .\n");
 
     // Should not match, only the first field content is matching one triple pattern
     assertFalse(NTripleQueryParserTestHelper.match(ntriples, boosts, query, true));
+  }
+  
+  /**
+   * Test different datatype per field
+   * 
+   * @throws CorruptIndexException
+   * @throws LockObtainFailedException
+   * @throws IOException
+   * @throws ParseException
+   */
+  @Test
+  public void testScatteredNTripleMultiFieldQuery2()
+  throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
+      "number", new IntNumericAnalyzer(4));
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._implicitField,
+      "number", new FloatNumericAnalyzer(4));
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
+      "mynumber", new FloatNumericAnalyzer(4));
+    
+    final Map<String, Float> boosts = new HashMap<String, Float>();
+    boosts.put(NTripleTestHelper._defaultField, 1.0f);
+    boosts.put(NTripleTestHelper._implicitField, 1.0f);
+    Map<String, String> ntriples = new HashMap<String, String>();
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"42\"^^<number> .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> \"14.2\"^^<number> .\n");
+    String query = "<http://s> * '[1 TO 100]'^^<number> AND\r\n * <http://p2> \n\r \n '[13.5 TO 15.5]'^^<number>";
+
+    assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, true));
+
+    boolean fail = false;
+    
+    // mynumber datatype is not registered in the implicit field
+    query = "<http://s> * '[1 TO 100]'^^<number> AND\r\n <http://s> * \n\r \n '[13.5 TO 15.5]'^^<mynumber>";
+    try {
+      NTripleQueryParserTestHelper.match(ntriples, boosts, query, true);      
+    } catch (ParseException e) {
+      fail = true;
+    }
+    assertTrue(fail);
+
+    // mynumber datatype is not registered in the default field
+    fail = false;
+    NTripleQueryParserTestHelper.unRegisterTokenConfig(NTripleTestHelper._defaultField, "mynumber");
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._implicitField,
+      "mynumber", new IntNumericAnalyzer(4));
+    query = "<http://s> * '[1 TO 100]'^^<mynumber> AND\r\n <http://s> * \n\r \n '[13.5 TO 15.5]'^^<number>";
+    try {
+      NTripleQueryParserTestHelper.match(ntriples, boosts, query, true);      
+    } catch (ParseException e) {
+      fail = true;
+    }
+    assertTrue(fail);
   }
 
   @Test
   public void testScatteredNTripleMultiFieldQueryScore()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     Map<String, Float> boosts = new HashMap<String, Float>();
-    boosts.put("explicit", 1.0f);
-    boosts.put("implicit", 1.0f);
+    boosts.put(NTripleTestHelper._defaultField, 1.0f);
+    boosts.put(NTripleTestHelper._implicitField, 1.0f);
     final Map<String, String> ntriples = new HashMap<String, String>();
-    ntriples.put("explicit", "<http://s> <http://p1> \"literal\" .\n");
-    ntriples.put("implicit", "<http://s> <http://p2> <http://o> .\n");
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o> .\n");
     final String query = "<http://s> * 'literal' AND\r\n * <http://p2> \n\r \n <http://o>";
 
     final float score1 = NTripleQueryParserTestHelper.getScore(ntriples, boosts, query, true);
 
     boosts = new HashMap<String, Float>();
-    boosts.put("explicit", 1.0f);
-    boosts.put("implicit", 0.6f);
+    boosts.put(NTripleTestHelper._defaultField, 1.0f);
+    boosts.put(NTripleTestHelper._implicitField, 0.6f);
     final float score2 = NTripleQueryParserTestHelper.getScore(ntriples, boosts, query, true);
 
     assertTrue(score1 > score2);
@@ -502,9 +554,9 @@ public class NTripleQueryParserTest {
   public void testNumericQuery()
   throws Exception {
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
-      "int4", new NumericConfig(4, NumberFormat.getInstance(), DataType.INT));
+      "int4", new IntNumericAnalyzer(4));
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
-      "float4", new NumericConfig(4, NumberFormat.getInstance(), DataType.FLOAT));
+      "float4", new FloatNumericAnalyzer(4));
 
     /*
      * Test for integer
@@ -537,6 +589,11 @@ public class NTripleQueryParserTest {
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
 
     query = "<http://stephane> * '42.42 OR [4 TO 50]'^^<float4>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    // cannot match, the value was indexed using a float
+    ntriple = "<http://stephane> <http://p1> \"5\"^^<float4> .\n";
+    query = "<http://stephane> * '[2 TO 20]'^^<int4>";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
 
     /*

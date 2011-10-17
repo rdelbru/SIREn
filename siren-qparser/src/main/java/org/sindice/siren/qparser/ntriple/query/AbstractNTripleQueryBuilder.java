@@ -29,8 +29,8 @@ package org.sindice.siren.qparser.ntriple.query;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.NumericAnalyzer;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
 import org.sindice.siren.qparser.ntriple.query.model.VisitorAdaptor;
@@ -99,14 +99,13 @@ public abstract class AbstractNTripleQueryBuilder extends VisitorAdaptor {
    * Instantiate a {@link ResourceQueryParser} depending on the object type.
    * Then, set the default operator.
    */
-  protected ResourceQueryParser getResourceQueryParser(final Object obj) {
-    ResourceQueryParser qph;
-    if (obj instanceof Analyzer) {
-      qph = new ResourceQueryParser((Analyzer) obj);
-    }
-    else {
-      qph = new ResourceQueryParser(wsAnalyzer, (NumericConfig) obj);
-    }
+  protected ResourceQueryParser getResourceQueryParser(final Analyzer analyzer) {
+    final ResourceQueryParser qph;
+    
+    if (analyzer instanceof NumericAnalyzer)
+      qph = new ResourceQueryParser(wsAnalyzer, (NumericAnalyzer) analyzer);
+    else
+      qph = new ResourceQueryParser(analyzer);
     qph.setDefaultOperator(defaultOp);
     return qph;
   }

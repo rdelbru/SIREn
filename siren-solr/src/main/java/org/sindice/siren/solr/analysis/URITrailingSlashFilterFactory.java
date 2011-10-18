@@ -35,22 +35,15 @@ import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
 public class URITrailingSlashFilterFactory
 extends BaseTokenFilterFactory {
 
-  public static final String CHECKTYPE_KEY = "checkTokenType";
-
-  private boolean checkType = true;
-
   @Override
   public void init(final Map<String,String> args) {
    super.init(args);
    this.assureMatchVersion();
-   final String check = args.get(CHECKTYPE_KEY);
-   checkType = (check != null ? Boolean.parseBoolean(check) : URITrailingSlashFilter.DEFAULT_CHECKTYPE);
   }
 
   @Override
   public TokenStream create(final TokenStream input) {
     final URITrailingSlashFilter filter = new URITrailingSlashFilter(input);
-    filter.setCheckTokenType(checkType);
     return filter;
   }
 

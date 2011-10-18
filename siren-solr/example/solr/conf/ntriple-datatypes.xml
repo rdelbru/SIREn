@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  
+ This is the SIREn/Solr datatype analyzer configuration file. This file should 
+ be referenced by a SIREn FieldType in the "schema.xml" and should be in the 
+ conf directory under the solr home (i.e. ./solr/conf/ by default) 
+ or located where the classloader for the Solr webapp can find it.
+
+ This example datatype analyzer configuration file is the recommended starting 
+ point for users. It should be kept correct and concise, usable out-of-the-box.
+ 
+ There are two 'default' datatypes:
+ - http://www.w3.org/2001/XMLSchema#anyURI
+ - http://www.w3.org/2001/XMLSchema#string
+ The first one is applied on any URIs in your data. The second one is applied
+ on any literals which does not have a datatype. 
+ 
+ If the datatype associated with a literal is not found in this configuration
+ file, the literal will be not tokenised.  
+-->
+<datatypeConfig name="example" version="0.2.2">
+	
+  <!--
+    The datatype for URIs
+  -->
+  <datatype name="http://www.w3.org/2001/XMLSchema#anyURI" class="org.sindice.siren.solr.schema.TextDatatype">
+    <analyzer type="index">
+      <!-- whitespace tokenizer to not tokenize URI -->   
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+			
+      <!-- Decode URIs. -->
+      <filter class="org.sindice.siren.solr.analysis.URIEncodingFilterFactory"/>			
+  
+      <!-- Remove trailing slash of URIs. -->       
+      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+      
+      <!-- Extract and tokenise localname of URIs.
+      Add maxLength=n to not tokenise localname with more than n
+      characters. By default, maxLength=64. -->
+      <filter class="org.sindice.siren.solr.analysis.URILocalnameFilterFactory"/>
+      
+      <!-- Tokenize mailto URI -->
+      <filter class="org.sindice.siren.solr.analysis.MailtoFilterFactory"/>
+			
+      <!-- Filters out those tokens *not* having length min through max 
+           inclusive. -->
+      <filter class="solr.LengthFilterFactory" min="2" max="256"/>
+      
+      <!-- Change to lowercase text -->
+      <filter class="solr.LowerCaseFilterFactory"/>
+      
+      <!-- Case insensitive stop word removal.
+          add enablePositionIncrements=true in both the index and query
+          analyzers to leave a 'gap' for more accurate phrase queries. -->
+      <filter class="solr.StopFilterFactory"
+              ignoreCase="true"
+              words="stopwords.txt"
+              enablePositionIncrements="true"
+              />
+    </analyzer>
+    <analyzer type="query">
+      <!-- whitespace tokenizer to not tokenize URI -->   
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+  
+      <!-- Remove trailing slash of URIs. -->       
+      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+  		
+      <!-- Filters out those tokens *not* having length min through max 
+           inclusive. -->
+      <filter class="solr.LengthFilterFactory" min="2" max="256"/>
+      
+      <!-- Change to lowercase text -->
+      <filter class="solr.LowerCaseFilterFactory"/>
+      
+      <!-- Case insensitive stop word removal.
+          add enablePositionIncrements=true in both the index and query
+          analyzers to leave a 'gap' for more accurate phrase queries. -->
+      <filter class="solr.StopFilterFactory"
+              ignoreCase="true"
+              words="stopwords.txt"
+              enablePositionIncrements="true"
+              />
+
+      <!-- Replace Qnames by their name spaces in URIs. -->
+      <filter class="org.sindice.siren.solr.analysis.QNamesFilterFactory" 
+              qnames="qnames.txt"/>
+    </analyzer>
+  </datatype>
+  
+  <!--
+    The default datatype for literals
+  -->
+  <datatype name="http://www.w3.org/2001/XMLSchema#string" class="org.sindice.siren.solr.schema.TextDatatype">
+    <analyzer type="index">
+      <tokenizer class="solr.UAX29URLEmailTokenizerFactory"/>
+      
+      <!-- Filters out those tokens *not* having length min through max 
+           inclusive. -->
+      <filter class="solr.LengthFilterFactory" min="2" max="256"/>
+      
+      <filter class="solr.LowerCaseFilterFactory"/>
+
+      <!-- Filter that expands accented tokens with a non-accented form. 
+           Before the stop filter, in case a non-accented form is located
+           in the stop list. -->
+      <filter class="org.sindice.siren.solr.analysis.ASCIIFoldingExpansionFilterFactory"/>
+      
+      <filter class="solr.StopFilterFactory"
+              ignoreCase="true"
+              words="stopwords.txt"
+              enablePositionIncrements="true"
+              />
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      
+      <!-- Filters out those tokens *not* having length min through max 
+           inclusive. -->
+      <filter class="solr.LengthFilterFactory" min="2" max="256"/>
+      
+      <filter class="solr.LowerCaseFilterFactory"/>
+  
+      <!-- Filter that expands accented tokens with a non-accented form. 
+           Before the stop filter, in case a non-accented form is located
+           in the stop list. -->
+      <filter class="org.sindice.siren.solr.analysis.ASCIIFoldingExpansionFilterFactory"/>
+      
+      <filter class="solr.StopFilterFactory"
+              ignoreCase="true"
+              words="stopwords.txt"
+              enablePositionIncremets="true"
+              />
+    </analyzer>
+  </datatype>
+
+  <!--
+    Numeric datatype that indexes an integer literal at various levels of precision
+    to accelerate range queries when the number of values between the range
+    endpoints is large. See the javadoc for SirenNumericRangeQuery for details.
+  
+    Smaller precisionStep values (specified in bits) will lead to more tokens
+    indexed per value, slightly larger index size, and faster range queries.
+    A precisionStep of 0 disables indexing at different precision levels.
+  -->
+  <datatype name="xsd:int" class="org.sindice.siren.solr.schema.TrieDatatype"
+                           precisionStep="8"
+                           type="int"/>
+                           
+  <!--
+    Numeric datatype that indexes an long literal.
+  -->
+  <datatype name="xsd:long" class="org.sindice.siren.solr.schema.TrieDatatype"
+                            precisionStep="8"
+                            type="long"/>
+                           
+  <!--
+    Numeric datatype that indexes an float literal.
+  -->
+  <datatype name="xsd:float" class="org.sindice.siren.solr.schema.TrieDatatype"
+                             precisionStep="8"
+                             type="float"/>
+                             
+  <!--
+    Numeric datatype that indexes an float literal.
+  -->
+  <datatype name="xsd:double" class="org.sindice.siren.solr.schema.TrieDatatype"
+                              precisionStep="8"
+                              type="double"/>
+
+</datatypeConfig>

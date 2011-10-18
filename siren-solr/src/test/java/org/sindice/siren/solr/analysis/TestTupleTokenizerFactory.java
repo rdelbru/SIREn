@@ -54,7 +54,7 @@ public class TestTupleTokenizerFactory extends BaseSirenStreamTestCase {
     factory.init(args);
     final Tokenizer stream = factory.create(reader);
     this.assertTokenStreamContents(stream,
-        new String[] {"ooo", "aaa", "uuu", "en", ".", "aaa", "bn1", "." });
+        new String[] {"ooo aaa uuu", ".", "aaa", "bn1", "." });
   }
 
   @Test
@@ -64,7 +64,7 @@ public class TestTupleTokenizerFactory extends BaseSirenStreamTestCase {
     final TupleTokenizerFactory factory = new TupleTokenizerFactory();
     factory.init(args);
 
-    final Reader reader = new StringReader("\"ooo aaa uuu iii eee\"@en .");
+    final Reader reader = new StringReader("\"ooo\" \"aaa\" \"uuu\" \"iii\" \"eee\" .");
     final Tokenizer stream = factory.create(reader);
     this.assertTokenStreamContents(stream,
         new String[] {"ooo", "aaa", "uuu" });
@@ -79,7 +79,7 @@ public class TestTupleTokenizerFactory extends BaseSirenStreamTestCase {
     final Tokenizer stream = factory.create(reader);
     // literal Möller is expanded in two forms: accented and non-accented
     this.assertTokenStreamContents(stream,
-        new String[] {"http://test.com/Möller", "moller", "möller", "."});
+        new String[] {"http://test.com/Möller", "Möller", "."});
   }
 
   @Test
@@ -91,7 +91,7 @@ public class TestTupleTokenizerFactory extends BaseSirenStreamTestCase {
     final Tokenizer stream = factory.create(reader);
     // literal Möller is expanded in two forms: accented and non-accented
     this.assertTokenStreamContents(stream,
-        new String[] {"http://test.com/Möller", "moller", "möller", "."});
+        new String[] {"http://test.com/Möller", "Möller", "."});
   }
 
 }

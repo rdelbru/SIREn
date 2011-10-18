@@ -19,47 +19,46 @@
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @project siren
- * @author Renaud Delbru [ 25 Jul 2010 ]
+ * @project siren-solr
+ * @author Renaud Delbru [ 15 Oct 2011 ]
  * @link http://renaud.delbru.fr/
- * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
 package org.sindice.siren.solr.analysis;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.solr.analysis.BaseTokenFilterFactory;
-import org.sindice.siren.analysis.TupleTokenizer;
-import org.sindice.siren.analysis.filter.TokenTypeFilter;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
-public class TokenTypeFilterFactory
+public class DatatypeAnalyzerFilterFactory
 extends BaseTokenFilterFactory {
 
-  public static final String BNODE_KEY = "bnode";
-  public static final String DOT_KEY = "dot";
+  private final Map<String, Analyzer> analyzers;
 
-  private int[] tokenTypes;
+  public DatatypeAnalyzerFilterFactory() {
+    analyzers = new HashMap<String, Analyzer>();
+  }
 
-  @Override
-  public void init(final Map<String, String> args) {
-    super.init(args);
-    final int[] buffer = new int[4];
-    int offset = 0;
+  public Map<String, Analyzer> getDatatypeAnalyzers() {
+    return analyzers;
+  }
 
-    if (this.getInt(BNODE_KEY, 1) == 1) {
-      buffer[offset++] = TupleTokenizer.BNODE;
-    }
-    if (this.getInt(DOT_KEY, 1) == 1) {
-      buffer[offset++] = TupleTokenizer.DOT;
-    }
-    tokenTypes = Arrays.copyOf(buffer, offset);
+  public void register(final String datatype, final Analyzer analyzer) {
+    analyzers.put(datatype, analyzer);
   }
 
   @Override
   public TokenStream create(final TokenStream input) {
-    return new TokenTypeFilter(input, tokenTypes);
+    final DatatypeAnalyzerFilter f = new DatatypeAnalyzerFilter(luceneMatchVersion, input);
+
+    for (final String datatype : analyzers.keySet()) {
+      f.register(datatype.toCharArray(), analyzers.get(datatype));
+    }
+
+    return f;
   }
 
 }

@@ -27,9 +27,5 @@ example
 
 This file was written by Renaud Delbru <renaud.delbru@deri.org> for SIREn.
 
-Copyright (c) 2010, 2011
-Renaud Delbru,
-Digital Enterprise Research Institute,
-National University of Ireland, Galway.
-All rights reserved.
+Copyright (c) 2009-2011 Sindice Limited. All Rights Reserved.
 

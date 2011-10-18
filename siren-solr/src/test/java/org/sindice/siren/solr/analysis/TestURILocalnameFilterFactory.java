@@ -31,8 +31,6 @@ import java.io.StringReader;
 import java.util.Map;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
@@ -47,13 +45,13 @@ extends BaseSirenStreamTestCase {
 
     Reader reader = new StringReader("<http://test/Localname> . ");
     TokenStream stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
         new String[] { "Localname", "http://test/Localname", "." });
 
     reader = new StringReader("<http://test/anotherLocalname> . ");
     stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
         new String[] { "another", "Localname", "anotherLocalname", "http://test/anotherLocalname", "." });
   }
@@ -67,7 +65,7 @@ extends BaseSirenStreamTestCase {
 
     final Reader reader = new StringReader("<http://test/anotherLocalname> . ");
     final TokenStream stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
         new String[] { "anotherLocalname", "http://test/anotherLocalname", "." });
   }

@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
- Licensed to the Apache Software Foundation (ASF) under one or more
- contributor license agreements.  See the NOTICE file distributed with
- this work for additional information regarding copyright ownership.
- The ASF licenses this file to You under the Apache License, Version 2.0
- (the "License"); you may not use this file except in compliance with
- the License.  You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
 
 <!--  
- This is the Solr schema file. This file should be named "schema.xml" and
+ This is the SIREn/Solr schema file. This file should be named "schema.xml" and
  should be in the conf directory under the solr home
  (i.e. ./solr/conf/schema.xml by default) 
  or located where the classloader for the Solr webapp can find it.
 
  This example schema is the recommended starting point for users.
  It should be kept correct and concise, usable out-of-the-box.
-
+ 
  For more information, on how to customize this file, please see
  http://wiki.apache.org/solr/SchemaXml
 
@@ -123,97 +107,21 @@
     </fieldType>
 
     <!--
-		  The SIREn NTriple field type:
-			Use the TupleAnalyzer 
-			- Parse n-triple data 
-			- Defer tokenisation of Literals and URIs to sub-analyzers
-			
-			Field norms are not useful for SIREn fields. Set omitNorms to true reduces
-			memory consumption, and improve ranking.
-		-->
-    <fieldType name="ntriple" class="solr.TextField" omitNorms="true">
-      <analyzer type="index">
-
-        <tokenizer class="org.sindice.siren.solr.analysis.TupleTokenizerFactory"
-				           subschema="ntriple-schema.xml"
-									 literal-fieldtype="ntriple-literal"/>
-				
-        <!-- Token removal. By default, filter bnode, dot, datatype and language
-				     tag token.
-						 Add bnode=0 to not filter blank node tokens. -->
-        <filter class="org.sindice.siren.solr.analysis.TokenTypeFilterFactory"/>
-				
-        <!-- Decode URIs. -->       
-        <filter class="org.sindice.siren.solr.analysis.URIEncodingFilterFactory"/>
-				
-				<!-- Extract and tokenise localname of URIs.
-				     Add maxLength=n to not tokenise localname with more than n 
-						 characters. By default, maxLength=64. -->
-				<filter class="org.sindice.siren.solr.analysis.URILocalnameFilterFactory"/>
-
-        <!-- Remove trailing slash of URIs. -->				
-				<filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
-				
-        <!-- Tokenize mailto URI -->
-        <filter class="org.sindice.siren.solr.analysis.MailtoFilterFactory"/>
-				
-				<!-- Filters out those tokens *not* having length min through max 
-             inclusive. -->
-        <filter class="solr.LengthFilterFactory" min="2" max="256"/>
-        
-        <!-- Change to lowercase text -->
-        <filter class="solr.LowerCaseFilterFactory"/>
-				
-        <!-- Case insensitive stop word removal.
-          add enablePositionIncrements=true in both the index and query
-          analyzers to leave a 'gap' for more accurate phrase queries. -->
-        <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="stopwords.txt"
-                enablePositionIncrements="true"
-                />
-				
-				<!-- Filter converting tuple and cell information in the term payload. -->
-				<filter class="org.sindice.siren.solr.analysis.SirenDeltaPayloadFilterFactory"/>
-        
-      </analyzer>
-
-			<analyzer type="query" class="org.sindice.siren.solr.analysis.MultiQueryAnalyzerWrapper"/>
-			
-    </fieldType>
-		
-    <!--
-      The SIREn Tabular field type: the index analyzer is the same than for 
-			ntriple. The only changes is in the query analyzer.
-
+      The SIREn field type:
+      The top-level analyzers must be defined in the top-level analyzer 
+      configuration file (ntriple-analyzers.xml) and the datatype analyzers in 
+      the datatype analyzer configuration file (ntriples-datatypes.xml).  
+      
       Field norms are not useful for SIREn fields. Set omitNorms to true reduces
       memory consumption, and improve ranking.
+      
+      omitTermFreqAndPositions *must* be set to false.
     -->
-    <fieldType name="tabular" class="solr.TextField" omitNorms="true">
-      <analyzer type="index">
-        <tokenizer class="org.sindice.siren.solr.analysis.TupleTokenizerFactory"
-				           subschema="ntriple-schema.xml"
-                   literal-fieldtype="ntriple-literal"/>
-        <filter class="org.sindice.siren.solr.analysis.TokenTypeFilterFactory"/>
-        <filter class="solr.StandardFilterFactory"/>
-        <filter class="org.sindice.siren.solr.analysis.URILocalnameFilterFactory"/> 
-        <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="stopwords.txt"
-                enablePositionIncrements="true"
-                />
-        <filter class="solr.LengthFilterFactory" min="2" max="256"/>
-        <filter class="org.sindice.siren.solr.analysis.SirenPayloadFilterFactory"/>
-        
-      </analyzer>
-      <!-- TODO: Entity query analyzer
-      <analyzer type="query">
-        <tokenizer class="org.sindice.siren.solr.analysis.EntityQueryTokenizerFactory"/>
-      </analyzer>
-			-->
-    </fieldType>
+    <fieldType name="ntriple" class="org.sindice.siren.solr.schema.SirenField"
+		           omitNorms="true" 
+               omitTermFreqAndPositions="false"
+		           analyzerConfig="ntriple-analyzers.xml"
+               datatypeConfig="ntriple-datatypes.xml"/>
     
  </types>
 
@@ -232,9 +140,6 @@
 		
 		<!-- n-triple indexing scheme -->
    	<field name="ntriple" type="ntriple" indexed="true" stored="false" multiValued="false"/>
-		
-		<!-- tabular indexing scheme -->
-    <field name="tabular" type="tabular" indexed="true" stored="false" multiValued="false"/>
 
  </fields>
 

@@ -30,26 +30,24 @@ import java.io.StringReader;
 import java.util.Map;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
 /**
- * 
+ *
  */
 public class TestURIEncodingFilterFactory extends BaseSirenStreamTestCase {
 
   @Test
   public void testURLencodedURI()
-  throws Exception {    
+  throws Exception {
     final Map<String,String> args = this.getDefaultInitArgs();
     final URIEncodingFilterFactory factory = new URIEncodingFilterFactory();
     factory.init(args);
 
     final Reader reader = new StringReader("<http://stephane.net/who%3fwho>");
-    final TokenStream stream = factory.create(new TupleTokenizer(reader, Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+    final TokenStream stream = factory.create(new TupleTokenizer(reader, Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream, new String[] {"http://stephane.net/who%3fwho", "http://stephane.net/who?who" });
   }
-  
+
 }

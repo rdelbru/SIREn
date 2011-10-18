@@ -42,6 +42,9 @@ import org.sindice.siren.solr.qparser.ntriple.NTripleQParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The SIREn Query Parser. See {@link SirenQParserPlugin} for more information.
+ */
 public class SirenQParser extends QParser {
 
   protected Map<String, Float> keywordQueryFields;

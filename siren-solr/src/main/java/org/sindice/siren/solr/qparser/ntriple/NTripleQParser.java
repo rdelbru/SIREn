@@ -26,35 +26,39 @@
  */
 package org.sindice.siren.solr.qparser.ntriple;
 
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+import java.util.Map.Entry;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser.Operator;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.util.Version;
+import org.apache.solr.analysis.TokenFilterFactory;
+import org.apache.solr.analysis.TokenizerChain;
 import org.apache.solr.common.SolrException;
-import org.apache.solr.common.SolrException.ErrorCode;
 import org.apache.solr.common.params.DefaultSolrParams;
 import org.apache.solr.common.params.SolrParams;
 import org.apache.solr.request.SolrQueryRequest;
 import org.apache.solr.schema.FieldType;
 import org.apache.solr.search.QParser;
-import org.sindice.siren.qparser.ntriple.NTripleQParserImpl;
 import org.sindice.siren.qparser.ntriple.NTripleQueryParser;
 import org.sindice.siren.solr.SirenParams;
-import org.sindice.siren.solr.analysis.MultiQueryAnalyzerWrapper;
+import org.sindice.siren.solr.analysis.NTripleQueryTokenizerFactory;
+import org.sindice.siren.solr.schema.Datatype;
+import org.sindice.siren.solr.schema.SirenField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The {@link NTripleQParser} is in charge of executing a NTriple query request.
+ * <p>
+ * Instantiate and execute the {@link NTripleQueryParser} based on the Solr
+ * configuration and parameters.
+ */
 public class NTripleQParser extends QParser {
-
-  /**
-   * The NTriple Parser implementation
-   */
-  NTripleQParserImpl lparser;
 
   /**
    * Field boosts
@@ -65,13 +69,6 @@ public class NTripleQParser extends QParser {
    * Flag for scattered multi-field match
    */
   boolean scattered = false;
-
-  /**
-   * The three associated query analyzers (NTriple, URI, Literal)
-   */
-  Analyzer ntripleAnalyzer;
-  Analyzer uriAnalyzer;
-  Analyzer literalAnalyzer;
 
   /**
    * The default query operator
@@ -87,9 +84,24 @@ public class NTripleQParser extends QParser {
     super(qstr, localParams, params, req);
     this.boosts = boosts;
     final SolrParams solrParams = localParams == null ? params : new DefaultSolrParams(localParams, params);
+    this.checkFieldTypes();
     this.initNTripleQueryFieldOperator(solrParams);
     // try to get default operator from schema
     defaultOp = this.getReq().getSchema().getSolrQueryParser(null).getDefaultOperator();
+  }
+
+  /**
+   * Check if all fields are of type {@link SirenField}.
+   */
+  private void checkFieldTypes() {
+    for (final String fieldName : boosts.keySet()) {
+      final FieldType fieldType = req.getSchema().getFieldType(fieldName);
+      if (!(fieldType instanceof SirenField)) {
+        throw new SolrException(SolrException.ErrorCode.SERVER_ERROR,
+          "FieldType: " + fieldName +
+          " (" + fieldType.getTypeName() + ") do not support NTriple Query");
+      }
+    }
   }
 
   /**
@@ -115,69 +127,65 @@ public class NTripleQParser extends QParser {
   }
 
   /**
-   * Check if all the provided fields have the same field type otherwise throw
-   * a solr exception.
-   * @param boosts
+   * Initialise the Ntriple query analyzer
    */
-  private FieldType checkFieldType(final Map<String, Float> boosts) {
-    final Set<FieldType> fieldTypes = new HashSet<FieldType>();
-    for (final String fieldName : boosts.keySet()) {
-      fieldTypes.add(req.getSchema().getFieldType(fieldName));
-    }
-    if (fieldTypes.size() != 1) { // cannot be 0 - param nqf must have at least one value
-      throw new SolrException(SolrException.ErrorCode.BAD_REQUEST, "querying " +
-      		"multiple fields with different types");
-    }
-    return fieldTypes.iterator().next();
-  }
-
-  /**
-   * Find the associated query analyzers for the given field type.
-   * The query analyzers should be provided through the
-   * {@link MultiQueryAnalyzerWrapper}.<br>
-   * Derive the names of the field types from the name of the given field type.
-   * There is three field types expected:
-   * <ul>
-   * <li> main: define the main NTriple query analyzer
-   * <li> uri: define the analyzer for URIs
-   * <li> literal: define the analyzer for literals
-   * <ul>
-   *
-   * @param fieldType The field type of the ntriple fields to query
-   */
-  private void initAnalyzers(final FieldType fieldType) {
-    if (!(fieldType.getQueryAnalyzer() instanceof MultiQueryAnalyzerWrapper)) {
-      throw new SolrException(ErrorCode.SERVER_ERROR, "MultiQueryAnalyzerWrapper" +
-      		" expected for field type " + fieldType.getTypeName());
-    }
-    final MultiQueryAnalyzerWrapper wrapper = (MultiQueryAnalyzerWrapper) fieldType.getQueryAnalyzer();
-    if ((ntripleAnalyzer = wrapper.getAnalyzer(fieldType.getTypeName() + "-main")) == null) {
-      throw new SolrException(ErrorCode.SERVER_ERROR, "Field type definition " +
-        fieldType.getTypeName() + "-main not defined");
-    }
-    if ((uriAnalyzer = wrapper.getAnalyzer(fieldType.getTypeName() + "-uri")) == null) {
-      throw new SolrException(ErrorCode.SERVER_ERROR, "Field type definition " +
-        fieldType.getTypeName() + "-uri not defined");
-    }
-    if ((literalAnalyzer = wrapper.getAnalyzer(fieldType.getTypeName() + "-literal")) == null) {
-      throw new SolrException(ErrorCode.SERVER_ERROR, "Field type definition " +
-        fieldType.getTypeName() + "-literal not defined");
-    }
+  private Analyzer initAnalyzer() {
+    return new TokenizerChain(new NTripleQueryTokenizerFactory(),
+      new TokenFilterFactory[0]);
   }
 
   @Override
   public Query parse() throws ParseException {
-    this.initAnalyzers(this.checkFieldType(boosts));
+    final Version version = req.getCore().getSolrConfig().luceneMatchVersion;
+    final Analyzer nqAnalyzer = this.initAnalyzer();
     final DefaultOperatorAttribute.Operator defaultOp = this.getDefaultOperator();
+
     if (boosts.size() == 1) {
       final String field = boosts.keySet().iterator().next();
-      return NTripleQueryParser.parse(qstr, field, ntripleAnalyzer,
-        uriAnalyzer, literalAnalyzer, defaultOp);
+      final Map<String, Analyzer> datatypeConfig = this.initDatatypeConfig(field);
+      return NTripleQueryParser.parse(qstr, version, field, nqAnalyzer,
+        datatypeConfig, defaultOp);
     }
     else {
-      return NTripleQueryParser.parse(qstr, boosts, scattered, ntripleAnalyzer,
-        uriAnalyzer, literalAnalyzer, defaultOp);
+      final Map<String, Map<String, Analyzer>> datatypeConfigs = this.initDatatypeConfigs(boosts);
+      return NTripleQueryParser.parse(qstr, version, boosts,
+        nqAnalyzer, datatypeConfigs, defaultOp, scattered);
     }
+  }
+
+  /**
+   * Retrieve the datatype query analyzers associated to this field
+   */
+  private Map<String, Analyzer> initDatatypeConfig(final String field) {
+    final Map<String, Analyzer> datatypeConfig = new HashMap<String, Analyzer>();
+    final SirenField fieldType = (SirenField) req.getSchema().getFieldType(field);
+    final Map<String, Datatype> datatypes = fieldType.getDatatypes();
+
+    for (final Entry<String, Datatype> e : datatypes.entrySet()) {
+
+      if (e.getValue().getQueryAnalyzer() == null) {
+        throw new SolrException(SolrException.ErrorCode.SERVER_ERROR,
+          "Configuration Error: No analyzer defined for type 'query' in " +
+          "datatype " + e.getKey());
+      }
+
+      datatypeConfig.put(e.getKey(), e.getValue().getQueryAnalyzer());
+    }
+
+    return datatypeConfig;
+  }
+
+  /**
+   * For each field in the boost map, retrieve the datatype query analyzers.
+   */
+  private Map<String, Map<String, Analyzer>> initDatatypeConfigs(final Map<String, Float> boosts) {
+    final Map<String, Map<String, Analyzer>> datatypeConfigs = new HashMap<String, Map<String, Analyzer>>();
+
+    for (final String field : boosts.keySet()) {
+      datatypeConfigs.put(field, this.initDatatypeConfig(field));
+    }
+
+    return datatypeConfigs;
   }
 
   private DefaultOperatorAttribute.Operator getDefaultOperator() {

@@ -31,8 +31,6 @@ import java.io.StringReader;
 import java.util.Map;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
@@ -47,7 +45,7 @@ extends BaseSirenStreamTestCase {
 
     final Reader reader = new StringReader("<aaa> <bbb> \"ooo\" . \"aaa\" <ooo> . ");
     final TokenStream stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
         new String[] {"aaa", "bbb", "ooo", "aaa", "ooo" });
   }
@@ -60,9 +58,9 @@ extends BaseSirenStreamTestCase {
 
     final Reader reader = new StringReader("\"ooo aaa uuu\"@en . \"aaa\" _:bn1 . ");
     final TokenStream stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
-        new String[] {"ooo", "aaa", "uuu", "aaa" });
+        new String[] {"ooo aaa uuu", "aaa" });
   }
 
   @Test
@@ -74,9 +72,9 @@ extends BaseSirenStreamTestCase {
 
     final Reader reader = new StringReader("\"ooo aaa uuu\"@en . \"aaa\" _:bn1 . ");
     final TokenStream stream = factory.create(new TupleTokenizer(reader,
-      Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+      Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream,
-        new String[] {"ooo", "aaa", "uuu", "aaa", "bn1" });
+        new String[] {"ooo aaa uuu", "aaa", "bn1" });
   }
 
 }

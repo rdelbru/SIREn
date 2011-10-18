@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  
+ This is the SIREn/Solr top-level analyzer configuration file. This file should 
+ be referenced by a SIREn FieldType in the "schema.xml" and should be in the 
+ conf directory under the solr home (i.e. ./solr/conf/ by default) 
+ or located where the classloader for the Solr webapp can find it.
+
+ This example top-level analyzer configuration file is the recommended starting 
+ point for users. It should be kept correct and concise, usable out-of-the-box.
+-->
+<analyzerConfig name="example" version="0.2.2">
+
+<!--
+  The index analyzer: define the analyzer to be used to index n-tuples.
+  It defines a DatatypeAnalyzerFilterFactory which uses the datatype 
+  analyzers defined in ntriple-datatypes.xml.
+-->
+<analyzer type="index">
+
+  <tokenizer class="org.sindice.siren.solr.analysis.TupleTokenizerFactory"/>
+
+  <!-- Token removal. By default, filter bnode, dot, datatype and language
+			 tag token.
+			 Add bnode=0 to not filter blank node tokens. -->
+  <filter class="org.sindice.siren.solr.analysis.TokenTypeFilterFactory"/>
+	
+	<!-- Filter that analyzes each cell based on their datatype. 
+       The definition of the analyzers for datatypes can be found in 
+			 ntriple-datatypes.xml. -->
+  <filter class="org.sindice.siren.solr.analysis.DatatypeAnalyzerFilterFactory"/>
+
+	<!-- Filter converting tuple and cell information in the term payload. -->
+	<filter class="org.sindice.siren.solr.analysis.SirenDeltaPayloadFilterFactory"/>
+        
+</analyzer>
+    
+<!--
+  The Keyword Query analyzer: define the query analyzer to be used
+  when using keyword queries.
+-->
+<analyzer type="keyword-query">
+	<!-- whitespace tokenizer to not tokenize URI -->
+  <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+	
+	<!-- Remove trailing slash of URIs. -->       
+  <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+  
+  <!-- Filters out those tokens *not* having length min through max 
+       inclusive. -->
+  <filter class="solr.LengthFilterFactory" min="2" max="256"/>
+  
+  <filter class="solr.LowerCaseFilterFactory"/>
+  
+  <!-- Filter that expands accented tokens with a non-accented form. 
+       Before the stop filter, in case a non-accented form is located
+       in the stop list. -->
+  <filter class="org.sindice.siren.solr.analysis.ASCIIFoldingExpansionFilterFactory"/>
+  
+  <filter class="solr.StopFilterFactory"
+          ignoreCase="true"
+          words="stopwords.txt"
+          enablePositionIncremets="true"
+          />
+	
+   <!-- Replace Qnames by their name spaces in URIs. -->
+  <filter class="org.sindice.siren.solr.analysis.QNamesFilterFactory" 
+	        qnames="qnames.txt"/>
+</analyzer>
+
+</analyzerConfig>

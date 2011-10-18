@@ -36,7 +36,6 @@ import org.apache.lucene.queryParser.QueryParser.Operator;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Version;
 import org.apache.solr.common.SolrException;
-import org.apache.solr.common.SolrException.ErrorCode;
 import org.apache.solr.common.params.DefaultSolrParams;
 import org.apache.solr.common.params.SolrParams;
 import org.apache.solr.request.SolrQueryRequest;
@@ -44,11 +43,12 @@ import org.apache.solr.schema.FieldType;
 import org.apache.solr.search.QParser;
 import org.sindice.siren.qparser.keyword.KeywordQParserImpl;
 import org.sindice.siren.solr.SirenParams;
-import org.sindice.siren.solr.analysis.MultiQueryAnalyzerWrapper;
+import org.sindice.siren.solr.schema.SirenField;
 
 /**
  * Solr implementation of the simple keyword query parser. This class is
- * coupled with KeywordQParserImpl.<br>
+ * coupled with {@link KeywordQParserImpl}.
+ * <p>
  * By default, field queries are disabled in order to differentiate QNames from
  * field queries. However, keyword query can still be expanded to multiple fields.<br>
  * When field query is enabled, only semicolon found in URIs are escaped.
@@ -58,8 +58,8 @@ public class KeywordQParser extends QParser {
   private final KeywordQParserImpl impl;
 
   public KeywordQParser(final Map<String, Float> boosts, final String qstr,
-                       final SolrParams localParams, final SolrParams params,
-                       final SolrQueryRequest req) {
+                        final SolrParams localParams, final SolrParams params,
+                        final SolrQueryRequest req) {
     super(qstr, localParams, params, req);
     final SolrParams solrParams = localParams == null ? params : new DefaultSolrParams(localParams, params);
 
@@ -72,33 +72,22 @@ public class KeywordQParser extends QParser {
   /**
    * Initialize the "per-field" analyzer. Walk over the field boosts and
    * retrieve the associated query analyzer. <br>
-   * For each field type, check if there is not an associated keyword field
-   * type, i.e., a field type with an identical name with "-keyword" appended.
+   * The {@link SirenField#getQueryAnalyzer()} returns the keyword query
+   * analyzer.
    *
    * @param boosts The field boosts
    * @return The per-field analyzer wrapper.
    */
   private Analyzer initAnalyzers(final Map<String, Float> boosts) {
-    final Analyzer defaultAnalyzer = new WhitespaceAnalyzer(Version.LUCENE_31);
+    final Version version = req.getCore().getSolrConfig().luceneMatchVersion;
+    final Analyzer defaultAnalyzer = new WhitespaceAnalyzer(version);
     final PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(defaultAnalyzer);
 
     // Add analyzers for each field type
     for (final String fieldName : boosts.keySet()) {
       final FieldType fieldType = req.getSchema().getFieldType(fieldName);
-      // check if there is a MultiQueryAnalyzerWrapper
-      // and extract the associated keyword query analzyer
-      if (fieldType.getQueryAnalyzer() instanceof MultiQueryAnalyzerWrapper) {
-        final MultiQueryAnalyzerWrapper wrapper = (MultiQueryAnalyzerWrapper) fieldType.getQueryAnalyzer();
-        Analyzer keywordAnalyzer;
-        if ((keywordAnalyzer = wrapper.getAnalyzer(fieldType.getTypeName() + "-keyword")) == null) {
-          throw new SolrException(ErrorCode.SERVER_ERROR, "Field type definition " +
-            fieldType.getTypeName() + "-keyword not defined");
-        }
-        analyzerWrapper.addAnalyzer(fieldName, keywordAnalyzer);
-      }
-      else {
-        analyzerWrapper.addAnalyzer(fieldName, fieldType.getQueryAnalyzer());
-      }
+      // #getQueryAnalyzer for SirenField returns the keyword query analyzer
+      analyzerWrapper.addAnalyzer(fieldName, fieldType.getQueryAnalyzer());
     }
     return analyzerWrapper;
   }

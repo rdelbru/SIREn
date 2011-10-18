@@ -30,8 +30,6 @@ import java.io.StringReader;
 import java.util.Map;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
-import org.apache.lucene.util.Version;
 import org.junit.Test;
 import org.sindice.siren.analysis.TupleTokenizer;
 
@@ -48,7 +46,7 @@ public class TestMailtoFilterFactory extends BaseSirenStreamTestCase {
     factory.init(args);
 
     final Reader reader = new StringReader("<mailto:stephane.campinas@deri.org>");
-    final TokenStream stream = factory.create(new TupleTokenizer(reader, Integer.MAX_VALUE, new WhitespaceAnalyzer(Version.LUCENE_31)));
+    final TokenStream stream = factory.create(new TupleTokenizer(reader, Integer.MAX_VALUE));
     this.assertTokenStreamContents(stream, new String[] { "stephane.campinas@deri.org", "mailto:stephane.campinas@deri.org" });
   }
 

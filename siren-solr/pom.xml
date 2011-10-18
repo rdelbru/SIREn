@@ -59,6 +59,13 @@
       <artifactId>solr-core</artifactId>
       <version>${lucene.version}</version>
     </dependency>
+		
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-test-framework</artifactId>
+      <version>${lucene.version}</version>
+      <scope>test</scope>
+    </dependency>
 
     <dependency>
       <groupId>javax.servlet</groupId>

@@ -19,25 +19,39 @@
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @project siren
- * @author Renaud Delbru [ 20 Jan 2011 ]
+ * @project siren-solr
+ * @author Renaud Delbru [ 15 Oct 2011 ]
  * @link http://renaud.delbru.fr/
- * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.apache.solr.schema;
+package org.sindice.siren.solr.schema;
+
+import java.util.Map;
+
+import org.apache.lucene.analysis.Analyzer;
 
 /**
- * Necessary to make accessible {@link FieldType#setTypeName(String)} inside
- * {@link SubIndexSchema}.
+ * <code>TextDatatype</code> is the basic datatype implementation for
+ * configurable text analysis.
+ * <p>
+ * Analyzers for datatypes using this implementation should be defined in the
+ * datatype configuration file.
  */
-public class SubTextField extends TextField {
+public class TextDatatype extends Datatype {
 
-  /**
-   * Override method to make it accessible.
-   */
   @Override
-  protected void setTypeName(final String typeName) {
-    this.typeName = typeName;
+  protected void init(final Map<String,String> args) {
+    super.init(args);
+  }
+
+  @Override
+  public void setAnalyzer(final Analyzer analyzer) {
+    this.analyzer = analyzer;
+  }
+
+  @Override
+  public void setQueryAnalyzer(final Analyzer analyzer) {
+    this.queryAnalyzer = analyzer;
   }
 
 }
+

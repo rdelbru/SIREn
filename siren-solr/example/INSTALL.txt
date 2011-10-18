@@ -1,9 +1,9 @@
 
-SIREn 0.2.1-SNAPSHOT Solr Demo - Install Instructions
+SIREn 0.2.2 Solr Demo - Install Instructions
 
 --------------------------------------------------------------------------------
 
-This is testing version of Solr 3.1 with SIREn.
+This is testing version of Solr 3.4 with SIREn.
 
 We provide a solr configuration example which use SIREn for indexing and 
 searching RDF data. The search interface is using the n-triples query language.
@@ -48,8 +48,8 @@ $CATALINA_BASE/conf/Catalina/localhost/siren.xml
 
 5. COPYING SIREN LIBS
 
-Build SIREn and copy siren-core-0.2.1-SNAPSHOT.jar, 
-siren-qparser-0.2.1-SNAPSHOT.jar and siren-solr-0.2.1-SNAPSHOT.jar in 
+Build SIREn and copy siren-core-0.2.2.jar, 
+siren-qparser-0.2.2.jar and siren-solr-0.2.2.jar in 
 SOLR_HOME/lib.
 
 6. CHANGE FILE PERMISSIONS

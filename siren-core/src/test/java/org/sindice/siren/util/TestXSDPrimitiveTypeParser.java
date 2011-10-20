@@ -68,6 +68,11 @@ public class TestXSDPrimitiveTypeParser {
     XSDPrimitiveTypeParser.parseInt(new StringReader("-2147483649"));
   }
 
+  @Test(expected=NumberFormatException.class)
+  public void testInvalidInt() throws IOException {
+    XSDPrimitiveTypeParser.parseInt(new StringReader("fdaslk"));
+  }
+
   @Test
   public void testGoodLong() throws IOException {
     for (final String s : goodIntStrings) {
@@ -96,6 +101,11 @@ public class TestXSDPrimitiveTypeParser {
     XSDPrimitiveTypeParser.parseLong(new StringReader("-9223372036854775809"));
   }
 
+  @Test(expected=NumberFormatException.class)
+  public void testInvalidLong() throws IOException {
+    XSDPrimitiveTypeParser.parseLong(new StringReader("fdaslk"));
+  }
+
   @Test
   public void testGoodDouble() throws IOException {
     for (final String s : goodDoubleStrings) {
@@ -119,12 +129,22 @@ public class TestXSDPrimitiveTypeParser {
 
   @Test(expected=NumberFormatException.class)
   public void testOverflowMaxDouble() throws IOException {
-    XSDPrimitiveTypeParser.parseLong(new StringReader("9223372036854775808"));
+    XSDPrimitiveTypeParser.parseDouble(new StringReader("9223372036854775808"));
   }
 
   @Test(expected=NumberFormatException.class)
   public void testOverflowMinDouble() throws IOException {
-    XSDPrimitiveTypeParser.parseLong(new StringReader("-9223372036854775809"));
+    XSDPrimitiveTypeParser.parseDouble(new StringReader("-9223372036854775809"));
+  }
+
+  @Test(expected=NumberFormatException.class)
+  public void testInvalidDouble() throws IOException {
+    XSDPrimitiveTypeParser.parseDouble(new StringReader("fdsk"));
+  }
+
+  @Test(expected=NumberFormatException.class)
+  public void testInvalidDoubleFraction() throws IOException {
+    XSDPrimitiveTypeParser.parseDouble(new StringReader("123.asd"));
   }
 
   static String goodIntStrings[] = {

@@ -68,7 +68,7 @@ public final class XSDPrimitiveTypeParser {
     throws IOException {
       final int i = parseInt(reader);
       if ((i < Short.MIN_VALUE) || (i > Short.MAX_VALUE)) {
-        throw new NumberFormatException("Overflow");
+        throw new NumberFormatException("Short overflow");
       }
       return (short) i;
     }
@@ -104,7 +104,7 @@ public final class XSDPrimitiveTypeParser {
 
         // Check MAX_VALUE overflow
         if ((result == Integer.MIN_VALUE) && !isNegative) {
-          throw new NumberFormatException("Overflow");
+          throw new NumberFormatException("Integer overflow");
         }
 
         // Decimal has been accumulated negatively. We must switch sign if
@@ -144,7 +144,7 @@ public final class XSDPrimitiveTypeParser {
 
       // Check MAX_VALUE overflow
       if ((result == Long.MIN_VALUE) && !isNegative) {
-        throw new NumberFormatException("Overflow");
+        throw new NumberFormatException("Long overflow");
       }
 
       // Decimal has been accumulated negatively. We must switch sign if
@@ -214,13 +214,18 @@ public final class XSDPrimitiveTypeParser {
 
       // At least one digit or a '.' required.
       if (((c < '0') || (c > '9')) && (c != '.')) {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid double value");
       }
 
       // Reads decimal.
       while (c != -1 && c != '.' && (c != 'E' && c != 'e')) {
         decimal = accumulateLongDecimal(c, decimal);
         c = reader.read();
+      }
+
+      // Check MAX_VALUE overflow
+      if ((decimal == Long.MIN_VALUE) && !isNegative) {
+        throw new NumberFormatException("Double overflow");
       }
 
       // Decimal has been accumulated negatively. We must switch sign if
@@ -282,7 +287,7 @@ public final class XSDPrimitiveTypeParser {
         return Double.NaN;
       }
       else {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid double value");
       }
     }
 
@@ -293,7 +298,7 @@ public final class XSDPrimitiveTypeParser {
                           : Double.POSITIVE_INFINITY;
       }
       else {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid double value");
       }
     }
 
@@ -313,16 +318,16 @@ public final class XSDPrimitiveTypeParser {
      * @return
      */
     private static int accumulateIntegerDecimal(final int c, final int decimal) {
-      if (c >= '0' || c <= '9') {
+      if (c >= '0' && c <= '9') {
         final int digit = c - '0';
         final int newResult = decimal * 10 - digit;
         if (newResult > decimal) {
-          throw new NumberFormatException("Overflow");
+          throw new NumberFormatException("Integer overflow");
         }
         return newResult;
       }
       else {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid integer value");
       }
     }
 
@@ -335,30 +340,30 @@ public final class XSDPrimitiveTypeParser {
      * @return
      */
     private static long accumulateLongDecimal(final int c, final long decimal) {
-      if (c >= '0' || c <= '9') {
+      if (c >= '0' && c <= '9') {
         final int digit = c - '0';
         final long newResult = decimal * 10 - digit;
         if (newResult > decimal) {
-          throw new NumberFormatException("Overflow");
+          throw new NumberFormatException("Long overflow");
         }
         return newResult;
       }
       else {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid long value");
       }
     }
 
     private static double accumulateDoubleFraction(final int c, final double fraction, final double base) {
-      if (c >= '0' || c <= '9') {
+      if (c >= '0' && c <= '9') {
         final int digit = c - '0';
         final double newResult = digit * base + fraction;
         if (newResult < fraction) {
-          throw new NumberFormatException("Overflow");
+          throw new NumberFormatException("Double overflow");
         }
         return newResult;
       }
       else {
-        throw new NumberFormatException("Invalid value");
+        throw new NumberFormatException("Invalid double value");
       }
     }
 

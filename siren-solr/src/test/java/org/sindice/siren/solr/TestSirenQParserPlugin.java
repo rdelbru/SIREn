@@ -332,6 +332,23 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testTrieDatatypeQuery() throws IOException, SolrServerException {
+    for (int i = 0; i < 1000; i++) {
+      this.addNTripleStringWoCommit("id"+i, "<http://s> <http://p> \"" + i + "\"^^<xsd:int> .");
+    }
+
+    this.wrapper.commit();
+
+    final SolrQuery query = new SolrQuery();
+    query.set(SirenParams.NQ, "* <http://p> '[501 TO *]'^^<xsd:int>");
+    query.setQueryType("siren");
+
+    final String[] results = wrapper.search(query, "url");
+    // Default Operator = AND : Only one document should match
+    assertEquals(499, results.length);
+  }
+
 // TODO: try to solve this issue
 //  @Test
 //  public void testMatchingPartURL() throws Exception {

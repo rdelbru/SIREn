@@ -21,17 +21,17 @@
   <tokenizer class="org.sindice.siren.solr.analysis.TupleTokenizerFactory"/>
 
   <!-- Token removal. By default, filter bnode, dot, datatype and language
-			 tag token.
-			 Add bnode=0 to not filter blank node tokens. -->
+       tag token.
+       Add bnode=0 to not filter blank node tokens. -->
   <filter class="org.sindice.siren.solr.analysis.TokenTypeFilterFactory"/>
-	
-	<!-- Filter that analyzes each cell based on their datatype. 
+  
+  <!-- Filter that analyzes each cell based on their datatype. 
        The definition of the analyzers for datatypes can be found in 
-			 ntriple-datatypes.xml. -->
+       ntriple-datatypes.xml. -->
   <filter class="org.sindice.siren.solr.analysis.DatatypeAnalyzerFilterFactory"/>
 
-	<!-- Filter converting tuple and cell information in the term payload. -->
-	<filter class="org.sindice.siren.solr.analysis.SirenDeltaPayloadFilterFactory"/>
+  <!-- Filter converting tuple and cell information in the term payload. -->
+  <filter class="org.sindice.siren.solr.analysis.SirenDeltaPayloadFilterFactory"/>
         
 </analyzer>
     
@@ -40,11 +40,16 @@
   when using keyword queries.
 -->
 <analyzer type="keyword-query">
-	<!-- whitespace tokenizer to not tokenize URI -->
+  <!-- whitespace tokenizer to not tokenize mailto URI -->
   <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-	
-	<!-- Remove trailing slash of URIs. -->       
-  <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+  
+  <!-- Remove trailing slash of URIs. 
+       Here, it is not very safe to remove token type checking, but 
+       unfortunately, unless we use the UAX29URLEmailTokenizerFactory, URI can 
+       not be detected.
+  -->       
+  <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"
+          checkType="false"/>
   
   <!-- Filters out those tokens *not* having length min through max 
        inclusive. -->
@@ -62,10 +67,10 @@
           words="stopwords.txt"
           enablePositionIncremets="true"
           />
-	
+  
    <!-- Replace Qnames by their name spaces in URIs. -->
   <filter class="org.sindice.siren.solr.analysis.QNamesFilterFactory" 
-	        qnames="qnames.txt"/>
+          qnames="qnames.txt"/>
 </analyzer>
 
 </analyzerConfig>

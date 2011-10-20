@@ -59,4 +59,9 @@ public class TestSolrServer extends BaseSolrServerTestCase {
     assertEquals("http://renaud.delbru.fr/rdf/foaf", results[0]);
   }
 
+  @Test(expected=NumberFormatException.class)
+  public void testAddInvalidDatatype() throws IOException, SolrServerException {
+    this.addNTripleString("id1", "<http://example.org/foo> <http://example.org/bar> \"flargh\"^^<xsd:int> .");
+  }
+
 }

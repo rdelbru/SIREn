@@ -31,8 +31,12 @@
       <!-- Decode URIs. -->
       <filter class="org.sindice.siren.solr.analysis.URIEncodingFilterFactory"/>      
   
-      <!-- Remove trailing slash of URIs. -->       
-      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+      <!-- Remove trailing slash of URIs. 
+           Here, we can safely remove the token type checking since all tokens
+           are of type URI.
+      -->       
+      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"
+              checkType="false"/>
       
       <!-- Extract and tokenise localname of URIs.
       Add maxLength=n to not tokenise localname with more than n
@@ -62,8 +66,12 @@
       <!-- whitespace tokenizer to not tokenize URI -->   
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
   
-      <!-- Remove trailing slash of URIs. -->       
-      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+      <!-- Remove trailing slash of URIs. 
+           Here, we can safely remove the token type checking since all tokens
+           are of type URI.
+      -->       
+      <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"
+              checkType="false"/>
       
       <!-- Filters out those tokens *not* having length min through max 
            inclusive. -->

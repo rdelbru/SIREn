@@ -40,11 +40,16 @@
   when using keyword queries.
 -->
 <analyzer type="keyword-query">
-  <!-- whitespace tokenizer to not tokenize URI -->
+  <!-- whitespace tokenizer to not tokenize mailto URI -->
   <tokenizer class="solr.WhitespaceTokenizerFactory"/>
   
-  <!-- Remove trailing slash of URIs. -->       
-  <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"/>
+  <!-- Remove trailing slash of URIs. 
+       Here, it is not very safe to remove token type checking, but 
+       unfortunately, unless we use the UAX29URLEmailTokenizerFactory, URI can 
+       not be detected.
+  -->       
+  <filter class="org.sindice.siren.solr.analysis.URITrailingSlashFilterFactory"
+          checkType="false"/>
   
   <!-- Filters out those tokens *not* having length min through max 
        inclusive. -->

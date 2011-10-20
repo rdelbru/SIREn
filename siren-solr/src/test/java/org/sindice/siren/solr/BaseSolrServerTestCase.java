@@ -79,12 +79,16 @@ public abstract class BaseSolrServerTestCase {
 
   protected void addNTripleString(final String url, final String ntuples)
   throws IOException, SolrServerException {
+    this.addNTripleStringWoCommit(url, ntuples);
+    wrapper.commit();
+  }
+
+  protected void addNTripleStringWoCommit(final String url, final String ntuples)
+  throws IOException, SolrServerException {
     final SolrInputDocument document = new SolrInputDocument();
     document.addField("url", url);
     document.addField("ntriple", ntuples);
     wrapper.add(document);
-    wrapper.commit();
-    wrapper.optimize();
   }
 
 }

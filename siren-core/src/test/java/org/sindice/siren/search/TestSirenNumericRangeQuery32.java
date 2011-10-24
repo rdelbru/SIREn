@@ -28,6 +28,7 @@ package org.sindice.siren.search;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.RandomIndexWriter;
 import org.apache.lucene.index.Term;
@@ -46,6 +47,7 @@ import org.apache.lucene.util._TestUtil;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.sindice.siren.analysis.FloatNumericAnalyzer;
 import org.sindice.siren.analysis.IntNumericAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.util.XSDDatatype;
@@ -73,6 +75,9 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_INT+"8").toCharArray(), new IntNumericAnalyzer(8));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_INT+"4").toCharArray(), new IntNumericAnalyzer(4));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_INT+"2").toCharArray(), new IntNumericAnalyzer(2));
+    analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_FLOAT+"8").toCharArray(), new FloatNumericAnalyzer(8));
+    analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_FLOAT+"4").toCharArray(), new FloatNumericAnalyzer(4));
+    analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_FLOAT+"2").toCharArray(), new FloatNumericAnalyzer(2));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_INT+Integer.MAX_VALUE).toCharArray(), new IntNumericAnalyzer(Integer.MAX_VALUE));
 
     final RandomIndexWriter writer = new RandomIndexWriter(random, directory,
@@ -100,6 +105,10 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       doc.add(newField("ascfield4", getTriple(val, XSDDatatype.XSD_INT+"4"), Field.Store.YES, Field.Index.ANALYZED));
       doc.add(newField("ascfield2", getTriple(val, XSDDatatype.XSD_INT+"2"), Field.Store.YES, Field.Index.ANALYZED));
 
+      doc.add(newField("float8", getTriple(val, XSDDatatype.XSD_FLOAT+"8"), Field.Store.YES, Field.Index.ANALYZED));
+      doc.add(newField("float4", getTriple(val, XSDDatatype.XSD_FLOAT+"4"), Field.Store.YES, Field.Index.ANALYZED));
+      doc.add(newField("float2", getTriple(val, XSDDatatype.XSD_FLOAT+"2"), Field.Store.YES, Field.Index.ANALYZED));
+      
       writer.addDocument(doc);
     }
 
@@ -309,9 +318,10 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       if (lower>upper) {
         final int a=lower; lower=upper; upper=a;
       }
+      final String prefix = DataType.INT.name() + precisionStep;
       // test inclusive range
       SirenNumericRangeQuery<Integer> tq=SirenNumericRangeQuery.newIntRange(field, precisionStep, lower, upper, true, true);
-      SirenTermRangeQuery cq=new SirenTermRangeQuery(field, NumericUtils.intToPrefixCoded(lower), NumericUtils.intToPrefixCoded(upper), true, true);
+      SirenTermRangeQuery cq=new SirenTermRangeQuery(field, prefix + NumericUtils.intToPrefixCoded(lower), prefix + NumericUtils.intToPrefixCoded(upper), true, true);
       TopDocs tTopDocs = searcher.search(tq, 1);
       TopDocs cTopDocs = searcher.search(cq, 1);
       assertEquals("Returned count for SirenNumericRangeQuery and SirenTermRangeQuery must be equal", cTopDocs.totalHits, tTopDocs.totalHits );
@@ -319,7 +329,7 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       termCountC += cq.getTotalNumberOfTerms();
       // test exclusive range
       tq=SirenNumericRangeQuery.newIntRange(field, precisionStep, lower, upper, false, false);
-      cq=new SirenTermRangeQuery(field, NumericUtils.intToPrefixCoded(lower), NumericUtils.intToPrefixCoded(upper), false, false);
+      cq=new SirenTermRangeQuery(field, prefix + NumericUtils.intToPrefixCoded(lower), prefix + NumericUtils.intToPrefixCoded(upper), false, false);
       tTopDocs = searcher.search(tq, 1);
       cTopDocs = searcher.search(cq, 1);
       assertEquals("Returned count for SirenNumericRangeQuery and SirenTermRangeQuery must be equal", cTopDocs.totalHits, tTopDocs.totalHits );
@@ -327,7 +337,7 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       termCountC += cq.getTotalNumberOfTerms();
       // test left exclusive range
       tq=SirenNumericRangeQuery.newIntRange(field, precisionStep, lower, upper, false, true);
-      cq=new SirenTermRangeQuery(field, NumericUtils.intToPrefixCoded(lower), NumericUtils.intToPrefixCoded(upper), false, true);
+      cq=new SirenTermRangeQuery(field, prefix + NumericUtils.intToPrefixCoded(lower), prefix + NumericUtils.intToPrefixCoded(upper), false, true);
       tTopDocs = searcher.search(tq, 1);
       cTopDocs = searcher.search(cq, 1);
       assertEquals("Returned count for SirenNumericRangeQuery and SirenTermRangeQuery must be equal", cTopDocs.totalHits, tTopDocs.totalHits );
@@ -335,7 +345,7 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       termCountC += cq.getTotalNumberOfTerms();
       // test right exclusive range
       tq=SirenNumericRangeQuery.newIntRange(field, precisionStep, lower, upper, true, false);
-      cq=new SirenTermRangeQuery(field, NumericUtils.intToPrefixCoded(lower), NumericUtils.intToPrefixCoded(upper), true, false);
+      cq=new SirenTermRangeQuery(field, prefix + NumericUtils.intToPrefixCoded(lower), prefix + NumericUtils.intToPrefixCoded(upper), true, false);
       tTopDocs = searcher.search(tq, 1);
       cTopDocs = searcher.search(cq, 1);
       assertEquals("Returned count for SirenNumericRangeQuery and SirenTermRangeQuery must be equal", cTopDocs.totalHits, tTopDocs.totalHits );
@@ -417,11 +427,19 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
 
   /** we fake a float test using int2float conversion of NumericUtils */
   private void testFloatRange(final int precisionStep) throws Exception {
-    final String field="ascfield"+precisionStep;
-    final int lower=-1000, upper=+2000;
+    final String field="float"+precisionStep;
+    final float lower=-1000, upper=+2000;
 
+//    final Query tq=SirenNumericRangeQuery.newFloatRange(field, precisionStep,
+//      NumericUtils.sortableIntToFloat(lower), NumericUtils.sortableIntToFloat(upper), true, true);
+
+    /*
+     * Original Lucene test was faking a float using the NumericUtils.sortableIntToFloat method.
+     * Since in Siren we index also the datatype, we cannot do that: using a float query to search
+     * for a value indexed with XSD_INT datatype. 
+     */
     final Query tq=SirenNumericRangeQuery.newFloatRange(field, precisionStep,
-      NumericUtils.sortableIntToFloat(lower), NumericUtils.sortableIntToFloat(upper), true, true);
+      lower, upper, true, true);
     final TopDocs tTopDocs = searcher.search(tq, 1);
     assertEquals("Returned count of range query must be equal to inclusive range length", upper-lower+1, tTopDocs.totalHits );
   }
@@ -489,7 +507,8 @@ public class TestSirenNumericRangeQuery32 extends LuceneTestCase {
       do {
         final Term t = termEnum.term();
         if (t != null) {
-          final int val = NumericUtils.prefixCodedToInt(t.text());
+          // without the datatype and precision step prefix
+          final int val = NumericUtils.prefixCodedToInt(t.text().substring(DataType.INT.name().length() + 1));
           assertTrue("value not in bounds", val >= lower && val <= upper);
           count++;
         } else break;

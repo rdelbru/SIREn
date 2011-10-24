@@ -30,6 +30,7 @@ import java.util.LinkedList;
 
 import org.apache.lucene.analysis.NumericTokenStream;
 import org.apache.lucene.document.NumericField;
+import org.apache.lucene.document.NumericField.DataType;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermEnum;
@@ -88,8 +89,9 @@ import org.apache.lucene.util.ToStringUtils;
 public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTermQuery {
 
   private static final long serialVersionUID = 4836211972429767278L;
-
-  private SirenNumericRangeQuery(final String field, final int precisionStep,
+  
+  private SirenNumericRangeQuery(final DataType datatype,
+                                 final String field, final int precisionStep,
                                  final int valSize, final T min, final T max,
                                  final boolean minInclusive,
                                  final boolean maxInclusive) {
@@ -103,7 +105,8 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
     this.max = max;
     this.minInclusive = minInclusive;
     this.maxInclusive = maxInclusive;
-
+    this.datatype = datatype;
+    
     switch (valSize) {
       case 64:
         this.setRewriteMethod(
@@ -136,7 +139,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Long> newLongRange(final String field,
       final int precisionStep, final Long min, final Long max, final boolean minInclusive,
       final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Long>(field, precisionStep, 64, min, max,
+    return new SirenNumericRangeQuery<Long>(DataType.LONG, field, precisionStep, 64, min, max,
       minInclusive, maxInclusive);
   }
 
@@ -150,7 +153,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Long> newLongRange(final String field,
       final Long min, final Long max, final boolean minInclusive,
       final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Long>(field, NumericUtils.PRECISION_STEP_DEFAULT,
+    return new SirenNumericRangeQuery<Long>(DataType.LONG, field, NumericUtils.PRECISION_STEP_DEFAULT,
       64, min, max, minInclusive, maxInclusive);
   }
 
@@ -164,7 +167,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Integer> newIntRange(final String field,
       final int precisionStep, final Integer min, final Integer max,
       final boolean minInclusive, final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Integer>(field, precisionStep, 32, min,
+    return new SirenNumericRangeQuery<Integer>(DataType.INT, field, precisionStep, 32, min,
       max, minInclusive, maxInclusive);
   }
 
@@ -178,7 +181,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Integer> newIntRange(final String field,
       final Integer min, final Integer max, final boolean minInclusive,
       final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Integer>(field, NumericUtils.PRECISION_STEP_DEFAULT,
+    return new SirenNumericRangeQuery<Integer>(DataType.INT, field, NumericUtils.PRECISION_STEP_DEFAULT,
       32, min, max, minInclusive, maxInclusive);
   }
 
@@ -192,7 +195,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Double> newDoubleRange(final String field,
       final int precisionStep, final Double min, final Double max,
       final boolean minInclusive, final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Double>(field, precisionStep, 64, min, max,
+    return new SirenNumericRangeQuery<Double>(DataType.DOUBLE, field, precisionStep, 64, min, max,
       minInclusive, maxInclusive);
   }
 
@@ -206,7 +209,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Double> newDoubleRange(final String field,
       final Double min, final Double max, final boolean minInclusive,
       final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Double>(field, NumericUtils.PRECISION_STEP_DEFAULT,
+    return new SirenNumericRangeQuery<Double>(DataType.DOUBLE, field, NumericUtils.PRECISION_STEP_DEFAULT,
       64, min, max, minInclusive, maxInclusive);
   }
 
@@ -220,7 +223,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Float> newFloatRange(final String field,
       final int precisionStep, final Float min, final Float max,
       final boolean minInclusive, final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Float>(field, precisionStep, 32, min, max,
+    return new SirenNumericRangeQuery<Float>(DataType.FLOAT, field, precisionStep, 32, min, max,
       minInclusive, maxInclusive);
   }
 
@@ -234,7 +237,7 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   public static SirenNumericRangeQuery<Float> newFloatRange(final String field,
     final Float min, final Float max, final boolean minInclusive,
     final boolean maxInclusive) {
-    return new SirenNumericRangeQuery<Float>(field, NumericUtils.PRECISION_STEP_DEFAULT,
+    return new SirenNumericRangeQuery<Float>(DataType.FLOAT, field, NumericUtils.PRECISION_STEP_DEFAULT,
       32, min, max, minInclusive, maxInclusive);
   }
 
@@ -317,7 +320,8 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
   final int precisionStep, valSize;
   final T min, max;
   final boolean minInclusive,maxInclusive;
-
+  final DataType datatype;
+  
   /**
    * Subclass of FilteredTermEnum for enumerating all terms that match the
    * sub-ranges for trie range queries.
@@ -367,8 +371,8 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
           NumericUtils.splitLongRange(new NumericUtils.LongRangeBuilder() {
             @Override
             public final void addRange(final String minPrefixCoded, final String maxPrefixCoded) {
-              rangeBounds.add(minPrefixCoded);
-              rangeBounds.add(maxPrefixCoded);
+            rangeBounds.add(datatype.name() + precisionStep + minPrefixCoded);
+            rangeBounds.add(datatype.name() + precisionStep + maxPrefixCoded);
             }
           }, precisionStep, minBound, maxBound);
           break;
@@ -402,8 +406,8 @@ public final class SirenNumericRangeQuery<T extends Number> extends SirenMultiTe
           NumericUtils.splitIntRange(new NumericUtils.IntRangeBuilder() {
             @Override
             public final void addRange(final String minPrefixCoded, final String maxPrefixCoded) {
-              rangeBounds.add(minPrefixCoded);
-              rangeBounds.add(maxPrefixCoded);
+              rangeBounds.add(datatype.name() + precisionStep + minPrefixCoded);
+              rangeBounds.add(datatype.name() + precisionStep + maxPrefixCoded);
             }
           }, precisionStep, minBound, maxBound);
           break;

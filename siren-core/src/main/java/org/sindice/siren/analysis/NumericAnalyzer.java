@@ -42,7 +42,7 @@ import org.apache.lucene.document.NumericField.DataType;
 public abstract class NumericAnalyzer extends Analyzer {
 
   private final int precisionStep;
-
+  
   public NumericAnalyzer(final int precisionStep) {
     this.precisionStep = precisionStep;
   }
@@ -50,7 +50,7 @@ public abstract class NumericAnalyzer extends Analyzer {
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
     try {
-      final NumericTokenStream result = new NumericTokenStream(precisionStep);
+      final SirenNumericTokenStream result = new SirenNumericTokenStream(precisionStep);
       this.setNumericValue(result, reader);
       return result;
     }
@@ -66,7 +66,7 @@ public abstract class NumericAnalyzer extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new NumericTokenStream(precisionStep);
+      streams.tokenStream = new SirenNumericTokenStream(precisionStep);
       this.setNumericValue(streams.tokenStream, reader);
     } else {
       streams.tokenStream.reset();
@@ -78,11 +78,11 @@ public abstract class NumericAnalyzer extends Analyzer {
   /**
    * Set the numeric value of the token stream
    */
-  protected abstract void setNumericValue(final NumericTokenStream tokenStream, final Reader reader)
+  protected abstract void setNumericValue(final SirenNumericTokenStream tokenStream, final Reader reader)
   throws IOException;
 
   private static final class SavedStreams {
-    NumericTokenStream tokenStream;
+    SirenNumericTokenStream tokenStream;
   }
 
   public int getPrecisionStep() {

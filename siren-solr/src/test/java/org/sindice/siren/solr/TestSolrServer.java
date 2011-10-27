@@ -59,7 +59,13 @@ public class TestSolrServer extends BaseSolrServerTestCase {
     assertEquals("http://renaud.delbru.fr/rdf/foaf", results[0]);
   }
 
-  @Test(expected=NumberFormatException.class)
+  /**
+   * Fail because the value is not an integer, throws a {@link NumberFormatException},
+   * wrapped inside a {@link SolrServerException}
+   * @throws IOException
+   * @throws SolrServerException
+   */
+  @Test(expected=SolrServerException.class)
   public void testAddInvalidDatatype() throws IOException, SolrServerException {
     this.addNTripleString("id1", "<http://example.org/foo> <http://example.org/bar> \"flargh\"^^<xsd:int> .");
   }

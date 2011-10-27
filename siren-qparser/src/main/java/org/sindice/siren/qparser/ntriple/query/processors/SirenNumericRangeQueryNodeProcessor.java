@@ -71,25 +71,27 @@ public class SirenNumericRangeQueryNodeProcessor extends QueryNodeProcessorImpl 
           ParametricQueryNode upper = parametricRangeNode.getUpperBound();
           
           final Number lowerNumber, upperNumber;
-          final StringReader lowerReader = new StringReader(lower.getTextAsString());
-          final StringReader upperReader = new StringReader(upper.getTextAsString());
+          final String l = lower.getTextAsString();
+          final String u = upper.getTextAsString();
+          final StringReader lowerReader = new StringReader(l);
+          final StringReader upperReader = new StringReader(u);
           try {
             switch (na.getNumericType()) {
               case LONG:
-                lowerNumber = XSDPrimitiveTypeParser.parseLong(lowerReader);
-                upperNumber = XSDPrimitiveTypeParser.parseLong(upperReader);
+                lowerNumber = l.equals("*") ? Long.MIN_VALUE : XSDPrimitiveTypeParser.parseLong(lowerReader);
+                upperNumber = u.equals("*") ? Long.MAX_VALUE : XSDPrimitiveTypeParser.parseLong(upperReader);
                 break;
               case INT:
-                lowerNumber = XSDPrimitiveTypeParser.parseInt(lowerReader);
-                upperNumber = XSDPrimitiveTypeParser.parseInt(upperReader);
+                lowerNumber = l.equals("*") ? Integer.MIN_VALUE : XSDPrimitiveTypeParser.parseInt(lowerReader);
+                upperNumber = u.equals("*") ? Integer.MAX_VALUE : XSDPrimitiveTypeParser.parseInt(upperReader);
                 break;
               case DOUBLE:
-                lowerNumber = XSDPrimitiveTypeParser.parseDouble(lowerReader);
-                upperNumber = XSDPrimitiveTypeParser.parseDouble(upperReader);
+                lowerNumber = l.equals("*") ? Double.MIN_VALUE : XSDPrimitiveTypeParser.parseDouble(lowerReader);
+                upperNumber = u.equals("*") ? Double.MAX_VALUE : XSDPrimitiveTypeParser.parseDouble(upperReader);
                 break;
               case FLOAT:
-                lowerNumber = XSDPrimitiveTypeParser.parseFloat(lowerReader);
-                upperNumber = XSDPrimitiveTypeParser.parseFloat(upperReader);
+                lowerNumber = l.equals("*") ? Float.MIN_VALUE : XSDPrimitiveTypeParser.parseFloat(lowerReader);
+                upperNumber = u.equals("*") ? Float.MAX_VALUE : XSDPrimitiveTypeParser.parseFloat(upperReader);
                 break;
               default:
                 throw new QueryNodeParseException(new MessageImpl(

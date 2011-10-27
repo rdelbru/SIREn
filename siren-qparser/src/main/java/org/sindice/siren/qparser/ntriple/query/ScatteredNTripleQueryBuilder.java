@@ -36,7 +36,6 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.qparser.ntriple.DatatypeValue;
-import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
@@ -320,8 +319,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   }
 
   /**
-   * Get the associated {@link Analyzer}. If no analyzer exists, then throw an
-   * exception.
+   * Get the associated {@link Analyzer}. If no analyzer exists, it throws an exception.
    *
    * @param fieldName The field name associated to this analyzer
    * @param datatypeURI The datatype URI associated to this analyzer
@@ -329,7 +327,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
    */
   private Analyzer getAnalyzer(final String fieldName, final String datatypeURI) {
     if (datatypeConfigs.get(fieldName).get(datatypeURI) == null) {
-      throw new QueryBuilderException(Error.PARSE_ERROR,
+      throw new QueryBuilderException(org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error.PARSE_ERROR,
         "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
     }
     return datatypeConfigs.get(fieldName).get(datatypeURI);

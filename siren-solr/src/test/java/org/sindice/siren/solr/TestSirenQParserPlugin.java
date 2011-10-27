@@ -343,7 +343,8 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     final SolrQuery query = new SolrQuery();
     query.set(SirenParams.NQ, "* <http://p> '[501 TO *]'^^<xsd:int>");
     query.setQueryType("siren");
-
+    query.set("rows", "1000");
+    
     final String[] results = wrapper.search(query, "url");
     // Default Operator = AND : Only one document should match
     assertEquals(499, results.length);

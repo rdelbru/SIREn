@@ -41,6 +41,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.sindice.siren.analysis.FloatNumericAnalyzer;
 import org.sindice.siren.analysis.IntNumericAnalyzer;
+import org.sindice.siren.analysis.LongNumericAnalyzer;
 import org.sindice.siren.qparser.analysis.NTripleTestHelper;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericQueryNodeProcessor;
 import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericRangeQueryNodeProcessor;
@@ -411,24 +412,35 @@ public class NTripleQueryParserTest {
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
       "number", new IntNumericAnalyzer(4));
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._implicitField,
-      "number", new FloatNumericAnalyzer(4));
+      "number", new IntNumericAnalyzer(1));
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
       "mynumber", new FloatNumericAnalyzer(4));
+    
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
+      "numberIL", new IntNumericAnalyzer(4));
+    NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._implicitField,
+      "numberIL", new LongNumericAnalyzer(4));
     
     final Map<String, Float> boosts = new HashMap<String, Float>();
     boosts.put(NTripleTestHelper._defaultField, 1.0f);
     boosts.put(NTripleTestHelper._implicitField, 1.0f);
     Map<String, String> ntriples = new HashMap<String, String>();
     ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"42\"^^<number> .\n");
-    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> \"14.2\"^^<number> .\n");
-    String query = "<http://s> * '[1 TO 100]'^^<number> AND\r\n * <http://p2> \n\r \n '[13.5 TO 15.5]'^^<number>";
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> \"14\"^^<number> .\n");
+    String query = "<http://s> * '[1 TO 100]'^^<number> AND\r\n * <http://p2> \n\r \n '[13 TO 20]'^^<number>";
 
     assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, true));
 
+    ntriples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"42\"^^<numberIL> .\n");
+    ntriples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> \"14\"^^<numberIL> .\n");
+    query = "<http://s> * '[1 TO 100]'^^<numberIL> AND\r\n * <http://p2> \n\r \n '[13 TO 20]'^^<numberIL>";
+
+    assertTrue(NTripleQueryParserTestHelper.match(ntriples, boosts, query, true));
+    
     boolean fail = false;
     
     // mynumber datatype is not registered in the implicit field
-    query = "<http://s> * '[1 TO 100]'^^<number> AND\r\n <http://s> * \n\r \n '[13.5 TO 15.5]'^^<mynumber>";
+    query = "<http://s> * '[1 TO 100]'^^<int> AND\r\n <http://s> * \n\r \n '[13.5 TO 15.5]'^^<mynumber>";
     try {
       NTripleQueryParserTestHelper.match(ntriples, boosts, query, true);      
     } catch (ParseException e) {
@@ -441,7 +453,7 @@ public class NTripleQueryParserTest {
     NTripleQueryParserTestHelper.unRegisterTokenConfig(NTripleTestHelper._defaultField, "mynumber");
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._implicitField,
       "mynumber", new IntNumericAnalyzer(4));
-    query = "<http://s> * '[1 TO 100]'^^<mynumber> AND\r\n <http://s> * \n\r \n '[13.5 TO 15.5]'^^<number>";
+    query = "<http://s> * '[1 TO 100]'^^<mynumber> AND\r\n <http://s> * \n\r \n '[13 TO 20]'^^<number>";
     try {
       NTripleQueryParserTestHelper.match(ntriples, boosts, query, true);      
     } catch (ParseException e) {
@@ -558,14 +570,46 @@ public class NTripleQueryParserTest {
     NTripleQueryParserTestHelper.registerTokenConfig(NTripleTestHelper._defaultField,
       "float4", new FloatNumericAnalyzer(4));
 
+    // test for incorrect numeric values
+    String ntriple = "<http://stephane> <http://p1> \"numeric\"^^<int4> .\n";
+    String query = "<http://stephane> * '[10 TO 2000]'^^<int4>";
+    boolean fail = false;
+    try {
+      NTripleQueryParserTestHelper.match(ntriple, query);
+    } catch (NumberFormatException e) { // fail when indexing
+      fail = true;
+    }
+    assertTrue(fail);
+    fail = false;
+    ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> .\n";
+    query = "<http://stephane> * '[10 TO bla]'^^<int4>";
+    try {
+      NTripleQueryParserTestHelper.match(ntriple, query);
+    } catch (ParseException e) { // fail when processing the query
+      fail = true;
+    }
+    assertTrue(fail);
+    
     /*
      * Test for integer
      */
-    String ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> .\n";
-    String query = "<http://stephane> * '[10 TO 2000]'^^<int4>";
+    ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> .\n";
+    query = "<http://stephane> * '[10 TO 2000]'^^<int4>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
 
+    // test for wildcard bounds
+    query = "<http://stephane> * '[* TO 2000]'^^<int4>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    query = "<http://stephane> * '[100 TO *]'^^<int4>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    query = "<http://stephane> * '[550 TO *]'^^<int4>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    query = "<http://stephane> * '[* TO 400]'^^<int4>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    
     // boolean of ranges
+    ntriple = "<http://stephane> <http://p1> \"500\"^^<int4> .\n";
     query = "<http://stephane> * '[900 TO 2000] OR [5000 TO 20000]'^^<int4>";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
 

@@ -43,7 +43,9 @@ import org.apache.lucene.search.Query;
 public class KeywordQParserImpl {
 
   private final KeywordQueryParser parser = new KeywordQueryParser();
-
+  private final StringBuffer sbEscaped = new StringBuffer();
+  private final StringBuffer sb = new StringBuffer();
+  
   /**
    * Flag for disabling field query
    */
@@ -63,7 +65,7 @@ public class KeywordQParserImpl {
   public Query parse(final String query) throws ParseException {
     try {
       if (disableField) {
-        return parser.parse(KeywordQParserImpl.escape(query), null);
+        return parser.parse(this.escape(query), null);
       }
       else { // If field queries enabled, escape only URIs
         return parser.parse(this.escapeURIs(query), null);
@@ -74,39 +76,102 @@ public class KeywordQParserImpl {
     }
   }
 
-  // TODO: does not support mailto: uri
-  static String uriRegExp = "(news|(ht|f)tp(s?))\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?";
+//  static String uriRegExp = "(news|(ht|f)tp(s?))\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?";
+  /*
+   * Regex got from http://www.regular-expressions.info/email.html
+   */
+  static String emailRegExp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\\b";
+  static String uriRegExp = "(mailto\\:" + emailRegExp + "|(news|(ht|f)tp(s?))\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?)";
   static Pattern pattern = Pattern.compile(uriRegExp);
-
-  // TODO: check if other special characters of lucene can appear in a URI, and
-  // escape them, for example ~.
+    
+  /**
+   * Returns a String where special Lucene characters <code>:</code>, <code>~</code>
+   * and <code>?</code> are escaped within terms matching the URI pattern.
+   * @param query
+   */
   private String escapeURIs(final String query) {
     final Matcher matcher = pattern.matcher(query);
-
-    final StringBuffer sb = new StringBuffer();
+    
+    sbEscaped.setLength(0);
     while (matcher.find()) {
-      matcher.appendReplacement(sb, matcher.group(0).replace(":", "\\\\:"));
+      replaceAndCountURI(matcher.group());
+      matcher.appendReplacement(sbEscaped, sb.toString());
     }
-    matcher.appendTail(sb);
-
-    return sb.toString();
+    matcher.appendTail(sbEscaped);
+    return sbEscaped.toString();
   }
 
   /**
-   * Returns a String where <code>:</code> and <code>\</code> are escaped by a
-   * preceding <code>\</code>.
+   * Escape special Lucene characters <code>:</code>, <code>~</code>
+   * and <code>?</code>.
+   * @param match
+   * @return the number of escaped characters
    */
-  public static String escape(final String s) {
-    final StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-      final char c = s.charAt(i);
-      // These characters are part of the field query syntax and must be escaped
-      if (c == ':' || c == '\\' || c == '~') {
-        sb.append('\\');
+  private int replaceAndCountURI(final String match) {
+    int count = 0;
+    
+    sb.setLength(0);
+    for (int i = 0; i < match.length(); i++) {
+      final char c = match.charAt(i);
+      if (c == ':' || c == '~' || c == '?') {
+        sb.append("\\\\");
+        count++;
       }
       sb.append(c);
     }
-    return sb.toString();
+    return count;
+  }
+  
+  /**
+   * For non-URI terms, escape <code>:</code> and <code>\</code> special Lucene characters.
+   * @param index
+   * @param highBound
+   * @return the number of escaped characters
+   */
+  private int replaceAndCountNonURI(int index, final int highBound) {
+    int count = 0;
+    
+    int ind = index;
+    // escape first the backslash, to avoid escaping the next escapes...
+    while ((ind = sbEscaped.indexOf("\\", ind)) != -1 && ind < highBound) {
+      sbEscaped.replace(ind, ind + 1, "\\\\");
+      ind += 2; // skip the two \\
+      count++;
+    }
+    
+    ind = index;
+    while ((ind = sbEscaped.indexOf(":", ind)) != -1 && ind < highBound) {
+      sbEscaped.replace(ind, ind + 1, "\\:");
+      ind += 2; // skip the semi-colon and the \\
+      count++;
+    }
+    return count;
+  }
+  
+  /**
+   * Returns a String where <code>:</code> and where URIs are processed by
+   * escapeURIs escaped by a preceding <code>\</code>.
+   */
+  private String escape(final String s) {
+    final Matcher matcher = pattern.matcher(s);
+    int lastURImatchEnd = 0;
+    int count = 0;
+    
+    sbEscaped.setLength(0);
+    while (matcher.find()) {
+      final int hb = matcher.start() + count;
+      
+      count += replaceAndCountURI(matcher.group());
+      // escape within the URI pattern
+      matcher.appendReplacement(sbEscaped, sb.toString());
+      // escape any special characters before that previous match
+      count += replaceAndCountNonURI(lastURImatchEnd, hb);
+      lastURImatchEnd = matcher.end() + count;
+    }
+    matcher.appendTail(sbEscaped);
+    // escape special characters in the tail
+    replaceAndCountNonURI(lastURImatchEnd, sbEscaped.length());
+    return sbEscaped.toString();
   }
 
   public void setDefaultOperator(final Operator operator) {

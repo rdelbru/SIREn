@@ -43,6 +43,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
+import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
+import org.sindice.siren.search.SirenTupleClause.Occur;
 
 public class TestSirenPhraseQuery {
 
@@ -143,6 +145,35 @@ public class TestSirenPhraseQuery {
     assertEquals("exact match", 1, hits.length);
   }
 
+  @Test
+  public void testPhraseQueryOnLocalname()
+  throws Exception {
+    final AnyURIAnalyzer uri = new AnyURIAnalyzer(Version.LUCENE_34);
+    uri.setUriNormalisation(URINormalisation.LOCALNAME);
+    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uri));
+    
+    final String triple = "<http://dbpedia.org/resource/The_Kingston_Trio> " +
+                          "<http://purl.org/dc/terms/subject>  " +
+                          "<http://dbpedia.org/resource/Category:Decca_Records_artists> .";
+    _helper.addDocument(triple);
+    
+    final SirenPhraseQuery q1 = new SirenPhraseQuery();
+    q1.add(new Term("content", "decca"));
+    q1.add(new Term("content", "records"));
+    final SirenPhraseQuery q2 = new SirenPhraseQuery();
+    q2.add(new Term("content", "kingston"));
+    q2.add(new Term("content", "trio"));
+    
+    final SirenCellQuery cq1 = new SirenCellQuery(q1);
+    final SirenCellQuery cq2 = new SirenCellQuery(q2);
+    SirenTupleQuery bq = new SirenTupleQuery();
+    bq.add(cq1, Occur.MUST);
+    bq.add(cq2, Occur.MUST);
+    
+    ScoreDoc[] hits = _helper.search(bq);
+    assertEquals(1, hits.length);
+  }
+  
   @Test
   public void testExplain() throws IOException {
     _helper.addDocument("\"Renaud Delbru\" . ");

@@ -47,6 +47,8 @@ import org.junit.Test;
 import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
+import org.sindice.siren.analysis.filter.URILocalnameFilter;
+import org.sindice.siren.analysis.filter.URINormalisationFilter;
 
 public class TestTupleAnalyzer {
 
@@ -82,7 +84,7 @@ public class TestTupleAnalyzer {
                                 final String[] expectedTypes,
                                 final int[] expectedPosIncrs)
   throws Exception {
-    this.assertAnalyzesTo(a, input, expectedImages, expectedTypes, null, null,
+    this.assertAnalyzesTo(a, input, expectedImages, expectedTypes, expectedPosIncrs, null,
       null);
   }
 
@@ -150,6 +152,46 @@ public class TestTupleAnalyzer {
     t.close();
   }
 
+  /**
+   * Test the local URINormalisation: the word "the" is a stop word, hence it is
+   * filtered. The position increment is updated accordingly, but it is not reset for
+   * future calls. Corrects issue SRN-117.
+   * @throws Exception
+   */
+  @Test
+  public void testURINormalisation()
+  throws Exception {
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+    uriAnalyzer.setUriNormalisation(URINormalisation.LOCALNAME);
+    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    
+    this.assertAnalyzesTo(_a, "<http://dbpedia.org/resource/The_Kingston_Trio>",
+                          new String[] { "kingston", "trio", "the_kingston_trio",
+                                         "http://dbpedia.org/resource/the_kingston_trio" },
+                          new String[] { "<URI>", "<URI>", "<URI>", "<URI>" },
+                          new int[] { 2, 1, 0, 0 });
+  }
+  
+  /**
+   * The same, with Full normalisation -- the stop word is now "their" because in
+   * {@link URINormalisationFilter}, there is inside a filter of words smaller
+   * than 4 (it was 3 for {@link URILocalnameFilter}. 
+   * @throws Exception
+   */
+  @Test
+  public void testURINormalisation2()
+  throws Exception {
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+    uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
+    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    
+    this.assertAnalyzesTo(_a, "<http://dbpedia.org/resource/their_Kingston_Trio>",
+                          new String[] { "dbpedia", "resource", "kingston", "trio",
+                                         "http://dbpedia.org/resource/their_kingston_trio" },
+                          new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" },
+                          new int[] { 1, 1, 2, 1, 0 });
+  }
+  
   @Test
   public void testURI()
   throws Exception {

@@ -73,14 +73,26 @@ public class NTripleQueryParserTest {
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
   }
 
+  /**
+   * Test for special Lucene characters within URIs.
+   * @throws Exception
+   */
   @Test
   public void testLuceneSpecialCharacter()
   throws Exception {
-    final String ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
+    String ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
     // The URITrailingSlashFilter is called
-    final String query = " <http://sw.deri.org/~aidanh> <http://p> <http://o>";
-
+    String query = " <http://sw.deri.org/~aidanh> <http://p> <http://o>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    ntriple = "<http://example.com/?foo=bar> <http://p> <http://o> .";
+    query = " <http://example.com/?foo=bar> <http://p> <http://o>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    // wildcard ? is escaped in the URI
+    ntriple = "<http://example.com/afoo=bar> <http://p> <http://o> .";
+    query = " <http://example.com/?foo=bar> <http://p> <http://o>";
+    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
 
   @Test
@@ -509,7 +521,8 @@ public class NTripleQueryParserTest {
     /*
      * Matching within an URI: cannot match because tilde is escaped inside the URI
      */
-    query = "<http://stephan~> * 'literalemen'";
+    ntriple = "<http://stephane.com/stecam> <http://p1> \"literal\" .\n";
+    query = "<http://stephane.com/steca~> * 'literal'";
     assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
   }
 

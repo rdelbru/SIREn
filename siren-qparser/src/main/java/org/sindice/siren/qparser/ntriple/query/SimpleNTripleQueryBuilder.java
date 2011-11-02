@@ -50,6 +50,7 @@ import org.sindice.siren.qparser.ntriple.query.model.TriplePattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
 import org.sindice.siren.qparser.ntriple.query.model.UnaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
+import org.sindice.siren.qparser.util.EscapeLuceneCharacters;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
@@ -254,7 +255,7 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
     logger.debug("Visiting URI");
     final DatatypeValue dtLit = u.getUp();
     // URI schemes and special Lucene characters handling
-    final String uri = SimpleNTripleQueryBuilder.escape(dtLit.getValue());
+    final String uri = EscapeLuceneCharacters.escape(dtLit.getValue());
 
     try {
       final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
@@ -273,23 +274,6 @@ public class SimpleNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   @Override
   public void visit(final Wildcard w) {
     logger.debug("Visiting Wildcard");
-  }
-
-  /**
-   * Returns a String where the colon and the tilde characters that QueryParser
-   * expects to be escaped are escaped by a preceding <code>\</code>.
-   */
-  protected static String escape(final String s) {
-    final StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-      final char c = s.charAt(i);
-      // These characters are part of the query syntax and must be escaped
-      if (c == ':' || c == '~') {
-        sb.append('\\');
-      }
-      sb.append(c);
-    }
-    return sb.toString();
   }
 
   /**

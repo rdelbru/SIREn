@@ -48,6 +48,13 @@ public class KeywordQParserImpl {
    */
   boolean disableField = false;
 
+  /**
+   * If disableField is false, field queries are not possible. Special characters
+   * within URIs are escaped.
+   * @param analyzer
+   * @param boosts
+   * @param disableField
+   */
   public KeywordQParserImpl(final Analyzer analyzer,
                             final Map<String, Float> boosts,
                             final boolean disableField) {

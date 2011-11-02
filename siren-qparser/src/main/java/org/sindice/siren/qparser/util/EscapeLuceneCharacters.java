@@ -45,9 +45,20 @@ public class EscapeLuceneCharacters {
   private static Pattern pattern = Pattern.compile(uriRegExp);
     
   /**
-   * Returns a String where special Lucene characters <code>:</code>, <code>~</code>
-   * and <code>?</code> are escaped within terms matching the URI pattern.
+   * Escape special Lucene characters <code>:</code>, <code>~</code>
+   * and <code>?</code>.<br>
+   * <code>~</code> is escaped only if:
+   * <ol>
+   * <li>it is at the end of the URI;</li>
+   * <li>it is before a float, i.e., the similarity.</li>
+   * </ol>
+   * In other case, it is considered as a fuzzy search.
+   * <br><br>
+   * With URIs, <code>~</code> is an unsafe character. The wildcard character
+   * <code>?</code> is escaped since it is reserved, while <code>*</code> can be left alone.
+   * <code>:</code> is a reserved character.
    * @param query
+   * @return the query with escaped URIs
    */
   public static String escapeURIs(final String query) {
     final Matcher matcher = pattern.matcher(query);
@@ -63,7 +74,17 @@ public class EscapeLuceneCharacters {
 
   /**
    * Escape special Lucene characters <code>:</code>, <code>~</code>
-   * and <code>?</code>.
+   * and <code>?</code>.<br>
+   * <code>~</code> is escaped only if:
+   * <ol>
+   * <li>it is at the end of the URI;</li>
+   * <li>it is before a float, i.e., the similarity.</li>
+   * </ol>
+   * In other case, it is considered as a fuzzy search.
+   * <br><br>
+   * With URIs, <code>~</code> is an unsafe character. The wildcard character
+   * <code>?</code> is escaped since it is reserved, while <code>*</code> can be left alone.
+   * <code>:</code> is a reserved character.
    * @param match
    * @return the number of escaped characters
    */
@@ -73,13 +94,36 @@ public class EscapeLuceneCharacters {
     sbTemp.setLength(0);
     for (int i = 0; i < match.length(); i++) {
       final char c = match.charAt(i);
-      if (c == ':' || c == '~' || c == '?') {
+      if (c == ':' || c == '?' ||
+          // tilde at the end or tilde before a float number
+          (c == '~' && !isFloatOReol(match, i + 1))) {
         sbTemp.append("\\\\");
         count++;
       }
       sbTemp.append(c);
     }
     return count;
+  }
+  
+  /**
+   * returns true if the string is at the end of the line, or if the remaining
+   * string starting at offset is a float number.
+   * @param match
+   * @param offset
+   * @return
+   */
+  private static boolean isFloatOReol(String match, int offset) {
+    if (offset == match.length()) return true;
+    
+    boolean dot = true; // match the dot only one time
+    for (int i = offset; i < match.length(); i++) {
+      if (dot && match.charAt(i) == '.') {
+        dot = false;
+      } else if (!Character.isDigit(match.charAt(i))) {
+        return false;
+      }
+    }
+    return true;
   }
   
   /**

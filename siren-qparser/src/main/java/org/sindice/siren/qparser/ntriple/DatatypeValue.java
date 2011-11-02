@@ -39,9 +39,6 @@ public final class DatatypeValue {
   private final String datatype;
   private final String value;
   
-  /**
-   * 
-   */
   public DatatypeValue(final char[] datatype, final String value) {
     this.datatype = new String(datatype);
     this.value = value;

@@ -170,7 +170,7 @@ public class KeywordQParserTest {
     final Query q1 = parser.parse("+foaf:name -foaf\\:person domain:dbpedia.org http://test.org/ http://test2.org/");
     final Query q2 = parser.parse("+foaf:name http://test.org/ -foaf\\:person domain:dbpedia.org http://test2.org/");
     final Query q3 = parser.parse("+foaf:name http://test.org/ -foaf\\:person domain:dbpedia.org");
-    final Query q4 = parser.parse("+foaf:name -foaf\\:person domain:dbpedia.org nothingToEscape  http://www.w3.org/1999/xhtml/vocab#alternate");
+    final Query q4 = parser.parse("http://www.w3.org/1999/xhtml/vocab#alternate +foaf:name -foaf\\:person domain:dbpedia.org nothingToEscape");
     assertEquals("+explicit-content:foaf:name " +
                  "-explicit-content:foaf\\:person " +
                  "explicit-content:domain:dbpedia.org " +
@@ -185,11 +185,11 @@ public class KeywordQParserTest {
                  "explicit-content:http://test.org/ " +
                  "-explicit-content:foaf\\:person " +
                  "explicit-content:domain:dbpedia.org", q3.toString());
-    assertEquals("+explicit-content:foaf:name " +
+    assertEquals("explicit-content:http://www.w3.org/1999/xhtml/vocab#alternate " +
+                 "+explicit-content:foaf:name " +
                  "-explicit-content:foaf\\:person " +
                  "explicit-content:domain:dbpedia.org " +
-                 "explicit-content:nothingToEscape " +
-                 "explicit-content:http://www.w3.org/1999/xhtml/vocab#alternate", q4.toString());
+                 "explicit-content:nothingToEscape", q4.toString());
   }
   
   @Test

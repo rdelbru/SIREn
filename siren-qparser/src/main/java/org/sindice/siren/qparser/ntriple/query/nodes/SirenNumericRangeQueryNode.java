@@ -51,7 +51,7 @@ public class SirenNumericRangeQueryNode extends AbstractRangeQueryNode<NumericQu
    * @param upper the upper bound
    * @param lowerInclusive <code>true</code> if the lower bound is inclusive, otherwise, <code>false</code>
    * @param upperInclusive <code>true</code> if the upper bound is inclusive, otherwise, <code>false</code>
-   * @param numericAnalyzer the {@link NumericAnalyzer} that represents associated with the upper and lower bounds
+   * @param numericAnalyzer the {@link NumericAnalyzer} associated with the upper and lower bounds
    * 
    * @see #setBounds(NumericQueryNode, NumericQueryNode, boolean, boolean, NumericAnalyzer)
    */

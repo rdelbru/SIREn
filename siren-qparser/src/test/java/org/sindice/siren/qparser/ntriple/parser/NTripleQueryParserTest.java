@@ -80,11 +80,17 @@ public class NTripleQueryParserTest {
   @Test
   public void testLuceneSpecialCharacter()
   throws Exception {
+    /*
+     * Test special tilde character 
+     */
     String ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
     // The URITrailingSlashFilter is called
     String query = " <http://sw.deri.org/~aidanh> <http://p> <http://o>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
     
+    /*
+     * ? Wildcard
+     */
     ntriple = "<http://example.com/?foo=bar> <http://p> <http://o> .";
     query = " <http://example.com/?foo=bar> <http://p> <http://o>";
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
@@ -519,11 +525,20 @@ public class NTripleQueryParserTest {
     assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
 
     /*
-     * Matching within an URI: cannot match because tilde is escaped inside the URI
+     * Matching within an URI
      */
-    ntriple = "<http://stephane.com/stecam> <http://p1> \"literal\" .\n";
-    query = "<http://stephane.com/steca~> * 'literal'";
-    assertFalse(NTripleQueryParserTestHelper.match(ntriple, query));
+    ntriple = "<http://sw.deri.org/aidanh> <http://p> <http://o> .";
+    query = " <http://sw.deri.org/aidan~> <http://p> <http://o>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+
+    // similarity low enough to match
+    query = " <http://sw.deri~0.2> <http://p> <http://o>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
+    
+    // first tilde is escaped, not the second one
+    ntriple = "<http://sw.deri.org/~aidanh/> <http://p> <http://o> .";
+    query = "<http://sw.deri.org/~ai~> <http://p> <http://o>";
+    assertTrue(NTripleQueryParserTestHelper.match(ntriple, query));
   }
 
   @Test

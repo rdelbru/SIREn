@@ -96,7 +96,7 @@ public class EscapeLuceneCharacters {
       final char c = match.charAt(i);
       if (c == ':' || c == '?' ||
           // tilde at the end or tilde before a float number
-          (c == '~' && !isFloatOReol(match, i + 1))) {
+          (c == '~' && !isFloatOrEOL(match, i + 1))) {
         sbTemp.append("\\\\");
         count++;
       }
@@ -112,7 +112,7 @@ public class EscapeLuceneCharacters {
    * @param offset
    * @return
    */
-  private static boolean isFloatOReol(String match, int offset) {
+  private static boolean isFloatOrEOL(String match, int offset) {
     if (offset == match.length()) return true;
     
     boolean dot = true; // match the dot only one time

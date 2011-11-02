@@ -34,24 +34,13 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.CharArrayMap;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
 /**
  * The TupleAnalyzer is especially designed to process RDF data. It applies
  * various post-processing on URIs and Literals.
- * <br>
- * The URI normalisation can be configured. You can disable it, activate it
- * only on URI local name, or on the full URI. However, URI normalisation on the
- * full URI is costly in term of CPU at indexing time, and can double the size
- * of the index, since each URI is duplicated by n tokens.
- * <br>
- * By default, the URI normalisation is disabled.
- * <br>
- * When full uri normalisation is activated, the analyzer is much slower than
- * the WhitespaceTupleAnalyzer. If you are not indexing RDF data, consider to
- * use the WhitespaceTupleAnalyzer instead.
  */
 public class TupleAnalyzer extends Analyzer {
 
@@ -62,6 +51,12 @@ public class TupleAnalyzer extends Analyzer {
   
   private final CharArrayMap<Analyzer> regLitAnalyzers;
   
+  /**
+   * Create a {@link TupleAnalyzer} with the default {@link Analyzer} for Literals and URIs.
+   * @param version
+   * @param stringAnalyzer default Literal {@link Analyzer}
+   * @param anyURIAnalyzer default URI {@link Analyzer}
+   */
   public TupleAnalyzer(Version version, final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer) {
     matchVersion = version;
     this.stringAnalyzer = stringAnalyzer;
@@ -78,12 +73,21 @@ public class TupleAnalyzer extends Analyzer {
     anyURIAnalyzer = analyzer;
   }
 
+  /**
+   * Assign an {@link Analyzer} to be used with that key. That analyzer is used
+   * to process tokens outputed from the {@link TupleTokenizer}.
+   * @param datatype
+   * @param a
+   */
   public void registerLiteralAnalyzer(char[] datatype, Analyzer a) {
     if (!regLitAnalyzers.containsKey(datatype)) {
       regLitAnalyzers.put(datatype, a);
     }
   }
   
+  /**
+   * Remove all registered {@link Analyzer}s.
+   */
   public void clearRegisterLiteralAnalyzers() {
     regLitAnalyzers.clear();
   }

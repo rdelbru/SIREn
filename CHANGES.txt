@@ -19,6 +19,7 @@ Bugs
 
 Bugs
 
+* [GH-15] siren-core - Fixed POM issue caused by the caliper dependency on gson
 * [SRN-25] Counting of matchers in SirenDisjunctionScorer is wrong
 * [SRN-79] Make URINormalisationFilter less agressive: token length minimum
            limit is now set to 3.
@@ -49,7 +50,7 @@ Improvements
 * [SRN-100] Improve user-readable version of the query
 * [SRN-102] Catch SolrException in SIREnQParser#parse
 * [SRN-105] Upgrade to Lucene/Solr 3.1
-* []SRN-108] Improved support of encoded character in URI
+* [SRN-108] Improved support of encoded character in URI
 * [SRN-112] Tokenisation problem with URI localnames
 
 * [GH-1] Pom fixes

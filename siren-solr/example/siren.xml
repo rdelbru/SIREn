@@ -1,3 +1,3 @@
-<Context docBase="/your/local/path/siren-solr/example/apache-solr-3.1.0.war" debug="0" crossContext="true" >
-   <Environment name="solr/home" type="java.lang.String" value="/your/local/path/siren-solr/example/solr/" override="true" />
+<Context docBase="/your/local/path/siren-solr/example/apache-solr-3.4.0.war" debug="0" crossContext="true" >
+   <Environment name="solr/home" type="java.lang.String" value="/your/local/path/siren-solr/example/solr" override="true" />
 </Context>

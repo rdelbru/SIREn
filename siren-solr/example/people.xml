@@ -2,7 +2,7 @@
 <add>
 <doc>
   <field name="url">http://example.org/person/jim</field>
-  <field name="content">
+  <field name="ntriple">
   	&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
 		&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Student&gt; .
   	&lt;http://example.org/person/jim&gt; &lt;http://example.org/schema/name&gt; "Jim Maple" .
@@ -13,7 +13,7 @@
 
 <doc>
   <field name="url">http://example.org/person/john</field>
-  <field name="content">    
+  <field name="ntriple">    
 	  &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
 		&lt;http://example.org/person/john&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Student&gt; .
     &lt;http://example.org/person/john&gt; &lt;http://example.org/schema/name&gt; "John Gartner" .
@@ -24,7 +24,7 @@
 
 <doc>
   <field name="url">http://example.org/person/jack</field>
-  <field name="content">
+  <field name="ntriple">
   	&lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Person&gt; .
 		&lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/type&gt; &lt;http://example.org/schema/Professor&gt; .
     &lt;http://example.org/person/jack&gt; &lt;http://example.org/schema/name&gt; "Jack Hollow" .

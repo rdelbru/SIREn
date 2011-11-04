@@ -1,5 +1,5 @@
 foaf=http://xmlns.com/foaf/0.1/
-dc=http://purl.org/dc/elements/1.1/,http://purl.org/dc/terms/
+dc=http://purl.org/dc/elements/1.1/
 owl=http://www.w3.org/2002/07/owl#
 rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdfs=http://www.w3.org/2000/01/rdf-schema#
@@ -9,7 +9,7 @@ swc=http://data.semanticweb.org/ns/swc/ontology#
 sioct=http://rdfs.org/sioc/types#
 void=http://rdfs.org/ns/void#
 sioc=http://rdfs.org/sioc/ns#
-dbpedia=http://dbpedia.org/resource/,http://dbpedia.org/dbprop/,http://dbpedia.org/property/
-bio=http://purl.org/vocab/bio/0.1/,http://vocab.org/bio/0.1/
+dbpedia=http://dbpedia.org/resource/
+bio=http://purl.org/vocab/bio/0.1/
 doap=http://usefulinc.com/ns/doap#
 og=http://opengraphprotocol.org/schema/

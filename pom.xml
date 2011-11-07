@@ -22,4 +22,17 @@
     <url>git:ssh://git@github.com/rdelbru/SIREn.git</url>
   </scm>
 
+  <!-- To avoid an error when tagging -->
+  <build>
+    <pluginManagement>
+      <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-release-plugin</artifactId>
+         <version>2.2.1</version>
+       </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
 </project>

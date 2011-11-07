@@ -24,8 +24,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:rdelbru/SIREn.git</connection>
-    <url>scm:git:git@github.com:rdelbru/SIREn.git</url>
+    <connection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</developerConnection>
+    <url>git:ssh://git@github.com/rdelbru/SIREn.git</url>
   </scm>
 
   <properties>

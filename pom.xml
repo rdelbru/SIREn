@@ -35,4 +35,15 @@
     </pluginManagement>
   </build>
 
+  <distributionManagement>
+    <repository>
+      <id>repo</id>
+      <url>https://github.com/rdelbru/maven-repository/raw/master/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>https://github.com/rdelbru/maven-repository/raw/master/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>

@@ -17,4 +17,19 @@
     <module>siren-qparser</module>
   </modules>
 
+  <scm>
+    <connection>scm:git:git@github.com:rdelbru/SIREn.git</connection>
+    <developerConnection>scm:git:git@github.com:rdelbru/SIREn.git</developerConnection>
+    <url>https://github.com/rdelbru/SIREn</url>
+  </scm>
+
+  <mailingLists>
+    <mailingList>
+      <name>SIREn User Mailing List</name>
+      <subscribe>http://lists.deri.org/mailman/listinfo/siren</subscribe>
+      <unsubscribe>siren@lists.deri.org</unsubscribe>
+      <archive>http://lists.deri.org/pipermail/siren/</archive>
+    </mailingList>
+  <mailingLists>
+
 </project>

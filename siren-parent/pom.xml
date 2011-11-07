@@ -23,6 +23,11 @@
     </developer>
   </developers>
 
+  <scm>
+    <connection>scm:git:git@github.com:rdelbru/SIREn.git</connection>
+    <url>scm:git:git@github.com:rdelbru/SIREn.git</url>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <lucene.version>3.4.0</lucene.version>

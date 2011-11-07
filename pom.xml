@@ -17,8 +17,8 @@
   </modules>
 
   <scm>
-    <connection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</connection>
-    <url>scm:git:ssh://git@github.com/rdelbru/SIREn.git</url>
+    <connection>scm:git:git@github.com:rdelbru/SIREn.git</connection>
+    <url>scm:git:git@github.com:rdelbru/SIREn.git</url>
   </scm>
 
 </project>

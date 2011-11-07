@@ -5,7 +5,7 @@
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-aggregator</artifactId>
-  <version>0.2.2-RC1</version>
+  <version>0.2.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>siren-aggregator</name>
 
@@ -17,9 +17,8 @@
   </modules>
 
   <scm>
-    <connection>scm:git:git@github.com:rdelbru/SIREn.git</connection>
-    <developerConnection>scm:git:git@github.com:rdelbru/SIREn.git</developerConnection>
-    <url>https://github.com/rdelbru/SIREn</url>
+    <connection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</connection>
+    <url>scm:git:ssh://git@github.com/rdelbru/SIREn.git</url>
   </scm>
 
 </project>

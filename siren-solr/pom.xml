@@ -5,7 +5,7 @@
   <parent>
     <artifactId>siren-parent</artifactId>
     <groupId>org.sindice.siren</groupId>
-    <version>0.2.2-RC1</version>
+    <version>0.2.2-SNAPSHOT</version>
     <relativePath>../siren-parent</relativePath>
   </parent>
 

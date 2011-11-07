@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.sindice.siren</groupId>
     <artifactId>siren-parent</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.1-SNAPSHOT</version>
     <relativePath>../siren-parent</relativePath>
   </parent>
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-qparser</artifactId>
-  <version>0.2.1</version>
+  <version>0.2.1-SNAPSHOT</version>
   <name>siren-qparser</name>
   <url>http://siren.sindice.org</url>
 
@@ -52,8 +53,10 @@
               <tasks>
                 <echo>Running Java CUP</echo>
                 <taskdef name="cup" classname="java_cup.anttask.CUPTask" classpathref="maven.compile.classpath" />
-                <cup srcfile="${basedir}/src/main/cup/NTripleQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources" parser="NTripleQParserImpl" symbols="NTripleQParserSymbols" interface="true" />
-                <cup srcfile="${basedir}/src/main/cup/EntityQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources" parser="EntityQParserImpl" symbols="EntityQParserSymbols" expect="9" interface="true" />
+                <cup srcfile="${basedir}/src/main/cup/NTripleQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources"
+                  parser="NTripleQParserImpl" symbols="NTripleQParserSymbols" interface="true" />
+                <cup srcfile="${basedir}/src/main/cup/EntityQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources"
+                  parser="EntityQParserImpl" symbols="EntityQParserSymbols" expect="9" interface="true" />
               </tasks>
             </configuration>
           </execution>

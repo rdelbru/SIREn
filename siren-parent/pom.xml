@@ -4,7 +4,7 @@
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-parent</artifactId>
-  <version>0.2.2-RC1</version>
+  <version>0.2.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>siren-parent</name>
   <url>http://siren.sindice.org</url>
@@ -36,11 +36,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.2.1</version>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -81,6 +76,11 @@
     </plugins>
     <pluginManagement>
       <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-release-plugin</artifactId>
+         <version>2.2.1</version>
+       </plugin>
         <plugin>
           <groupId>de.jflex</groupId>
           <artifactId>maven-jflex-plugin</artifactId>

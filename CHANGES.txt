@@ -6,11 +6,13 @@ New Features
 * [GH-19] Port MultiTermQuery
 * [GH-21] Activate SirenMultiTermQuery in query parser 
 * [GH-20] Extend analyzer for datatype support
-* [gh-23] Extend Solr schema for datatype support
+* [GH-23] Extend Solr schema for datatype support
+* [GH-25] Deploy SIREn on OSS Sonatype Repository
 
 Improvements
 
 * [GH-22] Upgrade to Lucene/Solr 3.4
+* [GH-28] Add publication reference to README
 
 Bugs
 

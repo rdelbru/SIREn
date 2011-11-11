@@ -75,17 +75,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <!-- Need to use 2.2-beta-4 to avoid duplicate entries in archive -->
-        <version>2.2-beta-4</version>
-        <configuration>
-          <descriptors>
-            <descriptor>assembly-bin.xml</descriptor>
-            <descriptor>assembly-dist.xml</descriptor>
-          </descriptors>
-        </configuration>
-      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>

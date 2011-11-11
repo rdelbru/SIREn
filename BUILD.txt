@@ -1,5 +1,5 @@
 
-SIREn 0.2.1-SNAPSHOT Build Instructions
+SIREn 0.2.2 Build Instructions
 
 --------------------------------------------------------------------------------
 

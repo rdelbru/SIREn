@@ -65,7 +65,7 @@ public class TestURILocalnameFilter {
                                 final String[] expectedTypes,
                                 final int[] expectedPosIncrs)
   throws Exception {
-    this.assertNormalisesTo(t, input, expectedImages, expectedTypes, null, null,
+    this.assertNormalisesTo(t, input, expectedImages, expectedTypes, expectedPosIncrs, null,
       null);
   }
 
@@ -153,6 +153,21 @@ public class TestURILocalnameFilter {
       new String[] { "uppercase", "Should", "Tokenised", "uppercaseShouldBeTokenised", "http://renaud.delbru.fr/rdf/uppercaseShouldBeTokenised" });
     this.assertNormalisesTo(_t, "<http://renaud.delbru.fr/rdf/AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised>",
       new String[] { "AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised", "http://renaud.delbru.fr/rdf/AVeryLongLocalnameWithMoreThan64CharactersThatShouldNotBeTokenised" });
+    
+    
+    final String triple = "<http://dbpedia.org/resource/The_Kingston_Trio> " +
+                          "<http://purl.org/dc/terms/subject>  " +
+                          "<http://dbpedia.org/resource/Category:Decca_Records_artists>";
+    this.assertNormalisesTo(_t, triple,
+        new String[] { "The", "Kingston", "Trio", "The_Kingston_Trio", "http://dbpedia.org/resource/The_Kingston_Trio",
+                       "subject", "http://purl.org/dc/terms/subject",
+                       "Category", "Decca", "Records", "artists", "Category:Decca_Records_artists", "http://dbpedia.org/resource/Category:Decca_Records_artists" },
+        new String[] { "<URI>", "<URI>", "<URI>", "<URI>", "<URI>",
+                       "<URI>", "<URI>",
+                       "<URI>", "<URI>", "<URI>", "<URI>", "<URI>", "<URI>" },
+        new int[] { 1, 1, 1, 0, 0,
+                    1, 0,
+                    1, 1, 1, 1, 0, 0 });
   }
 
   @Test

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-aggregator</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>0.2.2-RC2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>siren-aggregator</name>
 
@@ -16,5 +15,35 @@
     <module>siren-solr</module>
     <module>siren-qparser</module>
   </modules>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</developerConnection>
+    <url>git:ssh://git@github.com/rdelbru/SIREn.git</url>
+  </scm>
+
+  <!-- To avoid an error when tagging -->
+  <build>
+    <pluginManagement>
+      <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-release-plugin</artifactId>
+         <version>2.2.1</version>
+       </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <!-- distributionManagement>
+    <repository>
+      <id>repo</id>
+      <url>https://github.com/rdelbru/maven-repository/raw/master/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>https://github.com/rdelbru/maven-repository/raw/master/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement -->
 
 </project>

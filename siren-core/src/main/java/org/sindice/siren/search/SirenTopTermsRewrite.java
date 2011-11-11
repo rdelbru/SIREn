@@ -31,9 +31,10 @@ import java.util.PriorityQueue;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TopTermsRewrite;
 
 /**
- * 
+ * Code taken from {@link TopTermsRewrite} in order to use {@link SirenMultiTermQuery}.
  */
 public abstract class SirenTopTermsRewrite<Q extends Query> extends SirenTermCollectingRewrite<Q> {
 

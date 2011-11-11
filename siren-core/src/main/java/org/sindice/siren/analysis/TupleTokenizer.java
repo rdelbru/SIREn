@@ -40,7 +40,7 @@ import org.sindice.siren.analysis.attributes.TupleAttribute;
 
 /**
  * A grammar-based tokenizer constructed with JFlex for N-Tuples. Splits a
- * N-Tuple into BNode, URI, Literal, Dot tokens.
+ * N-Tuple into BNode, URI, Literal and Dot tokens.
  */
 public class TupleTokenizer
 extends Tokenizer {

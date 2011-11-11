@@ -41,7 +41,8 @@ import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.filter.AssignTokenTypeFilter;
 
 /**
- * Analyzer designed to deal with any kind of URIs.
+ * Analyzer designed to deal with any kind of URIs. It does not perform any
+ * post-processing on URIs. Only the {@link LowerCaseFilter} is used.
  */
 public class WhitespaceAnyURIAnalyzer extends Analyzer {
 

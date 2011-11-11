@@ -49,6 +49,7 @@ import org.sindice.siren.qparser.ntriple.query.model.TriplePattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
 import org.sindice.siren.qparser.ntriple.query.model.UnaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
+import org.sindice.siren.qparser.util.EscapeLuceneCharacters;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
@@ -290,7 +291,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
     logger.debug("Visiting URI");
     final DatatypeValue dtLit = u.getUp();
 
-    final String uri = SimpleNTripleQueryBuilder.escape(dtLit.getValue()); // URI schemes handling
+    final String uri = EscapeLuceneCharacters.escape(dtLit.getValue()); // URI schemes handling
     try {
       Analyzer analyzer;
       ResourceQueryParser qph;

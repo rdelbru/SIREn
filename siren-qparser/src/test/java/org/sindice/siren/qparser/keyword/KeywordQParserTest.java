@@ -135,6 +135,17 @@ public class KeywordQParserTest {
     } catch (final ParseException e) {
     }
   }
+  
+  @Test
+  public void testWildcardInURI() throws Exception {
+    Query q = parser.parse("http://example.com/~foo=bar");
+    assertEquals("explicit-content:http://example.com/~foo=bar " +
+    		"label:http://example.com/~foo=bar^2.5", q.toString());
+    
+    q = parser.parse("http://example.com/?foo=bar");
+    assertEquals("explicit-content:http://example.com/?foo=bar " +
+      "label:http://example.com/?foo=bar^2.5", q.toString());
+  }
 
   @Test
   public void testEncoding() throws Exception {
@@ -155,11 +166,47 @@ public class KeywordQParserTest {
     boosts.put("explicit-content", 1.0f);
     final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
     final KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, true);
-    final Query q = parser.parse("+foaf:name -foaf\\:person domain:dbpedia.org http://test.org/");
+    
+    final Query q1 = parser.parse("+foaf:name -foaf\\:person domain:dbpedia.org http://test.org/ http://test2.org/");
+    final Query q2 = parser.parse("+foaf:name http://test.org/ -foaf\\:person domain:dbpedia.org http://test2.org/");
+    final Query q3 = parser.parse("+foaf:name http://test.org/ -foaf\\:person domain:dbpedia.org");
+    final Query q4 = parser.parse("http://www.w3.org/1999/xhtml/vocab#alternate +foaf:name -foaf\\:person domain:dbpedia.org nothingToEscape");
     assertEquals("+explicit-content:foaf:name " +
-    		"-explicit-content:foaf\\:person " +
-    		"explicit-content:domain:dbpedia.org " +
-    		"explicit-content:http://test.org/", q.toString());
+                 "-explicit-content:foaf\\:person " +
+                 "explicit-content:domain:dbpedia.org " +
+                 "explicit-content:http://test.org/ " +
+                 "explicit-content:http://test2.org/", q1.toString());
+    assertEquals("+explicit-content:foaf:name " +
+                 "explicit-content:http://test.org/ " +
+                 "-explicit-content:foaf\\:person " +
+                 "explicit-content:domain:dbpedia.org " +
+                 "explicit-content:http://test2.org/", q2.toString());
+    assertEquals("+explicit-content:foaf:name " +
+                 "explicit-content:http://test.org/ " +
+                 "-explicit-content:foaf\\:person " +
+                 "explicit-content:domain:dbpedia.org", q3.toString());
+    assertEquals("explicit-content:http://www.w3.org/1999/xhtml/vocab#alternate " +
+                 "+explicit-content:foaf:name " +
+                 "-explicit-content:foaf\\:person " +
+                 "explicit-content:domain:dbpedia.org " +
+                 "explicit-content:nothingToEscape", q4.toString());
+  }
+  
+  @Test
+  public void testMailtoURI()
+  throws Exception {
+    final Map<String, Float> boosts = new HashMap<String, Float>();
+    boosts.put("explicit-content", 1.0f);
+    final Analyzer analyzer = new WhitespaceAnalyzer(matchVersion);
+    KeywordQParserImpl parser = new KeywordQParserImpl(analyzer, boosts, false);
+    
+    Query q = parser.parse("mailto:stephane.campinas@deri.org");
+    assertEquals("explicit-content:mailto:stephane.campinas@deri.org", q.toString());
+    
+    parser = new KeywordQParserImpl(analyzer, boosts, true);
+    q = parser.parse("mailto:stephane.campinas@deri.org domain:dbpedia.org");
+    assertEquals("explicit-content:mailto:stephane.campinas@deri.org " +
+    		         "explicit-content:domain:dbpedia.org", q.toString());
   }
 
   @Test

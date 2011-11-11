@@ -60,6 +60,7 @@ public class DatatypeAnalyzerFilter extends TokenFilter {
 
   private final CharArrayMap<Analyzer> dtsAnalyzer;
 
+  //
   private CharTermAttribute termAtt;
   private OffsetAttribute offsetAtt;
   private PositionIncrementAttribute posIncrAtt;
@@ -85,6 +86,14 @@ public class DatatypeAnalyzerFilter extends TokenFilter {
     this.initAttributes();
   }
 
+  /**
+   * Create a {@link DatatypeAnalyzerFilter} with the given default {@link Analyzer}
+   * for URI an Literal.
+   * @param version The Lucene version to use
+   * @param input the input token stream
+   * @param stringAnalyzer the default Literal {@link Analyzer}
+   * @param anyURIAnalyzer the default URI {@link Analyzer}
+   */
   public DatatypeAnalyzerFilter(final Version version,
                                 final TokenStream input,
                                 final Analyzer stringAnalyzer,

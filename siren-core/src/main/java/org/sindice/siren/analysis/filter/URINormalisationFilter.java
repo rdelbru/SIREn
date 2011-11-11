@@ -71,6 +71,7 @@ extends TokenFilter {
 
     // While we are normalising the URI
     if (_isNormalising) {
+      this.posIncrAtt.setPositionIncrement(1); // reset the position increment
       this.nextToken();
       return true;
     }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-parent</artifactId>
-  <version>0.2.2-SNAPSHOT</version>
+  <version>0.2.2-RC2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>siren-parent</name>
   <url>http://siren.sindice.org</url>
@@ -23,6 +22,12 @@
       </roles>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/rdelbru/SIREn.git</developerConnection>
+    <url>git:ssh://git@github.com/rdelbru/SIREn.git</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,6 +76,11 @@
     </plugins>
     <pluginManagement>
       <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-release-plugin</artifactId>
+         <version>2.2.1</version>
+       </plugin>
         <plugin>
           <groupId>de.jflex</groupId>
           <artifactId>maven-jflex-plugin</artifactId>

@@ -27,8 +27,6 @@
 package org.sindice.siren.qparser.keyword;
 
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.ParseException;
@@ -36,6 +34,7 @@ import org.apache.lucene.queryParser.QueryParser.Operator;
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
 import org.apache.lucene.search.Query;
+import org.sindice.siren.qparser.util.EscapeLuceneCharacters;
 
 /**
  * Underlying implementation of the parser for the simple query language.
@@ -43,12 +42,19 @@ import org.apache.lucene.search.Query;
 public class KeywordQParserImpl {
 
   private final KeywordQueryParser parser = new KeywordQueryParser();
-
+  
   /**
    * Flag for disabling field query
    */
   boolean disableField = false;
 
+  /**
+   * If disableField is false, field queries are not possible. Special characters
+   * within URIs are escaped.
+   * @param analyzer
+   * @param boosts
+   * @param disableField
+   */
   public KeywordQParserImpl(final Analyzer analyzer,
                             final Map<String, Float> boosts,
                             final boolean disableField) {
@@ -63,50 +69,15 @@ public class KeywordQParserImpl {
   public Query parse(final String query) throws ParseException {
     try {
       if (disableField) {
-        return parser.parse(KeywordQParserImpl.escape(query), null);
+        return parser.parse(EscapeLuceneCharacters.escape(query), null);
       }
       else { // If field queries enabled, escape only URIs
-        return parser.parse(this.escapeURIs(query), null);
+        return parser.parse(EscapeLuceneCharacters.escapeURIs(query), null);
       }
     }
     catch (final QueryNodeException e) {
-      throw new ParseException(e.getMessage());
+      throw new ParseException("Invalid keyword query");
     }
-  }
-
-  // TODO: does not support mailto: uri
-  static String uriRegExp = "(news|(ht|f)tp(s?))\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?";
-  static Pattern pattern = Pattern.compile(uriRegExp);
-
-  // TODO: check if other special characters of lucene can appear in a URI, and
-  // escape them, for example ~.
-  private String escapeURIs(final String query) {
-    final Matcher matcher = pattern.matcher(query);
-
-    final StringBuffer sb = new StringBuffer();
-    while (matcher.find()) {
-      matcher.appendReplacement(sb, matcher.group(0).replace(":", "\\\\:"));
-    }
-    matcher.appendTail(sb);
-
-    return sb.toString();
-  }
-
-  /**
-   * Returns a String where <code>:</code> and <code>\</code> are escaped by a
-   * preceding <code>\</code>.
-   */
-  public static String escape(final String s) {
-    final StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-      final char c = s.charAt(i);
-      // These characters are part of the field query syntax and must be escaped
-      if (c == ':' || c == '\\' || c == '~') {
-        sb.append('\\');
-      }
-      sb.append(c);
-    }
-    return sb.toString();
   }
 
   public void setDefaultOperator(final Operator operator) {

@@ -69,12 +69,6 @@ public abstract class NumericAnalyzer extends Analyzer {
       streams.tokenStream = new SirenNumericTokenStream(precisionStep);
       this.setNumericValue(streams.tokenStream, reader);
     } else {
-//      streams.tokenStream.reset();
-      /*
-       * Calling reset would throw an exception if a previous call to this stream
-       * failed somehow.
-       * Anyway, the reset just reset values which are assigned later by the set***Value method
-       */
       this.setNumericValue(streams.tokenStream, reader);
     }
     return streams.tokenStream;

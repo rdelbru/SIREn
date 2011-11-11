@@ -47,7 +47,19 @@ import org.sindice.siren.analysis.filter.URINormalisationFilter;
 import org.sindice.siren.analysis.filter.URITrailingSlashFilter;
 
 /**
- * Analyzer designed to deal with any kind of URIs.
+ * Analyzer designed to deal with any kind of URIs and perform some post-processing
+ * on URIs.
+ * <br>
+ * The URI normalisation can be configured. You can disable it, activate it
+ * only on URI local name, or on the full URI. However, URI normalisation on the
+ * full URI is costly in term of CPU at indexing time, and can double the size
+ * of the index, since each URI is duplicated by n tokens.
+ * <br>
+ * By default, the URI normalisation is disabled.
+ * <br>
+ * When full uri normalisation is activated, the analyzer is much slower than
+ * the WhitespaceTupleAnalyzer. If you are not indexing RDF data, consider to
+ * use the WhitespaceTupleAnalyzer instead.
  */
 public class AnyURIAnalyzer extends Analyzer {
 

@@ -55,16 +55,18 @@ public class NTripleQueryParser {
 
   private static final
   Logger logger = LoggerFactory.getLogger(NTripleQueryParser.class);
-
+  
   /**
    * Parse a NTriple query and return a Lucene {@link Query}. The query is built
    * over one Lucene's field.
-   *
+   * 
    * @param qstr The query string
+   * @param matchVersion the Lucene version to use
    * @param field The field to query
    * @param ntripleAnalyzer The analyzers for ntriple
-   * @param uriAnalyzer The analyzers for URIs
-   * @param literalAnalyzer The analyzers for Literals
+   * @param datatypeConfig datatype configuration, which maps a datatype key to a
+   * specific {@link Analyzer}.
+   * @param op default boolean operator
    * @return A Lucene's {@link Query}
    * @throws ParseException If something is wrong with the query string
    */
@@ -81,19 +83,22 @@ public class NTripleQueryParser {
     // Translate the AST into query objects
     return buildSingleFieldQuery(sym, matchVersion, field, datatypeConfig, op);
   }
-
+  
   /**
    * Parse a NTriple query and return a Lucene {@link Query}.
    * <br>
    * Different query builders are used depending on the number of fields to
    * query.
-   *
+   * 
    * @param qstr The query string
+   * @param matchVersion the Lucene version to use
    * @param boosts The field boosts
    * @param ntripleAnalyzer The set of analyzers (ntriple, uri, literal) for each
    * queried field
-   * @param uriAnalyzer
-   * @param literalAnalyzer
+   * @param datatypeConfigs datatype configuration for each field, which maps a
+   * datatype key to a specific {@link Analyzer}.
+   * @param op default boolean operator
+   * @param scattered
    * @return A Lucene's {@link Query}
    * @throws ParseException If something is wrong with the query string
    */
@@ -172,20 +177,27 @@ public class NTripleQueryParser {
     }
   }
 
+  /**
+   * Throws an error if the visitor failed
+   * @param translator
+   * @throws ParseException
+   */
   private static void queryBuildingError(final ScatteredNTripleQueryBuilder translator)
   throws ParseException {
     if (translator.hasError()) {
       throw new ParseException(translator.getErrorDescription());
     }
   }
-
+  
   /**
    * Translate the AST and build a single field query
    * @param sym The AST
-   * @param boosts The field boosts
-   * @param uriAnalyzer The analyzer for URIs
-   * @param literalAnalyzer The analyzer for Literals
-   * @return A Lucene query object
+   * @param matchVersion The Lucene version to use
+   * @param field The field to query
+   * @param datatypeConfig datatype configuration, which maps a datatype key to a
+   * specific {@link Analyzer}.
+   * @param op default boolean operator
+   * @return A Lucene {@link Query} object
    * @throws ParseException
    */
   private static Query buildSingleFieldQuery(final Symbol sym,
@@ -203,15 +215,14 @@ public class NTripleQueryParser {
   }
 
   /**
-   * Translate the AST and build a multi-field query. A multi-field query
-   * performs a disjunction of the original NTriple query over multiple fields,
-   * each field having a different boost.
-   *
+   * 
    * @param sym The AST
+   * @param matchVersion The Lucene version to use
    * @param boosts The field boosts
-   * @param uriAnalyzer The analyzer for URIs
-   * @param literalAnalyzer The analyzer for Literals
-   * @return A Lucene query object
+   * @param datatypeConfigs datatype configuration for each field, which maps a
+   * datatype key to a specific {@link Analyzer}.
+   * @param op default boolean operator
+   * @return A Lucene {@link Query} object
    * @throws ParseException
    */
   private static Query buildMultiFieldQuery(final Symbol sym,
@@ -234,18 +245,19 @@ public class NTripleQueryParser {
     }
     return bq;
   }
-
+  
   /**
    * Translate the AST and build a scattered multi-field query. A scattered
    * multi-field query performs a conjunction of triple patterns, in which
    * each triple pattern can appear in at least on of the fields. Each field
    * has a boost.
-   *
    * @param sym The AST
+   * @param matchVersion The Lucene version to use
    * @param boosts The field boosts
-   * @param uriAnalyzer The analyzer for URIs
-   * @param literalAnalyzer The analyzer for Literals
-   * @return A Lucene query object
+   * @param datatypeConfigs datatype configuration for each field, which maps a
+   * datatype key to a specific {@link Analyzer}.
+   * @param op default boolean operator
+   * @return A Lucene {@link Query} object
    * @throws ParseException
    */
   private static Query buildScatteredMultiFieldQuery(final Symbol sym,
@@ -289,7 +301,7 @@ public class NTripleQueryParser {
           }
         }
 
-        logger.debug("Received token {}, type={}", cTermAtt.toString(), typeAtt.type());
+        logger.debug("Received token {}", cTermAtt.toString());
         if (idx == -1) {
           logger.error("Received unknown token: {}", cTermAtt.toString());
         }

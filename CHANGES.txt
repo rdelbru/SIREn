@@ -1,5 +1,5 @@
 
-======================= Release 0.2.2 2011-xx-xx =======================
+======================= Release 0.2.2-RC1 2011-11-07 =======================
 
 New Features
 
@@ -12,10 +12,16 @@ Improvements
 
 * [GH-22] Upgrade to Lucene/Solr 3.4
 
+Bugs
+
+* [SRN-116] Question mark not correctly escaped in keyword search
+* [SRN-117] Phrase Query problem with uri local name
+
 ======================= Release 0.2.1 2011-09-13 =======================
 
 Bugs
 
+* [GH-15] siren-core - Fixed POM issue caused by the caliper dependency on gson
 * [SRN-25] Counting of matchers in SirenDisjunctionScorer is wrong
 * [SRN-79] Make URINormalisationFilter less agressive: token length minimum
            limit is now set to 3.
@@ -46,7 +52,7 @@ Improvements
 * [SRN-100] Improve user-readable version of the query
 * [SRN-102] Catch SolrException in SIREnQParser#parse
 * [SRN-105] Upgrade to Lucene/Solr 3.1
-* []SRN-108] Improved support of encoded character in URI
+* [SRN-108] Improved support of encoded character in URI
 * [SRN-112] Tokenisation problem with URI localnames
 
 * [GH-1] Pom fixes

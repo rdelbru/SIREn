@@ -61,7 +61,7 @@
       </plugin>
     </plugins>
   </reporting>
-	
+
   <repositories>
     <repository>
       <id>oss-sonatype</id>
@@ -83,7 +83,7 @@
       <artifactId>lucene-core</artifactId>
       <version>${lucene.version}</version>
     </dependency>
-		
+
     <dependency>
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-test-framework</artifactId>
@@ -105,7 +105,7 @@
       <version>1.7.1</version>
       <scope>test</scope>
     </dependency>
-		
+
   </dependencies>
 
 </project>

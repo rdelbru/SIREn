@@ -4,7 +4,9 @@
 New Features
 
 * [GH-19] Port MultiTermQuery
+* [GH-21] Activate SirenMultiTermQuery in query parser 
 * [GH-20] Extend analyzer for datatype support
+* [gh-23] Extend Solr schema for datatype support
 
 Improvements
 

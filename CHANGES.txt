@@ -14,6 +14,7 @@ Improvements
 * [GH-22] Upgrade to Lucene/Solr 3.4
 * [GH-28] Add publication reference to README
 * [GH-26] Remove old reference to assembly script
+* [GH-29] Pom should be configured to deploy also test artifacts
 
 Bugs
 

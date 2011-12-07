@@ -309,7 +309,7 @@ public class NTripleQueryParser {
         if (idx == NTripleQueryTokenizerImpl.URIPATTERN ||
             idx == NTripleQueryTokenizerImpl.LITERAL ||
             idx == NTripleQueryTokenizerImpl.LPATTERN) {
-          return new Symbol(idx, new DatatypeValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
+          return new Symbol(idx, new MetadataValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
         } else {
           return new Symbol(idx);
         }

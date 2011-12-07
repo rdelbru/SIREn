@@ -27,7 +27,7 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 
 /**
- * Create a {@link NTripleQueryTokenizer} stream
+ * Create a {@link TabularQueryTokenizer} stream
  */
 public class TabularQueryAnalyzer extends Analyzer {
 
@@ -38,7 +38,7 @@ public class TabularQueryAnalyzer extends Analyzer {
 
   @Override
   public final TokenStream tokenStream(final String fieldName, final Reader reader) {
-    final NTripleQueryTokenizer stream = new NTripleQueryTokenizer(reader);
+    final TabularQueryTokenizer stream = new TabularQueryTokenizer(reader);
     return stream;
   }
 
@@ -48,7 +48,7 @@ public class TabularQueryAnalyzer extends Analyzer {
     if (streams == null) {
       streams = new SavedStreams();
       this.setPreviousTokenStream(streams);
-      streams.tokenStream = new NTripleQueryTokenizer(reader);
+      streams.tokenStream = new TabularQueryTokenizer(reader);
     } else {
       streams.tokenStream.reset(reader);
     }
@@ -56,7 +56,7 @@ public class TabularQueryAnalyzer extends Analyzer {
   }
 
   private static final class SavedStreams {
-    NTripleQueryTokenizer tokenStream;
+    TabularQueryTokenizer tokenStream;
   }
 
 }

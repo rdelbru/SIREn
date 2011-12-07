@@ -30,20 +30,29 @@ import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
 
 /**
- * Set the datatype of an {@link URIPattern}, a {@link LiteralPattern} or a
- * {@link Literal}. For a literal for instance, the datatype is the URI extracted
- * from Literal^^&lt;URI&gt;.
+ * Holds metadata information about the value, which can be either an {@link URIPattern},
+ * a {@link LiteralPattern} or a {@link Literal}.
+ * It contains its datatype and its cell constraint. For a literal for instance,
+ * the datatype is the URI extracted from Literal^^&lt;URI&gt;.
  */
-public final class DatatypeValue {
+public final class MetadataValue {
 
   private final String datatype;
   private final String value;
+  private final int cellConstraint;
   
-  public DatatypeValue(final char[] datatype, final String value) {
+  public MetadataValue(final char[] datatype, final String value) {
     this.datatype = new String(datatype);
     this.value = value;
+    cellConstraint = -1;
   }
 
+  public MetadataValue(final char[] datatype, final String value, final int cellConstraint) {
+    this.datatype = new String(datatype);
+    this.value = value;
+    this.cellConstraint = cellConstraint;
+  }
+  
   public String getDatatypeURI() {
     return datatype;
   }
@@ -54,7 +63,11 @@ public final class DatatypeValue {
 
   @Override
   public String toString() {
-    return datatype + ":" + value;
+    return (cellConstraint == -1 ? "" : "[" + cellConstraint + "] ") + datatype + ":" + value;
+  }
+
+  public int getCellConstraint() {
+    return cellConstraint;
   }
   
 }

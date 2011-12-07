@@ -43,20 +43,20 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
+import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
-import org.sindice.siren.qparser.analysis.NTripleQueryTokenizerImpl;
-import org.sindice.siren.qparser.ntriple.DatatypeValue;
+import org.sindice.siren.qparser.analysis.TabularQueryTokenizerImpl;
+import org.sindice.siren.qparser.ntriple.MetadataValue;
 import org.sindice.siren.qparser.ntriple.NTripleQParserImpl;
-import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
-import org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
+import org.sindice.siren.qparser.tabular.query.ScatteredTabularQueryBuilder;
+import org.sindice.siren.qparser.tabular.query.SimpleTabularQueryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TabularQueryParser {
 
-  private static final
-  Logger logger = LoggerFactory.getLogger(TabularQueryParser.class);
+  private static final Logger logger = LoggerFactory.getLogger(TabularQueryParser.class);
   
   /**
    * Parse a NTriple query and return a Lucene {@link Query}. The query is built
@@ -172,7 +172,7 @@ public class TabularQueryParser {
    * @param translator
    * @throws ParseException
    */
-  private static void queryBuildingError(final SimpleNTripleQueryBuilder translator)
+  private static void queryBuildingError(final SimpleTabularQueryBuilder translator)
   throws ParseException {
     if (translator.hasError()) {
       throw new ParseException(translator.getErrorDescription());
@@ -184,7 +184,7 @@ public class TabularQueryParser {
    * @param translator
    * @throws ParseException
    */
-  private static void queryBuildingError(final ScatteredNTripleQueryBuilder translator)
+  private static void queryBuildingError(final ScatteredTabularQueryBuilder translator)
   throws ParseException {
     if (translator.hasError()) {
       throw new ParseException(translator.getErrorDescription());
@@ -208,7 +208,7 @@ public class TabularQueryParser {
                                              final Map<String, Analyzer> datatypeConfig,
                                              final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion, field, datatypeConfig);
+    final SimpleTabularQueryBuilder translator = new SimpleTabularQueryBuilder(matchVersion, field, datatypeConfig);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);
@@ -235,7 +235,7 @@ public class TabularQueryParser {
   throws ParseException {
     final BooleanQuery bq = new BooleanQuery(true);
     for (final String field : boosts.keySet()) {
-      final SimpleNTripleQueryBuilder translator = new SimpleNTripleQueryBuilder(matchVersion,
+      final SimpleTabularQueryBuilder translator = new SimpleTabularQueryBuilder(matchVersion,
         field, datatypeConfigs.get(field));
       translator.setDefaultOperator(op);
       final NTripleQuery nq = (NTripleQuery) sym.value;
@@ -268,7 +268,7 @@ public class TabularQueryParser {
                                                      final Map<String, Map<String, Analyzer>> datatypeConfigs,
                                                      final DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    final ScatteredNTripleQueryBuilder translator = new ScatteredNTripleQueryBuilder(matchVersion, boosts, datatypeConfigs);
+    final ScatteredTabularQueryBuilder translator = new ScatteredTabularQueryBuilder(matchVersion, boosts, datatypeConfigs);
     translator.setDefaultOperator(op);
     final NTripleQuery nq = (NTripleQuery) sym.value;
     nq.traverseBottomUp(translator);
@@ -282,12 +282,14 @@ public class TabularQueryParser {
     private final CharTermAttribute cTermAtt;
     private final TypeAttribute typeAtt;
     private final DatatypeAttribute dataTypeAtt;
+    private final CellAttribute cellAtt;
 
     public CupScannerWrapper(final TokenStream stream) {
       _stream = stream;
       cTermAtt = _stream.getAttribute(CharTermAttribute.class);
       typeAtt = _stream.getAttribute(TypeAttribute.class);
       dataTypeAtt = stream.getAttribute(DatatypeAttribute.class);
+      cellAtt = stream.getAttribute(CellAttribute.class);
     }
 
     /* (non-Javadoc)
@@ -297,8 +299,8 @@ public class TabularQueryParser {
       if (_stream.incrementToken()) {
 
         int idx = -1;
-        for (int i = 0; i < NTripleQueryTokenizerImpl.TOKEN_TYPES.length; i++) {
-          if (typeAtt.type().equals(NTripleQueryTokenizerImpl.TOKEN_TYPES[i])) {
+        for (int i = 0; i < TabularQueryTokenizerImpl.TOKEN_TYPES.length; i++) {
+          if (typeAtt.type().equals(TabularQueryTokenizerImpl.TOKEN_TYPES[i])) {
             idx = i;
           }
         }
@@ -308,10 +310,12 @@ public class TabularQueryParser {
           logger.error("Received unknown token: {}", cTermAtt.toString());
         }
 
-        if (idx == NTripleQueryTokenizerImpl.URIPATTERN ||
-            idx == NTripleQueryTokenizerImpl.LITERAL ||
-            idx == NTripleQueryTokenizerImpl.LPATTERN) {
-          return new Symbol(idx, new DatatypeValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
+        if (idx == TabularQueryTokenizerImpl.URIPATTERN ||
+            idx == TabularQueryTokenizerImpl.LITERAL ||
+            idx == TabularQueryTokenizerImpl.LPATTERN) {
+          return new Symbol(idx, new MetadataValue(dataTypeAtt.datatypeURI(),
+                                                   cTermAtt.toString(),
+                                                   cellAtt.cell()));
         } else {
           return new Symbol(idx);
         }

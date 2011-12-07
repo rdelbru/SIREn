@@ -32,6 +32,7 @@ import java.io.Reader;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
+import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 
 public final class TabularQueryTokenizer extends Tokenizer {
@@ -39,9 +40,10 @@ public final class TabularQueryTokenizer extends Tokenizer {
   private final CharTermAttribute cTermAtt;
   private final TypeAttribute typeAtt;
   private final DatatypeAttribute dataTypeAtt;
-
+  private final CellAttribute cellAtt;
+  
   /** A private instance of the JFlex-constructed scanner */
-  private final NTripleQueryTokenizerImpl _scanner;
+  private final TabularQueryTokenizerImpl _scanner;
 
   /** Token definition */
   public static final int EOF = 0;
@@ -62,10 +64,11 @@ public final class TabularQueryTokenizer extends Tokenizer {
    */
   public TabularQueryTokenizer(final Reader input) {
     this.input = input;
-    this._scanner = new NTripleQueryTokenizerImpl(input);
+    this._scanner = new TabularQueryTokenizerImpl(input);
     cTermAtt = this.addAttribute(CharTermAttribute.class);
     typeAtt = this.addAttribute(TypeAttribute.class);
     dataTypeAtt = this.addAttribute(DatatypeAttribute.class);
+    cellAtt = this.addAttribute(CellAttribute.class);
   }
 
   @Override
@@ -92,6 +95,7 @@ public final class TabularQueryTokenizer extends Tokenizer {
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getURIText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
+        cellAtt.setCell(_scanner.getCellConstraint());
         break;
 
       case TabularQueryTokenizer.LITERAL:
@@ -99,6 +103,7 @@ public final class TabularQueryTokenizer extends Tokenizer {
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
+        cellAtt.setCell(_scanner.getCellConstraint());
         break;
 
       case TabularQueryTokenizer.LPATTERN:
@@ -106,6 +111,7 @@ public final class TabularQueryTokenizer extends Tokenizer {
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
+        cellAtt.setCell(_scanner.getCellConstraint());
         break;
 
       case TabularQueryTokenizer.EOF:

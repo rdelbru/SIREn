@@ -42,7 +42,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /* Import the class that will store the datatype of a value, e.g, a Literal */
-import org.sindice.siren.qparser.ntriple.DatatypeValue;
+import org.sindice.siren.qparser.ntriple.MetadataValue;
 
 /* Parser code to change the way the parser reports errors (include
    line and column number of the error). */
@@ -86,7 +86,7 @@ parser code {:
    the next line down. */
    
 terminal          AND, OR, MINUS, LPAREN, RPAREN, WILDCARD;
-terminal org.sindice.siren.qparser.ntriple.DatatypeValue          URIPATTERN, LITERAL, LPATTERN;
+terminal org.sindice.siren.qparser.ntriple.MetadataValue          URIPATTERN, LITERAL, LPATTERN;
    
 /* Non terminals used in the grammar section.  
 

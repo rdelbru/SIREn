@@ -20,26 +20,25 @@
  */
 /**
  * @project siren
- * @author Renaud Delbru [ 25 Apr 2008 ]
+ * @author Renaud Delbru [ 29 Oct 2010 ]
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
 package org.sindice.siren.qparser.tabular.query;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.qparser.ntriple.DatatypeValue;
+import org.sindice.siren.qparser.ntriple.MetadataValue;
 import org.sindice.siren.qparser.ntriple.query.AbstractNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.QueryBuilderException;
 import org.sindice.siren.qparser.ntriple.query.ResourceQueryParser;
-import org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
@@ -64,28 +63,29 @@ import org.slf4j.LoggerFactory;
  * The visitor for translating the AST into a Siren NTriple Query.
  * This visitor must traverse the AST with a bottom up approach.
  */
-public class TabularQueryBuilder extends AbstractNTripleQueryBuilder {
+public class ScatteredTabularQueryBuilder extends AbstractNTripleQueryBuilder {
 
   /**
-   * Lucene's field to query
+   * Field boosts
    */
-  String field;
+  Map<String, Float> boosts;
 
   /**
-   * The configuration map between the datatype URI and the {@link Analyzer} or,
-   * in the case of a numeric query, the {@link NumericConfig}.
+   * Configurations (per field) between the datatype URI and the
+   * {@link Analyzer} or, in the case of a numeric query, the
+   * {@link NumericConfig}.
    */
-  private final Map<String, Analyzer> datatypeConfig;
+  private final Map<String, Map<String, Analyzer>> datatypeConfigs;
 
   private static final
-  Logger logger = LoggerFactory.getLogger(TabularQueryBuilder.class);
+  Logger logger = LoggerFactory.getLogger(ScatteredTabularQueryBuilder.class);
 
-  public TabularQueryBuilder(final Version matchVersion,
-                                   final String field,
-                                   final Map<String, Analyzer> datatypeConfig) {
+  public ScatteredTabularQueryBuilder(final Version matchVersion,
+                                      final Map<String, Float> boosts,
+                                      final Map<String, Map<String, Analyzer>> datatypeConfigs) {
     super(matchVersion);
-    this.field = field;
-    this.datatypeConfig = datatypeConfig;
+    this.boosts = boosts;
+    this.datatypeConfigs = datatypeConfigs;
   }
 
   @Override
@@ -169,58 +169,89 @@ public class TabularQueryBuilder extends AbstractNTripleQueryBuilder {
   public void visit(final TriplePattern tp) {
     logger.debug("Visiting TriplePattern - Enter");
 
-    final SirenTupleQuery tupleQuery = new SirenTupleQuery();
+    final BooleanQuery bq = new BooleanQuery(true);
 
     if (!this.hasError()) {
-      SirenCellQuery cellQuery = null;
-
-      // Subject
-      if (tp.getS() != null && !(tp.getS() instanceof Wildcard)) {
-        // we should always receive a SirenPrimitiveQuery
-        cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getS().getQuery());
-        cellQuery.setConstraint(0);
-        tupleQuery.add(cellQuery,
-          org.sindice.siren.search.SirenTupleClause.Occur.MUST);
-      }
-
-      // Predicate
-      if (tp.getP() != null && !(tp.getP() instanceof Wildcard)) {
-        // we should always receive a SirenPrimitiveQuery
-        cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getP().getQuery());
-        cellQuery.setConstraint(1);
-        tupleQuery.add(cellQuery,
-          org.sindice.siren.search.SirenTupleClause.Occur.MUST);
-      }
-
-      // Object
-      if (tp.getO() != null && !(tp.getO() instanceof Wildcard)) {
-        // we should always receive a SirenPrimitiveQuery
-        cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getO().getQuery());
-        cellQuery.setConstraint(2, Integer.MAX_VALUE);
-        tupleQuery.add(cellQuery,
-          org.sindice.siren.search.SirenTupleClause.Occur.MUST);
+      for (final String fieldName : boosts.keySet()) {
+        final SirenTupleQuery tupleQuery = new SirenTupleQuery();
+        this.visitSubject(tp, tupleQuery, fieldName);
+        this.visitPredicate(tp, tupleQuery, fieldName);
+        this.visitObject(tp, tupleQuery, fieldName);
+        tupleQuery.setBoost(boosts.get(fieldName));
+        bq.add(tupleQuery, Occur.SHOULD);
       }
     }
 
-    tp.setQuery(tupleQuery);
+    tp.setQuery(bq);
+
     logger.debug("Visiting TriplePattern - Exit");
   }
 
+  private void visitSubject(final TriplePattern tp,
+                            final SirenTupleQuery tupleQuery,
+                            final String fieldName) {
+    SirenCellQuery cellQuery = null;
+    if (tp.getS() != null && !(tp.getS() instanceof Wildcard)) {
+      // we should always receive a SirenPrimitiveQuery
+      cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getS().getQueries().get(fieldName));
+      cellQuery.setConstraint(tp.getS().getUp().getCellConstraint());
+      tupleQuery.add(cellQuery, org.sindice.siren.search.SirenTupleClause.Occur.MUST);
+    }
+  }
+
+  private void visitPredicate(final TriplePattern tp,
+                              final SirenTupleQuery tupleQuery,
+                              final String fieldName) {
+    SirenCellQuery cellQuery = null;
+    if (tp.getP() != null && !(tp.getP() instanceof Wildcard)) {
+      // we should always receive a SirenPrimitiveQuery
+      cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getP().getQueries().get(fieldName));
+      cellQuery.setConstraint(tp.getP().getUp().getCellConstraint());
+      tupleQuery.add(cellQuery, org.sindice.siren.search.SirenTupleClause.Occur.MUST);
+    }
+  }
+
+  private void visitObject(final TriplePattern tp,
+                           final SirenTupleQuery tupleQuery,
+                           final String fieldName) {
+    SirenCellQuery cellQuery = null;
+    if (tp.getO() != null && !(tp.getO() instanceof Wildcard)) {
+      // we should always receive a SirenPrimitiveQuery
+      cellQuery = new SirenCellQuery((SirenPrimitiveQuery) tp.getO().getQueries().get(fieldName));
+      if (tp.getO() instanceof Literal) {
+        cellQuery.setConstraint(tp.getO().getL().getCellConstraint());
+      } else if (tp.getO() instanceof LiteralPattern) {
+        cellQuery.setConstraint(tp.getO().getLp().getCellConstraint());
+      } else if (tp.getO() instanceof URIPattern) {
+        cellQuery.setConstraint(((URIPattern) tp.getO()).getUp().getCellConstraint());
+      }
+      tupleQuery.add(cellQuery, org.sindice.siren.search.SirenTupleClause.Occur.MUST);
+    }
+  }
+
   /**
-   * Parse the literal using the StandardAnalzyer, creating
-   * a SirenPhraseQuery from the tokens.
-   * If the literal parsing fails, it is ignored.
+   * Create a SirenPhraseQuery
+   * <p>
+   * The query is expanded to each of the field found in the boost parameter.
    */
   @Override
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
-    final DatatypeValue dtLit = l.getL();
+    final MetadataValue dtLit = l.getL();
 
     try {
-      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
-      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
-      // Add quotes so that the parser evaluates it as a phrase query
-      l.setQuery(qph.parse("\"" + dtLit.getValue() + "\"", field));
+      Analyzer analyzer;
+      ResourceQueryParser qph;
+
+      if (l.getQueries() == null) {
+        l.setQueries(new HashMap<String, Query>());
+      }
+      for (final String fieldName : boosts.keySet()) {
+        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
+        qph = this.getResourceQueryParser(analyzer);
+        // Add quotes so that the parser evaluates it as a phrase query
+        l.getQueries().put(fieldName, qph.parse("\"" + dtLit.getValue() + "\"", fieldName));
+      }
     }
     catch (final Exception e) {
       logger.error("Parsing of the Literal failed", e);
@@ -229,19 +260,28 @@ public class TabularQueryBuilder extends AbstractNTripleQueryBuilder {
   }
 
   /**
-   * Create one of the Siren specific queries (SirenPhraseQuery, SirenTermQuery,
-   * SirenTupleQuery) from the LiteralPattern
-   * @throws ParseException
+   * Use the {@link ResourceQueryParser} to parse the Literal pattern and create
+   * a SIREn query.
+   * <p>
+   * The query is expanded to each of the field found in the boost parameter.
    */
   @Override
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
-    final DatatypeValue dtLit = lp.getLp();
+    final MetadataValue dtLit = lp.getLp();
 
     try {
-      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
-      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
-      lp.setQuery(qph.parse(dtLit.getValue(), field));
+      Analyzer analyzer;
+      ResourceQueryParser qph;
+
+      if (lp.getQueries() == null) {
+        lp.setQueries(new HashMap<String, Query>());
+      }
+      for (final String fieldName : boosts.keySet()) {
+        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
+        qph = this.getResourceQueryParser(analyzer);
+        lp.getQueries().put(fieldName, qph.parse(dtLit.getValue(), fieldName));
+      }
     }
     catch (final Exception e) {
       logger.error("Parsing of the LiteralPattern failed", e);
@@ -250,20 +290,29 @@ public class TabularQueryBuilder extends AbstractNTripleQueryBuilder {
   }
 
   /**
-   * Create a SirenTermQuery
-   * @throws ParseException
+   * Use the {@link ResourceQueryParser} to parse the URI pattern and create
+   * a SIREn query.
+   * <p>
+   * The query is expanded to each of the field found in the boost parameter.
    */
   @Override
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
-    final DatatypeValue dtLit = u.getUp();
-    // URI schemes and special Lucene characters handling
-    final String uri = EscapeLuceneCharacters.escape(dtLit.getValue());
+    final MetadataValue dtLit = u.getUp();
 
+    final String uri = EscapeLuceneCharacters.escape(dtLit.getValue()); // URI schemes handling
     try {
-      final Analyzer analyzer = this.getAnalyzer(dtLit.getDatatypeURI());
-      final ResourceQueryParser qph = this.getResourceQueryParser(analyzer);
-      u.setQuery(qph.parse(uri, field));
+      Analyzer analyzer;
+      ResourceQueryParser qph;
+
+      if (u.getQueries() == null) {
+        u.setQueries(new HashMap<String, Query>());
+      }
+      for (final String fieldName : boosts.keySet()) {
+        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
+        qph = this.getResourceQueryParser(analyzer);
+        u.getQueries().put(fieldName, qph.parse(uri, fieldName));
+      }
     }
     catch (final Exception e) {
       logger.error("Parsing of the URIPattern failed", e);
@@ -280,19 +329,18 @@ public class TabularQueryBuilder extends AbstractNTripleQueryBuilder {
   }
 
   /**
-   * Get the associated analyzer. If no analyzer exists, then throw an
-   * exception.
+   * Get the associated {@link Analyzer}. If no analyzer exists, it throws an exception.
    *
+   * @param fieldName The field name associated to this analyzer
    * @param datatypeURI The datatype URI associated to this analyzer
+   * @return
    */
-  private Analyzer getAnalyzer(final String datatypeURI) {
-    final Analyzer analyzer = datatypeConfig.get(datatypeURI);
-    
-    if (analyzer == null) {
-      throw new QueryBuilderException(Error.PARSE_ERROR,
-        "Field '" + field + ": Unknown datatype " + datatypeURI);
+  private Analyzer getAnalyzer(final String fieldName, final String datatypeURI) {
+    if (datatypeConfigs.get(fieldName).get(datatypeURI) == null) {
+      throw new QueryBuilderException(org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error.PARSE_ERROR,
+        "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
     }
-    return analyzer;
+    return datatypeConfigs.get(fieldName).get(datatypeURI);
   }
 
 }

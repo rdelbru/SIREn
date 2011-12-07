@@ -25,7 +25,7 @@
  * @link http://renaud.delbru.fr/
  * All rights reserved.
  */
-package org.sindice.siren.qparser.ntriple.parser;
+package org.sindice.siren.qparser.tabular.parser;
 
 import static org.junit.Assert.assertEquals;
 
@@ -47,13 +47,13 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.store.RAMDirectory;
-import org.sindice.siren.qparser.analysis.NTripleQueryAnalyzer;
 import org.sindice.siren.qparser.analysis.NTripleTestHelper;
-import org.sindice.siren.qparser.ntriple.NTripleQueryParser;
+import org.sindice.siren.qparser.analysis.TabularQueryAnalyzer;
+import org.sindice.siren.qparser.tabular.TabularQueryParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class NTripleQueryParserTestHelper extends NTripleTestHelper {
+public class TabularQueryParserTestHelper extends NTripleTestHelper {
 
   protected static final Logger logger = LoggerFactory.getLogger(NTripleTestHelper.class);
 
@@ -65,8 +65,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
     try {
       ramDir = new RAMDirectory();
-      NTripleQueryParserTestHelper.index(ramDir, ntriples);
-      return NTripleQueryParserTestHelper.getScore(ramDir, query, boosts, scattered);
+      TabularQueryParserTestHelper.index(ramDir, ntriples);
+      return TabularQueryParserTestHelper.getScore(ramDir, query, boosts, scattered);
     }
     finally {
       if (ramDir != null) ramDir.close();
@@ -81,8 +81,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
     try {
       ramDir = new RAMDirectory();
-      NTripleQueryParserTestHelper.index(ramDir, ntriples);
-      return NTripleQueryParserTestHelper.match(ramDir, query, boosts, scattered);
+      TabularQueryParserTestHelper.index(ramDir, ntriples);
+      return TabularQueryParserTestHelper.match(ramDir, query, boosts, scattered);
     }
     finally {
       if (ramDir != null) ramDir.close();
@@ -95,8 +95,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
     try {
       ramDir = new RAMDirectory();
-      NTripleQueryParserTestHelper.index(ramDir, ntriple);
-      return NTripleQueryParserTestHelper.match(ramDir, query, _defaultField);
+      TabularQueryParserTestHelper.index(ramDir, ntriple);
+      return TabularQueryParserTestHelper.match(ramDir, query, _defaultField);
     }
     finally {
       if (ramDir != null) ramDir.close();
@@ -109,8 +109,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
 
     try {
       ramDir = new RAMDirectory();
-      NTripleQueryParserTestHelper.indexImplicit(ramDir, ntriple);
-      return NTripleQueryParserTestHelper.match(ramDir, query, _implicitField);
+      TabularQueryParserTestHelper.indexImplicit(ramDir, ntriple);
+      return TabularQueryParserTestHelper.match(ramDir, query, _implicitField);
     }
     finally {
       if (ramDir != null) ramDir.close();
@@ -180,8 +180,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, matchVersion, field,
-        new NTripleQueryAnalyzer(), datatypeConfigs.get(field), Operator.AND);
+      final Query q = TabularQueryParser.parse(query, matchVersion, field,
+        new TabularQueryAnalyzer(), datatypeConfigs.get(field), Operator.AND);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -197,8 +197,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts,
-        new NTripleQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
+      final Query q = TabularQueryParser.parse(query, matchVersion, boosts,
+        new TabularQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
       logger.debug("{} = {}", query, q.toString());
       final int hits = ramSearcher.search(q, null, 100).totalHits;
       return (hits >= 1);
@@ -214,8 +214,8 @@ public class NTripleQueryParserTestHelper extends NTripleTestHelper {
     IndexSearcher ramSearcher = null;
     try {
       ramSearcher = NTripleTestHelper.createRamIndexSearcher(ramDir);
-      final Query q = NTripleQueryParser.parse(query, matchVersion, boosts,
-        new NTripleQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
+      final Query q = TabularQueryParser.parse(query, matchVersion, boosts,
+        new TabularQueryAnalyzer(), datatypeConfigs, Operator.AND, scattered);
       logger.debug("{} = {}", query, q.toString());
       final ScoreDoc[] result = ramSearcher.search(q, null, 100).scoreDocs;
       assertEquals(1, result.length);

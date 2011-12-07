@@ -31,14 +31,14 @@ import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Token;
 import java_cup.runtime.*;
 import org.sindice.siren.util.XSDDatatype;
-import org.sindice.siren.qparser.ntriple.DatatypeValue;
+import org.sindice.siren.qparser.ntriple.MetadataValue;
 
 %%
 
 /** 
  *  The name of the class JFlex will create will be Lexer.
  */
-%class NTripleQueryTokenizerImpl
+%class TabularQueryTokenizerImpl
 
 %public
 %final
@@ -104,7 +104,8 @@ import org.sindice.siren.qparser.ntriple.DatatypeValue;
 	Logger logger = LoggerFactory.getLogger(NTripleQueryTokenizerImpl.class);
 	
 	private final StringBuffer buffer = new StringBuffer();
-	private final StringBuffer metadataBuffer = new StringBuffer();
+	private final StringBuffer datatypeBuffer = new StringBuffer();
+  private int cellConstraint = -1;
   
   /** Datatype representing xsd:string */
   private static final char[] XSD_STRING = XSDDatatype.XSD_STRING.toCharArray();
@@ -131,17 +132,17 @@ import org.sindice.siren.qparser.ntriple.DatatypeValue;
 	  return new Symbol(type, yyline, yycolumn, value);
 	}
 	
-	private Symbol symbol(int type, DatatypeValue dl) {
+	private Symbol symbol(int type, MetadataValue dl) {
 	logger.debug("Obtain token {} \"{}\"", type, dl);
     return new Symbol(type, yyline, yycolumn, dl);
 	}
 	
 	/**
-	 * Fills Lucene token with the current token text, removing the first and 
+	 * Fills Lucene token with the current token text, removing the first two and 
 	 * last characters.
 	 */
 	final String getURIText() {
-	  return new String(zzBuffer, zzStartRead + 1, zzMarkedPos - zzStartRead - 2);
+	  return new String(zzBuffer, zzStartRead + 2, zzMarkedPos - zzStartRead - 3);
 	}
 
 	/**
@@ -149,7 +150,7 @@ import org.sindice.siren.qparser.ntriple.DatatypeValue;
 	 * last characters.
 	 */
 	final void getURIText(Token t) {
-	  t.setTermBuffer(zzBuffer, zzStartRead + 1, zzMarkedPos - zzStartRead - 2);
+	  t.setTermBuffer(zzBuffer, zzStartRead + 2, zzMarkedPos - zzStartRead - 3);
 	}
 	
 	/**
@@ -174,13 +175,22 @@ import org.sindice.siren.qparser.ntriple.DatatypeValue;
    * <p> Return the datatype xsd:string by default.
    */
   public final char[] getDatatypeURI() {
-    // If not datatype, returns by default datatype xsd:string
-    if (metadataBuffer.length() == 0) {
+    // If no datatype, returns by default datatype xsd:string
+    if (datatypeBuffer.length() == 0) {
       return XSD_STRING;
     }
-    char[] chars = new char[metadataBuffer.length()];
-    metadataBuffer.getChars(0, metadataBuffer.length(), chars, 0);
+    char[] chars = new char[datatypeBuffer.length()];
+    datatypeBuffer.getChars(0, datatypeBuffer.length(), chars, 0);
     return chars;
+  }
+  
+  /**
+   * Return the cell constraint of the expression.
+   */
+  public final int getCellConstraint() {
+    if (cellConstraint == -1)
+      throw new IllegalArgumentException("You must specify a cell constraint");
+    return cellConstraint;
   }
 	
 %}
@@ -193,15 +203,11 @@ URIREF				 =  "<" [^>]+ ">"
 
 %state LITSTR
 %state LITPATSTR
+%state CCSTR
 
 %%
 
 <YYINITIAL> {
-
-	{URIREF}				{ // Assign the xsd:anyURI
-                    metadataBuffer.setLength(0);
-                    metadataBuffer.append(XSDDatatype.XSD_ANY_URI);
-	                  return URIPATTERN; }
 	
 	"AND" | "&&"    { return AND; }
 	
@@ -215,13 +221,8 @@ URIREF				 =  "<" [^>]+ ">"
 	
 	"*"    					{ return WILDCARD; }
 	
-	\"							{ buffer.setLength(0);
-	                  metadataBuffer.setLength(0);
-	                  yybegin(LITSTR); }
-	
-	\'							{ buffer.setLength(0);
-	                  metadataBuffer.setLength(0);
-	                  yybegin(LITPATSTR); }
+  "["             { cellConstraint = -1;
+                    yybegin(CCSTR); }
 	
 	{WHITESPACE}		{ /* ignore */ }
 	
@@ -239,10 +240,11 @@ URIREF				 =  "<" [^>]+ ">"
 
   \"\^\^{URIREF}  { yybegin(YYINITIAL);
                     // remove the first four and the last characters.
-                    metadataBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
+                    datatypeBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
                     return LITERAL; }
                     
-	\" 							{ yybegin(YYINITIAL); return LITERAL; }
+	\" 							{ yybegin(YYINITIAL);
+	                  return LITERAL; }
 
   [^\"\\]+  			{ buffer.append(yytext()); }
   
@@ -257,7 +259,7 @@ URIREF				 =  "<" [^>]+ ">"
 
   \'\^\^{URIREF}  { yybegin(YYINITIAL);
                     // remove the first four and the last characters.
-                    metadataBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
+                    datatypeBuffer.append(zzBuffer, zzStartRead + 4, zzMarkedPos - zzStartRead - 5);
                     return LPATTERN; }
                     
 	\'							{ yybegin(YYINITIAL); return LPATTERN; }
@@ -268,6 +270,29 @@ URIREF				 =  "<" [^>]+ ">"
   \\.            	{ buffer.append(yytext()); }
   
   <<EOF>>					{ return ERROR; }
+
+}
+
+<CCSTR> {
+
+  [:digit:]+      { // Assign the Cell constraint
+                    cellConstraint = Integer.valueOf(yytext()); }
+
+  \]{URIREF}       { yybegin(YYINITIAL);
+                     // Assign the xsd:anyURI
+                     datatypeBuffer.setLength(0);
+                     datatypeBuffer.append(XSDDatatype.XSD_ANY_URI);
+                     return URIPATTERN; }
+
+  \]\"             { buffer.setLength(0);
+                     datatypeBuffer.setLength(0);
+                     yybegin(LITSTR); }
+  
+  \]\'             { buffer.setLength(0);
+                     datatypeBuffer.setLength(0);
+                     yybegin(LITPATSTR); }
+  
+  <<EOF>>         { return ERROR; }
 
 }
 

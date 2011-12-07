@@ -24,24 +24,24 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.qparser.ntriple.query;
+package org.sindice.siren.qparser.tabular.query;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.queryParser.standard.config.DefaultOperatorAttribute;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.NumericAnalyzer;
-import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
-import org.sindice.siren.qparser.ntriple.query.model.VisitorAdaptor;
+import org.sindice.siren.qparser.tabular.query.model.LiteralPattern;
+import org.sindice.siren.qparser.tabular.query.model.VisitorAdaptor;
 import org.sindice.siren.qparser.tuple.QueryBuilderException;
 import org.sindice.siren.qparser.tuple.ResourceQueryParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The visitor for translating the AST into a Siren NTriple Query.
+ * The visitor for translating the AST into a Siren Tabular Query.
  */
-public abstract class AbstractNTripleQueryBuilder extends VisitorAdaptor {
+public abstract class AbstractTabularQueryBuilder extends VisitorAdaptor {
 
   /**
    * Analyzer used on a {@link LiteralPattern}, in the case of a numeric query.
@@ -59,9 +59,9 @@ public abstract class AbstractNTripleQueryBuilder extends VisitorAdaptor {
   private QueryBuilderException     queryException    = null;
 
   private static final
-  Logger logger = LoggerFactory.getLogger(AbstractNTripleQueryBuilder.class);
+  Logger logger = LoggerFactory.getLogger(AbstractTabularQueryBuilder.class);
 
-  public AbstractNTripleQueryBuilder(final Version matchVersion) {
+  public AbstractTabularQueryBuilder(final Version matchVersion) {
     this.wsAnalyzer = new WhitespaceAnalyzer(matchVersion);
   }
 

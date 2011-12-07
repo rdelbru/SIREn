@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Token;
 import java_cup.runtime.*;
 import org.sindice.siren.util.XSDDatatype;
-import org.sindice.siren.qparser.ntriple.MetadataValue;
+import org.sindice.siren.qparser.tuple.CellValue;
 
 %%
 
@@ -131,7 +131,7 @@ import org.sindice.siren.qparser.ntriple.MetadataValue;
 	  return new Symbol(type, yyline, yycolumn, value);
 	}
 	
-	private Symbol symbol(int type, MetadataValue dl) {
+	private Symbol symbol(int type, CellValue dl) {
 	logger.debug("Obtain token {} \"{}\"", type, dl);
     return new Symbol(type, yyline, yycolumn, dl);
 	}

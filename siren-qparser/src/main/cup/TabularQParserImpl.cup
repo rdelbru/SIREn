@@ -24,7 +24,7 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.qparser.ntriple;
+package org.sindice.siren.qparser.tabular;
 
 /* ----------------------Preliminary Declarations Section--------------------*/
    
@@ -35,13 +35,15 @@ import java_cup.runtime.*;
 import java.io.IOException;
 
 /* Import the AST classes */
-import org.sindice.siren.qparser.ntriple.query.model.*;
+import org.sindice.siren.qparser.tabular.query.model.*;
 
 /* Import Logback Logger */
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/* Import the class that will store the datatype of a value, e.g, a Literal */
+/* Import the class that will store information about a value, e.g., the datatype
+ * or the cell constraint.
+ */
 import org.sindice.siren.qparser.tuple.CellValue;
 
 /* Parser code to change the way the parser reports errors (include
@@ -49,7 +51,7 @@ import org.sindice.siren.qparser.tuple.CellValue;
 parser code {:
 
 		private static final
-		Logger logger = LoggerFactory.getLogger(NTripleQParserImpl.class);
+		Logger logger = LoggerFactory.getLogger(TabularQParserImpl.class);
     
     /* Change the method report_error so it will display the line and
        column of where the error occurred in the input as well as the
@@ -85,7 +87,7 @@ parser code {:
    that do have an value, in this case an String value, are listed on
    the next line down. */
    
-terminal          AND, OR, MINUS, LPAREN, RPAREN, WILDCARD;
+terminal          AND, OR, MINUS, LPAREN, RPAREN;
 terminal org.sindice.siren.qparser.tuple.CellValue          URIPATTERN, LITERAL, LPATTERN;
    
 /* Non terminals used in the grammar section.  
@@ -95,11 +97,10 @@ terminal org.sindice.siren.qparser.tuple.CellValue          URIPATTERN, LITERAL,
    value means that it can be any type, it isn't set to a specific
    type.  So it could be an Integer or a String or whatever. */
    
-non terminal NTripleQuery		Query;
+non terminal TabularQuery		Query;
 non terminal Clause     		Clause;
 non terminal Expression     Expr;
-non terminal TriplePattern  TriplePattern;
-non terminal Resource       Resource;
+non terminal TuplePattern   TuplePattern;
 non terminal Value          Value;
 
 
@@ -115,15 +116,13 @@ non terminal Value          Value;
                       | Expr
                       ;
                       
-   Expr           ::=   TriplePattern
+   Expr           ::=   TuplePattern
                       | LPAREN Query RPAREN
                       
-   TriplePattern  ::=   Resource Resource Value
-   
-   Resource       ::=   URIPATTERN
-                      | WILDCARD
+   TuplePattern   ::=   Value TuplePattern
+                      | Value
                       
-   Value          ::=   Resource
+   Value          ::=   URIPATTERN
                       | LITERAL
                       | LPATTERN
                       
@@ -168,19 +167,23 @@ non terminal Value          Value;
                       {: RESULT = new UnaryClause(e); :}
                       ;
 
-   Expr              ::= TriplePattern:p
+   Expr              ::= TuplePattern:p
 		   			             {: RESULT = new SimpleExpression(p); :}
 		                     |
 		                     LPAREN Query:q RPAREN
 		                     {: RESULT = new QueryExpression(q); :}
 		                     ;
    
-   TriplePattern     ::= Resource:s Resource:p Value:o
-   											 {: RESULT = new TriplePattern(s, p, o); :}
+   TuplePattern      ::= TuplePattern:tp Value:v
+                         {:
+                            RESULT = tp.append(v); // tp.append() returns this
+                         :}
+                         | Value:v
+   											 {: RESULT = new TuplePattern(v); :}
                          ;
 
-   Value             ::= Resource:r
-   											 {: RESULT = r; :}
+   Value             ::= URIPATTERN:u
+                         {: RESULT = new URIPattern(u); :}
                          |
                          LITERAL:l
                          {: RESULT = new Literal(l); :}
@@ -188,11 +191,3 @@ non terminal Value          Value;
                          LPATTERN:p
                          {: RESULT = new LiteralPattern(p); :}
                          ;
-   
-   Resource          ::= URIPATTERN:u
-   											 {: RESULT = new URIPattern(u); :}
-                         |
-                         WILDCARD:w
-                         {: RESULT = new Wildcard("*"); :}
-                         ;
-                         

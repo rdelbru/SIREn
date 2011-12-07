@@ -53,11 +53,10 @@ public final class TabularQueryTokenizer extends Tokenizer {
   public static final int MINUS = 4;
   public static final int LPAREN = 5;
   public static final int RPAREN = 6;
-  public static final int WILDCARD = 7;
-  public static final int URIPATTERN = 8;
-  public static final int LITERAL = 9;
-  public static final int LPATTERN = 10;
-
+  public static final int URIPATTERN = 7;
+  public static final int LITERAL = 8;
+  public static final int LPATTERN = 9;
+  
   /**
    * Creates a new instance of the {@link TabularQueryTokenizer}. Attaches the
    * <code>input</code> to a newly created JFlex scanner.
@@ -84,14 +83,13 @@ public final class TabularQueryTokenizer extends Tokenizer {
       case TabularQueryTokenizer.MINUS:
       case TabularQueryTokenizer.LPAREN:
       case TabularQueryTokenizer.RPAREN:
-      case TabularQueryTokenizer.WILDCARD:
-        typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
+        typeAtt.setType(TabularQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
-        cTermAtt.append(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
+        cTermAtt.append(TabularQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         break;
 
       case TabularQueryTokenizer.URIPATTERN:
-        typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
+        typeAtt.setType(TabularQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getURIText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
@@ -99,7 +97,7 @@ public final class TabularQueryTokenizer extends Tokenizer {
         break;
 
       case TabularQueryTokenizer.LITERAL:
-        typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
+        typeAtt.setType(TabularQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());
@@ -107,7 +105,7 @@ public final class TabularQueryTokenizer extends Tokenizer {
         break;
 
       case TabularQueryTokenizer.LPATTERN:
-        typeAtt.setType(NTripleQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
+        typeAtt.setType(TabularQueryTokenizerImpl.TOKEN_TYPES[tokenType]);
         cTermAtt.setEmpty();
         cTermAtt.append(_scanner.getLiteralText());
         dataTypeAtt.setDatatypeURI(_scanner.getDatatypeURI());

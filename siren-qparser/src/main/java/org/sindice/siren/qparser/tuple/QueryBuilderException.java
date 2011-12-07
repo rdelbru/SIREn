@@ -23,7 +23,7 @@
  * @author Campinas Stephane [ 5 Nov 2010 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple.query;
+package org.sindice.siren.qparser.tuple;
 
 /**
  * Exception handling with the query builder

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Token;
 import java_cup.runtime.*;
 import org.sindice.siren.util.XSDDatatype;
-import org.sindice.siren.qparser.ntriple.MetadataValue;
+import org.sindice.siren.qparser.tuple.CellValue;
 
 %%
 
@@ -74,17 +74,16 @@ import org.sindice.siren.qparser.ntriple.MetadataValue;
 
 %{
 
-  public static final int EOF 	      = NTripleQueryTokenizer.EOF;
-  public static final int ERROR       = NTripleQueryTokenizer.ERROR;
-  public static final int AND 	      = NTripleQueryTokenizer.AND;
-  public static final int OR 		      = NTripleQueryTokenizer.OR;
-  public static final int MINUS       = NTripleQueryTokenizer.MINUS;
-  public static final int LPAREN      = NTripleQueryTokenizer.LPAREN;
-  public static final int RPAREN      = NTripleQueryTokenizer.RPAREN;
-  public static final int URIPATTERN  = NTripleQueryTokenizer.URIPATTERN;
-  public static final int LITERAL     = NTripleQueryTokenizer.LITERAL;
-  public static final int LPATTERN    = NTripleQueryTokenizer.LPATTERN;
-  public static final int WILDCARD    = NTripleQueryTokenizer.WILDCARD;
+  public static final int EOF 	      = TabularQueryTokenizer.EOF;
+  public static final int ERROR       = TabularQueryTokenizer.ERROR;
+  public static final int AND 	      = TabularQueryTokenizer.AND;
+  public static final int OR 		      = TabularQueryTokenizer.OR;
+  public static final int MINUS       = TabularQueryTokenizer.MINUS;
+  public static final int LPAREN      = TabularQueryTokenizer.LPAREN;
+  public static final int RPAREN      = TabularQueryTokenizer.RPAREN;
+  public static final int URIPATTERN  = TabularQueryTokenizer.URIPATTERN;
+  public static final int LITERAL     = TabularQueryTokenizer.LITERAL;
+  public static final int LPATTERN    = TabularQueryTokenizer.LPATTERN;
 	
 	public static final String[] TOKEN_TYPES = new String[] {
 	    "<EOF>",
@@ -94,14 +93,13 @@ import org.sindice.siren.qparser.ntriple.MetadataValue;
 	    "<MINUS>",
 	    "<LPAREN>",
 	    "<RPAREN>",
-	    "<WILDCARD>",
 	    "<URIPATTERN>",
 	    "<LITERAL>",
 	    "<LPATTERN>"
 	};
 
 	private static final
-	Logger logger = LoggerFactory.getLogger(NTripleQueryTokenizerImpl.class);
+	Logger logger = LoggerFactory.getLogger(TabularQueryTokenizerImpl.class);
 	
 	private final StringBuffer buffer = new StringBuffer();
 	private final StringBuffer datatypeBuffer = new StringBuffer();
@@ -132,7 +130,7 @@ import org.sindice.siren.qparser.ntriple.MetadataValue;
 	  return new Symbol(type, yyline, yycolumn, value);
 	}
 	
-	private Symbol symbol(int type, MetadataValue dl) {
+	private Symbol symbol(int type, CellValue dl) {
 	logger.debug("Obtain token {} \"{}\"", type, dl);
     return new Symbol(type, yyline, yycolumn, dl);
 	}
@@ -188,8 +186,10 @@ import org.sindice.siren.qparser.ntriple.MetadataValue;
    * Return the cell constraint of the expression.
    */
   public final int getCellConstraint() {
-    if (cellConstraint == -1)
+    if (cellConstraint == -1) {
+      // Should not happen
       throw new IllegalArgumentException("You must specify a cell constraint");
+    }
     return cellConstraint;
   }
 	
@@ -219,8 +219,6 @@ URIREF				 =  "<" [^>]+ ">"
 	
 	")"    					{ return RPAREN; }
 	
-	"*"    					{ return WILDCARD; }
-	
   "["             { cellConstraint = -1;
                     yybegin(CCSTR); }
 	
@@ -234,6 +232,29 @@ URIREF				 =  "<" [^>]+ ">"
 	*/
 	.                { return ERROR; }
  
+}
+
+<CCSTR> {
+
+  [:digit:]+      { // Assign the Cell constraint
+                    cellConstraint = Integer.valueOf(yytext()); }
+
+  \]{URIREF}      { yybegin(YYINITIAL);
+                    // Assign the xsd:anyURI
+                    datatypeBuffer.setLength(0);
+                    datatypeBuffer.append(XSDDatatype.XSD_ANY_URI);
+                    return URIPATTERN; }
+
+  \]\"            { buffer.setLength(0);
+                    datatypeBuffer.setLength(0);
+                    yybegin(LITSTR); }
+  
+  \]\'            { buffer.setLength(0);
+                    datatypeBuffer.setLength(0);
+                    yybegin(LITPATSTR); }
+  
+  <<EOF>>         { return ERROR; }
+
 }
 
 <LITSTR> {
@@ -272,28 +293,3 @@ URIREF				 =  "<" [^>]+ ">"
   <<EOF>>					{ return ERROR; }
 
 }
-
-<CCSTR> {
-
-  [:digit:]+      { // Assign the Cell constraint
-                    cellConstraint = Integer.valueOf(yytext()); }
-
-  \]{URIREF}       { yybegin(YYINITIAL);
-                     // Assign the xsd:anyURI
-                     datatypeBuffer.setLength(0);
-                     datatypeBuffer.append(XSDDatatype.XSD_ANY_URI);
-                     return URIPATTERN; }
-
-  \]\"             { buffer.setLength(0);
-                     datatypeBuffer.setLength(0);
-                     yybegin(LITSTR); }
-  
-  \]\'             { buffer.setLength(0);
-                     datatypeBuffer.setLength(0);
-                     yybegin(LITPATSTR); }
-  
-  <<EOF>>         { return ERROR; }
-
-}
-
-

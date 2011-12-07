@@ -16,10 +16,10 @@ Expression    ::= {SimpleExpression} TriplePattern:tp
 TriplePattern ::= Resource:s Resource:p Value:o
 
 Value         ::=   {Resource}
-                  | {Literal} "org.sindice.siren.qparser.ntriple.MetadataValue":l
-                  | {LiteralPattern} "org.sindice.siren.qparser.ntriple.MetadataValue":lp
+                  | {Literal} "org.sindice.siren.qparser.tuple.CellValue":l
+                  | {LiteralPattern} "org.sindice.siren.qparser.tuple.CellValue":lp
                       
-Resource      ::=   {URIPattern} "org.sindice.siren.qparser.ntriple.MetadataValue":up
+Resource      ::=   {URIPattern} "org.sindice.siren.qparser.tuple.CellValue":up
                   | {Wildcard} String:v
 
 Operator      ::= enum AND, OR, MINUS

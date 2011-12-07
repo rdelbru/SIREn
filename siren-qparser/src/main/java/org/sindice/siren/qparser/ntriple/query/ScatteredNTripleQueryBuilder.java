@@ -35,7 +35,6 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.qparser.ntriple.MetadataValue;
 import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
 import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
@@ -49,6 +48,9 @@ import org.sindice.siren.qparser.ntriple.query.model.TriplePattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
 import org.sindice.siren.qparser.ntriple.query.model.UnaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
+import org.sindice.siren.qparser.tuple.CellValue;
+import org.sindice.siren.qparser.tuple.QueryBuilderException;
+import org.sindice.siren.qparser.tuple.ResourceQueryParser;
 import org.sindice.siren.qparser.util.EscapeLuceneCharacters;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
@@ -228,7 +230,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   @Override
   public void visit(final Literal l) {
     logger.debug("Visiting Literal");
-    final MetadataValue dtLit = l.getL();
+    final CellValue dtLit = l.getL();
 
     try {
       Analyzer analyzer;
@@ -259,7 +261,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   @Override
   public void visit(final LiteralPattern lp) {
     logger.debug("Visiting Literal Pattern");
-    final MetadataValue dtLit = lp.getLp();
+    final CellValue dtLit = lp.getLp();
 
     try {
       Analyzer analyzer;
@@ -289,7 +291,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   @Override
   public void visit(final URIPattern u) {
     logger.debug("Visiting URI");
-    final MetadataValue dtLit = u.getUp();
+    final CellValue dtLit = u.getUp();
 
     final String uri = EscapeLuceneCharacters.escape(dtLit.getValue()); // URI schemes handling
     try {
@@ -328,7 +330,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
    */
   private Analyzer getAnalyzer(final String fieldName, final String datatypeURI) {
     if (datatypeConfigs.get(fieldName).get(datatypeURI) == null) {
-      throw new QueryBuilderException(org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error.PARSE_ERROR,
+      throw new QueryBuilderException(QueryBuilderException.Error.PARSE_ERROR,
         "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
     }
     return datatypeConfigs.get(fieldName).get(datatypeURI);

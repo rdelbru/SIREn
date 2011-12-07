@@ -54,6 +54,7 @@
                 <taskdef name="cup" classname="java_cup.anttask.CUPTask" classpathref="maven.compile.classpath" />
                 <cup srcfile="${basedir}/src/main/cup/NTripleQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources" parser="NTripleQParserImpl" symbols="NTripleQParserSymbols" interface="true" />
                 <cup srcfile="${basedir}/src/main/cup/EntityQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources" parser="EntityQParserImpl" symbols="EntityQParserSymbols" expect="9" interface="true" />
+                <cup srcfile="${basedir}/src/main/cup/TabularQParserImpl.cup" destdir="${basedir}/target/generated-sources/parser-sources" parser="TabularQParserImpl" symbols="TabularQParserSymbols" interface="true" />
               </tasks>
             </configuration>
           </execution>
@@ -100,6 +101,25 @@
                 <argument>-visitor</argument>
                 <argument>-overwrite</argument>
                 <argument>${basedir}/src/main/classgen/EntityQueryClassDefinition.cl</argument>
+              </arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>tabular-classgen-task</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>java</executable>
+              <workingDirectory>${project.build.directory}/generated-sources/ast-sources/</workingDirectory>
+              <arguments>
+                <argument>-classpath</argument>
+                <argument>${basedir}/src/main/resources/classgen.jar</argument>
+                <argument>classgen.Main</argument>
+                <argument>-visitor</argument>
+                <argument>-overwrite</argument>
+                <argument>${basedir}/src/main/classgen/TabularQueryClassDefinition.cl</argument>
               </arguments>
             </configuration>
           </execution>

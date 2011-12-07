@@ -41,8 +41,8 @@ import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
 import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcessor;
 import org.sindice.siren.analysis.NumericAnalyzer;
-import org.sindice.siren.qparser.ntriple.query.ResourceQueryParser.SirenConfigurationKeys;
 import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
+import org.sindice.siren.qparser.tuple.ResourceQueryParser.SirenConfigurationKeys;
 import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 /**

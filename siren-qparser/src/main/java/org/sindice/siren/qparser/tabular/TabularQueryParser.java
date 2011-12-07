@@ -46,11 +46,10 @@ import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 import org.sindice.siren.qparser.analysis.TabularQueryTokenizerImpl;
-import org.sindice.siren.qparser.ntriple.MetadataValue;
-import org.sindice.siren.qparser.ntriple.NTripleQParserImpl;
-import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
 import org.sindice.siren.qparser.tabular.query.ScatteredTabularQueryBuilder;
 import org.sindice.siren.qparser.tabular.query.SimpleTabularQueryBuilder;
+import org.sindice.siren.qparser.tabular.query.model.TabularQuery;
+import org.sindice.siren.qparser.tuple.CellValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -59,13 +58,13 @@ public class TabularQueryParser {
   private static final Logger logger = LoggerFactory.getLogger(TabularQueryParser.class);
   
   /**
-   * Parse a NTriple query and return a Lucene {@link Query}. The query is built
+   * Parse a Tabular query and return a Lucene {@link Query}. The query is built
    * over one Lucene's field.
    * 
    * @param qstr The query string
    * @param matchVersion the Lucene version to use
    * @param field The field to query
-   * @param ntripleAnalyzer The analyzers for ntriple
+   * @param tabularAnalyzer The analyzers for tabular
    * @param datatypeConfig datatype configuration, which maps a datatype key to a
    * specific {@link Analyzer}.
    * @param op default boolean operator
@@ -75,19 +74,19 @@ public class TabularQueryParser {
   public static final Query parse(final String qstr,
                                   final Version matchVersion,
                                   final String field,
-                                  final Analyzer ntripleAnalyzer,
+                                  final Analyzer tabularAnalyzer,
                                   final Map<String, Analyzer> datatypeConfig,
                                   final DefaultOperatorAttribute.Operator op)
   throws ParseException {
     // Parse NTriple and create abstract syntax tree
-    final TokenStream tokenStream = prepareTokenStream(qstr, ntripleAnalyzer);
+    final TokenStream tokenStream = prepareTokenStream(qstr, tabularAnalyzer);
     final Symbol sym = createAST(tokenStream);
     // Translate the AST into query objects
     return buildSingleFieldQuery(sym, matchVersion, field, datatypeConfig, op);
   }
   
   /**
-   * Parse a NTriple query and return a Lucene {@link Query}.
+   * Parse a Tabular query and return a Lucene {@link Query}.
    * <br>
    * Different query builders are used depending on the number of fields to
    * query.
@@ -95,7 +94,7 @@ public class TabularQueryParser {
    * @param qstr The query string
    * @param matchVersion the Lucene version to use
    * @param boosts The field boosts
-   * @param ntripleAnalyzer The set of analyzers (ntriple, uri, literal) for each
+   * @param tabularAnalyzer The set of analyzers (tabular, uri, literal) for each
    * queried field
    * @param datatypeConfigs datatype configuration for each field, which maps a
    * datatype key to a specific {@link Analyzer}.
@@ -107,7 +106,7 @@ public class TabularQueryParser {
   public static final Query parse(final String qstr,
                                   final Version matchVersion,
                                   final Map<String, Float> boosts,
-                                  final Analyzer ntripleAnalyzer,
+                                  final Analyzer tabularAnalyzer,
                                   final Map<String, Map<String, Analyzer>> datatypeConfigs,
                                   final DefaultOperatorAttribute.Operator op,
                                   final boolean scattered)
@@ -116,8 +115,8 @@ public class TabularQueryParser {
       throw new ParseException("Cannot parse query: no field specified");
     }
 
-    // Parse NTriple and create abstract syntax tree
-    final TokenStream tokenStream = prepareTokenStream(qstr, ntripleAnalyzer);
+    // Parse Tabular and create abstract syntax tree
+    final TokenStream tokenStream = prepareTokenStream(qstr, tabularAnalyzer);
     final Symbol sym = createAST(tokenStream);
 
     // Translate the AST into query objects
@@ -130,24 +129,24 @@ public class TabularQueryParser {
   }
 
   /**
-   * Prepare the token stream of the ntriple query using the ntriple analyzer.
-   * @param qstr The NTriple query
-   * @param ntripleAnalyzer A NTriple Analyzer
+   * Prepare the token stream of the tabular query using the tabular analyzer.
+   * @param qstr The tabular query
+   * @param tabularAnalyzer A Tabluar Analyzer
    * @return A stream of tokens
    */
   private static TokenStream prepareTokenStream(final String qstr,
-                                                final Analyzer ntripleAnalyzer) {
+                                                final Analyzer tabularAnalyzer) {
     TokenStream tokenStream = null;
     try {
-      tokenStream = ntripleAnalyzer.reusableTokenStream("", new StringReader(qstr));
+      tokenStream = tabularAnalyzer.reusableTokenStream("", new StringReader(qstr));
     } catch (final IOException e) {
-      tokenStream = ntripleAnalyzer.tokenStream("", new StringReader(qstr));
+      tokenStream = tabularAnalyzer.tokenStream("", new StringReader(qstr));
     }
     return tokenStream;
   }
 
   /**
-   * Create the Abstract Syntax Tree of the NTriple query based on the given
+   * Create the Abstract Syntax Tree of the Tabular query based on the given
    * token stream.
    * @param tokenStream The token stream of the NTriple query
    * @return The Abstract Syntax Tree of the query
@@ -155,7 +154,7 @@ public class TabularQueryParser {
    */
   private static Symbol createAST(final TokenStream tokenStream)
   throws ParseException {
-    final NTripleQParserImpl lparser = new NTripleQParserImpl(new CupScannerWrapper(tokenStream));
+    final TabularQParserImpl lparser = new TabularQParserImpl(new CupScannerWrapper(tokenStream));
     Symbol sym = null;
     try {
       sym = lparser.parse();
@@ -210,7 +209,7 @@ public class TabularQueryParser {
   throws ParseException {
     final SimpleTabularQueryBuilder translator = new SimpleTabularQueryBuilder(matchVersion, field, datatypeConfig);
     translator.setDefaultOperator(op);
-    final NTripleQuery nq = (NTripleQuery) sym.value;
+    final TabularQuery nq = (TabularQuery) sym.value;
     nq.traverseBottomUp(translator);
     queryBuildingError(translator);
     return nq.getQuery();
@@ -238,7 +237,7 @@ public class TabularQueryParser {
       final SimpleTabularQueryBuilder translator = new SimpleTabularQueryBuilder(matchVersion,
         field, datatypeConfigs.get(field));
       translator.setDefaultOperator(op);
-      final NTripleQuery nq = (NTripleQuery) sym.value;
+      final TabularQuery nq = (TabularQuery) sym.value;
       nq.traverseBottomUp(translator);
       queryBuildingError(translator);
       final Query q = nq.getQuery();
@@ -250,8 +249,8 @@ public class TabularQueryParser {
   
   /**
    * Translate the AST and build a scattered multi-field query. A scattered
-   * multi-field query performs a conjunction of triple patterns, in which
-   * each triple pattern can appear in at least on of the fields. Each field
+   * multi-field query performs a conjunction of tabular patterns, in which
+   * each tabular pattern can appear in at least on of the fields. Each field
    * has a boost.
    * @param sym The AST
    * @param matchVersion The Lucene version to use
@@ -270,7 +269,7 @@ public class TabularQueryParser {
   throws ParseException {
     final ScatteredTabularQueryBuilder translator = new ScatteredTabularQueryBuilder(matchVersion, boosts, datatypeConfigs);
     translator.setDefaultOperator(op);
-    final NTripleQuery nq = (NTripleQuery) sym.value;
+    final TabularQuery nq = (TabularQuery) sym.value;
     nq.traverseBottomUp(translator);
     queryBuildingError(translator);
     return nq.getQuery();
@@ -305,17 +304,17 @@ public class TabularQueryParser {
           }
         }
 
-        logger.debug("Received token {}", cTermAtt.toString());
         if (idx == -1) {
           logger.error("Received unknown token: {}", cTermAtt.toString());
         }
-
+        logger.debug("Received token {} ({})", cTermAtt.toString(), TabularQueryTokenizerImpl.TOKEN_TYPES[idx]);
+        
         if (idx == TabularQueryTokenizerImpl.URIPATTERN ||
             idx == TabularQueryTokenizerImpl.LITERAL ||
             idx == TabularQueryTokenizerImpl.LPATTERN) {
-          return new Symbol(idx, new MetadataValue(dataTypeAtt.datatypeURI(),
-                                                   cTermAtt.toString(),
-                                                   cellAtt.cell()));
+          return new Symbol(idx, new CellValue(dataTypeAtt.datatypeURI(),
+                                               cTermAtt.toString(),
+                                               cellAtt.cell()));
         } else {
           return new Symbol(idx);
         }

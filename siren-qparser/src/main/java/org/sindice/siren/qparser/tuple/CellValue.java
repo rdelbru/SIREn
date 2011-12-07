@@ -23,7 +23,7 @@
  * @author Campinas Stephane [ 11 Oct 2011 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple;
+package org.sindice.siren.qparser.tuple;
 
 import org.sindice.siren.qparser.ntriple.query.model.Literal;
 import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
@@ -35,20 +35,18 @@ import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
  * It contains its datatype and its cell constraint. For a literal for instance,
  * the datatype is the URI extracted from Literal^^&lt;URI&gt;.
  */
-public final class MetadataValue {
+public final class CellValue {
 
   private final String datatype;
   private final String value;
   private final int cellConstraint;
   
-  public MetadataValue(final char[] datatype, final String value) {
-    this.datatype = new String(datatype);
-    this.value = value;
-    cellConstraint = -1;
+  public CellValue(final char[] datatype, final String value) {
+    this(datatype, value, -1);
   }
 
-  public MetadataValue(final char[] datatype, final String value, final int cellConstraint) {
-    this.datatype = new String(datatype);
+  public CellValue(final char[] datatype, final String value, final int cellConstraint) {
+    this.datatype = new String(datatype.clone());
     this.value = value;
     this.cellConstraint = cellConstraint;
   }

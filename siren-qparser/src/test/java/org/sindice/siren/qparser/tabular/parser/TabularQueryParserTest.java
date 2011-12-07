@@ -79,7 +79,7 @@ public class TabularQueryParserTest {
   }
   
   @Test
-  public void testTabularQuerySimpleTriple3()
+  public void testTabularQuery()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final String ntuple = "<http://s> <http://p> \"literal\" <http://o> \"literal2\" .";
     
@@ -92,14 +92,31 @@ public class TabularQueryParserTest {
     query = " [0]<http://s> [1]<http://p> [3]\"literal\"";
     assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = " * [1]<http://p> [3]<http://o>";
+    query = "[1]<http://p> [3]<http://o>";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = " * [1]<http://p> [4]\"literal2\"";
+    query = "[1]<http://p> [4]\"literal2\"";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = " [3]<http://o> * [4]\"literal2\"";
+    query = " [3]<http://o> [4]\"literal2\"";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+  }
+  
+  public void testTabularQuery2()
+  throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
+    final String ntuple = "\"literal\" \"some long literal\" <http://o1> <http://o2> \"some long literal\" <http://o3> .";
+    
+    String query = "[0]<http://o1>";
+    assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
+    
+    query = "[2]<http://o1>";
+    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+    
+    query = "[5]<http://o3> [1]'some AND literal' [2]<http://o1>";
+    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+    
+    query = "[4]\"some literal\"";
+    assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
   }
   
   @Test
@@ -110,13 +127,13 @@ public class TabularQueryParserTest {
     
     final String ntuple = "<http://stephane> <http://price> <ie> \"500\"^^<int4> <pl> \"25\"^^<int4> .\n";
 
-    String query = "* * [3]'[100 TO 2000]'^^<int4>";
+    String query = " [3]'[100 TO 2000]'^^<int4>";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = "* * [5]'[100 TO 2000]'^^<int4>";
+    query = "[5]'[100 TO 2000]'^^<int4>";
     assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = "* * [5]'[3 TO 30]'^^<int4>";
+    query = "[5]'[3 TO 30]'^^<int4>";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
   }
   
@@ -129,7 +146,7 @@ public class TabularQueryParserTest {
     Map<String, String> ntuples = new HashMap<String, String>();
     ntuples.put(NTripleTestHelper._defaultField, "<http://s> <http://p1> \"literal\" \"literal2\" \"literal3\" .\n");
     ntuples.put(NTripleTestHelper._implicitField, "<http://s> <http://p2> <http://o> <http://o1> .\n");
-    final String query = "[0]<http://s> * [4]'literal3' AND\r\n * [1]<http://p2> \n\r \n [2]<http://o>";
+    final String query = "[0]<http://s> [4]'literal3' AND\r\n [1]<http://p2> \n\r \n [2]<http://o>";
 
     // Should match, the two field content are matching either one of the two triple patterns
     assertTrue(TabularQueryParserTestHelper.match(ntuples, boosts, query, true));

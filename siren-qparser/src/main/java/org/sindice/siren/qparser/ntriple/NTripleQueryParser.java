@@ -48,6 +48,7 @@ import org.sindice.siren.qparser.analysis.NTripleQueryTokenizerImpl;
 import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.SimpleNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.model.NTripleQuery;
+import org.sindice.siren.qparser.tuple.CellValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -309,7 +310,7 @@ public class NTripleQueryParser {
         if (idx == NTripleQueryTokenizerImpl.URIPATTERN ||
             idx == NTripleQueryTokenizerImpl.LITERAL ||
             idx == NTripleQueryTokenizerImpl.LPATTERN) {
-          return new Symbol(idx, new MetadataValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
+          return new Symbol(idx, new CellValue(dataTypeAtt.datatypeURI(), cTermAtt.toString()));
         } else {
           return new Symbol(idx);
         }

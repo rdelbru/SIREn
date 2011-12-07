@@ -83,22 +83,27 @@ public class TabularQueryStandardAnalyzerTest {
 
   @Test
   public void testTabularQueryStandardAnalyzer2() throws Exception {
-    final String query = "* [1]<http://ns/p> [2]<http://ns/o>";
+    final String query = "[1]<http://ns/o1> [20]<http://ns/o2> [3]<http://ns/o3> [2]<http://ns/o4>";
     final TabularQueryAnalyzer analyzer = new TabularQueryAnalyzer();
     final TokenStream stream = analyzer.tokenStream("tets", new StringReader(query));
 
     final CupScannerWrapper wrapper = new CupScannerWrapper(stream);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.WILDCARD);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o1", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.URIPATTERN);
-    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[20] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o2", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.URIPATTERN);
-    assertEquals("[2] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o", symbol.value.toString());
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[3] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o3", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[2] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o4", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
     stream.close();
@@ -106,21 +111,18 @@ public class TabularQueryStandardAnalyzerTest {
 
   @Test
   public void testTabularQueryStandardAnalyzer3() throws Exception {
-    final String query = "* [1]<http://ns/p> [3]\"test\"";
+    final String query = "[1]<http://ns/p> [3]\"test\"";
     final TabularQueryAnalyzer analyzer = new TabularQueryAnalyzer();
     final TokenStream stream = analyzer.tokenStream("tets", new StringReader(query));
 
     final CupScannerWrapper wrapper = new CupScannerWrapper(stream);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.WILDCARD);
-    symbol = wrapper.next_token();
-    assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.URIPATTERN);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
     assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.LITERAL);
+    assertTrue(symbol.sym == TabularQueryTokenizer.LITERAL);
     assertEquals("[3] " + XSDDatatype.XSD_STRING + ":test", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
@@ -129,22 +131,19 @@ public class TabularQueryStandardAnalyzerTest {
   
   @Test
   public void testTabularQueryStandardAnalyzer4() throws Exception {
-    final String query = "* [1]<http://ns/p> [3]'test'";
+    final String query = "[3]'test' [1]<http://ns/p>";
     final TabularQueryAnalyzer analyzer = new TabularQueryAnalyzer();
     final TokenStream stream = analyzer.tokenStream("tets", new StringReader(query));
 
     final CupScannerWrapper wrapper = new CupScannerWrapper(stream);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.WILDCARD);
-    symbol = wrapper.next_token();
-    assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.URIPATTERN);
-    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
-    symbol = wrapper.next_token();
-    assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.LPATTERN);
+    assertTrue(symbol.sym == TabularQueryTokenizer.LPATTERN);
     assertEquals("[3] " + XSDDatatype.XSD_STRING + ":test", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol == null);
     stream.close();
@@ -152,21 +151,50 @@ public class TabularQueryStandardAnalyzerTest {
   
   @Test
   public void testTabularQueryStandardAnalyzer5() throws Exception {
-    final String query = "* [1]<http://ns/p> \"test\"";
+    final String query = "[1]<http://ns/s> [2]<http://ns/p> *";
     final TabularQueryAnalyzer analyzer = new TabularQueryAnalyzer();
     final TokenStream stream = analyzer.tokenStream("tets", new StringReader(query));
 
     final CupScannerWrapper wrapper = new CupScannerWrapper(stream);
     Symbol symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.WILDCARD);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/s", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue(symbol.sym == NTripleQueryTokenizer.URIPATTERN);
-    assertEquals("[1] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[2] " + XSDDatatype.XSD_ANY_URI + ":http://ns/p", symbol.value.toString());
     symbol = wrapper.next_token();
     assertTrue(symbol != null);
-    assertTrue("recieved symbol: " + symbol.sym, symbol.sym == NTripleQueryTokenizer.ERROR);
+    assertTrue("recieved symbol: " + symbol.sym, symbol.sym == TabularQueryTokenizer.ERROR);
+    stream.close();
+  }
+  
+  @Test
+  public void testTabularQueryStandardAnalyzer6() throws Exception {
+    final String query = "[1]'test' [20]<http://ns/o2> [3]\"tea 4 two\" [2]'you'^^<mydatatype>";
+    final TabularQueryAnalyzer analyzer = new TabularQueryAnalyzer();
+    final TokenStream stream = analyzer.tokenStream("tets", new StringReader(query));
+
+    final CupScannerWrapper wrapper = new CupScannerWrapper(stream);
+    Symbol symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.LPATTERN);
+    assertEquals("[1] " + XSDDatatype.XSD_STRING + ":test", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.URIPATTERN);
+    assertEquals("[20] " + XSDDatatype.XSD_ANY_URI + ":http://ns/o2", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.LITERAL);
+    assertEquals("[3] " + XSDDatatype.XSD_STRING + ":tea 4 two", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol != null);
+    assertTrue(symbol.sym == TabularQueryTokenizer.LPATTERN);
+    assertEquals("[2] mydatatype:you", symbol.value.toString());
+    symbol = wrapper.next_token();
+    assertTrue(symbol == null);
     stream.close();
   }
 

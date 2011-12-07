@@ -65,7 +65,7 @@ public class ScatteredNTripleQueryBuilder extends AbstractNTripleQueryBuilder {
   /**
    * Field boosts
    */
-  Map<String, Float> boosts;
+  protected Map<String, Float> boosts;
 
   /**
    * Configurations (per field) between the datatype URI and the

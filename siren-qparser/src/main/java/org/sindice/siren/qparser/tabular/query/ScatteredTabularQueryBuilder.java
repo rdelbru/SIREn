@@ -26,33 +26,18 @@
  */
 package org.sindice.siren.qparser.tabular.query;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.util.Version;
-import org.sindice.siren.qparser.ntriple.MetadataValue;
-import org.sindice.siren.qparser.ntriple.query.AbstractNTripleQueryBuilder;
-import org.sindice.siren.qparser.ntriple.query.QueryBuilderException;
-import org.sindice.siren.qparser.ntriple.query.ResourceQueryParser;
-import org.sindice.siren.qparser.ntriple.query.model.BinaryClause;
-import org.sindice.siren.qparser.ntriple.query.model.ClauseQuery;
-import org.sindice.siren.qparser.ntriple.query.model.EmptyQuery;
+import org.sindice.siren.qparser.ntriple.query.ScatteredNTripleQueryBuilder;
 import org.sindice.siren.qparser.ntriple.query.model.Literal;
 import org.sindice.siren.qparser.ntriple.query.model.LiteralPattern;
-import org.sindice.siren.qparser.ntriple.query.model.NestedClause;
-import org.sindice.siren.qparser.ntriple.query.model.Operator;
-import org.sindice.siren.qparser.ntriple.query.model.QueryExpression;
-import org.sindice.siren.qparser.ntriple.query.model.SimpleExpression;
 import org.sindice.siren.qparser.ntriple.query.model.TriplePattern;
 import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
-import org.sindice.siren.qparser.ntriple.query.model.UnaryClause;
 import org.sindice.siren.qparser.ntriple.query.model.Wildcard;
-import org.sindice.siren.qparser.util.EscapeLuceneCharacters;
 import org.sindice.siren.search.SirenCellQuery;
 import org.sindice.siren.search.SirenPrimitiveQuery;
 import org.sindice.siren.search.SirenTupleQuery;
@@ -63,103 +48,20 @@ import org.slf4j.LoggerFactory;
  * The visitor for translating the AST into a Siren NTriple Query.
  * This visitor must traverse the AST with a bottom up approach.
  */
-public class ScatteredTabularQueryBuilder extends AbstractNTripleQueryBuilder {
-
-  /**
-   * Field boosts
-   */
-  Map<String, Float> boosts;
-
-  /**
-   * Configurations (per field) between the datatype URI and the
-   * {@link Analyzer} or, in the case of a numeric query, the
-   * {@link NumericConfig}.
-   */
-  private final Map<String, Map<String, Analyzer>> datatypeConfigs;
+public class ScatteredTabularQueryBuilder extends ScatteredNTripleQueryBuilder {
 
   private static final
-  Logger logger = LoggerFactory.getLogger(ScatteredTabularQueryBuilder.class);
-
-  public ScatteredTabularQueryBuilder(final Version matchVersion,
-                                      final Map<String, Float> boosts,
-                                      final Map<String, Map<String, Analyzer>> datatypeConfigs) {
-    super(matchVersion);
-    this.boosts = boosts;
-    this.datatypeConfigs = datatypeConfigs;
-  }
-
-  @Override
-  public void visit(final ClauseQuery q) {
-    logger.debug("ClauseQuery - Enter");
-    q.setQuery(q.getC().getQuery());
-    logger.debug("ClauseQuery - Exit");
-  }
-
+  Logger logger = LoggerFactory.getLogger(ScatteredNTripleQueryBuilder.class);
+  
   /**
-   * Create an empty BooleanQuery
+   * @param matchVersion
+   * @param boosts
+   * @param datatypeConfigs
    */
-  @Override
-  public void visit(final EmptyQuery q) {
-    logger.debug("EmptyQuery - Enter");
-    q.setQuery(new BooleanQuery(true));
-    logger.debug("EmptyQuery - Exit");
-  }
-
-  @Override
-  public void visit(final UnaryClause c) {
-    logger.debug("Enter UnaryClause");
-    c.setQuery(c.getExpr().getQuery());
-    logger.debug("Exit UnaryClause");
-  }
-
-  @Override
-  public void visit(final NestedClause c) {
-    logger.debug("Enter NestedClause");
-    c.setQuery(this.translate(c.getLhc().getQuery(), c.getOp(), c.getRhe().getQuery()));
-    logger.debug("Exit NestedClause");
-  }
-
-  @Override
-  public void visit(final BinaryClause c) {
-    logger.debug("Enter BinaryClause");
-    c.setQuery(this.translate(c.getLhe().getQuery(), c.getOp(), c.getRhe().getQuery()));
-    logger.debug("Exit BinaryClause");
-  }
-
-  private Query translate(final Query l, final int op, final Query r) {
-    logger.debug("Enter BinaryClause");
-    final BooleanQuery query = new BooleanQuery();
-
-    switch (op) {
-      case Operator.AND:
-        logger.debug("{} AND {}", l.toString(), r.toString());
-        query.add(l, Occur.MUST);
-        query.add(r, Occur.MUST);
-        break;
-      case Operator.OR:
-        logger.debug("{} OR {}", l.toString(), r.toString());
-        query.add(l, Occur.SHOULD);
-        query.add(r, Occur.SHOULD);
-        break;
-      case Operator.MINUS:
-        logger.debug("{} MINUS {}", l.toString(), r.toString());
-        query.add(l, Occur.MUST);
-        query.add(r, Occur.MUST_NOT);
-        break;
-      default:
-        break;
-    }
-    return query;
-  }
-
-  @Override
-  public void visit(final SimpleExpression simpleExpression) {
-    simpleExpression.setQuery(simpleExpression.getTp().getQuery());
-  }
-
-  @Override
-  public void visit(final QueryExpression queryExpression) {
-    queryExpression.setQuery(queryExpression.getQ().getQuery());
+  public ScatteredTabularQueryBuilder(Version matchVersion,
+                                      Map<String, Float> boosts,
+                                      Map<String, Map<String, Analyzer>> datatypeConfigs) {
+    super(matchVersion, boosts, datatypeConfigs);
   }
 
   /**
@@ -186,7 +88,7 @@ public class ScatteredTabularQueryBuilder extends AbstractNTripleQueryBuilder {
 
     logger.debug("Visiting TriplePattern - Exit");
   }
-
+  
   private void visitSubject(final TriplePattern tp,
                             final SirenTupleQuery tupleQuery,
                             final String fieldName) {
@@ -227,120 +129,6 @@ public class ScatteredTabularQueryBuilder extends AbstractNTripleQueryBuilder {
       }
       tupleQuery.add(cellQuery, org.sindice.siren.search.SirenTupleClause.Occur.MUST);
     }
-  }
-
-  /**
-   * Create a SirenPhraseQuery
-   * <p>
-   * The query is expanded to each of the field found in the boost parameter.
-   */
-  @Override
-  public void visit(final Literal l) {
-    logger.debug("Visiting Literal");
-    final MetadataValue dtLit = l.getL();
-
-    try {
-      Analyzer analyzer;
-      ResourceQueryParser qph;
-
-      if (l.getQueries() == null) {
-        l.setQueries(new HashMap<String, Query>());
-      }
-      for (final String fieldName : boosts.keySet()) {
-        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
-        qph = this.getResourceQueryParser(analyzer);
-        // Add quotes so that the parser evaluates it as a phrase query
-        l.getQueries().put(fieldName, qph.parse("\"" + dtLit.getValue() + "\"", fieldName));
-      }
-    }
-    catch (final Exception e) {
-      logger.error("Parsing of the Literal failed", e);
-      this.createQueryException(e);
-    }
-  }
-
-  /**
-   * Use the {@link ResourceQueryParser} to parse the Literal pattern and create
-   * a SIREn query.
-   * <p>
-   * The query is expanded to each of the field found in the boost parameter.
-   */
-  @Override
-  public void visit(final LiteralPattern lp) {
-    logger.debug("Visiting Literal Pattern");
-    final MetadataValue dtLit = lp.getLp();
-
-    try {
-      Analyzer analyzer;
-      ResourceQueryParser qph;
-
-      if (lp.getQueries() == null) {
-        lp.setQueries(new HashMap<String, Query>());
-      }
-      for (final String fieldName : boosts.keySet()) {
-        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
-        qph = this.getResourceQueryParser(analyzer);
-        lp.getQueries().put(fieldName, qph.parse(dtLit.getValue(), fieldName));
-      }
-    }
-    catch (final Exception e) {
-      logger.error("Parsing of the LiteralPattern failed", e);
-      this.createQueryException(e);
-    }
-  }
-
-  /**
-   * Use the {@link ResourceQueryParser} to parse the URI pattern and create
-   * a SIREn query.
-   * <p>
-   * The query is expanded to each of the field found in the boost parameter.
-   */
-  @Override
-  public void visit(final URIPattern u) {
-    logger.debug("Visiting URI");
-    final MetadataValue dtLit = u.getUp();
-
-    final String uri = EscapeLuceneCharacters.escape(dtLit.getValue()); // URI schemes handling
-    try {
-      Analyzer analyzer;
-      ResourceQueryParser qph;
-
-      if (u.getQueries() == null) {
-        u.setQueries(new HashMap<String, Query>());
-      }
-      for (final String fieldName : boosts.keySet()) {
-        analyzer = this.getAnalyzer(fieldName, dtLit.getDatatypeURI());
-        qph = this.getResourceQueryParser(analyzer);
-        u.getQueries().put(fieldName, qph.parse(uri, fieldName));
-      }
-    }
-    catch (final Exception e) {
-      logger.error("Parsing of the URIPattern failed", e);
-      this.createQueryException(e);
-    }
-  }
-
-  /**
-   * Do nothing
-   */
-  @Override
-  public void visit(final Wildcard w) {
-    logger.debug("Visiting Wildcard");
-  }
-
-  /**
-   * Get the associated {@link Analyzer}. If no analyzer exists, it throws an exception.
-   *
-   * @param fieldName The field name associated to this analyzer
-   * @param datatypeURI The datatype URI associated to this analyzer
-   * @return
-   */
-  private Analyzer getAnalyzer(final String fieldName, final String datatypeURI) {
-    if (datatypeConfigs.get(fieldName).get(datatypeURI) == null) {
-      throw new QueryBuilderException(org.sindice.siren.qparser.ntriple.query.QueryBuilderException.Error.PARSE_ERROR,
-        "Field '" + fieldName + "': Unknown datatype " + datatypeURI);
-    }
-    return datatypeConfigs.get(fieldName).get(datatypeURI);
   }
 
 }

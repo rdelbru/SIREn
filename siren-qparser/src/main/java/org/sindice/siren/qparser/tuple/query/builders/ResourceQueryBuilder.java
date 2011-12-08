@@ -18,34 +18,23 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.queryParser.core.QueryNodeException;
+import org.apache.lucene.queryParser.core.builders.QueryBuilder;
+import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
-import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.Similarity;
-import org.sindice.siren.search.SirenPrimitiveQuery;
+import org.apache.lucene.search.Query;
 
 /**
- * This builder does the same as the {@link BooleanQueryNodeBuilder}, but this
- * considers if the built {@link BooleanQuery} should have its coord disabled or
- * not. <br/>
- *
- * @see BooleanQueryNodeBuilder
- * @see BooleanQuery
- * @see Similarity#coord(int, int)
+ * This interface should be implemented by every class that wants to build
+ * {@link Query} objects from {@link QueryNode} objects. <br/>
+ * 
+ * @see QueryBuilder
+ * @see QueryTreeBuilder
  */
-public class StandardBooleanQueryNodeBuilder implements ResourceQueryBuilder {
+public interface ResourceQueryBuilder extends QueryBuilder {
 
-  public StandardBooleanQueryNodeBuilder() {
-    // empty constructor
-  }
-
-  public SirenPrimitiveQuery build(final QueryNode queryNode)
-  throws QueryNodeException {
-    final BooleanQueryNodeBuilder bqNodeBuilder = new BooleanQueryNodeBuilder();
-
-    return bqNodeBuilder.build(queryNode);
-  }
+  public Query build(QueryNode queryNode) throws QueryNodeException;
 
 }

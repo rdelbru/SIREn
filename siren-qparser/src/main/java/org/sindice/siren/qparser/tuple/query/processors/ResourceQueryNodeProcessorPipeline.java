@@ -24,7 +24,7 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.qparser.ntriple.query.processors;
+package org.sindice.siren.qparser.tuple.query.processors;
 
 import org.apache.lucene.queryParser.core.config.QueryConfigHandler;
 import org.apache.lucene.queryParser.core.processors.NoChildOptimizationQueryNodeProcessor;

@@ -102,6 +102,7 @@ public class TabularQueryParserTest {
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
   }
   
+  @Test
   public void testTabularQuery2()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final String ntuple = "\"literal\" \"some long literal\" <http://o1> <http://o2> \"some long literal\" <http://o3> .";
@@ -114,9 +115,21 @@ public class TabularQueryParserTest {
     
     query = "[5]<http://o3> [1]'some AND literal' [2]<http://o1>";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+
+    query = "[5]<http://o3> [1]\"some literal\" [2]<http://o1>";
+    assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
     
     query = "[4]\"some literal\"";
     assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
+  }
+  
+  @Test(expected=ParseException.class)
+  public void testBadTabularQuery()
+  throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
+    final String ntuple = "\"literal\" <http://o1> <http://o2> .";
+
+    final String query = "* [1]<http://o1> *";
+    TabularQueryParserTestHelper.match(ntuple, query);
   }
   
   @Test

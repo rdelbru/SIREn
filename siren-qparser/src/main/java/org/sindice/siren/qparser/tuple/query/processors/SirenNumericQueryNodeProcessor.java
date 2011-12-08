@@ -23,7 +23,7 @@
  * @author Campinas Stephane [ 14 Oct 2011 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple.query.processors;
+package org.sindice.siren.qparser.tuple.query.processors;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -41,8 +41,8 @@ import org.apache.lucene.queryParser.core.processors.QueryNodeProcessorImpl;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
 import org.apache.lucene.queryParser.standard.processors.NumericQueryNodeProcessor;
 import org.sindice.siren.analysis.NumericAnalyzer;
-import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.qparser.tuple.ResourceQueryParser.SirenConfigurationKeys;
+import org.sindice.siren.qparser.tuple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.util.XSDPrimitiveTypeParser;
 
 /**

@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode;
@@ -26,7 +26,7 @@ import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.queryParser.core.nodes.ParametricQueryNode.CompareOperator;
 import org.apache.lucene.queryParser.standard.nodes.RangeQueryNode;
 import org.apache.lucene.search.TermRangeQuery;
-import org.sindice.siren.qparser.ntriple.query.config.SirenMultiTermRewriteMethodAttribute;
+import org.sindice.siren.qparser.tuple.query.config.SirenMultiTermRewriteMethodAttribute;
 import org.sindice.siren.search.SirenMultiTermQuery;
 import org.sindice.siren.search.SirenTermRangeQuery;
 

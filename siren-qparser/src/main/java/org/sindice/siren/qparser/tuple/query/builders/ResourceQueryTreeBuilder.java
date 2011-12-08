@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.queryParser.core.QueryNodeException;
 import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
@@ -42,7 +42,7 @@ import org.apache.lucene.queryParser.standard.nodes.StandardBooleanQueryNode;
 import org.apache.lucene.queryParser.standard.nodes.WildcardQueryNode;
 import org.apache.lucene.queryParser.standard.processors.StandardQueryNodeProcessorPipeline;
 import org.apache.lucene.search.Query;
-import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
+import org.sindice.siren.qparser.tuple.query.nodes.SirenNumericRangeQueryNode;
 
 /**
  * This query tree builder only defines the necessary map to build a

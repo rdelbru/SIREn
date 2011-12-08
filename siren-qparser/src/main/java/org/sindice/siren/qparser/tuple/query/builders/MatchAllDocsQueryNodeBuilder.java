@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.lucene.queryParser.core.QueryNodeException;

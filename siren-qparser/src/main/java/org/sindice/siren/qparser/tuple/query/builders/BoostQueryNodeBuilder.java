@@ -18,23 +18,43 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.queryParser.core.QueryNodeException;
-import org.apache.lucene.queryParser.core.builders.QueryBuilder;
 import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
+import org.apache.lucene.queryParser.core.nodes.BoostQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
 import org.apache.lucene.search.Query;
 
 /**
- * This interface should be implemented by every class that wants to build
- * {@link Query} objects from {@link QueryNode} objects. <br/>
- * 
- * @see QueryBuilder
- * @see QueryTreeBuilder
+ * This builder basically reads the {@link Query} object set on the
+ * {@link BoostQueryNode} child using
+ * {@link QueryTreeBuilder#QUERY_TREE_BUILDER_TAGID} and applies the boost value
+ * defined in the {@link BoostQueryNode}.
  */
-public interface ResourceQueryBuilder extends QueryBuilder {
+public class BoostQueryNodeBuilder implements ResourceQueryBuilder {
 
-  public Query build(QueryNode queryNode) throws QueryNodeException;
+  public BoostQueryNodeBuilder() {
+    // empty constructor
+  }
+
+  public Query build(final QueryNode queryNode) throws QueryNodeException {
+//    throw new NotImplementedException("Boost Queries are not supported yet");
+
+//TODO: implement when Boost queries will be supported in siren
+    final BoostQueryNode boostNode = (BoostQueryNode) queryNode;
+    final QueryNode child = boostNode.getChild();
+
+    if (child == null) {
+      return null;
+    }
+
+    final Query query = (Query) child
+        .getTag(QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);
+    query.setBoost(boostNode.getValue());
+
+    return query;
+
+  }
 
 }

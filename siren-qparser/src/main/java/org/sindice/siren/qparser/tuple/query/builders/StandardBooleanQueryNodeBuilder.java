@@ -18,31 +18,34 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.queryParser.core.QueryNodeException;
-import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
-import org.apache.lucene.queryParser.core.nodes.GroupQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
-import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Similarity;
+import org.sindice.siren.search.SirenPrimitiveQuery;
 
 /**
- * Builds no object, it only returns the {@link Query} object set on the
- * {@link GroupQueryNode} object using a
- * {@link QueryTreeBuilder#QUERY_TREE_BUILDER_TAGID} tag.
+ * This builder does the same as the {@link BooleanQueryNodeBuilder}, but this
+ * considers if the built {@link BooleanQuery} should have its coord disabled or
+ * not. <br/>
+ *
+ * @see BooleanQueryNodeBuilder
+ * @see BooleanQuery
+ * @see Similarity#coord(int, int)
  */
-public class GroupQueryNodeBuilder implements ResourceQueryBuilder {
+public class StandardBooleanQueryNodeBuilder implements ResourceQueryBuilder {
 
-  public GroupQueryNodeBuilder() {
+  public StandardBooleanQueryNodeBuilder() {
     // empty constructor
   }
 
-  public Query build(QueryNode queryNode) throws QueryNodeException {
-    GroupQueryNode groupNode = (GroupQueryNode) queryNode;
+  public SirenPrimitiveQuery build(final QueryNode queryNode)
+  throws QueryNodeException {
+    final BooleanQueryNodeBuilder bqNodeBuilder = new BooleanQueryNodeBuilder();
 
-    return (Query) (groupNode).getChild().getTag(
-        QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);
-
+    return bqNodeBuilder.build(queryNode);
   }
 
 }

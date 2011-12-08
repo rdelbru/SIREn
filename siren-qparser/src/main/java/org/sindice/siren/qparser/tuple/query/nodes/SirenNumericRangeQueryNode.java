@@ -23,7 +23,7 @@
  * @author Campinas Stephane [ 17 Oct 2011 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple.query.nodes;
+package org.sindice.siren.qparser.tuple.query.nodes;
 
 import org.apache.lucene.document.NumericField;
 import org.apache.lucene.messages.MessageImpl;

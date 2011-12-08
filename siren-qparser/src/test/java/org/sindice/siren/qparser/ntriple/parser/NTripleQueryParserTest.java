@@ -43,8 +43,8 @@ import org.sindice.siren.analysis.FloatNumericAnalyzer;
 import org.sindice.siren.analysis.IntNumericAnalyzer;
 import org.sindice.siren.analysis.LongNumericAnalyzer;
 import org.sindice.siren.qparser.analysis.NTripleTestHelper;
-import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericQueryNodeProcessor;
-import org.sindice.siren.qparser.ntriple.query.processors.SirenNumericRangeQueryNodeProcessor;
+import org.sindice.siren.qparser.tuple.query.processors.SirenNumericQueryNodeProcessor;
+import org.sindice.siren.qparser.tuple.query.processors.SirenNumericRangeQueryNodeProcessor;
 
 public class NTripleQueryParserTest {
 

@@ -16,7 +16,7 @@
  * @author Campinas Stephane [ 10 Oct 2011 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.NumericField;
@@ -29,7 +29,7 @@ import org.apache.lucene.queryParser.standard.builders.NumericRangeQueryNodeBuil
 import org.apache.lucene.queryParser.standard.config.NumericConfig;
 import org.apache.lucene.queryParser.standard.nodes.NumericQueryNode;
 import org.sindice.siren.analysis.NumericAnalyzer;
-import org.sindice.siren.qparser.ntriple.query.nodes.SirenNumericRangeQueryNode;
+import org.sindice.siren.qparser.tuple.query.nodes.SirenNumericRangeQueryNode;
 import org.sindice.siren.search.SirenNumericRangeQuery;
 
 /**

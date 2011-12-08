@@ -30,8 +30,8 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.core.config.ConfigurationKey;
 import org.apache.lucene.queryParser.standard.StandardQueryParser;
 import org.sindice.siren.analysis.NumericAnalyzer;
-import org.sindice.siren.qparser.ntriple.query.builders.ResourceQueryTreeBuilder;
-import org.sindice.siren.qparser.ntriple.query.processors.ResourceQueryNodeProcessorPipeline;
+import org.sindice.siren.qparser.tuple.query.builders.ResourceQueryTreeBuilder;
+import org.sindice.siren.qparser.tuple.query.processors.ResourceQueryNodeProcessorPipeline;
 
 public class ResourceQueryParser extends StandardQueryParser {
 

@@ -18,29 +18,30 @@
  * You should have received a copy of the GNU Affero General Public
  * License along with SIREn. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.sindice.siren.qparser.ntriple.query.builders;
+package org.sindice.siren.qparser.tuple.query.builders;
 
-import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.core.QueryNodeException;
-import org.apache.lucene.queryParser.core.nodes.FieldQueryNode;
+import org.apache.lucene.queryParser.core.builders.QueryTreeBuilder;
+import org.apache.lucene.queryParser.core.nodes.GroupQueryNode;
 import org.apache.lucene.queryParser.core.nodes.QueryNode;
-import org.apache.lucene.search.TermQuery;
-import org.sindice.siren.search.SirenTermQuery;
+import org.apache.lucene.search.Query;
 
 /**
- * Builds a {@link TermQuery} object from a {@link FieldQueryNode} object.
+ * Builds no object, it only returns the {@link Query} object set on the
+ * {@link GroupQueryNode} object using a
+ * {@link QueryTreeBuilder#QUERY_TREE_BUILDER_TAGID} tag.
  */
-public class FieldQueryNodeBuilder implements ResourceQueryBuilder {
+public class GroupQueryNodeBuilder implements ResourceQueryBuilder {
 
-  public FieldQueryNodeBuilder() {
+  public GroupQueryNodeBuilder() {
     // empty constructor
   }
 
-  public SirenTermQuery build(QueryNode queryNode) throws QueryNodeException {
-    FieldQueryNode fieldNode = (FieldQueryNode) queryNode;
-    
-    return new SirenTermQuery(new Term(fieldNode.getFieldAsString(), fieldNode
-        .getTextAsString()));
+  public Query build(QueryNode queryNode) throws QueryNodeException {
+    GroupQueryNode groupNode = (GroupQueryNode) queryNode;
+
+    return (Query) (groupNode).getChild().getTag(
+        QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);
 
   }
 

@@ -23,7 +23,7 @@
  * @author Campinas Stephane [ 7 Oct 2011 ]
  * @link stephane.campinas@deri.org
  */
-package org.sindice.siren.qparser.ntriple.query.config;
+package org.sindice.siren.qparser.tuple.query.config;
 
 import org.apache.lucene.queryParser.standard.config.MultiTermRewriteMethodAttributeImpl;
 import org.apache.lucene.util.AttributeImpl;

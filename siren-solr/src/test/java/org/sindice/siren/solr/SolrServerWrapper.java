@@ -128,6 +128,25 @@ public class SolrServerWrapper {
     return docIDs;
   }
 
+  public String[] searchTabular(final String q, final String retrievedField)
+  throws SolrServerException, IOException {
+    final SolrQuery query = new SolrQuery();
+    query.setQueryType("siren");
+    query.set(SirenParams.TQ, q);
+
+    final QueryResponse response = server.query(query);
+    final SolrDocumentList docList = response.getResults();
+
+    final int size = docList.size();
+    final String docIDs[] = new String[size];
+    SolrDocument doc = null;
+    for (int i = 0; i < size; i++) {
+      doc = docList.get(i);
+      docIDs[i] = (String) doc.getFieldValue(retrievedField);
+    }
+    return docIDs;
+  }
+  
   public int getNumberOfSegments() {
     return this.getCore().getSearcher().get().getReader().getSequentialSubReaders().length;
   }

@@ -66,6 +66,10 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     query.set(SirenParams.NQ, "* <name> \"renaud\"");
     query.set(SirenParams.NQF, "ntriple^1.0");
     query.set(SirenParams.NQFO, "scattered");
+    
+    query.set(SirenParams.TQ, "<name> \"renaud\" <surname> <name1> <name2> ");
+    query.set(SirenParams.TQF, "tabular^1.0");
+    query.set(SirenParams.TQFO, "disjunction");
     query.setQueryType("siren");
     wrapper.search(query, "url");
   }
@@ -92,7 +96,7 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     final String[] results = wrapper.search(query, "url");
     assertEquals(1, results.length);
   }
-
+  
   /**
    * SRN-90: Test keyword query with default operator AND
    */
@@ -129,6 +133,21 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testDefaultOperatorLiteralPattern2()
+  throws SolrServerException, IOException {
+    this.addTabularString("id1", "<http://test.com/c1> <http://test.com/1> <http://test.com/p> \"apple orange\"");
+    this.addTabularString("id2", "<http://test.com/c1> <http://test.com/1> <http://test.com/p> \"apple banana\"");
+
+    final SolrQuery query = new SolrQuery();
+    query.set(SirenParams.TQ, "[3]'apple orange'");
+    query.setQueryType("siren");
+
+    final String[] results = wrapper.search(query, "url");
+    // Default Operator = AND : Only one document should match
+    assertEquals(1, results.length);
+  }
+  
   /**
    * SRN-97
    */
@@ -148,6 +167,21 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
   }
 
   @Test
+  public void testDefaultOperatorURIPattern2()
+  throws SolrServerException, IOException {
+    this.addTabularString("id1", "<http://test.com/1> <http://test.com/p> <http://test.com/AppleOrange> <baboo> .");
+    this.addTabularString("id2", "<http://test.com/1> <http://test.com/p> <http://test.com/AppleBanana> <booba> .");
+
+    final SolrQuery query = new SolrQuery();
+    query.set(SirenParams.TQ, "[2]<apple orange>");
+    query.setQueryType("siren");
+
+    final String[] results = wrapper.search(query, "url");
+    // Default Operator = AND : Only one document should match
+    assertEquals(1, results.length);
+  }
+  
+  @Test
   public void testEmptyNtripleFieldParam() throws IOException, SolrServerException {
     this.addNTripleString("id1", "<http://s> <http://test.org/name> \"renaud\" \"test\".");
     this.addNTripleString("id2", "<http://s> <http://p> \"test\" .");
@@ -160,6 +194,19 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     assertEquals(1, results.length);
   }
 
+  @Test
+  public void testEmptyTabularFieldParam() throws IOException, SolrServerException {
+    this.addNTripleString("id1", "<http://s> <http://test.org/name> \"renaud\" \"test\".");
+    this.addNTripleString("id2", "<http://s> <http://p> \"test\" .");
+    final SolrQuery query = new SolrQuery();
+    query.setQuery("test");
+    query.set(SirenParams.TQ, "[1]<name> [2]\"renaud\"");
+    query.setQueryType("unittest-siren");
+
+    final String[] results = wrapper.search(query, "url");
+    assertEquals(1, results.length);
+  }
+  
   @Test
   public void testEnableFieldQueryInKeywordParser() throws IOException, SolrServerException {
     this.addNTripleString("id1", "<http://s> <http://p> \"test\" .");
@@ -342,6 +389,24 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
 
     final SolrQuery query = new SolrQuery();
     query.set(SirenParams.NQ, "* <http://p> '[501 TO *]'^^<xsd:int>");
+    query.setQueryType("siren");
+    query.set("rows", "1000");
+    
+    final String[] results = wrapper.search(query, "url");
+    // Default Operator = AND : Only one document should match
+    assertEquals(499, results.length);
+  }
+  
+  @Test
+  public void testTrieDatatypeQuery2() throws IOException, SolrServerException {
+    for (int i = 0; i < 1000; i++) {
+      this.addTabularStringWoCommit("id"+i, "<http://s" + i + "> \"" + i + "\"^^<xsd:int> .");
+    }
+
+    this.wrapper.commit();
+
+    final SolrQuery query = new SolrQuery();
+    query.set(SirenParams.TQ, "[1]'[501 TO *]'^^<xsd:int>");
     query.setQueryType("siren");
     query.set("rows", "1000");
     

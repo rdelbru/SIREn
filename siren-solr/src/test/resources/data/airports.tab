@@ -1,0 +1,1071 @@
+"299704" "71MI" "small_airport" "Belleville (Johnston) Airport" "42.0843851004"^^<xsd:double> "-83.5170149803"^^<xsd:double> "643"^^<xsd:double> "NA" "US" "US-MI" "Belleville" "no" "71MI" .
+"35325" "AO-0001" "small_airport" "Saurimo North Airport" "-9.43342971801758"^^<xsd:double> "20.3118000030518"^^<xsd:double> "3498"^^<xsd:double> "AF" "AO" "AO-LSU" "Saurimo" "no" .
+"38770" "AR-0095" "heliport" "Cerro Chapelco Heliport" "-40.1981"^^<xsd:double> "-71.3211"^^<xsd:double> "4281"^^<xsd:double> "SA" "AR" "AR-Q" "San Martín De Los Andes" "no" .
+"38826" "AR-0151" "small_airport" "Estancia Nueva Lubecka Airport" "-44.4419441223145"^^<xsd:double> "-70.4422225952148"^^<xsd:double> "2021"^^<xsd:double> "SA" "AR" "AR-U" "Jose de San Martin" "no" .
+"38944" "AR-0269" "small_airport" "Meliquina Airport" "-40.3353004455566"^^<xsd:double> "-71.3392028808594"^^<xsd:double> "3061"^^<xsd:double> "SA" "AR" "AR-Q" "Meliquina" "no" .
+"42847" "AR-0425" "small_airport" "General San Martin (La Pampa) Airport" "-37.9497222900391"^^<xsd:double> "-63.6175003051758"^^<xsd:double> "528"^^<xsd:double> "SA" "AR" "AR-L" "General San Martin" "no" .
+"42507" "AU-0022" "small_airport" "Cardabia Station Airstrip" "-23.1060237884521"^^<xsd:double> "113.805229187012"^^<xsd:double> "5"^^<xsd:double> "OC" "AU" "AU-WA" "Indigenous Land Corporation" "no" .
+"31981" "AYMR" "small_airport" "Moro Airport" "-6.36332988739014"^^<xsd:double> "143.238006591797"^^<xsd:double> "2740"^^<xsd:double> "OC" "PG" "PG-SHM" "Moro" "yes" "AYMR" "MXH" .
+"43886" "BG-0001" "small_airport" "Livada Airport" "42.4562835693359"^^<xsd:double> "27.1973342895508"^^<xsd:double> "58"^^<xsd:double> "EU" "BG" "BG-02" "Livada" "no" .
+"44052" "BGET" "heliport" "Eqalugaarsuit Heliport" "60.6197196536"^^<xsd:double> "-45.9140619636"^^<xsd:double> "9"^^<xsd:double> "NA" "GL" "GL-U-A" "Eqalugaarsuit" "yes" "BGET" "QFG" .
+"44061" "BGNL" "heliport" "Nalunaq Heliport" "60.3572400194"^^<xsd:double> "-44.8279631138"^^<xsd:double> "778"^^<xsd:double> "NA" "GL" "GL-U-A" "Nalunaq" "no" "BGNL" .
+"30717" "BIFZ" "small_airport" "Forsaeti Airport" "63.8499984741211"^^<xsd:double> "-20.7169990539551"^^<xsd:double> "32"^^<xsd:double> "EU" "IS" "IS-8" "Forsaeti" "no" "BIFZ" .
+"124" "BIPA" "medium_airport" "Patreksfjordur Airport" "65.5558013916016"^^<xsd:double> "-23.9650001525879"^^<xsd:double> "11"^^<xsd:double> "EU" "IS" "IS-4" "Patreksfjordur" "no" "BIPA" "PFJ" .
+"30746" "BISH" "small_airport" "Stora-Holt Airport" "65.4000015258789"^^<xsd:double> "-21.9330005645752"^^<xsd:double> "100"^^<xsd:double> "EU" "IS" "IS-3" "Stora-Holt" "no" "BISH" .
+"30751" "BISS" "small_airport" "Sandskeið Airport" "64.0607986450195"^^<xsd:double> "-21.5746994018555"^^<xsd:double> "600"^^<xsd:double> "EU" "IS" "IS-1" "Sandskeið" "no" "BISS" .
+"32593" "BIVO" "small_airport" "Vopnafjörður Airport" "65.7205963134766"^^<xsd:double> "-14.8506002426147"^^<xsd:double> "16"^^<xsd:double> "EU" "IS" "IS-7" "Vopnafjörður" "yes" "BIVO" "VPN" .
+"46381" "BS-0004" "small_airport" "Cave Cay Airstrip" "23.9113018358"^^<xsd:double> "-76.2744498253"^^<xsd:double> "8"^^<xsd:double> "NA" "BS" "BS-EX" "Cave Cay" "no" .
+"46382" "BS-0005" "small_airport" "Farmers Cay Airstrip" "23.9613718933"^^<xsd:double> "-76.3262057304"^^<xsd:double> "10"^^<xsd:double> "NA" "BS" "BS-EX" "Little Farmers Cay" "no" .
+"46500" "CA-0432" "small_airport" "Parr Field - Private" "50.5977310536"^^<xsd:double> "-104.601688385"^^<xsd:double> "2000"^^<xsd:double> "NA" "CA" "CA-SK" "Brora" "no" .
+"300065" "ceg6" "heliport" "Nordegg / Ahlstrom Heliport" "52.4893135963"^^<xsd:double> "-116.079568863"^^<xsd:double> "4411"^^<xsd:double> "NA" "CA" "CA-AB" "Nordegg" "no" "CEG6" .
+"1717" "CYEG" "large_airport" "Edmonton International Airport" "53.3097000122"^^<xsd:double> "-113.580001831"^^<xsd:double> "2373"^^<xsd:double> "NA" "CA" "CA-AB" "Edmonton" "yes" "CYEG" "YEG" "CYEG" <"http://www.edmontonairports.com/"> "http://en.wikipedia.org/wiki/Edmonton_International_Airport" "YEA" .
+"1840" "CYOW" "large_airport" "Ottawa Macdonald-Cartier International Airport" "45.3224983215"^^<xsd:double> "-75.6691970825"^^<xsd:double> "374"^^<xsd:double> "NA" "CA" "CA-ON" "Ottawa" "yes" "CYOW" "YOW" "YOW" <"http://www.ottawa-airport.ca/"> "http://en.wikipedia.org/wiki/Ottawa_Macdonald-Cartier_International_Airport" "Uplands  UUP  CUUP" .
+"1864" "CYQB" "large_airport" "Quebec Jean Lesage International Airport" "46.7910995483"^^<xsd:double> "-71.3933029175"^^<xsd:double> "244"^^<xsd:double> "NA" "CA" "CA-QC" "Quebec" "yes" "CYQB" "YQB" "YQB" <"http://www.aeroportdequebec.com/"> "http://en.wikipedia.org/wiki/Qu%C3%A9bec/Jean_Lesage_International_Airport" "Quebec City" .
+"1911" "CYSR" "closed" "Nanisivik Airport" "72.9822006226"^^<xsd:double> "-84.6136016846"^^<xsd:double> "2106"^^<xsd:double> "NA" "CA" "CA-NU" "Nanisivik" "yes" "CYSR" "YSR" .
+"43921" "CZ-0004" "heliport" "Hospital Heliport" "49.3624992370605"^^<xsd:double> "16.654167175293"^^<xsd:double> "1038"^^<xsd:double> "EU" "CZ" "CZ-JM" "Blansko" "no" .
+"43938" "CZ-0021" "heliport" "Tabulový Vrch Heliport" "49.5832901000977"^^<xsd:double> "17.2207775115967"^^<xsd:double> "850"^^<xsd:double> "EU" "CZ" "CZ-OL" "Olomouc" "no" .
+"31734" "DBBK" "small_airport" "Kandi Airport" "11.1330003738403"^^<xsd:double> "2.93300008773804"^^<xsd:double> "951"^^<xsd:double> "AF" "BJ" "BJ-AL" "Kandi" "no" "DBBK" "KDC" .
+"30880" "DBBO" "small_airport" "Porga Airport" "11.0329999923706"^^<xsd:double> "0.982999980449677"^^<xsd:double> "531"^^<xsd:double> "AF" "BJ" "BJ-AK" "Porga" "no" "DBBO" .
+"32704" "DFCA" "small_airport" "Kaya Airport" "13.0670003890991"^^<xsd:double> "-1.10000002384186"^^<xsd:double> "984"^^<xsd:double> "AF" "BF" "BF-SMT" "Kaya" "no" "DFCA" "XKY" .
+"30890" "DFCG" "small_airport" "Kongoussi Airport" "13.3170003890991"^^<xsd:double> "-1.53299999237061"^^<xsd:double> "1056"^^<xsd:double> "AF" "BF" "BF-BAM" "Kongoussi" "no" "DFCG" .
+"30894" "DFCR" "small_airport" "Poura Airport" "11.6169996261597"^^<xsd:double> "-2.75"^^<xsd:double> "853"^^<xsd:double> "AF" "BF" "BF-BAL" "Poura" "no" "DFCR" .
+"30897" "DFCU" "small_airport" "Gourcy Airport" "13.1999998092651"^^<xsd:double> "-2.36700010299683"^^<xsd:double> "1050"^^<xsd:double> "AF" "BF" "BF-ZON" "Gourcy" "no" "DFCU" .
+"32694" "DFEA" "small_airport" "Boulsa Airport" "12.6499996185303"^^<xsd:double> "-0.566999971866608"^^<xsd:double> "984"^^<xsd:double> "AF" "BF" "BF-NAM" "Boulsa" "no" "DFEA" "XBO" .
+"32711" "DFEP" "small_airport" "Pama Airport" "11.25"^^<xsd:double> "0.699999988079071"^^<xsd:double> "699"^^<xsd:double> "AF" "BF" "BF-KMP" "Pama" "no" "DFEP" "XPA" .
+"2124" "DRRM" "medium_airport" "Maradi Airport" "13.5024995803833"^^<xsd:double> "7.12674999237061"^^<xsd:double> "1240"^^<xsd:double> "AF" "NE" "NE-4" "Maradi" "no" "DRRM" "MFQ" .
+"30946" "DRZI" "small_airport" "Iferouane Airport" "19.0669994354248"^^<xsd:double> "8.36699962615967"^^<xsd:double> "2162"^^<xsd:double> "AF" "NE" "NE-1" "Iferouane" "no" "DRZI" .
+"2134" "DTTB" "medium_airport" "Sidi Ahmed Air Base" "37.2453994750977"^^<xsd:double> "9.79144954681396"^^<xsd:double> "20"^^<xsd:double> "AF" "TN" "TN-23" "Sidi Ahmed" "no" "DTTB" "OIZ" .
+"29030" "EBBA" "heliport" "Baudoir Heliport" "50.4706001281738"^^<xsd:double> "3.83999991416931"^^<xsd:double> "98"^^<xsd:double> "EU" "BE" "BE-WHT" "Baudoir" "no" "EBBA" .
+"29031" "EBBT" "small_airport" "Brasschaat Air Base" "51.3408012390137"^^<xsd:double> "4.50439977645874"^^<xsd:double> "76"^^<xsd:double> "EU" "BE" "BE-VAN" "Brasschaat" "no" "EBBT" .
+"43749" "EBBZ" "small_airport" "Buzet Airstrip" "50.5416984558105"^^<xsd:double> "4.38111019134521"^^<xsd:double> "522"^^<xsd:double> "EU" "BE" "BE-WHT" "Pont-A-Celles" "no" "EBBZ" .
+"29033" "EBGG" "small_airport" "Overboelare Airport" "50.7555999755859"^^<xsd:double> "3.86388993263245"^^<xsd:double> "56"^^<xsd:double> "EU" "BE" "BE-VOV" "Geraardsbergen" "no" "EBGG" .
+"29040" "EBLZ" "heliport" "Zaffelare heliport" "51.1311111450195"^^<xsd:double> "3.86555600166321"^^<xsd:double> "26"^^<xsd:double> "EU" "BE" "BE-VOV" "Lochristi" "no" "EBLZ" .
+"43720" "EBMD" "heliport" "AZ Middelheim heliport" "51.1741676330566"^^<xsd:double> "4.42194414138794"^^<xsd:double> "46"^^<xsd:double> "EU" "BE" "BE-VAN" "Antwerpen" "no" "EBMD" .
+"43728" "EBRO" "heliport" "Van Den Bosch heliport" "51.2097206115723"^^<xsd:double> "4.58750009536743"^^<xsd:double> "33"^^<xsd:double> "EU" "BE" "BE-VAN" "Ranst" "no" "EBRO" .
+"29051" "EBSS" "heliport" "Sint-Lucas heliport" "51.185001373291"^^<xsd:double> "3.25111103057861"^^<xsd:double> "16"^^<xsd:double> "EU" "BE" "BE-VWV" "Brugge" "no" "EBSS" .
+"2167" "EBUL" "small_airport" "Ursel Air Base" "51.1441993713379"^^<xsd:double> "3.47555994987488"^^<xsd:double> "95"^^<xsd:double> "EU" "BE" "BE-VOV" "Ursel" "no" "EBUL" .
+"43747" "EBZO" "heliport" "Zandvoorde heliport" "50.8172225952148"^^<xsd:double> "2.97388911247253"^^<xsd:double> "102"^^<xsd:double> "EU" "BE" "BE-VWV" "Zonnebeke" "no" "EBZO" .
+"28659" "EDAP" "small_airport" "Neuhausen Airport" "51.6847229003906"^^<xsd:double> "14.4230556488037"^^<xsd:double> "279"^^<xsd:double> "EU" "DE" "DE-BR" "Cottbus" "no" "EDAP" .
+"28762" "EDCW" "small_airport" "Wismar Airport" "53.9144439697266"^^<xsd:double> "11.4994440078735"^^<xsd:double> "43"^^<xsd:double> "EU" "DE" "DE-MV" "Wismar" "no" "EDCW" .
+"28631" "EDEL" "small_airport" "Langenlonsheim Airport" "49.908332824707"^^<xsd:double> "7.90777778625488"^^<xsd:double> "295"^^<xsd:double> "EU" "DE" "DE-RP" "Langenlonsheim" "no" "EDEL" .
+"28493" "EDGA" "small_airport" "Ailertchen Airport" "50.5930557250977"^^<xsd:double> "7.94500017166138"^^<xsd:double> "1542"^^<xsd:double> "EU" "DE" "DE-RP" "Ailertchen" "no" "EDGA" .
+"28681" "EDGP" "small_airport" "Oppenheim Airport" "49.841667175293"^^<xsd:double> "8.37666702270508"^^<xsd:double> "279"^^<xsd:double> "EU" "DE" "DE-RP" "Oppenheim" "no" "EDGP" .
+"28743" "EDGU" "small_airport" "Unterschüpf Airport" "49.5158348083496"^^<xsd:double> "9.66944408416748"^^<xsd:double> "1155"^^<xsd:double> "EU" "DE" "DE-BW" "Unterschüpf" "no" "EDGU" .
+"28742" "EDHE" "small_airport" "Uetersen/Heist Airport" "53.6463890075684"^^<xsd:double> "9.70416736602783"^^<xsd:double> "23"^^<xsd:double> "EU" "DE" "DE-SH" "Uetersen" "no" "EDHE" .
+"28492" "EDHO" "small_airport" "Ahrenlohe Airport" "53.6997222900391"^^<xsd:double> "9.74055576324463"^^<xsd:double> "33"^^<xsd:double> "EU" "DE" "DE-SH" "Tornesch" "no" "EDHO" .
+"28761" "EDKN" "small_airport" "Wipperfürth-Neye Airport" "51.1241683959961"^^<xsd:double> "7.37361097335815"^^<xsd:double> "863"^^<xsd:double> "EU" "DE" "DE-NW" "Wipperfürth" "no" "EDKN" .
+"28652" "EDLT" "small_airport" "Münster-Telgte Airport" "51.9444427490234"^^<xsd:double> "7.77388906478882"^^<xsd:double> "177"^^<xsd:double> "EU" "DE" "DE-NW" "Münster" "no" "EDLT" .
+"28757" "EDLX" "small_airport" "Wesel-Römerwardt Airport" "51.6627769470215"^^<xsd:double> "6.59583282470703"^^<xsd:double> "72"^^<xsd:double> "EU" "DE" "DE-NW" "Wesel" "no" "EDLX" .
+"28547" "EDMD" "small_airport" "Dachau-Gröbenried Airport" "48.2283325195312"^^<xsd:double> "11.4230556488037"^^<xsd:double> "1608"^^<xsd:double> "EU" "DE" "DE-BY" "Dachau" "no" "EDMD" .
+"28613" "EDMJ" "small_airport" "Jesenwang Airport" "48.1741676330566"^^<xsd:double> "11.125"^^<xsd:double> "1860"^^<xsd:double> "EU" "DE" "DE-BY" "Jesenwang" "no" "EDMJ" .
+"28554" "EDMQ" "small_airport" "Donauwörth-Genderkingen Airport" "48.7027778625488"^^<xsd:double> "10.8511114120483"^^<xsd:double> "1312"^^<xsd:double> "EU" "DE" "DE-BY" "Donauwörth" "no" "EDMQ" .
+"28550" "EDMW" "small_airport" "Deggendorf Airport" "48.8302764892578"^^<xsd:double> "12.8797216415405"^^<xsd:double> "1030"^^<xsd:double> "EU" "DE" "DE-BY" "Deggendorf" "no" "EDMW" .
+"28560" "EDNE" "small_airport" "Erbach Airport" "48.3422203063965"^^<xsd:double> "9.91611099243164"^^<xsd:double> "1558"^^<xsd:double> "EU" "DE" "DE-BW" "Erbach" "no" "EDNE" .
+"28667" "EDNM" "small_airport" "Nittenau-Bruck Airport" "49.2224998474121"^^<xsd:double> "12.296667098999"^^<xsd:double> "1161"^^<xsd:double> "EU" "DE" "DE-BY" "Nittenau" "no" "EDNM" .
+"28567" "EDOC" "small_airport" "Gardelegen Airport" "52.5272216796875"^^<xsd:double> "11.3513889312744"^^<xsd:double> "230"^^<xsd:double> "EU" "DE" "DE-ST" "Gardelegen" "no" "EDOC" .
+"28752" "EDOW" "small_airport" "Waren-Vielist Airport" "53.5683326721191"^^<xsd:double> "12.652777671814"^^<xsd:double> "282"^^<xsd:double> "EU" "DE" "DE-MV" "Waren" "no" "EDOW" .
+"28579" "EDPG" "small_airport" "Griesau Airport" "48.9538879394531"^^<xsd:double> "12.4213886260986"^^<xsd:double> "1060"^^<xsd:double> "EU" "DE" "DE-BY" "Pfatter" "no" "EDPG" .
+"29085" "EDPU" "small_airport" "Bartholomä-Amalienhof Airport" "48.7466659545898"^^<xsd:double> "10.0050001144409"^^<xsd:double> "984"^^<xsd:double> "EU" "DE" "DE-BW" "Bartholomä" "no" "EDPU" .
+"29087" "EDPY" "small_airport" "Ellwangen Airport" "48.961109161377"^^<xsd:double> "10.2363891601562"^^<xsd:double> "1650"^^<xsd:double> "EU" "DE" "DE-BW" "Ellwangen" "no" "EDPY" .
+"28608" "EDRG" "small_airport" "Idar-Oberstein/Göttschied Airport" "49.7322235107422"^^<xsd:double> "7.33611106872559"^^<xsd:double> "1575"^^<xsd:double> "EU" "DE" "DE-RP" "Idar-Oberstein" "no" "EDRG" .
+"28709" "EDSZ" "small_airport" "Rottweil-Zepfenhahn Airport" "48.1863899230957"^^<xsd:double> "8.72111129760742"^^<xsd:double> "2444"^^<xsd:double> "EU" "DE" "DE-BW" "Rottweil" "no" "EDSZ" .
+"2272" "EDTB" "small_airport" "Baden-Oos Airport" "48.7919425964355"^^<xsd:double> "8.18583297729492"^^<xsd:double> "404"^^<xsd:double> "EU" "DE" "DE-BW" "Baden-Baden" "no" "EDTB" .
+"28722" "EDTX" "small_airport" "Schwäbisch Hall-Weckrieden Airport" "49.1244430541992"^^<xsd:double> "9.7811107635498"^^<xsd:double> "1299"^^<xsd:double> "EU" "DE" "DE-BW" "Schwäbisch Hall" "no" "EDTX" .
+"2279" "EDUB" "medium_airport" "Brandenburg-Briest Airport" "52.4386100769043"^^<xsd:double> "12.4583330154419"^^<xsd:double> "102"^^<xsd:double> "EU" "DE" "DE-BR" "Brandenburg an der Havel" "no" "EDUB" .
+"2283" "EDUW" "small_airport" "Tutow Airport" "53.9219436645508"^^<xsd:double> "13.2188892364502"^^<xsd:double> "26"^^<xsd:double> "EU" "DE" "DE-MV" "Demmin" "no" "EDUW" .
+"28511" "EDVA" "small_airport" "Bad Gandersheim Airport" "51.8541679382324"^^<xsd:double> "10.0255556106567"^^<xsd:double> "791"^^<xsd:double> "EU" "DE" "DE-NI" "Bad Gandersheim" "no" "EDVA" .
+"28602" "EDVI" "small_airport" "Höxter-Holzminden Airport" "51.8066673278809"^^<xsd:double> "9.37833309173584"^^<xsd:double> "1263"^^<xsd:double> "EU" "DE" "DE-NW" "Höxter" "no" "EDVI" .
+"29095" "EDVJ" "small_airport" "Salzgitter-Schäferstuhl Airport" "52.0302772521973"^^<xsd:double> "10.3644437789917"^^<xsd:double> "741"^^<xsd:double> "EU" "DE" "DE-NI" "Salzgitter" "no" "EDVJ" .
+"28534" "EDWA" "small_airport" "Bordelum Airport" "54.627498626709"^^<xsd:double> "8.93027782440186"^^<xsd:double> "3"^^<xsd:double> "EU" "DE" "DE-SH" "Bredstedt" "no" "EDWA" .
+"28680" "EDWH" "small_airport" "Oldenburg-Hatten Airport" "53.0688896179199"^^<xsd:double> "8.31361103057861"^^<xsd:double> "26"^^<xsd:double> "EU" "DE" "DE-NI" "Oldenburg" "no" "EDWH" .
+"28614" "EDWJ" "small_airport" "Juist Airport" "53.6811103820801"^^<xsd:double> "7.055832862854"^^<xsd:double> "7"^^<xsd:double> "EU" "DE" "DE-NI" "Juist" "no" "EDWJ" "JUI" .
+"28684" "EDWO" "small_airport" "Osnabrück-Atterheide Airport" "52.2863883972168"^^<xsd:double> "7.96972179412842"^^<xsd:double> "285"^^<xsd:double> "EU" "DE" "DE-NI" "Osnabrück" "no" "EDWO" .
+"28645" "EDXG" "small_airport" "Melle-Grönegau Airport" "52.2008323669434"^^<xsd:double> "8.38055610656738"^^<xsd:double> "236"^^<xsd:double> "EU" "DE" "DE-NI" "Melle" "no" "EDXG" .
+"2294" "EDXJ" "small_airport" "Husum-Schwesing Airport" "54.5099983215332"^^<xsd:double> "9.13833332061768"^^<xsd:double> "62"^^<xsd:double> "EU" "DE" "DE-SH" "Husum" "no" "EDXJ" .
+"29097" "EDXQ" "small_airport" "Rotenburg (Wümme) Airport" "53.1283340454102"^^<xsd:double> "9.34861087799072"^^<xsd:double> "98"^^<xsd:double> "EU" "DE" "DE-NI" "Rotenburg (Wümme)" "no" "EDXQ" .
+"27261" "EFKR" "small_airport" "Kärsämäki Airport" "63.989200592041"^^<xsd:double> "25.7436008453369"^^<xsd:double> "348"^^<xsd:double> "EU" "FI" "FI-OL" "Kärsämäki" "no" "EFKR" .
+"27260" "EFKY" "small_airport" "Kymi Airport" "60.5713996887207"^^<xsd:double> "26.8960990905762"^^<xsd:double> "223"^^<xsd:double> "EU" "FI" "FI-ES" "Peippola" "no" "EFKY" .
+"44408" "EGEL" "small_airport" "Coll Airport" "56.6018981933594"^^<xsd:double> "-6.61778020858765"^^<xsd:double> "21"^^<xsd:double> "EU" "GB" "GB-SCT" "Coll Island" "no" "EGEL" "COL" .
+"29131" "EGER" "small_airport" "Stronsay Airport" "59.1553001403809"^^<xsd:double> "-2.64139008522034"^^<xsd:double> "39"^^<xsd:double> "EU" "GB" "GB-SCT" "Stronsay" "yes" "EGER" "SOY" .
+"29151" "EGHY" "small_airport" "Truro Airport" "50.2784004211426"^^<xsd:double> "-5.14229011535645"^^<xsd:double> "127"^^<xsd:double> "EU" "GB" "GB-ENG" "Truro" "no" "EGHY" .
+"29178" "EGQB" "small_airport" "Ballykelly Airport" "55.0602989196777"^^<xsd:double> "-7.02027988433838"^^<xsd:double> "85"^^<xsd:double> "EU" "GB" "GB-NIR" "Ballykelly" "no" "EGQB" "BOL" .
+"29201" "EGTR" "small_airport" "Elstree Airfield" "51.6557998657227"^^<xsd:double> "-0.32583299279213"^^<xsd:double> "332"^^<xsd:double> "EU" "GB" "GB-ENG" "Watford" "no" "EGTR" "ETR" .
+"29205" "EGVP" "small_airport" "Middle Wallop Airfield" "51.1394004821777"^^<xsd:double> "-1.56860995292664"^^<xsd:double> "297"^^<xsd:double> "EU" "GB" "GB-ENG" "Middle Wallop" "no" "EGVP" .
+"30999" "EIPT" "small_airport" "Powerscourt Airfield" "53.178301"^^<xsd:double> "-6.196495"^^<xsd:double> "470"^^<xsd:double> "EU" "IE" "IE-WW" "Powerscourt" "no" "EIPT" .
+"43998" "EITT" "small_airport" "Trevet Airport" "53.5486106872559"^^<xsd:double> "-6.51694393157959"^^<xsd:double> "385"^^<xsd:double> "EU" "IE" "IE-MH" "Dunshaughlin" "no" "EITT" .
+"29234" "EKAT" "small_airport" "Anholt Airport" "56.6988983154297"^^<xsd:double> "11.5558996200562"^^<xsd:double> "23"^^<xsd:double> "EU" "DK" "DK-82" "Anholt" "no" "EKAT" .
+"30324" "EKRA" "small_airport" "Rarup Airport" "55.7785987854004"^^<xsd:double> "9.93889045715332"^^<xsd:double> "131"^^<xsd:double> "EU" "DK" "DK-82" "Rarup" "no" "EKRA" .
+"2560" "EKVH" "small_airport" "Aars Airport" "56.8469009399414"^^<xsd:double> "9.45860958099365"^^<xsd:double> "119"^^<xsd:double> "EU" "DK" "DK-81" "Aars" "no" "EKVH" .
+"2567" "ENBM" "small_airport" "Bømoen Airport" "60.6389007568359"^^<xsd:double> "6.50150012969971"^^<xsd:double> "300"^^<xsd:double> "EU" "NO" "NO-12" "Tjukkebygdi" "no" "ENBM" .
+"29827" "ENDO" "small_airport" "Dokka Thomlevold Airport" "60.8333015441895"^^<xsd:double> "9.91666984558105"^^<xsd:double> "512"^^<xsd:double> "EU" "NO" "NO-05" "Dokka" "no" "ENDO" .
+"30024" "EPKE" "small_airport" "Kȩtrzyn-Wilamowo Airport" "54.0435981750488"^^<xsd:double> "21.4321994781494"^^<xsd:double> "417"^^<xsd:double> "EU" "PL" "PL-WN" "Kȩtrzyn" "no" "EPKE" .
+"30272" "EPKP" "small_airport" "Pobiednik Wielki Airport" "50.0896987915039"^^<xsd:double> "20.2017002105713"^^<xsd:double> "650"^^<xsd:double> "EU" "PL" "PL-MA" "Kraków" "no" "EPKP" .
+"30360" "EPRJ" "small_airport" "Rzeszów Airport" "50.1053009033203"^^<xsd:double> "22.0480995178223"^^<xsd:double> "659"^^<xsd:double> "EU" "PL" "PL-PK" "Rzeszów" "no" "EPRJ" .
+"29909" "ESUO" "small_airport" "Graftavallen Airport" "63.0416984558105"^^<xsd:double> "14.0013999938965"^^<xsd:double> "1640"^^<xsd:double> "EU" "SE" "SE-Z" "Graftavallen" "no" "ESUO" .
+"41164" "FABF" "small_airport" "Barkley East Airport" "-30.966667175293"^^<xsd:double> "27.6041660308838"^^<xsd:double> "5940"^^<xsd:double> "AF" "ZA" "ZA-EC" "Barkley East" "no" "FABF" .
+"29738" "FABP" "small_airport" "Bultfontain Airport" "-28.2752990722656"^^<xsd:double> "26.1368999481201"^^<xsd:double> "4383"^^<xsd:double> "AF" "ZA" "ZA-FS" "Bultfontein" "no" "FABP" .
+"31036" "FACA" "small_airport" "Monte Carlo Airport" "-28.7999992370605"^^<xsd:double> "27.4169998168945"^^<xsd:double> "4995"^^<xsd:double> "AF" "ZA" "ZA-FS" "Monte Carlo" "no" "FACA" .
+"29757" "FACL" "small_airport" "Carolina Airport" "-26.0781002044678"^^<xsd:double> "30.0925006866455"^^<xsd:double> "5420"^^<xsd:double> "AF" "ZA" "ZA-MP" "Carolina" "no" "FACL" .
+"29823" "FADL" "small_airport" "Delareyville Airport" "-26.67919921875"^^<xsd:double> "25.4747009277344"^^<xsd:double> "4469"^^<xsd:double> "AF" "ZA" "ZA-NW" "Delareyville" "no" "FADL" .
+"41234" "FADM" "small_airport" "Kokstad Airport" "-30.5564994812012"^^<xsd:double> "29.4081993103027"^^<xsd:double> "4084"^^<xsd:double> "AF" "ZA" "ZA-NL" "Kokstad" "no" "FADM" .
+"41215" "FADY" "small_airport" "De Aar Military Airport" "-30.6365089416504"^^<xsd:double> "23.9197254180908"^^<xsd:double> "4037"^^<xsd:double> "AF" "ZA" "ZA-NC" "De Aar" "no" "FADY" .
+"41168" "FAED" "small_airport" "Edenburg Airport" "-29.75"^^<xsd:double> "25.8999996185303"^^<xsd:double> "4509"^^<xsd:double> "AF" "ZA" "ZA-FS" "Edenburg" "no" "FAED" .
+"2786" "FAGT" "small_airport" "Grahamstown Airport" "-33.2846984863281"^^<xsd:double> "26.4981002807617"^^<xsd:double> "2135"^^<xsd:double> "AF" "ZA" "ZA-EC" "Grahamstown" "no" "FAGT" .
+"29964" "FAHC" "small_airport" "Howick Airport" "-29.5527992248535"^^<xsd:double> "30.2110996246338"^^<xsd:double> "3619"^^<xsd:double> "AF" "ZA" "ZA-NL" "Howick" "no" "FAHC" .
+"29953" "FAHT" "small_airport" "Hoedspruit Airport" "-24.3516998291016"^^<xsd:double> "30.9493999481201"^^<xsd:double> "1801"^^<xsd:double> "AF" "ZA" "ZA-NP" "Hoedspruit" "no" "FAHT" .
+"31046" "FAIO" "small_airport" "Odi Airport" "-25.5499992370605"^^<xsd:double> "27.9330005645752"^^<xsd:double> "3862"^^<xsd:double> "AF" "ZA" "ZA-NW" "Lerulaneng" "no" "FAIO" .
+"41245" "FAIS" "small_airport" "Isithebe Airport" "-29.1055564880371"^^<xsd:double> "31.4074993133545"^^<xsd:double> "313"^^<xsd:double> "AF" "ZA" "ZA-NL" "Nyoni" "no" "FAIS" .
+"41257" "FAIV" "small_airport" "Ingwavuma Airport" "-27.1170997619629"^^<xsd:double> "32.0087013244629"^^<xsd:double> "2100"^^<xsd:double> "AF" "ZA" "ZA-NL" "Ingwavuma" "no" "FAIV" .
+"41147" "FAJV" "small_airport" "Jansenville Airport" "-32.9390983581543"^^<xsd:double> "24.6707000732422"^^<xsd:double> "1430"^^<xsd:double> "AF" "ZA" "ZA-EC" "Jansenville" "no" "FAJV" .
+"30037" "FAKO" "small_airport" "Komga Airport" "-32.5928001403809"^^<xsd:double> "27.8757991790771"^^<xsd:double> "2178"^^<xsd:double> "AF" "ZA" "ZA-EC" "Komga" "no" "FAKO" .
+"31050" "FALF" "small_airport" "Loeriesfontein Airport" "-30.906400680542"^^<xsd:double> "19.4253005981445"^^<xsd:double> "2997"^^<xsd:double> "AF" "ZA" "ZA-NC" "Loeriesfontein" "no" "FALF" .
+"2804" "FALO" "small_airport" "Louis Trichardt Airport" "-23.0618991851807"^^<xsd:double> "29.8647003173828"^^<xsd:double> "3025"^^<xsd:double> "AF" "ZA" "ZA-NP" "Louis Trichardt" "no" "FALO" "LCD" .
+"41157" "FAMT" "small_airport" "Molteno Airport" "-31.3896007537842"^^<xsd:double> "26.3484001159668"^^<xsd:double> "5254"^^<xsd:double> "AF" "ZA" "ZA-EC" "Molteno" "no" "FAMT" .
+"41271" "FANG" "small_airport" "Ngala Airport" "-24.3878002166748"^^<xsd:double> "31.3257999420166"^^<xsd:double> "3357"^^<xsd:double> "AF" "ZA" "ZA-NP" "Ngala" "no" "FANG" "NGL" .
+"30210" "FAOF" "small_airport" "Jack Duvenhage Airport" "-27.9617004394531"^^<xsd:double> "22.7166004180908"^^<xsd:double> "4216"^^<xsd:double> "AF" "ZA" "ZA-NC" "Olifantshoek" "no" "FAOF" .
+"31057" "FAPV" "small_airport" "Petrusville Airport" "-30.0818004608154"^^<xsd:double> "24.6795997619629"^^<xsd:double> "4116"^^<xsd:double> "AF" "ZA" "ZA-NC" "Petrusville" "no" "FAPV" .
+"2829" "FAPY" "small_airport" "Parys Airport" "-26.8892993927002"^^<xsd:double> "27.5034008026123"^^<xsd:double> "4740"^^<xsd:double> "AF" "ZA" "ZA-FS" "Parys" "no" "FAPY" .
+"2840" "FASX" "small_airport" "Hendrik Swellengrebel Airport" "-34.0481986999512"^^<xsd:double> "20.4745998382568"^^<xsd:double> "407"^^<xsd:double> "AF" "ZA" "ZA-WC" "Swellendam" "no" "FASX" .
+"41266" "FATI" "small_airport" "Thabazimbi Airport" "-24.6000003814697"^^<xsd:double> "27.3999996185303"^^<xsd:double> "3200"^^<xsd:double> "AF" "ZA" "ZA-NP" "Thabazimbi" "no" "FATI" .
+"2857" "FAWM" "medium_airport" "Welkom Airport" "-27.9979991912842"^^<xsd:double> "26.6695995330811"^^<xsd:double> "4399"^^<xsd:double> "AF" "ZA" "ZA-FS" "Welkom" "no" "FAWM" "WEL" .
+"31072" "FBNW" "small_airport" "Gaborone Notwane Airport" "-24.6830005645752"^^<xsd:double> "25.9330005645752"^^<xsd:double> "3218"^^<xsd:double> "AF" "BW" "BW-SE" "Gaborone Notwane" "no" "FBNW" .
+"31078" "FCBA" "small_airport" "La Louila Airport" "-4.08300018310547"^^<xsd:double> "14.2329998016357"^^<xsd:double> "984"^^<xsd:double> "AF" "CG" "CG-12" "La Louila" "no" "FCBA" .
+"31086" "FCMG" "small_airport" "Gokango Airport" "-3.03299999237061"^^<xsd:double> "12.1330003738403"^^<xsd:double> "820"^^<xsd:double> "AF" "CG" "CG-9" "Gokango" "no" "FCMG" .
+"31098" "FCPG" "small_airport" "Kibangou Airport" "-3.48300004005432"^^<xsd:double> "12.3000001907349"^^<xsd:double> "427"^^<xsd:double> "AF" "CG" "CG-9" "Kibangou" "no" "FCPG" .
+"29704" "FDBS" "small_airport" "Big Bend Sugar E Airport" "-26.7999992370605"^^<xsd:double> "31.8999996185303"^^<xsd:double> "541"^^<xsd:double> "AF" "SZ" "SZ-LU" "Big Bend" "no" "FDBS" .
+"31114" "FEFK" "small_airport" "Kembé Airport" "4.59999990463257"^^<xsd:double> "21.867000579834"^^<xsd:double> "1913"^^<xsd:double> "AF" "CF" "CF-BK" "Kembé" "no" "FEFK" .
+"31122" "FEGG" "small_airport" "Gamboula Airport" "4.13299989700317"^^<xsd:double> "15.1499996185303"^^<xsd:double> "2001"^^<xsd:double> "AF" "CF" "CF-HS" "Gamboula" "no" "FEGG" .
+"2884" "FKKM" "medium_airport" "Foumban Nkounja Airport" "5.63691997528076"^^<xsd:double> "10.7508001327515"^^<xsd:double> "3963"^^<xsd:double> "AF" "CM" "CM-OU" "Foumban" "no" "FKKM" "FOM" .
+"30947" "FKKS" "small_airport" "Dschang Airport" "5.44999980926514"^^<xsd:double> "10.0670003890991"^^<xsd:double> "4593"^^<xsd:double> "AF" "CM" "CM-OU" "Dschang" "no" "FKKS" "DSC" .
+"31137" "FLCC" "small_airport" "Chocha Airport" "-8.42873001098633"^^<xsd:double> "29.8059005737305"^^<xsd:double> "3270"^^<xsd:double> "AF" "ZM" "ZM-05" "Chocha" "no" "FLCC" .
+"31140" "FLEA" "small_airport" "East One Airport" "-11.6357002258301"^^<xsd:double> "29.7359008789062"^^<xsd:double> "3900"^^<xsd:double> "AF" "ZM" "ZM-04" "Bwambwa" "no" "FLEA" .
+"31141" "FLEB" "small_airport" "East Two Airport" "-11.1034002304077"^^<xsd:double> "30.3381996154785"^^<xsd:double> "3900"^^<xsd:double> "AF" "ZM" "ZM-04" "Mofu" "no" "FLEB" .
+"31146" "FLEH" "small_airport" "East Eight Airport" "-12.1169996261597"^^<xsd:double> "29.4500007629395"^^<xsd:double> "4000"^^<xsd:double> "AF" "ZM" "ZM-04" "Kapu" "no" "FLEH" .
+"31152" "FLKU" "small_airport" "Kanyau Airport" "-16.5"^^<xsd:double> "22.4169998168945"^^<xsd:double> "3448"^^<xsd:double> "AF" "ZM" "ZM-01" "Kanyau" "no" "FLKU" .
+"32746" "FLKY" "small_airport" "Kasaba Bay Airport" "-8.52499961853027"^^<xsd:double> "30.6630001068115"^^<xsd:double> "2780"^^<xsd:double> "AF" "ZM" "ZM-05" "Kasaba Bay" "no" "FLKY" "ZKB" .
+"31170" "FLPO" "small_airport" "Kabompo Airport" "-13.576000213623"^^<xsd:double> "24.2299995422363"^^<xsd:double> "3535"^^<xsd:double> "AF" "ZM" "ZM-06" "Kabompo" "no" "FLPO" .
+"31172" "FLRU" "small_airport" "Rufansa Airport" "-15.0830001831055"^^<xsd:double> "29.632999420166"^^<xsd:double> "3000"^^<xsd:double> "AF" "ZM" "ZM-09" "Rufansa" "no" "FLRU" .
+"31174" "FLSH" "small_airport" "Shiwa n'gandu Airport" "-11.2009000778198"^^<xsd:double> "31.7481994628906"^^<xsd:double> "4600"^^<xsd:double> "AF" "ZM" "ZM-05" "Shiwa n'gandu" "no" "FLSH" .
+"32636" "FMNF" "small_airport" "Avaratra Airport" "-15.1999998092651"^^<xsd:double> "48.4830017089844"^^<xsd:double> "820"^^<xsd:double> "AF" "MG" "MG-M" "Befandriana" "no" "FMNF" "WBD" .
+"32481" "FMNT" "small_airport" "Tsaratanana Airport" "-16.7510643983"^^<xsd:double> "47.6190161705"^^<xsd:double> "1073"^^<xsd:double> "AF" "MG" "MG-M" "Tsaratanana" "yes" "FMNT" "TTS" .
+"31198" "FNTO" "small_airport" "Toto Airport" "-7.14638996124268"^^<xsd:double> "14.2486000061035"^^<xsd:double> "1775"^^<xsd:double> "AF" "AO" "AO-UIG" "Toto" "no" "FNTO" .
+"32498" "FNUA" "small_airport" "Luau Airport" "-10.7158002853394"^^<xsd:double> "22.2311000823975"^^<xsd:double> "3609"^^<xsd:double> "AF" "AO" "AO-MOX" "Luau" "no" "FNUA" "UAL" .
+"30653" "FNZE" "small_airport" "N'zeto Airport" "-7.25943994522095"^^<xsd:double> "12.8631000518799"^^<xsd:double> "69"^^<xsd:double> "AF" "AO" "AO-ZAI" "N'zeto" "no" "FNZE" "ARZ" .
+"2960" "FOGQ" "medium_airport" "Okondja Airport" "-0.665214002132416"^^<xsd:double> "13.6731004714966"^^<xsd:double> "1325"^^<xsd:double> "AF" "GA" "GA-2" "Okondja" "no" "FOGQ" "OKN" .
+"29811" "FQCB" "small_airport" "Cuamba Airport" "-14.8149995803833"^^<xsd:double> "36.5299987792969"^^<xsd:double> "1919"^^<xsd:double> "AF" "MZ" "MZ-A" "Cuamba" "no" "FQCB" "FXO" .
+"29974" "FQIA" "small_airport" "Inhaca Airport" "-25.9971446990967"^^<xsd:double> "32.9293518066406"^^<xsd:double> "10"^^<xsd:double> "AF" "MZ" "MZ-L" "Inhaca" "no" "FQIA" .
+"43347" "FR-0007" "heliport" "Hôpital Pasteur Heliport" "48.0750007629395"^^<xsd:double> "7.3380560874939"^^<xsd:double> "660"^^<xsd:double> "EU" "FR" "FR-A" "Colmar" "no" .
+"43357" "FR-0017" "heliport" "Centre Hospitalier Heliport" "43.1963386535645"^^<xsd:double> "-0.61600798368454"^^<xsd:double> "758"^^<xsd:double> "EU" "FR" "FR-B" "Oloron Sainte Marie" "no" .
+"43359" "FR-0019" "heliport" "Clinique Du Medoc Heliport" "45.3027877807617"^^<xsd:double> "-0.937885999679565"^^<xsd:double> "30"^^<xsd:double> "EU" "FR" "FR-B" "Lesparre" "no" .
+"43409" "FR-0069" "heliport" "Centre Hospitalier Régional Heliport" "49.2258338928223"^^<xsd:double> "4.01861095428467"^^<xsd:double> "339"^^<xsd:double> "EU" "FR" "FR-G" "Reims" "no" .
+"43410" "FR-0070" "heliport" "Centre Vinicole Heliport" "49.0233345031738"^^<xsd:double> "3.98499989509583"^^<xsd:double> "466"^^<xsd:double> "EU" "FR" "FR-G" "Chouilly" "no" .
+"43428" "FR-0088" "heliport" "Hôpital D'Instruction Des Armées De Percy Heliport" "48.8142013549805"^^<xsd:double> "2.25389003753662"^^<xsd:double> "333"^^<xsd:double> "EU" "FR" "FR-J" "Clamart" "no" .
+"43436" "FR-0096" "heliport" "Le Corum Heliport" "43.6136093139648"^^<xsd:double> "3.88222193717957"^^<xsd:double> "176"^^<xsd:double> "EU" "FR" "FR-K" "Montpellier" "no" .
+"43440" "FR-0100" "heliport" "Centre Hospitalier La Perche Heliport" "45.5163879394531"^^<xsd:double> "1.20305597782135"^^<xsd:double> "1178"^^<xsd:double> "EU" "FR" "FR-L" "Saint-Yrieix" "no" .
+"43443" "FR-0103" "heliport" "Centre Hospitalier Heliport" "45.8138885498047"^^<xsd:double> "1.23777794837952"^^<xsd:double> "899"^^<xsd:double> "EU" "FR" "FR-L" "Limoges" "no" .
+"43471" "FR-0131" "heliport" "Polyclinique Du Ternois Heliport" "50.3883323669434"^^<xsd:double> "2.33694410324097"^^<xsd:double> "417"^^<xsd:double> "EU" "FR" "FR-O" "Saint Pol Sur Ternoise" "no" .
+"43473" "FR-0133" "heliport" "Usine Renault Heliport" "50.3622207641602"^^<xsd:double> "3.0377779006958"^^<xsd:double> "95"^^<xsd:double> "EU" "FR" "FR-O" "Douai" "no" .
+"43535" "FR-0195" "heliport" "Hôpital La Timone Heliport" "43.2894439697266"^^<xsd:double> "5.40388917922974"^^<xsd:double> "138"^^<xsd:double> "EU" "FR" "FR-U" "Marseille" "no" .
+"43537" "FR-0197" "heliport" "Milhaud Heliport" "43.1133346557617"^^<xsd:double> "5.89805603027344"^^<xsd:double> "3"^^<xsd:double> "EU" "FR" "FR-U" "Toulon" "no" .
+"43560" "FR-0220" "heliport" "Clinique Pneumologique des rieux Heliport" "44.3580551147461"^^<xsd:double> "5.1497220993042"^^<xsd:double> "1035"^^<xsd:double> "EU" "FR" "FR-V" "Nyons" "no" .
+"43562" "FR-0222" "heliport" "Crs Alpes Heliport" "45.6569442749023"^^<xsd:double> "6.37611103057861"^^<xsd:double> "1084"^^<xsd:double> "EU" "FR" "FR-V" "Albertville" "no" .
+"43571" "FR-0231" "heliport" "Hôtel Georges Blanc Heliport" "46.220832824707"^^<xsd:double> "4.98888921737671"^^<xsd:double> "653"^^<xsd:double> "EU" "FR" "FR-V" "Vonnas" "no" .
+"43572" "FR-0232" "heliport" "Hôtel Le Château Heliport" "45.5900001525879"^^<xsd:double> "5.5369439125061"^^<xsd:double> "1271"^^<xsd:double> "EU" "FR" "FR-V" "Faverges De La Tour" "no" .
+"43573" "FR-0233" "heliport" "Hôtel Royal Heliport" "46.3966674804688"^^<xsd:double> "6.59555578231812"^^<xsd:double> "1540"^^<xsd:double> "EU" "FR" "FR-V" "Evian-les-Bains" "no" .
+"43576" "FR-0236" "heliport" "Magland Heliport" "45.9833335876465"^^<xsd:double> "6.71666717529297"^^<xsd:double> "7546"^^<xsd:double> "EU" "FR" "FR-V" "Magland" "no" .
+"43583" "FR-0243" "heliport" "Sécurité Heliport" "45.9388885498047"^^<xsd:double> "6.89583301544189"^^<xsd:double> "3532"^^<xsd:double> "EU" "FR" "FR-V" "Chamonix" "no" .
+"43589" "FR-0247" "small_airport" "Artigues Airport" "43.0769424438477"^^<xsd:double> "0.00194400001782924"^^<xsd:double> "2428"^^<xsd:double> "EU" "FR" "FR-N" "Artigues" "no" .
+"43592" "FR-0250" "small_airport" "Cabaliros Airport" "42.9524993896484"^^<xsd:double> "0.13527800142765"^^<xsd:double> "5718"^^<xsd:double> "EU" "FR" "FR-N" "D'Argeles Gazost" "no" .
+"43593" "FR-0251" "small_airport" "Cap De Barres Airport" "42.8630561828613"^^<xsd:double> "0.515277981758118"^^<xsd:double> "5798"^^<xsd:double> "EU" "FR" "FR-N" "Cires" "no" .
+"43596" "FR-0254" "small_airport" "Cipieres Alpes Dazur Airport" "43.7777786254883"^^<xsd:double> "6.90694379806519"^^<xsd:double> "3789"^^<xsd:double> "EU" "FR" "FR-U" "Cipieres" "no" .
+"43601" "FR-0259" "small_airport" "Col De Cenise Airport" "46.0208320617676"^^<xsd:double> "6.44999980926514"^^<xsd:double> "5656"^^<xsd:double> "EU" "FR" "FR-V" "Brison" "no" .
+"43618" "FR-0276" "small_airport" "Glacier Du Dome Du Gouter Airport" "45.845832824707"^^<xsd:double> "6.84999990463257"^^<xsd:double> "0"^^<xsd:double> "EU" "FR" "FR-V" "Chamonix" "no" .
+"43633" "FR-0291" "small_airport" "La Tete Des Champs Le Menil Airport" "47.9166679382324"^^<xsd:double> "6.83055591583252"^^<xsd:double> "3182"^^<xsd:double> "EU" "FR" "FR-M" "Le Menil" "no" .
+"43634" "FR-0292" "small_airport" "La Toussuire Airport" "45.2722206115723"^^<xsd:double> "6.26666688919067"^^<xsd:double> "5413"^^<xsd:double> "EU" "FR" "FR-V" "La Toussuire" "no" .
+"43638" "FR-0296" "small_airport" "Mont Llaret Airport" "42.5750007629395"^^<xsd:double> "2.03888893127441"^^<xsd:double> "7628"^^<xsd:double> "EU" "FR" "FR-K" "Les Angles" "no" .
+"43640" "FR-0298" "small_airport" "Morzine Avoriaz Airport" "46.1902770996094"^^<xsd:double> "6.76249980926514"^^<xsd:double> "5709"^^<xsd:double> "EU" "FR" "FR-V" "Avoriaz" "no" .
+"43645" "FR-0303" "small_airport" "Quatre Veziaux Airport" "42.8922233581543"^^<xsd:double> "0.299721986055374"^^<xsd:double> "5643"^^<xsd:double> "EU" "FR" "FR-N" "Ancizan" "no" .
+"43651" "FR-0308" "small_airport" "Uls Airport" "42.8519439697266"^^<xsd:double> "0.848888993263245"^^<xsd:double> "6562"^^<xsd:double> "EU" "FR" "FR-N" "Melles" "no" .
+"31210" "FTTE" "small_airport" "Biltine Airport" "14.5170001983643"^^<xsd:double> "20.8999996185303"^^<xsd:double> "1680"^^<xsd:double> "AF" "TD" "TD-BI" "Biltine" "no" "FTTE" .
+"31214" "FTTZ" "small_airport" "Bardai Zougra Airport" "21.4500007629395"^^<xsd:double> "17.0499992370605"^^<xsd:double> "3524"^^<xsd:double> "AF" "TD" "TD-BET" "Bardai Zougra" "no" "FTTZ" .
+"31221" "FVBO" "small_airport" "Bosbury Airport" "-18.2169990539551"^^<xsd:double> "30.132999420166"^^<xsd:double> "3940"^^<xsd:double> "AF" "ZW" "ZW-MW" "Bosbury" "no" "FVBO" .
+"31222" "FVCC" "small_airport" "C.C. Strip" "-17.4330005645752"^^<xsd:double> "30.2999992370605"^^<xsd:double> "4050"^^<xsd:double> "AF" "ZW" "ZW-MW" "C.C. Strip" "no" "FVCC" .
+"31244" "FVLA" "small_airport" "Langford Airport" "-17.9330005645752"^^<xsd:double> "30.9500007629395"^^<xsd:double> "4600"^^<xsd:double> "AF" "ZW" "ZW-ME" "Langford" "no" "FVLA" .
+"31245" "FVLG" "small_airport" "Longuiel Airport" "-17"^^<xsd:double> "29.632999420166"^^<xsd:double> "4200"^^<xsd:double> "AF" "ZW" "ZW-MW" "Longuiel" "no" "FVLG" .
+"31255" "FVPL" "small_airport" "Plumtree Airport" "-20.4829998016357"^^<xsd:double> "27.7830009460449"^^<xsd:double> "4527"^^<xsd:double> "AF" "ZW" "ZW-MS" "Plumtree" "no" "FVPL" .
+"31266" "FVTD" "small_airport" "Tinfields Airport" "-19.9500007629395"^^<xsd:double> "31.4330005645752"^^<xsd:double> "3600"^^<xsd:double> "AF" "ZW" "ZW-MV" "Tinfields" "no" "FVTD" .
+"3013" "FVTL" "medium_airport" "Thornhill Air Base" "-19.4363994598389"^^<xsd:double> "29.8619003295898"^^<xsd:double> "4680"^^<xsd:double> "AF" "ZW" "ZW-MI" "Gweru" "no" "FVTL" "GWE" .
+"31272" "FVYT" "small_airport" "Inyati Airport" "-19.7000007629395"^^<xsd:double> "28.8500003814697"^^<xsd:double> "4400"^^<xsd:double> "AF" "ZW" "ZW-MN" "Inyati" "no" "FVYT" .
+"29780" "FWCB" "small_airport" "Chilumba Prv Airport" "-10.4333000183105"^^<xsd:double> "34.25"^^<xsd:double> "1611"^^<xsd:double> "AF" "MW" "MW-KR" "Chilumba" "no" "FWCB" .
+"30602" "FWDW" "medium_airport" "Dwangwa Airport" "-12.5183000564575"^^<xsd:double> "34.1319007873535"^^<xsd:double> "1605"^^<xsd:double> "AF" "MW" "MW-NK" "Dwangwa" "no" "FWDW" "DWA" .
+"3016" "FWKA" "medium_airport" "Karonga Airport" "-9.95357036590576"^^<xsd:double> "33.8930015563965"^^<xsd:double> "1765"^^<xsd:double> "AF" "MW" "MW-KR" "Karonga" "no" "FWKA" "KGJ" .
+"31283" "FXBB" "small_airport" "Bobete Airport" "-29.4249992370605"^^<xsd:double> "28.6669998168945"^^<xsd:double> "7100"^^<xsd:double> "AF" "LS" "LS-K" "Bobete" "no" "FXBB" .
+"31808" "FXLS" "small_airport" "Lesobeng Airport" "-29.7828998565674"^^<xsd:double> "28.3166999816895"^^<xsd:double> "7130"^^<xsd:double> "AF" "LS" "LS-F" "Lesobeng" "no" "FXLS" "LES" .
+"31296" "FXTB" "small_airport" "Tebellong Airport" "-30.0499992370605"^^<xsd:double> "28.4330005645752"^^<xsd:double> "5600"^^<xsd:double> "AF" "LS" "LS-H" "Tebellong" "no" "FXTB" .
+"29603" "FYGL" "small_airport" "Omaruru Game Lodge Airport" "-21.326099395752"^^<xsd:double> "16.0893993377686"^^<xsd:double> "4226"^^<xsd:double> "AF" "NA" "NA-ER" "Omaruru" "no" "FYGL" .
+"3030" "FYML" "medium_airport" "Mariental Airport" "-24.6054000854492"^^<xsd:double> "17.9253997802734"^^<xsd:double> "3650"^^<xsd:double> "AF" "NA" "NA-HA" "Mariental" "no" "FYML" .
+"29611" "FYOJ" "small_airport" "Outjo Airport" "-20.0753002166748"^^<xsd:double> "16.1247005462646"^^<xsd:double> "4334"^^<xsd:double> "AF" "NA" "NA-KU" "Outjo" "no" "FYOJ" .
+"31302" "FZAH" "small_airport" "Tshela Airport" "-4.98299980163574"^^<xsd:double> "12.9329996109009"^^<xsd:double> "361"^^<xsd:double> "AF" "CD" "CD-BC" "Tshela" "no" "FZAH" .
+"31306" "FZAU" "small_airport" "Konde Airport" "-5.75"^^<xsd:double> "12.25"^^<xsd:double> "7"^^<xsd:double> "AF" "CD" "CD-BC" "Konde" "no" "FZAU" .
+"31863" "FZCE" "small_airport" "Lusanga Airport" "-4.80000019073486"^^<xsd:double> "18.7169990539551"^^<xsd:double> "1365"^^<xsd:double> "AF" "CD" "CD-BN" "Lusanga" "no" "FZCE" "LUS" .
+"31336" "FZCS" "small_airport" "Kenge Airport" "-4.83889007568359"^^<xsd:double> "17.0291996002197"^^<xsd:double> "1808"^^<xsd:double> "AF" "CD" "CD-BN" "Kenge" "no" "FZCS" .
+"31341" "FZCY" "small_airport" "Yuki Airport" "-4.08300018310547"^^<xsd:double> "19.4330005645752"^^<xsd:double> "1398"^^<xsd:double> "AF" "CD" "CD-BN" "Yuki" "no" "FZCY" .
+"31344" "FZDD" "small_airport" "Wamba Luadi Airport" "-6.55000019073486"^^<xsd:double> "17.3999996185303"^^<xsd:double> "2297"^^<xsd:double> "AF" "CD" "CD-BN" "Wamba Luadi" "no" "FZDD" .
+"31348" "FZDH" "small_airport" "Ngi Airport" "-4.41699981689453"^^<xsd:double> "17.1669998168945"^^<xsd:double> "1509"^^<xsd:double> "AF" "CD" "CD-BN" "Ngi" "no" "FZDH" .
+"31350" "FZDK" "small_airport" "Kipata Katika Airport" "-5.03299999237061"^^<xsd:double> "17.6499996185303"^^<xsd:double> "2133"^^<xsd:double> "AF" "CD" "CD-BN" "Kipata Katika" "no" "FZDK" .
+"31361" "FZDY" "small_airport" "Missayi Airport" "-3.88299989700317"^^<xsd:double> "17.3500003814697"^^<xsd:double> "1280"^^<xsd:double> "AF" "CD" "CD-BN" "Missayi" "no" "FZDY" .
+"31362" "FZEB" "small_airport" "Monieka Airport" "-0.0670000016689301"^^<xsd:double> "19.9829998016357"^^<xsd:double> "1253"^^<xsd:double> "AF" "CD" "CD-EQ" "Monieka" "no" "FZEB" .
+"31825" "FZFA" "small_airport" "Libenge Airport" "3.63299989700317"^^<xsd:double> "18.632999420166"^^<xsd:double> "1125"^^<xsd:double> "AF" "CD" "CD-EQ" "Libenge" "no" "FZFA" "LIE" .
+"31376" "FZFL" "small_airport" "Kala Airport" "3.383611111"^^<xsd:double> "18.654722222"^^<xsd:double> "1640"^^<xsd:double> "AF" "CD" "CD-EQ" "Kala" "no" "FZFL" .
+"31380" "FZFS" "small_airport" "Karawa Airport" "3.36700010299683"^^<xsd:double> "20.2999992370605"^^<xsd:double> "1640"^^<xsd:double> "AF" "CD" "CD-EQ" "Karawa" "no" "FZFS" .
+"30779" "FZGN" "small_airport" "Boende Airport" "-0.216999992728233"^^<xsd:double> "20.8500003814697"^^<xsd:double> "1168"^^<xsd:double> "AF" "CD" "CD-EQ" "Boende" "no" "FZGN" "BNB" .
+"31671" "FZGV" "small_airport" "Ikela Airport" "-1.20000004768372"^^<xsd:double> "23.2830009460449"^^<xsd:double> "1283"^^<xsd:double> "AF" "CD" "CD-EQ" "Ikela" "no" "FZGV" "IKL" .
+"31393" "FZGY" "small_airport" "Yemo Airport" "-0.467000007629395"^^<xsd:double> "21.9330005645752"^^<xsd:double> "1525"^^<xsd:double> "AF" "CD" "CD-EQ" "Yemo" "no" "FZGY" .
+"31401" "FZJI" "small_airport" "Watsa Airport" "3.01694011688232"^^<xsd:double> "29.5592002868652"^^<xsd:double> "3199"^^<xsd:double> "AF" "CD" "CD-OR" "Watsa" "no" "FZJI" .
+"31422" "FZNR" "small_airport" "Rwindi Airport" "-0.790278017520905"^^<xsd:double> "29.2749996185303"^^<xsd:double> "3412"^^<xsd:double> "AF" "CD" "CD-NK" "Rwindi" "no" "FZNR" .
+"31429" "FZOK" "small_airport" "Kasongo Airport" "-4.53299999237061"^^<xsd:double> "26.617000579834"^^<xsd:double> "1785"^^<xsd:double> "AF" "CD" "CD-MA" "Kasongo" "no" "FZOK" .
+"31432" "FZOR" "small_airport" "Saulia Airport" "-1.53299999237061"^^<xsd:double> "26.5330009460449"^^<xsd:double> "1870"^^<xsd:double> "AF" "CD" "CD-MA" "Saulia" "no" "FZOR" .
+"31434" "FZOT" "small_airport" "Phibraki Airport" "-2.93300008773804"^^<xsd:double> "27.5330009460449"^^<xsd:double> "2100"^^<xsd:double> "AF" "CD" "CD-SK" "Phibraki" "no" "FZOT" .
+"31739" "FZQG" "small_airport" "Kasenga Airport" "-10.3500003814697"^^<xsd:double> "28.632999420166"^^<xsd:double> "3146"^^<xsd:double> "AF" "CD" "CD-KA" "Kasenga" "no" "FZQG" "KEC" .
+"31439" "FZQH" "small_airport" "Katwe Airport" "-10.5500001907349"^^<xsd:double> "27.8500003814697"^^<xsd:double> "5577"^^<xsd:double> "AF" "CD" "CD-KA" "Katwe" "no" "FZQH" .
+"31441" "FZQJ" "small_airport" "Mwadingusha Airport" "-10.75"^^<xsd:double> "27.2000007629395"^^<xsd:double> "3707"^^<xsd:double> "AF" "CD" "CD-KA" "Mwadingusha" "no" "FZQJ" .
+"31454" "FZRO" "small_airport" "Luvua Airport" "-7.93300008773804"^^<xsd:double> "28.5330009460449"^^<xsd:double> "4298"^^<xsd:double> "AF" "CD" "CD-KA" "Luvua" "no" "FZRO" .
+"31457" "FZSD" "small_airport" "Sandoa Airport" "-9.63300037384033"^^<xsd:double> "22.8500003814697"^^<xsd:double> "3022"^^<xsd:double> "AF" "CD" "CD-KA" "Sandoa" "no" "FZSD" .
+"31490" "FZVT" "small_airport" "Dekese Airport" "-3.46700000762939"^^<xsd:double> "21.4330005645752"^^<xsd:double> "1279"^^<xsd:double> "AF" "CD" "CD-KW" "Dekese" "no" "FZVT" .
+"31492" "FZWB" "small_airport" "Bibanga Airport" "-6.25"^^<xsd:double> "23.9829998016357"^^<xsd:double> "2953"^^<xsd:double> "AF" "CD" "CD-KE" "Bibanga" "no" "FZWB" .
+"31495" "FZWI" "small_airport" "Kashia Airport" "-7.21700000762939"^^<xsd:double> "23.75"^^<xsd:double> "2887"^^<xsd:double> "AF" "CD" "CD-KE" "Kashia" "no" "FZWI" .
+"31496" "FZWL" "small_airport" "Munkamba Airport" "-5.76700019836426"^^<xsd:double> "23.0499992370605"^^<xsd:double> "2230"^^<xsd:double> "AF" "CD" "CD-KW" "Munkamba" "no" "FZWL" .
+"31499" "GAAO" "small_airport" "Ansongo Airport" "15.6999998092651"^^<xsd:double> "0.5"^^<xsd:double> "853"^^<xsd:double> "AF" "ML" "ML-7" "Ansongo" "no" "GAAO" .
+"31502" "GABG" "small_airport" "Bougouni Airport" "11.4499998092651"^^<xsd:double> "-7.51700019836426"^^<xsd:double> "1139"^^<xsd:double> "AF" "ML" "ML-3" "Bougouni" "no" "GABG" .
+"31507" "GAKL" "small_airport" "Kidal Airport" "18.4330005645752"^^<xsd:double> "1.41700005531311"^^<xsd:double> "1496"^^<xsd:double> "AF" "ML" "ML-8" "Kidal" "no" "GAKL" .
+"32046" "GANK" "small_airport" "Nara Airport" "15.2170000076294"^^<xsd:double> "-7.26700019836426"^^<xsd:double> "889"^^<xsd:double> "AF" "ML" "ML-2" "Nara" "no" "GANK" "NRM" .
+"44081" "GB-0006" "small_airport" "Draycott Farm" "51.4934005737305"^^<xsd:double> "-1.74381995201111"^^<xsd:double> "498"^^<xsd:double> "EU" "GB" "GB-ENG" "Swindon" "no" .
+"299587" "GB-0015" "small_airport" "Brent Tor Airfield" "50.5925"^^<xsd:double> "-4.14527777778"^^<xsd:double> "851"^^<xsd:double> "EU" "GB" "GB-ENG" "Tavistock" "no" .
+"3096" "GGCF" "small_airport" "Cufar Airport" "11.2878999710083"^^<xsd:double> "-15.1805000305176"^^<xsd:double> "65"^^<xsd:double> "AF" "GW" "GW-TO" "Cufar" "no" "GGCF" .
+"3106" "GMFM" "medium_airport" "Bassatine Airport" "33.8791007995605"^^<xsd:double> "-5.51512002944946"^^<xsd:double> "1890"^^<xsd:double> "AF" "MA" "MA-MEK" "Meknes" "no" "GMFM" "MEK" .
+"30763" "GUOK" "small_airport" "Boke Airport" "10.9658002853394"^^<xsd:double> "-14.2811002731323"^^<xsd:double> "164"^^<xsd:double> "AF" "GN" "GN-BK" "Boke" "no" "GUOK" "BKJ" .
+"31565" "HADO" "small_airport" "Dodola Airport" "7.02055978775024"^^<xsd:double> "39.0511016845703"^^<xsd:double> "8234"^^<xsd:double> "AF" "ET" "ET-OR" "Dodola" "no" "HADO" .
+"30638" "HCMA" "small_airport" "Alula Airport" "11.9582"^^<xsd:double> "50.748"^^<xsd:double> "6"^^<xsd:double> "AF" "SO" "SO-BR" "Alula" "yes" "HCMA" "ALU" .
+"2374" "HE34" "small_airport" "Kibrit Airport" "30.2469005584717"^^<xsd:double> "32.4922981262207"^^<xsd:double> "22"^^<xsd:double> "AF" "EG" "EG-SUZ" "Kibrit" "no" .
+"29895" "HEEM" "small_airport" "Giza Embaba Airport" "30.0746994018555"^^<xsd:double> "31.1914005279541"^^<xsd:double> "59"^^<xsd:double> "AF" "EG" "EG-C" "Cairo" "no" "HEEM" .
+"31587" "HKKE" "small_airport" "Keekorok Airport" "-1.58299994468689"^^<xsd:double> "35.25"^^<xsd:double> "5800"^^<xsd:double> "AF" "KE" "KE-700" "Keekorok" "no" "HKKE" .
+"31673" "HKKL" "small_airport" "Kilaguni Airport" "-2.91060996055603"^^<xsd:double> "38.0652008056641"^^<xsd:double> "2750"^^<xsd:double> "AF" "KE" "KE-300" "Kilaguni" "no" "HKKL" "ILU" .
+"31588" "HKKS" "small_airport" "Kisii Airport" "-0.666999995708466"^^<xsd:double> "34.7000007629395"^^<xsd:double> "4905"^^<xsd:double> "AF" "KE" "KE-600" "Kisii" "no" "HKKS" .
+"3211" "HKLO" "medium_airport" "Lodwar Airport" "3.1219699382782"^^<xsd:double> "35.608699798584"^^<xsd:double> "1715"^^<xsd:double> "AF" "KE" "KE-700" "Lodwar" "no" "HKLO" "LOK" .
+"3214" "HKNV" "small_airport" "Naivasha Airport" "-0.787953019142151"^^<xsd:double> "36.4334983825684"^^<xsd:double> "6380"^^<xsd:double> "AF" "KE" "KE-700" "Naivasha" "no" "HKNV" .
+"32467" "HLGN" "small_airport" "Gamal Abdel Nasser Airport" "31.8610000610352"^^<xsd:double> "23.9069995880127"^^<xsd:double> "519"^^<xsd:double> "AF" "LY" "LY-BU" "Tobruk" "yes" "HLGN" "TOB" .
+"31604" "HLSA" "small_airport" "Sarir (C-4) Airport" "27.6623992919922"^^<xsd:double> "22.5086002349854"^^<xsd:double> "400"^^<xsd:double> "AF" "LY" "LY-WA" "Sarir" "no" "HLSA" .
+"42158" "HN-0005" "heliport" "Ficohsa Heliport" "15.5086107254028"^^<xsd:double> "-88.0194473266602"^^<xsd:double> "247"^^<xsd:double> "NA" "HN" "HN-CR" "San Pedro Sula" "no" .
+"42025" "HN-MOP" "small_airport" "Los Pollos Airport" "13.0600004196167"^^<xsd:double> "-86.9574966430664"^^<xsd:double> "126"^^<xsd:double> "NA" "HN" "HN-CH" "El Limón" "no" .
+"42026" "HN-MOR" "small_airport" "Mocoron Airport" "15.0297002792358"^^<xsd:double> "-84.279296875"^^<xsd:double> "78"^^<xsd:double> "NA" "HN" "HN-GD" "Mocorón" "no" .
+"32027" "HSNW" "small_airport" "New Halfa Airport" "15.3556003570557"^^<xsd:double> "35.7277984619141"^^<xsd:double> "1480"^^<xsd:double> "AF" "SD" "SD-05" "New Halfa" "no" "HSNW" "NHF" .
+"3252" "HTDO" "medium_airport" "Dodoma Airport" "-6.17044019699097"^^<xsd:double> "35.7526016235352"^^<xsd:double> "3673"^^<xsd:double> "AF" "TZ" "TZ-03" "Dodoma" "no" "HTDO" "DOD" .
+"42478" "HTKD" "small_airport" "Kondoa Airport" "-4.89371013641357"^^<xsd:double> "35.7682991027832"^^<xsd:double> "4578"^^<xsd:double> "AF" "TZ" "TZ-03" "Kondoa" "no" "HTKD" .
+"31641" "HTMO" "small_airport" "Mombo Airport" "-4.88299989700317"^^<xsd:double> "38.2830009460449"^^<xsd:double> "1350"^^<xsd:double> "AF" "TZ" "TZ-25" "Mombo" "no" "HTMO" .
+"43983" "HU-0002" "small_airport" "Kalocsa/Foktő Airport" "46.5435333251953"^^<xsd:double> "18.943021774292"^^<xsd:double> "284"^^<xsd:double> "EU" "HU" "HU-BK" "Kalocsa/Foktő" "no" .
+"46455" "JM-0007" "small_airport" "Puerto Seco Airstrip" "18.4666041204"^^<xsd:double> "-77.3946905136"^^<xsd:double> "30"^^<xsd:double> "NA" "JM" "JM-06" "Discovery Bay" "no" .
+"3421" "KBOI" "large_airport" "Boise Air Terminal/Gowen field" "43.56439972"^^<xsd:double> "-116.2229996"^^<xsd:double> "2871"^^<xsd:double> "NA" "US" "US-ID" "Boise" "yes" "KBOI" "BOI" "BOI" <"http://www.cityofboise.org/departments/airport/"> "http://en.wikipedia.org/wiki/Boise_Airport" "Boise Air Terminal  Gowen Field" .
+"3483" "KDCA" "large_airport" "Ronald Reagan Washington National Airport" "38.8521003723145"^^<xsd:double> "-77.0376968383789"^^<xsd:double> "15"^^<xsd:double> "NA" "US" "US-DC" "Washington" "yes" "KDCA" "DCA" "DCA" <"http://www.mwaa.com/national/"> "http://en.wikipedia.org/wiki/Ronald_Reagan_Washington_National_Airport" "WAS" .
+"42651" "KE-0008" "small_airport" "Muswani Airport" "-1.13591694831848"^^<xsd:double> "35.3341407775879"^^<xsd:double> "5600"^^<xsd:double> "AF" "KE" "KE-700" "Muswani" "no" .
+"42654" "KE-0011" "small_airport" "Olerai Airport" "0.985943973064423"^^<xsd:double> "35.5508041381836"^^<xsd:double> "6500"^^<xsd:double> "AF" "KE" "KE-700" "Olerai" "no" .
+"42655" "KE-0012" "small_airport" "Oleshabani Airport" "-0.972346007823944"^^<xsd:double> "35.7467231750488"^^<xsd:double> "6700"^^<xsd:double> "AF" "KE" "KE-700" "Oleshabani" "no" .
+"42657" "KE-0014" "small_airport" "Barclays Airport" "-0.187795996665955"^^<xsd:double> "35.967098236084"^^<xsd:double> "6368"^^<xsd:double> "AF" "KE" "KE-700" "Nakuru" "no" .
+"42670" "KE-0027" "small_airport" "Loldia Airport" "-0.699999988079071"^^<xsd:double> "36.3166656494141"^^<xsd:double> "1970"^^<xsd:double> "AF" "KE" "KE-700" "Loldia" "no" .
+"42676" "KE-0033" "small_airport" "Olmaisor Airport" "0.333332985639572"^^<xsd:double> "36.6333312988281"^^<xsd:double> "5900"^^<xsd:double> "AF" "KE" "KE-700" "Olmaisor" "no" .
+"42683" "KE-0040" "small_airport" "Talu Airport" "-1.14595198631287"^^<xsd:double> "36.9179878234863"^^<xsd:double> "5110"^^<xsd:double> "AF" "KE" "KE-200" "Talu" "no" .
+"42691" "KE-0048" "small_airport" "Wanguru (Thiba) Airport" "-0.696676015853882"^^<xsd:double> "37.3746185302734"^^<xsd:double> "3400"^^<xsd:double> "AF" "KE" "KE-200" "Wanguru (Thiba)" "no" .
+"42692" "KE-0049" "small_airport" "Loloroi Airport" "0.633333027362823"^^<xsd:double> "37.3833312988281"^^<xsd:double> "3000"^^<xsd:double> "AF" "KE" "KE-700" "Loloroi" "no" .
+"42541" "KE-6012" "small_airport" "Arroket Airport" "-0.623426973819733"^^<xsd:double> "35.0658683776855"^^<xsd:double> "5955"^^<xsd:double> "AF" "KE" "KE-700" "Arroket" "no" .
+"42561" "KE-6042" "small_airport" "Ndovu Airport" "2.0137779712677"^^<xsd:double> "38.634220123291"^^<xsd:double> "1150"^^<xsd:double> "AF" "KE" "KE-400" "Ndovu" "no" .
+"42567" "KE-6050" "small_airport" "Gaitu Airport" "-0.0527219995856285"^^<xsd:double> "37.7341957092285"^^<xsd:double> "3805"^^<xsd:double> "AF" "KE" "KE-400" "Gaitu" "no" .
+"42568" "KE-6053" "small_airport" "Taita Hills Airport" "-3.51238894462585"^^<xsd:double> "38.2502212524414"^^<xsd:double> "3150"^^<xsd:double> "AF" "KE" "KE-300" "Taita Hills" "no" .
+"42570" "KE-6055" "small_airport" "Turkwel Gorge Airport" "1.89713895320892"^^<xsd:double> "35.3841400146484"^^<xsd:double> "2625"^^<xsd:double> "AF" "KE" "KE-700" "Turkwel Gorge" "no" .
+"42572" "KE-6058" "small_airport" "Didima Bule Airport" "-2.36916708946228"^^<xsd:double> "39.6175842285156"^^<xsd:double> "500"^^<xsd:double> "AF" "KE" "KE-300" "Didima Bule" "no" .
+"42582" "KE-6075" "small_airport" "Masnami Airport" "-1.13333296775818"^^<xsd:double> "35.3333320617676"^^<xsd:double> "5600"^^<xsd:double> "AF" "KE" "KE-700" "Masnami" "no" .
+"42597" "KE-6123" "small_airport" "Namanga Airport" "-2.54999995231628"^^<xsd:double> "36.783332824707"^^<xsd:double> "4461"^^<xsd:double> "AF" "KE" "KE-700" "Namanga" "no" .
+"42607" "KE-6208" "small_airport" "Olkiombo Airport" "-1.41925001144409"^^<xsd:double> "35.1674423217773"^^<xsd:double> "5800"^^<xsd:double> "AF" "KE" "KE-700" "Olkiombo" "no" .
+"42613" "KE-6596" "small_airport" "Kajiado Airport" "-1.85000002384186"^^<xsd:double> "36.783332824707"^^<xsd:double> "5603"^^<xsd:double> "AF" "KE" "KE-700" "Kajiado" "no" .
+"42632" "KE-6924" "small_airport" "Mado Gashi Airport" "0.722373008728027"^^<xsd:double> "39.1761436462402"^^<xsd:double> "1000"^^<xsd:double> "AF" "KE" "KE-500" "Mado Gashi" "no" .
+"42633" "KE-6937" "small_airport" "Lokichar Airport" "2.38333296775818"^^<xsd:double> "35.6500015258789"^^<xsd:double> "2440"^^<xsd:double> "AF" "KE" "KE-700" "Lokichar" "no" .
+"41648" "KG-0009" "small_airport" "Frunze Airport" "42.8339996337891"^^<xsd:double> "74.5774002075195"^^<xsd:double> "2771"^^<xsd:double> "AS" "KG" "KG-C" "Bishkek" "no" .
+"41660" "KG-0021" "small_airport" "Pokrovka Airport" "42.7156982421875"^^<xsd:double> "71.7099990844727"^^<xsd:double> "2734"^^<xsd:double> "AS" "KG" "KG-T" "Pokrovka" "no" .
+"41663" "KG-0024" "closed" "Kalacha Southwest Airport" "40.0857009887695"^^<xsd:double> "69.6352996826172"^^<xsd:double> "2326"^^<xsd:double> "AS" "KG" "KG-B" "Kalacha" "no" .
+"41664" "KG-0025" "closed" "Khaydarken  Airport" "39.9360008239746"^^<xsd:double> "71.3366012573242"^^<xsd:double> "6440"^^<xsd:double> "AS" "KG" "KG-B" "Khaydarken" "no" .
+"3604" "KIAH" "large_airport" "George Bush Intercontinental Houston Airport" "29.9843997955322"^^<xsd:double> "-95.3414001464844"^^<xsd:double> "97"^^<xsd:double> "NA" "US" "US-TX" "Houston" "yes" "KIAH" "IAH" "IAH" <"http://www.fly2houston.com/iah"> "http://en.wikipedia.org/wiki/George_Bush_Intercontinental_Airport" "QHO" .
+"3760" "KOTM" "medium_airport" "Ottumwa Regional Airport" "41.10660172"^^<xsd:double> "-92.44789886"^^<xsd:double> "845"^^<xsd:double> "NA" "US" "US-IA" "Ottumwa" "no" "KOTM" "OTM" "OTM" .
+"35241" "KP-0031" "small_airport" "Panghyon Airport" "39.9295997619629"^^<xsd:double> "125.209999084473"^^<xsd:double> "293"^^<xsd:double> "AS" "KP" "KP-PYB" "Panghyon" "no" .
+"35253" "KP-0043" "small_airport" "Taechon Northwest Airport" "39.992000579834"^^<xsd:double> "125.360000610352"^^<xsd:double> "293"^^<xsd:double> "AS" "KP" "KP-PYB" "Taechon" "no" .
+"3894" "KSNA" "large_airport" "John Wayne Airport-Orange County Airport" "33.67570114"^^<xsd:double> "-117.8679962"^^<xsd:double> "56"^^<xsd:double> "NA" "US" "US-CA" "Santa Ana" "yes" "KSNA" "SNA" "SNA" <"http://www.ocair.com/"> "http://en.wikipedia.org/wiki/John_Wayne_Airport" "Disney  Disneyland  Orange County" .
+"41865" "KZ-0013" "small_airport" "Kok-Tyube Airport" "42.8856010437012"^^<xsd:double> "68.9791030883789"^^<xsd:double> "781"^^<xsd:double> "AS" "KZ" "KZ-YUZ" "Kok_Tyube" "no" .
+"41882" "KZ-0030" "small_airport" "Burynshik Southeast Airport" "45.3438987731934"^^<xsd:double> "51.8268013000488"^^<xsd:double> "1"^^<xsd:double> "AS" "KZ" "KZ-MAN" "Burynshik" "no" .
+"41884" "KZ-0032" "small_airport" "Chubarovka Airport" "42.5735015869141"^^<xsd:double> "69.3644027709961"^^<xsd:double> "1100"^^<xsd:double> "AS" "KZ" "KZ-YUZ" "Chubarovka" "no" .
+"41887" "KZ-0035" "small_airport" "Karaganda Southeast Airport" "49.8077011108398"^^<xsd:double> "73.1414031982422"^^<xsd:double> "1800"^^<xsd:double> "AS" "KZ" "KZ-KAR" "Karaganda" "no" .
+"41894" "KZ-0042" "small_airport" "Kyzylasker Airport" "42.6086006164551"^^<xsd:double> "69.5899963378906"^^<xsd:double> "1231"^^<xsd:double> "AS" "KZ" "KZ-YUZ" "Kyzylasker" "no" .
+"41906" "KZ-0054" "small_airport" "Shelpe Southeast Airport" "44.0685997009277"^^<xsd:double> "52.2765007019043"^^<xsd:double> "935"^^<xsd:double> "AS" "KZ" "KZ-MAN" "Shelpe" "no" .
+"41916" "KZ-0064" "small_airport" "Volskoye Airport" "50.388801574707"^^<xsd:double> "73.0942001342773"^^<xsd:double> "1808"^^<xsd:double> "AS" "KZ" "KZ-KAR" "Volskoye" "no" .
+"43899" "LBBO" "small_airport" "Bohot Airport" "43.3063888549805"^^<xsd:double> "24.6913890838623"^^<xsd:double> "1162"^^<xsd:double> "EU" "BG" "BG-15" "Bohot" "no" "LBBO" .
+"3975" "LBGO" "medium_airport" "Gorna Oryahovitsa Airport" "43.1514015197754"^^<xsd:double> "25.7129001617432"^^<xsd:double> "285"^^<xsd:double> "EU" "BG" "BG-04" "Gorna Oryahovitsa" "no" "LBGO" "GOZ" .
+"43911" "LBLN" "heliport" "Lozen Heliport" "42.6193885803223"^^<xsd:double> "23.5014724731445"^^<xsd:double> "1923"^^<xsd:double> "EU" "BG" "BG-23" "Lozen" "no" "LBLN" .
+"29710" "LDZJ" "small_airport" "Bjelovar Brezova Airport" "45.8608016967773"^^<xsd:double> "16.8358001708984"^^<xsd:double> "430"^^<xsd:double> "EU" "HR" "HR-07" "Bjelovar" "no" "LDZJ" .
+"43278" "LECA" "small_airport" "La Nava - Corral De Ayllón Airport" "41.4108009338379"^^<xsd:double> "-3.44832992553711"^^<xsd:double> "3280"^^<xsd:double> "EU" "ES" "ES-CL" "Corral dev Ayllón" "no" "LECA" .
+"29410" "LECH" "small_airport" "Calamocha Airport" "40.9000015258789"^^<xsd:double> "-1.30411994457245"^^<xsd:double> "2936"^^<xsd:double> "EU" "ES" "ES-AR" "Calamocha" "no" "LECH" .
+"43267" "LEDO" "heliport" "Hospital Doce de Octubre Heliport" "40.3747362789"^^<xsd:double> "-3.69985252619"^^<xsd:double> "1970"^^<xsd:double> "EU" "ES" "ES-M" "Madrid" "no" "LEDO" .
+"4009" "LEGA" "medium_airport" "Armilla Airport" "37.1332015991211"^^<xsd:double> "-3.63568997383118"^^<xsd:double> "2297"^^<xsd:double> "EU" "ES" "ES-AN" "Armilla" "no" "LEGA" .
+"43279" "LELT" "small_airport" "Lillo Airport" "39.7168998718262"^^<xsd:double> "-3.32055997848511"^^<xsd:double> "2272"^^<xsd:double> "EU" "ES" "ES-CM" "Lillo" "no" "LELT" .
+"43281" "LEMP" "small_airport" "Los Martínez Del Puerto Airport" "37.798900604248"^^<xsd:double> "-1.0974999666214"^^<xsd:double> "534"^^<xsd:double> "EU" "ES" "ES-MU" "Murcia" "no" "LEMP" .
+"43293" "LERA" "heliport" "R.A.C.C. Heliport" "41.38330078125"^^<xsd:double> "2.1083300113678"^^<xsd:double> "300"^^<xsd:double> "EU" "ES" "ES-CT" "Barcelona" "no" "LERA" .
+"43287" "LETE" "small_airport" "Morante Airport" "39.0368995666504"^^<xsd:double> "-6.69055986404419"^^<xsd:double> "703"^^<xsd:double> "EU" "ES" "ES-EX" "Badajoz" "no" "LETE" .
+"43307" "LETR" "heliport" "Tremp Heliport" "42.1693992614746"^^<xsd:double> "0.892777979373932"^^<xsd:double> "1930"^^<xsd:double> "EU" "ES" "ES-CT" "Tremp" "no" "LETR" .
+"43253" "LEVB" "small_airport" "El Carrascal Airport" "41.8246994018555"^^<xsd:double> "-4.89306020736694"^^<xsd:double> "2788"^^<xsd:double> "EU" "ES" "ES-CL" "Valladolid" "no" "LEVB" .
+"4063" "LFBG" "medium_airport" "Cognac-Châteaubernard (BA 709) Air Base" "45.6582984924316"^^<xsd:double> "-0.317499995231628"^^<xsd:double> "102"^^<xsd:double> "EU" "FR" "FR-T" "Cognac/Châteaubernard" "no" "LFBG" "CNG" .
+"28785" "LFBJ" "small_airport" "St Junien Airport" "45.9033012390137"^^<xsd:double> "0.920000016689301"^^<xsd:double> "902"^^<xsd:double> "EU" "FR" "FR-L" "Poitiers" "no" "LFBJ" .
+"28789" "LFCB" "small_airport" "Bagnères De Luchon Airport" "42.7999992370605"^^<xsd:double> "0.600000023841858"^^<xsd:double> "2028"^^<xsd:double> "EU" "FR" "FR-N" "Biarritz" "no" "LFCB" .
+"28792" "LFCF" "small_airport" "Figeac Livernon Airport" "44.6733016967773"^^<xsd:double> "1.78917002677917"^^<xsd:double> "1086"^^<xsd:double> "EU" "FR" "FR-N" "Cahors" "no" "LFCF" .
+"4084" "LFCM" "small_airport" "Millau-Larzac Airport" "43.9892997741699"^^<xsd:double> "3.18300008773804"^^<xsd:double> "2606"^^<xsd:double> "EU" "FR" "FR-N" "Millau/Larzac" "no" "LFCM" .
+"28806" "LFDL" "small_airport" "Loudun Airport" "47.0372009277344"^^<xsd:double> "0.101388998329639"^^<xsd:double> "315"^^<xsd:double> "EU" "FR" "FR-T" "Pamiers" "no" "LFDL" .
+"28807" "LFDO" "small_airport" "Bordeaux Souge Airport" "44.8499984741211"^^<xsd:double> "-0.800000011920929"^^<xsd:double> "135"^^<xsd:double> "EU" "FR" "FR-B" "Rochefort" "no" "LFDO" .
+"28811" "LFDS" "small_airport" "Sarlat Domme Airport" "44.7933006286621"^^<xsd:double> "1.24471998214722"^^<xsd:double> "978"^^<xsd:double> "EU" "FR" "FR-B" "Rochefort" "no" "LFDS" "XSL" .
+"28823" "LFEI" "small_airport" "Briare Chatillon Airport" "47.6143989562988"^^<xsd:double> "2.78193998336792"^^<xsd:double> "539"^^<xsd:double> "EU" "FR" "FR-F" "Pontivy" "no" "LFEI" .
+"28825" "LFEK" "small_airport" "Issoudun Le Fay Airport" "46.888599395752"^^<xsd:double> "2.04138994216919"^^<xsd:double> "531"^^<xsd:double> "EU" "FR" "FR-F" "Pontivy" "no" "LFEK" .
+"28829" "LFEP" "small_airport" "Pouilly Maconge Airport" "47.2214012145996"^^<xsd:double> "4.56111001968384"^^<xsd:double> "1411"^^<xsd:double> "EU" "FR" "FR-D" "Pontivy" "no" "LFEP" .
+"28841" "LFFG" "small_airport" "La Ferté Gaucher Airport" "48.7557983398438"^^<xsd:double> "3.27666997909546"^^<xsd:double> "538"^^<xsd:double> "EU" "FR" "FR-J" "Guiscriff" "no" "LFFG" .
+"28842" "LFFH" "small_airport" "Château-Thierry - Belleau Airport" "49.0671997070312"^^<xsd:double> "3.35694003105164"^^<xsd:double> "728"^^<xsd:double> "EU" "FR" "FR-S" "Guiscriff" "no" "LFFH" .
+"4102" "LFFI" "small_airport" "Ancenis Airport" "47.4081001281738"^^<xsd:double> "-1.17750000953674"^^<xsd:double> "111"^^<xsd:double> "EU" "FR" "FR-R" "Ancenis" "no" "LFFI" .
+"28856" "LFFZ" "small_airport" "Sézanne St Rémy Airport" "48.7106018066406"^^<xsd:double> "3.76416993141174"^^<xsd:double> "354"^^<xsd:double> "EU" "FR" "FR-G" "Guiscriff" "no" "LFFZ" .
+"28860" "LFGG" "small_airport" "Belfort Chaux Airport" "47.7022018432617"^^<xsd:double> "6.83249998092651"^^<xsd:double> "1368"^^<xsd:double> "EU" "FR" "FR-I" "Colmar" "no" "LFGG" .
+"28883" "LFHH" "small_airport" "Vienne Reventin Airport" "45.4641990661621"^^<xsd:double> "4.82944011688232"^^<xsd:double> "719"^^<xsd:double> "EU" "FR" "FR-V" "Verdun" "no" "LFHH" .
+"28894" "LFHZ" "small_airport" "Sallanches Airport" "45.9538993835449"^^<xsd:double> "6.63917016983032"^^<xsd:double> "1755"^^<xsd:double> "EU" "FR" "FR-V" "Moulins" "no" "LFHZ" .
+"4118" "LFJA" "small_airport" "Chaumont-Semoutiers Airport" "48.0862998962402"^^<xsd:double> "5.0490198135376"^^<xsd:double> "1001"^^<xsd:double> "EU" "FR" "FR-G" "Chaumont/Semoutiers" "no" "LFJA" .
+"28908" "LFJD" "small_airport" "Corlier Airport" "46.0396995544434"^^<xsd:double> "5.49694013595581"^^<xsd:double> "2762"^^<xsd:double> "EU" "FR" "FR-V" "Moulins" "no" "LFJD" .
+"28910" "LFJF" "small_airport" "Aubenasson Airport" "44.6944999694824"^^<xsd:double> "5.15111017227173"^^<xsd:double> "810"^^<xsd:double> "EU" "FR" "FR-V" "Moulins" "no" "LFJF" .
+"28919" "LFKG" "small_airport" "Ghisonaccia Alzitone Airport" "42.0550003051758"^^<xsd:double> "9.40194034576416"^^<xsd:double> "177"^^<xsd:double> "EU" "FR" "FR-H" "Figari/Sud Corse" "no" "LFKG" .
+"28921" "LFKL" "small_airport" "Lyon Brindas Airport" "45.7117004394531"^^<xsd:double> "4.6977801322937"^^<xsd:double> "1040"^^<xsd:double> "EU" "FR" "FR-V" "Ajaccio" "no" "LFKL" .
+"4148" "LFLY" "medium_airport" "Lyon-Bron Airport" "45.7271995544434"^^<xsd:double> "4.94427013397217"^^<xsd:double> "659"^^<xsd:double> "EU" "FR" "FR-V" "Lyon/Bron" "no" "LFLY" "LYN" .
+"28941" "LFNE" "small_airport" "Salon Eyguières Airport" "43.6582984924316"^^<xsd:double> "5.01360988616943"^^<xsd:double> "246"^^<xsd:double> "EU" "FR" "FR-U" "Mende" "no" "LFNE" .
+"28947" "LFNO" "small_airport" "Florac Ste Enimie Airport" "44.2863998413086"^^<xsd:double> "3.46667003631592"^^<xsd:double> "3054"^^<xsd:double> "EU" "FR" "FR-K" "Mende" "no" "LFNO" .
+"28953" "LFNU" "small_airport" "Uzès Airport" "44.0847015380859"^^<xsd:double> "4.39527988433838"^^<xsd:double> "886"^^<xsd:double> "EU" "FR" "FR-K" "Mende" "no" "LFNU" .
+"4222" "LFRT" "medium_airport" "Saint-Brieuc-Armor Airport" "48.5377998352051"^^<xsd:double> "-2.85443997383118"^^<xsd:double> "453"^^<xsd:double> "EU" "FR" "FR-E" "Saint-Brieuc/Armor" "no" "LFRT" "SBK" .
+"4232" "LFSI" "medium_airport" "Saint-Dizier-Robinson (BA 113) Air Base" "48.6360015869141"^^<xsd:double> "4.8994197845459"^^<xsd:double> "458"^^<xsd:double> "EU" "FR" "FR-G" "Saint-Dizier/Robinson" "no" "LFSI" .
+"28999" "LFSJ" "small_airport" "Sedan Douzy Airport" "49.6596984863281"^^<xsd:double> "5.03777980804443"^^<xsd:double> "512"^^<xsd:double> "EU" "FR" "FR-G" "St Dizier" "no" "LFSJ" .
+"4235" "LFSO" "medium_airport" "Nancy-Ochey (BA 133) Air Base" "48.5830993652344"^^<xsd:double> "5.95499992370605"^^<xsd:double> "1106"^^<xsd:double> "EU" "FR" "FR-M" "Nancy/Ochey" "no" "LFSO" .
+"4243" "LFTZ" "small_airport" "La Môle Airport" "43.2053985595703"^^<xsd:double> "6.48199987411499"^^<xsd:double> "59"^^<xsd:double> "EU" "FR" "FR-U" "La Môle" "yes" "LFTZ" "LTT" .
+"29021" "LFYG" "small_airport" "Cambrai Niergnies Airport" "50.1425018310547"^^<xsd:double> "3.26500010490417"^^<xsd:double> "312"^^<xsd:double> "EU" "FR" "FR-O" "St Pierre I" "no" "LFYG" .
+"29026" "LFYR" "small_airport" "Romorantin Pruniers Airport" "47.32080078125"^^<xsd:double> "1.68888998031616"^^<xsd:double> "289"^^<xsd:double> "EU" "FR" "FR-F" "St Pierre I" "no" "LFYR" .
+"29673" "LGAT" "small_airport" "Athen Helenikon Airport" "37.8932991027832"^^<xsd:double> "23.7261009216309"^^<xsd:double> "69"^^<xsd:double> "EU" "GR" "GR-A1" "Athens" "no" "LGAT" "HEW" .
+"4270" "LGLE" "small_airport" "Leros Airport" "37.1848983764648"^^<xsd:double> "26.8003005981445"^^<xsd:double> "39"^^<xsd:double> "EU" "GR" "GR-81" "Leros Island" "yes" "LGLE" "LRS" .
+"42450" "LGVO" "small_airport" "Volos Army Airport" "39.3838996887207"^^<xsd:double> "22.9174003601074"^^<xsd:double> "112"^^<xsd:double> "EU" "GR" "GR-43" "Volos" "no" "LGVO" .
+"3261" "LH58" "small_airport" "Csákvár Airport" "47.3508987426758"^^<xsd:double> "18.4300003051758"^^<xsd:double> "1000"^^<xsd:double> "EU" "HU" "HU-FE" "Csákvár" "no" .
+"29732" "LHBS" "small_airport" "Budaörs Glider Airport" "47.451099395752"^^<xsd:double> "18.9806003570557"^^<xsd:double> "397"^^<xsd:double> "EU" "HU" "HU-BU" "Budaörs" "no" "LHBS" .
+"30009" "LHKV" "small_airport" "Kaposvar Kaposújlak Glider Airport" "46.3863983154297"^^<xsd:double> "17.7339000701904"^^<xsd:double> "499"^^<xsd:double> "EU" "HU" "HU-SO" "Kaposújlak" "no" "LHKV" .
+"29415" "LIAQ" "small_airport" "Aquino Airport" "41.4863014221191"^^<xsd:double> "13.7187995910645"^^<xsd:double> "361"^^<xsd:double> "EU" "IT" "IT-62" "Aquino" "no" "LIAQ" .
+"31822" "LICL" "small_airport" "Aviosuperficie Airone" "37.1139766685"^^<xsd:double> "14.2142057419"^^<xsd:double> "82"^^<xsd:double> "EU" "IT" "IT-82" "Gela" "no" .
+"29417" "LIDB" "small_airport" "Belluno Airport" "46.1674995422363"^^<xsd:double> "12.2479000091553"^^<xsd:double> "1240"^^<xsd:double> "EU" "IT" "IT-34" "Belluno" "no" "LIDB" "BLX" .
+"29428" "LILI" "small_airport" "Vercelli Airport" "45.3111991882324"^^<xsd:double> "8.41742038726807"^^<xsd:double> "417"^^<xsd:double> "EU" "IT" "IT-21" "Vercelli" "no" "LILI" .
+"44003" "LILY" "seaplane_base" "Como (Idroscalo - Water Ad) Hidroport" "45.8147010803223"^^<xsd:double> "9.06972026824951"^^<xsd:double> "663"^^<xsd:double> "EU" "IT" "IT-25" "Como" "no" "LILY" .
+"29433" "LINL" "small_airport" "Lecce / Lepore Airport" "40.3576011657715"^^<xsd:double> "18.2938995361328"^^<xsd:double> "59"^^<xsd:double> "EU" "IT" "IT-75" "Lecce" "no" "LINL" .
+"4359" "LIPN" "small_airport" "Verona / Boscomantico Airport" "45.4720001220703"^^<xsd:double> "10.9279003143311"^^<xsd:double> "286"^^<xsd:double> "EU" "IT" "IT-34" "Verona" "no" "LIPN" .
+"29439" "LIQB" "small_airport" "Arezzo Airport" "43.4558982849121"^^<xsd:double> "11.8470001220703"^^<xsd:double> "814"^^<xsd:double> "EU" "IT" "IT-52" "Arezzo" "no" "LIQB" "QZO" .
+"29731" "LKBU" "small_airport" "Bubovice Airport" "49.9743995666504"^^<xsd:double> "14.1780996322632"^^<xsd:double> "1401"^^<xsd:double> "EU" "CZ" "CZ-ST" "Bubovice" "no" "LKBU" .
+"29785" "LKCT" "small_airport" "Chotěboř Airport" "49.6857986450195"^^<xsd:double> "15.6760997772217"^^<xsd:double> "1949"^^<xsd:double> "EU" "CZ" "CZ-VY" "Chotěboř" "no" "LKCT" .
+"29952" "LKHD" "small_airport" "Hodkovice Nad Mohelkou Airport" "50.6571998596191"^^<xsd:double> "15.0777997970581"^^<xsd:double> "1480"^^<xsd:double> "EU" "CZ" "CZ-LI" "Hodkovice Nad Mohelkou" "no" "LKHD" .
+"29989" "LKJA" "small_airport" "Jaroměř Airport" "50.3314018249512"^^<xsd:double> "15.9539003372192"^^<xsd:double> "889"^^<xsd:double> "EU" "CZ" "CZ-KR" "Jaroměř" "no" "LKJA" .
+"29994" "LKJI" "small_airport" "Jihlava Airport" "49.4193992614746"^^<xsd:double> "15.6352996826172"^^<xsd:double> "1821"^^<xsd:double> "EU" "CZ" "CZ-VY" "Jihlava" "no" "LKJI" .
+"30048" "LKKR" "small_airport" "Krnov Airport" "50.0741996765137"^^<xsd:double> "17.6947002410889"^^<xsd:double> "1230"^^<xsd:double> "EU" "CZ" "CZ-MO" "Krnov" "no" "LKKR" .
+"30137" "LKMI" "small_airport" "Mikulovice Airport" "50.301700592041"^^<xsd:double> "17.2975006103516"^^<xsd:double> "1381"^^<xsd:double> "EU" "CZ" "CZ-OL" "Mikulovice" "no" "LKMI" .
+"30227" "LKOT" "small_airport" "Otrokovice Zlin Airport" "49.198299407959"^^<xsd:double> "17.5177993774414"^^<xsd:double> "600"^^<xsd:double> "EU" "CZ" "CZ-ZL" "Otrokovice" "no" "LKOT" .
+"30319" "LKRA" "small_airport" "Rana Loumy Airport" "50.4039001464844"^^<xsd:double> "13.7518997192383"^^<xsd:double> "879"^^<xsd:double> "EU" "CZ" "CZ-US" "Raná" "no" "LKRA" .
+"30545" "LKVM" "small_airport" "Vysoke Myto Glider Airport" "49.9268989562988"^^<xsd:double> "16.1858005523682"^^<xsd:double> "991"^^<xsd:double> "EU" "CZ" "CZ-PA" "Vysoke Myto" "no" "LKVM" .
+"28135" "LOAG" "small_airport" "Krems Airport" "48.4468994140625"^^<xsd:double> "15.6350002288818"^^<xsd:double> "1022"^^<xsd:double> "EU" "AT" "AT-3" "Krems" "no" "LOAG" .
+"43865" "LOBA" "heliport" "Wien Heliport" "48.2216682434082"^^<xsd:double> "16.3461112976074"^^<xsd:double> "689"^^<xsd:double> "EU" "AT" "AT-9" "Vienna" "no" .
+"29453" "LOGM" "small_airport" "Mariazell Airport" "47.7882995605469"^^<xsd:double> "15.3016996383667"^^<xsd:double> "2822"^^<xsd:double> "EU" "AT" "AT-6" "Mariazell" "no" "LOGM" .
+"29455" "LOGP" "small_airport" "Pinkafeld Airport" "47.3866844177246"^^<xsd:double> "16.1126728057861"^^<xsd:double> "1339"^^<xsd:double> "EU" "AT" "AT-1" "Pinkafeld" "no" "LOGP" .
+"43831" "LOIB" "heliport" "Hörlahof Heliport" "47.4672203063965"^^<xsd:double> "12.368332862854"^^<xsd:double> "2733"^^<xsd:double> "EU" "AT" "AT-7" "Kitzbühel" "no" .
+"43860" "LOIQ" "heliport" "Dr. Schenk Heliport" "47.2746810913086"^^<xsd:double> "9.59149742126465"^^<xsd:double> "1449"^^<xsd:double> "EU" "AT" "AT-8" "Feldkirch" "no" .
+"43852" "LOKC" "heliport" "Glock Heliport" "46.5227355957031"^^<xsd:double> "14.2970504760742"^^<xsd:double> "1539"^^<xsd:double> "EU" "AT" "AT-7" "Ferlach" "no" .
+"43854" "LOKQ" "heliport" "Öamtc Heliport" "46.7998123168945"^^<xsd:double> "12.8769149780273"^^<xsd:double> "2097"^^<xsd:double> "EU" "AT" "AT-7" "Nikolsdorf" "no" .
+"29469" "LOLC" "small_airport" "Scharnstein Airport" "47.8986015319824"^^<xsd:double> "13.9393997192383"^^<xsd:double> "1742"^^<xsd:double> "EU" "AT" "AT-4" "Scharnstein" "no" "LOLC" .
+"29476" "LOLS" "small_airport" "Schaerding-Suben Airport" "48.4033012390137"^^<xsd:double> "13.4483003616333"^^<xsd:double> "1070"^^<xsd:double> "EU" "AT" "AT-4" "Schaerding / Suben" "no" "LOLS" .
+"29494" "LSGB" "small_airport" "Bex Airport" "46.25830078125"^^<xsd:double> "6.98639011383057"^^<xsd:double> "1312"^^<xsd:double> "EU" "CH" "CH-VD" "Bex" "no" "LSGB" .
+"4493" "LSMA" "medium_airport" "Alpnach Air Base" "46.9439010620117"^^<xsd:double> "8.28417015075684"^^<xsd:double> "1460"^^<xsd:double> "EU" "CH" "CH-OW" "Alpnach" "no" "LSMA" .
+"29854" "LTAX" "closed" "Ereğli Erdemir Airport" "41.2513999938965"^^<xsd:double> "31.4108009338379"^^<xsd:double> "10"^^<xsd:double> "AS" "TR" "TR-67" "Eregli" "no" "LTAX" .
+"31872" "LYKV" "small_airport" "Ladevci Airport" "43.818298"^^<xsd:double> "20.5872"^^<xsd:double> "686"^^<xsd:double> "EU" "RS" "RS-12" "Kraljevo" "no" "LYKV" .
+"30044" "LZKS" "small_airport" "Kralova pri Senci Airport" "48.201099395752"^^<xsd:double> "17.4719009399414"^^<xsd:double> "400"^^<xsd:double> "EU" "SK" "SK-BL" "Senec" "no" "LZKS" .
+"32159" "MBPI" "small_airport" "Pine Cay Airport" "21.8999996185303"^^<xsd:double> "-72.0999984741211"^^<xsd:double> "3"^^<xsd:double> "NA" "TC" "TC-PN" "Pine Cay" "no" "MBPI" "PIC" .
+"42304" "MDBA" "small_airport" "Consuelo Batey Anita airport" "18.6833324432373"^^<xsd:double> "-69.3833312988281"^^<xsd:double> "150"^^<xsd:double> "NA" "DO" "DO-30" "Consuelo" "no" "MDBA" .
+"4646" "MGRB" "medium_airport" "Rubelsanto Airport" "15.9919996261597"^^<xsd:double> "-90.4452972412109"^^<xsd:double> "426"^^<xsd:double> "NA" "GT" "GT-AV" "Rubelsanto" "no" "MGRB" "RUV" .
+"42229" "MGSM" "small_airport" "San Marcos Airport" "14.9562997817993"^^<xsd:double> "-91.8062973022461"^^<xsd:double> "7933"^^<xsd:double> "NA" "GT" "GT-SM" "San Marcos" "no" "MGSM" .
+"42036" "MHAR" "small_airport" "Archaga Airport" "14.2852783203125"^^<xsd:double> "-87.2291641235352"^^<xsd:double> "875"^^<xsd:double> "NA" "HN" "HN-FM" "Archaga" "no" "MHAR" .
+"42037" "MHAS" "small_airport" "Alas Del Socorro Airport" "14.5930557250977"^^<xsd:double> "-87.8405532836914"^^<xsd:double> "1068"^^<xsd:double> "NA" "HN" "HN-CM" "Siguatepeque" "no" "MHAS" .
+"42046" "MHCI" "small_airport" "Chiquerito Airport" "15.8319444656372"^^<xsd:double> "-85.0269470214844"^^<xsd:double> "30"^^<xsd:double> "NA" "HN" "HN-CL" "Chiquerito" "no" "MHCI" .
+"42057" "MHEL" "small_airport" "Barrio El Aterrizaje Airport" "13.8730564117432"^^<xsd:double> "-86.5605545043945"^^<xsd:double> "760"^^<xsd:double> "NA" "HN" "HN-EP" "El Paraiso" "no" "MHEL" .
+"42065" "MHGB" "small_airport" "Guayabillas Airport" "14.7466669082642"^^<xsd:double> "-87.3752746582031"^^<xsd:double> "700"^^<xsd:double> "NA" "HN" "HN-CM" "Esquias" "no" "MHGB" .
+"42068" "MHGG" "small_airport" "Santiago De Puringla Airport" "14.3675003051758"^^<xsd:double> "-87.9113922119141"^^<xsd:double> "960"^^<xsd:double> "NA" "HN" "HN-LP" "Santiago de Puringla" "no" "MHGG" .
+"42077" "MHIR" "small_airport" "Iriona Airport" "15.9391670227051"^^<xsd:double> "-85.1372222900391"^^<xsd:double> "8"^^<xsd:double> "NA" "HN" "HN-CL" "Iriona" "no" "MHIR" .
+"42084" "MHJU" "small_airport" "Jutigalpa airport" "14.6526002883911"^^<xsd:double> "-86.2202987670898"^^<xsd:double> "1314"^^<xsd:double> "NA" "HN" "HN-OL" "Jutigalpa" "no" "MHJU" "JUT" .
+"31811" "MHLE" "small_airport" "La Esperanza Airport" "14.2911109924316"^^<xsd:double> "-88.1750030517578"^^<xsd:double> "5475"^^<xsd:double> "NA" "HN" "HN-IN" "La Esperanza" "no" "MHLE" "LEZ" .
+"42089" "MHLJ" "small_airport" "Las Lajas Airport" "14.8947219848633"^^<xsd:double> "-86.5747222900391"^^<xsd:double> "1050"^^<xsd:double> "NA" "HN" "HN-OL" "Coyoles" "no" "MHLJ" .
+"42095" "MHLV" "small_airport" "Las Vegas Airport" "14.8736114501953"^^<xsd:double> "-88.0744476318359"^^<xsd:double> "870"^^<xsd:double> "NA" "HN" "HN-SB" "Las Vegas" "no" "MHLV" .
+"42096" "MHLZ" "small_airport" "La Estanzuela Airport" "15.0166673660278"^^<xsd:double> "-88.8000030517578"^^<xsd:double> "2227"^^<xsd:double> "NA" "HN" "HN-CP" "el agua" "no" "MHLZ" .
+"42098" "MHMI" "small_airport" "Las Minitas Airport" "15.0511112213135"^^<xsd:double> "-87.2466659545898"^^<xsd:double> "2500"^^<xsd:double> "NA" "HN" "HN-YO" "Vallecillo" "no" "MHMI" .
+"42113" "MHPB" "heliport" "Publigraficos Heliport" "15.453332901001"^^<xsd:double> "-88.0219421386719"^^<xsd:double> "159"^^<xsd:double> "NA" "HN" "HN-CR" "San Pedro Sula" "no" "MHPB" .
+"42123" "MHRS" "small_airport" "Santa Rosa Copán Airport" "14.8149003982544"^^<xsd:double> "-88.7515029907227"^^<xsd:double> "2818"^^<xsd:double> "NA" "HN" "HN-CP" "Santa Rosa de Copán" "no" "MHRS" "SDH" .
+"42126" "MHSI" "small_airport" "Sico Airport" "15.8186111450195"^^<xsd:double> "-85.1144409179688"^^<xsd:double> "20"^^<xsd:double> "NA" "HN" "HN-CL" "Sico" "no" "MHSI" .
+"42142" "MHUY" "small_airport" "Cucuyagua Airport" "14.6269435882568"^^<xsd:double> "-88.8763885498047"^^<xsd:double> "805"^^<xsd:double> "NA" "HN" "HN-CP" "Cucuyagua" "no" "MHUY" .
+"42144" "MHVG" "small_airport" "Villa Guadalupe Airport" "15.0455560684204"^^<xsd:double> "-88.3088912963867"^^<xsd:double> "400"^^<xsd:double> "NA" "HN" "HN-SB" "Villa Guadalupe" "no" "MHVG" .
+"42146" "MHWD" "small_airport" "Wampusirpi II Airport" "15.1591672897339"^^<xsd:double> "-84.5983352661133"^^<xsd:double> "250"^^<xsd:double> "NA" "HN" "HN-GD" "Wampusirpi" "no" "MHWD" .
+"42151" "MHYX" "small_airport" "Yaxu Airport" "15.2775001525879"^^<xsd:double> "-83.8202743530273"^^<xsd:double> "8"^^<xsd:double> "NA" "HN" "HN-GD" "Puerto Lempira" "no" "MHYX" .
+"32020" "MKNG" "small_airport" "Negril Airport" "18.3428001403809"^^<xsd:double> "-78.3320999145508"^^<xsd:double> "9"^^<xsd:double> "NA" "JM" "JM-09" "Negril" "no" "MKNG" "NEG" .
+"42161" "MNAL" "small_airport" "Alamicamba Airport" "13.5122995376587"^^<xsd:double> "-84.2471008300781"^^<xsd:double> "65"^^<xsd:double> "NA" "NI" "NI-AN" "Alamicamba" "no" "MNAL" .
+"42173" "MNHG" "small_airport" "Hato Grande Airport" "11.9813995361328"^^<xsd:double> "-85.4327011108398"^^<xsd:double> "177"^^<xsd:double> "NA" "NI" "NI-CO" "Hato Grande" "no" "MNHG" .
+"32676" "MNWP" "small_airport" "Waspam Airport" "14.7391996383667"^^<xsd:double> "-83.9693984985352"^^<xsd:double> "98"^^<xsd:double> "NA" "NI" "NI-AN" "Waspam" "no" "MNWP" "WSP" .
+"4788" "MPCH" "medium_airport" "Cap Manuel Niño International Airport" "9.45864009857178"^^<xsd:double> "-82.5167999267578"^^<xsd:double> "19"^^<xsd:double> "NA" "PA" "PA-1" "Changuinola" "yes" "MPCH" "CHX" .
+"32008" "MPWN" "small_airport" "San Blas Airport" "9.44960021972656"^^<xsd:double> "-78.9794998168945"^^<xsd:double> "17"^^<xsd:double> "NA" "PA" "PA-Q" "Wannukandi" "no" "MPWN" "NBL" .
+"41926" "MRAR" "small_airport" "Atirro Airport" "9.85000038146973"^^<xsd:double> "-83.6500015258789"^^<xsd:double> "1936"^^<xsd:double> "NA" "CR" "CR-C" "Turrialba" "no" "MRAR" .
+"4796" "MRBA" "medium_airport" "Buenos Aires Airport" "9.16361045837402"^^<xsd:double> "-83.3299026489258"^^<xsd:double> "1214"^^<xsd:double> "NA" "CR" "CR-P" "Punta Arenas" "no" "MRBA" "BAI" .
+"41933" "MRCA" "small_airport" "Codela Airport" "10.4139995574951"^^<xsd:double> "-85.0916976928711"^^<xsd:double> "328"^^<xsd:double> "NA" "CR" "CR-G" "Guapiles" "no" "MRCA" "CSC" .
+"4800" "MRCV" "small_airport" "Cabo Velas Airport" "10.3556995391846"^^<xsd:double> "-85.852897644043"^^<xsd:double> "33"^^<xsd:double> "NA" "CR" "CR-G" "Nicoya" "yes" "MRCV" "TNO" .
+"31946" "MRDO" "small_airport" "Dieciocho Airport" "8.90369987487793"^^<xsd:double> "-83.429801940918"^^<xsd:double> "19"^^<xsd:double> "NA" "CR" "CR-P" "Puntarenas" "no" "MRDO" .
+"41947" "MRFP" "small_airport" "Frutez - Pital Airport" "10.4474000930786"^^<xsd:double> "-84.3690032958984"^^<xsd:double> "617"^^<xsd:double> "NA" "CR" "CR-A" "San Carlos" "no" "MRFP" .
+"4807" "MRLC" "medium_airport" "Los Chiles Airport" "11.0353002548218"^^<xsd:double> "-84.7061004638672"^^<xsd:double> "131"^^<xsd:double> "NA" "CR" "CR-A" "Los Chiles" "no" "MRLC" "LSL" .
+"31949" "MRLF" "small_airport" "La Flor Airport" "10.6499996185303"^^<xsd:double> "-85.5329971313477"^^<xsd:double> "177"^^<xsd:double> "NA" "CR" "CR-G" "Liberia" "no" "MRLF" .
+"41961" "MRLL" "small_airport" "Las Lomas Airport" "10.0666666030884"^^<xsd:double> "-83.5833358764648"^^<xsd:double> "1325"^^<xsd:double> "NA" "CR" "CR-L" "Siquirres" "no" "MRLL" .
+"31950" "MRLT" "small_airport" "Las Trancas Airport" "10.5670003890991"^^<xsd:double> "-85.5999984741211"^^<xsd:double> "68"^^<xsd:double> "NA" "CR" "CR-G" "Las Trancas" "no" "MRLT" .
+"31954" "MRSA" "small_airport" "San Alberto Airport" "10.1465997695923"^^<xsd:double> "-83.4881973266602"^^<xsd:double> "88"^^<xsd:double> "NA" "CR" "CR-L" "Limón" "no" "MRSA" .
+"41988" "MRSF" "small_airport" "Santa Fe Airport" "9.30000019073486"^^<xsd:double> "-83.6166687011719"^^<xsd:double> "1995"^^<xsd:double> "NA" "CR" "CR-SJ" "Pérez Zeledón" "no" "MRSF" .
+"31956" "MRSO" "small_airport" "Santa Maria De Guacimo Airport" "10.2670001983643"^^<xsd:double> "-83.6169967651367"^^<xsd:double> "32"^^<xsd:double> "NA" "CR" "CR-L" "Guapiles" "no" "MRSO" .
+"41997" "MRTG" "small_airport" "Taboga Airport" "10.3500003814697"^^<xsd:double> "-85.1999969482422"^^<xsd:double> "108"^^<xsd:double> "NA" "CR" "CR-G" "Cañas" "no" "MRTG" .
+"42008" "MSCN" "small_airport" "Casas Nuevas Airport" "13.3099727630615"^^<xsd:double> "-88.5058670043945"^^<xsd:double> "157"^^<xsd:double> "NA" "SV" "SV-US" "Jiquilisco" "no" "MSCN" .
+"42011" "MSJC" "small_airport" "El Jocotillo Airport" "13.5861539840698"^^<xsd:double> "-89.7465209960938"^^<xsd:double> "127"^^<xsd:double> "NA" "SV" "SV-SO" "El Jocotillo" "no" "MSJC" .
+"42014" "MSLM" "small_airport" "Las Mesas Airport" "13.4870700836182"^^<xsd:double> "-89.1926574707031"^^<xsd:double> "187"^^<xsd:double> "NA" "SV" "SV-LI" "Las Mesas" "no" "MSLM" .
+"42015" "MSPT" "small_airport" "El Platanar Airport" "13.9453001022339"^^<xsd:double> "-89.0627975463867"^^<xsd:double> "1354"^^<xsd:double> "NA" "SV" "SV-CU" "Suchitoto" "no" "MSPT" .
+"42017" "MSSJ" "small_airport" "Punta San Juan Airport" "13.1787347793579"^^<xsd:double> "-88.4731597900391"^^<xsd:double> "3"^^<xsd:double> "NA" "SV" "SV-US" "Corral de Mulas" "no" "MSSJ" .
+"43104" "MX-0008" "small_airport" "Bahía de Kino Airport" "28.8600997925"^^<xsd:double> "-111.976997375"^^<xsd:double> "30"^^<xsd:double> "NA" "MX" "MX-SON" "Bahia de Kino" "no" .
+"41349" "MY-0018" "small_airport" "Kuala Kahaba Airport" "5.11638879776001"^^<xsd:double> "116.146667480469"^^<xsd:double> "1250"^^<xsd:double> "AS" "MY" "MY-12" "Kuala Kahaba" "no" .
+"41351" "MY-0020" "small_airport" "Marak Parak Airport" "6.31222200393677"^^<xsd:double> "116.729721069336"^^<xsd:double> "400"^^<xsd:double> "AS" "MY" "MY-12" "Marak Parak" "no" .
+"29585" "NA-0040" "small_airport" "Maltahoehe 8 Kal Landing Site" "-24.343900680542"^^<xsd:double> "17.3321990966797"^^<xsd:double> "4216"^^<xsd:double> "AF" "NA" "NA-HA" "Maltahoehe" "no" .
+"42347" "NA-0082" "small_airport" "Gibeon Airport" "-25.1272163391113"^^<xsd:double> "17.7619495391846"^^<xsd:double> "3428"^^<xsd:double> "AF" "NA" "NA-HA" "Gibeon" "no" .
+"42348" "NA-0083" "small_airport" "Witbooisvley Landing Site" "-25.068883895874"^^<xsd:double> "18.4516677856445"^^<xsd:double> "3813"^^<xsd:double> "AF" "NA" "NA-HA" "Witbooisvley" "no" .
+"42351" "NA-0086" "small_airport" "Maltahoehe Airstrip" "-24.7683334350586"^^<xsd:double> "16.9752826690674"^^<xsd:double> "4419"^^<xsd:double> "AF" "NA" "NA-HA" "Maltahoehe" "no" .
+"42379" "NA-0114" "small_airport" "Leonardville Airport" "-23.5013828277588"^^<xsd:double> "18.7877826690674"^^<xsd:double> "4166"^^<xsd:double> "AF" "NA" "NA-OH" "Leonardville" "no" .
+"42415" "NA-0150" "small_airport" "Epukiro North Landing Site" "-21.6752662658691"^^<xsd:double> "19.2169322967529"^^<xsd:double> "4770"^^<xsd:double> "AF" "NA" "NA-OH" "Epukiro" "no" .
+"32011" "NCMN" "small_airport" "Manuae Airport" "-19.2667007446289"^^<xsd:double> "-158.960006713867"^^<xsd:double> "15"^^<xsd:double> "OC" "CK" "CK-U-A" "Manuae" "no" "NCMN" .
+"30696" "NGBR" "small_airport" "Beru Airport" "-1.35471999645233"^^<xsd:double> "176.00700378418"^^<xsd:double> "6"^^<xsd:double> "OC" "KI" "KI-G" "Beru" "no" "NGBR" "BEZ" .
+"32043" "NGTO" "small_airport" "Nonouti Airport" "-0.639721989631653"^^<xsd:double> "174.427993774414"^^<xsd:double> "10"^^<xsd:double> "OC" "KI" "KI-G" "Nonouti" "no" "NGTO" "NON" .
+"44881" "NO-0017" "small_airport" "Gravvold Airfield" "63.0547218322754"^^<xsd:double> "8.71416664123535"^^<xsd:double> "150"^^<xsd:double> "EU" "NO" "NO-15" "Surnadal" "no" .
+"32050" "NTKM" "small_airport" "Takume Airport" "-15.854700088501"^^<xsd:double> "-142.268005371094"^^<xsd:double> "7"^^<xsd:double> "OC" "PF" "PF-U-A" "Takume" "no" "NTKM" .
+"32200" "NVSR" "small_airport" "Redcliffe Airport" "-15.4720001220703"^^<xsd:double> "167.835006713867"^^<xsd:double> "36"^^<xsd:double> "OC" "VU" "VU-PAM" "Redcliffe" "yes" "NVSR" "RCL" .
+"32583" "NVSV" "small_airport" "Valesdir Airport" "-16.7961006164551"^^<xsd:double> "168.177001953125"^^<xsd:double> "10"^^<xsd:double> "OC" "VU" "VU-SEE" "Valesdir" "yes" "NVSV" "VLS" .
+"30926" "NVVD" "small_airport" "Dillon's Bay Airport" "-18.7693996429443"^^<xsd:double> "169.001007080078"^^<xsd:double> "538"^^<xsd:double> "OC" "VU" "VU-TAE" "Dillon's Bay" "yes" "NVVD" "DLY" .
+"29941" "NZHA" "small_airport" "Hawera Airport" "-39.5532989501953"^^<xsd:double> "174.266998291016"^^<xsd:double> "371"^^<xsd:double> "OC" "NZ" "NZ-TKI" "Hawera" "no" "NZHA" .
+"44802" "NZJC" "heliport" "Christchurch Hospital Heliport" "-43.5367012023926"^^<xsd:double> "172.621994018555"^^<xsd:double> "55"^^<xsd:double> "OC" "NZ" "NZ-CAN" "Christchurch" "no" "NZJC" .
+"44838" "NZJX" "heliport" "Tokoroa Hospital Heliport" "-38.2318992614746"^^<xsd:double> "175.860992431641"^^<xsd:double> "1200"^^<xsd:double> "OC" "NZ" "NZ-WKO" "Tokoroa" "no" "NZJX" .
+"44819" "NZKD" "small_airport" "Motu Kaikoura Island Aerodrome" "-36.1781005859375"^^<xsd:double> "175.324005126953"^^<xsd:double> "400"^^<xsd:double> "OC" "NZ" "NZ-AUK" "Kaikoura Island" "no" "NZKD" .
+"32072" "NZML" "small_airport" "Molesworth Airport" "-42.0830001831055"^^<xsd:double> "173.283004760742"^^<xsd:double> "2813"^^<xsd:double> "OC" "NZ" "NZ-MBH" "Molesworth" "no" "NZML" .
+"44823" "NZOB" "heliport" "Ocean Beach Heliport" "-46.5896987915039"^^<xsd:double> "168.305999755859"^^<xsd:double> "20"^^<xsd:double> "OC" "NZ" "NZ-STL" "Ocean Beach" "no" "NZOB" .
+"30214" "NZOM" "small_airport" "Omaka Blenheim Airport" "-41.5400009155273"^^<xsd:double> "173.921997070312"^^<xsd:double> "102"^^<xsd:double> "OC" "NZ" "NZ-MBH" "Blenheim" "no" "NZOM" .
+"23487" "O23" "small_airport" "Pinnacles Ranch Airport" "36.5102005005"^^<xsd:double> "-121.135002136"^^<xsd:double> "1200"^^<xsd:double> "NA" "US" "US-CA" "Paicines" "no" "O23" .
+"30795" "OABT" "small_airport" "Bost Airport" "31.559700012207"^^<xsd:double> "64.3649978637695"^^<xsd:double> "2464"^^<xsd:double> "AS" "AF" "AF-HEL" "Bost" "no" "OABT" "BST" .
+"5162" "OIHS" "medium_airport" "Hamadan Air Base" "35.2116012573242"^^<xsd:double> "48.6534004211426"^^<xsd:double> "5609"^^<xsd:double> "AS" "IR" "IR-24" "Hamadan" "no" "OIHS" .
+"42520" "OINB" "small_airport" "Babolsar Airport" "36.7200012207031"^^<xsd:double> "52.6500015258789"^^<xsd:double> "-49"^^<xsd:double> "AS" "IR" "IR-21" "Babolsar" "no" "OINB" "BBL" .
+"5189" "OINJ" "small_airport" "Bishe Kola Air Base" "36.655101776123"^^<xsd:double> "52.3496017456055"^^<xsd:double> "-79"^^<xsd:double> "AS" "IR" "IR-21" "Amol" "no" "OINJ" "BSM" .
+"5193" "OISF" "medium_airport" "Fasa Airport" "28.8917999267578"^^<xsd:double> "53.7233009338379"^^<xsd:double> "4261"^^<xsd:double> "AS" "IR" "IR-14" "Fasa" "no" "OISF" "FAZ" .
+"42525" "OITS" "small_airport" "Saghez Airport" "36.25"^^<xsd:double> "46.2666664123535"^^<xsd:double> "4880"^^<xsd:double> "AS" "IR" "IR-16" "Saghez" "no" "OITS" .
+"32115" "OOFQ" "small_airport" "Firq Air Base" "22.8691997528076"^^<xsd:double> "57.5433006286621"^^<xsd:double> "1560"^^<xsd:double> "AS" "OM" "OM-DA" "Firq" "no" "OOFQ" .
+"41615" "OPDK" "small_airport" "Daharki Airport" "28.5"^^<xsd:double> "69.6999969482422"^^<xsd:double> "274"^^<xsd:double> "AS" "PK" "PK-PB" "Daharki" "no" "OPDK" .
+"5266" "OPNK" "small_airport" "Nushki Airport" "29.5389995574951"^^<xsd:double> "66.0233001708984"^^<xsd:double> "3200"^^<xsd:double> "AS" "PK" "PK-BA" "Nushki" "no" "OPNK" "NHS" .
+"5267" "OPOK" "small_airport" "Okara Airport" "30.7409992218018"^^<xsd:double> "73.3576965332031"^^<xsd:double> "568"^^<xsd:double> "AS" "PK" "PK-PB" "Okara" "no" "OPOK" .
+"5284" "OPWN" "small_airport" "Wana Airport" "32.3046989440918"^^<xsd:double> "69.5703964233398"^^<xsd:double> "4550"^^<xsd:double> "AS" "PK" "PK-TA" "Waana" "no" "OPWN" "WAF" .
+"32413" "OYSH" "small_airport" "Sadah Airport" "16.9669990539551"^^<xsd:double> "43.7330017089844"^^<xsd:double> "5938"^^<xsd:double> "AS" "YE" "YE-SD" "Sadah" "no" "OYSH" "SYE" .
+"42202" "PA-0018" "small_airport" "Tubala Airport" "8.72758960723877"^^<xsd:double> "-77.6809997558594"^^<xsd:double> "1582"^^<xsd:double> "NA" "PA" "PA-5" "Tubala" "no" .
+"42203" "PA-0019" "small_airport" "Tupile Airport" "9.24658012390137"^^<xsd:double> "-78.3625030517578"^^<xsd:double> "1374"^^<xsd:double> "NA" "PA" "PA-Q" "Tupile" "no" .
+"5350" "PADE" "medium_airport" "Deering Airport" "66.0696029663086"^^<xsd:double> "-162.766006469727"^^<xsd:double> "21"^^<xsd:double> "NA" "US" "US-AK" "Deering" "no" "PADE" "DEE" "DEE" .
+"17884" "PAIG" "small_airport" "Igiugig Airport" "59.3240013122559"^^<xsd:double> "-155.901992797852"^^<xsd:double> "90"^^<xsd:double> "NA" "US" "US-AK" "Igiugig" "no" "PAIG" "IGG" "IGG" .
+"5403" "PARY" "medium_airport" "Ruby Airport" "64.72720337"^^<xsd:double> "-155.4700012"^^<xsd:double> "658"^^<xsd:double> "NA" "US" "US-AK" "Ruby" "no" "PARY" "RBY" "RBY" .
+"5426" "PCIS" "medium_airport" "Canton Airport" "-2.7681200504303"^^<xsd:double> "-171.710006713867"^^<xsd:double> "9"^^<xsd:double> "OC" "KI" "KI-P" "Abariringa" "no" "PCIS" "CIS" .
+"299580" "PK-0014" "small_airport" "Khanpur Airport" "28.6433333333"^^<xsd:double> "70.6325"^^<xsd:double> "283"^^<xsd:double> "AS" "PK" "PK-PB" "Khanpur" "no" .
+"41846" "PL-0001" "medium_airport" "Bednary Air Base" "52.5344009399414"^^<xsd:double> "17.2187995910645"^^<xsd:double> "341"^^<xsd:double> "EU" "PL" "PL-WP" "Pobiedziska" "no" .
+"43054" "PL-0008" "small_airport" "Chrcynno Airport" "52.5758323669434"^^<xsd:double> "20.8730564117432"^^<xsd:double> "368"^^<xsd:double> "EU" "PL" "PL-MZ" "Nasielsk" "no" .
+"43055" "PL-0009" "small_airport" "Dęblin-Ułęż Air Base" "51.6191673278809"^^<xsd:double> "22.1016674041748"^^<xsd:double> "558"^^<xsd:double> "EU" "PL" "PL-LU" "Dęblin" "no" .
+"43133" "PL-0015" "small_airport" "Chociw  (Kanice) Highway Strip" "51.6568984985352"^^<xsd:double> "20.2733001708984"^^<xsd:double> "531"^^<xsd:double> "EU" "PL" "PL-LD" "Tomaszów Mazowiecki" "no" .
+"43167" "PL-0046" "small_airport" "Kraków-Łęg Airport" "50.0605583190918"^^<xsd:double> "20.0122203826904"^^<xsd:double> "636"^^<xsd:double> "EU" "PL" "PL-MA" "Kraków" "no" .
+"43772" "PT-0004" "heliport" "Hospital Amadora heliport" "38.761661529541"^^<xsd:double> "-9.23671340942383"^^<xsd:double> "460"^^<xsd:double> "EU" "PT" "PT-11" "Sintra" "no" .
+"43777" "PT-0009" "heliport" "Hospital Distrital de Guarda heliport" "40.529842376709"^^<xsd:double> "-7.27800321578979"^^<xsd:double> "3278"^^<xsd:double> "EU" "PT" "PT-09" "Guarda" "no" .
+"43781" "PT-0013" "heliport" "Hospital Pedro Hispano heliport" "41.1810188293457"^^<xsd:double> "-8.66257953643799"^^<xsd:double> "200"^^<xsd:double> "EU" "PT" "PT-13" "Matosinhos" "no" .
+"43782" "PT-0014" "heliport" "Hospital Santa Maria Da Feira heliport" "40.9292488098145"^^<xsd:double> "-8.54807186126709"^^<xsd:double> "517"^^<xsd:double> "EU" "PT" "PT-01" "Santa Maria Da Feira" "no" .
+"39562" "PY-0001" "small_airport" "Iturbe Airport" "-26.0599994659"^^<xsd:double> "-56.4900016785"^^<xsd:double> "328"^^<xsd:double> "SA" "PY" "PY-4" "Iturbe" "no" .
+"39564" "PY-0003" "small_airport" "Isla Pucu Airport" "-25.2999992371"^^<xsd:double> "-56.9000015259"^^<xsd:double> "416"^^<xsd:double> "SA" "PY" "PY-3" "Isla Pucu" "no" .
+"41578" "PY-0014" "small_airport" "Puerto Itapucu Airport" "-22.6814002990723"^^<xsd:double> "-57.9094009399414"^^<xsd:double> "269"^^<xsd:double> "SA" "PY" "PY-1" "Puerto Itapucu" "no" .
+"32487" "RCLG" "small_airport" "Taichung Airport" "24.18630027771"^^<xsd:double> "120.653999328613"^^<xsd:double> "369"^^<xsd:double> "AS" "TW" "TW-TXG" "Taichung City" "no" "RCLG" "TXG" .
+"299572" "RJAT" "heliport" "Fuji Air Base" "35.3172222222"^^<xsd:double> "138.87217"^^<xsd:double> "2271"^^<xsd:double> "AS" "JP" "JP-22" "Gotemba" "no" "RJAT" .
+"5541" "RJBT" "medium_airport" "Tajima Airport" "35.5127983093262"^^<xsd:double> "134.787002563477"^^<xsd:double> "584"^^<xsd:double> "AS" "JP" "JP-28" "Tajima" "no" "RJBT" "TJH" .
+"300004" "RK7I" "heliport" "C 107 Heliport" "37.4306944444"^^<xsd:double> "126.675277778"^^<xsd:double> "599"^^<xsd:double> "AS" "KR" "KR-28" "Incheon" "no" "RK7I" .
+"5691" "RPLS" "small_airport" "Sangley Point Air Base" "14.495400428772"^^<xsd:double> "120.903999328613"^^<xsd:double> "8"^^<xsd:double> "AS" "PH" "PH-CAV" "Cavite City" "no" "RPLS" "NSP" .
+"32221" "RPLT" "small_airport" "Itbayat Airport" "20.7169990539551"^^<xsd:double> "121.817001342773"^^<xsd:double> "328"^^<xsd:double> "AS" "PH" "PH-BTN" "Itbayat" "no" "RPLT" .
+"32231" "RPVH" "small_airport" "Hilongos Airport" "10.3800001144409"^^<xsd:double> "124.74299621582"^^<xsd:double> "12"^^<xsd:double> "AS" "PH" "PH-LEY" "Hilongos" "no" "RPVH" .
+"5788" "SAMR" "medium_airport" "Suboficial Ay Santiago Germano Airport" "-34.5882987976"^^<xsd:double> "-68.4039001465"^^<xsd:double> "2470"^^<xsd:double> "SA" "AR" "AR-M" "San Rafael" "yes" "SAMR" "AFA" "SRA" .
+"39070" "SAOE" "small_airport" "Rio Tercero Airport" "-32.1733016967773"^^<xsd:double> "-64.0883026123047"^^<xsd:double> "1246"^^<xsd:double> "SA" "AR" "AR-X" "Rio Tercero" "no" "SAOE" .
+"29847" "SAVD" "small_airport" "El Maiten Airport" "-42.0292015076"^^<xsd:double> "-71.1725006104"^^<xsd:double> "2355"^^<xsd:double> "SA" "AR" "AR-U" "El Maiten" "no" "SAVD" "EMX" "EMA" .
+"5846" "SAZL" "medium_airport" "Santa Teresita Airport" "-36.5423"^^<xsd:double> "-56.7218"^^<xsd:double> "9"^^<xsd:double> "SA" "AR" "AR-B" "Santa Teresita" "yes" "SAZL" "SST" "STR" .
+"5849" "SAZO" "medium_airport" "Necochea Airport" "-38.4831"^^<xsd:double> "-58.8172"^^<xsd:double> "72"^^<xsd:double> "SA" "AR" "AR-B" "Necochea" "yes" "SAZO" "NEC" "NEC" .
+"5859" "SBAM" "small_airport" "Amapá Airport" "2.0775101184845"^^<xsd:double> "-50.8582000732422"^^<xsd:double> "45"^^<xsd:double> "SA" "BR" "BR-AP" "Amapá" "no" "SBAM" 0 .
+"5861" "SBAQ" "medium_airport" "Araraquara Airport" "-21.8120002746582"^^<xsd:double> "-48.132999420166"^^<xsd:double> "2334"^^<xsd:double> "SA" "BR" "BR-SP" "Araraquara" "yes" "SBAQ" "AQA" .
+"5873" "SBBT" "medium_airport" "Chafei Amsei Airport" "-20.5844993591309"^^<xsd:double> "-48.5941009521484"^^<xsd:double> "1898"^^<xsd:double> "SA" "BR" "BR-SP" "Barretos" "no" "SBBT" "BAT" .
+"5888" "SBCO" "medium_airport" "Canoas Airport" "-29.9458999633789"^^<xsd:double> "-51.144401550293"^^<xsd:double> "26"^^<xsd:double> "SA" "BR" "BR-RS" "Porto Alegre" "no" "SBCO" "QNS" .
+"5889" "SBCP" "medium_airport" "Bartolomeu Lisandro Airport" "-21.698299407959"^^<xsd:double> "-41.301700592041"^^<xsd:double> "57"^^<xsd:double> "SA" "BR" "BR-RJ" "Campos Dos Goytacazes" "yes" "SBCP" "CAW" .
+"5896" "SBDN" "medium_airport" "Presidente Prudente Airport" "-22.1751003265381"^^<xsd:double> "-51.4245986938477"^^<xsd:double> "1477"^^<xsd:double> "SA" "BR" "BR-SP" "Presidente Prudente" "yes" "SBDN" "PPB" .
+"35416" "SBFS" "heliport" "São Tomé Heliport" "-22.0294437408447"^^<xsd:double> "-41.0699996948242"^^<xsd:double> "10"^^<xsd:double> "SA" "BR" "BR-RJ" "Campos Dos Goytacazes" "no" "SBFS" .
+"5913" "SBGW" "medium_airport" "Guaratinguetá Airport" "-22.7915992736816"^^<xsd:double> "-45.2047996520996"^^<xsd:double> "1761"^^<xsd:double> "SA" "BR" "BR-SP" "Guaratinguetá" "no" "SBGW" "GUJ" .
+"5914" "SBHT" "medium_airport" "Altamira Airport" "-3.25391006469727"^^<xsd:double> "-52.2540016174316"^^<xsd:double> "369"^^<xsd:double> "SA" "BR" "BR-PA" "Altamira" "no" "SBHT" "ATM" .
+"5935" "SBMC" "medium_airport" "Minaçu Airport" "-13.5490999221802"^^<xsd:double> "-48.1953010559082"^^<xsd:double> "1401"^^<xsd:double> "SA" "BR" "BR-GO" "Minaçu" "no" "SBMC" "MQH" .
+"5939" "SBMK" "medium_airport" "Mário Ribeiro Airport" "-16.7068996429443"^^<xsd:double> "-43.8189010620117"^^<xsd:double> "2191"^^<xsd:double> "SA" "BR" "BR-MG" "Montes Claros" "yes" "SBMK" "MOC" .
+"5952" "SBPB" "small_airport" "Prefeito Doutor João Silva Filho Airport" "-2.89374995231628"^^<xsd:double> "-41.7319984436035"^^<xsd:double> "16"^^<xsd:double> "SA" "BR" "BR-PI" "Parnaíba" "no" "SBPB" "PBB" .
+"5978" "SBTA" "medium_airport" "Base de Aviação de Taubaté Airport" "-23.0401000976562"^^<xsd:double> "-45.515998840332"^^<xsd:double> "1908"^^<xsd:double> "SA" "BR" "BR-SP" "Taubaté" "no" "SBTA" "QHP" .
+"5988" "SBTT" "medium_airport" "Tabatinga Airport" "-4.25567007064819"^^<xsd:double> "-69.9357986450195"^^<xsd:double> "279"^^<xsd:double> "SA" "BR" "BR-AM" "Tabatinga" "no" "SBTT" "TBT" .
+"5991" "SBUF" "medium_airport" "Paulo Afonso Airport" "-9.40087985992432"^^<xsd:double> "-38.2505989074707"^^<xsd:double> "883"^^<xsd:double> "SA" "BR" "BR-BA" "Paulo Afonso" "no" "SBUF" "PAV" .
+"30082" "SCAN" "small_airport" "San Rafael Airport" "-32.8142013549805"^^<xsd:double> "-70.6466979980469"^^<xsd:double> "2461"^^<xsd:double> "SA" "CL" "CL-VS" "Los Andes" "no" "SCAN" "LOB" .
+"39100" "SCBD" "small_airport" "El Boldal Airport" "-34.6844444274902"^^<xsd:double> "-71.2061080932617"^^<xsd:double> "574"^^<xsd:double> "SA" "CL" "CL-LI" "Santa Cruz" "no" "SCBD" .
+"6006" "SCCC" "medium_airport" "Chile Chico Airport" "-46.5833015441895"^^<xsd:double> "-71.6874008178711"^^<xsd:double> "1070"^^<xsd:double> "SA" "CL" "CL-AI" "Chile Chico" "no" "SCCC" "CCH" .
+"29800" "SCCT" "small_airport" "Quivolgo Airport" "-35.3086013793945"^^<xsd:double> "-72.3927993774414"^^<xsd:double> "36"^^<xsd:double> "SA" "CL" "CL-ML" "Constitucion" "no" "SCCT" .
+"39125" "SCEB" "small_airport" "Entrada Baker Airport" "-47.1841659545898"^^<xsd:double> "-71.9761123657227"^^<xsd:double> "1640"^^<xsd:double> "SA" "CL" "CL-AI" "Entrada Baker" "no" "SCEB" .
+"39133" "SCEY" "small_airport" "Entrada Mayer Airport" "-48.2038879394531"^^<xsd:double> "-72.3283309936523"^^<xsd:double> "1550"^^<xsd:double> "SA" "CL" "CL-AI" "Entrada Maker" "no" "SCEY" .
+"6019" "SCFM" "medium_airport" "Capitan Fuentes Martinez Airport Airport" "-53.2537002563477"^^<xsd:double> "-70.3191986083984"^^<xsd:double> "104"^^<xsd:double> "SA" "CL" "CL-MA" "Porvenir" "no" "SCFM" "WPR" .
+"39149" "SCGN" "small_airport" "Caleta Gonzalo Airport" "-42.5636100769043"^^<xsd:double> "-72.599723815918"^^<xsd:double> "33"^^<xsd:double> "SA" "CL" "CL-LL" "Chaiten" "no" "SCGN" .
+"45061" "SCGV" "small_airport" "Punta Gaviota Airport" "-29.084444"^^<xsd:double> "-71.467222"^^<xsd:double> "99"^^<xsd:double> "SA" "CL" "CL-AT" "Caleta Chañaral De Aceituno" "no" "SCGV" .
+"39161" "SCHN" "small_airport" "Chan Chan Airport" "-39.8657989501953"^^<xsd:double> "-72.1314010620117"^^<xsd:double> "457"^^<xsd:double> "SA" "CL" "CL-LR" "Choshuenco" "no" "SCHN" .
+"39162" "SCHO" "small_airport" "Punta Chungo Airport" "-31.8827781677246"^^<xsd:double> "-71.4763870239258"^^<xsd:double> "249"^^<xsd:double> "SA" "CL" "CL-CO" "Los Vilos" "no" "SCHO" .
+"39164" "SCHT" "small_airport" "Tic Toc Airport" "-43.6130561828613"^^<xsd:double> "-72.8974990844727"^^<xsd:double> "13"^^<xsd:double> "SA" "CL" "CL-LL" "Chaiten" "no" "SCHT" .
+"39165" "SCHU" "small_airport" "Gran Cañon Airport" "-28.0988883972168"^^<xsd:double> "-71.1466674804688"^^<xsd:double> "230"^^<xsd:double> "SA" "CL" "CL-AT" "Huasco" "no" "SCHU" .
+"39166" "SCHW" "small_airport" "Hualaihué Airport" "-42.0286102294922"^^<xsd:double> "-72.6894454956055"^^<xsd:double> "30"^^<xsd:double> "SA" "CL" "CL-LL" "Hualaihue" "no" "SCHW" .
+"29980" "SCIM" "small_airport" "Isla Mocha Airport" "-38.3849983215332"^^<xsd:double> "-73.868896484375"^^<xsd:double> "52"^^<xsd:double> "SA" "CL" "CL-BI" "Isla Mocha" "no" "SCIM" .
+"32262" "SCIV" "small_airport" "Panimavida Airport" "-35.7569007873535"^^<xsd:double> "-71.4041976928711"^^<xsd:double> "591"^^<xsd:double> "SA" "CL" "CL-ML" "Panimavida" "no" "SCIV" .
+"39181" "SCKA" "small_airport" "Santa Marta Airport" "-36.4930572509766"^^<xsd:double> "-71.8969421386719"^^<xsd:double> "577"^^<xsd:double> "SA" "CL" "CL-BI" "San Carlos" "no" "SCKA" .
+"39185" "SCKE" "small_airport" "Piedra Negra Airport" "-35.8544425964355"^^<xsd:double> "-72.6458358764648"^^<xsd:double> "164"^^<xsd:double> "SA" "CL" "CL-ML" "Pelluhue" "no" "SCKE" .
+"39197" "SCLG" "small_airport" "La Aguada Airport" "-35.3427772521973"^^<xsd:double> "-71.7769470214844"^^<xsd:double> "246"^^<xsd:double> "SA" "CL" "CL-ML" "Pencahue" "no" "SCLG" .
+"39203" "SCLP" "small_airport" "Los Petiles Airport" "-35.2155570983887"^^<xsd:double> "-71.1086120605469"^^<xsd:double> "1575"^^<xsd:double> "SA" "CL" "CL-ML" "Molina" "no" "SCLP" .
+"39206" "SCLS" "small_airport" "Esperanza Airport" "-38.5488891601562"^^<xsd:double> "-72.1458358764648"^^<xsd:double> "1230"^^<xsd:double> "SA" "CL" "CL-AR" "Lautaro" "no" "SCLS" .
+"39207" "SCLU" "small_airport" "La Laguna Airport" "-34.3525009155273"^^<xsd:double> "-71.6638870239258"^^<xsd:double> "528"^^<xsd:double> "SA" "CL" "CL-LI" "Marchigue" "no" "SCLU" .
+"39220" "SCMU" "small_airport" "Panilonco Airport" "-34.2811126708984"^^<xsd:double> "-71.9469451904297"^^<xsd:double> "574"^^<xsd:double> "SA" "CL" "CL-LI" "Pichilemu" "no" "SCMU" .
+"39225" "SCNE" "small_airport" "María Elena Airport" "-22.307222366333"^^<xsd:double> "-69.7050018310547"^^<xsd:double> "4003"^^<xsd:double> "SA" "CL" "CL-AN" "Maria Elena" "no" "SCNE" .
+"45068" "SCOI" "small_airport" "Los Coipos Airport" "-34.912778"^^<xsd:double> "-71.660833"^^<xsd:double> "318"^^<xsd:double> "SA" "CL" "CL-ML" "Hualanne" "no" "SCOI" .
+"39237" "SCOL" "small_airport" "Refugio del Lago Airport" "-40.6894454956055"^^<xsd:double> "-72.3455581665039"^^<xsd:double> "676"^^<xsd:double> "SA" "CL" "CL-LL" "Puyehue" "no" "SCOL" .
+"30312" "SCON" "small_airport" "Quellón Airport" "-43.1366996765137"^^<xsd:double> "-73.6350021362305"^^<xsd:double> "16"^^<xsd:double> "SA" "CL" "CL-LL" "Quellon" "no" "SCON" .
+"39247" "SCPO" "small_airport" "Los Paltos Airport" "-34.3280563354492"^^<xsd:double> "-70.9641647338867"^^<xsd:double> "869"^^<xsd:double> "SA" "CL" "CL-LI" "Quinta Tilcoco" "no" "SCPO" .
+"39249" "SCPR" "small_airport" "Corte Alto Airport" "-40.9433326721191"^^<xsd:double> "-73.1699981689453"^^<xsd:double> "416"^^<xsd:double> "SA" "CL" "CL-LL" "Purranque" "no" "SCPR" .
+"30305" "SCPV" "small_airport" "El Mirador Airport" "-41.3493995666504"^^<xsd:double> "-72.9467010498047"^^<xsd:double> "430"^^<xsd:double> "SA" "CL" "CL-LL" "Puerto Varas" "no" "SCPV" "PUX" .
+"39256" "SCQE" "small_airport" "Quenac Airport" "-42.4672241210938"^^<xsd:double> "-73.3358306884766"^^<xsd:double> "164"^^<xsd:double> "SA" "CL" "CL-LL" "Isla Quenac" "no" "SCQE" .
+"6036" "SCQY" "small_airport" "Villa Portales Airport" "-38.4499015808105"^^<xsd:double> "-71.3547973632812"^^<xsd:double> "3182"^^<xsd:double> "SA" "CL" "CL-AR" "Lonquimay" "no" "SCQY" .
+"39264" "SCRB" "small_airport" "Río Bravo Airport" "-47.9858322143555"^^<xsd:double> "-73.1388854980469"^^<xsd:double> "37"^^<xsd:double> "SA" "CL" "CL-AI" "Tortel" "no" "SCRB" .
+"39274" "SCRT" "small_airport" "El Almendro Airport" "-35.9605560302734"^^<xsd:double> "-71.7933349609375"^^<xsd:double> "486"^^<xsd:double> "SA" "CL" "CL-ML" "Retiro" "no" "SCRT" .
+"45075" "SCRV" "small_airport" "La Verónica Airport" "-38.611389"^^<xsd:double> "-72.128889"^^<xsd:double> "1280"^^<xsd:double> "SA" "CL" "CL-AR" "Vilcún" "no" "SCRV" .
+"39277" "SCSA" "small_airport" "Alberto Santos Dumont Airport" "-33.0286102294922"^^<xsd:double> "-70.879997253418"^^<xsd:double> "2346"^^<xsd:double> "SA" "CL" "CL-RM" "Til Til" "no" "SCSA" .
+"39284" "SCSR" "small_airport" "Segundo Corral Alto Airport" "-42.0833320617676"^^<xsd:double> "-71.8638916015625"^^<xsd:double> "1200"^^<xsd:double> "SA" "CL" "CL-LL" "Segundo Corral" "no" "SCSR" .
+"39285" "SCSU" "small_airport" "Santa Lucía Airport" "-38.9191665649414"^^<xsd:double> "-72.3666687011719"^^<xsd:double> "705"^^<xsd:double> "SA" "CL" "CL-AR" "Freire" "no" "SCSU" .
+"39293" "SCTU" "small_airport" "Litueche Airport" "-34.1105537414551"^^<xsd:double> "-71.7158355712891"^^<xsd:double> "787"^^<xsd:double> "SA" "CL" "CL-LI" "Litueche" "no" "SCTU" .
+"39306" "SCVE" "small_airport" "Lago Verde Airport" "-44.2708320617676"^^<xsd:double> "-71.9166641235352"^^<xsd:double> "1020"^^<xsd:double> "SA" "CL" "CL-AI" "Lago Verde" "no" "SCVE" .
+"39308" "SCVG" "small_airport" "El Vergel Airport" "-39.8293991088867"^^<xsd:double> "-72.4882965087891"^^<xsd:double> "820"^^<xsd:double> "SA" "CL" "CL-LR" "Riñihue" "no" "SCVG" .
+"39311" "SCVJ" "small_airport" "Paredes Viejas Airport" "-34.3958320617676"^^<xsd:double> "-71.545280456543"^^<xsd:double> "449"^^<xsd:double> "SA" "CL" "CL-LI" "Marchigue" "no" "SCVJ" .
+"39318" "SCVV" "small_airport" "Los Maitenes de Villa Vieja Airport" "-40.3163986206055"^^<xsd:double> "-72.9772033691406"^^<xsd:double> "147"^^<xsd:double> "SA" "CL" "CL-LR" "La Union" "no" "SCVV" .
+"35426" "SDAQ" "heliport" "Centro Empresarial do Aço Heliport" "-23.6341667175293"^^<xsd:double> "-46.6399993896484"^^<xsd:double> "2815"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDAQ" .
+"151" "SDBK" "small_airport" "Botucatu Airport" "-22.9395008087158"^^<xsd:double> "-48.4679985046387"^^<xsd:double> "3012"^^<xsd:double> "SA" "BR" "BR-SP" "Botucatu" "no" "SDBK" "QCJ" "SDBK" .
+"35480" "SDDP" "heliport" "Delta PLaza Heliport" "-23.5674991607666"^^<xsd:double> "-46.6458320617676"^^<xsd:double> "2918"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDDP" .
+"35483" "SDDX" "small_airport" "Fazenda Paiquerê Airport" "-19.8880558013916"^^<xsd:double> "-50.5141677856445"^^<xsd:double> "1483"^^<xsd:double> "SA" "BR" "BR-SP" "Populina" "no" "SDDX" .
+"35492" "SDEL" "heliport" "Condomínio Spázio Central JK Heliport" "-23.6002788543701"^^<xsd:double> "-46.5547218322754"^^<xsd:double> "2684"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDEL" .
+"35493" "SDEM" "small_airport" "Estância Machado Airport" "-22.101110458374"^^<xsd:double> "-51.4516677856445"^^<xsd:double> "1388"^^<xsd:double> "SA" "BR" "BR-SP" "Álvares Machado" "no" "SDEM" .
+"35501" "SDEY" "heliport" "Imigrantes Heliport" "-23.6888885498047"^^<xsd:double> "-46.6052780151367"^^<xsd:double> "2554"^^<xsd:double> "SA" "BR" "BR-SP" "Diadema" "no" "SDEY" .
+"35513" "SDFS" "heliport" "Fazenda Santa Gertrudes Heliport" "-22.0922222137451"^^<xsd:double> "-48.3469429016113"^^<xsd:double> "2119"^^<xsd:double> "SA" "BR" "BR-SP" "Dourado" "no" "SDFS" .
+"35539" "SDGX" "heliport" "Shering Plough Heliport" "-23.6269435882568"^^<xsd:double> "-46.7077789306641"^^<xsd:double> "2494"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDGX" .
+"35552" "SDHL" "heliport" "Lagoa Heliport" "-22.9756355285645"^^<xsd:double> "-43.2179183959961"^^<xsd:double> "10"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SDHL" .
+"35561" "SDHW" "heliport" "Hospital Bandeirantes Heliport" "-23.6072216033936"^^<xsd:double> "-46.6344451904297"^^<xsd:double> "2598"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDHW" .
+"35567" "SDIJ" "closed" "Panco 13 Heliport" "-22.7563991546631"^^<xsd:double> "-42.8903007507324"^^<xsd:double> "112"^^<xsd:double> "SA" "BR" "BR-RJ" "Itaboraí" "no" .
+"35573" "SDIT" "heliport" "Itaú NPD Paulista Heliport" "-23.5766677856445"^^<xsd:double> "-46.6580543518066"^^<xsd:double> "2558"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDIT" .
+"35574" "SDIU" "small_airport" "Itu Airport" "-23.3497219085693"^^<xsd:double> "-47.3277778625488"^^<xsd:double> "2231"^^<xsd:double> "SA" "BR" "BR-SP" "Itu" "no" "SDIU" .
+"35590" "SDJW" "heliport" "Hospital Cidade Jardim Heliport" "-23.5908336639404"^^<xsd:double> "-46.7033348083496"^^<xsd:double> "2552"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDJW" .
+"35592" "SDKB" "small_airport" "Casa Branca Airport" "-21.7880554199219"^^<xsd:double> "-47.0555572509766"^^<xsd:double> "2346"^^<xsd:double> "SA" "BR" "BR-SP" "Casa Branca" "no" "SDKB" .
+"35605" "SDKT" "heliport" "Edifício Dacon Heliport" "-23.5680561065674"^^<xsd:double> "-46.6838874816895"^^<xsd:double> "2703"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDKT" .
+"35610" "SDLB" "heliport" "Metropolitan Office Heliport" "-23.5808334350586"^^<xsd:double> "-46.6824989318848"^^<xsd:double> "2670"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDLB" .
+"35617" "SDLQ" "small_airport" "Fazenda Perobal Airport" "-21.5036106109619"^^<xsd:double> "-50.7780570983887"^^<xsd:double> "1339"^^<xsd:double> "SA" "BR" "BR-SP" "Guararapes" "no" "SDLQ" .
+"30121" "SDLY" "small_airport" "Matão Airport" "-21.6231002807617"^^<xsd:double> "-48.3525009155273"^^<xsd:double> "2083"^^<xsd:double> "SA" "BR" "BR-SP" "Matão" "no" "SDLY" 0 .
+"35631" "SDMR" "small_airport" "Marambaia Airport" "-23.0663890838623"^^<xsd:double> "-43.8797225952148"^^<xsd:double> "16"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SDMR" .
+"35634" "SDMU" "heliport" "Multiplan Heliport" "-22.90944480896"^^<xsd:double> "-43.1755561828613"^^<xsd:double> "351"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SDMU" .
+"35644" "SDNK" "small_airport" "Fazenda Vitória Airport" "-14.9650001525879"^^<xsd:double> "-54.0508346557617"^^<xsd:double> "2513"^^<xsd:double> "SA" "BR" "BR-MT" "Primavera Do Leste" "no" "SDNK" .
+"30211" "SDOL" "small_airport" "Agropesp Airport" "-12.441389"^^<xsd:double> "-56.406944"^^<xsd:double> "1001"^^<xsd:double> "SA" "BR" "BR-MT" "Tapurá" "no" "SDOL" .
+"35669" "SDPE" "heliport" "Pirelli Eden Heliport" "-23.4127788543701"^^<xsd:double> "-47.4255561828613"^^<xsd:double> "1832"^^<xsd:double> "SA" "BR" "BR-SP" "Sorocaba" "no" "SDPE" .
+"35699" "SDQY" "heliport" "Shopping Center Iguatemi Heliport" "-22.890832901001"^^<xsd:double> "-47.0297203063965"^^<xsd:double> "2356"^^<xsd:double> "SA" "BR" "BR-SP" "Campinas" "no" "SDQY" .
+"35702" "SDRD" "small_airport" "Adhemar Ribeiro Airport" "-21.6424999237061"^^<xsd:double> "-47.4711112976074"^^<xsd:double> "2776"^^<xsd:double> "SA" "BR" "BR-SP" "Santa Rita Do Passa Quatro" "no" "SDRD" .
+"35753" "SDTZ" "small_airport" "Fazenda Santa Júlia Airport" "-20.1191673278809"^^<xsd:double> "-57.1119422912598"^^<xsd:double> "492"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SDTZ" .
+"30511" "SDUG" "closed" "Usina Sao Geraldo Airport" "-21.1308002471924"^^<xsd:double> "-48.0663986206055"^^<xsd:double> "1804"^^<xsd:double> "SA" "BR" "BR-SP" "Ribeiro Preto" "no" "SDUG" .
+"35756" "SDUH" "small_airport" "Fazenda Sumaré Airport" "-21.5424995422363"^^<xsd:double> "-53.3430557250977"^^<xsd:double> "1001"^^<xsd:double> "SA" "BR" "BR-MS" "Ribas Do Rio Pardo" "no" "SDUH" .
+"35758" "SDUJ" "heliport" "Milennium Heliport" "-23.5841674804688"^^<xsd:double> "-46.6827774047852"^^<xsd:double> "2575"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDUJ" .
+"35759" "SDUL" "small_airport" "Usina Santa Lydia Airport" "-21.2016677856445"^^<xsd:double> "-47.9205551147461"^^<xsd:double> "2270"^^<xsd:double> "SA" "BR" "BR-SP" "Ribeirão Preto" "no" "SDUL" .
+"35760" "SDUM" "heliport" "Uniban Heliport" "-23.5063896179199"^^<xsd:double> "-46.5969429016113"^^<xsd:double> "2568"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDUM" .
+"209" "SDUO" "small_airport" "Alagoinhas Airport" "-12.1751003265381"^^<xsd:double> "-38.380199432373"^^<xsd:double> "568"^^<xsd:double> "SA" "BR" "BR-BA" "Alagoinhas" "no" "SDUO" "QGS" .
+"45586" "SDVN" "small_airport" "Fazenda Santíssima Trindade Airport" "-23.286944"^^<xsd:double> "-54.841111"^^<xsd:double> "1299"^^<xsd:double> "SA" "BR" "BR-MS" "Amambaí" "no" "SDVN" .
+"29795" "SDWN" "small_airport" "Fazenda Barreiro Grande Airport" "-20.3474998474121"^^<xsd:double> "-48.7724990844727"^^<xsd:double> "1857"^^<xsd:double> "SA" "BR" "BR-SP" "Colômbia" "no" "SDWN" .
+"35791" "SDWS" "heliport" "West Gate Heliport" "-23.5027770996094"^^<xsd:double> "-46.8480567932129"^^<xsd:double> "2694"^^<xsd:double> "SA" "BR" "BR-SP" "Barueri" "no" "SDWS" .
+"35793" "SDWY" "heliport" "Central Towers Paulista Heliport" "-23.5647220611572"^^<xsd:double> "-46.6408348083496"^^<xsd:double> "2808"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDWY" .
+"35795" "SDXD" "heliport" "IBM Tutóia Heliport" "-23.5725002288818"^^<xsd:double> "-46.6563873291016"^^<xsd:double> "2786"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SDXD" .
+"35800" "SDXM" "heliport" "da Praia Heliport" "-22.773889541626"^^<xsd:double> "-41.8899993896484"^^<xsd:double> "23"^^<xsd:double> "SA" "BR" "BR-RJ" "Armação Dos Búzios" "no" "SDXM" .
+"35804" "SDXR" "small_airport" "Fazenda Vaca Mocha Airport" "-22.2255554199219"^^<xsd:double> "-57.1547203063965"^^<xsd:double> "463"^^<xsd:double> "SA" "BR" "BR-MS" "Caracol" "no" "SDXR" .
+"35820" "SDYL" "heliport" "RM - Angra Heliport" "-23.0233325958252"^^<xsd:double> "-44.2902793884277"^^<xsd:double> "112"^^<xsd:double> "SA" "BR" "BR-RJ" "Angra Dos Reis" "no" "SDYL" .
+"35821" "SDYN" "small_airport" "Fazenda Esmeralda Airport" "-22.588888168335"^^<xsd:double> "-51.2988891601562"^^<xsd:double> "1365"^^<xsd:double> "SA" "BR" "BR-SP" "Taciba" "no" "SDYN" .
+"35837" "SDZZ" "small_airport" "Sítio São José Airport" "-21.7977771759033"^^<xsd:double> "-48.543888092041"^^<xsd:double> "1790"^^<xsd:double> "SA" "BR" "BR-SP" "Nova Europa" "no" "SDZZ" .
+"6052" "SECM" "small_airport" "Hacienda Clementina Airport" "-1.70626997947693"^^<xsd:double> "-79.3788986206055"^^<xsd:double> "328"^^<xsd:double> "SA" "EC" "EC-R" "Pozuelos" "no" "SECM" .
+"6053" "SECO" "medium_airport" "Francisco De Orellana Airport" "-0.46288600564003"^^<xsd:double> "-76.9868011474609"^^<xsd:double> "834"^^<xsd:double> "SA" "EC" "EC-D" "Coca" "yes" "SECO" "OCC" .
+"6054" "SECU" "medium_airport" "Mariscal Lamar Airport" "-2.88947010040283"^^<xsd:double> "-78.9843978881836"^^<xsd:double> "8306"^^<xsd:double> "SA" "EC" "EC-A" "Cuenca" "yes" "SECU" "CUE" .
+"41105" "SEIS" "small_airport" "Isabel Maria Airport" "-1.86667001247406"^^<xsd:double> "-79.7332992553711"^^<xsd:double> "20"^^<xsd:double> "SA" "EC" "EC-G" "América" "no" "SEIS" .
+"41119" "SEJI" "small_airport" "Jipijapa Airport" "-1"^^<xsd:double> "-80.6666641235352"^^<xsd:double> "223"^^<xsd:double> "SA" "EC" "EC-M" "Jipijapa" "no" "SEJI" "JIP" .
+"6065" "SEMO" "small_airport" "El Carmen Airport" "-2.06700992584229"^^<xsd:double> "-76.975700378418"^^<xsd:double> "960"^^<xsd:double> "SA" "EC" "EC-Y" "Montalvo" "no" "SEMO" .
+"6080" "SESV" "small_airport" "Los Perales Airport" "-0.608111023902893"^^<xsd:double> "-80.402702331543"^^<xsd:double> "10"^^<xsd:double> "SA" "EC" "EC-M" "Bahía de Caraquez" "no" "SESV" "BHA" .
+"6094" "SGPI" "medium_airport" "Carlos Miguel Gimenez Airport" "-26.8799991607666"^^<xsd:double> "-58.3199996948242"^^<xsd:double> "249"^^<xsd:double> "SA" "PY" "PY-12" "Pilar" "no" "SGPI" "PIL" .
+"39568" "SGRO" "small_airport" "Rosario Airport" "-24.4300003051758"^^<xsd:double> "-57.1199989318848"^^<xsd:double> "236"^^<xsd:double> "SA" "PY" "PY-2" "Rosario" "no" "SGRO" .
+"39332" "SHAP" "heliport" "Asistencia Pública Dr. Alejandro del Río Heliport" "-33.439998626709"^^<xsd:double> "-70.6372222900391"^^<xsd:double> "1886"^^<xsd:double> "SA" "CL" "CL-RM" "Santiago" "no" "SHAP" .
+"39333" "SHAU" "heliport" "La Aurora Heliport" "-33.4252777099609"^^<xsd:double> "-71.0230560302734"^^<xsd:double> "696"^^<xsd:double> "SA" "CL" "CL-RM" "Curacavi" "no" "SHAU" .
+"39346" "SHDG" "heliport" "Batería Dungenes Nº 1 Heliport" "-52.3808326721191"^^<xsd:double> "-68.4313888549805"^^<xsd:double> "25"^^<xsd:double> "SA" "CL" "CL-MA" "Magallanes" "no" "SHDG" .
+"39358" "SHFE" "heliport" "Hospital San Camilo Heliport" "-32.7483329772949"^^<xsd:double> "-70.7099990844727"^^<xsd:double> "2155"^^<xsd:double> "SA" "CL" "CL-VS" "San Felipe" "no" "SHFE" .
+"39375" "SHLA" "heliport" "Las Americas Heliport" "-33.4358329772949"^^<xsd:double> "-70.6433334350586"^^<xsd:double> "2126"^^<xsd:double> "SA" "CL" "CL-RM" "Santiago" "no" "SHLA" .
+"39377" "SHLP" "heliport" "La Parva Heliport" "-33.3288879394531"^^<xsd:double> "-70.283332824707"^^<xsd:double> "9080"^^<xsd:double> "SA" "CL" "CL-RM" "Farellones" "no" "SHLP" .
+"39393" "SHRB" "heliport" "Rodelbahn Heliport" "-33.4591674804688"^^<xsd:double> "-70.517219543457"^^<xsd:double> "2789"^^<xsd:double> "SA" "CL" "CL-RM" "Santiago" "no" "SHRB" .
+"45092" "SHRE" "heliport" "Jose Miguel Carrera Heliport" "-33.441389"^^<xsd:double> "-70.655"^^<xsd:double> "2034"^^<xsd:double> "SA" "CL" "CL-RM" "Santiago" "no" "SHRE" .
+"39394" "SHRP" "heliport" "Rapel Heliport" "-34.212776184082"^^<xsd:double> "-71.4530563354492"^^<xsd:double> "394"^^<xsd:double> "SA" "CL" "CL-LI" "Las Cabras" "no" "SHRP" .
+"39398" "SHSE" "heliport" "Posesión Heliport" "-52.2494430541992"^^<xsd:double> "-68.9366683959961"^^<xsd:double> "76"^^<xsd:double> "SA" "CL" "CL-MA" "Posesion" "no" "SHSE" .
+"39400" "SHSK" "heliport" "Skua 1 Heliport" "-52.4091682434082"^^<xsd:double> "-68.7852783203125"^^<xsd:double> "98"^^<xsd:double> "SA" "CL" "CL-MA" "Punta Catalina" "no" "SHSK" .
+"39408" "SHTI" "heliport" "Torre Interamericana Heliport" "-33.4363899230957"^^<xsd:double> "-70.6436080932617"^^<xsd:double> "2185"^^<xsd:double> "SA" "CL" "CL-RM" "Santiago" "no" "SHTI" .
+"35843" "SIAG" "heliport" "Serrinha Heliport" "-16.7211112976074"^^<xsd:double> "-49.2644424438477"^^<xsd:double> "2802"^^<xsd:double> "SA" "BR" "BR-GO" "Goiânia" "no" "SIAG" .
+"35850" "SIAP" "small_airport" "Ana Paula Airport" "-31.7377777099609"^^<xsd:double> "-54.0894432067871"^^<xsd:double> "584"^^<xsd:double> "SA" "BR" "BR-RS" "Aceguá" "no" "SIAP" .
+"35856" "SIAX" "small_airport" "Fazenda Beira Rio Airport" "-7.5502781867981"^^<xsd:double> "-56.1725006103516"^^<xsd:double> "870"^^<xsd:double> "SA" "BR" "BR-PA" "Novo Progresso" "no" "SIAX" .
+"35873" "SIBQ" "heliport" "WT Technology Park Heliport" "-23.4955558776855"^^<xsd:double> "-46.8136100769043"^^<xsd:double> "2487"^^<xsd:double> "SA" "BR" "BR-SP" "Barueri" "no" "SIBQ" .
+"35876" "SIBT" "heliport" "Transportadora Americana II Heliport" "-22.7305564880371"^^<xsd:double> "-47.2847213745117"^^<xsd:double> "2005"^^<xsd:double> "SA" "BR" "BR-SP" "Americana" "no" "SIBT" .
+"35878" "SIBX" "small_airport" "Rosana Camargo Airport" "-21.0911102294922"^^<xsd:double> "-50.2433319091797"^^<xsd:double> "1345"^^<xsd:double> "SA" "BR" "BR-SP" "Buritama" "no" "SIBX" .
+"35879" "SICA" "small_airport" "Brejo das Freiras Airport" "-6.70416688919067"^^<xsd:double> "-38.5027770996094"^^<xsd:double> "1017"^^<xsd:double> "SA" "BR" "BR-PB" "São João Do Rio Do Peixe" "no" "SICA" .
+"35881" "SICC" "heliport" "Fazenda Campo Alto Heliport" "-22.3888893127441"^^<xsd:double> "-47.2866668701172"^^<xsd:double> "2067"^^<xsd:double> "SA" "BR" "BR-SP" "Araras" "no" "SICC" .
+"35893" "SICP" "small_airport" "Doutor Walter Beckert Airport" "-23.9716663360596"^^<xsd:double> "-51.3236122131348"^^<xsd:double> "2779"^^<xsd:double> "SA" "BR" "BR-PR" "Faxinal" "no" "SICP" .
+"35906" "SIDD" "small_airport" "Fazenda São João do Monte Alto Airport" "-21.4972229003906"^^<xsd:double> "-55.2638893127441"^^<xsd:double> "1476"^^<xsd:double> "SA" "BR" "BR-MS" "Maracaju" "no" "SIDD" .
+"35908" "SIDF" "heliport" "Umicore Heliport" "-22.6949996948242"^^<xsd:double> "-47.3555564880371"^^<xsd:double> "1706"^^<xsd:double> "SA" "BR" "BR-SP" "Americana" "no" "SIDF" .
+"35921" "SIDU" "heliport" "Biju Heliport" "-22.296667098999"^^<xsd:double> "-43.1519432067871"^^<xsd:double> "1969"^^<xsd:double> "SA" "BR" "BR-RJ" "Areal" "no" "SIDU" .
+"35931" "SIEF" "small_airport" "Fazenda São José Airport" "-20.5733337402344"^^<xsd:double> "-54.7169456481934"^^<xsd:double> "1722"^^<xsd:double> "SA" "BR" "BR-MS" "Campo Grande" "no" "SIEF" .
+"35939" "SIEN" "small_airport" "Fazenda São Marcos Airport" "-15.4049997329712"^^<xsd:double> "-53.3422203063965"^^<xsd:double> "1503"^^<xsd:double> "SA" "BR" "BR-MT" "General Carneiro" "no" "SIEN" .
+"35957" "SIFK" "heliport" "Hospital Santa Tereza Heliport" "-22.508056640625"^^<xsd:double> "-43.1897201538086"^^<xsd:double> "2752"^^<xsd:double> "SA" "BR" "BR-RJ" "Petrópolis" "no" "SIFK" .
+"35959" "SIFM" "small_airport" "Fazenda Mudança Airport" "-9.91222190856934"^^<xsd:double> "-60.8619422912598"^^<xsd:double> "499"^^<xsd:double> "SA" "BR" "BR-MT" "Aripuanã" "no" "SIFM" .
+"35966" "SIFX" "heliport" "Secretaria da Agricultura Heliport" "-23.647777557373"^^<xsd:double> "-46.6277770996094"^^<xsd:double> "2608"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SIFX" .
+"35983" "SIGR" "heliport" "Região das Hortências Heliport" "-29.3616676330566"^^<xsd:double> "-50.8530578613281"^^<xsd:double> "2805"^^<xsd:double> "SA" "BR" "BR-RS" "Gramado" "no" "SIGR" .
+"35987" "SIGV" "heliport" "Rede Record Heliport" "-23.5236110687256"^^<xsd:double> "-46.6619453430176"^^<xsd:double> "2412"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SIGV" .
+"36003" "SIHL" "heliport" "Rio Centro Heliport" "-22.9786109924316"^^<xsd:double> "-43.4091682434082"^^<xsd:double> "33"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SIHL" .
+"36020" "SIID" "small_airport" "Crepurizão Airport" "-6.82000017166138"^^<xsd:double> "-56.8422203063965"^^<xsd:double> "695"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SIID" .
+"36032" "SIIR" "heliport" "Brascam Century Plaza Heliport" "-23.5841674804688"^^<xsd:double> "-46.6749992370605"^^<xsd:double> "2761"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SIIR" .
+"36034" "SIIU" "small_airport" "Santa Marta Airport" "-19.643611907959"^^<xsd:double> "-48.7008323669434"^^<xsd:double> "2218"^^<xsd:double> "SA" "BR" "BR-MG" "Campo Florido" "no" "SIIU" .
+"36036" "SIIX" "small_airport" "Fazenda Córrego Fundo Airport" "-13.7369441986084"^^<xsd:double> "-52.5894432067871"^^<xsd:double> "1207"^^<xsd:double> "SA" "BR" "BR-MT" "Água Boa" "no" "SIIX" .
+"36065" "SIKJ" "small_airport" "Fazenda Cristalino Airport" "-9.66777801513672"^^<xsd:double> "-55.9766654968262"^^<xsd:double> "919"^^<xsd:double> "SA" "BR" "BR-MT" "Alta Floresta" "no" "SIKJ" .
+"36086" "SILI" "small_airport" "Ilha dos Porcos Grandes Airport" "-23.0588893890381"^^<xsd:double> "-44.3144454956055"^^<xsd:double> "197"^^<xsd:double> "SA" "BR" "BR-RJ" "Angra Dos Reis" "no" "SILI" .
+"36093" "SILP" "heliport" "Lojas Cem Heliport" "-23.1525001525879"^^<xsd:double> "-47.2677764892578"^^<xsd:double> "1982"^^<xsd:double> "SA" "BR" "BR-SP" "Salto" "no" "SILP" .
+"36095" "SILR" "heliport" "One Hundred Heliport" "-23.5947227478027"^^<xsd:double> "-46.6841659545898"^^<xsd:double> "2550"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SILR" .
+"45650" "SILX" "small_airport" "Fazenda Jandaia Airport" "-10.51"^^<xsd:double> "-53.65"^^<xsd:double> "1070"^^<xsd:double> "SA" "BR" "BR-MT" "Peixoto De Azevedo" "no" "SILX" .
+"36122" "SIMW" "small_airport" "Fazenda Retiro do Cervo I Airport" "-20.3544445037842"^^<xsd:double> "-53.9677772521973"^^<xsd:double> "1562"^^<xsd:double> "SA" "BR" "BR-MS" "Jaraguari" "no" "SIMW" .
+"36127" "SINB" "heliport" "Tubarão Heliport" "-23.8294448852539"^^<xsd:double> "-45.3886108398438"^^<xsd:double> "10"^^<xsd:double> "SA" "BR" "BR-SP" "Ilhabela" "no" "SINB" .
+"36145" "SINT" "small_airport" "Fazenda Santa Adélia Airport" "-15.1947221755981"^^<xsd:double> "-49.3794441223145"^^<xsd:double> "2251"^^<xsd:double> "SA" "BR" "BR-GO" "Santa Isabel" "no" "SINT" .
+"36153" "SIOB" "small_airport" "Fazenda Guanabara Airport" "-20.8211116790771"^^<xsd:double> "-51.2705574035645"^^<xsd:double> "1362"^^<xsd:double> "SA" "BR" "BR-SP" "Andradina" "no" "SIOB" .
+"36159" "SIOI" "small_airport" "Rio Arraias Airport" "-11.7622222900391"^^<xsd:double> "-54.3452796936035"^^<xsd:double> "3773"^^<xsd:double> "SA" "BR" "BR-MT" "União Do Sul" "no" "SIOI" .
+"36163" "SIOM" "small_airport" "Rio Ouro Airport" "-11.5388889312744"^^<xsd:double> "-54.1938896179199"^^<xsd:double> "3741"^^<xsd:double> "SA" "BR" "BR-MT" "União Do Sul" "no" "SIOM" .
+"36170" "SIOT" "small_airport" "Fazenda Santa Vergínia Airport" "-21.489444732666"^^<xsd:double> "-52.3838882446289"^^<xsd:double> "1092"^^<xsd:double> "SA" "BR" "BR-MS" "Santa Rita Do Pardo" "no" "SIOT" .
+"36175" "SIOY" "heliport" "Caravelas Heliport" "-23.7683334350586"^^<xsd:double> "-45.9272232055664"^^<xsd:double> "41"^^<xsd:double> "SA" "BR" "BR-SP" "Bertioga" "no" "SIOY" .
+"36247" "SISF" "small_airport" "Fazenda Santa Feliciana Airport" "-20.9411106109619"^^<xsd:double> "-56.6733322143555"^^<xsd:double> "2198"^^<xsd:double> "SA" "BR" "BR-MS" "Bonito" "no" "SISF" .
+"36248" "SISI" "small_airport" "Fazenda Sete Ilhas Airport" "-17.6341667175293"^^<xsd:double> "-50.4705543518066"^^<xsd:double> "1720"^^<xsd:double> "SA" "BR" "BR-GO" "Acreúna" "no" "SISI" .
+"36252" "SISN" "small_airport" "Fazenda Nossa Senhora Aparecida Airport" "-17.5450000762939"^^<xsd:double> "-53.8938903808594"^^<xsd:double> "2001"^^<xsd:double> "SA" "BR" "BR-MS" "Sonora" "no" "SISN" .
+"36265" "SITE" "heliport" "Telefônica Heliport" "-23.5588893890381"^^<xsd:double> "-46.6419448852539"^^<xsd:double> "2976"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SITE" .
+"36284" "SIUB" "small_airport" "Aerojaco Airport" "-13.5050001144409"^^<xsd:double> "-55.1508331298828"^^<xsd:double> "1510"^^<xsd:double> "SA" "BR" "BR-MT" "Sorriso" "no" "SIUB" .
+"36285" "SIUC" "small_airport" "Selva de Pedra Airport" "-7.22638893127441"^^<xsd:double> "-56.6708335876465"^^<xsd:double> "391"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SIUC" .
+"36288" "SIUF" "small_airport" "Fazenda São Francisco Airport" "-10.1569442749023"^^<xsd:double> "-53.7016677856445"^^<xsd:double> "1231"^^<xsd:double> "SA" "BR" "BR-MT" "Peixoto De Azevedo" "no" "SIUF" .
+"36299" "SIUS" "small_airport" "Fazenda Dona Rosa S. Rezek Airport" "-22.7147216796875"^^<xsd:double> "-54.0447235107422"^^<xsd:double> "1240"^^<xsd:double> "SA" "BR" "BR-MS" "Jateí" "no" "SIUS" .
+"36313" "SIVM" "heliport" "Vista Mar Heliport" "-22.9327774047852"^^<xsd:double> "-43.3400001525879"^^<xsd:double> "264"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SIVM" .
+"36318" "SIVR" "small_airport" "Fazenda São Raimundo Airport" "-7.625"^^<xsd:double> "-56.7400016784668"^^<xsd:double> "909"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SIVR" .
+"36328" "SIWC" "small_airport" "Fazenda Santa Rita Airport" "-14.1338891983032"^^<xsd:double> "-57.3661117553711"^^<xsd:double> "2054"^^<xsd:double> "SA" "BR" "BR-MT" "Diamantino" "no" "SIWC" .
+"36347" "SIWX" "heliport" "Blausiegel Heliport" "-23.5980567932129"^^<xsd:double> "-46.897777557373"^^<xsd:double> "2658"^^<xsd:double> "SA" "BR" "BR-SP" "Cotia" "no" "SIWX" .
+"36364" "SIXT" "closed" "Girassol Heliport" "-23.8789005279541"^^<xsd:double> "-45.4472007751465"^^<xsd:double> "14"^^<xsd:double> "SA" "BR" "BR-SP" "Ilhabela" "no" "SIXT" .
+"36417" "SJAF" "small_airport" "Fazenda Água Limpa Airport" "-13.6708326339722"^^<xsd:double> "-57.8955574035645"^^<xsd:double> "1804"^^<xsd:double> "SA" "BR" "BR-MT" "Campo Novo Do Parecis" "no" "SJAF" .
+"36419" "SJAI" "small_airport" "Fazenda Davilândia Airport" "-13.1875"^^<xsd:double> "-48.75"^^<xsd:double> "1359"^^<xsd:double> "SA" "BR" "BR-GO" "Montividiu Do Norte" "no" "SJAI" .
+"36431" "SJAX" "small_airport" "Fazenda Acalanto Airport" "-12.9650001525879"^^<xsd:double> "-45.9761123657227"^^<xsd:double> "2657"^^<xsd:double> "SA" "BR" "BR-BA" "São Desidério" "no" "SJAX" .
+"36471" "SJCU" "heliport" "CDA - Uberaba Heliport" "-20"^^<xsd:double> "-47.8966674804688"^^<xsd:double> "1766"^^<xsd:double> "SA" "BR" "BR-MG" "Uberaba" "no" "SJCU" .
+"36473" "SJCX" "heliport" "Hospital Pronto Socorro de Venda Nova Heliport" "-19.8183326721191"^^<xsd:double> "-43.9474983215332"^^<xsd:double> "2622"^^<xsd:double> "SA" "BR" "BR-MG" "Belo Horizonte" "no" "SJCX" .
+"36476" "SJDA" "small_airport" "Fazenda Cruzeiro Airport" "-19.1922225952148"^^<xsd:double> "-48.1172218322754"^^<xsd:double> "3160"^^<xsd:double> "SA" "BR" "BR-MG" "Uberaba" "no" "SJDA" .
+"36483" "SJDJ" "small_airport" "Arenhart Airport" "-29.8886108398438"^^<xsd:double> "-57.1399993896484"^^<xsd:double> "210"^^<xsd:double> "SA" "BR" "BR-RS" "Uruguaiana" "no" "SJDJ" .
+"36499" "SJEA" "small_airport" "Cadete 56-147 Santana Airport" "-12.8500003814697"^^<xsd:double> "-48.2252769470215"^^<xsd:double> "985"^^<xsd:double> "SA" "BR" "BR-TO" "Palmeirópolis" "no" "SJEA" .
+"36501" "SJED" "small_airport" "Fazenda Abath Airport" "-18.6800003051758"^^<xsd:double> "-57.2249984741211"^^<xsd:double> "348"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SJED" .
+"36504" "SJEG" "small_airport" "Estância Esmeralda Airport" "-20.1605567932129"^^<xsd:double> "-57.1580543518066"^^<xsd:double> "525"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SJEG" .
+"36513" "SJEP" "heliport" "Sementes Roos Heliport" "-28.4433326721191"^^<xsd:double> "-52.8138885498047"^^<xsd:double> "1723"^^<xsd:double> "SA" "BR" "BR-RS" "Não Me Toque" "no" "SJEP" .
+"36528" "SJFI" "small_airport" "CIFI Airport" "-15.6347217559814"^^<xsd:double> "-55.9905548095703"^^<xsd:double> "644"^^<xsd:double> "SA" "BR" "BR-MT" "Cuiabá" "no" "SJFI" .
+"36546" "SJGA" "small_airport" "Aerorural Floramazon Airport" "-3.70222210884094"^^<xsd:double> "-56.0538902282715"^^<xsd:double> "131"^^<xsd:double> "SA" "BR" "BR-PA" "Aveiro" "no" "SJGA" .
+"36547" "SJGB" "small_airport" "Fazenda Ponte de Pedra Airport" "-13.5841665267944"^^<xsd:double> "-57.4630546569824"^^<xsd:double> "1690"^^<xsd:double> "SA" "BR" "BR-MT" "Campo Novo Do Parecis" "no" "SJGB" .
+"36550" "SJGE" "small_airport" "Pista Nações Unidas Airport" "-6.0813889503479"^^<xsd:double> "-56.2894439697266"^^<xsd:double> "591"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SJGE" .
+"36554" "SJGI" "small_airport" "Fazenda Cypi Airport" "-19.3380565643311"^^<xsd:double> "-56.9077796936035"^^<xsd:double> "328"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SJGI" .
+"36560" "SJGO" "small_airport" "Eldorado Airport" "-23.8186111450195"^^<xsd:double> "-54.252498626709"^^<xsd:double> "1079"^^<xsd:double> "SA" "BR" "BR-MS" "Eldorado" "no" "SJGO" .
+"30824" "SJHG" "small_airport" "Confresa Airport" "-10.6344003677368"^^<xsd:double> "-51.5635986328125"^^<xsd:double> "781"^^<xsd:double> "SA" "BR" "BR-MT" "Confresa" "no" "SJHG" "CFO" .
+"36583" "SJHO" "small_airport" "Fazenda Colorado Airport" "-13.9513893127441"^^<xsd:double> "-57.1055564880371"^^<xsd:double> "1699"^^<xsd:double> "SA" "BR" "BR-MT" "Diamantino" "no" "SJHO" .
+"36606" "SJIO" "small_airport" "Guararapes Airport" "-26.991943359375"^^<xsd:double> "-50.383056640625"^^<xsd:double> "3609"^^<xsd:double> "SA" "BR" "BR-SC" "Santa Cecília" "no" "SJIO" .
+"36610" "SJIS" "small_airport" "Fazenda Futuro Airport" "-20.3466663360596"^^<xsd:double> "-53.4569435119629"^^<xsd:double> "1598"^^<xsd:double> "SA" "BR" "BR-MS" "Ribas Do Rio Pardo" "no" "SJIS" .
+"36611" "SJIU" "small_airport" "Fazenda Beija-Flor Airport" "-11.7941665649414"^^<xsd:double> "-38.0908317565918"^^<xsd:double> "555"^^<xsd:double> "SA" "BR" "BR-BA" "Esplanada" "no" "SJIU" .
+"36622" "SJJF" "small_airport" "Pousada do Rio Roosevelt Airport" "-8.49444389343262"^^<xsd:double> "-60.9625015258789"^^<xsd:double> "292"^^<xsd:double> "SA" "BR" "BR-AM" "Novo Aripuanã" "no" "SJJF" .
+"36629" "SJJN" "small_airport" "Fazenda Ponto de Apoio Airport" "-20.4663887023926"^^<xsd:double> "-52.6875"^^<xsd:double> "1320"^^<xsd:double> "SA" "BR" "BR-MS" "Água Clara" "no" "SJJN" .
+"36631" "SJJP" "small_airport" "São Francisco Airport" "-7.83527803421021"^^<xsd:double> "-56.5383338928223"^^<xsd:double> "778"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SJJP" .
+"36640" "SJJY" "heliport" "Indaiaúba Heliport" "-23.9080562591553"^^<xsd:double> "-45.3030548095703"^^<xsd:double> "500"^^<xsd:double> "SA" "BR" "BR-SP" "Ilhabela" "no" "SJJY" .
+"36643" "SJKB" "small_airport" "Cotriguaçu Airport" "-9.89944362640381"^^<xsd:double> "-58.5819435119629"^^<xsd:double> "1506"^^<xsd:double> "SA" "BR" "BR-MT" "Cotriguaçu" "no" "SJKB" .
+"36646" "SJKE" "heliport" "Sellix Heliport" "-22.7472229003906"^^<xsd:double> "-42.8325004577637"^^<xsd:double> "72"^^<xsd:double> "SA" "BR" "BR-RJ" "Itaboraí" "no" "SJKE" .
+"36657" "SJKP" "small_airport" "Caraparu Airport" "4.54111003875732"^^<xsd:double> "-60.4631004333496"^^<xsd:double> "1194"^^<xsd:double> "SA" "BR" "BR-RR" "Uiramutã" "no" "SJKP" .
+"36662" "SJKU" "small_airport" "Cumaipá Airport" "4.81388998031616"^^<xsd:double> "-60.4735984802246"^^<xsd:double> "2188"^^<xsd:double> "SA" "BR" "BR-RR" "Uiramutã" "no" "SJKU" .
+"36664" "SJKW" "small_airport" "Cumanã II Airport" "4.42693996429443"^^<xsd:double> "-60.8238983154297"^^<xsd:double> "1191"^^<xsd:double> "SA" "BR" "BR-RR" "Pacaraima" "no" "SJKW" .
+"36666" "SJKZ" "small_airport" "Estevão Airport" "4.44971990585327"^^<xsd:double> "-60.4392013549805"^^<xsd:double> "994"^^<xsd:double> "SA" "BR" "BR-RR" "Uiramutã" "no" "SJKZ" .
+"36672" "SJLF" "small_airport" "Homoxi Airport" "2.49778008460999"^^<xsd:double> "-63.7296981811523"^^<xsd:double> "2284"^^<xsd:double> "SA" "BR" "BR-RR" "Iracema" "no" "SJLF" .
+"36697" "SJMH" "small_airport" "Palimiú Airport" "3.31805992126"^^<xsd:double> "-62.9710998535"^^<xsd:double> "896"^^<xsd:double> "SA" "BR" "BR-RR" "Alto Alegre" "no" "SJMH" .
+"36704" "SJMO" "small_airport" "Santa Isabel Airport" "4.46999979019165"^^<xsd:double> "-60.8624992370605"^^<xsd:double> "1194"^^<xsd:double> "SA" "BR" "BR-RR" "Pacaraima" "no" "SJMO" .
+"36721" "SJNG" "small_airport" "Xidea Airport" "2.60694003105164"^^<xsd:double> "-63.8694000244141"^^<xsd:double> "1988"^^<xsd:double> "SA" "BR" "BR-RR" "Alto Alegre" "no" "SJNG" .
+"36724" "SJNJ" "small_airport" "Fazenda Lakanka Airport" "-15.4324998855591"^^<xsd:double> "-51.5905570983887"^^<xsd:double> "892"^^<xsd:double> "SA" "BR" "BR-GO" "Jussara" "no" "SJNJ" .
+"36741" "SJOA" "heliport" "Fazenda Fortaleza Heliport" "-23.1786117553711"^^<xsd:double> "-45.4711112976074"^^<xsd:double> "2155"^^<xsd:double> "SA" "BR" "BR-SP" "Taubaté" "no" "SJOA" .
+"36743" "SJOC" "heliport" "Hotel Paradise Heliport" "-21.1102771759033"^^<xsd:double> "-48.9622230529785"^^<xsd:double> "1952"^^<xsd:double> "SA" "BR" "BR-SP" "Catanduva" "no" "SJOC" .
+"36745" "SJOE" "heliport" "Haras Cachoeira Heliport" "-23.2463893890381"^^<xsd:double> "-47.4247207641602"^^<xsd:double> "1732"^^<xsd:double> "SA" "BR" "BR-SP" "Itu" "no" "SJOE" .
+"36759" "SJOS" "heliport" "Tropical Heliport" "-19.8752784729004"^^<xsd:double> "-45.0038871765137"^^<xsd:double> "2412"^^<xsd:double> "SA" "BR" "BR-MG" "Nova Serrana" "no" "SJOS" .
+"36765" "SJOZ" "heliport" "Faria Lima Square Heliport" "-23.5880565643311"^^<xsd:double> "-46.6822204589844"^^<xsd:double> "2612"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SJOZ" .
+"36790" "SJPY" "heliport" "Coqueiral Heliport" "-16.4852771759033"^^<xsd:double> "-39.0683326721191"^^<xsd:double> "6"^^<xsd:double> "SA" "BR" "BR-BA" "Porto Seguro" "no" "SJPY" .
+"36791" "SJPZ" "heliport" "Fazenda Santo Antônio Heliport" "-3.11611104011536"^^<xsd:double> "-45.0127792358398"^^<xsd:double> "59"^^<xsd:double> "SA" "BR" "BR-MA" "Matinha" "no" "SJPZ" .
+"36807" "SJQS" "small_airport" "Paredão da Serra Airport" "-15.4719438552856"^^<xsd:double> "-55.7200012207031"^^<xsd:double> "2117"^^<xsd:double> "SA" "BR" "BR-MT" "Chapada Dos Guimarães" "no" "SJQS" .
+"36835" "SJRU" "heliport" "Maria Cecília Lara Campos Heliport" "-23.59055519104"^^<xsd:double> "-46.6830558776855"^^<xsd:double> "2595"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SJRU" .
+"36843" "SJSC" "small_airport" "Fazenda São Sebastião do Castelo Airport" "-18.661111831665"^^<xsd:double> "-57.6238899230957"^^<xsd:double> "358"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SJSC" .
+"36863" "SJTA" "small_airport" "Cristal Airport" "-22.1816673278809"^^<xsd:double> "-50.4925003051758"^^<xsd:double> "1355"^^<xsd:double> "SA" "BR" "BR-SP" "Borá" "no" "SJTA" .
+"36868" "SJTG" "small_airport" "Fazenda Calcário Tangará Airport" "-14.4502782821655"^^<xsd:double> "-57.8005561828613"^^<xsd:double> "1831"^^<xsd:double> "SA" "BR" "BR-MT" "Tangará Da Serra" "no" "SJTG" .
+"36888" "SJUB" "small_airport" "Fazenda Rio Azul Airport" "-15.1833333969"^^<xsd:double> "-60.2216682434"^^<xsd:double> "896"^^<xsd:double> "SA" "BR" "BR-MT" "Vila Bela Da Santíssima Trindade" "no" "SJUB" .
+"36892" "SJUF" "heliport" "Silvestre Heliport" "0.856110990047455"^^<xsd:double> "-51.8883323669434"^^<xsd:double> "446"^^<xsd:double> "SA" "BR" "BR-AP" "Pedra Branca Do Amapari" "no" "SJUF" .
+"36903" "SJUS" "small_airport" "Fazenda Acará Airport" "-15.0744438171387"^^<xsd:double> "-51.1588897705078"^^<xsd:double> "804"^^<xsd:double> "SA" "BR" "BR-GO" "Britânia" "no" "SJUS" .
+"36905" "SJUU" "small_airport" "Fazenda Paraná Airport" "-14.0280561447144"^^<xsd:double> "-46.8711128234863"^^<xsd:double> "1450"^^<xsd:double> "SA" "BR" "BR-GO" "Nova Roma" "no" "SJUU" .
+"36908" "SJUX" "heliport" "MBP - Metalúrgica Barra do Piraí Heliport" "-22.4763889312744"^^<xsd:double> "-43.8516654968262"^^<xsd:double> "1182"^^<xsd:double> "SA" "BR" "BR-RJ" "Barra Do Piraí" "no" "SJUX" .
+"36912" "SJVB" "small_airport" "Fazenda Sagrado Coração de Jesus Airport" "-15.0916671753"^^<xsd:double> "-60.1216659546"^^<xsd:double> "499"^^<xsd:double> "SA" "BR" "BR-MT" "Vila Bela Da Santíssima Trindade" "no" "SJVB" .
+"36917" "SJVG" "heliport" "Jacarecica Heliport" "-9.60472202301025"^^<xsd:double> "-35.6797218322754"^^<xsd:double> "1"^^<xsd:double> "SA" "BR" "BR-AL" "Maceió" "no" "SJVG" .
+"36924" "SJVO" "small_airport" "Aragarças Airport" "-15.8993997573853"^^<xsd:double> "-52.2411003112793"^^<xsd:double> "1061"^^<xsd:double> "SA" "BR" "BR-GO" "Aragarças" "no" "SJVO" .
+"36929" "SJVT" "heliport" "Cimento Rio Negro-Cantagalo Heliport" "-21.9183330535889"^^<xsd:double> "-42.2597236633301"^^<xsd:double> "1066"^^<xsd:double> "SA" "BR" "BR-RJ" "Cantagalo" "no" "SJVT" .
+"36931" "SJVV" "small_airport" "Fazenda Catelani Airport" "-13.4733333587646"^^<xsd:double> "-48.4591674804688"^^<xsd:double> "2461"^^<xsd:double> "SA" "BR" "BR-GO" "Minaçu" "no" "SJVV" .
+"36942" "SJWG" "small_airport" "Itagro Airport" "-29.7802772521973"^^<xsd:double> "-55.6972236633301"^^<xsd:double> "384"^^<xsd:double> "SA" "BR" "BR-RS" "Alegrete" "no" "SJWG" .
+"36946" "SJWK" "heliport" "Fiec Heliport" "-3.73944401741028"^^<xsd:double> "-38.5088882446289"^^<xsd:double> "230"^^<xsd:double> "SA" "BR" "BR-CE" "Fortaleza" "no" "SJWK" .
+"36953" "SJWR" "heliport" "Heligalo Heliport" "-23.0341663360596"^^<xsd:double> "-44.2016677856445"^^<xsd:double> "344"^^<xsd:double> "SA" "BR" "BR-RJ" "Angra Dos Reis" "no" "SJWR" .
+"36954" "SJWS" "heliport" "Praia de Olaria Heliport" "-23.7666664123535"^^<xsd:double> "-45.4052772521973"^^<xsd:double> "10"^^<xsd:double> "SA" "BR" "BR-SP" "São Sebastião" "no" "SJWS" .
+"36955" "SJWT" "small_airport" "Fazenda Sucuri Airport" "-17.3958320617676"^^<xsd:double> "-54.7597236633301"^^<xsd:double> "1788"^^<xsd:double> "SA" "BR" "BR-MT" "Itiquira" "no" "SJWT" .
+"36966" "SJXF" "heliport" "Aloiso Ximenes de Farias Junior Heliport" "-3.22305607795715"^^<xsd:double> "-39.2555541992188"^^<xsd:double> "33"^^<xsd:double> "SA" "BR" "BR-CE" "Trairi" "no" "SJXF" .
+"36978" "SJXW" "small_airport" "Fazenda 3M Airport" "-21.6736106872559"^^<xsd:double> "-54.035831451416"^^<xsd:double> "1155"^^<xsd:double> "SA" "BR" "BR-MS" "Nova Alvorada Do Sul" "no" "SJXW" .
+"36994" "SJYO" "small_airport" "Bananal Airport" "4.63278007507324"^^<xsd:double> "-60.5856018066406"^^<xsd:double> "892"^^<xsd:double> "SA" "BR" "BR-RR" "Pacaraima" "no" "SJYO" .
+"36996" "SJYR" "small_airport" "Caju Airport" "4.70583009719849"^^<xsd:double> "-60.5153007507324"^^<xsd:double> "794"^^<xsd:double> "SA" "BR" "BR-RR" "Pacaraima" "no" "SJYR" .
+"37006" "SJZC" "small_airport" "Destilaria São Luiz Airport" "-8.77888870239258"^^<xsd:double> "-35.7849998474121"^^<xsd:double> "1371"^^<xsd:double> "SA" "BR" "BR-PE" "Maraial" "no" "SJZC" .
+"37007" "SJZD" "small_airport" "Fazenda Bandeiras Airport" "-17.8619441986084"^^<xsd:double> "-56.7030563354492"^^<xsd:double> "361"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SJZD" .
+"37008" "SJZE" "small_airport" "Fazenda Brioso Airport" "-20.2405567169189"^^<xsd:double> "-52.3866653442383"^^<xsd:double> "1270"^^<xsd:double> "SA" "BR" "BR-MS" "Três Lagoas" "no" "SJZE" .
+"37009" "SJZF" "small_airport" "Fazenda Campo Triste Airport" "-20.6186103820801"^^<xsd:double> "-52.0180549621582"^^<xsd:double> "1197"^^<xsd:double> "SA" "BR" "BR-MS" "Três Lagoas" "no" "SJZF" .
+"37011" "SJZH" "small_airport" "Fazenda Rio do Fogo Airport" "-10.881667137146"^^<xsd:double> "-54.9977798461914"^^<xsd:double> "981"^^<xsd:double> "SA" "BR" "BR-MT" "Nova Santa Helena" "no" "SJZH" .
+"37014" "SJZK" "heliport" "Projac Heliport" "-22.9566669464111"^^<xsd:double> "-43.3972206115723"^^<xsd:double> "94"^^<xsd:double> "SA" "BR" "BR-RJ" "Rio De Janeiro" "no" "SJZK" .
+"37024" "SJZU" "heliport" "Seculum Heliport" "-23.585277557373"^^<xsd:double> "-46.6827774047852"^^<xsd:double> "2592"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SJZU" .
+"41068" "SKAN" "small_airport" "Andes Airport" "5.66667"^^<xsd:double> "-75.8833"^^<xsd:double> "3900"^^<xsd:double> "SA" "CO" "CO-ANT" "Andes" "no" "SKAN" "ADN" .
+"6101" "SKBC" "medium_airport" "Las Flores Airport" "9.04554"^^<xsd:double> "-73.9749"^^<xsd:double> "111"^^<xsd:double> "SA" "CO" "CO-MAG" "El Banco" "no" "SKBC" "ELB" "ELB" .
+"6107" "SKBU" "medium_airport" "Gerardo Tobar López Airport" "3.81963"^^<xsd:double> "-76.9898"^^<xsd:double> "48"^^<xsd:double> "SA" "CO" "CO-VAC" "Buenaventura" "yes" "SKBU" "BUN" "BUN" .
+"6113" "SKCU" "medium_airport" "Juan H White Airport" "7.96847"^^<xsd:double> "-75.1985"^^<xsd:double> "174"^^<xsd:double> "SA" "CO" "CO-ANT" "Caucasia" "no" "SKCU" "CAQ" "CAQ" .
+"6136" "SKML" "small_airport" "Montelibano Airport" "7.97174"^^<xsd:double> "-75.4325"^^<xsd:double> "160"^^<xsd:double> "SA" "CO" "CO-COR" "Montelíbano" "no" "SKML" "MTB" "MTB" .
+"6141" "SKNV" "medium_airport" "Benito Salas Airport" "2.95015"^^<xsd:double> "-75.294"^^<xsd:double> "1464"^^<xsd:double> "SA" "CO" "CO-HUI" "Neiva" "yes" "SKNV" "NVA" "NVA" .
+"6152" "SKPQ" "medium_airport" "German Olano Air Base" "5.48361"^^<xsd:double> "-74.6574"^^<xsd:double> "566"^^<xsd:double> "SA" "CO" "CO-CUN" "La Dorada" "no" "SKPQ" "PQE" "PQE" .
+"30667" "SKYA" "small_airport" "Yaguara Airport" "1.54417"^^<xsd:double> "-73.9333"^^<xsd:double> "812"^^<xsd:double> "SA" "CO" "CO-CAQ" "San Vicente Del Caguán" "no" "SKYA" "AYG" "AYG" .
+"39419" "SLBR" "small_airport" "Buen Retiro Itenez Airport" "-13.4166669845581"^^<xsd:double> "-63.4833335876465"^^<xsd:double> "774"^^<xsd:double> "SA" "BO" "BO-B" "Itenes" "no" "SLBR" .
+"39430" "SLCY" "small_airport" "Collpa Airport" "-17.5650005340576"^^<xsd:double> "-63.1747016906738"^^<xsd:double> "1170"^^<xsd:double> "SA" "BO" "BO-S" "A. Ibañez" "no" "SLCY" .
+"39490" "SLER" "small_airport" "Cerrillos Airport" "-20.0166664123535"^^<xsd:double> "-64.033332824707"^^<xsd:double> "3300"^^<xsd:double> "SA" "BO" "BO-H" "Hernando Siles" "no" "SLER" .
+"39506" "SLFA" "small_airport" "Fatima Airport" "-15.3333330154419"^^<xsd:double> "-66.8000030517578"^^<xsd:double> "1000"^^<xsd:double> "SA" "BO" "BO-B" "Ballivian" "no" "SLFA" .
+"39485" "SLHA" "small_airport" "Cachascani Airport" "-13.5"^^<xsd:double> "-64.1999969482422"^^<xsd:double> "722"^^<xsd:double> "SA" "BO" "BO-B" "Itenes" "no" "SLHA" .
+"39539" "SLLZ" "small_airport" "San Lorenzo Airport" "-15.3833332061768"^^<xsd:double> "-65.75"^^<xsd:double> "825"^^<xsd:double> "SA" "BO" "BO-B" "Moxos" "no" "SLLZ" .
+"30099" "SLMG" "small_airport" "Magdalena Airport" "-13.2607483767"^^<xsd:double> "-64.0607643127"^^<xsd:double> "462"^^<xsd:double> "SA" "BO" "BO-B" "Magdalena" "no" "SLMG" "MGD" .
+"39520" "SLMX" "small_airport" "Monos Araña Airport" "-17.3333339691162"^^<xsd:double> "-64.1666641235352"^^<xsd:double> "1220"^^<xsd:double> "SA" "BO" "BO-S" "Valle Grande" "no" "SLMX" .
+"39488" "SLNL" "small_airport" "Cañada Larga Airport" "-17.7000007629395"^^<xsd:double> "-62.4166679382324"^^<xsd:double> "1197"^^<xsd:double> "SA" "BO" "BO-S" "Chiquitos" "no" "SLNL" .
+"39525" "SLPM" "small_airport" "Palmira Airport" "-13.731499671936"^^<xsd:double> "-66.4783325195312"^^<xsd:double> "530"^^<xsd:double> "SA" "BO" "BO-B" "Yacuma" "no" "SLPM" .
+"6186" "SLPO" "medium_airport" "Capitan Nicolas Rojas Airport" "-19.5431003570557"^^<xsd:double> "-65.7237014770508"^^<xsd:double> "12913"^^<xsd:double> "SA" "BO" "BO-P" "Potosí" "no" "SLPO" "POI" .
+"30388" "SLRA" "small_airport" "San Ramón Airport" "-13.2638998031616"^^<xsd:double> "-64.6038970947266"^^<xsd:double> "698"^^<xsd:double> "SA" "BO" "BO-B" "San Ramón / Mamoré" "no" "SLRA" "SRD" .
+"39455" "SLRF" "small_airport" "Refugio Airport" "-14.7627000808716"^^<xsd:double> "-61.0320014953613"^^<xsd:double> "610"^^<xsd:double> "SA" "BO" "BO-S" "Velasco" "no" "SLRF" .
+"39532" "SLRR" "small_airport" "Retiro Airport" "-14.4833335876465"^^<xsd:double> "-66.3499984741211"^^<xsd:double> "556"^^<xsd:double> "SA" "BO" "BO-B" "Yacuma" "no" "SLRR" .
+"39551" "SLTO" "small_airport" "Totora Airport" "-17.7981662750244"^^<xsd:double> "-68.0934982299805"^^<xsd:double> "12530"^^<xsd:double> "SA" "BO" "BO-O" "Oruro" "no" "SLTO" .
+"39476" "SLVN" "small_airport" "Villa Negrita Airport" "-13.2658004760742"^^<xsd:double> "-65.8758010864258"^^<xsd:double> "872"^^<xsd:double> "SA" "BO" "BO-B" "Yacuma" "no" "SLVN" .
+"39559" "SLYI" "small_airport" "Yapacani Airport" "-17.0156669616699"^^<xsd:double> "-64.0563354492188"^^<xsd:double> "816"^^<xsd:double> "SA" "BO" "BO-S" "Ichilo" "no" "SLYI" .
+"32328" "SMKA" "small_airport" "Kabalebo Airport" "4.4060001373291"^^<xsd:double> "-57.2229995727539"^^<xsd:double> "535"^^<xsd:double> "SA" "SR" "SR-SI" "Kabalebo" "no" "SMKA" .
+"32092" "SMPA" "small_airport" "Vincent Fayks Airport" "3.34527993202209"^^<xsd:double> "-55.4425010681152"^^<xsd:double> "714"^^<xsd:double> "SA" "SR" "SR-SI" "Paloemeu" "no" "SMPA" "OEM" .
+"45704" "SNAQ" "heliport" "Elisa Heliport" "-23.1541666667"^^<xsd:double> "-46.7797222222"^^<xsd:double> "2671"^^<xsd:double> "SA" "BR" "BR-SP" "Jarinu" "no" "SNAQ" .
+"37039" "SNBH" "heliport" "Biocor Heliport" "-19.9819431304932"^^<xsd:double> "-43.9447212219238"^^<xsd:double> "3907"^^<xsd:double> "SA" "BR" "BR-MG" "Nova Lima" "no" "SNBH" .
+"29718" "SNBO" "small_airport" "Boquira Airport" "-12.790599822998"^^<xsd:double> "-42.7289009094238"^^<xsd:double> "1886"^^<xsd:double> "SA" "BR" "BR-BA" "Boquira" "no" "SNBO" 0 .
+"37051" "SNCM" "heliport" "Caponga Heliport" "-4.02361106873"^^<xsd:double> "-38.2088890076"^^<xsd:double> "20"^^<xsd:double> "SA" "BR" "BR-CE" "Cascavel" "no" "SNCM" .
+"30390" "SNDG" "closed" "São Domingos Airport" "-5.57360982894897"^^<xsd:double> "-44.4317016601562"^^<xsd:double> "787"^^<xsd:double> "SA" "BR" "BR-MA" "São Domingos Do Maranhão" "no" "SNDG" .
+"300" "SNDV" "small_airport" "Divinópolis Airport" "-20.180700302124"^^<xsd:double> "-44.8708992004395"^^<xsd:double> "2608"^^<xsd:double> "SA" "BR" "BR-MG" "Divinópolis" "no" "SNDV" "DIQ" "SNDV" .
+"302" "SNED" "small_airport" "Canavieiras Airport" "-15.6669998168945"^^<xsd:double> "-38.9547004699707"^^<xsd:double> "19"^^<xsd:double> "SA" "BR" "BR-BA" "Canavieiras" "no" "SNED" "CNV" "SNED" .
+"37079" "SNFD" "small_airport" "Fazenda Santo Antônio Airport" "-17.0802783966064"^^<xsd:double> "-45.4472236633301"^^<xsd:double> "1739"^^<xsd:double> "SA" "BR" "BR-MG" "Buritizeiro" "no" "SNFD" .
+"42739" "SNFP" "small_airport" "Fazenda Pirapó Airport" "-12.1813888549805"^^<xsd:double> "-55.7886123657227"^^<xsd:double> "1273"^^<xsd:double> "SA" "BR" "BR-MT" "Sorriso" "no" "SNFP" .
+"37092" "SNGK" "small_airport" "Fazenda Bela Vista Airport" "-19.0483322143555"^^<xsd:double> "-48.9722213745117"^^<xsd:double> "1984"^^<xsd:double> "SA" "BR" "BR-MG" "Monte Alegre De Minas" "no" "SNGK" .
+"37111" "SNHR" "small_airport" "Fazenda Água Santa Airport" "-19.3630561828613"^^<xsd:double> "-47.3594436645508"^^<xsd:double> "3548"^^<xsd:double> "SA" "BR" "BR-MG" "Perdizes" "no" "SNHR" .
+"37112" "SNHT" "heliport" "Togni Heliport" "-21.7802772521973"^^<xsd:double> "-46.5961112976074"^^<xsd:double> "3885"^^<xsd:double> "SA" "BR" "BR-MG" "Poços De Caldas" "no" "SNHT" .
+"37117" "SNID" "heliport" "Instituto Doutor Arnaldo Heliport" "-23.5561103820801"^^<xsd:double> "-46.6677780151367"^^<xsd:double> "3038"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SNID" .
+"37119" "SNII" "small_airport" "Ouroland Airport" "-6.81694412231445"^^<xsd:double> "-56.5505561828613"^^<xsd:double> "699"^^<xsd:double> "SA" "BR" "BR-PA" "Itaituba" "no" "SNII" .
+"37125" "SNIS" "small_airport" "Fazenda Rio Largo Airport" "-5.19694423675537"^^<xsd:double> "-43.5977783203125"^^<xsd:double> "459"^^<xsd:double> "SA" "BR" "BR-MA" "Caxias" "no" "SNIS" .
+"327" "SNIU" "small_airport" "Ipiaú Airport" "-14.1338891983032"^^<xsd:double> "-39.7338905334473"^^<xsd:double> "492"^^<xsd:double> "SA" "BR" "BR-BA" "Ipiaú" "no" "SNIU" "IPU" "SNIU" .
+"45574" "SNIV" "small_airport" "Fazenda Jumari Airport" "-18.646389"^^<xsd:double> "-49.8825"^^<xsd:double> "1424"^^<xsd:double> "SA" "BR" "BR-MG" "Ipiaçu" "no" "SNIV" .
+"37132" "SNJS" "small_airport" "Jardim do Seridó Airport" "-6.54111099243164"^^<xsd:double> "-36.7316665649414"^^<xsd:double> "837"^^<xsd:double> "SA" "BR" "BR-RN" "Jardim Do Seridó" "no" "SNJS" .
+"29793" "SNKL" "small_airport" "Colinas Airport" "-5.96693992614746"^^<xsd:double> "-44.2338981628418"^^<xsd:double> "394"^^<xsd:double> "SA" "BR" "BR-MA" "Colinas" "no" "SNKL" 0 .
+"45601" "SNKY" "small_airport" "Fazenda Cikel Airport" "-3.664444"^^<xsd:double> "-48.834444"^^<xsd:double> "299"^^<xsd:double> "SA" "BR" "BR-PA" "Paragominas" "no" "SNKY" .
+"37170" "SNML" "small_airport" "Manduca Leão Airport" "-9.54444408416748"^^<xsd:double> "-35.8294448852539"^^<xsd:double> "387"^^<xsd:double> "SA" "BR" "BR-AL" "Rio Largo" "no" "SNML" .
+"37171" "SNMM" "small_airport" "Morada Nova de Minas Airport" "-18.5938892364502"^^<xsd:double> "-45.3530578613281"^^<xsd:double> "1988"^^<xsd:double> "SA" "BR" "BR-MG" "Morada Nova De Minas" "no" "SNMM" .
+"37176" "SNMR" "small_airport" "Maraú Airport" "-14.1172218322754"^^<xsd:double> "-38.9838905334473"^^<xsd:double> "66"^^<xsd:double> "SA" "BR" "BR-BA" "Maraú" "no" "SNMR" .
+"37184" "SNNI" "small_airport" "Praia do Forte Airport" "-12.5649995803833"^^<xsd:double> "-38.0216674804688"^^<xsd:double> "49"^^<xsd:double> "SA" "BR" "BR-BA" "Mata De São João" "no" "SNNI" .
+"30205" "SNOE" "small_airport" "Oeiras Airport" "-7.01888990402222"^^<xsd:double> "-42.1671981811523"^^<xsd:double> "820"^^<xsd:double> "SA" "BR" "BR-PI" "Oeiras" "no" "SNOE" 0 .
+"364" "SNOX" "small_airport" "Oriximiná Airport" "-1.71407997608185"^^<xsd:double> "-55.8362007141113"^^<xsd:double> "262"^^<xsd:double> "SA" "BR" "BR-PA" "Oriximiná" "no" "SNOX" "ORX" "SNOX" .
+"37214" "SNPN" "small_airport" "Fazenda Água Fria Airport" "-21.0302772521973"^^<xsd:double> "-50.9258346557617"^^<xsd:double> "1378"^^<xsd:double> "SA" "BR" "BR-SP" "Lavínia" "no" "SNPN" .
+"37219" "SNPW" "small_airport" "Piaus Airport" "-8.83361053466797"^^<xsd:double> "-50.0005569458008"^^<xsd:double> "591"^^<xsd:double> "SA" "BR" "BR-PA" "Piaus" "no" "SNPW" .
+"37220" "SNPZ" "small_airport" "Pedra Azul Airport" "-16.0672225952148"^^<xsd:double> "-41.1672210693359"^^<xsd:double> "2625"^^<xsd:double> "SA" "BR" "BR-MG" "Pedra Azul" "no" "SNPZ" .
+"37226" "SNQJ" "small_airport" "Rancho Paraíso Airport" "-17.522777557373"^^<xsd:double> "-55.4005546569824"^^<xsd:double> "499"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SNQJ" .
+"30100" "SNQP" "small_airport" "Fazenda São Francisco Airport" "-20.5674991607666"^^<xsd:double> "-50.2303009033203"^^<xsd:double> "1437"^^<xsd:double> "SA" "BR" "BR-SP" "Magda" "no" "SNQP" 0 .
+"37233" "SNQS" "small_airport" "Fazenda Nossa Senhora Auxiliadora Airport" "-22.304443359375"^^<xsd:double> "-54.0305557250977"^^<xsd:double> "1001"^^<xsd:double> "SA" "BR" "BR-MS" "Ivinhema" "no" "SNQS" .
+"37247" "SNRY" "heliport" "Redpoint I Heliport" "-19.9724998474121"^^<xsd:double> "-43.9347229003906"^^<xsd:double> "3812"^^<xsd:double> "SA" "BR" "BR-MG" "Belo Horizonte" "no" "SNRY" .
+"37270" "SNTW" "small_airport" "Senador Teotônio Vilela Airport" "-9.89694404602051"^^<xsd:double> "-36.2930564880371"^^<xsd:double> "443"^^<xsd:double> "SA" "BR" "BR-AL" "Teotônio Vilela" "no" "SNTW" .
+"37275" "SNUF" "small_airport" "Fazenda Treis Coringas Airport" "-19.5244445800781"^^<xsd:double> "-47.8525009155273"^^<xsd:double> "3264"^^<xsd:double> "SA" "BR" "BR-MG" "Uberaba" "no" "SNUF" .
+"37290" "SNVA" "small_airport" "Fazenda Bela Vista Airport" "-7.98750019073486"^^<xsd:double> "-50.6316680908203"^^<xsd:double> "1037"^^<xsd:double> "SA" "BR" "BR-PA" "Cumaru Do Norte" "no" "SNVA" .
+"37293" "SNVH" "small_airport" "Fazenda Santa Helena Airport" "-16.1686115264893"^^<xsd:double> "-58.1383323669434"^^<xsd:double> "492"^^<xsd:double> "SA" "BR" "BR-MT" "Cáceres" "no" "SNVH" .
+"37294" "SNVJ" "small_airport" "Fazenda Salto Grande Airport" "-15.2533330917358"^^<xsd:double> "-58.7933311462402"^^<xsd:double> "1444"^^<xsd:double> "SA" "BR" "BR-MT" "Jauru" "no" "SNVJ" .
+"37306" "SNVX" "heliport" "Golden Air Heliport" "-27.5416679382324"^^<xsd:double> "-48.6241683959961"^^<xsd:double> "63"^^<xsd:double> "SA" "BR" "BR-SC" "São José" "no" "SNVX" .
+"37309" "SNWA" "small_airport" "Guaxuma Airport" "-9.98055553436279"^^<xsd:double> "-36.2311096191406"^^<xsd:double> "322"^^<xsd:double> "SA" "BR" "BR-AL" "Coruripe" "no" "SNWA" .
+"37311" "SNWD" "small_airport" "Fazenda Guavirá Airport" "-23.4302787780762"^^<xsd:double> "-54.6083335876465"^^<xsd:double> "1335"^^<xsd:double> "SA" "BR" "BR-MS" "Iguatemi" "no" "SNWD" .
+"37336" "SNXL" "small_airport" "Primavera Airport" "-12.6166667938232"^^<xsd:double> "-52.1538887023926"^^<xsd:double> "1201"^^<xsd:double> "SA" "BR" "BR-MT" "Querência" "no" "SNXL" .
+"37337" "SNXM" "small_airport" "Fazenda Itumbiara Airport" "-6.42027807235718"^^<xsd:double> "-53.6113891601562"^^<xsd:double> "886"^^<xsd:double> "SA" "BR" "BR-PA" "Altamira" "no" "SNXM" .
+"37342" "SNXU" "heliport" "Meridional Heliport" "-20.3322219848633"^^<xsd:double> "-40.3783340454102"^^<xsd:double> "144"^^<xsd:double> "SA" "BR" "BR-ES" "Cariacica" "no" "SNXU" .
+"37350" "SNYG" "heliport" "Naturágua Heliport" "-3.83194398880005"^^<xsd:double> "-38.4736099243164"^^<xsd:double> "16"^^<xsd:double> "SA" "BR" "BR-CE" "Fortaleza" "no" "SNYG" .
+"37352" "SNYI" "small_airport" "Fazenda HJ Airport" "-16.6236114501953"^^<xsd:double> "-47.2997207641602"^^<xsd:double> "3113"^^<xsd:double> "SA" "BR" "BR-MG" "Unaí" "no" "SNYI" .
+"37358" "SNYP" "small_airport" "Chácara Paraíso Airport" "-1.31777799129486"^^<xsd:double> "-48.2988891601562"^^<xsd:double> "69"^^<xsd:double> "SA" "BR" "BR-PA" "Benevides" "no" "SNYP" .
+"37361" "SNYS" "small_airport" "Destilaria WD Airport" "-18.2205562591553"^^<xsd:double> "-45.9911117553711"^^<xsd:double> "3199"^^<xsd:double> "SA" "BR" "BR-MG" "João Pinheiro" "no" "SNYS" .
+"37366" "SNYY" "heliport" "Copra Heliport" "-22.8125"^^<xsd:double> "-47.2075004577637"^^<xsd:double> "1926"^^<xsd:double> "SA" "BR" "BR-SP" "Sumaré" "no" "SNYY" .
+"37374" "SNZL" "small_airport" "Fazenda Santa Thereza Airport" "-21.5713882446289"^^<xsd:double> "-49.3008346557617"^^<xsd:double> "1401"^^<xsd:double> "SA" "BR" "BR-SP" "Novo Horizonte" "no" "SNZL" .
+"37379" "SNZT" "small_airport" "Fazenda Recreio Airport" "-3.50638890266418"^^<xsd:double> "-48.3333320617676"^^<xsd:double> "499"^^<xsd:double> "SA" "BR" "BR-PA" "Paragominas" "no" "SNZT" .
+"37380" "SNZU" "small_airport" "Fazenda Nova Conceição Airport" "-2.85555553436279"^^<xsd:double> "-48.2327766418457"^^<xsd:double> "243"^^<xsd:double> "SA" "BR" "BR-PA" "Tomé Açu" "no" "SNZU" .
+"37382" "SNZW" "small_airport" "Ituberá Airport" "-13.7322216033936"^^<xsd:double> "-39.1416664123535"^^<xsd:double> "13"^^<xsd:double> "SA" "BR" "BR-BA" "Ituberá" "no" "SNZW" .
+"39590" "SPBT" "small_airport" "Obenteni Airport" "-10.7477779388428"^^<xsd:double> "-74.2205581665039"^^<xsd:double> "3290"^^<xsd:double> "SA" "PE" "PE-UCA" "Obenteni" "no" "SPBT" .
+"39591" "SPBY" "small_airport" "Bayovar" "-5.83074998855591"^^<xsd:double> "-81.0258026123047"^^<xsd:double> "88"^^<xsd:double> "SA" "PE" "PE-PIU" "Bayovar" "no" "SPBY" .
+"39593" "SPEZ" "small_airport" "Puerto Bermudez Airport" "-10.2992000579834"^^<xsd:double> "-74.9372024536133"^^<xsd:double> "840"^^<xsd:double> "SA" "PE" "PE-PAS" "Oxapampa" "no" "SPEZ" .
+"39625" "SPGS" "small_airport" "Lagunas Airport" "-6.90000009536743"^^<xsd:double> "-78.6333312988281"^^<xsd:double> "12675"^^<xsd:double> "SA" "PE" "PE-CAJ" "Cajamarca" "no" "SPGS" .
+"39595" "SPHA" "small_airport" "Chincha Airport" "-13.3706998825073"^^<xsd:double> "-76.1128997802734"^^<xsd:double> "640"^^<xsd:double> "SA" "PE" "PE-ICA" "Chincha" "no" "SPHA" .
+"39597" "SPIA" "small_airport" "Ica Airport" "-14.2000999450684"^^<xsd:double> "-75.5738983154297"^^<xsd:double> "1500"^^<xsd:double> "SA" "PE" "PE-ICA" "Ica" "no" "SPIA" .
+"32357" "SPIZ" "small_airport" "Uchiza Airport" "-8.46700000762939"^^<xsd:double> "-76.3499984741211"^^<xsd:double> "1965"^^<xsd:double> "SA" "PE" "PE-HUC" "Uchiza" "no" "SPIZ" "UCZ" .
+"6220" "SPJI" "medium_airport" "Juanjui Airport" "-7.16909980773926"^^<xsd:double> "-76.7285995483398"^^<xsd:double> "1148"^^<xsd:double> "SA" "PE" "PE-SAM" "Juanjuí" "no" "SPJI" "JJI" .
+"32359" "SPLN" "small_airport" "San Nicolas Airport" "-6.39231014251709"^^<xsd:double> "-77.5011978149414"^^<xsd:double> "5082"^^<xsd:double> "SA" "PE" "PE-AMA" "Rodriguez de Mendoza" "no" "SPLN" "RIM" .
+"39633" "SPLT" "small_airport" "Lobitos Airport" "-4.44861125946045"^^<xsd:double> "-81.2755584716797"^^<xsd:double> "45"^^<xsd:double> "SA" "PE" "PE-PIU" "Lobitos" "no" "SPLT" .
+"32363" "SPNU" "small_airport" "Manu Airport" "-12.2829999923706"^^<xsd:double> "-70.8830032348633"^^<xsd:double> "1010"^^<xsd:double> "SA" "PE" "PE-MDD" "Manu" "no" "SPNU" .
+"39647" "SPRG" "small_airport" "San Regis Airport" "-13.5166664123535"^^<xsd:double> "-76.0999984741211"^^<xsd:double> "294"^^<xsd:double> "SA" "PE" "PE-ICA" "Chincha" "no" "SPRG" .
+"32373" "SPTE" "small_airport" "San Francisco Airport" "-12.5329999923706"^^<xsd:double> "-73.8000030517578"^^<xsd:double> "2499"^^<xsd:double> "SA" "PE" "PE-CUS" "San Francisco" "no" "SPTE" .
+"32374" "SPTI" "small_airport" "Puerto Inca Airport" "-9.38300037384033"^^<xsd:double> "-74.9670028686523"^^<xsd:double> "583"^^<xsd:double> "SA" "PE" "PE-HUC" "Puerto Inca" "no" "SPTI" .
+"37392" "SSAM" "small_airport" "Amambaí Airport" "-23.1427783966064"^^<xsd:double> "-55.2077789306641"^^<xsd:double> "1542"^^<xsd:double> "SA" "BR" "BR-MS" "Amambaí" "no" "SSAM" .
+"432" "SSAP" "small_airport" "Apucarana Airport" "-23.6095008850098"^^<xsd:double> "-51.3844985961914"^^<xsd:double> "2641"^^<xsd:double> "SA" "BR" "BR-PR" "Apucarana" "no" "SSAP" "APU" "SSAP" .
+"37393" "SSAR" "small_airport" "Fazenda Jacaré Airport" "-21.5030555725098"^^<xsd:double> "-53.9674987792969"^^<xsd:double> "1214"^^<xsd:double> "SA" "BR" "BR-MS" "Campo Grande" "no" "SSAR" .
+"436" "SSBL" "small_airport" "Blumenau Airport" "-26.8306007385254"^^<xsd:double> "-49.0903015136719"^^<xsd:double> "60"^^<xsd:double> "SA" "BR" "BR-SC" "Blumenau" "no" "SSBL" "BNU" "SSBL" .
+"37405" "SSBM" "small_airport" "Fazenda Lageado Airport" "-20.2975006103516"^^<xsd:double> "-55.4258346557617"^^<xsd:double> "932"^^<xsd:double> "SA" "BR" "BR-MS" "Dois Irmãos Do Buriti" "no" "SSBM" .
+"37407" "SSBO" "small_airport" "Palmares Airport" "-28.7222213745117"^^<xsd:double> "-54.8908348083496"^^<xsd:double> "787"^^<xsd:double> "SA" "BR" "BR-RS" "Bossoroca" "no" "SSBO" .
+"37409" "SSBQ" "small_airport" "Frigorífico Marfrig Airport" "-21.7466678619"^^<xsd:double> "-52.4783325195"^^<xsd:double> "1230"^^<xsd:double> "SA" "BR" "BR-MS" "Bataguassu" "no" "SSBQ" .
+"37413" "SSBZ" "small_airport" "Aeroclube Airport" "-29.6761112213135"^^<xsd:double> "-50.981388092041"^^<xsd:double> "56"^^<xsd:double> "SA" "BR" "BR-RS" "Sapiranga" "no" "SSBZ" .
+"37414" "SSCA" "small_airport" "Fazenda Campo Bom Airport" "-18.739444732666"^^<xsd:double> "-52.6199989318848"^^<xsd:double> "2657"^^<xsd:double> "SA" "BR" "BR-MS" "Chapadão Do Sul" "no" "SSCA" .
+"37416" "SSCE" "small_airport" "Aeroclube Airport" "-31.3277778625488"^^<xsd:double> "-54.1347236633301"^^<xsd:double> "722"^^<xsd:double> "SA" "BR" "BR-RS" "Bagé" "no" "SSCE" .
+"37420" "SSCL" "small_airport" "Cassilândia Airport" "-19.1463890075684"^^<xsd:double> "-51.6852798461914"^^<xsd:double> "1568"^^<xsd:double> "SA" "BR" "BR-MS" "Cassilândia" "no" "SSCL" .
+"37424" "SSCS" "small_airport" "Estância Ema Airport" "-20.619722366333"^^<xsd:double> "-54.7219429016113"^^<xsd:double> "1968"^^<xsd:double> "SA" "BR" "BR-MS" "Campo Grande" "no" "SSCS" .
+"37429" "SSCZ" "closed" "Tenoar Airport" "-18.811943"^^<xsd:double> "-52.639168"^^<xsd:double> "2664"^^<xsd:double> "SA" "BR" "BR-MS" "Chapadão Do Sul" "no" "SSCZ" .
+"37431" "SSDD" "heliport" "Nossa Senhora de Fátima Heliport" "-29.9327774047852"^^<xsd:double> "-51.1833343505859"^^<xsd:double> "13"^^<xsd:double> "SA" "BR" "BR-RS" "Canoas" "no" "SSDD" .
+"37445" "SSEG" "small_airport" "Estância da Gruta Airport" "-31.9424991607666"^^<xsd:double> "-52.4794425964355"^^<xsd:double> "33"^^<xsd:double> "SA" "BR" "BR-RS" "Pelotas" "no" "SSEG" .
+"37457" "SSEZ" "small_airport" "Espumoso Airport" "-28.7374992370605"^^<xsd:double> "-52.856388092041"^^<xsd:double> "1198"^^<xsd:double> "SA" "BR" "BR-RS" "Espumoso" "no" "SSEZ" .
+"37459" "SSFF" "small_airport" "Fazenda São Francisco Airport" "-21.1786117553711"^^<xsd:double> "-54.2930564880371"^^<xsd:double> "1204"^^<xsd:double> "SA" "BR" "BR-MS" "Nova Alvorada Do Sul" "no" "SSFF" .
+"37460" "SSFG" "small_airport" "Fazenda Guanabara Airport" "-22.658332824707"^^<xsd:double> "-52.1305541992188"^^<xsd:double> "925"^^<xsd:double> "SA" "BR" "BR-PR" "Paranapoema" "no" "SSFG" .
+"37461" "SSFJ" "small_airport" "Fazenda Retiro da Cachoeira Airport" "-20.8077774047852"^^<xsd:double> "-54.6197204589844"^^<xsd:double> "1435"^^<xsd:double> "SA" "BR" "BR-MS" "Campo Grande" "no" "SSFJ" .
+"37470" "SSFT" "closed" "Fazenda Thoma Airport" "-21.659200668335"^^<xsd:double> "-53.511100769043"^^<xsd:double> "1111"^^<xsd:double> "SA" "BR" "BR-MS" "Nova Andradina" "no" "SSFT" .
+"37480" "SSGK" "small_airport" "Fazenda Volta Grande Airport" "-21.4558334350586"^^<xsd:double> "-55.4569435119629"^^<xsd:double> "1699"^^<xsd:double> "SA" "BR" "BR-MS" "Maracaju" "no" "SSGK" .
+"37487" "SSGX" "small_airport" "Fazenda Rio Negro Airport" "-19.5683326721191"^^<xsd:double> "-56.2455558776855"^^<xsd:double> "312"^^<xsd:double> "SA" "BR" "BR-MS" "Aquidauana" "no" "SSGX" .
+"37496" "SSHK" "small_airport" "Fazenda Jaguarandy Airport" "-22.5897216796875"^^<xsd:double> "-55.5694427490234"^^<xsd:double> "1968"^^<xsd:double> "SA" "BR" "BR-MS" "Ponta Porã" "no" "SSHK" .
+"37506" "SSIC" "small_airport" "APLIC Aviação Agrícola Ltda Airport" "-22.3066673278809"^^<xsd:double> "-54.8244438171387"^^<xsd:double> "1405"^^<xsd:double> "SA" "BR" "BR-MS" "Dourados" "no" "SSIC" .
+"37515" "SSIU" "small_airport" "Sítio Enel Airport" "-30.1336116790771"^^<xsd:double> "-52.3652763366699"^^<xsd:double> "32"^^<xsd:double> "SA" "BR" "BR-RS" "Pântano Grande" "no" "SSIU" .
+"37522" "SSJG" "small_airport" "Fazenda Santa Ana Airport" "-21.2163887023926"^^<xsd:double> "-57.6813888549805"^^<xsd:double> "351"^^<xsd:double> "SA" "BR" "BR-MS" "Porto Murtinho" "no" "SSJG" .
+"37524" "SSJJ" "small_airport" "Fazenda Tupi Airport" "-21.807222366333"^^<xsd:double> "-53.1294441223145"^^<xsd:double> "1377"^^<xsd:double> "SA" "BR" "BR-MS" "Nova Andradina" "no" "SSJJ" .
+"37526" "SSJM" "small_airport" "Fazenda Júlio Martins Airport" "-18.8425006866455"^^<xsd:double> "-52.4994430541992"^^<xsd:double> "2621"^^<xsd:double> "SA" "BR" "BR-MS" "Chapadão Do Sul" "no" "SSJM" .
+"37530" "SSJT" "small_airport" "Fazenda Rio Lagoa Airport" "-20.84889"^^<xsd:double> "-53.20667"^^<xsd:double> "1082"^^<xsd:double> "SA" "BR" "BR-MS" "Ribas Do Rio Pardo" "no" "SSJT" .
+"37531" "SSJU" "small_airport" "Fazenda Santa Paula Airport" "-19.3813896179199"^^<xsd:double> "-52.3097229003906"^^<xsd:double> "1200"^^<xsd:double> "SA" "BR" "BR-MS" "Inocência" "no" "SSJU" .
+"37538" "SSKB" "small_airport" "Fazenda Tupanciretan Airport" "-19.4744434356689"^^<xsd:double> "-56.3772201538086"^^<xsd:double> "312"^^<xsd:double> "SA" "BR" "BR-MS" "Aquidauana" "no" "SSKB" .
+"37544" "SSKI" "small_airport" "Fazenda Santa Helena Airport" "-23.34055519104"^^<xsd:double> "-50.5830574035645"^^<xsd:double> "1673"^^<xsd:double> "SA" "BR" "BR-PR" "Cornélio Procópio" "no" "SSKI" .
+"37546" "SSKK" "small_airport" "Capão da Canoa Airport" "-29.7636108398438"^^<xsd:double> "-50.0369453430176"^^<xsd:double> "33"^^<xsd:double> "SA" "BR" "BR-RS" "Capão Da Canoa" "no" "SSKK" .
+"37547" "SSKL" "small_airport" "Fazenda Pião Airport" "-23.4069442749023"^^<xsd:double> "-55.2266654968262"^^<xsd:double> "1542"^^<xsd:double> "SA" "BR" "BR-MS" "Amambaí" "no" "SSKL" .
+"473" "SSKS" "small_airport" "Cachoeira do Sul Airport" "-30.0018997192383"^^<xsd:double> "-52.9407997131348"^^<xsd:double> "253"^^<xsd:double> "SA" "BR" "BR-RS" "Cachoeira Do Sul" "no" "SSKS" "QDB" "SSKS" .
+"37559" "SSLP" "small_airport" "Fazenda Lucero Porã Airport" "-21.9108333587646"^^<xsd:double> "-57.6466674804688"^^<xsd:double> "299"^^<xsd:double> "SA" "BR" "BR-MS" "Porto Murtinho" "no" "SSLP" .
+"45641" "SSLV" "heliport" "Metropolitan Business Center Heliport" "-21.193333"^^<xsd:double> "-47.801389"^^<xsd:double> "2096"^^<xsd:double> "SA" "BR" "BR-SP" "Ribeirão Preto" "no" "SSLV" .
+"45642" "SSLY" "heliport" "Norte Sul Heliport" "-22.901944"^^<xsd:double> "-47.046944"^^<xsd:double> "2356"^^<xsd:double> "SA" "BR" "BR-SP" "Campinas" "no" "SSLY" .
+"37576" "SSMU" "heliport" "Magnum Heliport" "-29.9469432830811"^^<xsd:double> "-51.1052780151367"^^<xsd:double> "66"^^<xsd:double> "SA" "BR" "BR-RS" "Cachoeirinha" "no" "SSMU" .
+"45633" "SSMV" "small_airport" "Fazenda Boa Vista Airport" "-22.0425"^^<xsd:double> "-47.56"^^<xsd:double> "2434"^^<xsd:double> "SA" "BR" "BR-SP" "Pirassununga" "no" "SSMV" .
+"37577" "SSMW" "small_airport" "Ica Airport" "-24.3152770996094"^^<xsd:double> "-47.0138893127441"^^<xsd:double> "49"^^<xsd:double> "SA" "BR" "BR-SP" "Peruibe" "no" "SSMW" .
+"45577" "SSMX" "small_airport" "Fazenda Planalto Airport" "-21.12"^^<xsd:double> "-46.42"^^<xsd:double> "3868"^^<xsd:double> "SA" "BR" "BR-MG" "Nova Resende" "no" "SSMX" .
+"37580" "SSNF" "small_airport" "Fazenda Naisa Airport" "-20.3297214508057"^^<xsd:double> "-48.810001373291"^^<xsd:double> "1739"^^<xsd:double> "SA" "BR" "BR-SP" "Colômbia" "no" "SSNF" .
+"30158" "SSNG" "small_airport" "Montenegro Airport" "-29.7194004058838"^^<xsd:double> "-51.4893989562988"^^<xsd:double> "125"^^<xsd:double> "SA" "BR" "BR-RS" "Montenegro" "no" "SSNG" "QGF" .
+"30381" "SSNJ" "small_airport" "Fazenda Primavera Airport" "-19.5075"^^<xsd:double> "-55.90528"^^<xsd:double> "341"^^<xsd:double> "SA" "BR" "BR-MS" "Aquidauana" "no" "SSNJ" .
+"37586" "SSNR" "small_airport" "Fazenda Novo Horizonte Airport" "-18.3186111450195"^^<xsd:double> "-54.9355545043945"^^<xsd:double> "754"^^<xsd:double> "SA" "BR" "BR-MS" "Coxim" "no" "SSNR" .
+"37589" "SSNV" "small_airport" "Fazenda Novo Hamburgo Airport" "-19.2330551147461"^^<xsd:double> "-57.0297203063965"^^<xsd:double> "285"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SSNV" .
+"37596" "SSOI" "small_airport" "Pederneiras Airport" "-22.307222366333"^^<xsd:double> "-48.7719421386719"^^<xsd:double> "1788"^^<xsd:double> "SA" "BR" "BR-SP" "Pederneiras" "no" "SSOI" .
+"37597" "SSOK" "small_airport" "14 Bis Airport" "-23.2141666412"^^<xsd:double> "-51.1858329773"^^<xsd:double> "1932"^^<xsd:double> "SA" "BR" "BR-PR" "Londrina" "no" "SSOK" .
+"37605" "SSOT" "small_airport" "Fazenda Saco da Tapera Airport" "-16.34694480896"^^<xsd:double> "-45.3491668701172"^^<xsd:double> "1946"^^<xsd:double> "SA" "BR" "BR-MG" "São Romão" "no" "SSOT" .
+"37613" "SSPZ" "closed" "Fazenda Princesa do Sul Airport" "-23.7710990905762"^^<xsd:double> "-54.6777992248535"^^<xsd:double> "1053"^^<xsd:double> "SA" "BR" "BR-MS" "Japoré" "no" "SSPZ" .
+"37624" "SSQQ" "heliport" "Pedra do Sino Heliport" "-20.8994445800781"^^<xsd:double> "-43.8186111450195"^^<xsd:double> "3596"^^<xsd:double> "SA" "BR" "BR-MG" "Carandaí" "no" "SSQQ" .
+"37625" "SSQU" "small_airport" "Fazenda Alegrete - Retiro Carabda Airport" "-20.0647220611572"^^<xsd:double> "-55.7016677856445"^^<xsd:double> "410"^^<xsd:double> "SA" "BR" "BR-MS" "Aquidauana" "no" "SSQU" .
+"37632" "SSRC" "small_airport" "Fazenda Santa Inês Airport" "-21.7030563354492"^^<xsd:double> "-54.3683319091797"^^<xsd:double> "1084"^^<xsd:double> "SA" "BR" "BR-MS" "Rio Brilhante" "no" "SSRC" .
+"37638" "SSRL" "small_airport" "Fazenda Santa Ana Airport" "-22.0372219085693"^^<xsd:double> "-54.1888885498047"^^<xsd:double> "1001"^^<xsd:double> "SA" "BR" "BR-MS" "Deodápolis" "no" "SSRL" .
+"37640" "SSRN" "small_airport" "Aeroclube de Rio Negrinho Airport" "-26.3199996948242"^^<xsd:double> "-49.5205574035645"^^<xsd:double> "3025"^^<xsd:double> "SA" "BR" "BR-SC" "Rio Negrinho" "no" "SSRN" .
+"30393" "SSRU" "small_airport" "São Lourenço do Sul Airport" "-31.38330078125"^^<xsd:double> "-52.0327987670898"^^<xsd:double> "28"^^<xsd:double> "SA" "BR" "BR-RS" "São Lourenço Do Sul" "no" "SSRU" "SQY" .
+"30391" "SSSG" "small_airport" "São Gabriel Airport" "-30.3449993133545"^^<xsd:double> "-54.2677993774414"^^<xsd:double> "472"^^<xsd:double> "SA" "BR" "BR-RS" "São Gabriel" "no" "SSSG" 0 .
+"37665" "SSTJ" "small_airport" "Walter Ewaldo Siegel Airport" "-27.3491668701"^^<xsd:double> "-49.818611145"^^<xsd:double> "1322"^^<xsd:double> "SA" "BR" "BR-SC" "Trombudo Central" "no" "SSTJ" .
+"37670" "SSTY" "small_airport" "Usina Foz do Chopim Airport" "-25.5625"^^<xsd:double> "-53.176944732666"^^<xsd:double> "1640"^^<xsd:double> "SA" "BR" "BR-PR" "Cruzeiro Do Iguaçu" "no" "SSTY" .
+"37674" "SSUD" "heliport" "Bom dia Café Heliport" "-21.59694480896"^^<xsd:double> "-45.4377784729004"^^<xsd:double> "3107"^^<xsd:double> "SA" "BR" "BR-MG" "Varginha" "no" "SSUD" .
+"37681" "SSUN" "heliport" "Terminal Petrobrás - Guarulhos Heliport" "-23.4702777862549"^^<xsd:double> "-46.4469451904297"^^<xsd:double> "2474"^^<xsd:double> "SA" "BR" "BR-SP" "Guarulhos" "no" "SSUN" .
+"37693" "SSVE" "small_airport" "Fazenda Cerro Verde Airport" "-23.8127784729004"^^<xsd:double> "-55.0577774047852"^^<xsd:double> "1250"^^<xsd:double> "SA" "BR" "BR-MS" "Tacuru" "no" "SSVE" .
+"37702" "SSVV" "closed" "Fazenda Vaticano Airport" "-21.2944431305"^^<xsd:double> "-56.1186103821"^^<xsd:double> "1050"^^<xsd:double> "SA" "BR" "BR-MS" "Nioaque" "no" "SSVV" .
+"37703" "SSVW" "small_airport" "Fazenda Galera Airport" "-14.5130558013916"^^<xsd:double> "-59.5569458007812"^^<xsd:double> "975"^^<xsd:double> "SA" "BR" "BR-MT" "Conquista D`Oeste" "no" "SSVW" .
+"37719" "SSWX" "small_airport" "Fazenda Retiro Campanha Airport" "-19.02805519104"^^<xsd:double> "-56.2905578613281"^^<xsd:double> "262"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SSWX" .
+"44735" "SSWZ" "small_airport" "Fazenda Dona Neném Airport" "-18.5094432831"^^<xsd:double> "-46.2738876343"^^<xsd:double> "3458"^^<xsd:double> "SA" "BR" "BR-MG" "Presidente Olegário" "no" "SSWZ" .
+"37725" "SSXK" "small_airport" "Fazenda Alvorada do Marape Airport" "-12.8719444274902"^^<xsd:double> "-56.741943359375"^^<xsd:double> "1001"^^<xsd:double> "SA" "BR" "BR-MT" "Tapurá" "no" "SSXK" .
+"42741" "SSXL" "small_airport" "Laguna Airport" "-20.4347229003906"^^<xsd:double> "-56.3358345031738"^^<xsd:double> "554"^^<xsd:double> "SA" "BR" "BR-MS" "Miranda" "no" "SSXL" .
+"44560" "SSXN" "small_airport" "Aéreo Amazônia Airport" "-8.298333333"^^<xsd:double> "-55.11472222"^^<xsd:double> "820"^^<xsd:double> "SA" "BR" "BR-PA" "Altamira" "no" "SSXN" .
+"29973" "SSYB" "small_airport" "Fazenda Santa Elza Airport" "-18.6833324432373"^^<xsd:double> "-53.283332824707"^^<xsd:double> "1762"^^<xsd:double> "SA" "BR" "BR-MS" "Costa Rica" "no" "SSYB" .
+"37746" "SSYK" "heliport" "Hospital Alvorada Heliport" "-23.6008338928223"^^<xsd:double> "-46.6611099243164"^^<xsd:double> "2690"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SSYK" .
+"37762" "SSZB" "small_airport" "Fazenda Bela Vista Airport" "-18.2066669464111"^^<xsd:double> "-56.8094444274902"^^<xsd:double> "331"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SSZB" .
+"37765" "SSZF" "small_airport" "Fazenda Santa Gertrudes Airport" "-18.4777774810791"^^<xsd:double> "-56.0216674804688"^^<xsd:double> "150"^^<xsd:double> "SA" "BR" "BR-MS" "Corumbá" "no" "SSZF" .
+"37775" "SSZV" "small_airport" "Fazenda Bordolândia Airport" "-12.0619440078735"^^<xsd:double> "-51.5330543518066"^^<xsd:double> "1066"^^<xsd:double> "SA" "BR" "BR-MT" "Serra Nova Dourada" "no" "SSZV" .
+"6245" "SUDU" "medium_airport" "Santa Bernardina International Airport" "-33.3588981628418"^^<xsd:double> "-56.4991989135742"^^<xsd:double> "305"^^<xsd:double> "SA" "UY" "UY-DU" "Durazno" "no" "SUDU" "DZO" .
+"40071" "SVAF" "small_airport" "Medano Alto Airport" "6.93333292007446"^^<xsd:double> "-68.0166702270508"^^<xsd:double> "459"^^<xsd:double> "SA" "VE" "VE-C" "Médano Alto" "no" "SVAF" .
+"40072" "SVAH" "small_airport" "Cachimbo Airport" "10.033332824707"^^<xsd:double> "-69.1666641235352"^^<xsd:double> "1000"^^<xsd:double> "SA" "VE" "VE-K" "Coco de Mono" "no" "SVAH" .
+"40108" "SVCY" "small_airport" "Cuartel Yaruro Airport" "6.93333292007446"^^<xsd:double> "-68.6333312988281"^^<xsd:double> "442"^^<xsd:double> "SA" "VE" "VE-C" "Las Campanas" "no" "SVCY" .
+"40283" "SVRG" "small_airport" "Rancho Grande de Apure Airport" "7.34999990463257"^^<xsd:double> "-69.3499984741211"^^<xsd:double> "918"^^<xsd:double> "SA" "VE" "VE-C" "La Leona" "no" "SVRG" .
+"40336" "SVVK" "small_airport" "La Verdad Airport" "7.13333320617676"^^<xsd:double> "-69.0500030517578"^^<xsd:double> "236"^^<xsd:double> "SA" "VE" "VE-C" "Las Queseritas" "no" "SVVK" .
+"37779" "SWAA" "small_airport" "Fazenda Ykaraí Airport" "-14.5438890457153"^^<xsd:double> "-50.5927772521973"^^<xsd:double> "896"^^<xsd:double> "SA" "BR" "BR-GO" "Nova Crixás" "no" "SWAA" .
+"37781" "SWAF" "small_airport" "Agroer Aviação Agrícola Airport" "-16.4838886260986"^^<xsd:double> "-54.6672210693359"^^<xsd:double> "827"^^<xsd:double> "SA" "BR" "BR-MT" "Rondonópolis" "no" "SWAF" .
+"37787" "SWAQ" "small_airport" "Érico Airport" "3.76332998275757"^^<xsd:double> "-62.4094009399414"^^<xsd:double> "689"^^<xsd:double> "SA" "BR" "BR-RR" "Boa Vista" "no" "SWAQ" .
+"37795" "SWBF" "small_airport" "Fazenda Boa Fortuna Airport" "-10.0050001144409"^^<xsd:double> "-49.491943359375"^^<xsd:double> "741"^^<xsd:double> "SA" "BR" "BR-TO" "Pium" "no" "SWBF" .
+"37800" "SWBO" "small_airport" "Fazenda São João Airport" "-14.2747220993042"^^<xsd:double> "-49.6491661071777"^^<xsd:double> "1542"^^<xsd:double> "SA" "BR" "BR-GO" "Campos Verdes" "no" "SWBO" .
+"37801" "SWBP" "heliport" "1º BPM Heliport" "-16.5136108398438"^^<xsd:double> "-49.2511100769043"^^<xsd:double> "2264"^^<xsd:double> "SA" "BR" "BR-GO" "Goiânia" "no" "SWBP" .
+"37802" "SWBQ" "small_airport" "Barracão Queimado Airport" "-13.7336111069"^^<xsd:double> "-59.7172203064"^^<xsd:double> "2067"^^<xsd:double> "SA" "BR" "BR-MT" "Vila Bela Da Santíssima Trindade" "no" "SWBQ" .
+"37827" "SWDB" "small_airport" "Fazenda Eldorado Airport" "-15.5769443511963"^^<xsd:double> "-52.2188873291016"^^<xsd:double> "1086"^^<xsd:double> "SA" "BR" "BR-MT" "Barra Do Garças" "no" "SWDB" .
+"37831" "SWDI" "small_airport" "Dois Irmãos Airport" "-11.7336111068726"^^<xsd:double> "-49.3338890075684"^^<xsd:double> "771"^^<xsd:double> "SA" "BR" "BR-TO" "Peixe" "no" "SWDI" .
+"529" "SWDN" "small_airport" "Dianópolis Airport" "-11.5953998566"^^<xsd:double> "-46.846698761"^^<xsd:double> "2001"^^<xsd:double> "SA" "BR" "BR-TO" "Dianópolis" "no" "SWDN" "DNO" .
+"37834" "SWDO" "small_airport" "Rosário do Leste Airport" "-14.8169441223145"^^<xsd:double> "-56.4172210693359"^^<xsd:double> "699"^^<xsd:double> "SA" "BR" "BR-MT" "Rosário Do Leste" "no" "SWDO" .
+"37841" "SWDY" "small_airport" "Fazenda Água Fria Airport" "-14.7547216415405"^^<xsd:double> "-50.377498626709"^^<xsd:double> "1175"^^<xsd:double> "SA" "BR" "BR-GO" "Nova Crixás" "no" "SWDY" .
+"532" "SWEI" "small_airport" "Eirunepé Airport" "-6.63953018188477"^^<xsd:double> "-69.8797988891602"^^<xsd:double> "412"^^<xsd:double> "SA" "BR" "BR-AM" "Eirunepé" "no" "SWEI" "ERN" "SWEI" .
+"37863" "SWEZ" "small_airport" "Fazenda Santa Rita de Cássia Airport" "-15.2502784729004"^^<xsd:double> "-56.4811096191406"^^<xsd:double> "666"^^<xsd:double> "SA" "BR" "BR-MT" "Jangada" "no" "SWEZ" .
+"37889" "SWGQ" "small_airport" "Fazenda Monte Alegre Airport" "-14.7808332443237"^^<xsd:double> "-57.3541679382324"^^<xsd:double> "755"^^<xsd:double> "SA" "BR" "BR-MT" "Nova Olímpia" "no" "SWGQ" .
+"37894" "SWHA" "small_airport" "Fazenda Boa Esperança Soberbinho Airport" "-14.6447219848633"^^<xsd:double> "-49.8163871765137"^^<xsd:double> "1553"^^<xsd:double> "SA" "BR" "BR-GO" "Guarinos" "no" "SWHA" .
+"37897" "SWHF" "small_airport" "Fazenda Frigovale I Airport" "-10.485833168"^^<xsd:double> "-48.3338890076"^^<xsd:double> "860"^^<xsd:double> "SA" "BR" "BR-TO" "Porto Nacional" "no" "SWHF" .
+"37902" "SWHP" "small_airport" "Fazenda Olhos D`água Airport" "-14.0194444656372"^^<xsd:double> "-52.1522216796875"^^<xsd:double> "1407"^^<xsd:double> "SA" "BR" "BR-MT" "Água Boa" "no" "SWHP" .
+"37915" "SWIU" "small_airport" "Madeirinha Airport" "-9.8463888168335"^^<xsd:double> "-61.4174995422363"^^<xsd:double> "476"^^<xsd:double> "SA" "BR" "BR-MT" "Aripuanã" "no" "SWIU" .
+"37928" "SWJN" "small_airport" "Juína Airport" "-11.4194440841675"^^<xsd:double> "-58.7016677856445"^^<xsd:double> "1083"^^<xsd:double> "SA" "BR" "BR-MT" "Juína" "no" "SWJN" "JIA" .
+"37937" "SWKB" "small_airport" "Fazenda Campina Airport" "-9.14249992370605"^^<xsd:double> "-67.4458312988281"^^<xsd:double> "699"^^<xsd:double> "SA" "BR" "BR-AM" "Boca Do Acre" "no" "SWKB" .
+"37944" "SWKP" "small_airport" "Chácara Veneza Airport" "-15.2425003051758"^^<xsd:double> "-59.2852783203125"^^<xsd:double> "866"^^<xsd:double> "SA" "BR" "BR-MT" "Pontes E Lacerda" "no" "SWKP" .
+"37959" "SWMC" "small_airport" "Capão da Cruz Airport" "-21.4583320617676"^^<xsd:double> "-47.8877792358398"^^<xsd:double> "1936"^^<xsd:double> "SA" "BR" "BR-SP" "Luís Antônio" "no" "SWMC" .
+"37977" "SWND" "heliport" "Tamboré S/A Heliport" "-23.509721756"^^<xsd:double> "-46.8258323669"^^<xsd:double> "2444"^^<xsd:double> "SA" "BR" "BR-SP" "Barueri" "no" "SWND" .
+"37989" "SWNW" "small_airport" "Fazenda Tuiuiu Airport" "-13.7994441986084"^^<xsd:double> "-55.4550018310547"^^<xsd:double> "1525"^^<xsd:double> "SA" "BR" "BR-MT" "Nobres" "no" "SWNW" .
+"37995" "SWOE" "small_airport" "Fazenda Duas Lagoas Airport" "-16.1708335876465"^^<xsd:double> "-58.1872215270996"^^<xsd:double> "688"^^<xsd:double> "SA" "BR" "BR-MT" "Cáceres" "no" "SWOE" .
+"37996" "SWOF" "small_airport" "Ouro Fino Airport" "2.93806004524231"^^<xsd:double> "-60.7200012207031"^^<xsd:double> "282"^^<xsd:double> "SA" "BR" "BR-RR" "Boa Vista" "no" "SWOF" .
+"38024" "SWPL" "small_airport" "Posto Leonardo Vilas Boas Airport" "-12.1983327865601"^^<xsd:double> "-53.3816680908203"^^<xsd:double> "1083"^^<xsd:double> "SA" "BR" "BR-MT" "Chapada Dos Guimarães" "no" "SWPL" .
+"38025" "SWPN" "small_airport" "Paranã Airport" "-12.619722366333"^^<xsd:double> "-47.872501373291"^^<xsd:double> "886"^^<xsd:double> "SA" "BR" "BR-TO" "Paranã" "no" "SWPN" .
+"38046" "SWRA" "small_airport" "Arraias Airport" "-13.0238885879517"^^<xsd:double> "-46.885555267334"^^<xsd:double> "1923"^^<xsd:double> "SA" "BR" "BR-TO" "Arraias" "no" "SWRA" "AAI" .
+"38047" "SWRB" "small_airport" "Fazenda Rio dos Bugres Airport" "-14.8169441223145"^^<xsd:double> "-56.9505577087402"^^<xsd:double> "1148"^^<xsd:double> "SA" "BR" "BR-MT" "Barra Do Bugres" "no" "SWRB" .
+"38059" "SWRV" "small_airport" "Fazenda Vale do Rio Verde Airport" "-12.1669435501099"^^<xsd:double> "-56.5338897705078"^^<xsd:double> "1378"^^<xsd:double> "SA" "BR" "BR-MT" "Diamantino" "no" "SWRV" .
+"38083" "SWTD" "small_airport" "Fazenda Sete de Setembro Airport" "-13.8811111450195"^^<xsd:double> "-52.4000015258789"^^<xsd:double> "1066"^^<xsd:double> "SA" "BR" "BR-MT" "Água Boa" "no" "SWTD" .
+"38094" "SWTW" "small_airport" "Fazenda São Lucas Airport" "-15.7063894271851"^^<xsd:double> "-59.2416687011719"^^<xsd:double> "833"^^<xsd:double> "SA" "BR" "BR-MT" "Pontes E Lacerda" "no" "SWTW" .
+"42245" "SWVP" "small_airport" "Fazenda Santa Isabel Airport" "1.15666699409"^^<xsd:double> "-50.3302764893"^^<xsd:double> "33"^^<xsd:double> "SA" "BR" "BR-AP" "Cutias" "no" "SWVP" .
+"38127" "SWVS" "small_airport" "Fazenda Sto Antônio do Guaporé - Baia do Padre Airport" "-15.859167099"^^<xsd:double> "-60.0447235107"^^<xsd:double> "675"^^<xsd:double> "SA" "BR" "BR-MT" "Vila Bela Da Santíssima Trindade" "no" "SWVS" .
+"38128" "SWVV" "small_airport" "Fazenda Esperança Airport" "-15.7519435883"^^<xsd:double> "-60.1047210693"^^<xsd:double> "692"^^<xsd:double> "SA" "BR" "BR-MT" "Vila Bela Da Santíssima Trindade" "no" "SWVV" .
+"38131" "SWWD" "small_airport" "C.F. de Souza Bais Airport" "-1.691388889"^^<xsd:double> "-63.785"^^<xsd:double> "207"^^<xsd:double> "SA" "BR" "BR-AM" "Barcelos" "no" "SWWD" .
+"38139" "SWWR" "heliport" "Autódromo Internacional de Brasília Heliport" "-15.7758331298828"^^<xsd:double> "-47.9011116027832"^^<xsd:double> "3701"^^<xsd:double> "SA" "BR" "BR-DF" "Brasília" "no" "SWWR" .
+"31882" "SWXM" "small_airport" "Regional Orlando Villas Boas Airport" "-10.1702775955"^^<xsd:double> "-54.9527778625"^^<xsd:double> "886"^^<xsd:double> "SA" "BR" "BR-MT" "Matupá" "no" "SWXM" "MBK" .
+"38166" "SWYI" "small_airport" "Barragem Manoel Alves Airport" "-11.5516672134399"^^<xsd:double> "-46.9838905334473"^^<xsd:double> "2067"^^<xsd:double> "SA" "BR" "BR-TO" "Dianópolis" "no" "SWYI" .
+"38168" "SWYL" "heliport" "Autódromo José Carlos Pace Heliport" "-23.7027778625488"^^<xsd:double> "-46.6994438171387"^^<xsd:double> "2595"^^<xsd:double> "SA" "BR" "BR-SP" "São Paulo" "no" "SWYL" .
+"38178" "SWZB" "small_airport" "Fazenda Arara Azul Airport" "-17.0019435882568"^^<xsd:double> "-56.460277557373"^^<xsd:double> "459"^^<xsd:double> "SA" "BR" "BR-MT" "Barão De Melgaço" "no" "SWZB" .
+"38180" "SWZD" "small_airport" "Fazenda Denusa Destilaria Nova União Airport" "-17.2558326721191"^^<xsd:double> "-50.1422233581543"^^<xsd:double> "1699"^^<xsd:double> "SA" "BR" "BR-GO" "Jandaia" "no" "SWZD" .
+"38197" "SWZY" "small_airport" "Fazenda Sete Estrelas Airport" "-11.5772218704224"^^<xsd:double> "-58.2341651916504"^^<xsd:double> "984"^^<xsd:double> "SA" "BR" "BR-MT" "Brasnorte" "no" "SWZY" .
+"31717" "SYKM" "small_airport" "Kamarang Airport" "5.86534023284912"^^<xsd:double> "-60.614200592041"^^<xsd:double> "1601"^^<xsd:double> "SA" "GY" "GY-CU" "Kamarang" "no" "SYKM" "KAR" .
+"31853" "TFFS" "small_airport" "Terre-de-Haut Airport" "15.8643999099731"^^<xsd:double> "-61.5806007385254"^^<xsd:double> "46"^^<xsd:double> "NA" "GP" "GP-U-A" "Les Saintes" "no" "TFFS" "LSS" .
+"30852" "TGPZ" "small_airport" "Lauriston Airport" "12.4760999679565"^^<xsd:double> "-61.4728012084961"^^<xsd:double> "5"^^<xsd:double> "NA" "GD" "GD-PA" "Carriacou Island" "no" "TGPZ" "CRU" .
+"44493" "TR-0005" "small_airport" "Tuzla Air Base" "40.8226432800293"^^<xsd:double> "29.3351268768311"^^<xsd:double> "79"^^<xsd:double> "AS" "TR" "TR-34" "Tuzla" "no" .
+"35154" "TUZ" "closed" "Tucuma Airport" "-3.96700000762939"^^<xsd:double> "-66.4329986572266"^^<xsd:double> "59"^^<xsd:double> "SA" "BR" "BR-AM" "Tucuma" "no" "TUZ" "BR-" .
+"31019" "UKDB" "small_airport" "Berdyansk Airport" "46.814998626709"^^<xsd:double> "36.7580986022949"^^<xsd:double> "171"^^<xsd:double> "EU" "UA" "UA-23" "Berdyansk" "no" "UKDB" "ERD" .
+"32531" "UKFV" "small_airport" "Yevpatoriya Airport" "45.2256011962891"^^<xsd:double> "33.3767013549805"^^<xsd:double> "33"^^<xsd:double> "EU" "UA" "UA-43" "Yevpatoriya" "no" "UKFV" .
+"32535" "UKRR" "small_airport" "Shestovitsa Airport" "51.4021987915039"^^<xsd:double> "31.1583003997803"^^<xsd:double> "446"^^<xsd:double> "EU" "UA" "UA-74" "Chernigow" "no" "UKRR" .
+"43105" "US-0050" "heliport" "Juniper Hills Airport" "42.1242981"^^<xsd:double> "-121.4580002"^^<xsd:double> "4120"^^<xsd:double> "NA" "US" "US-OR" "Bonanza" "no" .
+"43109" "US-0052" "small_airport" "Joyner Airport" "45.3166007996"^^<xsd:double> "-93.4718933105"^^<xsd:double> "940"^^<xsd:double> "NA" "US" "US-MN" "Monticello" "no" .
+"45983" "US-0070" "heliport" "Summerville Airport" "31.16209984"^^<xsd:double> "-92.42209625"^^<xsd:double> "77"^^<xsd:double> "NA" "US" "US-CA" "Lecompte" "no" .
+"45986" "US-0073" "heliport" "Dtc North Heliport" "39.6349983215"^^<xsd:double> "-104.898002625"^^<xsd:double> "5585"^^<xsd:double> "NA" "US" "US-CO" "Denver" "no" .
+"45987" "US-0074" "small_airport" "Henderson Airport" "39.91669846"^^<xsd:double> "-104.8669968"^^<xsd:double> "5015"^^<xsd:double> "NA" "US" "US-CO" "Henderson" "no" .
+"45988" "US-0075" "small_airport" "Silver Heels Airport" "39.29169846"^^<xsd:double> "-105.875"^^<xsd:double> "9600"^^<xsd:double> "NA" "US" "US-CO" "Como" "no" .
+"45991" "US-0078" "small_airport" "Reid Ranches Airport" "40.11660004"^^<xsd:double> "-104.3170013"^^<xsd:double> "4820"^^<xsd:double> "NA" "US" "US-CO" "Roggen" "no" .
+"45997" "US-0084" "small_airport" "Lost Creek Farms Airport" "31.1051998138"^^<xsd:double> "-83.9988021851"^^<xsd:double> "310"^^<xsd:double> "NA" "US" "US-GA" "Moultrie" "no" .
+"45998" "US-0085" "small_airport" "Middle Georgia Airport" "32.5021019"^^<xsd:double> "-83.74189758"^^<xsd:double> "400"^^<xsd:double> "NA" "US" "US-GA" "Perry" "no" .
+"45999" "US-0086" "medium_airport" "Jim's Private Airport" "33.59790039"^^<xsd:double> "-84.14440155"^^<xsd:double> "890"^^<xsd:double> "NA" "US" "US-GA" "Conyers" "no" .
+"21438" "US-0087" "small_airport" "Selah Creek Landing Zone Airport" "46.7131004333"^^<xsd:double> "-120.325996399"^^<xsd:double> "2180"^^<xsd:double> "NA" "US" "US-WA" "Selah Creek" "no" .
+"46004" "US-0091" "small_airport" "Sarver Field" "37.94120026"^^<xsd:double> "-87.15470123"^^<xsd:double> "391"^^<xsd:double> "NA" "US" "US-IN" "Richland City" "no" .
+"46011" "US-0098" "heliport" "Operators Inc. Training Facility Heliport" "30.22660065"^^<xsd:double> "-92.07679749"^^<xsd:double> "30"^^<xsd:double> "NA" "US" "US-LA" "Lafayette" "no" .
+"46017" "US-0104" "small_airport" "Laurie's Landing Airport" "37.518699646"^^<xsd:double> "-93.0930023193"^^<xsd:double> "1210"^^<xsd:double> "NA" "US" "US-MO" "Buffalo" "no" .
+"46019" "US-0106" "small_airport" "Berryhill Farms Airport" "32.0685005188"^^<xsd:double> "-91.3483963"^^<xsd:double> "315"^^<xsd:double> "NA" "US" "US-MS" "Terry" "no" .
+"46033" "US-0120" "small_airport" "Big Bend Airport" "41.2806015"^^<xsd:double> "-80.28089905"^^<xsd:double> "1315"^^<xsd:double> "NA" "US" "US-PA" "Mercer" "no" .
+"46054" "US-0141" "small_airport" "Little Elm Field" "31.12409973"^^<xsd:double> "-97.31500244"^^<xsd:double> "652"^^<xsd:double> "NA" "US" "US-TX" "Temple" "no" .
+"46061" "US-0148" "small_airport" "Carroll Lake-View Airport" "32.46260071"^^<xsd:double> "-97.11419678"^^<xsd:double> "635"^^<xsd:double> "NA" "US" "US-TX" "Venus" "no" .
+"46066" "US-0153" "heliport" "Medical Center Heliport" "29.70750046"^^<xsd:double> "-95.3927002"^^<xsd:double> "440"^^<xsd:double> "NA" "US" "US-TX" "Houston" "no" .
+"24018" "US-PA47" "small_airport" "Jim Shearer Airport" "41.8527984619141"^^<xsd:double> "-80.4073028564453"^^<xsd:double> "865"^^<xsd:double> "NA" "US" "US-PA" "Albion" "no" .
+"32552" "USDS" "small_airport" "Tarko-Sale Airport" "64.9308013916016"^^<xsd:double> "77.8180999755859"^^<xsd:double> "82"^^<xsd:double> "AS" "RU" "RU-YAN" "Tarko-Sale" "no" "USDS" .
+"41752" "UZ-0065" "small_airport" "Beruni Airport" "41.6853218078613"^^<xsd:double> "60.7157936096191"^^<xsd:double> "318"^^<xsd:double> "AS" "UZ" "UZ-QR" "Beruni" "no" .
+"41775" "UZ-0088" "small_airport" "Kairma Airport" "39.742000579834"^^<xsd:double> "66.5759963989258"^^<xsd:double> "2004"^^<xsd:double> "AS" "UZ" "UZ-SA" "Mevali" "no" .
+"41778" "UZ-0091" "small_airport" "Karakoy Airport" "40.9071998596191"^^<xsd:double> "68.2109985351562"^^<xsd:double> "859"^^<xsd:double> "AS" "UZ" "UZ-JI" "Karakoy" "no" .
+"41780" "UZ-0093" "small_airport" "Karakul Airport" "39.5130996704102"^^<xsd:double> "63.8591995239258"^^<xsd:double> "658"^^<xsd:double> "AS" "UZ" "UZ-BU" "Karakul" "no" .
+"41782" "UZ-0095" "small_airport" "Karyz Airport" "39.0186004638672"^^<xsd:double> "66.5188980102539"^^<xsd:double> "1674"^^<xsd:double> "AS" "UZ" "UZ-QA" "Ayman" "no" .
+"41787" "UZ-0100" "small_airport" "Khatyrchi Northwest Airport" "40.0530014038086"^^<xsd:double> "65.9324035644531"^^<xsd:double> "1372"^^<xsd:double> "AS" "UZ" "UZ-SA" "Khatyrchi" "no" .
+"41788" "UZ-0101" "small_airport" "Khavast Airport" "40.2011985778809"^^<xsd:double> "68.8543014526367"^^<xsd:double> "1230"^^<xsd:double> "AS" "UZ" "UZ-SI" "Kahvast" "no" .
+"41806" "UZ-0118" "small_airport" "Naukent Airport" "40.2369003295898"^^<xsd:double> "71.7296981811523"^^<xsd:double> "2617"^^<xsd:double> "AS" "UZ" "UZ-FA" "Naukent" "no" .
+"41814" "UZ-0125" "small_airport" "Shamaldy Say Southeast Airport" "41.1446990966797"^^<xsd:double> "72.186897277832"^^<xsd:double> "1720"^^<xsd:double> "AS" "UZ" "UZ-AN" "Shamaldy Say" "no" .
+"41822" "UZ-0132" "small_airport" "Tmeni Telmana Airport" "40.7318000793457"^^<xsd:double> "68.2220001220703"^^<xsd:double> "865"^^<xsd:double> "AS" "UZ" "UZ-JI" "Gagarin" "no" .
+"41825" "UZ-0135" "small_airport" "Yakkatu Airport" "40.4029998779297"^^<xsd:double> "70.5324020385742"^^<xsd:double> "1330"^^<xsd:double> "AS" "UZ" "UZ-FA" "Yakkatu" "no" .
+"41830" "UZ-0140" "small_airport" "Yangiabad Northwest Airport" "40.2625007629395"^^<xsd:double> "68.3095016479492"^^<xsd:double> "1008"^^<xsd:double> "AS" "UZ" "UZ-SI" "Yangiabad" "no" .
+"41834" "UZ-0144" "small_airport" "Yerzhar Southwest Airport" "40.6236991882324"^^<xsd:double> "68.0905990600586"^^<xsd:double> "867"^^<xsd:double> "AS" "UZ" "UZ-JI" "Yerzhar" "no" .
+"40354" "VE-0005" "heliport" "Aeroatun  Heliport" "10.4716672897339"^^<xsd:double> "-64.1849975585938"^^<xsd:double> "11"^^<xsd:double> "SA" "VE" "VE-R" "Cumaná" "no" .
+"40388" "VE-0039" "heliport" "Caripe  Heliport" "10.1555557250977"^^<xsd:double> "-63.5"^^<xsd:double> "4255"^^<xsd:double> "SA" "VE" "VE-N" "Caripe" "no" .
+"40390" "VE-0041" "small_airport" "Carona Airport" "4.59999990463257"^^<xsd:double> "-63.9333343505859"^^<xsd:double> "1169"^^<xsd:double> "SA" "VE" "VE-F" "Simaraña" "no" .
+"40468" "VE-0119" "small_airport" "Los Caballos Airport" "9.31166744232178"^^<xsd:double> "-68.163330078125"^^<xsd:double> "290"^^<xsd:double> "SA" "VE" "VE-H" "Los Caballos" "no" .
+"40511" "VE-0162" "heliport" "Prosomaca  Heliport" "9.84000015258789"^^<xsd:double> "-66.3866653442383"^^<xsd:double> "984"^^<xsd:double> "SA" "VE" "VE-J" "Altagracia de Orituco" "no" .
+"32744" "VGSH" "small_airport" "Shamshernagar Airport" "24.4169998168945"^^<xsd:double> "91.8830032348633"^^<xsd:double> "56"^^<xsd:double> "AS" "BD" "BD-6" "Shamshernagar" "no" "VGSH" "ZHM" .
+"32586" "VNDR" "small_airport" "Dhorpatan Airport" "28.5170001983643"^^<xsd:double> "83.0329971313477"^^<xsd:double> "8950"^^<xsd:double> "AS" "NP" "NP-DH" "Dhorpatan" "no" "VNDR" .
+"31703" "VNJI" "small_airport" "Jiri Airport" "27.617000579834"^^<xsd:double> "86.2170028686523"^^<xsd:double> "6000"^^<xsd:double> "AS" "NP" "NP-JA" "Jiri" "no" "VNJI" "JIR" .
+"31712" "VNJL" "small_airport" "Jumla Airport" "29.2742004394531"^^<xsd:double> "82.1932983398438"^^<xsd:double> "7700"^^<xsd:double> "AS" "NP" "NP-KA" "Jumla" "yes" "VNJL" "JUM" .
+"32598" "VTCS" "small_airport" "Mae Sariang Airport" "18.1830005645752"^^<xsd:double> "97.9329986572266"^^<xsd:double> "1030"^^<xsd:double> "AS" "TH" "TH-58" "Mae Sariang" "no" "VTCS" .
+"26706" "VVPR" "small_airport" "Phan Rang Airport" "11.6335000992"^^<xsd:double> "108.952003479"^^<xsd:double> "101"^^<xsd:double> "AS" "VN" "VN-07" "Phan Rang" "no" "VVPR" "PHA" .
+"26710" "VYAN" "small_airport" "Ann Airport" "19.7691993713379"^^<xsd:double> "94.0261001586914"^^<xsd:double> "74"^^<xsd:double> "AS" "MM" "MM-16" "Aeng" "no" "VYAN" .
+"32605" "VYBP" "small_airport" "Bokpyinn Airport" "11.2670001983643"^^<xsd:double> "98.7669982910156"^^<xsd:double> "100"^^<xsd:double> "AS" "MM" "MM-05" "Bokpyinn" "no" "VYBP" .
+"31516" "VYGG" "small_airport" "Gangaw Airport" "22.1746997833252"^^<xsd:double> "94.1343994140625"^^<xsd:double> "200"^^<xsd:double> "AS" "MM" "MM-03" "Gangaw" "no" "VYGG" "GAW" .
+"32608" "VYMI" "small_airport" "Mongyai Airport" "22.4829998016357"^^<xsd:double> "98.0329971313477"^^<xsd:double> "2900"^^<xsd:double> "AS" "MM" "MM-17" "Mongyai" "no" "VYMI" .
+"41410" "WAAI" "small_airport" "Malili Airport" "-2.63416695594788"^^<xsd:double> "121.096664428711"^^<xsd:double> "19"^^<xsd:double> "AS" "ID" "ID-SN" "Malili-Celebes Island" "no" "WAAI" .
+"41411" "WAAJ" "small_airport" "Tampa Padang Airport" "-2.67877006530762"^^<xsd:double> "118.894996643066"^^<xsd:double> "49"^^<xsd:double> "AS" "ID" "ID-SN" "Mamuju-Celebes Island" "no" "WAAJ" "MJU" .
+"41412" "WAAL" "small_airport" "Ponggaluku Airport" "-4.31666707992554"^^<xsd:double> "122.466667175293"^^<xsd:double> "43"^^<xsd:double> "AS" "ID" "ID-SG" "Wawooru-Celebes Island" "no" "WAAL" .
+"41415" "WABD" "small_airport" "Moanamani Airport" "-3.98340201377869"^^<xsd:double> "136.083297729492"^^<xsd:double> "5204"^^<xsd:double> "AS" "ID" "ID-PA" "Moanamani-Papua Island" "no" "WABD" "ONI" .
+"41433" "WAKE" "small_airport" "Bade Airport" "-7.71463012695312"^^<xsd:double> "139.574996948242"^^<xsd:double> "59"^^<xsd:double> "AS" "ID" "ID-PA" "Bade-Papua Island" "no" "WAKE" "BXD" .
+"41436" "WAKP" "small_airport" "Kepi Airport" "-6.59436988830566"^^<xsd:double> "139.356994628906"^^<xsd:double> "67"^^<xsd:double> "AS" "ID" "ID-PA" "Kepi-Papua Island" "no" "WAKP" "KEI" .
+"41440" "WAMI" "small_airport" "Toli Toli Airport" "-1.02977001667023"^^<xsd:double> "120.817001342773"^^<xsd:double> "40"^^<xsd:double> "AS" "ID" "ID-ST" "Toli Toli-Celebes Island" "no" "WAMI" "TLI" .
+"30623" "WAPA" "small_airport" "Amahai Airport" "-3.34800004959106"^^<xsd:double> "128.925994873047"^^<xsd:double> "29"^^<xsd:double> "AS" "ID" "ID-MA" "Amahai-Seram Island" "no" "WAPA" "AHI" .
+"41449" "WASC" "small_airport" "Abresso Airport" "-1.50845003128052"^^<xsd:double> "134.186996459961"^^<xsd:double> "52"^^<xsd:double> "AS" "ID" "ID-IJ" "Ransiki-Papua Island" "no" "WASC" "RSK" .
+"41450" "WASE" "small_airport" "Kebar Airport" "-0.637100994586945"^^<xsd:double> "133.128005981445"^^<xsd:double> "2050"^^<xsd:double> "AS" "ID" "ID-IJ" "Kebar-Papua Island" "no" "WASE" "KEQ" .
+"32434" "WBKE" "small_airport" "Telupid Airport" "5.62861013412476"^^<xsd:double> "117.125999450684"^^<xsd:double> "343"^^<xsd:double> "AS" "MY" "MY-12" "Telupid" "no" "WBKE" "TEL" .
+"31746" "WBKG" "small_airport" "Keningau Airport" "5.35749006271362"^^<xsd:double> "116.162002563477"^^<xsd:double> "1036"^^<xsd:double> "AS" "MY" "MY-12" "Keningau" "no" "WBKG" "KGU" .
+"32219" "WBKR" "small_airport" "Ranau Airport" "5.94999980926514"^^<xsd:double> "116.666999816895"^^<xsd:double> "1800"^^<xsd:double> "AS" "MY" "MY-12" "Ranau" "no" "WBKR" "RNU" .
+"26822" "WIBD" "medium_airport" "Pinang Kampai Airport" "1.60918998718262"^^<xsd:double> "101.43399810791"^^<xsd:double> "55"^^<xsd:double> "AS" "ID" "ID-RI" "Dumai-Sumatra Island" "yes" "WIBD" "DUM" .
+"26841" "WIMS" "small_airport" "Dr Ferdinand Lumban Tobing Airport" "1.55594003200531"^^<xsd:double> "98.8889007568359"^^<xsd:double> "43"^^<xsd:double> "AS" "ID" "ID-SU" "Sibolga-Sumatra Island" "no" "WIMS" .
+"26843" "WIOG" "medium_airport" "Nanga Pinoh I Airport" "-0.348868995904922"^^<xsd:double> "111.748001098633"^^<xsd:double> "123"^^<xsd:double> "AS" "ID" "ID-KB" "Nanga Pinoh-Borneo Island" "no" "WIOG" "NPO" .
+"26856" "WIPQ" "medium_airport" "Pendopo Airport" "-3.2860701084137"^^<xsd:double> "103.879997253418"^^<xsd:double> "184"^^<xsd:double> "AS" "ID" "ID-SS" "Talang Gudang-Sumatra Island" "yes" "WIPQ" "PDO" .
+"41468" "WIPU" "small_airport" "Muko Muko Airport" "-2.54186010360718"^^<xsd:double> "101.087997436523"^^<xsd:double> "24"^^<xsd:double> "AS" "ID" "ID-JA" "Muko Muko-Sumatra Island" "no" "WIPU" "MPC" .
+"31889" "WITC" "small_airport" "Seunagan Airport" "4.25"^^<xsd:double> "96.2170028686523"^^<xsd:double> "10"^^<xsd:double> "AS" "ID" "ID-AC" "Peureumeue-Sumatra Island" "no" "WITC" "MEQ" .
+"41324" "WMAG" "small_airport" "Dungun Airport" "4.78629016876221"^^<xsd:double> "103.38200378418"^^<xsd:double> "22"^^<xsd:double> "AS" "MY" "MY-11" "Dungun" "no" "WMAG" .
+"41325" "WMAL" "small_airport" "Kuala Kerai Airport" "5.53868007659912"^^<xsd:double> "102.194999694824"^^<xsd:double> "137"^^<xsd:double> "AS" "MY" "MY-03" "Kuala Kerai" "no" "WMAL" .
+"41326" "WMAN" "small_airport" "Sungai Tiang Airport" "4.33027791976929"^^<xsd:double> "102.394996643066"^^<xsd:double> "10"^^<xsd:double> "AS" "MY" "MY-06" "Taman Negara" "no" "WMAN" "SXT" .
+"41328" "WMBB" "small_airport" "Sungei Patani Airport" "5.61761999130249"^^<xsd:double> "100.542999267578"^^<xsd:double> "90"^^<xsd:double> "AS" "MY" "MY-02" "Sungei Patani" "no" "WMBB" .
+"41481" "WRKR" "small_airport" "Rote Airport" "-10.716667175293"^^<xsd:double> "123.066665649414"^^<xsd:double> "300"^^<xsd:double> "AS" "ID" "ID-NT" "Namodale-Rote Island" "no" "WRKR" .
+"27451" "YCEM" "small_airport" "Coldstream Airport" "-37.727668762207"^^<xsd:double> "145.40837097168"^^<xsd:double> "76"^^<xsd:double> "OC" "AU" "AU-VIC" "Coldstream" "no" "YCEM" .
+"28472" "YILW" "small_airport" "Inglewood Airport" "-28.4167003631592"^^<xsd:double> "151.082992553711"^^<xsd:double> "840"^^<xsd:double> "OC" "AU" "AU-QLD" "Inglewood" "no" "YILW" .
+"27818" "YMVM" "small_airport" "Mangrove Mountain Airport" "-33.2851219177246"^^<xsd:double> "151.212738037109"^^<xsd:double> "920"^^<xsd:double> "OC" "AU" "AU-NSW" "Mangrove Mountain" "no" "YMVM" .
+"28074" "YWST" "heliport" "Westmead Hospital Helipad" "-33.8052101135254"^^<xsd:double> "150.989273071289"^^<xsd:double> "30"^^<xsd:double> "OC" "AU" "AU-NSW" "Westmead" "no" "YWST" .
+"41219" "ZA-0044" "small_airport" "Bateleur Airport" "-29.1391658782959"^^<xsd:double> "23.6483325958252"^^<xsd:double> "3368"^^<xsd:double> "AF" "ZA" "ZA-NC" "Maselsfontein" "no" .
+"41232" "ZA-0054" "small_airport" "Askham Airport" "-26.9869441986084"^^<xsd:double> "20.7772216796875"^^<xsd:double> "2801"^^<xsd:double> "AF" "ZA" "ZA-NC" "Askham" "no" .
+"41250" "ZA-0064" "small_airport" "Riverview Airport" "-28.4333324432373"^^<xsd:double> "32.1500015258789"^^<xsd:double> "210"^^<xsd:double> "AF" "ZA" "ZA-NL" "Riverview" "no" .
+"41267" "ZA-0071" "small_airport" "Blyde Canyon Airport" "-24.5744438171387"^^<xsd:double> "30.7772216796875"^^<xsd:double> "4300"^^<xsd:double> "AF" "ZA" "ZA-NP" "Blyde Canyon" "no" .
+"41278" "ZA-0078" "small_airport" "Baltimore Airport" "-23.2568340301514"^^<xsd:double> "28.4088325500488"^^<xsd:double> "3203"^^<xsd:double> "AF" "ZA" "ZA-NP" "Baltimore" "no" .
+"41279" "ZA-0079" "small_airport" "Bergtop Airport" "-22.9179439544678"^^<xsd:double> "29.4578342437744"^^<xsd:double> "2620"^^<xsd:double> "AF" "ZA" "ZA-NP" "Waterpoort" "no" .
+"41283" "ZA-0083" "small_airport" "Avarel Airport" "-22.5795993804932"^^<xsd:double> "29.968900680542"^^<xsd:double> "2100"^^<xsd:double> "AF" "ZA" "ZA-NP" "Mopane" "no" .
+"41290" "ZA-0085" "small_airport" "Mafeking North Airport" "-25.7920570373535"^^<xsd:double> "25.6110305786133"^^<xsd:double> "4181"^^<xsd:double> "AF" "ZA" "ZA-NW" "Mafeking" "no" .
+"32748" "ZMBD" "small_airport" "Binder Airport" "48.6067008972168"^^<xsd:double> "110.608001708984"^^<xsd:double> "3422"^^<xsd:double> "AS" "MN" "MN-039" "Binder" "no" "ZMBD" .

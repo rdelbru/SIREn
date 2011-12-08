@@ -109,8 +109,8 @@
     <!--
       The SIREn field type:
       The top-level analyzers must be defined in the top-level analyzer 
-      configuration file (ntriple-analyzers.xml) and the datatype analyzers in 
-      the datatype analyzer configuration file (ntriples-datatypes.xml).  
+      configuration file (tuple-analyzers.xml) and the datatype analyzers in 
+      the datatype analyzer configuration file (tuple-datatypes.xml).  
       
       Field norms are not useful for SIREn fields. Set omitNorms to true reduces
       memory consumption, and improve ranking.
@@ -120,9 +120,26 @@
     <fieldType name="ntriple" class="org.sindice.siren.solr.schema.SirenField"
 		           omitNorms="true" 
                omitTermFreqAndPositions="false"
-		           analyzerConfig="ntriple-analyzers.xml"
-               datatypeConfig="ntriple-datatypes.xml"/>
-    
+		           analyzerConfig="tuple-analyzers.xml"
+               datatypeConfig="tuple-datatypes.xml"/>
+
+    <!--
+      The SIREn field type:
+      The top-level analyzers must be defined in the top-level analyzer 
+      configuration file (tuple-analyzers.xml) and the datatype analyzers in 
+      the datatype analyzer configuration file (tuple-datatypes.xml).  
+      
+      Field norms are not useful for SIREn fields. Set omitNorms to true reduces
+      memory consumption, and improve ranking.
+      
+      omitTermFreqAndPositions *must* be set to false.
+    -->
+    <fieldType name="tabular" class="org.sindice.siren.solr.schema.SirenField"
+               omitNorms="true" 
+               omitTermFreqAndPositions="false"
+               analyzerConfig="tuple-analyzers.xml"
+               datatypeConfig="tuple-datatypes.xml"/>
+               
  </types>
 
 
@@ -138,9 +155,12 @@
 		-->
    	<field name="url" type="text" indexed="true" stored="true" required="true"/>
 		
-		<!-- n-triple indexing scheme -->
-   	<field name="ntriple" type="ntriple" indexed="true" stored="false" multiValued="false"/>
-
+    <!-- n-triple indexing scheme -->
+    <field name="ntriple" type="ntriple" indexed="true" stored="false" multiValued="false"/>
+    
+    <!-- tabular indexing scheme -->
+    <field name="tabular" type="tabular" indexed="true" stored="false" multiValued="false"/>
+    
  </fields>
 
  <!-- Field to use to determine and enforce document uniqueness. 

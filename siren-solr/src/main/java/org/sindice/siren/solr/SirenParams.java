@@ -35,6 +35,13 @@ public interface SirenParams {
   /** query and init param for keyword query fields */
   public static String KQF = "qf";
 
+  /** keyword query parser param for disabling field queries */
+  public static String KQ_DISABLE_FIELD = "disableField";
+  
+  /*
+   * NTriple 
+   */
+  
   /** ntriple query */
   public static String NQ = "nq";
 
@@ -44,7 +51,17 @@ public interface SirenParams {
   /** query and init param for the ntriple query fields operator */
   public static String NQFO = "nqfo";
 
-  /** keyword query parser param for disabling field queries */
-  public static String KQ_DISABLE_FIELD = "disableField";
+  /*
+   * Tabular
+   */
+  
+  /** tabular query */
+  public static String TQ = "tq";
 
+  /** query and init param for tabular query fields */
+  public static String TQF = "tqf";
+
+  /** query and init param for the tabular query fields operator */
+  public static String TQFO = "tqfo";
+  
 }

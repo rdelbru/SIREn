@@ -59,6 +59,12 @@ public abstract class BaseSolrServerTestCase {
     wrapper.close();
   }
 
+  protected void addTabularFile(final String url, final String path)
+  throws IOException, SolrServerException {
+    this.addTabularFileWoCommit(url, path);
+    wrapper.commit();
+  }
+  
   protected void addNTripleFile(final String url, final String path)
   throws IOException, SolrServerException {
     this.addNTripleFileWoCommit(url, path);
@@ -76,7 +82,23 @@ public abstract class BaseSolrServerTestCase {
     document.addField("ntriple", ntuples);
     wrapper.add(document);
   }
+  
+  protected void addTabularFileWoCommit(final String url, final String path)
+  throws IOException, SolrServerException {
+    final FileReader reader = new FileReader(path);
+    final List<String> lines = org.apache.commons.io.IOUtils.readLines(reader);
+    final SolrInputDocument document = new SolrInputDocument();
+    document.addField("url", url);
+    document.addField("tabular", toString(lines));
+    wrapper.add(document);
+  }
 
+  protected void addTabularString(final String url, final String ntuples)
+  throws IOException, SolrServerException {
+    this.addTabularStringWoCommit(url, ntuples);
+    wrapper.commit();
+  }
+  
   protected void addNTripleString(final String url, final String ntuples)
   throws IOException, SolrServerException {
     this.addNTripleStringWoCommit(url, ntuples);
@@ -89,6 +111,23 @@ public abstract class BaseSolrServerTestCase {
     document.addField("url", url);
     document.addField("ntriple", ntuples);
     wrapper.add(document);
+  }
+
+  protected void addTabularStringWoCommit(final String url, final String ntuples)
+  throws IOException, SolrServerException {
+    final SolrInputDocument document = new SolrInputDocument();
+    document.addField("url", url);
+    document.addField("tabular", ntuples);
+    wrapper.add(document);
+  }
+  
+  private String toString(List<String> tabularData) {
+    final StringBuilder sb = new StringBuilder();
+    
+    for (String data : tabularData) {
+      sb.append(data).append('\n');
+    }
+    return sb.toString();
   }
 
 }

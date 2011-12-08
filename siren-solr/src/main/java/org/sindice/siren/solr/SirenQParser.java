@@ -39,6 +39,7 @@ import org.apache.solr.search.QParser;
 import org.apache.solr.util.SolrPluginUtils;
 import org.sindice.siren.solr.qparser.keyword.KeywordQParser;
 import org.sindice.siren.solr.qparser.ntriple.NTripleQParser;
+import org.sindice.siren.solr.qparser.tabular.TabularQParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +50,7 @@ public class SirenQParser extends QParser {
 
   protected Map<String, Float> keywordQueryFields;
   protected Map<String, Float> ntripleQueryFields;
+  protected Map<String, Float> tabularQueryFields;
 
   private static final
   Logger logger = LoggerFactory.getLogger(SirenQParser.class);
@@ -79,6 +81,9 @@ public class SirenQParser extends QParser {
       if (params.get(SirenParams.NQ) != null) { // If nq param specified
         this.addNTripleQuery(query, solrParams);
       }
+      if (params.get(SirenParams.TQ) != null) { // If tq param specified
+        this.addTabularQuery(query, solrParams);
+      }
     }
     catch (final ParseException e) {
       // SRN-102: catch ParseException and log error
@@ -89,7 +94,7 @@ public class SirenQParser extends QParser {
   }
 
   /**
-   * Parse the field boost params (qf, nqf).
+   * Parse the field boost params (qf, nqf, tqf).
    * <br>
    * If there is no field boost specified, use the default field value.
    */
@@ -101,6 +106,10 @@ public class SirenQParser extends QParser {
     ntripleQueryFields = SolrPluginUtils.parseFieldBoosts(solrParams.getParams(SirenParams.NQF));
     if (0 == ntripleQueryFields.size()) {
       ntripleQueryFields.put(req.getSchema().getDefaultSearchFieldName(), 1.0f);
+    }
+    tabularQueryFields = SolrPluginUtils.parseFieldBoosts(solrParams.getParams(SirenParams.TQF));
+    if (0 == tabularQueryFields.size()) {
+      tabularQueryFields.put(req.getSchema().getDefaultSearchFieldName(), 1.0f);
     }
   }
 
@@ -123,4 +132,14 @@ public class SirenQParser extends QParser {
     query.add(parsedNTripleQuery, BooleanClause.Occur.MUST);
   }
 
+  protected void addTabularQuery(final BooleanQuery query, final SolrParams solrParams)
+  throws ParseException {
+    final String tqstr = solrParams.get(SirenParams.TQ);
+    // Rely on TabularQParser for creating the tabular query
+    final TabularQParser parser = new TabularQParser(tabularQueryFields,
+      tqstr, localParams, params, req);
+    final Query parsedTabularQuery = parser.parse();
+    query.add(parsedTabularQuery, BooleanClause.Occur.MUST);
+  }
+  
 }

@@ -410,6 +410,7 @@
 			 <str name="qf">
          ntriple^1.0 url^1.2
        </str>
+       
        <str name="nqf">
          ntriple^1.0
        </str>
@@ -418,6 +419,18 @@
             - scattered: each Ntriple patterns should match in at least on of the fields
        -->  
        <str name="nqfo">scattered</str>
+       
+       <!-- Here the field says tabular, but the index is built in the same way as for
+            ntriples. This is to add clarity. -->
+       <str name="tqf">
+         tabular^1.0 
+       </str>
+       <!-- the Tabular query multi-field operator:
+            - disjunction: the query should match in at least one of the fields
+            - scattered: each Tabular patterns should match in at least on of the fields
+       -->
+       <str name="tqfo">scattered</str>
+       
 			 <str name="fl">
          url
        </str>

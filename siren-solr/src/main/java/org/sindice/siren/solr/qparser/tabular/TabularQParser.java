@@ -24,7 +24,7 @@
  * @link http://renaud.delbru.fr/
  * @copyright Copyright (C) 2010 by Renaud Delbru, All rights reserved.
  */
-package org.sindice.siren.solr.qparser.ntriple;
+package org.sindice.siren.solr.qparser.tabular;
 
 import java.util.Map;
 
@@ -38,17 +38,18 @@ import org.apache.solr.common.SolrException;
 import org.apache.solr.common.params.SolrParams;
 import org.apache.solr.request.SolrQueryRequest;
 import org.sindice.siren.qparser.ntriple.NTripleQueryParser;
+import org.sindice.siren.qparser.tabular.TabularQueryParser;
 import org.sindice.siren.solr.SirenParams;
-import org.sindice.siren.solr.analysis.NTripleQueryTokenizerFactory;
+import org.sindice.siren.solr.analysis.TabularQueryTokenizerFactory;
 import org.sindice.siren.solr.qparser.tuple.TupleQParser;
 
 /**
- * The {@link NTripleQParser} is in charge of executing a NTriple query request.
+ * The {@link TabularQParser} is in charge of executing a NTriple query request.
  * <p>
  * Instantiate and execute the {@link NTripleQueryParser} based on the Solr
  * configuration and parameters.
  */
-public class NTripleQParser extends TupleQParser {
+public class TabularQParser extends TupleQParser {
 
   /**
    * @param boosts
@@ -57,7 +58,7 @@ public class NTripleQParser extends TupleQParser {
    * @param params
    * @param req
    */
-  public NTripleQParser(Map<String, Float> boosts,
+  public TabularQParser(Map<String, Float> boosts,
                         String qstr,
                         SolrParams localParams,
                         SolrParams params,
@@ -67,13 +68,13 @@ public class NTripleQParser extends TupleQParser {
 
   @Override
   protected BaseTokenizerFactory getTupleTokenizerFactory() {
-    return new NTripleQueryTokenizerFactory();
+    return new TabularQueryTokenizerFactory();
   }
 
   @Override
   protected void initTupleQueryFieldOperator(SolrParams solrParams) {
     String nqfo = null;
-    if ((nqfo = solrParams.get(SirenParams.NQFO)) != null) {
+    if ((nqfo = solrParams.get(SirenParams.TQFO)) != null) {
       if (nqfo.equals("disjunction")) {
         scattered = false;
       }
@@ -82,7 +83,7 @@ public class NTripleQParser extends TupleQParser {
       }
       else {
         throw new SolrException(SolrException.ErrorCode.BAD_REQUEST, "Invalid " +
-            "NTripleQParser operator");
+            "TabularQParser operator");
       }
     }
   }
@@ -95,7 +96,7 @@ public class NTripleQParser extends TupleQParser {
                                   Map<String, Analyzer> datatypeConfig,
                                   DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    return NTripleQueryParser.parse(qstr, matchVersion, field, tupleAnalyzer,
+    return TabularQueryParser.parse(qstr, matchVersion, field, tupleAnalyzer,
       datatypeConfig, op);
   }
 
@@ -107,7 +108,7 @@ public class NTripleQParser extends TupleQParser {
                                   Map<String, Map<String, Analyzer>> datatypeConfigs,
                                   DefaultOperatorAttribute.Operator op)
   throws ParseException {
-    return NTripleQueryParser.parse(qstr, matchVersion, boosts,
+    return TabularQueryParser.parse(qstr, matchVersion, boosts,
       tupleAnalyzer, datatypeConfigs, op, scattered);
   }
 

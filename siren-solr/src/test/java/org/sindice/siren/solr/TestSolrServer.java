@@ -59,6 +59,24 @@ public class TestSolrServer extends BaseSolrServerTestCase {
     assertEquals("http://renaud.delbru.fr/rdf/foaf", results[0]);
   }
 
+  @Test
+  public void testAddTabularDocument()
+  throws Exception {
+    addTabularFile("http://www.ourairports.com/data/airports.csv", "src/test/resources/data/airports.tab");
+    
+    String[] results = wrapper.searchTabular("[2]\"large_airport\"", "url");
+    assertEquals(1, results.length);
+    assertEquals("http://www.ourairports.com/data/airports.csv", results[0]);
+    
+    results = wrapper.searchTabular("[2]'large_airport OR heliport'", "url");
+    assertEquals(1, results.length);
+    assertEquals("http://www.ourairports.com/data/airports.csv", results[0]);
+    
+    results = wrapper.searchTabular("[2]'large_airport OR heliport' [6]'[* TO 1000]'^^<xsd:double>", "url");
+    assertEquals(1, results.length);
+    assertEquals("http://www.ourairports.com/data/airports.csv", results[0]);
+  }
+  
   /**
    * Fail because the value is not an integer, throws a {@link NumberFormatException},
    * wrapped inside a {@link SolrServerException}
@@ -69,5 +87,5 @@ public class TestSolrServer extends BaseSolrServerTestCase {
   public void testAddInvalidDatatype() throws IOException, SolrServerException {
     this.addNTripleString("id1", "<http://example.org/foo> <http://example.org/bar> \"flargh\"^^<xsd:int> .");
   }
-
+  
 }

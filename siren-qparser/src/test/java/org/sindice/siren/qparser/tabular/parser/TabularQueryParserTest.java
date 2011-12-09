@@ -131,8 +131,8 @@ public class TabularQueryParserTest {
     String query = "[2]<http://o1>";
     assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
     
-    query = "[1]'test'";
-    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+//    query = "[1]'test'";
+//    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
   }
   
   @Test(expected=ParseException.class)

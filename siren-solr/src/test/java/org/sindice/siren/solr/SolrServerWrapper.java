@@ -57,7 +57,7 @@ public class SolrServerWrapper {
 
   final String solrHome;
   final CoreContainer coreContainer;
-  final SolrServer server;
+  private final SolrServer server;
   private Map<String, FieldInfo> fieldInfos;
 
   private static final Logger logger = LoggerFactory.getLogger(SolrServerWrapper.class);
@@ -82,7 +82,7 @@ public class SolrServerWrapper {
   throws SolrServerException, IOException {
     final UpdateRequest request = new UpdateRequest();
     request.add(doc);
-    request.process(server);
+    request.process(getServer());
   }
 
   /**
@@ -90,13 +90,13 @@ public class SolrServerWrapper {
    */
   public int getNumberOfDocuments() throws SolrServerException, IOException {
     final SolrRequest request = new FastLukeRequest();
-    final LukeResponse response = (LukeResponse) request.process(server);
+    final LukeResponse response = (LukeResponse) request.process(getServer());
     return response.getNumDocs();
   }
 
   public String[] search(final SolrQuery query, final String retrievedField)
   throws SolrServerException, IOException {
-    final QueryResponse response = server.query(query);
+    final QueryResponse response = getServer().query(query);
     final SolrDocumentList docList = response.getResults();
 
     final int size = docList.size();
@@ -115,7 +115,7 @@ public class SolrServerWrapper {
     query.setQueryType("siren");
     query.set(SirenParams.NQ, q);
 
-    final QueryResponse response = server.query(query);
+    final QueryResponse response = getServer().query(query);
     final SolrDocumentList docList = response.getResults();
 
     final int size = docList.size();
@@ -134,7 +134,7 @@ public class SolrServerWrapper {
     query.setQueryType("siren");
     query.set(SirenParams.TQ, q);
 
-    final QueryResponse response = server.query(query);
+    final QueryResponse response = getServer().query(query);
     final SolrDocumentList docList = response.getResults();
 
     final int size = docList.size();
@@ -164,7 +164,7 @@ public class SolrServerWrapper {
     if (fieldInfos == null) {
       final LukeRequest request = new FastLukeRequest();
       request.setShowSchema(true);
-      final LukeResponse response = request.process(server);
+      final LukeResponse response = request.process(getServer());
       fieldInfos = response.getFieldInfo();
     }
     return fieldInfos;
@@ -174,7 +174,7 @@ public class SolrServerWrapper {
    * Commit all documents that have been submitted
    */
   public void commit() throws SolrServerException, IOException {
-    server.commit();
+    getServer().commit();
   }
 
   /**
@@ -188,19 +188,23 @@ public class SolrServerWrapper {
    * Execute optimisation of the Solr index
    */
   public void optimize(final int maxSegments) throws SolrServerException, IOException {
-    server.optimize(true, true, maxSegments);
+    getServer().optimize(true, true, maxSegments);
   }
 
   /**
    * Delete all the documents
    */
   public void clear() throws SolrServerException, IOException {
-    server.deleteByQuery("*:*");
-    server.commit();
+    getServer().deleteByQuery("*:*");
+    getServer().commit();
   }
 
   public void close() {
     coreContainer.shutdown();
+  }
+
+  public SolrServer getServer() {
+    return server;
   }
 
   /**

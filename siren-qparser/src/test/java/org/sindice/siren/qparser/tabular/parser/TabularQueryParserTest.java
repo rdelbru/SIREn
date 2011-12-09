@@ -123,6 +123,18 @@ public class TabularQueryParserTest {
     assertFalse(TabularQueryParserTestHelper.match(ntuple, query));
   }
   
+  @Test
+  public void testEmptyTabular()
+  throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
+    final String ntuple = "\"literal\" \"\\\"test\\\"\" <http://o1> \"some long literal\" .";
+    
+    String query = "[2]<http://o1>";
+    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+    
+    query = "[1]'test'";
+    assertTrue(TabularQueryParserTestHelper.match(ntuple, query));
+  }
+  
   @Test(expected=ParseException.class)
   public void testBadTabularQuery()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {

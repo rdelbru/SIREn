@@ -265,7 +265,7 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     query.setIncludeScore(true);
 
     // should match the two documents, with same score
-    QueryResponse response = wrapper.server.query(query);
+    QueryResponse response = wrapper.getServer().query(query);
     SolrDocumentList docList = response.getResults();
     assertEquals(2, docList.getNumFound());
     float score1 = (Float) docList.get(0).getFieldValue("score");
@@ -278,7 +278,7 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     query.setIncludeScore(true);
 
     // should match the two documents, with same score
-    response = wrapper.server.query(query);
+    response = wrapper.getServer().query(query);
     docList = response.getResults();
     assertEquals(2, docList.getNumFound());
     score1 = (Float) docList.get(0).getFieldValue("score");
@@ -292,7 +292,7 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     query.setQueryType("siren");
     query.setIncludeScore(true);
 
-    response = wrapper.server.query(query);
+    response = wrapper.getServer().query(query);
     docList = response.getResults();
     assertEquals(2, docList.getNumFound());
     if (docList.get(0).getFieldValue("url").equals("id1")) {
@@ -310,7 +310,7 @@ public class TestSirenQParserPlugin extends BaseSolrServerTestCase  {
     query.set(SirenParams.NQ, "* * 'café'");
     query.setIncludeScore(true);
 
-    response = wrapper.server.query(query);
+    response = wrapper.getServer().query(query);
     System.out.println(response);
     docList = response.getResults();
     assertEquals(2, docList.getNumFound());

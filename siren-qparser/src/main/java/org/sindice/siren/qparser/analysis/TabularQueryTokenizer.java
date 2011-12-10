@@ -35,6 +35,10 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 
+/**
+ * Tokenizes a tabular query. The behaviour is similar to {@link NTripleQueryTokenizer},
+ * excepts that the query syntax adds a mandatory cell position information.
+ */
 public final class TabularQueryTokenizer extends Tokenizer {
 
   private final CharTermAttribute cTermAtt;

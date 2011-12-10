@@ -48,11 +48,19 @@ import org.sindice.siren.analysis.attributes.DatatypeAttribute;
 import org.sindice.siren.qparser.analysis.TabularQueryTokenizerImpl;
 import org.sindice.siren.qparser.tabular.query.ScatteredTabularQueryBuilder;
 import org.sindice.siren.qparser.tabular.query.SimpleTabularQueryBuilder;
+import org.sindice.siren.qparser.tabular.query.model.Literal;
+import org.sindice.siren.qparser.tabular.query.model.LiteralPattern;
 import org.sindice.siren.qparser.tabular.query.model.TabularQuery;
+import org.sindice.siren.qparser.tabular.query.model.URIPattern;
 import org.sindice.siren.qparser.tuple.CellValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Creates a Siren {@link Query} from a tabular query. The number of cells
+ * is unlimited and each cells must have a cell position specified. Each cell
+ * can be either an {@link URIPattern}, a {@link LiteralPattern} or a {@link Literal}.
+ */
 public class TabularQueryParser {
 
   private static final Logger logger = LoggerFactory.getLogger(TabularQueryParser.class);

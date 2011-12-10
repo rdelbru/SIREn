@@ -61,7 +61,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The visitor for translating the AST into a Siren NTriple Query.
+ * The visitor for translating the AST into a Siren Tabular Query.
  * This visitor must traverse the AST with a bottom up approach.
  */
 public class ScatteredTabularQueryBuilder extends AbstractTabularQueryBuilder {

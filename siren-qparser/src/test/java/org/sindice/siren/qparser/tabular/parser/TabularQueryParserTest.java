@@ -58,6 +58,9 @@ public class TabularQueryParserTest {
   }
 
   @Test
+  /**
+   * Test a query with tabular syntax
+   */
   public void testTabularQuerySimpleTriple()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final String ntriple = "<http://s> <http://p> <http://o> .";
@@ -67,6 +70,9 @@ public class TabularQueryParserTest {
   }
 
   @Test
+  /**
+   * Test a query with tabular syntax, different cell offset
+   */
   public void testTabularQuerySimpleTriple2()
   throws CorruptIndexException, LockObtainFailedException, IOException, ParseException {
     final String ntriple = "<http://s> <http://p> <http://o> .";

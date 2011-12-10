@@ -33,7 +33,7 @@ import org.sindice.siren.qparser.ntriple.query.model.URIPattern;
  * Holds metadata information about the value, which can be either an {@link URIPattern},
  * a {@link LiteralPattern} or a {@link Literal}.
  * It contains its datatype and its cell constraint. For a literal for instance,
- * the datatype is the URI extracted from Literal^^&lt;URI&gt;.
+ * the datatype is the URI extracted from "Literal"^^&lt;URI&gt;.
  */
 public final class CellValue {
 

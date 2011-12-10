@@ -122,26 +122,35 @@
     <fieldType name="ntriple" class="org.sindice.siren.solr.schema.SirenField"
                omitNorms="true" 
                omitTermFreqAndPositions="false"
-               analyzerConfig="ntriple-analyzers.xml"
-               datatypeConfig="ntriple-datatypes.xml"/>
+               analyzerConfig="tuple-analyzers.xml"
+               datatypeConfig="tuple-datatypes.xml"/>
     
+    <fieldType name="tabular" class="org.sindice.siren.solr.schema.SirenField"
+               omitNorms="true" 
+               omitTermFreqAndPositions="false"
+               analyzerConfig="tuple-analyzers.xml"
+               datatypeConfig="tuple-datatypes.xml"/>
+
  </types>
 
 
  <fields>
 
-	 	<!-- The ID (URL) of the document 
-		     Use the 'string' field type (no tokenisation)
-		-->
+ 	<!-- The ID (URL) of the document 
+	     Use the 'string' field type (no tokenisation)
+	-->
    	<field name="id" type="string" indexed="true" stored="true" required="true"/>
    
-	 	<!-- The URL of the document 
-		     Use the 'text' field type in order to be tokenised
-		-->
+ 	<!-- The URL of the document 
+	     Use the 'text' field type in order to be tokenised
+	-->
    	<field name="url" type="uri" indexed="true" stored="true" required="true"/>
 		
-		<!-- n-triple indexing scheme -->
+	<!-- n-triple indexing scheme -->
    	<field name="ntriple" type="ntriple" indexed="true" stored="false" multiValued="false"/>
+
+        <!-- tabular indexing scheme -->
+        <field name="tabular" type="tabular" indexed="true" stored="false" multiValued="false"/>
 
  </fields>
 

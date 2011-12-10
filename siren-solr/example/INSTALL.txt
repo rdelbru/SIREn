@@ -1,5 +1,5 @@
 
-SIREn 0.2.2 Solr Demo - Install Instructions
+SIREn 0.2.3-SNAPSHOT Solr Demo - Install Instructions
 
 --------------------------------------------------------------------------------
 
@@ -7,6 +7,9 @@ This is testing version of Solr 3.4 with SIREn.
 
 We provide a solr configuration example which use SIREn for indexing and 
 searching RDF data. The search interface is using the n-triples query language.
+In addition to RDF data indexing and searching, we provide an example for
+indexing and querying tabular data such as csv files. The search interface is
+an extension of the n-triples query language called tabular.
 
 Basic steps:
   0) Install Tomcat 6
@@ -17,8 +20,7 @@ Basic steps:
   5) Copying SIREn libs
   6) Change file permissions
   7) Start tomcat
-  8) Load some data
-  9) Run some queries
+  8) Execute demo.sh
 
 0. Install Tomcat 6
 (NB: on Ubuntu, sudo apt-get install tomcat6)
@@ -48,8 +50,8 @@ $CATALINA_BASE/conf/Catalina/localhost/siren.xml
 
 5. COPYING SIREN LIBS
 
-Build SIREn and copy siren-core-0.2.2.jar, 
-siren-qparser-0.2.2.jar and siren-solr-0.2.2.jar in 
+Build SIREn and copy siren-core-0.2.3-SNAPSHOT.jar, 
+siren-qparser-0.2.3-SNAPSHOT.jar and siren-solr-0.2.3-SNAPSHOT.jar in 
 SOLR_HOME/lib.
 
 6. CHANGE FILE PERMISSIONS
@@ -69,40 +71,38 @@ SOLR_HOME/lib.
   
 - if problems see $CATALINA_BASE/logs/catalina.out
 
-8. LOAD DATA
+8. EXECUTE DEMO.SH
 
-We provide a script to load three artificial documents.
-To load the three documents, just run the command 
-"bash post.sh people.xml".
+There are three examples which use SIREn:
+- IndexAndQueryNTriple.java
+This example shows how to index and query three artificial documents. Two kinds
+of queries are used, keyword and n-triple query.
+- IndexAndQueryTabular.java
+This example shows how to index and query a csv formated file. Each line will
+become a document of the index. This example uses the tabular query syntax for
+searching these documents.
+- IndexAndQueryNtripleAndTabular.java
+This example shows how to load ntriple and tabular data into an indexed document.
+It shows how to mix tabular and ntriple queries.
+
+We provide a script, demo.sh, which will compile the java examples, load the
+documents and execute some queries. To run execute it, type:
+
+> bash demo.sh
+
+You will see written on the standard output the queries executed and the documents
+they matched.
 
 If you go to the statistic page [1] of the Solr admin interface, you should see
-the counter 'numDocs' equals to 3.
+the counter 'numDocs' equals to 3 (the last demo loaded 3 documents).
  
 [1] http://localhost:8080/siren/admin/stats.jsp 
 
-9. EXECUTE QUERIES
-
-Go to the query form of the Solr admin interface [2]. Replace 'standard' in the
-field "Query Type" by 'siren' to activate the SIREn query parser.
+You can also execute queries using the Solr admin interface [2]. Replace 'standard'
+in the field "Query Type" by 'siren' to activate the SIREn query parser.
 The Solr admin interface allows only keyword queries. In order to run a ntriple
-query, you need to replace the parameter "&q" by "&nq" in the address bar of
-your browser.
-
-You can now enter one of the following query in the "Solr/Lucene Statement" field:
-- the following is a keyword query (using the parameter "&q"):
-Query 1: galway
-http://localhost:8080/siren/select?indent=on&q=galway&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
-- the following are ntriple queries (using the parameter "&nq"):
-Query 2: * <name> 'john AND gartner'
-http://localhost:8080/siren/select?indent=on&nq=*+%3Cname%3E+%27john+AND+gartner%27&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
-Query 3: * <workplace> <galway> AND * <type> <student> AND * <age> "26"
-http://localhost:8080/siren/select?indent=on&nq=*+%3Cworkplace%3E+%3Cgalway%3E+AND+*+%3Ctype%3E+%3Cstudent%3E+AND+*+%3Cage%3E+%2226%22&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
-- the following is a mix of keyword and ntriple query:
-Query 4: galway AND * <type> <student>
-http://localhost:8080/siren/select?indent=on&version=2.2&q=galway&nq=*+%3Ctype%3E+%3Cstudent%3E&fq=&start=0&rows=10&fl=*%2Cscore&qt=siren&wt=standard
-
-You can also use the shell script 'query.sh' that will execute the four previous
-queries using curl, and will display the result in XML format.
+query, you need to add the parameter "&nq" in the address bar of your browser. For
+tabular queries, you need to use the parameter "&tq".
 
 [2] http://localhost:8080/siren/admin/form.jsp
 

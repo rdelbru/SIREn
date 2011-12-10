@@ -419,7 +419,7 @@
        <str name="echoParams">explicit</str>
 			 <!-- Disable field query in keyword parser -->
        <str name="disableField">true</str>
-			 <str name="qf">
+       <str name="qf">
          ntriple^1.0 url^1.2
        </str>
        <str name="nqf">
@@ -430,7 +430,17 @@
             - scattered: each Ntriple patterns should match in at least on of the fields
        -->  
        <str name="nqfo">scattered</str>
-			 <str name="fl">
+
+       <str name="tqf">
+         tabular^1.0
+       </str>
+       <!-- the Tabular query multi-field operator:
+            - disjunction: the query should match in at least one of the fields
+            - scattered: each tabular patterns should match in at least on of the fields
+       -->
+       <str name="tqfo">scattered</str>
+
+       <str name="fl">
          id
        </str>
      </lst>

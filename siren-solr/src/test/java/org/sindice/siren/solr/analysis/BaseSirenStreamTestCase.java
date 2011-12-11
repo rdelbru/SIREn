@@ -66,8 +66,6 @@ public abstract class BaseSirenStreamTestCase {
   public Map<String,String> getDefaultInitArgs() {
     final Map<String,String> args = new HashMap<String,String>();
     args.put(IndexSchema.LUCENE_MATCH_VERSION_PARAM, LuceneTestCase.TEST_VERSION_CURRENT.name());
-//    args.put("subschema", "ntriple-schema.xml");
-//    args.put("literal-fieldtype", "ntriple-literal");
     return args;
   }
 

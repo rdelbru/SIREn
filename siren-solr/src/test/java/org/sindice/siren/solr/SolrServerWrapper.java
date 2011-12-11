@@ -52,7 +52,6 @@ import org.slf4j.LoggerFactory;
 
 public class SolrServerWrapper {
 
-//  final String solrHome;
   final CoreContainer coreContainer;
   private final SolrServer server;
   private Map<String, FieldInfo> fieldInfos;
@@ -61,10 +60,6 @@ public class SolrServerWrapper {
 
   public SolrServerWrapper(final CoreContainer coreContainer)
   throws Exception {
-//    this.solrHome = coreContainer;
-//    System.setProperty("solr.solr.home", coreContainer);
-//    final CoreContainer.Initializer initializer = new CoreContainer.Initializer();
-//    coreContainer = initializer.initialize();
     this.coreContainer = coreContainer;
     server = new EmbeddedSolrServer(coreContainer, "");
   }

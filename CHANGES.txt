@@ -1,3 +1,13 @@
+======================= Release 0.2.3-RC1 2011-12-11 =======================
+
+New Features
+
+* [GH-32] Add Tabular query feature
+
+Improvements
+
+* [GH-31] Old lucene library in solr demo
+* [GH-33] Upgrade to Lucene/Solr 3.5.0
 
 ======================= Release 0.2.2 2011-11-21 =======================
 

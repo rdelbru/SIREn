@@ -46,6 +46,8 @@ import com.google.caliper.Runner;
 
 public class TupleAnalyzerBenchmark extends SirenBenchmark {
 
+  private final Version matchVersion = Version.LUCENE_35;
+  
   @Param({"100", "1000"}) private int size;
 
   @Override
@@ -56,7 +58,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeStandardAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_31);
+      final Analyzer analyzer = new StandardAnalyzer(matchVersion);
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -84,8 +86,8 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
       final Analyzer analyzer = new NoDeltaTupleAnalyzer(
-        new WhitespaceAnalyzer(Version.LUCENE_31),
-        new WhitespaceAnyURIAnalyzer(Version.LUCENE_31));
+        new WhitespaceAnalyzer(matchVersion),
+        new WhitespaceAnyURIAnalyzer(matchVersion));
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -94,7 +96,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeWhitespaceTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new WhitespaceTupleAnalyzer(Version.LUCENE_31);
+      final Analyzer analyzer = new WhitespaceTupleAnalyzer(matchVersion);
       counter += this.performAnalysis(analyzer);
     }
     return counter;
@@ -103,7 +105,7 @@ public class TupleAnalyzerBenchmark extends SirenBenchmark {
   public long timeDeltaTupleAnalyzer(final int reps) throws IOException {
     long counter = 0;
     for (int i = 0; i < reps; i++) {
-      final Analyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34));
+      final Analyzer analyzer = new TupleAnalyzer(matchVersion, new StandardAnalyzer(matchVersion), new AnyURIAnalyzer(matchVersion));
       counter += this.performAnalysis(analyzer);
     }
     return counter;

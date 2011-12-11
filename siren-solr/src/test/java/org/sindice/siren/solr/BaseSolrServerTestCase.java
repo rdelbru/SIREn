@@ -30,13 +30,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.solr.SolrTestCaseJ4;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrInputDocument;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.sindice.siren.util.IOUtils;
 
-public abstract class BaseSolrServerTestCase {
+public abstract class BaseSolrServerTestCase extends SolrTestCaseJ4 {
 
   private static final String SOLR_HOME = "./src/test/resources/solr.home/";
   protected static SolrServerWrapper wrapper;
@@ -47,7 +48,8 @@ public abstract class BaseSolrServerTestCase {
   @BeforeClass
   public static void setUpBeforeClass()
   throws Exception {
-    wrapper = new SolrServerWrapper(SOLR_HOME);
+    initCore("solrconfig.xml", "schema.xml", SOLR_HOME);
+    wrapper = new SolrServerWrapper(h.getCoreContainer());
   }
 
   /**

@@ -27,10 +27,6 @@
 package org.sindice.siren.analysis;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -40,7 +36,7 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
+import org.apache.lucene.util.LuceneTestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,19 +46,23 @@ import org.sindice.siren.analysis.attributes.TupleAttribute;
 import org.sindice.siren.analysis.filter.URILocalnameFilter;
 import org.sindice.siren.analysis.filter.URINormalisationFilter;
 
-public class TestTupleAnalyzer {
+public class TestTupleAnalyzer extends LuceneTestCase {
 
   private TupleAnalyzer _a;
 
   @Before
-  public void setUp() {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+  public void setUp()
+  throws Exception {
+    super.setUp();
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(TEST_VERSION_CURRENT);
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
-    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    _a = new TupleAnalyzer(TEST_VERSION_CURRENT, new StandardAnalyzer(TEST_VERSION_CURRENT), uriAnalyzer);
   }
   
   @After
-  public void tearDown() {
+  public void tearDown()
+  throws Exception {
+    super.tearDown();
     _a.close();
   }
 
@@ -161,9 +161,9 @@ public class TestTupleAnalyzer {
   @Test
   public void testURINormalisation()
   throws Exception {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(TEST_VERSION_CURRENT);
     uriAnalyzer.setUriNormalisation(URINormalisation.LOCALNAME);
-    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    _a = new TupleAnalyzer(TEST_VERSION_CURRENT, new StandardAnalyzer(TEST_VERSION_CURRENT), uriAnalyzer);
     
     this.assertAnalyzesTo(_a, "<http://dbpedia.org/resource/The_Kingston_Trio>",
                           new String[] { "kingston", "trio", "the_kingston_trio",
@@ -181,9 +181,9 @@ public class TestTupleAnalyzer {
   @Test
   public void testURINormalisation2()
   throws Exception {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(TEST_VERSION_CURRENT);
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
-    _a = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    _a = new TupleAnalyzer(TEST_VERSION_CURRENT, new StandardAnalyzer(TEST_VERSION_CURRENT), uriAnalyzer);
     
     this.assertAnalyzesTo(_a, "<http://dbpedia.org/resource/their_Kingston_Trio>",
                           new String[] { "dbpedia", "resource", "kingston", "trio",
@@ -263,8 +263,8 @@ public class TestTupleAnalyzer {
   @Test
   public void testLanguage2()
   throws Exception {
-    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(Version.LUCENE_31));
-    _a.registerLiteralAnalyzer("fr".toCharArray(), new WhitespaceAnalyzer(Version.LUCENE_31));
+    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(TEST_VERSION_CURRENT));
+    _a.registerLiteralAnalyzer("fr".toCharArray(), new WhitespaceAnalyzer(TEST_VERSION_CURRENT));
     this.assertAnalyzesTo(_a, "\"Test Test2\"@en <aaa> \"Test Test2\"@fr",
       new String[] { "test", "test2", "aaa", "Test", "Test2" },
       new String[] { "<ALPHANUM>", "<ALPHANUM>", "<URI>", "word", "word" });
@@ -274,9 +274,9 @@ public class TestTupleAnalyzer {
   @Test
   public void testAlreadyRegisteredAnalyzer()
   throws Exception {
-    _a.registerLiteralAnalyzer("en".toCharArray(), new WhitespaceAnalyzer(Version.LUCENE_31));
+    _a.registerLiteralAnalyzer("en".toCharArray(), new WhitespaceAnalyzer(TEST_VERSION_CURRENT));
     // this analyzer is not used, as the datatype "en" is already to an analyzer
-    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(Version.LUCENE_31));
+    _a.registerLiteralAnalyzer("en".toCharArray(), new StandardAnalyzer(TEST_VERSION_CURRENT));
     this.assertAnalyzesTo(_a, "\"Test tesT2\"@en", new String[] { "Test", "tesT2" }, new String[] { "word", "word" });
     _a.clearRegisterLiteralAnalyzers();
   }

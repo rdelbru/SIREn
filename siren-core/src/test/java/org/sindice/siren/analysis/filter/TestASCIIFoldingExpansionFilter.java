@@ -33,16 +33,16 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.apache.lucene.util.Version;
+import org.apache.lucene.util.LuceneTestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestASCIIFoldingExpansionFilter {
+public class TestASCIIFoldingExpansionFilter extends LuceneTestCase {
 
   @Test
   public void testTokenTypeFilter1() throws Exception {
     final Reader reader = new StringReader("aaa clés café");
-    final TokenStream stream = new WhitespaceTokenizer(Version.LUCENE_31, reader);
+    final TokenStream stream = new WhitespaceTokenizer(TEST_VERSION_CURRENT, reader);
     final ASCIIFoldingExpansionFilter filter = new ASCIIFoldingExpansionFilter(stream);
 
     final CharTermAttribute termAtt = filter.getAttribute(CharTermAttribute.class);

@@ -46,12 +46,11 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.Searcher;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.LuceneTestCase;
-import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleTokenizer;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenDeltaPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
 
 public class TestSirenTermRangeQuery extends LuceneTestCase {
@@ -296,7 +295,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
       final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                   TupleTokenizer.DOT});
-      result = new DatatypeAnalyzerFilter(Version.LUCENE_31, result, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
+      result = new DatatypeAnalyzerFilter(TEST_VERSION_CURRENT, result, literalAnalyzer, new AnyURIAnalyzer(TEST_VERSION_CURRENT));
       result = new SirenDeltaPayloadFilter(result);
       return result;
     }
@@ -310,7 +309,7 @@ public class TestSirenTermRangeQuery extends LuceneTestCase {
         streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
         streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
           new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-        streams.filteredTokenStream = new DatatypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream, literalAnalyzer, new AnyURIAnalyzer(Version.LUCENE_34));
+        streams.filteredTokenStream = new DatatypeAnalyzerFilter(TEST_VERSION_CURRENT, streams.filteredTokenStream, literalAnalyzer, new AnyURIAnalyzer(TEST_VERSION_CURRENT));
         streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
       } else {
         streams.tokenStream.reset(reader);

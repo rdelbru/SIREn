@@ -35,7 +35,6 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.LuceneTestCase;
-import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 
@@ -54,7 +53,9 @@ public class TestSirenPrefixQuery extends LuceneTestCase {
                                         "/computers/windows"};
 
     final RandomIndexWriter writer = new RandomIndexWriter(random, directory,
-      new TupleAnalyzer(Version.LUCENE_31, new WhitespaceAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34)));
+      new TupleAnalyzer(TEST_VERSION_CURRENT,
+        new WhitespaceAnalyzer(TEST_VERSION_CURRENT),
+        new AnyURIAnalyzer(TEST_VERSION_CURRENT)));
 
     for (final String category : categories) {
       final Document doc = new Document();

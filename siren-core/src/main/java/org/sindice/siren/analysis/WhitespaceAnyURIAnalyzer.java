@@ -26,6 +26,7 @@
 package org.sindice.siren.analysis;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.Set;
@@ -66,17 +67,16 @@ public class WhitespaceAnyURIAnalyzer extends Analyzer {
   }
   
   public WhitespaceAnyURIAnalyzer(Version version, final String[] stopWords) {
-    stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
     matchVersion = version;
+    stopSet = StopFilter.makeStopSet(matchVersion, stopWords);
   }
   
   public WhitespaceAnyURIAnalyzer(Version version, final File stopwords) throws IOException {
-    stopSet = WordlistLoader.getWordSet(stopwords);
-    matchVersion = version;
+    this(version, new FileReader(stopwords));
   }
   
   public WhitespaceAnyURIAnalyzer(Version version, final Reader stopWords) throws IOException {
-    stopSet = WordlistLoader.getWordSet(stopWords);
+    stopSet = WordlistLoader.getWordSet(stopWords, version);
     matchVersion = version;
   }
   

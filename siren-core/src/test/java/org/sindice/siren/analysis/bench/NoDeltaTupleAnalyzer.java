@@ -27,6 +27,7 @@
 package org.sindice.siren.analysis.bench;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.Set;
@@ -38,9 +39,9 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
 import org.apache.lucene.util.Version;
 import org.sindice.siren.analysis.TupleTokenizer;
+import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
-import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 
 /**
  * Old version of the TupleAnalyzer that does not encode tuple and cell ids in
@@ -49,6 +50,8 @@ import org.sindice.siren.analysis.filter.DatatypeAnalyzerFilter;
 public class NoDeltaTupleAnalyzer
 extends Analyzer {
 
+  private final static Version matchVersion = Version.LUCENE_35;
+  
   private Analyzer stringAnalyzer;
   private Analyzer anyURIAnalyzer;
 
@@ -82,7 +85,7 @@ extends Analyzer {
   public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final String[] stopWords) {
     this.stringAnalyzer = stringAnalyzer;
     this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = StopFilter.makeStopSet(Version.LUCENE_31, stopWords);
+    stopSet = StopFilter.makeStopSet(matchVersion, stopWords);
   }
 
   /**
@@ -93,7 +96,7 @@ extends Analyzer {
   public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final File stopwords) throws IOException {
     this.stringAnalyzer = stringAnalyzer;
     this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = WordlistLoader.getWordSet(stopwords);
+    stopSet = WordlistLoader.getWordSet(new FileReader(stopwords), matchVersion);
   }
 
   /**
@@ -104,7 +107,7 @@ extends Analyzer {
   public NoDeltaTupleAnalyzer(final Analyzer stringAnalyzer, final Analyzer anyURIAnalyzer, final Reader stopwords) throws IOException {
     this.stringAnalyzer = stringAnalyzer;
     this.anyURIAnalyzer = anyURIAnalyzer;
-    stopSet = WordlistLoader.getWordSet(stopwords);
+    stopSet = WordlistLoader.getWordSet(stopwords, matchVersion);
   }
 
   public void setLiteralAnalyzer(final Analyzer analyzer) {
@@ -120,7 +123,7 @@ extends Analyzer {
     final TupleTokenizer stream = new TupleTokenizer(reader, Integer.MAX_VALUE);
     TokenStream result = new TokenTypeFilter(stream, new int[] {TupleTokenizer.BNODE,
                                                                 TupleTokenizer.DOT});
-    result = new DatatypeAnalyzerFilter(Version.LUCENE_31, result, stringAnalyzer, anyURIAnalyzer);
+    result = new DatatypeAnalyzerFilter(matchVersion, result, stringAnalyzer, anyURIAnalyzer);
     result = new SirenPayloadFilter(result);
     return result;
   }
@@ -134,7 +137,7 @@ extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new DatatypeAnalyzerFilter(Version.LUCENE_31, streams.filteredTokenStream,
+      streams.filteredTokenStream = new DatatypeAnalyzerFilter(matchVersion, streams.filteredTokenStream,
         stringAnalyzer, anyURIAnalyzer);
       streams.filteredTokenStream = new SirenPayloadFilter(streams.filteredTokenStream);
     } else {

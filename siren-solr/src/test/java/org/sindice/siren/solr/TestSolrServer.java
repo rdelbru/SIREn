@@ -26,8 +26,6 @@
  */
 package org.sindice.siren.solr;
 
-import static org.junit.Assert.assertEquals;
-
 import java.io.IOException;
 
 import org.apache.solr.client.solrj.SolrServerException;
@@ -42,14 +40,18 @@ public class TestSolrServer extends BaseSolrServerTestCase {
    */
   @Before
   public void setUp()
-  throws Exception {}
+  throws Exception {
+    super.setUp();
+  }
 
   /**
    * @throws java.lang.Exception
    */
   @After
   public void tearDown()
-  throws Exception {}
+  throws Exception {
+    super.tearDown();
+  }
 
   @Test
   public void testAddDocument() throws IOException, SolrServerException {

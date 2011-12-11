@@ -26,9 +26,6 @@
  */
 package org.sindice.siren.search;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
 import java.io.IOException;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -37,7 +34,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.Weight;
-import org.apache.lucene.util.Version;
+import org.apache.lucene.util.LuceneTestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,19 +43,23 @@ import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 import org.sindice.siren.search.SirenTupleClause.Occur;
 
-public class TestSirenPhraseQuery {
+public class TestSirenPhraseQuery extends LuceneTestCase {
 
   private QueryTestingHelper _helper = null;
 
   @Before
   public void setUp()
   throws Exception {
-    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34)));
+    super.setUp();
+    _helper = new QueryTestingHelper(new TupleAnalyzer(TEST_VERSION_CURRENT,
+      new StandardAnalyzer(TEST_VERSION_CURRENT),
+      new AnyURIAnalyzer(TEST_VERSION_CURRENT)));
   }
 
   @After
   public void tearDown()
   throws Exception {
+    super.tearDown();
     _helper.close();
   }
 
@@ -148,9 +149,9 @@ public class TestSirenPhraseQuery {
   @Test
   public void testPhraseQueryOnLocalname()
   throws Exception {
-    final AnyURIAnalyzer uri = new AnyURIAnalyzer(Version.LUCENE_34);
+    final AnyURIAnalyzer uri = new AnyURIAnalyzer(TEST_VERSION_CURRENT);
     uri.setUriNormalisation(URINormalisation.LOCALNAME);
-    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uri));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(TEST_VERSION_CURRENT, new StandardAnalyzer(TEST_VERSION_CURRENT), uri));
     
     final String triple = "<http://dbpedia.org/resource/The_Kingston_Trio> " +
                           "<http://purl.org/dc/terms/subject>  " +

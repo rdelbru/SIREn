@@ -40,7 +40,6 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.LuceneTestCase;
 import org.apache.lucene.util.NumericUtils;
-import org.apache.lucene.util.Version;
 import org.apache.lucene.util._TestUtil;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -68,8 +67,8 @@ public class TestSirenNumericRangeQuery64 extends LuceneTestCase {
     directory = newDirectory();
 
     final TupleAnalyzer analyzer = new TupleAnalyzer(TEST_VERSION_CURRENT,
-      new WhitespaceAnalyzer(Version.LUCENE_31),
-      new WhitespaceAnalyzer(Version.LUCENE_31));
+      new WhitespaceAnalyzer(TEST_VERSION_CURRENT),
+      new WhitespaceAnalyzer(TEST_VERSION_CURRENT));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_LONG+"8").toCharArray(), new LongNumericAnalyzer(8));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_LONG+"6").toCharArray(), new LongNumericAnalyzer(6));
     analyzer.registerLiteralAnalyzer((XSDDatatype.XSD_LONG+"4").toCharArray(), new LongNumericAnalyzer(4));

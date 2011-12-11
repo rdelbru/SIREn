@@ -30,8 +30,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrRequest;
 import org.apache.solr.client.solrj.SolrServer;
@@ -51,23 +49,23 @@ import org.apache.solr.core.CoreContainer;
 import org.apache.solr.core.SolrCore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
 
 public class SolrServerWrapper {
 
-  final String solrHome;
+//  final String solrHome;
   final CoreContainer coreContainer;
   private final SolrServer server;
   private Map<String, FieldInfo> fieldInfos;
 
   private static final Logger logger = LoggerFactory.getLogger(SolrServerWrapper.class);
 
-  public SolrServerWrapper(final String solrHome)
-  throws IOException, ParserConfigurationException, SAXException {
-    this.solrHome = solrHome;
-    System.setProperty("solr.solr.home", solrHome);
-    final CoreContainer.Initializer initializer = new CoreContainer.Initializer();
-    coreContainer = initializer.initialize();
+  public SolrServerWrapper(final CoreContainer coreContainer)
+  throws Exception {
+//    this.solrHome = coreContainer;
+//    System.setProperty("solr.solr.home", coreContainer);
+//    final CoreContainer.Initializer initializer = new CoreContainer.Initializer();
+//    coreContainer = initializer.initialize();
+    this.coreContainer = coreContainer;
     server = new EmbeddedSolrServer(coreContainer, "");
   }
 

@@ -26,11 +26,6 @@
  */
 package org.sindice.siren.search;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertTrue;
-
 import java.io.IOException;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -43,29 +38,31 @@ import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Weight;
-import org.apache.lucene.util.Version;
+import org.apache.lucene.util.LuceneTestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.sindice.siren.analysis.AnyURIAnalyzer;
 import org.sindice.siren.analysis.TupleAnalyzer;
 import org.sindice.siren.analysis.AnyURIAnalyzer.URINormalisation;
 
-public abstract class AbstractTestSirenScorer {
+public abstract class AbstractTestSirenScorer extends LuceneTestCase {
 
   protected QueryTestingHelper _helper = null;
 
   @Before
   public void setUp()
   throws Exception {
-    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(Version.LUCENE_34);
+    super.setUp();
+    final AnyURIAnalyzer uriAnalyzer = new AnyURIAnalyzer(TEST_VERSION_CURRENT);
     uriAnalyzer.setUriNormalisation(URINormalisation.FULL);
-    final TupleAnalyzer analyzer = new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), uriAnalyzer);
+    final TupleAnalyzer analyzer = new TupleAnalyzer(TEST_VERSION_CURRENT, new StandardAnalyzer(TEST_VERSION_CURRENT), uriAnalyzer);
     _helper = new QueryTestingHelper(analyzer);
   }
 
   @After
   public void tearDown()
   throws Exception {
+    super.tearDown();
     _helper.close();
   }
 

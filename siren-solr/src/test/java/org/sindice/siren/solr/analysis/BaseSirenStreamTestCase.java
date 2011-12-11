@@ -35,6 +35,8 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.util.LuceneTestCase;
+import org.apache.solr.schema.IndexSchema;
 
 public abstract class BaseSirenStreamTestCase {
 
@@ -63,9 +65,9 @@ public abstract class BaseSirenStreamTestCase {
 
   public Map<String,String> getDefaultInitArgs() {
     final Map<String,String> args = new HashMap<String,String>();
-    args.put("luceneMatchVersion", "LUCENE_31");
-    args.put("subschema", "ntriple-schema.xml");
-    args.put("literal-fieldtype", "ntriple-literal");
+    args.put(IndexSchema.LUCENE_MATCH_VERSION_PARAM, LuceneTestCase.TEST_VERSION_CURRENT.name());
+//    args.put("subschema", "ntriple-schema.xml");
+//    args.put("literal-fieldtype", "ntriple-literal");
     return args;
   }
 

@@ -54,9 +54,9 @@ import org.sindice.siren.analysis.filter.SirenPayloadFilter;
 import org.sindice.siren.analysis.filter.TokenTypeFilter;
 import org.sindice.siren.util.XSDDatatype;
 
-public class NTripleTestHelper {
+public class NTripleTestHelper extends LuceneTestCase {
 
-  protected static final Version matchVersion = LuceneTestCase.TEST_VERSION_CURRENT;
+  protected static final Version matchVersion = TEST_VERSION_CURRENT;
 
   public static final String _defaultField = "explicit_content";
   public static final String _implicitField = "implicit_content";

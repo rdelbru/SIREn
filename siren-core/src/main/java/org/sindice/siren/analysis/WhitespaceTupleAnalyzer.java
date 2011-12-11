@@ -64,7 +64,7 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
                                                               TupleTokenizer.DOT});
     result = new DatatypeAnalyzerFilter(matchVersion, result, new WhitespaceAnalyzer(matchVersion),
                                                   new WhitespaceAnyURIAnalyzer(matchVersion));
-    result = new LowerCaseFilter(Version.LUCENE_31, result);
+    result = new LowerCaseFilter(matchVersion, result);
     result = new SirenDeltaPayloadFilter(result);
     return result;
   }
@@ -78,9 +78,9 @@ public class WhitespaceTupleAnalyzer extends Analyzer {
       streams.tokenStream = new TupleTokenizer(reader, Integer.MAX_VALUE);
       streams.filteredTokenStream = new TokenTypeFilter(streams.tokenStream,
         new int[] {TupleTokenizer.BNODE, TupleTokenizer.DOT});
-      streams.filteredTokenStream = new DatatypeAnalyzerFilter(matchVersion, streams.filteredTokenStream, new WhitespaceAnalyzer(Version.LUCENE_31),
-                                                                                              new WhitespaceAnyURIAnalyzer(matchVersion));
-      streams.filteredTokenStream = new LowerCaseFilter(Version.LUCENE_31, streams.filteredTokenStream);
+      streams.filteredTokenStream = new DatatypeAnalyzerFilter(matchVersion, streams.filteredTokenStream,
+        new WhitespaceAnalyzer(matchVersion), new WhitespaceAnyURIAnalyzer(matchVersion));
+      streams.filteredTokenStream = new LowerCaseFilter(matchVersion, streams.filteredTokenStream);
       streams.filteredTokenStream = new SirenDeltaPayloadFilter(streams.filteredTokenStream);
     } else {
       streams.tokenStream.reset(reader);

@@ -43,13 +43,15 @@ import com.google.caliper.Runner;
 
 public class SirenQueryBenchmark extends SirenBenchmark {
 
+  private final Version testVersion = Version.LUCENE_35;
+  
   protected QueryTestingHelper _helper = null;
   @Param({"100", "1000", "10000"}) private int size;
 
   @Override
   protected void setUp() throws Exception {
     rand.setSeed(42);
-    _helper = new QueryTestingHelper(new TupleAnalyzer(Version.LUCENE_31, new StandardAnalyzer(Version.LUCENE_31), new AnyURIAnalyzer(Version.LUCENE_34)));
+    _helper = new QueryTestingHelper(new TupleAnalyzer(testVersion, new StandardAnalyzer(testVersion), new AnyURIAnalyzer(testVersion)));
     this.prepareIndex();
   }
 

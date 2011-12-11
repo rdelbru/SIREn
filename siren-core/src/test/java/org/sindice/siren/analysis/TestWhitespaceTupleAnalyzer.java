@@ -27,10 +27,6 @@
 package org.sindice.siren.analysis;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -38,14 +34,14 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.apache.lucene.util.Version;
+import org.apache.lucene.util.LuceneTestCase;
 import org.junit.Test;
 import org.sindice.siren.analysis.attributes.CellAttribute;
 import org.sindice.siren.analysis.attributes.TupleAttribute;
 
-public class TestWhitespaceTupleAnalyzer {
+public class TestWhitespaceTupleAnalyzer extends LuceneTestCase {
 
-  private final Analyzer _a = new WhitespaceTupleAnalyzer(Version.LUCENE_31);
+  private final Analyzer _a = new WhitespaceTupleAnalyzer(TEST_VERSION_CURRENT);
 
   public void assertAnalyzesTo(final Analyzer a, final String input,
                                 final String[] expected)

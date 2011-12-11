@@ -3,7 +3,7 @@ SIREn 0.2.3-SNAPSHOT Solr Demo - Install Instructions
 
 --------------------------------------------------------------------------------
 
-This is testing version of Solr 3.4 with SIREn.
+This is testing version of Solr 3.5.0 with SIREn.
 
 We provide a solr configuration example which use SIREn for indexing and 
 searching RDF data. The search interface is using the n-triples query language.

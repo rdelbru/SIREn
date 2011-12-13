@@ -5,13 +5,13 @@
   <parent>
     <groupId>org.sindice.siren</groupId>
     <artifactId>siren-parent</artifactId>
-    <version>0.2.3-SNAPSHOT</version>
+    <version>0.2.3-RC2</version>
     <relativePath>../siren-parent</relativePath>
   </parent>
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-qparser</artifactId>
-  <version>0.2.3-SNAPSHOT</version>
+  <version>0.2.3-RC2</version>
   <name>siren-qparser</name>
   <url>http://siren.sindice.org</url>
 

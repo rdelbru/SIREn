@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2009-2011 Sindice Limited. All Rights Reserved.
+ * Copyright (c) 2009-2011 National University of Ireland, Galway. All Rights Reserved.
  *
  * Project and contact information: http://www.siren.sindice.com/
  *

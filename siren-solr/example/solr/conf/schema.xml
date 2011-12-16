@@ -147,7 +147,7 @@
    	<field name="url" type="uri" indexed="true" stored="true" required="true"/>
 		
 	<!-- n-triple indexing scheme -->
-   	<field name="ntriple" type="ntriple" indexed="true" stored="false" multiValued="false"/>
+   	<field name="ntriple" type="ntriple" indexed="true" stored="true" multiValued="false"/>
 
         <!-- tabular indexing scheme -->
         <field name="tabular" type="tabular" indexed="true" stored="false" multiValued="false"/>

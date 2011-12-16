@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2009-2011 Sindice Limited. All Rights Reserved. Project and
+ * Copyright (c) 2009-2011 National University of Ireland, Galway. All Rights Reserved. Project and
  * contact information: http://www.siren.sindice.com/ This file is part of the
  * SIREn project. SIREn is a free software: you can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License as

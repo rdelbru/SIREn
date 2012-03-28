@@ -50,8 +50,8 @@ $CATALINA_BASE/conf/Catalina/localhost/siren.xml
 
 5. COPYING SIREN LIBS
 
-Build SIREn and copy siren-core-0.2.3-SNAPSHOT.jar, 
-siren-qparser-0.2.3-SNAPSHOT.jar and siren-solr-0.2.3-SNAPSHOT.jar in 
+Build SIREn and copy siren-core-0.2.3.jar, 
+siren-qparser-0.2.3.jar and siren-solr-0.2.3.jar in 
 SOLR_HOME/lib.
 
 6. CHANGE FILE PERMISSIONS

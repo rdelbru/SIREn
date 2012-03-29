@@ -66,6 +66,15 @@ import org.slf4j.LoggerFactory;
  *            additive. If it is not specified, the default field is used
  *            instead.
  * </li>
+ * <li> tq - (Tabular Query) a Tabular query from the user. This param can be
+ *            specified only one time.
+ * </li>
+ * <li> tqf - (Tabular Query Fields) fields and boosts to use when building
+ *            tabular queries. Format is: "<code>fieldA^1.0 fieldB^2.2</code>".
+ *            This param can be specified multiple times, and the fields are
+ *            additive. If it is not specified, the default field is used
+ *            instead.
+ * </li>
  * </ul>
  *
  * <p>

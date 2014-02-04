@@ -1,0 +1,3 @@
+org.sindice.siren.index.codecs.siren10.Siren10VIntPostingsFormat
+org.sindice.siren.index.codecs.siren10.Siren10AForPostingsFormat
+org.apache.lucene.codecs.lucene40.Lucene40PostingsFormat

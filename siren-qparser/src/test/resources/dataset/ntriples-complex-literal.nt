@@ -1,0 +1,5 @@
+<http://example.org/resource1> <http://example.org/property> "More complex literals with\" escaped \" character	\\\" 
+	and line return
+with language attribute and datatype "@en^^<http://ns#datatype>
+
+.

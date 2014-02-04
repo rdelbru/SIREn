@@ -1,0 +1,31 @@
+ClauseQuery(
+  BinaryClause(
+    SimpleExpression(
+      TriplePattern(
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/#s
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/p
+        ) [URIPattern]
+        Literal(
+          http://www.w3.org/2001/XMLSchema#string:A Literal ...
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+    1
+    SimpleExpression(
+      TriplePattern(
+        Wildcard(
+          *
+        ) [Wildcard]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:http://#s
+        ) [URIPattern]
+        Literal(
+          http://www.w3.org/2001/XMLSchema#string:A "second Literal"
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+  ) [BinaryClause]
+) [ClauseQuery]

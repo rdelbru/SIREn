@@ -1,0 +1,17 @@
+ClauseQuery(
+  UnaryClause(
+    SimpleExpression(
+      TriplePattern(
+        Wildcard(
+          *
+        ) [Wildcard]
+        Wildcard(
+          *
+        ) [Wildcard]
+        Literal(
+          http://www.w3.org/2001/XMLSchema#string:A literal ...
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+  ) [UnaryClause]
+) [ClauseQuery]

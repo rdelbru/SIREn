@@ -1,0 +1,17 @@
+ClauseQuery(
+  UnaryClause(
+    SimpleExpression(
+      TriplePattern(
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/#s
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:http://ns/p
+        ) [URIPattern]
+        Literal(
+          http://www.w3.org/2001/XMLSchema#string:A Literal ...
+        ) [Literal]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+  ) [UnaryClause]
+) [ClauseQuery]

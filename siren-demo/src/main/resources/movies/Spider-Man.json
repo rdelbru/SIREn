@@ -1,0 +1,40 @@
+{
+    "title": "Spider-Man",
+    "year": "2002",
+    "genre": "Action",
+    "summary": "On a school field trip, Peter Parker (Maguire) is 
+	    bitten by a genetically modified spider. He wakes 
+	    up the next morning with incredible powers. After 
+	    witnessing the death of his uncle (Robertson), 
+	    Parkers decides to put his new skills to use in 
+	    order to rid the city of evil, but someone else 
+	    has other plans. The Green Goblin (Dafoe) sees 
+	    Spider-Man as a threat and must dispose of him.",
+    "country": "USA",
+
+	"director": {
+	    "last_name": "Raimi",
+	    "first_name": "Sam",
+	    "birth_date": "1959"
+	},
+	"actors": [
+		{
+		    "first_name": "Tobey",
+		    "last_name": "Maguire",
+		    "birth_date": "1975",
+		    "role": "Spider-Man / Peter Parker"
+		},
+		{
+		    "first_name": "Kirsten",
+		    "last_name": "Dunst",
+		    "birth_date": "1982",
+		    "role": "Mary Jane Watson"
+		},
+		{
+		    "first_name": "Willem",
+		    "last_name": "Dafoe",
+		    "birth_date": "1955",
+		    "role": "Green Goblin / Norman Osborn"
+		}
+	]
+}

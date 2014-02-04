@@ -1,0 +1,50 @@
+{
+    "title": "A History of Violence",
+    "year": "2005",
+    "genre": "Crime",
+    "summary": "Tom Stall, a humble family man and owner of a 
+		popular neighborhood restaurant, lives a quiet but 
+		fulfilling existence in the Midwest. One night Tom 
+		foils a crime at his place of business and, to his 
+		chagrin, is plastered all over the news for his 
+		heroics. Following this, mysterious people follow 
+		the Stalls' every move, concerning Tom more than 
+		anyone else. As this situation is confronted, more 
+		lurks out over where all these occurrences have 
+		stemmed from compromising his marriage, family 
+		relationship and the main characters' former 
+		relations in the process.",
+    "country": "USA",
+
+	"director": {
+	    "last_name": "Cronenberg",
+	    "first_name": "David",
+	    "birth_date": "1943"
+	},
+	"actors": [
+		{
+		    "first_name": "Ed",
+		    "last_name": "Harris",
+		    "birth_date": "1950",
+		    "role": "Carl Fogarty"
+		},
+		{
+		    "first_name": "Vigo",
+		    "last_name": "Mortensen",
+		    "birth_date": "1958",
+		    "role": "Tom Stall"
+		},
+		{
+		    "first_name": "Maria",
+		    "last_name": "Bello",
+		    "birth_date": "1967",
+		    "role": "Eddie Stall"
+		},
+		{
+		    "first_name": "William",
+		    "last_name": "Hurt",
+		    "birth_date": "1950",
+		    "role": "Richie Cusack"
+		}
+	]
+}

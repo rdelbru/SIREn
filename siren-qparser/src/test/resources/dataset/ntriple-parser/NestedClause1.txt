@@ -1,0 +1,51 @@
+ClauseQuery(
+  BinaryClause(
+    SimpleExpression(
+      TriplePattern(
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:s
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:p
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:o
+        ) [URIPattern]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+    0
+    QueryExpression(
+      ClauseQuery(
+        BinaryClause(
+          SimpleExpression(
+            TriplePattern(
+              URIPattern(
+                http://www.w3.org/2001/XMLSchema#anyURI:s
+              ) [URIPattern]
+              URIPattern(
+                http://www.w3.org/2001/XMLSchema#anyURI:p2
+              ) [URIPattern]
+              URIPattern(
+                http://www.w3.org/2001/XMLSchema#anyURI:o2
+              ) [URIPattern]
+            ) [TriplePattern]
+          ) [SimpleExpression]
+          1
+          SimpleExpression(
+            TriplePattern(
+              URIPattern(
+                http://www.w3.org/2001/XMLSchema#anyURI:s
+              ) [URIPattern]
+              URIPattern(
+                http://www.w3.org/2001/XMLSchema#anyURI:p3
+              ) [URIPattern]
+              Literal(
+                http://www.w3.org/2001/XMLSchema#string:A literal
+              ) [Literal]
+            ) [TriplePattern]
+          ) [SimpleExpression]
+        ) [BinaryClause]
+      ) [ClauseQuery]
+    ) [QueryExpression]
+  ) [BinaryClause]
+) [ClauseQuery]

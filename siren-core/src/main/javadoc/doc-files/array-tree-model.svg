@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="array-tree-model.svg"
+   inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/array-tree-model.png"
+   inkscape:export-xdpi="159.55865"
+   inkscape:export-ydpi="159.55865">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3840"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3840-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="273.26756"
+     inkscape:cy="916.50708"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1100"
+     inkscape:window-height="403"
+     inkscape:window-x="2100"
+     inkscape:window-y="564"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,59,20.590546)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="268.21094"
+       y="100.11414"
+       id="text3028"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan3030"
+         x="268.21094"
+         y="100.11414">root</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987-5"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,59,60.590546)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="265.87891"
+       y="138.77039"
+       id="text4295"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan4297"
+         x="265.87891"
+         y="138.77039">array</tspan></text>
+    <g
+       id="g4877"
+       transform="translate(-11.249997,-2)">
+      <g
+         transform="translate(-15.446423,19.999992)"
+         id="g4754">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2-2"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,128.16962,128.3858)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+        <text
+           xml:space="preserve"
+           style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="300.33118"
+           y="195.2782"
+           id="text4295-3-1"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481"><tspan
+             sodipodi:role="line"
+             id="tspan4297-7-5"
+             x="300.33118"
+             y="195.2782">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g4856"
+       transform="translate(14.053567,-4)">
+      <g
+         transform="translate(-24.446426,0)"
+         id="g4734">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,70.669626,115.8858)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+        <text
+           xml:space="preserve"
+           style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="242.83119"
+           y="182.7782"
+           id="text4295-3"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481"><tspan
+             sodipodi:role="line"
+             id="tspan4297-7"
+             x="242.83119"
+             y="182.7782">1</tspan></text>
+      </g>
+      <g
+         transform="translate(-26.446426,2.91602)"
+         id="g4749">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2-9"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,100.33843,112.96978)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+        <text
+           xml:space="preserve"
+           style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="272.5"
+           y="179.86218"
+           id="text4295-3-3"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481"><tspan
+             sodipodi:role="line"
+             id="tspan4297-7-8"
+             x="272.5"
+             y="179.86218">2</tspan></text>
+      </g>
+      <g
+         transform="translate(-26.55356,12.5)"
+         id="g4759">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2-22"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,155.66962,103.3858)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+        <text
+           xml:space="preserve"
+           style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="327.83118"
+           y="170.2782"
+           id="text4295-3-0"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481"><tspan
+             sodipodi:role="line"
+             id="tspan4297-7-1"
+             x="327.83118"
+             y="170.2782">5</tspan></text>
+      </g>
+      <g
+         transform="translate(-26.849023,-12.5)"
+         id="g4754-8">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2-2-0"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,128.16962,128.3858)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+      </g>
+    </g>
+    <g
+       id="g4754-4"
+       transform="translate(0.91882317,17.999992)">
+      <g
+         id="g4872">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path2987-5-2-2-5"
+           sodipodi:cx="290"
+           sodipodi:cy="102.36218"
+           sodipodi:rx="20"
+           sodipodi:ry="20"
+           d="m 310,102.36218 c 0,11.0457 -8.95431,20 -20,20 -11.04569,0 -20,-8.9543 -20,-20 0,-11.045692 8.95431,-19.999997 20,-19.999997 11.04569,0 20,8.954305 20,19.999997 z"
+           transform="matrix(0.60267863,0,0,0.62500022,128.16962,128.3858)"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481" />
+        <text
+           xml:space="preserve"
+           style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="300.33118"
+           y="195.2782"
+           id="text4295-3-1-2"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+           inkscape:export-xdpi="203.50481"
+           inkscape:export-ydpi="203.50481"><tspan
+             sodipodi:role="line"
+             id="tspan4297-7-5-7"
+             x="300.33118"
+             y="195.2782">4</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 276.5,112.36218 0,9"
+       id="path4883"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 267.5,149.86218 -22.5,17.5"
+       id="path5437"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 272.5,152.36218 -5,11.5"
+       id="path5439"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 280,152.36218 5,11.5"
+       id="path5441"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 285,149.86218 24,16.5"
+       id="path5443"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 292.5,188.36218 5,10"
+       id="path5629"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 287.5,188.36218 -5,10"
+       id="path5631"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

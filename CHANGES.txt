@@ -1,0 +1,293 @@
+======================= Release 1.0 2012-12-30 =======================
+
+New Features
+
+* [GH-42] JSON Analyzer
+* [GH-57] Create a DateNumericAnalyzer
+* [GH-32] Create JSON Query Language API
+* [GH-147] Add datatype support to the Json query parser
+* [GH-190] Support datatype in the JSON tokenizer
+* [GH-145] Add datatype support
+
+Improvements
+
+* [GH-26] Investigate best default block size
+* [GH-27] Decrement by one docID in DocsFreqBlockIndexOutput
+* [GH-45] Implement AFOR Block Encode/Decoder
+* [GH-47] Twig Query API Improvements
+* [GH-48] Remove the term frequency in the Doc posting list
+* [GH-58] Add get method for precision step to numeric analyzer
+* [GH-59] Refactor NumericAnalyzer to parse text to numeric value
+* [GH-65] Set omitNorm by default in SirenField
+* [GH-81] Create setter method for root in TwigQuery
+* [GH-50] Add a JSON object syntax to the keyword query parser
+* [GH-86] Remove coord concept from the NodeQuery framework
+* [GH-94] Update the Keyword grammar to allow a twig with empty child
+* [GH-91] Implement QNamesFilter as a Processor
+* [GH-100] Allow fuzzy query on a ProtectedQueryNode
+* [GH-117] Update the Keyword grammar to allow multiple twigs to an object query
+* [GH-114] Update string representation of the core query api
+* [GH-128] Refactor the test framework of siren-qparser
+* [GH-99] Simplify the wrapping of primitive QueryNodes by a LuceneProxyNodeQuery
+* [GH-153] Simplify definition of analyzer for SirenField
+* [GH-154] Remove external analyzer configuration from SirenField
+* [GH-144] Add a default operator parameter to the siren query parser plugin
+* [GH-146] Add a datatype for json field
+* [GH-156] Add a parameter for setting the QNames in the KeywordQueryParser
+* [GH-152] Improve the toString output of siren core queries
+* [GH-51] Support Datatype in the Keyword Query Parser
+* [GH-113] Simplify analyzer configuration of KeywordQueryParser
+* [GH-172] Remove token type dependency from URITrailingSlashFilter
+* [GH-187] Support QName expansion in datatype label
+* [GH-215] Remove debug logs in siren-solr unit tests
+
+Bugs
+
+* [GH-50] Incorrect TwigQuery Rewritting and Level Constraint
+* [GH-52] Fix constraint management in NodeBooleanQuery
+* [GH-53] Fix constraint management in TwigQuery
+* [GH-54] Fix constraint management in TupleQuery
+* [GH-55] Check hash code and equality of node query classes
+* [GH-57] Review score caching in scoreInNode
+* [GH-71] Boost Queries and DocumentQuery
+* [GH-73] Correct Non-Matching root query of a TwigQuery
+* [GH-80] Correct the node path for nested objects
+* [GH-116] JsonQueryParser must wrap node query into a lucene proxy
+* [GH-122] Support Json with newlines inside the literals
+* [GH-130] Unknown DocsAndPositionsEnum received
+* [GH-133] Add aduna repository in benchmark pom
+* [GH-132] Unit tests using their own random number generator
+* [GH-135] Java heap space problem in TestJsonTokenizer
+* [GH-134] Maven qparser task executed two times
+* [GH-149] Correct the setting of the child(ren) of a QueryNode
+* [GH-76] Correct the handling of datatypes analyzer
+* [GH-180] Rename EmptyNodeQueryNode to WildcardNodeQueryNode in the javacc grammar file
+* [GH-173] JsonTokeniser always attaches the double datatype for a numeric value
+* [GH-192] Wrong JSON documents are correctly scanned
+* [GH-206] Review properties enforcement for SirenField
+* [GH-208] Null pointer exception with empty query string
+* [GH-213] SirenSimilarity returns a score equals to 0
+* [GH-221] Most query specs returns 0 results
+
+Tasks
+
+* [GH-41] Finalise TupleScorer
+* [GH-40] Upgrade to Lucene 4.0 Alpha
+* [GH-30] Upgrade SIREn to use Lucene 4.0 and the new Flex (flexible Indexing) feature
+* [GH-49] Remove SIREn 0.2 codec
+* [GH-56] Port Tuple And Cell query unit tests
+* [GH-44] Adapt MultiTermQuery to new API
+* [GH-24] Review the SirenMultiTermQuery rewrite method based on recent changes in Lucene 4.0
+* [GH-58] Update Numeric Analyzers to Lucene4.0
+* [GH-43] Create a benchmark module
+* [GH-45] Upgrade to Lucene 4.0 Beta
+* [GH-44] Removed the delta payload filter and its references from the code
+* [GH-46] Refactor Analyzer Factories
+* [GH-49] Refactor the SIREn schema and field
+* [GH-69] Update the siren-qparser to the new NumericAnalyzer logic
+* [GH-33] Create Keyword Search Query Parser
+* [GH-71] Refactor KeywordQueryParser
+* [GH-75] Remove the field logic from the KeywordQueryParser
+* [GH-73] Review the Syntax grammar to match the SIREn query logic
+* [GH-84] Implement a NotSupportedQuery processor
+* [GH-79] Review the management of default unary operators
+* [GH-101] Remove tuple query parsers
+* [GH-47] Clean and update pom.xml files
+* [GH-68] Upgrade to Lucene/Solr 4.0
+* [GH-108] Clean sysout and debug log in unit tests
+* [GH-115] Remove deprecated cup and classgen jar dependencies
+* [GH-28] Create siren-demo module
+* [GH-121] Improve documentation of the JSON parser
+* [GH-127] Update README files
+* [GH-31] Set SIREn 1.0 posting format as default for SirenField
+* [GH-67] Refactor query parser plugin
+* [GH-140] Add a documentation for the KeywordQueryParser
+* [GH-102] Deprecate tuple analyzer
+* [GH-162] Integrate the datatype into the Query object
+* [GH-148] Move solr example from siren-solr to siren-demo
+* [GH-43] Refactoring of the siren-solr module
+* [GH-202] Rename keyword.query package into keyword
+* [GH-62] Check file header and copyright
+* [GH-170] Review solr example demo
+* [GH-63] Write unit test for LuceneProxyNodeScorer
+
+Documentation
+
+* [GH-171] Add package level javadocs to every package
+* [GH-184] Add description to each class
+* [GH-179] Fixes class visibility for javadoc
+
+======================= Release 0.2.3-RC1 2011-12-11 =======================
+
+New Features
+
+* [GH-32] Add Tabular query feature
+
+Improvements
+
+* [GH-31] Old lucene library in solr demo
+* [GH-33] Upgrade to Lucene/Solr 3.5.0
+
+======================= Release 0.2.2 2011-11-21 =======================
+
+New Features
+
+* [GH-19] Port MultiTermQuery
+* [GH-21] Activate SirenMultiTermQuery in query parser
+* [GH-20] Extend analyzer for datatype support
+* [GH-23] Extend Solr schema for datatype support
+* [GH-25] Deploy SIREn on OSS Sonatype Repository
+
+Improvements
+
+* [GH-22] Upgrade to Lucene/Solr 3.4
+* [GH-28] Add publication reference to README
+* [GH-26] Remove old reference to assembly script
+* [GH-29] Pom should be configured to deploy also test artifacts
+
+Bugs
+
+* [SRN-116] Question mark not correctly escaped in keyword search
+* [SRN-117] Phrase Query problem with uri local name
+
+======================= Release 0.2.1 2011-09-13 =======================
+
+Bugs
+
+* [GH-15] siren-core - Fixed POM issue caused by the caliper dependency on gson
+* [SRN-25] Counting of matchers in SirenDisjunctionScorer is wrong
+* [SRN-79] Make URINormalisationFilter less agressive: token length minimum
+           limit is now set to 3.
+* [SRN-80] Wrong position increment in LocalnameFilter if no previous tokens
+           before final tokens
+* [SRN-82] ArrayOutOfBoundException in PackedIntSirenPayload
+* [SRN-87] URI normalisation problem in NTripleIndexing demo
+* [SRN-90] Keyword parser does not respect default search operator
+* [SRN-91] NOT operator is not recognised by the NTriple query parser
+* [SRN-92] QnamesFilter cannot have qname http
+* [SRN-93] QnamesFilter is restricted to a single token type
+* [SRN-97] Default Operator not respected in literal pattern
+* [SRN-98] Query Expansion creates invalid query in literal pattern
+* [SRN-106] Query expansion does not respect unary operator
+* [SRN-111] ResourceGroupQueryProcessor defined two times in processor pipeline
+
+Improvements
+
+* [SRN-3] Extract literal analyzer from the tuple tokenizer
+* [SRN-75] Upgraded to lucene/solr 3.1-dev branch
+* [SRN-76] Add localname maximum length limit to URILocalnameNormalisation
+           filter
+* [SRN-77] Create in-memory solr server for unit testing
+* [SRN-83] Merge Simple and NTriple query interface into one
+* [SRN-84] Add qname support in ntriple query parser
+* [SRN-85] NTripleQueryParser: Allow boolean operator within URI pattern
+* [SRN-94] Field query can be disabled in the KeywordQParser
+* [SRN-100] Improve user-readable version of the query
+* [SRN-102] Catch SolrException in SIREnQParser#parse
+* [SRN-105] Upgrade to Lucene/Solr 3.1
+* [SRN-108] Improved support of encoded character in URI
+* [SRN-112] Tokenisation problem with URI localnames
+
+* [GH-1] Pom fixes
+* [GH-4] siren-core - Query Processing Optimisation - Load tuples lazily
+* [GH-3] siren-core - Query Processing Optimisation - Avoid unnecessary object creation
+* [GH-5] siren-core - Query Processing Optimisation - SirenCellScorer iterates
+         over cell ids that are outside constraint boundaries
+* [GH-6] siren-core - delta encoding
+
+New Features
+
+* [SRN-78] Add Solr configuration example
+* [SRN-96] Add filter to expand accented words with non-accented form
+* [SRN-99] Boolean query group support in cell query
+* [SRN-101] Boost support in literal and uri patterns
+* [SRN-104] Create an OptimizeSchedulerListerner
+* [SRN-109] Similarity to saturate term frequency
+
+Tasks
+
+* [SRN-8] Create parser for simple queries
+* [SRN-72] Separate query parser and solr plugin
+* [SRN-74] Create a siren-solr module
+* [SRN-89] Clean Solr home and related files
+* [SRN-110] Remove scoreCell function
+
+======================= Release 0.2.0 2010-07-26 =======================
+
+Bug Fixes
+
+* [SRN-61] SirenTupleQuery#getClause() returns a SirenCellClause array
+* [SRN-64] Lucene interface enforces #incrementToken method to be final
+
+Improvements
+
+* [SRN-69] Make URINormalisation configurable in TupleAnalyzer
+* [SRN-70] Use packed integers for encoding payload data
+* [SRN-71] Add bnode filtering in analyzers
+
+======================= Release 0.2 RC6 2010-07-07 =======================
+
+Bug Fixes
+
+* [SRN-65] SirenPhraseQuery documentation refers to QueryParser
+* [SRN-67] SirenPayload is storing position information that is not used
+
+Improvements
+
+* [SRN-66] Make URINormalisationFilter less aggressive
+* [SRN-68] Upgrade to Lucene 3.0.2
+
+======================= Release 0.2 RC5 2010-04-14 =======================
+
+Bug Fixes
+
+* [SRN-57] SirenConjunctionScorer and SirenCellConjunctionScorer give a very
+           large score to entity with multiples matches
+* [SRN-58] tokenStream and reusableTokenStream must be final
+
+Improvements
+
+* [SRN-55] Move demo resource files to test directory
+
+======================= Release 0.2 RC4 2010-03-12 =======================
+
+Bug Fixes
+
+* [SRN-52] BufferOverflow in URINormalisationFilter for large URIs
+
+Improvements
+
+* [SRN-53] Performance problem in TupleAnalyzer
+* [SRN-54] Add a WhitespaceTupleAnalyzer
+
+======================= Release 0.2 RC3 2010-03-11 =======================
+
+Improvements
+
+* [SRN-48] Upgrade to Lucene 3.0.1
+
+======================= Release 0.2 RC2 2010-02-08 =======================
+
+Bug Fixes
+
+* [SRN-44] NPE in scorer due to null field norms
+* [SRN-45] NPE when using BooleanQuery with excluded tuple
+* [SRN-46] NPE when using BooleanQuery with excluded cell
+
+======================= Release 0.2 RC1 2010-02-04 =======================
+
+Bug Fixes
+
+* [SRN-40] SirenConjunctionScorer is storing unnecessary term occurrences
+* [SRN-39] Exclusion of cells in a tuple is not working
+* [SRN-38] NPE when using ReqExcl scorer
+* [SRN-36] Tuple and Cell constraints could not work in certain case
+
+New Features
+
+* [SRN-37] Implement Tuple Constraint
+
+Improvements
+
+* [SRN-42] Migrating to Lucene 3.0
+

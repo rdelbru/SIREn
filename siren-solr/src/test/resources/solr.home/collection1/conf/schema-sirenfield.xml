@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  
+ This is the SIREn/Solr schema file. This file should be named "schema.xml" and
+ should be in the conf directory under the solr home
+ (i.e. ./solr/conf/schema.xml by default) 
+ or located where the classloader for the Solr webapp can find it.
+
+ This example schema is the recommended starting point for users.
+ It should be kept correct and concise, usable out-of-the-box.
+ 
+ For more information, on how to customize this file, please see
+ http://wiki.apache.org/solr/SchemaXml
+
+ PERFORMANCE NOTE: this schema includes many optional features and should not
+ be used for benchmarking.  To improve performance one could
+  - set stored="false" for all fields possible (esp large fields) when you
+    only need to search on the field but don't need to return the original
+    value.
+  - set indexed="false" if you don't need to search on the field, but only
+    return the field as a result of searching on other indexed fields.
+  - remove all unneeded copyField statements
+  - for best index size and searching performance, set "index" to false
+    for all general text fields, use copyField to copy them to the
+    catchall "text" field, and use that for searching.
+  - For maximum indexing performance, use the StreamingUpdateSolrServer
+    java client.
+  - Remember to run the JVM in server mode, and use a higher logging level
+    that avoids logging every request
+-->
+
+<schema name="example" version="1.5">
+
+  <fields>
+  
+    <!-- The ID (URL) of the document 
+       Use the 'string' field type (no tokenisation)
+    -->
+    <field name="id" type="string" indexed="true" stored="true" required="true"/>
+    
+    <!-- json indexing scheme -->
+    <field name="json" type="json" indexed="true" stored="false"/>
+    
+    <!--
+      SIREn fields for unit test purpose.
+      Set various field properties for which the value is enforced by the
+      SirenField implementation
+    -->
+    
+    <field name="siren-multiValued" type="json" multiValued="true"/>
+    
+    <field name="siren-omitNorms" type="json" omitNorms="false"/>
+    
+    <field name="siren-omitPositions" type="json" omitPositions="true"/>
+    
+    <field name="siren-omitTermFreqAndPositions" type="json" omitTermFreqAndPositions="true"/>
+    
+    <field name="siren-termVectors" type="json" termVectors="true"/>
+     
+  </fields>
+
+  <!-- Field to use to determine and enforce document uniqueness. 
+       Unless this field is marked with required="false", it will be a required field
+    -->
+  <uniqueKey>id</uniqueKey>
+
+  <types>
+
+    <!-- The StrField type is not analyzed, but indexed/stored verbatim. -->
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>
+
+    <!--
+      The SIREn field type:
+      An index analyzer has to be defined, but there is no query analyzer.
+      The index analyzer will be configured with the datatype analyzers that 
+      are defined in the datatype analyzer configuration file (datatypes.xml).  
+    -->
+    <fieldType name="json" class="org.sindice.siren.solr.schema.SirenField"
+               omitNorms="true"
+               datatypeConfig="datatypes.xml">
+
+      <analyzer type="index">
+      
+        <tokenizer class="org.sindice.siren.solr.analysis.JsonTokenizerFactory"/>
+
+      </analyzer>
+      
+    </fieldType>
+               
+ </types>
+
+</schema>

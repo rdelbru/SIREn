@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="object-tree-model.svg"
+   inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-label.png"
+   inkscape:export-xdpi="203.50481"
+   inkscape:export-ydpi="203.50481">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3840"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3840-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="239.33017"
+     inkscape:cy="913.21777"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="876"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,57.5,20.590546)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="266.71094"
+       y="100.11414"
+       id="text3028"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan3030"
+         x="266.71094"
+         y="100.11414">root</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987-5"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,35,60.590546)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987-6"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,80,60.590546)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 267.5,109.86218 -10,12.5"
+       id="path3057"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 282.5,109.86218 10,12.5"
+       id="path3057-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="240.99805"
+       y="139.54578"
+       id="text4295"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan4297"
+         x="240.99805"
+         y="139.54578">name</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="288.37891"
+       y="140.3446"
+       id="text4299"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan4301"
+         x="288.37891"
+         y="140.3446">born</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987-5-2"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,34.892855,100.59055)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2987-6-8"
+       sodipodi:cx="290"
+       sodipodi:cy="102.36218"
+       sodipodi:rx="20"
+       sodipodi:ry="20"
+       d="m 310,102.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       transform="matrix(0.75,0,0,0.75,79.892855,100.59055)"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="238.38504"
+       y="179.56921"
+       id="text4295-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan4297-7"
+         x="238.38504"
+         y="179.56921">Minsky</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="287.10965"
+       y="180.27429"
+       id="text4299-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481"><tspan
+         sodipodi:role="line"
+         id="tspan4301-5"
+         x="287.10965"
+         y="180.27429">1927</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 252.5,152.36218 0,10"
+       id="path4336"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-2)"
+       d="m 297.5,152.36218 0,10"
+       id="path4338"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/renaud/Work/Sindice/workspace/siren/siren.git/siren-core/src/main/javadoc/org/sindice/siren/doc-files/object-tree-model.png"
+       inkscape:export-xdpi="203.50481"
+       inkscape:export-ydpi="203.50481" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Dewey">
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="271.46423"
+       y="106.6479"
+       id="text3118"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3120"
+         x="271.46423"
+         y="106.6479"
+         style="font-size:5px">[1]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="246.24998"
+       y="146.46931"
+       id="text3118-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3120-7"
+         x="246.24998"
+         y="146.46931"
+         style="font-size:5px">[1.1]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="244.17857"
+       y="186.46931"
+       id="text3118-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3120-2"
+         x="244.17857"
+         y="186.46931"
+         style="font-size:5px">[1.1.1]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="291.42865"
+       y="146.46931"
+       id="text3118-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3120-5"
+         x="291.42865"
+         y="146.46931"
+         style="font-size:5px">[1.2]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="289.10739"
+       y="186.46931"
+       id="text3118-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3120-0"
+         x="289.10739"
+         y="186.46931"
+         style="font-size:5px">[1.2.1]</tspan></text>
+  </g>
+</svg>

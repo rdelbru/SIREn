@@ -1,0 +1,582 @@
+/**
+ * Standard file is based on the TextParser.jj from lucene 2.3
+ */
+
+options {
+  STATIC=false;
+  JAVA_UNICODE_ESCAPE=true;
+  USER_CHAR_STREAM=true;
+  IGNORE_CASE=false;
+  JDK_VERSION="1.5";
+}
+
+PARSER_BEGIN(KeywordSyntaxParser)
+package org.sindice.siren.qparser.keyword;
+
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import java.io.StringReader;
+import java.util.List;
+import java.util.Vector;
+
+import org.apache.lucene.queryparser.classic.CharStream;
+import org.apache.lucene.queryparser.classic.FastCharStream;
+// Use Lucene generated classes instead of ours, in order to
+// use Lucene ParseException implementation
+import org.apache.lucene.queryparser.flexible.standard.parser.ParseException;
+import org.apache.lucene.queryparser.flexible.standard.parser.Token;
+import org.apache.lucene.queryparser.flexible.standard.parser.EscapeQuerySyntaxImpl;
+
+import org.apache.lucene.queryparser.flexible.messages.Message;
+import org.apache.lucene.queryparser.flexible.messages.MessageImpl;
+import org.apache.lucene.queryparser.flexible.core.QueryNodeParseException;
+import org.apache.lucene.queryparser.flexible.core.messages.QueryParserMessages;
+import org.apache.lucene.queryparser.flexible.core.nodes.AndQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.BooleanQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.BoostQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.FieldQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.FuzzyQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.ModifierQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.GroupQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.OrQueryNode;
+import org.apache.lucene.queryparser.flexible.standard.nodes.RegexpQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.SlopQueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.QueryNode;
+import org.apache.lucene.queryparser.flexible.core.nodes.QuotedFieldQueryNode;
+import org.apache.lucene.queryparser.flexible.core.parser.SyntaxParser;
+import org.apache.lucene.queryparser.flexible.standard.nodes.TermRangeQueryNode;
+
+import org.sindice.siren.qparser.keyword.nodes.TopLevelQueryNode;
+import org.sindice.siren.qparser.keyword.nodes.TwigQueryNode;
+import org.sindice.siren.qparser.keyword.nodes.WildcardNodeQueryNode;
+import org.sindice.siren.qparser.keyword.nodes.ArrayQueryNode;
+import org.sindice.siren.qparser.keyword.nodes.ProtectedQueryNode;
+import org.sindice.siren.qparser.keyword.nodes.DatatypeQueryNode;
+
+/**
+ * Parser for the standard Lucene syntax.
+ * <p>
+ * The field semantic of <code>:</code> is replaced by the semantic of 
+ * {@link org.sindice.siren.search.node.TwigQuery}.
+ */
+public class KeywordSyntaxParser implements SyntaxParser {
+
+  private static final int CONJ_NONE =0;
+  private static final int CONJ_AND =2;
+  private static final int CONJ_OR =2;
+
+ 
+   // syntax parser constructor
+   public KeywordSyntaxParser() {
+     this(new FastCharStream(new StringReader("")));
+  }
+     /** Parses a query string, returning a {@link org.apache.lucene.queryparser.flexible.core.nodes.QueryNode}.
+     *  @param query  the query string to be parsed.
+     *  @throws ParseException if the parsing fails
+     */
+    public QueryNode parse(CharSequence query, CharSequence field) throws QueryNodeParseException {
+      ReInit(new FastCharStream(new StringReader(query.toString())));
+      try {
+        // TopLevelQuery is a Query followed by the end-of-input (EOF)
+        QueryNode querynode = TopLevelQuery(field);
+        return querynode;
+      }
+      catch (ParseException tme) {
+            tme.setQuery(query);
+            throw tme;
+      }
+      catch (Error tme) {
+          Message message = new MessageImpl(QueryParserMessages.INVALID_SYNTAX_CANNOT_PARSE, query, tme.getMessage());
+          QueryNodeParseException e = new QueryNodeParseException(tme);
+            e.setQuery(query);
+            e.setNonLocalizedMessage(message);
+            throw e;
+      }
+    }
+   
+}
+
+PARSER_END(KeywordSyntaxParser)
+
+/* ***************** */
+/* Token Definitions */
+/* ***************** */
+
+<*> TOKEN : {
+  <#_NUM_CHAR:   ["0"-"9"] >
+// every character that follows a backslash is considered as an escaped character
+| <#_ESCAPED_CHAR: "\\" ~[] >
+| <#_TERM_START_CHAR: ( ~[ " ", "\t", "\n", "\r", "\u3000", "+", "-", "!", "(", ")", ":", "^",
+                           "[", "]", "\"", "{", "}", "~", "\\", "/", ",", "'" ]
+                       | <_ESCAPED_CHAR> ) >
+| <#_TERM_CHAR: ( <_TERM_START_CHAR> | <_ESCAPED_CHAR> | "-" | "+" ) >
+| <#_WHITESPACE: ( " " | "\t" | "\n" | "\r" | "\u3000") >
+| <#_QUOTED_CHAR: ( ~[ "\"", "\\" ] | <_ESCAPED_CHAR> ) >
+| <#_PROTECTED_CHAR: ( ~[ "\'", "\\" ] | <_ESCAPED_CHAR> ) >
+}
+
+<DEFAULT, Range> SKIP : {
+  < <_WHITESPACE>>
+}
+
+<DEFAULT> TOKEN : {
+  <AND:       ("AND" | "&&") >
+| <OR:        ("OR" | "||") >
+| <NOT:       ("NOT" | "!") >
+| <PLUS:      "+" >
+| <MINUS:     "-" >
+| <LPAREN:    "(" >
+| <RPAREN:    ")" >
+| <CARAT:     "^" > : Boost
+| <PROTECTED: "'" (<_PROTECTED_CHAR>)* "'">
+| <QUOTED:     "\"" (<_QUOTED_CHAR>)* "\"">
+| <TERM:      <_TERM_START_CHAR> (<_TERM_CHAR>)*  >
+| <FUZZY_SLOP:     "~" ( (<_NUM_CHAR>)+ ( "." (<_NUM_CHAR>)+ )? )? >
+| <REGEXPTERM: "/" (~[ "/" ] | "\\/" )* "/" >
+
+| <RANGEIN_START: "[" >
+| <RANGEIN_END: "]">
+
+| <RANGEIN_QUOTED_START: <RANGEIN_START> (<_WHITESPACE>)* "\"" (~["\""] | "\\\"")+ "\"" (<_WHITESPACE>)* "TO" > : Range
+| <RANGEIN_GOOP_START: <RANGEIN_START> (<_WHITESPACE>)* (~[ " ", "]", "}" ])+ (<_WHITESPACE>)* "TO" > : Range
+| <RANGEEX_QUOTED_START: "{" (<_WHITESPACE>)* "\"" (~["\""] | "\\\"")+ "\"" (<_WHITESPACE>)* "TO" > : Range
+| <RANGEEX_GOOP_START: "{" (<_WHITESPACE>)* (~[ " ", "]", "}" ])+ (<_WHITESPACE>)* "TO" > : Range
+
+// Twig query logic
+| <OP_COLON:  ":" >
+| <OP_OBJECT_START:  "{" >
+| <OP_OBJECT_END:  "}" >
+| <DATATYPE:     <_TERM_START_CHAR> ( ~[ " " , "\t" , "\n" , "\r" , "\u3000", "(" ] )* "(" >
+| <COMMA:      "," >
+}
+
+<Boost> TOKEN : {
+<NUMBER:    (<_NUM_CHAR>)+ ( "." (<_NUM_CHAR>)+ )? > : DEFAULT
+}
+
+<Range> TOKEN : {
+<RANGEIN_QUOTED_END: "\"" (~["\""] | "\\\"")+ "\"" (<_WHITESPACE>)* "]" > : DEFAULT
+| <RANGEIN_GOOP_END: (~[ " ", "]", "}" ])+ (<_WHITESPACE>)* "]" > : DEFAULT
+| <RANGEEX_QUOTED_END: "\"" (~["\""] | "\\\"")+ "\"" (<_WHITESPACE>)* (<_WHITESPACE>)* "}" > : DEFAULT
+| <RANGEEX_GOOP_END: (~[ " ", "]", "}" ])+ (<_WHITESPACE>)* "}" > : DEFAULT
+}
+
+// *   Query  ::= ( Clause )*
+// *   Clause ::= ["+", "-"] [<TERM> ":"] ( <TERM> | "(" Query ")" )
+
+int Conjunction() : {
+  int ret = CONJ_NONE;
+}
+{
+  [
+    <AND> { ret = CONJ_AND; }
+    | <OR>  { ret = CONJ_OR; }
+  ]
+  { return ret; }
+}
+
+ModifierQueryNode.Modifier Modifiers() : {
+  ModifierQueryNode.Modifier ret = ModifierQueryNode.Modifier.MOD_NONE;
+}
+{
+  [
+     <PLUS> { ret = ModifierQueryNode.Modifier.MOD_REQ; }
+     | <MINUS> { ret = ModifierQueryNode.Modifier.MOD_NOT; }
+     | <NOT> { ret = ModifierQueryNode.Modifier.MOD_NOT; }
+  ]
+  { return ret; }
+}
+
+// This makes sure that there is no garbage after the query string
+QueryNode TopLevelQuery(CharSequence field) : 
+{
+  QueryNode q;
+}
+{
+  q=Query(field) <EOF>
+  {
+     return new TopLevelQueryNode(q);
+  }
+}
+
+// These changes were made to introduce operator precedence:
+// - Clause() now returns a QueryNode. 
+// - The modifiers are consumed by Clause() and returned as part of the QueryNode Object
+// - Query does not consume conjunctions (AND, OR) anymore. 
+// - This is now done by two new non-terminals: ConjClause and DisjClause
+// The parse tree looks similar to this:
+//       Query ::= DisjQuery ( DisjQuery )*
+//   DisjQuery ::= ConjQuery ( OR ConjQuery )* 
+//   ConjQuery ::= Clause ( AND Clause )*
+//      Clause ::= [ Modifier ] ... 
+
+// Changes made to introduce structural operators: ':' and '[ ]'
+// This is achieved by wrapping the Lucene Query with those operators
+// The parse tree is similar to this:
+//       Query ::= Query2 ( ':' Query | ':' Array )?
+//       Array ::= '[' ( Query | Array )? ( ',' Query ) ']'
+//      Query2 ::= DisjQuery ( DisjQuery )*
+//   DisjQuery ::= ConjQuery ( OR ConjQuery )* 
+//   ConjQuery ::= Clause ( AND Clause )*
+//      Clause ::= [ Modifier ] ... 
+
+QueryNode Query(CharSequence field) : 
+{
+  QueryNode root = null;
+  QueryNode child = null;
+}
+{
+  root = Query2(field) [ <OP_COLON> ( child = Query(field) | child = Array(field) ) ]
+  {
+    if (child == null) {
+        return root;
+    }
+    return new TwigQueryNode(root, child);
+  }
+  |
+  root = Object(field)
+  {
+    return root;
+  }
+}
+
+QueryNode Object(CharSequence field) :
+{
+  QueryNode first, c;
+  Vector<QueryNode> clauses = null;
+}
+{
+  <OP_OBJECT_START>
+  first = Query(field)
+  {
+    if (!(first instanceof TwigQueryNode)) {
+      throw new Error("The object syntax \"{ }\" only accepts a list of comma separated twigs, i.e., \"a : b, c : b\".");
+    }
+  }
+  (
+   <COMMA> c=Query(field)
+   { 
+     if (clauses == null) {
+         clauses = new Vector<QueryNode>();
+         clauses.addElement(first);
+     }
+     if (!(c instanceof TwigQueryNode)) {
+       throw new Error("The object syntax \"{ }\" only accepts a list of comma separated twigs, i.e., \"a : b, c : b\".");
+     }
+     clauses.addElement(c); 
+   }
+  )*
+  <OP_OBJECT_END>
+  {
+    // The object query syntax adds a blank node
+    final QueryNode blank = new WildcardNodeQueryNode();
+    if (clauses != null) {
+      return new TwigQueryNode(blank, new ArrayQueryNode(clauses));
+    } else {
+      return new TwigQueryNode(blank, first);
+    }
+  }
+}
+
+QueryNode Array(CharSequence field) :
+{
+  QueryNode first, c;
+  Vector<QueryNode> clauses = null;
+}
+{
+  <RANGEIN_START>
+  ( first = Query(field) | first = Array(field) )
+  (
+   <COMMA> ( c=Query(field) | c = Array(field) )
+   { 
+     if (clauses == null) {
+         clauses = new Vector<QueryNode>();
+         clauses.addElement(first);
+     } 
+     clauses.addElement(c); 
+   }
+  )*
+  <RANGEIN_END>
+  {
+    if (clauses != null) {
+      return new ArrayQueryNode(clauses);
+    } else {
+      return new ArrayQueryNode(first);
+    }
+  }
+}
+
+QueryNode Query2(CharSequence field) :
+{
+  Vector<QueryNode> clauses = null;
+  QueryNode c, first=null;
+}
+{
+  first=DisjQuery(field)
+  (
+    c=DisjQuery(field)
+    { 
+       if (clauses == null) {
+           clauses = new Vector<QueryNode>();
+           clauses.addElement(first);
+        }
+        clauses.addElement(c);
+    }
+    )*
+    {
+        if (clauses != null) { 
+        return new BooleanQueryNode(clauses);
+      } else {
+        return first;
+      }
+    }
+}
+
+QueryNode DisjQuery(CharSequence field) : {
+  QueryNode first, c;
+  Vector<QueryNode> clauses = null;
+}
+{
+  first = ConjQuery(field)
+  (
+   <OR> c=ConjQuery(field)
+   { 
+     if (clauses == null) {
+         clauses = new Vector<QueryNode>();
+         clauses.addElement(first); 
+     } 
+     clauses.addElement(c);
+   }
+  )*
+  {
+    if (clauses != null) { 
+      return new OrQueryNode(clauses);
+    } else {
+        return first;
+    }
+  }
+}
+
+QueryNode ConjQuery(CharSequence field) : {
+  QueryNode first, c;
+  Vector<QueryNode> clauses = null;
+}
+{
+  first = ModClause(field)
+  (
+   <AND> c=ModClause(field)
+   { 
+     if (clauses == null) {
+         clauses = new Vector<QueryNode>();
+         clauses.addElement(first);
+     } 
+     clauses.addElement(c); 
+   }
+  )*
+  {
+    if (clauses != null) {     
+      return new AndQueryNode(clauses);
+    } else {
+        return first;
+    }
+  }
+}
+
+QueryNode ModClause(CharSequence field) : {
+  QueryNode q; 
+  ModifierQueryNode.Modifier mods;
+}
+{
+   mods=Modifiers() q= Clause(field) {
+        if (mods != ModifierQueryNode.Modifier.MOD_NONE) {
+           q = new ModifierQueryNode(q, mods);
+        }
+        return q;
+   }
+}
+
+QueryNode Clause(CharSequence field) : {
+  Token datatype = null;
+  QueryNode q;
+  Token boost=null;
+  boolean group = false;
+}
+{
+  (
+      q=Term(field)
+    | ( <LPAREN> | datatype = <DATATYPE> ) q=Query(field) <RPAREN>
+      (<CARAT> boost=<NUMBER>)? {group=true;}
+  )
+  {
+    if (boost != null) {
+      float f = (float)1.0;
+      try {
+        f = Float.valueOf(boost.image).floatValue();
+        // avoid boosting null queries, such as those caused by stop words
+        if (q != null) {
+          q = new BoostQueryNode(q, f);
+        }
+      } catch (Exception ignored) {
+        /* Should this be handled somehow? (defaults to "no boost", if
+         * boost number is invalid)
+         */
+      }
+    }
+    q = group ? new GroupQueryNode(q) : q;
+    if (datatype != null) {
+      // Remove the suffix "("
+      final String dt = datatype.image.substring(0, datatype.image.length() - 1);
+      q = new DatatypeQueryNode(q, dt);
+    }
+    return q;
+  }
+}
+
+QueryNode Term(CharSequence field) : {
+  Token term, boost=null, fuzzySlop=null, goop1, goop2;
+  boolean fuzzy = false;
+  boolean regexp = false;
+  boolean startInc=false;
+  boolean endInc=false;
+  QueryNode q =null; 
+  FieldQueryNode qLower, qUpper;
+  float defaultMinSimilarity = org.apache.lucene.search.FuzzyQuery.defaultMinSimilarity;
+}
+{
+  (
+     (
+      term=<TERM> { q = new FieldQueryNode(field, EscapeQuerySyntaxImpl.discardEscapeChar(term.image), term.beginColumn, term.endColumn); }
+       | term=<REGEXPTERM> { regexp=true; }
+       | term=<NUMBER>
+     )
+     [ fuzzySlop=<FUZZY_SLOP> { fuzzy=true; } ]
+     [ <CARAT> boost=<NUMBER> [ fuzzySlop=<FUZZY_SLOP> { fuzzy=true; } ] ]
+     {
+       if (fuzzy) {
+           float fms = defaultMinSimilarity;
+           try {
+            fms = Float.valueOf(fuzzySlop.image.substring(1)).floatValue();
+           } catch (Exception ignored) { }
+           if(fms < 0.0f){
+                throw new ParseException(new MessageImpl(QueryParserMessages.INVALID_SYNTAX_FUZZY_LIMITS));
+          } else if (fms >= 1.0f && fms != (int) fms) {
+            throw new ParseException(new MessageImpl(QueryParserMessages.INVALID_SYNTAX_FUZZY_EDITS));
+          }
+          q = new FuzzyQueryNode(field, EscapeQuerySyntaxImpl.discardEscapeChar(term.image), fms, term.beginColumn, term.endColumn);
+       } else if (regexp) {
+         String re = term.image.substring(1, term.image.length()-1);
+         q = new RegexpQueryNode(field, re, 0, re.length());
+       }
+     }
+     | ( ( goop1=<RANGEIN_GOOP_START>|goop1=<RANGEIN_QUOTED_START> | goop1=<RANGEEX_GOOP_START>|goop1=<RANGEEX_QUOTED_START> )
+         ( goop2=<RANGEIN_GOOP_END>|goop2=<RANGEIN_QUOTED_END> | goop2=<RANGEEX_GOOP_END>|goop2=<RANGEEX_QUOTED_END> ) )
+       [ <CARAT> boost=<NUMBER> ]
+        {
+          // remove <RANGE_TO> token
+          goop1.image = goop1.image.replaceFirst("[ \t\n\r\u3000]*TO$", "");
+
+          if (goop1.kind == RANGEIN_GOOP_START) {
+            startInc = true;
+            goop1.image = goop1.image.replaceFirst("^\\[[ \t\n\r\u3000]*", "");
+          } else if (goop1.kind == RANGEEX_GOOP_START) {
+            goop1.image = goop1.image.replaceFirst("^\\{[ \t\n\r\u3000]*", "");
+          } else if (goop1.kind == RANGEIN_QUOTED_START) {
+            startInc = true;
+            goop1.image = goop1.image.replaceFirst("^\\[[ \t\n\r\u3000]*", "")
+                                     .substring(1, goop1.image.length()-1);
+          } else if (goop1.kind == RANGEEX_QUOTED_START) {
+            goop1.image = goop1.image.replaceFirst("^\\{[ \t\n\r\u3000]*", "")
+                                     .substring(1, goop1.image.length()-1);
+          }
+
+          if (goop2.kind == RANGEIN_GOOP_END) {
+            endInc = true;
+            goop2.image = goop2.image.replaceFirst("[ \t\n\r\u3000]*\\]$", "");
+          } else if (goop2.kind == RANGEEX_GOOP_END) {
+            goop2.image = goop2.image.replaceFirst("[ \t\n\r\u3000]*\\}$", "");
+          } else if (goop2.kind == RANGEIN_QUOTED_END) {
+            endInc = true;
+            goop2.image = goop2.image.replaceFirst("[ \t\n\r\u3000]*\\]$", "")
+                                     .substring(1, goop2.image.length()-1);
+          } else if (goop2.kind == RANGEEX_QUOTED_END) {
+            goop2.image = goop2.image.replaceFirst("[ \t\n\r\u3000]*\\}$", "")
+                                     .substring(1, goop2.image.length()-1);
+          }
+
+          qLower = new FieldQueryNode(field,
+                                   EscapeQuerySyntaxImpl.discardEscapeChar(goop1.image), goop1.beginColumn, goop1.endColumn);
+          qUpper = new FieldQueryNode(field,
+                                   EscapeQuerySyntaxImpl.discardEscapeChar(goop2.image), goop2.beginColumn, goop2.endColumn);
+          q = new TermRangeQueryNode(qLower, qUpper, startInc ? true : false, endInc ? true : false);
+        }
+     | term=<QUOTED> {q = new QuotedFieldQueryNode(field, EscapeQuerySyntaxImpl.discardEscapeChar(term.image.substring(1, term.image.length()-1)), term.beginColumn + 1, term.endColumn - 1);}
+       [ fuzzySlop=<FUZZY_SLOP> ]
+       [ <CARAT> boost=<NUMBER> ]
+       {
+         int phraseSlop = 0;
+
+         if (fuzzySlop != null) {
+           try {
+             phraseSlop = Float.valueOf(fuzzySlop.image.substring(1)).intValue();
+             q = new SlopQueryNode(q, phraseSlop);    
+           }
+           catch (Exception ignored) {
+             /* Should this be handled somehow? (defaults to "no PhraseSlop", if
+              * slop number is invalid)
+              */
+           }
+         }
+       }
+     | term=<PROTECTED>
+       [ fuzzySlop=<FUZZY_SLOP> { fuzzy=true; } ]
+       [ <CARAT> boost=<NUMBER> [ fuzzySlop=<FUZZY_SLOP> { fuzzy=true; } ] ]
+       {
+         if (fuzzy) {
+           float fms = defaultMinSimilarity;
+           try {
+            fms = Float.valueOf(fuzzySlop.image.substring(1)).floatValue();
+           } catch (Exception ignored) { }
+           if(fms < 0.0f){
+             throw new ParseException(new MessageImpl(QueryParserMessages.INVALID_SYNTAX_FUZZY_LIMITS));
+           } else if (fms >= 1.0f && fms != (int) fms) {
+             throw new ParseException(new MessageImpl(QueryParserMessages.INVALID_SYNTAX_FUZZY_EDITS));
+           }
+           q = new FuzzyQueryNode(field, term.image.substring(1, term.image.length()-1), fms, term.beginColumn + 1, term.endColumn - 1);
+         } else {
+           q = new ProtectedQueryNode(field, term.image.substring(1, term.image.length()-1), term.beginColumn + 1, term.endColumn - 1);
+         }
+       }
+  )
+  {
+    if (boost != null) {
+      float f = (float)1.0;
+      try {
+        f = Float.valueOf(boost.image).floatValue();
+        // avoid boosting null queries, such as those caused by stop words
+        if (q != null) {
+          q = new BoostQueryNode(q, f);
+        }
+      } catch (Exception ignored) {
+        /* Should this be handled somehow? (defaults to "no boost", if
+         * boost number is invalid)
+         */
+      }
+    }
+    return q;
+  }
+}

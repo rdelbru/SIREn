@@ -1,0 +1,22 @@
+ClauseQuery(
+  BinaryClause(
+    SimpleExpression(
+      TriplePattern(
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:s
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:p
+        ) [URIPattern]
+        URIPattern(
+          http://www.w3.org/2001/XMLSchema#anyURI:o
+        ) [URIPattern]
+      ) [TriplePattern]
+    ) [SimpleExpression]
+    0
+    QueryExpression(
+      EmptyQuery(
+      ) [EmptyQuery]
+    ) [QueryExpression]
+  ) [BinaryClause]
+) [ClauseQuery]

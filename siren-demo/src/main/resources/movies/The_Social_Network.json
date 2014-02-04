@@ -1,0 +1,44 @@
+{
+    "title": "The Social network",
+    "year": "2010",
+    "genre": "Drama",
+    "summary": "On a fall night in 2003, Harvard undergrad and computer 
+    programming genius Mark Zuckerberg sits down at his computer 
+    and heatedly begins working on a new idea. In a fury of blogging and 
+    programming, what begins in his dorm room soon becomes a global social 
+    network and a revolution in communication. A mere six years and 500 million 
+    friends later, Mark Zuckerberg is the youngest billionaire in history... but 
+    for this entrepreneur, success leads to both personal and legal complications.",
+    "country": "USA",
+	"director": {
+	    "last_name": "Fincher",
+	    "first_name": "David",
+	    "birth_date": "1962"
+	},
+	"actors": [
+		{
+		    "first_name": "Jesse",
+		    "last_name": "Eisenberg",
+		    "birth_date": "1983",
+		    "role": "Mark Zuckerberg"
+		},
+		{
+		    "first_name": "Rooney",
+		    "last_name": "Mara",
+		    "birth_date": "1985",
+		    "role": "Erica Albright"
+		},
+		{
+		    "first_name": "Andrew",
+		    "last_name": "Garfield",
+		    "birth_date": "1983",
+		    "role": "	 Eduardo Saverin "
+		},
+		{
+		    "first_name": "Justin",
+		    "last_name": "Timberlake",
+		    "birth_date": "1981",
+		    "role": "Sean Parker"
+		}
+	]
+}

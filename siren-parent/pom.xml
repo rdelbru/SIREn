@@ -4,7 +4,7 @@
 
   <groupId>org.sindice.siren</groupId>
   <artifactId>siren-parent</artifactId>
-  <version>1.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>siren-parent</name>
   <url>https://github.com/rdelbru/SIREn</url>

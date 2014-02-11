@@ -1,25 +1,24 @@
-# SIREn: Efficient semi-structured Information Retrieval for Lucene/Solr
+# SIREn: Open-Source Semi-Structured Information Retrieval Engine
 
-## Introduction
+## Overview
 
-Efficient, large scale handling of semi-structured data is increasingly an
-important issue to many web and enterprise information reuse scenarios.
-
-While Lucene has long offered these capabilities, its native capabilities are
-not intended for collections of semi-structured documents (e.g., documents with
-very different schemas, documents with arbitrary nested objects). For this
-reason we developed SIREn - Semantic Information Retrieval Engine - a
-Lucene/Solr plugin to overcome these shortcomings and efficiently index and
-query arbitrary JSON documents, as well as any JSON document with an
-arbitrary amount of metadata fields.
-
-For its features, SIREn can somehow be seen as halfway between Solr (of which
-it offers all the search features) and MongoDB (given it can index arbitrary
-JSON documents).
-
-SIREn is a Lucene/Solr extension for efficient semi-structured full-text search.
+SIREn is a Lucene/Solr extension for efficient schemaless semi-structured full-text search.
 SIREn is not a complete application by itself, but rather a code library and API
 that can easily be used to create a full-featured semi-structured search engine.
+
+Efficient, large scale handling of semi-structured data is an increasingly
+important issue in information search scenarios on the web as well as in the enterprise..
+
+While Lucene has long offered these capabilities, its native capabilities are
+not intended for collections of schemaless semi-structured documents, e.g.,
+collections where the schema varies across documents or collections with a
+complex schema and a complex nested structure. For this reason we have developed SIREn, a
+Lucene/Solr plugin to overcome these shortcomings and to efficiently index and
+query complex JSON documents with arbitrary schema.
+
+For its features, SIREn can be seen as being halfway between Solr (of which
+it offers all the search features) and MongoDB (given it can index arbitrary
+JSON documents).
 
 ## Description
 
@@ -52,9 +51,13 @@ as follow:
 
 ## Resources
 
+SIREn Java Documentation:
+
+    http://rdelbru.github.io/SIREn/site/1.0/apidocs/index.html
+
 SIREn web site:
 
-    https://github.com/rdelbru/SIREn
+    http://rdelbru.github.io/SIREn/
 
 Talk at Lucene Revolution 2013 - High Performance JSON Search and Relational Faceted
 Browsing with Lucene:

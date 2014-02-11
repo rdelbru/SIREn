@@ -53,13 +53,29 @@ as follow:
 ## Resources
 
 SIREn web site:
-  https://github.com/rdelbru/SIREn
+
+    https://github.com/rdelbru/SIREn
+
+Talk at Lucene Revolution 2013 - High Performance JSON Search and Relational Faceted
+Browsing with Lucene:
+
+    http://www.youtube.com/watch?v=-KiZsx8GYtc
 
 You can download SIREn at:
-  https://github.com/rdelbru/SIREn
+
+    https://github.com/rdelbru/SIREn
 
 Please join the SIREn-User mailing list by subscribing at:
-  https://groups.google.com/d/forum/siren-user
+
+    https://groups.google.com/d/forum/siren-user
+
+## Acknowledgements
+
+The SIREn project is based upon works supported by:
+
+* the European FP7 Okkam (GA 215032) and LOD2 (257943) projects,
+* the SFI funded project Lion2 under Grant No. SFI/08/CE/I1380,
+* the Irish Research Council for Science, Engineering and Technology.
 
 - - -
 

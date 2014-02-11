@@ -51,26 +51,18 @@ as follow:
 
 ## Resources
 
-SIREn Java Documentation:
+* The SIREn [Java Documentation](http://rdelbru.github.io/SIREn/site/1.0/apidocs/index.html) where you can find
+a technical description of the SIREn architecture and API.
+* The SIREn [web site](http://rdelbru.github.io/SIREn/) where you can download SIREn.
+* A public talk at the Lucene Revolution 2013 conference: [High Performance JSON Search and Relational Faceted
+Browsing with Lucene](http://www.youtube.com/watch?v=-KiZsx8GYtc)
+* A [scientific publication](http://renaud.delbru.fr/doc/pub/jws2010-erm.pdf) with details about the data model
+and algorithms behind SIREn.
 
-    http://rdelbru.github.io/SIREn/site/1.0/apidocs/index.html
 
-SIREn web site:
+## Community
 
-    http://rdelbru.github.io/SIREn/
-
-Talk at Lucene Revolution 2013 - High Performance JSON Search and Relational Faceted
-Browsing with Lucene:
-
-    http://www.youtube.com/watch?v=-KiZsx8GYtc
-
-You can download SIREn at:
-
-    https://github.com/rdelbru/SIREn
-
-Please join the SIREn-User mailing list by subscribing at:
-
-    https://groups.google.com/d/forum/siren-user
+Please join the SIREn-User mailing list by subscribing at [SIREn-User](https://groups.google.com/d/forum/siren-user).
 
 ## Acknowledgements
 

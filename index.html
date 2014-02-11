@@ -19,12 +19,13 @@
 
         <header>
           <h1>SIREn</h1>
-          <h2>SIREn - Semantic Information Retrieval Engine</h2>
+          <h2>Open-Source Semi-Structured Information Retrieval Engine</h2>
         </header>
 
         <section id="downloads" class="clearfix">
-          <a href="https://github.com/rdelbru/SIREn/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/rdelbru/SIREn/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/rdelbru/SIREn/zipball/1.0" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/rdelbru/SIREn/tarball/1.0" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="site/1.0/apidocs/index.html" id="view-apidocs" class="button"><span>View API docs</span></a>
           <a href="https://github.com/rdelbru/SIREn" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
@@ -32,42 +33,47 @@
 
         <section id="main_content">
           <h1>
-<a name="siren-open-source-project" class="anchor" href="#siren-open-source-project"><span class="octicon octicon-link"></span></a>SIREn Open-Source Project</h1>
+<a name="siren-open-source-project" class="anchor" href="#siren-open-source-project"><span class="octicon octicon-link"></span></a>SIREn</h1>
 
 <h2>
-<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
 
-<p>Efficient, large scale handling of semi-structured data is increasingly an
-important issue to many web and enterprise information reuse scenarios.</p>
+            <p>Efficient, large scale handling of semi-structured data is increasingly an
+            important issue to many web and enterprise information reuse scenarios.</p>
 
-<p>While Lucene has long offered these capabilities, its native capabilities are
-not intended for collections of semi-structured documents (e.g., documents with
-very different schemas, documents with arbitrary nested objects). For this
-reason we developed SIREn - Semantic Information Retrieval Engine - a
-Lucene/Solr plugin to overcome these shortcomings and efficiently index and
-query arbitrary JSON documents, as well as any JSON document with an
-arbitrary amount of metadata fields.</p>
+            <p>While Lucene has long offered these capabilities, its native capabilities are
+            not intended for collections of schemaless semi-structured documents, e.g.,
+            collections where the schema varies across documents or collections with a complex
+            schema and a complex nested structure. For this reason we have developed SIREn,
+            a Lucene/Solr plugin to overcome these shortcomings and efficiently index and
+            query arbitrary JSON documents, as well as any JSON document with an
+            arbitrary amount of metadata fields.</p>
 
-<p>For its features, SIREn can somehow be seen as halfway between Solr (of which
-it offers all the search features) and MongoDB (given it can index arbitrary
-JSON documents).</p>
+            <p>For its features, SIREn can somehow be seen as halfway between Solr (of which
+            it offers all the search features) and MongoDB (given it can index arbitrary
+            JSON documents).</p>
 
-<p>SIREn is a Lucene/Solr extension for efficient semi-structured full-text search.
-SIREn is not a complete application by itself, but rather a code library and API
-that can easily be used to create a full-featured semi-structured search engine.</p>
+            <p>SIREn is a Lucene/Solr extension for efficient semi-structured full-text search.
+            SIREn is not a complete application by itself, but rather a code library and API
+            that can easily be used to create a full-featured semi-structured search engine.</p>
 
 <h2>
-<a name="learn-more-about-siren" class="anchor" href="#learn-more-about-siren"><span class="octicon octicon-link"></span></a>Learn more about SIREn</h2>
+    <a name="learn-more-about-siren" class="anchor" href="#learn-more-about-siren"><span class="octicon octicon-link"></span></a>Learn more about SIREn</h2>
 
-<p>You can watch a recent talk at Lucene Revolution 2013 about SIREn:</p>
+            <p>You can find a detailed description of the architecture and API of SIREn in the
+                <a href="site/1.0/apidocs/index.html">Java Documentation</a> of the project. You can also watch
+                a recent talk about SIREn at the Lucene Revolution 2013 conference:</p>
 
-<ul>
-<li><a href="http://www.youtube.com/watch?v=-KiZsx8GYtc">High Performance JSON Search and Relational Faceted Browsing with Lucene</a></li>
-</ul><h2>
-<a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h2>
+            <p><iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/-KiZsx8GYtc?rel=0" frameborder="0" allowfullscreen></iframe></p>
 
-<p>If you are using SIREn for your scientific work, please cite the following article
-as follow:</p>
+            <p>Finally, you can read our <a href="http://renaud.delbru.fr/doc/pub/jws2010-erm.pdf">scientific publication</a>
+                for details about the data model and algorithms behind SIREn.</p>
+
+<h2>
+    <a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h2>
+
+            <p>If you are using SIREn for your scientific work, please cite the following article
+            as follow:</p>
 
 <blockquote>
 <p>Renaud Delbru, Stephane Campinas, Giovanni Tummarello, <strong>Searching web data: An
@@ -77,22 +83,21 @@ Science, Services and Agents on the World Wide Web</em>, ISSN 1570-8268,
 </blockquote>
 
 <h2>
-<a name="resources" class="anchor" href="#resources"><span class="octicon octicon-link"></span></a>Resources</h2>
+<a name="Community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h2>
 
-<p>SIREn Github Project:</p>
 
-<pre><code>https://github.com/rdelbru/SIREn
-</code></pre>
+            <h3>Mailing List</h3>
 
-<p>You can download SIREn at:</p>
+            <p><a href="https://groups.google.com/d/forum/siren-user">SIREn-User</a> is a mailing list that you can join
+            to seek help, discuss about possible improvements, etc.</p>
 
-<pre><code>https://github.com/rdelbru/SIREn
-</code></pre>
+            <h3>License</h3>
 
-<p>Please join the SIREn-User mailing list by subscribing at:</p>
+            <p>SIREn is open-source under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2 License</a>.</p>
 
-<pre><code>https://groups.google.com/d/forum/siren-user
-</code></pre>
+            <h3>Issues</h3>
+
+            <p>You can report issues at the <a href="https://github.com/rdelbru/SIREn/issues">GitHub issue tracker</a>.</p>
 
 <h2>
 <a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>Acknowledgements</h2>
@@ -100,18 +105,19 @@ Science, Services and Agents on the World Wide Web</em>, ISSN 1570-8268,
 <p>The SIREn project is based upon works supported by:</p>
 
 <ul>
-<li>the European FP7 Okkam (GA 215032) and LOD2 (257943) projects,</li>
+<li>the European FP7 <a href="http://project.okkam.org/">Okkam</a> (GA 215032) and
+    <a href="http://lod2.eu/">LOD2</a> (257943) projects,</li>
 <li>the SFI funded project Lion2 under Grant No. SFI/08/CE/I1380,</li>
-<li>the Irish Research Council for Science, Engineering and Technology.</li>
-</ul><hr><p>Copyright 2014, National University of Ireland, Galway</p>
+<li>the <a href="http://www.research.ie/">Irish Research Council for Science, Engineering and Technology</a>.</li>
+</ul>
         </section>
 
         <footer>
-          SIREn is maintained by <a href="https://github.com/rdelbru">rdelbru</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+            <p>SIREn is maintained by <a href="https://github.com/rdelbru">rdelbru</a><br>
+            Copyright 2014, National University of Ireland, Galway</p>
         </footer>
 
-        
+
       </div>
     </div>
   </body>

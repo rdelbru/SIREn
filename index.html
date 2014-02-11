@@ -38,42 +38,41 @@
 <h2>
 <a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
 
-            <p>Efficient, large scale handling of semi-structured data is increasingly an
-            important issue to many web and enterprise information reuse scenarios.</p>
+
+            <p>SIREn is a Lucene/Solr extension for efficient schemaless semi-structured full-text search.
+            SIREn is not a complete application by itself, but rather a code library and API
+            that can easily be used to create a full-featured semi-structured search engine.</p>
+
+            <p>Efficient, large scale handling of semi-structured data is an increasingly important issue
+            in information search scenarios on the web as well as in the enterprise.</p>
 
             <p>While Lucene has long offered these capabilities, its native capabilities are
             not intended for collections of schemaless semi-structured documents, e.g.,
             collections where the schema varies across documents or collections with a complex
             schema and a complex nested structure. For this reason we have developed SIREn,
             a Lucene/Solr plugin to overcome these shortcomings and efficiently index and
-            query arbitrary JSON documents, as well as any JSON document with an
-            arbitrary amount of metadata fields.</p>
+            query complex JSON documents with arbitrary schema.</p>
 
-            <p>For its features, SIREn can somehow be seen as halfway between Solr (of which
+            <p>For its features, SIREn can be seen as being halfway between Solr (of which
             it offers all the search features) and MongoDB (given it can index arbitrary
             JSON documents).</p>
-
-            <p>SIREn is a Lucene/Solr extension for efficient semi-structured full-text search.
-            SIREn is not a complete application by itself, but rather a code library and API
-            that can easily be used to create a full-featured semi-structured search engine.</p>
 
 <h2>
     <a name="learn-more-about-siren" class="anchor" href="#learn-more-about-siren"><span class="octicon octicon-link"></span></a>Learn more about SIREn</h2>
 
-            <p>You can find a detailed description of the architecture and API of SIREn in the
+            <p>You can find a detailed description of SIREn'a architecture and API in the
                 <a href="site/1.0/apidocs/index.html">Java Documentation</a> of the project. You can also watch
                 a recent talk about SIREn at the Lucene Revolution 2013 conference:</p>
 
             <p><iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/-KiZsx8GYtc?rel=0" frameborder="0" allowfullscreen></iframe></p>
 
-            <p>Finally, you can read our <a href="http://renaud.delbru.fr/doc/pub/jws2010-erm.pdf">scientific publication</a>
+            <p>Finally, you can read <a href="http://renaud.delbru.fr/doc/pub/jws2010-erm.pdf">one of our scientific publications</a>
                 for details about the data model and algorithms behind SIREn.</p>
 
 <h2>
     <a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h2>
 
-            <p>If you are using SIREn for your scientific work, please cite the following article
-            as follow:</p>
+            <p>If you are using SIREn for your scientific work, please cite the following article:</p>
 
 <blockquote>
 <p>Renaud Delbru, Stephane Campinas, Giovanni Tummarello, <strong>Searching web data: An

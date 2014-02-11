@@ -55,7 +55,7 @@ as follow:
 a technical description of the SIREn architecture and API.
 * The SIREn [web site](http://rdelbru.github.io/SIREn/) where you can download SIREn.
 * A public talk at the Lucene Revolution 2013 conference: [High Performance JSON Search and Relational Faceted
-Browsing with Lucene](http://www.youtube.com/watch?v=-KiZsx8GYtc)
+Browsing with Lucene](http://www.youtube.com/watch?v=-KiZsx8GYtc).
 * A [scientific publication](http://renaud.delbru.fr/doc/pub/jws2010-erm.pdf) with details about the data model
 and algorithms behind SIREn.
 

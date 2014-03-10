@@ -10,7 +10,7 @@ Homepage: http://siren.sindice.com/
 Package: siren
 Architecture: all
 Depends: tomcat6 | tomcat7, java6-runtime | java7-runtime
-Description: The Semantic Information Retrieval Engine for LOD2
+Description: Semantic Information Retrieval Engine
  Efficient, large scale handling of semi-structured data is increasingly an
  important issue to many web and enterprise information reuse scenarios.
  While Lucene has long offered these capabilities, its native capabilities

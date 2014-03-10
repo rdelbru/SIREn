@@ -1,0 +1,5 @@
+siren.xml /etc/siren
+solr.home /etc/siren
+lib /usr/share/siren
+README /usr/share/doc/siren
+THIRD-PARTY.txt /usr/share/doc/siren

@@ -1,0 +1,81 @@
+debian packaging stuff is in deb-package/
+
+========= TO MAKE NEW DEBIAN PACKAGE ==============
+
+1) export env varaibles
+    
+    export DEBFULLNAME="firstname lastname"
+    export DEBEMAIL="youremail@example.com"
+
+2) create key 
+    
+    gpg --gen-key
+    NOTE:
+         DO NOT PUT COMMENT WHEN ASKED
+         PUT EXACTLY THE SAME FULL NAME AND EMAIL 
+         AS YOU EXPORTED IN DEBFULLNAME AND DEBEMAIL
+            
+    gpg --export -a > publickey.asc
+    
+3) Change version number in deb-package/build_debpkg.sh
+    do this by editing this file manually
+
+    vim deb-package/build_debpkg.sh
+    
+4) Change the change log in deb-package/debian/changelog
+    do this using dch command
+
+    cd deb-package/ 
+    dch -v ${project.version}-1
+    NOTE !! do not edit anything more in this file then needed
+
+4) To build a debian package, run from root directory
+    mvn clean package -Pdebian
+
+6) Package are in target folder
+   To check the package info: 
+   dpkg -I target/siren_${project.version}-${deb.version}_all.deb
+   
+   To install the package: 
+    dpkg -i target/siren_${project.version}-${deb.version}_all.deb
+
+7) To purge siren
+   dpkg --purge siren
+    
+=====  UPLOADING PACAKGE TO LOD2 STACK ==========
+
+1) Create another key
+    ssh-keygen -t rsa
+    
+    For lod2 project you have to send both public keys
+    (gpg and ssh one) to be able to upload debian 
+    package to their repository 
+
+2) upload package to lod2
+   create a .dput.cf file 
+   vim ~/.dput.cf
+   
+     [lod2]
+     fqdn = stack.lod2.eu
+     method = scp
+     login = packaging
+     incoming = /var/www/stack.lod2.eu/deb/mini-dinstall/incoming
+   
+   put above content in it and run 
+   
+   dput lod2 target/siren_${project.version}-1_amd64.changes
+
+====== END ========
+
+Note: 
+    You might need to install some additional packages like debuild
+    See here http://www.debian.org/doc/manuals/maint-guide/build.en.html
+     
+Refs:
+http://www.madboa.com/geek/gpg-quickstart/#keyintro
+http://people.debian.org/~seanius/policy/dbconfig-common-using.html/ch-develguide.html
+http://packages.debian.org/source/squeeze/zabbix (example package using dbconfig-common)
+http://www.debian.org/doc/debian-policy/ch-maintainerscripts.html
+http://www.debian.org/doc/manuals/maint-guide/dother.en.html
+https://grips.punkt.at/display/LOD2/DebianPackaging
+

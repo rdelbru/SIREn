@@ -1,0 +1,11 @@
+siren (1.0-2) lod2; urgency=low
+
+  * Updated the license. Updated the dependencies to Java7 and tomcat7.
+
+ -- Stephane Campinas <stephane.campinas@deri.org>  Sun, 09 Mar 2014 16:31:37 +0000
+
+siren (1.0-1) lod2; urgency=low
+
+  * Initial release.
+
+ -- stephane campinas <stephane.campinas@deri.org>  Wed, 26 Jun 2013 17:22:04 +0100

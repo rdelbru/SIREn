@@ -1,0 +1,11 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: 2014, Stéphane Campinas
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2014, Stéphane Campinas <stephane.campinas@deri.org>
+License: Apache-2.0
+
+License: Apache-2.0

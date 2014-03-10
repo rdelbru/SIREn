@@ -1,0 +1,26 @@
+# Instructions for using SIREn
+
+## Solr
+
+The application is available at the address http://localhost:8080/siren/#/
+
+The home of the Solr application is located at /etc/siren/solr.home/
+and the schema of the index is found is a sub-folder, i.e., in the
+file /etc/siren/solr.home/solr/collection1/conf/schema.xml.
+
+## Update the schema definition
+
+It is possible to change the schema of the index via the following steps:
+
+1- Stop tomcat (either tomcat6 or tomcat7)
+> sudo service tomcat6 stop
+
+2- Edit the file /etc/siren/solr.home/solr/collection1/conf/schema.xml
+
+3- Check the permissions (either tomcat6 or tomcat7)
+> sudo chown tomcat6:tomcat6 /etc/siren/solr.home/solr/collection1/conf/schema.xml
+
+## Logs
+
+You can check the logs of the SIREn application by checking the catalina logs.
+

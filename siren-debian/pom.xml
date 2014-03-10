@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sindice.siren</groupId>
+    <artifactId>siren-parent</artifactId>
+    <version>1.0</version>
+    <relativePath>../siren-parent</relativePath>
+  </parent>
+
+  <groupId>org.sindice.siren</groupId>
+  <artifactId>siren-debian</artifactId>
+  <version>1.0</version>
+  <name>siren-debian</name>
+  <url>http://siren.sindice.com</url>
+  
+  <build>
+    <plugins>
+
+      <!-- Copy the dependencies into the lib directory of the solr home example -->
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <includeGroupIds>org.sindice.siren,org.codehaus.jackson</includeGroupIds>
+              <outputDirectory>target/debian</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+    </plugins>
+  </build>
+
+    <profiles>
+        <profile>
+            <id>debian</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <configuration>
+                            <tasks>
+                                <echo message="Creating debian package" />
+                                <exec dir="${basedir}/deb-package"
+                                    executable="${basedir}/deb-package/build_debpkg.sh"
+                                    failonerror="true">
+                                </exec>
+                            </tasks>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>deb-pkg</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.sindice.siren</groupId>
+      <artifactId>siren-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.sindice.siren</groupId>
+      <artifactId>siren-qparser</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.sindice.siren</groupId>
+      <artifactId>siren-solr</artifactId>
+      <version>${project.version}</version>
+      
+      <!--  Removed binding for logback -->
+      <exclusions>
+        <exclusion> 
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-jdk14</artifactId>
+        </exclusion>
+      </exclusions> 
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <version>${lucene.version}</version>
+    </dependency>
+
+  </dependencies>
+
+</project>

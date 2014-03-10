@@ -1,0 +1,29 @@
+#!/bin/sh -e
+#
+# see: dh_installdeb(1)
+
+. /usr/share/debconf/confmodule
+
+TOMCAT=` ([ -d /var/lib/tomcat6 ] && echo tomcat6) || echo tomcat7 `
+
+# STOP TOMCAT
+service $TOMCAT stop
+
+# CLEAN PREVIOUSLY INSTALLED SIREN
+rm -rf /var/lib/$TOMCAT/webapps/siren
+
+# COPYING CONTEXT FILE
+cp /etc/siren/siren.xml /var/lib/$TOMCAT/conf/Catalina/localhost/siren.xml
+
+# COPYING SIREN LIBS
+mkdir -p /etc/siren/solr.home/solr/collection1/lib
+cp /usr/share/siren/lib/*.jar /etc/siren/solr.home/solr/collection1/lib
+
+# CHANGE FILE PERMISSIONS
+chown -R $TOMCAT:$TOMCAT /etc/siren/solr.home/solr
+
+# START TOMCAT
+service $TOMCAT start
+
+echo "---- ending postinst $@"
+

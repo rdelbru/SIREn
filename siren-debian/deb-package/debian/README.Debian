@@ -1,0 +1,9 @@
+SIREn for Debian
+------------------
+
+This package is a work in progress intended for the LOD2 project and
+possibly not suitable for general use.
+
+The SIREn Debian package works with Java 7. However, it has been to fail at some Java 7 hotspots bug. If you encounter any crash, you may want to set some java flags http://wiki.apache.org/lucene-java/JavaBugs
+
+ -- stephane campinas <stephane.campinas@deri.org>  Wed Jun 26 15:50:46 IST 2013

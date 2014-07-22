@@ -1,5 +1,10 @@
 # SIREn: Open-Source Semi-Structured Information Retrieval Engine
 
+## Status
+
+This academic project is not maintained anymore. For updates and commercial support, please
+refer to the new [project web site](http://siren.solutions).
+
 ## Overview
 
 SIREn is a Lucene/Solr extension for efficient schemaless semi-structured full-text search.
